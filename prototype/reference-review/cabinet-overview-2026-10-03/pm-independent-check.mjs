@@ -1,0 +1,20 @@
+import {spawn} from 'node:child_process';import {chromium} from '@playwright/test';import fs from 'node:fs/promises';import assert from 'node:assert/strict';
+const dir='reference-review/cabinet-overview-2026-10-03',server=spawn(process.execPath,['node_modules/vite/bin/vite.js','--host','127.0.0.1','--port','5333','--strictPort','--config','reference-review/tokyoghoul-w-live/vite-record.config.mjs'],{stdio:'ignore'});await new Promise(r=>setTimeout(r,1800));let browser;const results=[];
+try{browser=await chromium.launch({channel:'chrome',headless:true});
+for(const [name,size] of [['desktop',{width:1280,height:960}],['mobile',{width:390,height:844}],['small',{width:320,height:568}]]){
+ const context=await browser.newContext({viewport:size}),p=await context.newPage(),errors=[];p.on('pageerror',e=>errors.push(String(e)));
+ await p.goto('http://127.0.0.1:5333/?review=session&scenario=left');await p.waitForFunction(()=>document.querySelector('#floorArt canvas'));
+ const mobile=size.width<=700;assert.equal(await p.locator('.floor-machine').count(),mobile?4:20);
+ await p.screenshot({path:`${dir}/pm-${name}-floor.png`});
+ if(mobile){await p.locator('[data-move="next"]').click();await p.waitForFunction(()=>document.querySelector('[data-unit="4"]'));assert.equal(await p.locator('[data-kind="main"]').count(),1);await p.locator('[data-unit="4"]').click();}
+ else await p.locator('[data-unit="4"]').click();
+ await p.waitForFunction(()=>{const h=document.querySelector('#detailArt'),c=h?.querySelector('canvas');if(!c)return false;const r=h.getBoundingClientRect();return c.width===Math.floor(r.width)&&c.height===Math.floor(r.height);});assert.equal(await p.locator('.session-header span').textContent(),'5番台');
+ const detail=await p.evaluate(()=>{const h=document.querySelector('#detailArt').getBoundingClientRect(),c=document.querySelector('#detailArt canvas');return {host:{width:h.width,height:h.height},logical:{width:c.width,height:c.height},documentWidth:document.documentElement.scrollWidth};});assert.equal(detail.documentWidth,size.width);
+ await p.screenshot({path:`${dir}/pm-${name}-detail.png`});await p.locator('#back').click();await p.waitForFunction(()=>document.querySelector('#floorArt canvas'));assert.ok(await p.locator('[data-unit="4"]').count());
+ await p.locator('[data-unit="4"]').click();await p.locator('#playMachine').click();await p.waitForFunction(()=>window.__session.snapshot());
+ const play=await p.evaluate(()=>{const c=document.querySelector('#canvas canvas'),r=c.getBoundingClientRect();return {logical:{width:c.width,height:c.height},rect:{x:r.x,y:r.y,right:r.right,bottom:r.bottom},controlsHidden:document.querySelector('#play-controls').hidden};});assert.deepEqual(play.logical,{width:396,height:436});assert.equal(play.controlsHidden,true);assert.ok(play.rect.x>=-.1&&play.rect.y>=-.1&&play.rect.right<=size.width+.1&&play.rect.bottom<=size.height+.1);
+ await p.locator('#controls-toggle').click();await p.locator('#menu').click();await p.locator('#leave').click();await p.locator('#floor').click();await p.waitForFunction(()=>document.querySelector('#floorArt canvas'));
+ if(mobile){assert.ok(await p.locator('[data-unit="4"]').count());await p.locator('[data-move="up"]').click();await p.waitForFunction(()=>document.querySelector('.floor-coming'));assert.equal(await p.locator('.floor-machine').count(),0);await p.locator('[data-move="down"]').click();await p.waitForFunction(()=>document.querySelector('[data-unit="4"]'));await p.locator('[data-move="previous"]').click();await p.waitForFunction(()=>document.querySelector('[data-unit="0"]'));}
+ assert.deepEqual(errors,[]);results.push({name,size,detail,play,errors,checks:['floor active/dummy selection intact','5th unit detail identity','back returns to same mobile page','detail/play/floor roundtrip','adopted play396x436 unchanged',...(mobile?['mobile next/previous and floor up/down intact']:[])]});await context.close();
+}await fs.writeFile(`${dir}/pm-independent-check.json`,JSON.stringify(results,null,2));console.log(JSON.stringify(results.map(r=>({name:r.name,errors:r.errors,checks:r.checks}))));
+}finally{await browser?.close();server.kill();}

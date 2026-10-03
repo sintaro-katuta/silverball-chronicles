@@ -1,0 +1,8 @@
+import {WMachine} from './tokyoghoul-w-machine.js';
+let serial=0,machine;
+const $=id=>document.getElementById(id);
+const draw=kind=>{machine.startNextDraw(kind);const result=machine.resolveDraw(kind);if(!result)throw new Error('消化できる抽選がありません。保留・大当り・V待ちを確認してください。');return result;};
+const actions={reset(){serial=0;machine=new WMachine({rng:()=>Number($('roll').value)});},start:()=>machine.admit('start',++serial),normal:()=>draw('tokuzu1'),enter:()=>machine.setEntryDecision(true),leave:()=>machine.setEntryDecision(false),fixture:()=>machine.startRush(),fuzu:()=>machine.admit('fuzu',++serial),resolveFuzu:()=>draw('fuzu'),ordinary:()=>machine.admit('ordinary',++serial),openElectric:()=>machine.openElectric(),electric:()=>machine.admit('electric',++serial),closeElectric:()=>machine.closeElectric(),tokuzu2:()=>draw('tokuzu2'),v:()=>machine.confirmV(),noV:()=>machine.expireV(),openRound:()=>machine.openRound(),ball:()=>machine.admit('attacker',++serial),ten:()=>Array.from({length:10},()=>machine.admit('attacker',++serial)),timeout:()=>machine.closeRound('time')};
+function render(){const s=machine.snapshot();$('payout').textContent=s.payout;$('state').textContent=JSON.stringify({rush:s.rush,bonus:s.bonus,electricOpen:s.electricOpen,pendingV:s.pendingV,pendingEntry:s.pendingEntry,active:s.active,holds:s.holds},null,2);$('events').textContent=s.events.slice(-18).map(e=>JSON.stringify(e)).join('\n');}
+document.querySelectorAll('[data-action]').forEach(b=>b.addEventListener('click',()=>{try{const r=actions[b.dataset.action]();$('status').textContent=r?.captured===false?`捕球なし：${r.reason}`:'処理しました';}catch(e){$('status').textContent=e.message;}render();}));
+actions.reset();render();

@@ -1,0 +1,361 @@
+{
+  "states": [
+    {
+      "time": 11.000000000000016,
+      "paused": false,
+      "mode": "normal",
+      "counts": {
+        "normal": 4,
+        "start": 6,
+        "rush": 0,
+        "bonus": 0,
+        "out": 56,
+        "returned": 0
+      },
+      "spawned": 102,
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 535,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 357.25,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5,
+          "captureTray": {
+            "left": 335.125,
+            "right": 373.875,
+            "y": 600.5,
+            "radius": 1.4
+          }
+        },
+        {
+          "x": 359.5,
+          "y": 493,
+          "w": 20,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "guide": {
+        "a": {
+          "x": 336,
+          "y": 468
+        },
+        "b": {
+          "x": 330,
+          "y": 558
+        },
+        "r": 1.3,
+        "material": "resin",
+        "role": "right-inner-lower",
+        "restitution": 0.08
+      },
+      "attacker": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "tulip": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "inFlight": 36
+    },
+    {
+      "time": 23.016666666666,
+      "paused": false,
+      "mode": "rush",
+      "counts": {
+        "normal": 8,
+        "start": 9,
+        "rush": 82,
+        "bonus": 0,
+        "out": 91,
+        "returned": 0
+      },
+      "spawned": 213,
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 535,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 357.25,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5,
+          "captureTray": {
+            "left": 335.125,
+            "right": 373.875,
+            "y": 600.5,
+            "radius": 1.4
+          }
+        },
+        {
+          "x": 359.5,
+          "y": 493,
+          "w": 20,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "guide": {
+        "a": {
+          "x": 336,
+          "y": 468
+        },
+        "b": {
+          "x": 330,
+          "y": 558
+        },
+        "r": 1.3,
+        "material": "resin",
+        "role": "right-inner-lower",
+        "restitution": 0.08
+      },
+      "attacker": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "tulip": {
+        "progress": 1,
+        "target": 1,
+        "moving": false
+      },
+      "inFlight": 23
+    },
+    {
+      "time": 35.01666666666532,
+      "paused": false,
+      "mode": "bonus",
+      "counts": {
+        "normal": 8,
+        "start": 9,
+        "rush": 92,
+        "bonus": 70,
+        "out": 120,
+        "returned": 0
+      },
+      "spawned": 324,
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 535,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 357.25,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5,
+          "captureTray": {
+            "left": 335.125,
+            "right": 373.875,
+            "y": 600.5,
+            "radius": 1.4
+          }
+        },
+        {
+          "x": 359.5,
+          "y": 493,
+          "w": 20,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "guide": {
+        "a": {
+          "x": 336,
+          "y": 468
+        },
+        "b": {
+          "x": 330,
+          "y": 558
+        },
+        "r": 1.3,
+        "material": "resin",
+        "role": "right-inner-lower",
+        "restitution": 0.08
+      },
+      "attacker": {
+        "progress": 1,
+        "target": 1,
+        "moving": false
+      },
+      "tulip": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "inFlight": 25
+    }
+  ],
+  "paused": {
+    "time": 41.04999999999831,
+    "paused": true,
+    "mode": "normal",
+    "counts": {
+      "normal": 8,
+      "start": 9,
+      "rush": 92,
+      "bonus": 77,
+      "out": 147,
+      "returned": 0
+    },
+    "spawned": 333,
+    "pockets": [
+      {
+        "x": 67,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 0
+      },
+      {
+        "x": 139,
+        "y": 617,
+        "w": 18,
+        "kind": "normal",
+        "id": 1
+      },
+      {
+        "x": 268,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 2
+      },
+      {
+        "x": 210,
+        "y": 535,
+        "w": 20,
+        "kind": "start",
+        "id": 4
+      },
+      {
+        "x": 357.25,
+        "y": 581,
+        "w": 60,
+        "kind": "bonus",
+        "id": 5,
+        "captureTray": {
+          "left": 335.125,
+          "right": 373.875,
+          "y": 600.5,
+          "radius": 1.4
+        }
+      },
+      {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      }
+    ],
+    "guide": {
+      "a": {
+        "x": 336,
+        "y": 468
+      },
+      "b": {
+        "x": 330,
+        "y": 558
+      },
+      "r": 1.3,
+      "material": "resin",
+      "role": "right-inner-lower",
+      "restitution": 0.08
+    },
+    "attacker": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "tulip": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "inFlight": 0
+  },
+  "errors": []
+}

@@ -1,0 +1,12 @@
+PASS open gate accepts exactly one real moving ball actual=1
+PASS closed gate physically blocks attacker sensor actual=0
+PASS closed normal gate cannot award actual=0
+PASS five physical selector arrivals actual=5
+PASS selected fifth ball reaches moving rotor pocket actual=1
+PASS pause freezes mechanism transforms actual=0
+PASS pause during gate opening keeps its position actual=0
+PASS resume completes gate travel actual=0
+PASS right admission once at preview rate 4 actual=1
+PASS right admission once at preview rate 8 actual=1
+PASS actual normal launcher reaches selector and rotor actual=2
+PASS actual bonus launcher reaches scoring aperture actual=10

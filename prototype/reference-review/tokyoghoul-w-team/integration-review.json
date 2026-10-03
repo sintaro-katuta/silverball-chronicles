@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-02",
+  "controllerTests": 11,
+  "fuzuObservationTests": 8,
+  "additionalRealBallFuzuTest": 1,
+  "browser": {
+    "method": "Codex in-app browser via CUA",
+    "verified": [
+      "manual fuzu result consumes one of 130",
+      "electric active plus one hold",
+      "V detection starts 1500 plan",
+      "10 admissions pay 150 and close round",
+      "session board renders after 3-pocket/fuzu correction"
+    ],
+    "errorLogs": []
+  },
+  "limitations": [
+    "W controller not connected to production SessionGame",
+    "review events manually driven; no measured timing claim",
+    "6000+alpha not generated",
+    "baseline two left-road trapped-ball failures unresolved"
+  ],
+  "baselineTraps": [
+    {
+      "x": 126.939,
+      "y": 515.005,
+      "pins": [
+        15,
+        16
+      ]
+    },
+    {
+      "x": 153.014,
+      "y": 528.655,
+      "pins": [
+        22,
+        23
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+import {chromium} from '@playwright/test';
+import assert from 'node:assert/strict';
+const browser=await chromium.launch({channel:'chrome',headless:true});
+try{
+ const page=await browser.newPage({viewport:{width:390,height:844}}),errors=[];
+ page.on('pageerror',e=>errors.push(e.message));
+ await page.clock.install({time:new Date('2026-09-23T00:00:00Z')});
+ await page.clock.pauseAt(new Date('2026-09-23T00:00:01Z'));
+ await page.goto('http://localhost:5173');await page.locator('#start').click();await page.clock.runFor(2500);
+ await page.evaluate(async()=>{const {mountRushScreen}=await import('/src/rush-screen.js');window.previewRush=mountRushScreen(document.querySelector('#lcd'));window.previewState={machine:{rightDraw:{spins:100}},time:10,phase:'playing',rush:{remaining:100,chain:3,total:2100,startedAt:0,consumed:0},jackpot:null,presentation:null,lastBonus:null,lastRush:null};window.previewRush.update(window.previewState);});
+ const panel=page.locator('.rush-screen:not([hidden])');
+ await page.evaluate(()=>Promise.all(['/battles/moon-awakening.png','/battles/eclipse-victory.png'].map(src=>new Promise(resolve=>{const image=new Image();image.onload=resolve;image.src=src;}))));
+ assert.equal(await panel.locator('.rush-screen-focus-value').textContent(),'100');
+ assert.match(await panel.locator('.rush-screen-total').textContent(),/2,100/);
+ await page.screenshot({path:'screenshots/rush-lcd.png'});
+ await page.evaluate(()=>{window.previewState={...window.previewState,time:11,rush:null,jackpot:{round:1,rounds:10,displayRounds:4,fromRush:false,entryRevealed:true,entryEligible:true,payout:45,challenge:null}};window.previewRush.update(window.previewState);});
+ assert.equal(await panel.locator('.rush-screen-focus-unit').textContent(),'/ 4 R');
+ assert.equal(await panel.locator('.rush-screen-heading small').textContent(),'運命の一撃');
+ assert.doesNotMatch(await panel.textContent(),/10/,'fixed final grade must stay hidden');
+ await page.screenshot({path:'screenshots/bonus-lcd.png'});
+ await page.evaluate(()=>{window.previewState.jackpot.round=4;window.previewState.jackpot.displayRounds=6;window.previewState.time=12;window.previewRush.update(window.previewState);});
+ assert.equal(await panel.locator('.rush-screen-message strong').textContent(),'4R → 6R');
+ await page.screenshot({path:'screenshots/bonus-reveal-lcd.png'});
+ await page.evaluate(()=>{window.previewState.jackpot={round:4,rounds:4,displayRounds:4,fromRush:false,entryRevealed:false,entryEligible:false,payout:555,challenge:{time:0,win:null}};window.previewState.time=15;window.previewRush.update(window.previewState);});
+ assert.equal(await panel.locator('.rush-screen-message strong').textContent(),'月を呼び醒ませ');
+ await page.screenshot({path:'screenshots/rush-challenge-lcd.png'});
+ await page.evaluate(()=>{window.previewState.jackpot.challenge.win=false;window.previewState.jackpot.entryRevealed=true;window.previewState.time=16.6;window.previewRush.update(window.previewState);});
+ assert.equal(await panel.locator('.rush-screen-message strong').textContent(),'挑戦終了');
+ await page.evaluate(()=>{window.previewState.lastBonus={...window.previewState.jackpot,endedAt:17};window.previewState.jackpot=null;window.previewState.time=17;window.previewRush.update(window.previewState);});
+ assert.match(await panel.textContent(),/通常遊技へ/);
+ await page.evaluate(()=>{window.previewState.time=20;window.previewRush.update(window.previewState);});
+ assert.equal(await page.locator('.rush-screen:not([hidden])').count(),0);
+ assert.deepEqual(errors,[]);console.log('RUSH / BONUS / fixed-grade reveal / 4R challenge / result expiry passed without leaking final rounds.');
+}finally{await browser.close();}

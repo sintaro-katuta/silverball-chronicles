@@ -1,0 +1,42 @@
+@import '@fontsource/dotgothic16/japanese-400.css';
+@import '@fontsource/dotgothic16/latin-400.css';
+
+/* Pixel UI defaults. hybrid-art.css overrides physical rendering and small gameplay labels. */
+:root {
+  font-family: 'DotGothic16', ui-monospace, monospace;
+  font-synthesis: none;
+  font-optical-sizing: none;
+  --pixel-edge: 2px;
+}
+
+html, body, button, input, select, textarea, dialog, #app, #app * {
+  font-family: 'DotGothic16', ui-monospace, monospace !important;
+  font-synthesis: none;
+  font-kerning: none;
+}
+
+button, input, select, textarea, dialog,
+.board-wrap, .hero, .course, .counter-face, .floor-machine,
+.machine-card, .modal, .panel, .primary, .secondary, .fire, .auto {
+  border-radius: 0 !important;
+  box-shadow: none;
+}
+
+img, canvas, video {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+/* Keep UI edges on a small grid and remove smooth glow from text. */
+#app * {
+  text-shadow: none !important;
+  -webkit-font-smoothing: none;
+  text-rendering: geometricPrecision;
+}
+
+button, input, select, textarea {
+  border-width: 2px !important;
+}
+
+.lcd:after { background: repeating-linear-gradient(0deg, transparent 0 3px, #07172928 3px 4px); }
+.modal-backdrop, dialog::backdrop { backdrop-filter: none !important; }

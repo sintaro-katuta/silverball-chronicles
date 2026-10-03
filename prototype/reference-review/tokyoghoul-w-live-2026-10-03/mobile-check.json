@@ -1,0 +1,282 @@
+{
+  "file": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/tokyoghoul-w-live-2026-10-03/page@58e7b2295bcb485144a94d5a918c13a3.webm",
+  "errors": [],
+  "consoleErrors": [
+    {
+      "text": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "location": {
+        "url": "http://127.0.0.1:5290/favicon.ico",
+        "line": 0,
+        "column": 0,
+        "lineNumber": 0,
+        "columnNumber": 0
+      }
+    }
+  ],
+  "failedResponses": [],
+  "bounds": {
+    "canvas": {
+      "x": 16,
+      "y": 78,
+      "width": 358,
+      "height": 409.140625,
+      "right": 374,
+      "bottom": 487.140625
+    },
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "scrollWidth": 390
+  },
+  "fresh": {
+    "w": {
+      "model": "e東京喰種W",
+      "rush": {
+        "remaining": 130,
+        "consumed": 0
+      },
+      "bonus": null,
+      "pendingV": false,
+      "electricOpen": false,
+      "payout": 0,
+      "holds": {
+        "tokuzu1": 0,
+        "tokuzu2": 0,
+        "fuzu": 0
+      },
+      "eventCount": 1
+    },
+    "cabinet": {
+      "phase": "rush",
+      "travel": 0,
+      "light": 0.3024997395914712,
+      "rainbow": false,
+      "hue": 0
+    },
+    "session": {
+      "stock": 399,
+      "total": 0,
+      "phase": "playing",
+      "accounting": {
+        "basePrize": 0,
+        "gamePrize": 0,
+        "payout": 0,
+        "spent": 1,
+        "returned": 0,
+        "supply": 0,
+        "debugAdjustment": 0,
+        "extraBalls": 0,
+        "machineNet": -1,
+        "playNet": -1,
+        "balance": -1,
+        "reconciled": true
+      },
+      "jackpots": 0
+    },
+    "spin": {
+      "entryPrelude": null,
+      "lifecycle": true,
+      "mode": "rush",
+      "rush": {
+        "chain": 1,
+        "total": 0,
+        "startedAt": 0,
+        "remaining": 130,
+        "consumed": 0
+      },
+      "lastRush": null,
+      "round": {
+        "phase": "celebration",
+        "phaseTime": 0.016666666666666666,
+        "fromRush": false,
+        "round": 1,
+        "count": 0,
+        "limit": 10,
+        "payout": 0,
+        "maxPayout": 0,
+        "remainingSeconds": 15,
+        "history": []
+      },
+      "win": null,
+      "reach": null,
+      "time": 0.016666666666666666,
+      "holds": 0,
+      "active": false,
+      "draws": 0,
+      "stopTimer": 0,
+      "reels": {
+        "spinning": false,
+        "numbers": [
+          3,
+          7,
+          1
+        ],
+        "stopped": [
+          true,
+          true,
+          true
+        ]
+      },
+      "accepted": 0,
+      "entries": 0,
+      "events": []
+    },
+    "lcd": {
+      "x": 82,
+      "y": 303,
+      "width": 259.5,
+      "height": 202
+    },
+    "gate": {
+      "kind": "fuzu-inlet",
+      "count": 0,
+      "lastPass": null,
+      "lit": false
+    },
+    "leftRoutes": {
+      "roadContact": 0,
+      "nearHeso": 0,
+      "admitted": 0,
+      "nearAdmitted": 0,
+      "deflectedAtHeso": 0,
+      "nearMiss": 0,
+      "earlySpill": 0,
+      "pending": 0,
+      "nearPending": 0,
+      "nearMissOutcomes": {},
+      "outcomes": {},
+      "tracked": 1,
+      "byPower": {
+        "0.85": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {},
+          "tracked": 1
+        }
+      }
+    },
+    "time": 0.016666666666666666,
+    "paused": false,
+    "mode": "rush",
+    "counts": {
+      "fuzu": 0,
+      "normal": 0,
+      "start": 0,
+      "rush": 0,
+      "bonus": 0,
+      "out": 0,
+      "returned": 0
+    },
+    "spawned": 1,
+    "pockets": [
+      {
+        "x": 356,
+        "y": 430,
+        "w": 60,
+        "kind": "bonus",
+        "id": 5,
+        "captureTray": {
+          "left": 333.875,
+          "right": 372.625,
+          "y": 449.5,
+          "radius": 1.4
+        }
+      },
+      {
+        "x": 280.5,
+        "y": 542,
+        "w": 12,
+        "kind": "rush",
+        "id": 6,
+        "geometryScale": 0.65,
+        "referenceSlot": true,
+        "captureTray": {
+          "left": 272.5,
+          "right": 303.5,
+          "y": 548,
+          "radius": 0.65,
+          "role": "right-channel-5-1"
+        }
+      },
+      {
+        "id": 0,
+        "kind": "normal",
+        "x": 102.5,
+        "y": 542.5,
+        "w": 10
+      },
+      {
+        "id": 1,
+        "kind": "normal",
+        "x": 136,
+        "y": 555.5,
+        "w": 10
+      },
+      {
+        "id": 2,
+        "kind": "normal",
+        "x": 148.5,
+        "y": 563,
+        "w": 9.5
+      },
+      {
+        "id": 4,
+        "kind": "start",
+        "x": 208.5,
+        "y": 553,
+        "w": 12
+      },
+      {
+        "id": 8,
+        "kind": "fuzu",
+        "x": 271,
+        "y": 569.5,
+        "w": 14
+      }
+    ],
+    "guide": {
+      "a": {
+        "x": 339,
+        "y": 242.5
+      },
+      "b": {
+        "x": 354.5,
+        "y": 270.5
+      },
+      "r": 0.65,
+      "active": true,
+      "denchuShelf": false,
+      "material": "resin",
+      "role": "right-inner-lower",
+      "restitution": 0.04
+    },
+    "attacker": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "tulip": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "routeBalls": [],
+    "inFlight": 1
+  },
+  "checks": [
+    "mobile menu freezes full snapshot",
+    "resume advances",
+    "synthetic visibility event shows resume",
+    "explicit leave and new play resets totals",
+    "synthetic BFCache lifecycle returns floor and can start fresh"
+  ]
+}

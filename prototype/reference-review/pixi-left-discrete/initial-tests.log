@@ -1,0 +1,62 @@
+✔ lower LCD housing has a physical surface matching the visible apron (1.90675ms)
+✔ compact lower assembly drains and accounts for all balls at increased firing rate (20608.7495ms)
+✖ normal: balls stay outside LCD, follow side lanes and drain (2895.535459ms)
+✔ rush: balls stay outside LCD, follow side lanes and drain (2752.839333ms)
+✔ bonus: balls stay outside LCD, follow side lanes and drain (1637.51075ms)
+✔ both modes launch at one origin no faster than 0.6 seconds (1525.52875ms)
+✔ manual power changes only future normal shots (84.22275ms)
+✖ physical admissions start spins, pause freezes and all accepted holds drain (7697.75675ms)
+✔ active draw is separate from five holds, full holds do not add a draw (148.589459ms)
+✔ traced right channel guides physical balls and drains at 0.6s (954.780166ms)
+✔ traced right channel guides physical balls and drains at 0.05s (10528.119459ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.2 (1160.772917ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.24 (2034.0635ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.28 (1838.642583ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 12
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20683.253959
+
+✖ failing tests:
+
+test at prototype/tests/lcd-flow.test.js:5:45
+✖ normal: balls stay outside LCD, follow side lanes and drain (2895.535459ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(flow.counts[mode==='normal'?'start':mode]>0)
+  
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/lcd-flow.test.js:10:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at prototype/tests/normal-spin-flow.test.js:6:1
+✖ physical admissions start spins, pause freezes and all accepted holds drain (7697.75675ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(maxHolds>0)
+  
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/normal-spin-flow.test.js:9:59)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

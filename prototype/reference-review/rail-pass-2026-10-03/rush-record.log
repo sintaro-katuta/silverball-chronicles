@@ -1,0 +1,108 @@
+{
+  file: '/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/rail-pass-2026-10-03/page@cb9eea8cf0218df6e4c1b8190fb6c713.webm',
+  errors: [],
+  last: {
+    view: 'board',
+    intro: { active: false, phase: 'complete', elapsed: 3.8 },
+    w: {
+      model: 'e東京喰種W',
+      rush: [Object],
+      bonus: null,
+      pendingV: false,
+      electricOpen: false,
+      payout: 3065,
+      holds: [Object],
+      eventCount: 647
+    },
+    cabinet: {
+      phase: 'rush',
+      travel: 0,
+      light: 0.20033287341073197,
+      rainbow: false,
+      hue: 0,
+      sword: [Object],
+      fixedCarriers: true
+    },
+    session: {
+      stock: 3187,
+      total: 3065,
+      phase: 'playing',
+      accounting: [Object],
+      jackpots: 2
+    },
+    spin: {
+      entryPrelude: null,
+      lifecycle: true,
+      mode: 'right-closed',
+      rush: [Object],
+      lastRush: null,
+      round: [Object],
+      win: [Object],
+      reach: null,
+      time: 166.45000000001295,
+      holds: 4,
+      active: false,
+      draws: 1,
+      stopTimer: 0,
+      reels: [Object],
+      accepted: 2,
+      entries: 2,
+      events: [Array]
+    },
+    lcd: { x: 82, y: 303, width: 259.5, height: 202 },
+    gate: {
+      kind: 'fuzu-inlet',
+      count: 63,
+      lastPass: 161.65416666659848,
+      lit: false
+    },
+    leftRoutes: {
+      roadContact: 0,
+      nearHeso: 0,
+      admitted: 0,
+      nearAdmitted: 0,
+      deflectedAtHeso: 0,
+      nearMiss: 0,
+      earlySpill: 0,
+      pending: 0,
+      nearPending: 0,
+      nearMissOutcomes: {},
+      outcomes: [Object],
+      tracked: 278,
+      byPower: [Object]
+    },
+    time: 166.45000000001295,
+    paused: false,
+    mode: 'bonus',
+    counts: {
+      fuzu: 63,
+      normal: 0,
+      start: 0,
+      rush: 2,
+      bonus: 200,
+      out: 9,
+      returned: 0
+    },
+    spawned: 278,
+    pockets: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ],
+    guide: {
+      a: [Object],
+      b: [Object],
+      r: 0.65,
+      active: true,
+      denchuShelf: false,
+      material: 'resin',
+      role: 'right-inner-lower',
+      restitution: 0.04
+    },
+    attacker: { progress: 0, target: 0, moving: false },
+    tulip: { progress: 0, target: 0, moving: false },
+    routeBalls: [],
+    inFlight: 4
+  }
+}

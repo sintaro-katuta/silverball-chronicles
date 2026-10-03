@@ -1,0 +1,4266 @@
+{
+  "checkpoints": [
+    {
+      "spin": {
+        "round": {
+          "phase": "open",
+          "round": 1,
+          "count": 0,
+          "limit": 10,
+          "payout": 0,
+          "remainingSeconds": 15,
+          "history": [
+            {
+              "phase": "guide",
+              "time": 22.874999999999343,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "opening",
+              "time": 24.083333333332607,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "open",
+              "time": 24.73333333333257,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            }
+          ]
+        },
+        "win": {
+          "time": 7.666666666666231
+        },
+        "reach": null,
+        "time": 24.73333333333257,
+        "holds": 5,
+        "active": false,
+        "draws": 2,
+        "stopTimer": 0,
+        "reels": {
+          "spinning": false,
+          "numbers": [
+            7,
+            7,
+            7
+          ],
+          "stopped": [
+            true,
+            true,
+            true
+          ]
+        },
+        "accepted": 7,
+        "entries": 7,
+        "events": [
+          {
+            "time": 5.741666666666742,
+            "ballId": 7,
+            "accepted": 1,
+            "hold": 0,
+            "drawId": 1
+          },
+          {
+            "time": 8.15833333333351,
+            "ballId": 9,
+            "accepted": 1,
+            "hold": 1,
+            "drawId": 2
+          },
+          {
+            "time": 13.333333333333217,
+            "ballId": 17,
+            "accepted": 1,
+            "hold": 1,
+            "drawId": 3
+          },
+          {
+            "time": 15.941666666666402,
+            "ballId": 24,
+            "accepted": 1,
+            "hold": 2,
+            "drawId": 4
+          },
+          {
+            "time": 22.13333333333272,
+            "ballId": 33,
+            "accepted": 1,
+            "hold": 3,
+            "drawId": 5
+          },
+          {
+            "time": 22.533333333332696,
+            "ballId": 35,
+            "accepted": 1,
+            "hold": 4,
+            "drawId": 6
+          },
+          {
+            "time": 24.333333333332593,
+            "ballId": 38,
+            "accepted": 1,
+            "hold": 5,
+            "drawId": 7
+          }
+        ]
+      },
+      "lcd": {
+        "x": 108,
+        "y": 236,
+        "width": 210,
+        "height": 140
+      },
+      "gate": {
+        "count": 0,
+        "lastPass": null,
+        "lit": false
+      },
+      "leftRoutes": {
+        "roadContact": 39,
+        "nearHeso": 20,
+        "admitted": 7,
+        "nearAdmitted": 7,
+        "deflectedAtHeso": 4,
+        "nearMiss": 7,
+        "earlySpill": 18,
+        "pending": 3,
+        "nearPending": 2,
+        "nearMissOutcomes": {
+          "out": 7
+        },
+        "outcomes": {
+          "out": 28,
+          "start": 7,
+          "normal": 1
+        },
+        "tracked": 42,
+        "byPower": {
+          "0.24": {
+            "roadContact": 1,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 1,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "out": 1
+            },
+            "tracked": 1
+          },
+          "0.23": {
+            "roadContact": 38,
+            "nearHeso": 20,
+            "admitted": 7,
+            "nearAdmitted": 7,
+            "deflectedAtHeso": 4,
+            "nearMiss": 7,
+            "earlySpill": 17,
+            "pending": 3,
+            "nearPending": 2,
+            "nearMissOutcomes": {
+              "out": 7
+            },
+            "outcomes": {
+              "out": 27,
+              "start": 7,
+              "normal": 1
+            },
+            "tracked": 38
+          },
+          "0.6": {
+            "roadContact": 0,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 0,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {},
+            "tracked": 3
+          }
+        }
+      },
+      "time": 24.73333333333257,
+      "paused": false,
+      "mode": "bonus",
+      "counts": {
+        "normal": 1,
+        "start": 7,
+        "rush": 0,
+        "bonus": 0,
+        "out": 28,
+        "returned": 0
+      },
+      "spawned": 42,
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 480,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 357.25,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5,
+          "captureTray": {
+            "left": 335.125,
+            "right": 373.875,
+            "y": 600.5,
+            "radius": 1.4
+          }
+        },
+        {
+          "x": 359.5,
+          "y": 493,
+          "w": 20,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "guide": {
+        "a": {
+          "x": 359,
+          "y": 310
+        },
+        "b": {
+          "x": 359,
+          "y": 392
+        },
+        "r": 1.3,
+        "material": "resin",
+        "role": "right-inner-lower",
+        "restitution": 0.04
+      },
+      "attacker": {
+        "progress": 1,
+        "target": 1,
+        "moving": false
+      },
+      "tulip": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "routeBalls": [],
+      "inFlight": 6
+    },
+    {
+      "spin": {
+        "round": {
+          "phase": "opening",
+          "round": 2,
+          "count": 0,
+          "limit": 10,
+          "payout": 150,
+          "remainingSeconds": 15,
+          "history": [
+            {
+              "phase": "guide",
+              "time": 22.874999999999343,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "opening",
+              "time": 24.083333333332607,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "open",
+              "time": 24.73333333333257,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "admission",
+              "time": 26.199999999999154,
+              "round": 1,
+              "count": 1,
+              "ballId": 40,
+              "payout": 15
+            },
+            {
+              "phase": "admission",
+              "time": 26.591666666665798,
+              "round": 1,
+              "count": 2,
+              "ballId": 41,
+              "payout": 30
+            },
+            {
+              "phase": "admission",
+              "time": 27.983333333332386,
+              "round": 1,
+              "count": 3,
+              "ballId": 42,
+              "payout": 45
+            },
+            {
+              "phase": "admission",
+              "time": 28.2916666666657,
+              "round": 1,
+              "count": 4,
+              "ballId": 43,
+              "payout": 60
+            },
+            {
+              "phase": "admission",
+              "time": 28.64166666666568,
+              "round": 1,
+              "count": 5,
+              "ballId": 44,
+              "payout": 75
+            },
+            {
+              "phase": "admission",
+              "time": 29.408333333332305,
+              "round": 1,
+              "count": 6,
+              "ballId": 45,
+              "payout": 90
+            },
+            {
+              "phase": "admission",
+              "time": 29.474999999998968,
+              "round": 1,
+              "count": 7,
+              "ballId": 46,
+              "payout": 105
+            },
+            {
+              "phase": "admission",
+              "time": 30.366666666665584,
+              "round": 1,
+              "count": 8,
+              "ballId": 47,
+              "payout": 120
+            },
+            {
+              "phase": "admission",
+              "time": 31.224999999998868,
+              "round": 1,
+              "count": 9,
+              "ballId": 49,
+              "payout": 135
+            },
+            {
+              "phase": "admission",
+              "time": 31.499999999998852,
+              "round": 1,
+              "count": 10,
+              "ballId": 48,
+              "payout": 150
+            },
+            {
+              "phase": "closing",
+              "time": 31.499999999998852,
+              "round": 1,
+              "count": 10,
+              "payout": 150
+            },
+            {
+              "phase": "gap",
+              "time": 31.999999999998824,
+              "round": 1,
+              "count": 10,
+              "payout": 150
+            },
+            {
+              "phase": "opening",
+              "time": 32.64999999999879,
+              "round": 2,
+              "count": 0,
+              "payout": 150
+            }
+          ]
+        },
+        "win": {
+          "time": 15.758333333332441
+        },
+        "reach": null,
+        "time": 32.82499999999878,
+        "holds": 5,
+        "active": false,
+        "draws": 2,
+        "stopTimer": 0,
+        "reels": {
+          "spinning": false,
+          "numbers": [
+            7,
+            7,
+            7
+          ],
+          "stopped": [
+            true,
+            true,
+            true
+          ]
+        },
+        "accepted": 7,
+        "entries": 7,
+        "events": [
+          {
+            "time": 5.741666666666742,
+            "ballId": 7,
+            "accepted": 1,
+            "hold": 0,
+            "drawId": 1
+          },
+          {
+            "time": 8.15833333333351,
+            "ballId": 9,
+            "accepted": 1,
+            "hold": 1,
+            "drawId": 2
+          },
+          {
+            "time": 13.333333333333217,
+            "ballId": 17,
+            "accepted": 1,
+            "hold": 1,
+            "drawId": 3
+          },
+          {
+            "time": 15.941666666666402,
+            "ballId": 24,
+            "accepted": 1,
+            "hold": 2,
+            "drawId": 4
+          },
+          {
+            "time": 22.13333333333272,
+            "ballId": 33,
+            "accepted": 1,
+            "hold": 3,
+            "drawId": 5
+          },
+          {
+            "time": 22.533333333332696,
+            "ballId": 35,
+            "accepted": 1,
+            "hold": 4,
+            "drawId": 6
+          },
+          {
+            "time": 24.333333333332593,
+            "ballId": 38,
+            "accepted": 1,
+            "hold": 5,
+            "drawId": 7
+          }
+        ]
+      },
+      "lcd": {
+        "x": 108,
+        "y": 236,
+        "width": 210,
+        "height": 140
+      },
+      "gate": {
+        "count": 14,
+        "lastPass": 32.781666666653095,
+        "lit": true
+      },
+      "leftRoutes": {
+        "roadContact": 39,
+        "nearHeso": 20,
+        "admitted": 7,
+        "nearAdmitted": 7,
+        "deflectedAtHeso": 5,
+        "nearMiss": 8,
+        "earlySpill": 19,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 8
+        },
+        "outcomes": {
+          "out": 32,
+          "start": 7,
+          "normal": 1,
+          "bonus": 10
+        },
+        "tracked": 55,
+        "byPower": {
+          "0.24": {
+            "roadContact": 1,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 1,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "out": 1
+            },
+            "tracked": 1
+          },
+          "0.23": {
+            "roadContact": 38,
+            "nearHeso": 20,
+            "admitted": 7,
+            "nearAdmitted": 7,
+            "deflectedAtHeso": 5,
+            "nearMiss": 8,
+            "earlySpill": 18,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 8
+            },
+            "outcomes": {
+              "out": 30,
+              "start": 7,
+              "normal": 1
+            },
+            "tracked": 38
+          },
+          "0.6": {
+            "roadContact": 0,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 0,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "bonus": 10,
+              "out": 1
+            },
+            "tracked": 16
+          }
+        }
+      },
+      "time": 32.82499999999878,
+      "paused": false,
+      "mode": "bonus",
+      "counts": {
+        "normal": 1,
+        "start": 7,
+        "rush": 0,
+        "bonus": 10,
+        "out": 32,
+        "returned": 0
+      },
+      "spawned": 55,
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 480,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 357.25,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5,
+          "captureTray": {
+            "left": 335.125,
+            "right": 373.875,
+            "y": 600.5,
+            "radius": 1.4
+          }
+        },
+        {
+          "x": 359.5,
+          "y": 493,
+          "w": 20,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "guide": {
+        "a": {
+          "x": 359,
+          "y": 310
+        },
+        "b": {
+          "x": 359,
+          "y": 392
+        },
+        "r": 1.3,
+        "material": "resin",
+        "role": "right-inner-lower",
+        "restitution": 0.04
+      },
+      "attacker": {
+        "progress": 0.1784251251706692,
+        "target": 1,
+        "moving": true
+      },
+      "tulip": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "routeBalls": [
+        {
+          "id": 53,
+          "x": 372.4524583135586,
+          "y": 398.96599875848835,
+          "depth": 0.5170006207558231,
+          "visual": {
+            "x": 372.4524583135586,
+            "y": 399.3278991930174
+          }
+        }
+      ],
+      "inFlight": 5
+    },
+    {
+      "spin": {
+        "round": {
+          "phase": "open",
+          "round": 3,
+          "count": 0,
+          "limit": 10,
+          "payout": 300,
+          "remainingSeconds": 14.691666666666666,
+          "history": [
+            {
+              "phase": "guide",
+              "time": 22.874999999999343,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "opening",
+              "time": 24.083333333332607,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "open",
+              "time": 24.73333333333257,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "admission",
+              "time": 26.199999999999154,
+              "round": 1,
+              "count": 1,
+              "ballId": 40,
+              "payout": 15
+            },
+            {
+              "phase": "admission",
+              "time": 26.591666666665798,
+              "round": 1,
+              "count": 2,
+              "ballId": 41,
+              "payout": 30
+            },
+            {
+              "phase": "admission",
+              "time": 27.983333333332386,
+              "round": 1,
+              "count": 3,
+              "ballId": 42,
+              "payout": 45
+            },
+            {
+              "phase": "admission",
+              "time": 28.2916666666657,
+              "round": 1,
+              "count": 4,
+              "ballId": 43,
+              "payout": 60
+            },
+            {
+              "phase": "admission",
+              "time": 28.64166666666568,
+              "round": 1,
+              "count": 5,
+              "ballId": 44,
+              "payout": 75
+            },
+            {
+              "phase": "admission",
+              "time": 29.408333333332305,
+              "round": 1,
+              "count": 6,
+              "ballId": 45,
+              "payout": 90
+            },
+            {
+              "phase": "admission",
+              "time": 29.474999999998968,
+              "round": 1,
+              "count": 7,
+              "ballId": 46,
+              "payout": 105
+            },
+            {
+              "phase": "admission",
+              "time": 30.366666666665584,
+              "round": 1,
+              "count": 8,
+              "ballId": 47,
+              "payout": 120
+            },
+            {
+              "phase": "admission",
+              "time": 31.224999999998868,
+              "round": 1,
+              "count": 9,
+              "ballId": 49,
+              "payout": 135
+            },
+            {
+              "phase": "admission",
+              "time": 31.499999999998852,
+              "round": 1,
+              "count": 10,
+              "ballId": 48,
+              "payout": 150
+            },
+            {
+              "phase": "closing",
+              "time": 31.499999999998852,
+              "round": 1,
+              "count": 10,
+              "payout": 150
+            },
+            {
+              "phase": "gap",
+              "time": 31.999999999998824,
+              "round": 1,
+              "count": 10,
+              "payout": 150
+            },
+            {
+              "phase": "opening",
+              "time": 32.64999999999879,
+              "round": 2,
+              "count": 0,
+              "payout": 150
+            },
+            {
+              "phase": "open",
+              "time": 33.299999999998754,
+              "round": 2,
+              "count": 0,
+              "payout": 150
+            },
+            {
+              "phase": "admission",
+              "time": 33.34166666666542,
+              "round": 2,
+              "count": 1,
+              "ballId": 52,
+              "payout": 165
+            },
+            {
+              "phase": "admission",
+              "time": 34.07499999999871,
+              "round": 2,
+              "count": 2,
+              "ballId": 53,
+              "payout": 180
+            },
+            {
+              "phase": "admission",
+              "time": 34.24166666666537,
+              "round": 2,
+              "count": 3,
+              "ballId": 54,
+              "payout": 195
+            },
+            {
+              "phase": "admission",
+              "time": 35.23333333333198,
+              "round": 2,
+              "count": 4,
+              "ballId": 56,
+              "payout": 210
+            },
+            {
+              "phase": "admission",
+              "time": 35.87499999999861,
+              "round": 2,
+              "count": 5,
+              "ballId": 55,
+              "payout": 225
+            },
+            {
+              "phase": "admission",
+              "time": 36.29999999999858,
+              "round": 2,
+              "count": 6,
+              "ballId": 57,
+              "payout": 240
+            },
+            {
+              "phase": "admission",
+              "time": 36.37499999999858,
+              "round": 2,
+              "count": 7,
+              "ballId": 58,
+              "payout": 255
+            },
+            {
+              "phase": "admission",
+              "time": 37.54999999999851,
+              "round": 2,
+              "count": 8,
+              "ballId": 59,
+              "payout": 270
+            },
+            {
+              "phase": "admission",
+              "time": 37.89999999999849,
+              "round": 2,
+              "count": 9,
+              "ballId": 60,
+              "payout": 285
+            },
+            {
+              "phase": "admission",
+              "time": 38.84999999999844,
+              "round": 2,
+              "count": 10,
+              "ballId": 61,
+              "payout": 300
+            },
+            {
+              "phase": "closing",
+              "time": 38.84999999999844,
+              "round": 2,
+              "count": 10,
+              "payout": 300
+            },
+            {
+              "phase": "gap",
+              "time": 39.34999999999841,
+              "round": 2,
+              "count": 10,
+              "payout": 300
+            },
+            {
+              "phase": "opening",
+              "time": 39.99999999999837,
+              "round": 3,
+              "count": 0,
+              "payout": 300
+            },
+            {
+              "phase": "open",
+              "time": 40.649999999998336,
+              "round": 3,
+              "count": 0,
+              "payout": 300
+            }
+          ]
+        },
+        "win": {
+          "time": 23.891666666665312
+        },
+        "reach": null,
+        "time": 40.95833333333165,
+        "holds": 5,
+        "active": false,
+        "draws": 2,
+        "stopTimer": 0,
+        "reels": {
+          "spinning": false,
+          "numbers": [
+            7,
+            7,
+            7
+          ],
+          "stopped": [
+            true,
+            true,
+            true
+          ]
+        },
+        "accepted": 7,
+        "entries": 7,
+        "events": [
+          {
+            "time": 5.741666666666742,
+            "ballId": 7,
+            "accepted": 1,
+            "hold": 0,
+            "drawId": 1
+          },
+          {
+            "time": 8.15833333333351,
+            "ballId": 9,
+            "accepted": 1,
+            "hold": 1,
+            "drawId": 2
+          },
+          {
+            "time": 13.333333333333217,
+            "ballId": 17,
+            "accepted": 1,
+            "hold": 1,
+            "drawId": 3
+          },
+          {
+            "time": 15.941666666666402,
+            "ballId": 24,
+            "accepted": 1,
+            "hold": 2,
+            "drawId": 4
+          },
+          {
+            "time": 22.13333333333272,
+            "ballId": 33,
+            "accepted": 1,
+            "hold": 3,
+            "drawId": 5
+          },
+          {
+            "time": 22.533333333332696,
+            "ballId": 35,
+            "accepted": 1,
+            "hold": 4,
+            "drawId": 6
+          },
+          {
+            "time": 24.333333333332593,
+            "ballId": 38,
+            "accepted": 1,
+            "hold": 5,
+            "drawId": 7
+          }
+        ]
+      },
+      "lcd": {
+        "x": 108,
+        "y": 236,
+        "width": 210,
+        "height": 140
+      },
+      "gate": {
+        "count": 27,
+        "lastPass": 40.63333333331262,
+        "lit": false
+      },
+      "leftRoutes": {
+        "roadContact": 39,
+        "nearHeso": 20,
+        "admitted": 7,
+        "nearAdmitted": 7,
+        "deflectedAtHeso": 5,
+        "nearMiss": 8,
+        "earlySpill": 19,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 8
+        },
+        "outcomes": {
+          "out": 35,
+          "start": 7,
+          "normal": 1,
+          "bonus": 20
+        },
+        "tracked": 69,
+        "byPower": {
+          "0.24": {
+            "roadContact": 1,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 1,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "out": 1
+            },
+            "tracked": 1
+          },
+          "0.23": {
+            "roadContact": 38,
+            "nearHeso": 20,
+            "admitted": 7,
+            "nearAdmitted": 7,
+            "deflectedAtHeso": 5,
+            "nearMiss": 8,
+            "earlySpill": 18,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 8
+            },
+            "outcomes": {
+              "out": 30,
+              "start": 7,
+              "normal": 1
+            },
+            "tracked": 38
+          },
+          "0.6": {
+            "roadContact": 0,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 0,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "bonus": 20,
+              "out": 4
+            },
+            "tracked": 30
+          }
+        }
+      },
+      "time": 40.95833333333165,
+      "paused": false,
+      "mode": "bonus",
+      "counts": {
+        "normal": 1,
+        "start": 7,
+        "rush": 0,
+        "bonus": 20,
+        "out": 35,
+        "returned": 0
+      },
+      "spawned": 69,
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 480,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 357.25,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5,
+          "captureTray": {
+            "left": 335.125,
+            "right": 373.875,
+            "y": 600.5,
+            "radius": 1.4
+          }
+        },
+        {
+          "x": 359.5,
+          "y": 493,
+          "w": 20,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "guide": {
+        "a": {
+          "x": 359,
+          "y": 310
+        },
+        "b": {
+          "x": 359,
+          "y": 392
+        },
+        "r": 1.3,
+        "material": "resin",
+        "role": "right-inner-lower",
+        "restitution": 0.04
+      },
+      "attacker": {
+        "progress": 1,
+        "target": 1,
+        "moving": false
+      },
+      "tulip": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "routeBalls": [],
+      "inFlight": 6
+    },
+    {
+      "spin": {
+        "round": {
+          "phase": "open",
+          "round": 4,
+          "count": 0,
+          "limit": 10,
+          "payout": 450,
+          "remainingSeconds": 14.683333333333334,
+          "history": [
+            {
+              "phase": "guide",
+              "time": 22.874999999999343,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "opening",
+              "time": 24.083333333332607,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "open",
+              "time": 24.73333333333257,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "admission",
+              "time": 26.199999999999154,
+              "round": 1,
+              "count": 1,
+              "ballId": 40,
+              "payout": 15
+            },
+            {
+              "phase": "admission",
+              "time": 26.591666666665798,
+              "round": 1,
+              "count": 2,
+              "ballId": 41,
+              "payout": 30
+            },
+            {
+              "phase": "admission",
+              "time": 27.983333333332386,
+              "round": 1,
+              "count": 3,
+              "ballId": 42,
+              "payout": 45
+            },
+            {
+              "phase": "admission",
+              "time": 28.2916666666657,
+              "round": 1,
+              "count": 4,
+              "ballId": 43,
+              "payout": 60
+            },
+            {
+              "phase": "admission",
+              "time": 28.64166666666568,
+              "round": 1,
+              "count": 5,
+              "ballId": 44,
+              "payout": 75
+            },
+            {
+              "phase": "admission",
+              "time": 29.408333333332305,
+              "round": 1,
+              "count": 6,
+              "ballId": 45,
+              "payout": 90
+            },
+            {
+              "phase": "admission",
+              "time": 29.474999999998968,
+              "round": 1,
+              "count": 7,
+              "ballId": 46,
+              "payout": 105
+            },
+            {
+              "phase": "admission",
+              "time": 30.366666666665584,
+              "round": 1,
+              "count": 8,
+              "ballId": 47,
+              "payout": 120
+            },
+            {
+              "phase": "admission",
+              "time": 31.224999999998868,
+              "round": 1,
+              "count": 9,
+              "ballId": 49,
+              "payout": 135
+            },
+            {
+              "phase": "admission",
+              "time": 31.499999999998852,
+              "round": 1,
+              "count": 10,
+              "ballId": 48,
+              "payout": 150
+            },
+            {
+              "phase": "closing",
+              "time": 31.499999999998852,
+              "round": 1,
+              "count": 10,
+              "payout": 150
+            },
+            {
+              "phase": "gap",
+              "time": 31.999999999998824,
+              "round": 1,
+              "count": 10,
+              "payout": 150
+            },
+            {
+              "phase": "opening",
+              "time": 32.64999999999879,
+              "round": 2,
+              "count": 0,
+              "payout": 150
+            },
+            {
+              "phase": "open",
+              "time": 33.299999999998754,
+              "round": 2,
+              "count": 0,
+              "payout": 150
+            },
+            {
+              "phase": "admission",
+              "time": 33.34166666666542,
+              "round": 2,
+              "count": 1,
+              "ballId": 52,
+              "payout": 165
+            },
+            {
+              "phase": "admission",
+              "time": 34.07499999999871,
+              "round": 2,
+              "count": 2,
+              "ballId": 53,
+              "payout": 180
+            },
+            {
+              "phase": "admission",
+              "time": 34.24166666666537,
+              "round": 2,
+              "count": 3,
+              "ballId": 54,
+              "payout": 195
+            },
+            {
+              "phase": "admission",
+              "time": 35.23333333333198,
+              "round": 2,
+              "count": 4,
+              "ballId": 56,
+              "payout": 210
+            },
+            {
+              "phase": "admission",
+              "time": 35.87499999999861,
+              "round": 2,
+              "count": 5,
+              "ballId": 55,
+              "payout": 225
+            },
+            {
+              "phase": "admission",
+              "time": 36.29999999999858,
+              "round": 2,
+              "count": 6,
+              "ballId": 57,
+              "payout": 240
+            },
+            {
+              "phase": "admission",
+              "time": 36.37499999999858,
+              "round": 2,
+              "count": 7,
+              "ballId": 58,
+              "payout": 255
+            },
+            {
+              "phase": "admission",
+              "time": 37.54999999999851,
+              "round": 2,
+              "count": 8,
+              "ballId": 59,
+              "payout": 270
+            },
+            {
+              "phase": "admission",
+              "time": 37.89999999999849,
+              "round": 2,
+              "count": 9,
+              "ballId": 60,
+              "payout": 285
+            },
+            {
+              "phase": "admission",
+              "time": 38.84999999999844,
+              "round": 2,
+              "count": 10,
+              "ballId": 61,
+              "payout": 300
+            },
+            {
+              "phase": "closing",
+              "time": 38.84999999999844,
+              "round": 2,
+              "count": 10,
+              "payout": 300
+            },
+            {
+              "phase": "gap",
+              "time": 39.34999999999841,
+              "round": 2,
+              "count": 10,
+              "payout": 300
+            },
+            {
+              "phase": "opening",
+              "time": 39.99999999999837,
+              "round": 3,
+              "count": 0,
+              "payout": 300
+            },
+            {
+              "phase": "open",
+              "time": 40.649999999998336,
+              "round": 3,
+              "count": 0,
+              "payout": 300
+            },
+            {
+              "phase": "admission",
+              "time": 41.67499999999828,
+              "round": 3,
+              "count": 1,
+              "ballId": 66,
+              "payout": 315
+            },
+            {
+              "phase": "admission",
+              "time": 41.92499999999826,
+              "round": 3,
+              "count": 2,
+              "ballId": 67,
+              "payout": 330
+            },
+            {
+              "phase": "admission",
+              "time": 42.53333333333156,
+              "round": 3,
+              "count": 3,
+              "ballId": 68,
+              "payout": 345
+            },
+            {
+              "phase": "admission",
+              "time": 43.908333333331484,
+              "round": 3,
+              "count": 4,
+              "ballId": 69,
+              "payout": 360
+            },
+            {
+              "phase": "admission",
+              "time": 43.97499999999815,
+              "round": 3,
+              "count": 5,
+              "ballId": 70,
+              "payout": 375
+            },
+            {
+              "phase": "admission",
+              "time": 44.76666666666477,
+              "round": 3,
+              "count": 6,
+              "ballId": 71,
+              "payout": 390
+            },
+            {
+              "phase": "admission",
+              "time": 45.44999999999806,
+              "round": 3,
+              "count": 7,
+              "ballId": 72,
+              "payout": 405
+            },
+            {
+              "phase": "admission",
+              "time": 46.77499999999799,
+              "round": 3,
+              "count": 8,
+              "ballId": 73,
+              "payout": 420
+            },
+            {
+              "phase": "admission",
+              "time": 46.824999999997985,
+              "round": 3,
+              "count": 9,
+              "ballId": 74,
+              "payout": 435
+            },
+            {
+              "phase": "admission",
+              "time": 46.95833333333131,
+              "round": 3,
+              "count": 10,
+              "ballId": 75,
+              "payout": 450
+            },
+            {
+              "phase": "closing",
+              "time": 46.95833333333131,
+              "round": 3,
+              "count": 10,
+              "payout": 450
+            },
+            {
+              "phase": "gap",
+              "time": 47.45833333333128,
+              "round": 3,
+              "count": 10,
+              "payout": 450
+            },
+            {
+              "phase": "opening",
+              "time": 48.108333333331245,
+              "round": 4,
+              "count": 0,
+              "payout": 450
+            },
+            {
+              "phase": "open",
+              "time": 48.75833333333121,
+              "round": 4,
+              "count": 0,
+              "payout": 450
+            }
+          ]
+        },
+        "win": {
+          "time": 32.00833333333152
+        },
+        "reach": null,
+        "time": 49.07499999999786,
+        "holds": 5,
+        "active": false,
+        "draws": 2,
+        "stopTimer": 0,
+        "reels": {
+          "spinning": false,
+          "numbers": [
+            7,
+            7,
+            7
+          ],
+          "stopped": [
+            true,
+            true,
+            true
+          ]
+        },
+        "accepted": 7,
+        "entries": 7,
+        "events": [
+          {
+            "time": 5.741666666666742,
+            "ballId": 7,
+            "accepted": 1,
+            "hold": 0,
+            "drawId": 1
+          },
+          {
+            "time": 8.15833333333351,
+            "ballId": 9,
+            "accepted": 1,
+            "hold": 1,
+            "drawId": 2
+          },
+          {
+            "time": 13.333333333333217,
+            "ballId": 17,
+            "accepted": 1,
+            "hold": 1,
+            "drawId": 3
+          },
+          {
+            "time": 15.941666666666402,
+            "ballId": 24,
+            "accepted": 1,
+            "hold": 2,
+            "drawId": 4
+          },
+          {
+            "time": 22.13333333333272,
+            "ballId": 33,
+            "accepted": 1,
+            "hold": 3,
+            "drawId": 5
+          },
+          {
+            "time": 22.533333333332696,
+            "ballId": 35,
+            "accepted": 1,
+            "hold": 4,
+            "drawId": 6
+          },
+          {
+            "time": 24.333333333332593,
+            "ballId": 38,
+            "accepted": 1,
+            "hold": 5,
+            "drawId": 7
+          }
+        ]
+      },
+      "lcd": {
+        "x": 108,
+        "y": 236,
+        "width": 210,
+        "height": 140
+      },
+      "gate": {
+        "count": 41,
+        "lastPass": 49.02333333330499,
+        "lit": true
+      },
+      "leftRoutes": {
+        "roadContact": 39,
+        "nearHeso": 20,
+        "admitted": 7,
+        "nearAdmitted": 7,
+        "deflectedAtHeso": 5,
+        "nearMiss": 8,
+        "earlySpill": 19,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 8
+        },
+        "outcomes": {
+          "out": 39,
+          "start": 7,
+          "normal": 1,
+          "bonus": 30
+        },
+        "tracked": 82,
+        "byPower": {
+          "0.24": {
+            "roadContact": 1,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 1,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "out": 1
+            },
+            "tracked": 1
+          },
+          "0.23": {
+            "roadContact": 38,
+            "nearHeso": 20,
+            "admitted": 7,
+            "nearAdmitted": 7,
+            "deflectedAtHeso": 5,
+            "nearMiss": 8,
+            "earlySpill": 18,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 8
+            },
+            "outcomes": {
+              "out": 30,
+              "start": 7,
+              "normal": 1
+            },
+            "tracked": 38
+          },
+          "0.6": {
+            "roadContact": 0,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 0,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "bonus": 30,
+              "out": 8
+            },
+            "tracked": 43
+          }
+        }
+      },
+      "time": 49.07499999999786,
+      "paused": false,
+      "mode": "bonus",
+      "counts": {
+        "normal": 1,
+        "start": 7,
+        "rush": 0,
+        "bonus": 30,
+        "out": 39,
+        "returned": 0
+      },
+      "spawned": 82,
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 480,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 357.25,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5,
+          "captureTray": {
+            "left": 335.125,
+            "right": 373.875,
+            "y": 600.5,
+            "radius": 1.4
+          }
+        },
+        {
+          "x": 359.5,
+          "y": 493,
+          "w": 20,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "guide": {
+        "a": {
+          "x": 359,
+          "y": 310
+        },
+        "b": {
+          "x": 359,
+          "y": 392
+        },
+        "r": 1.3,
+        "material": "resin",
+        "role": "right-inner-lower",
+        "restitution": 0.04
+      },
+      "attacker": {
+        "progress": 1,
+        "target": 1,
+        "moving": false
+      },
+      "tulip": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "routeBalls": [],
+      "inFlight": 5
+    },
+    {
+      "spin": {
+        "round": {
+          "phase": "opening",
+          "round": 5,
+          "count": 0,
+          "limit": 10,
+          "payout": 600,
+          "remainingSeconds": 15,
+          "history": [
+            {
+              "phase": "guide",
+              "time": 22.874999999999343,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "opening",
+              "time": 24.083333333332607,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "open",
+              "time": 24.73333333333257,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "admission",
+              "time": 26.199999999999154,
+              "round": 1,
+              "count": 1,
+              "ballId": 40,
+              "payout": 15
+            },
+            {
+              "phase": "admission",
+              "time": 26.591666666665798,
+              "round": 1,
+              "count": 2,
+              "ballId": 41,
+              "payout": 30
+            },
+            {
+              "phase": "admission",
+              "time": 27.983333333332386,
+              "round": 1,
+              "count": 3,
+              "ballId": 42,
+              "payout": 45
+            },
+            {
+              "phase": "admission",
+              "time": 28.2916666666657,
+              "round": 1,
+              "count": 4,
+              "ballId": 43,
+              "payout": 60
+            },
+            {
+              "phase": "admission",
+              "time": 28.64166666666568,
+              "round": 1,
+              "count": 5,
+              "ballId": 44,
+              "payout": 75
+            },
+            {
+              "phase": "admission",
+              "time": 29.408333333332305,
+              "round": 1,
+              "count": 6,
+              "ballId": 45,
+              "payout": 90
+            },
+            {
+              "phase": "admission",
+              "time": 29.474999999998968,
+              "round": 1,
+              "count": 7,
+              "ballId": 46,
+              "payout": 105
+            },
+            {
+              "phase": "admission",
+              "time": 30.366666666665584,
+              "round": 1,
+              "count": 8,
+              "ballId": 47,
+              "payout": 120
+            },
+            {
+              "phase": "admission",
+              "time": 31.224999999998868,
+              "round": 1,
+              "count": 9,
+              "ballId": 49,
+              "payout": 135
+            },
+            {
+              "phase": "admission",
+              "time": 31.499999999998852,
+              "round": 1,
+              "count": 10,
+              "ballId": 48,
+              "payout": 150
+            },
+            {
+              "phase": "closing",
+              "time": 31.499999999998852,
+              "round": 1,
+              "count": 10,
+              "payout": 150
+            },
+            {
+              "phase": "gap",
+              "time": 31.999999999998824,
+              "round": 1,
+              "count": 10,
+              "payout": 150
+            },
+            {
+              "phase": "opening",
+              "time": 32.64999999999879,
+              "round": 2,
+              "count": 0,
+              "payout": 150
+            },
+            {
+              "phase": "open",
+              "time": 33.299999999998754,
+              "round": 2,
+              "count": 0,
+              "payout": 150
+            },
+            {
+              "phase": "admission",
+              "time": 33.34166666666542,
+              "round": 2,
+              "count": 1,
+              "ballId": 52,
+              "payout": 165
+            },
+            {
+              "phase": "admission",
+              "time": 34.07499999999871,
+              "round": 2,
+              "count": 2,
+              "ballId": 53,
+              "payout": 180
+            },
+            {
+              "phase": "admission",
+              "time": 34.24166666666537,
+              "round": 2,
+              "count": 3,
+              "ballId": 54,
+              "payout": 195
+            },
+            {
+              "phase": "admission",
+              "time": 35.23333333333198,
+              "round": 2,
+              "count": 4,
+              "ballId": 56,
+              "payout": 210
+            },
+            {
+              "phase": "admission",
+              "time": 35.87499999999861,
+              "round": 2,
+              "count": 5,
+              "ballId": 55,
+              "payout": 225
+            },
+            {
+              "phase": "admission",
+              "time": 36.29999999999858,
+              "round": 2,
+              "count": 6,
+              "ballId": 57,
+              "payout": 240
+            },
+            {
+              "phase": "admission",
+              "time": 36.37499999999858,
+              "round": 2,
+              "count": 7,
+              "ballId": 58,
+              "payout": 255
+            },
+            {
+              "phase": "admission",
+              "time": 37.54999999999851,
+              "round": 2,
+              "count": 8,
+              "ballId": 59,
+              "payout": 270
+            },
+            {
+              "phase": "admission",
+              "time": 37.89999999999849,
+              "round": 2,
+              "count": 9,
+              "ballId": 60,
+              "payout": 285
+            },
+            {
+              "phase": "admission",
+              "time": 38.84999999999844,
+              "round": 2,
+              "count": 10,
+              "ballId": 61,
+              "payout": 300
+            },
+            {
+              "phase": "closing",
+              "time": 38.84999999999844,
+              "round": 2,
+              "count": 10,
+              "payout": 300
+            },
+            {
+              "phase": "gap",
+              "time": 39.34999999999841,
+              "round": 2,
+              "count": 10,
+              "payout": 300
+            },
+            {
+              "phase": "opening",
+              "time": 39.99999999999837,
+              "round": 3,
+              "count": 0,
+              "payout": 300
+            },
+            {
+              "phase": "open",
+              "time": 40.649999999998336,
+              "round": 3,
+              "count": 0,
+              "payout": 300
+            },
+            {
+              "phase": "admission",
+              "time": 41.67499999999828,
+              "round": 3,
+              "count": 1,
+              "ballId": 66,
+              "payout": 315
+            },
+            {
+              "phase": "admission",
+              "time": 41.92499999999826,
+              "round": 3,
+              "count": 2,
+              "ballId": 67,
+              "payout": 330
+            },
+            {
+              "phase": "admission",
+              "time": 42.53333333333156,
+              "round": 3,
+              "count": 3,
+              "ballId": 68,
+              "payout": 345
+            },
+            {
+              "phase": "admission",
+              "time": 43.908333333331484,
+              "round": 3,
+              "count": 4,
+              "ballId": 69,
+              "payout": 360
+            },
+            {
+              "phase": "admission",
+              "time": 43.97499999999815,
+              "round": 3,
+              "count": 5,
+              "ballId": 70,
+              "payout": 375
+            },
+            {
+              "phase": "admission",
+              "time": 44.76666666666477,
+              "round": 3,
+              "count": 6,
+              "ballId": 71,
+              "payout": 390
+            },
+            {
+              "phase": "admission",
+              "time": 45.44999999999806,
+              "round": 3,
+              "count": 7,
+              "ballId": 72,
+              "payout": 405
+            },
+            {
+              "phase": "admission",
+              "time": 46.77499999999799,
+              "round": 3,
+              "count": 8,
+              "ballId": 73,
+              "payout": 420
+            },
+            {
+              "phase": "admission",
+              "time": 46.824999999997985,
+              "round": 3,
+              "count": 9,
+              "ballId": 74,
+              "payout": 435
+            },
+            {
+              "phase": "admission",
+              "time": 46.95833333333131,
+              "round": 3,
+              "count": 10,
+              "ballId": 75,
+              "payout": 450
+            },
+            {
+              "phase": "closing",
+              "time": 46.95833333333131,
+              "round": 3,
+              "count": 10,
+              "payout": 450
+            },
+            {
+              "phase": "gap",
+              "time": 47.45833333333128,
+              "round": 3,
+              "count": 10,
+              "payout": 450
+            },
+            {
+              "phase": "opening",
+              "time": 48.108333333331245,
+              "round": 4,
+              "count": 0,
+              "payout": 450
+            },
+            {
+              "phase": "open",
+              "time": 48.75833333333121,
+              "round": 4,
+              "count": 0,
+              "payout": 450
+            },
+            {
+              "phase": "admission",
+              "time": 49.24999999999785,
+              "round": 4,
+              "count": 1,
+              "ballId": 78,
+              "payout": 465
+            },
+            {
+              "phase": "admission",
+              "time": 49.66666666666449,
+              "round": 4,
+              "count": 2,
+              "ballId": 79,
+              "payout": 480
+            },
+            {
+              "phase": "admission",
+              "time": 49.72499999999782,
+              "round": 4,
+              "count": 3,
+              "ballId": 80,
+              "payout": 495
+            },
+            {
+              "phase": "admission",
+              "time": 50.85833333333109,
+              "round": 4,
+              "count": 4,
+              "ballId": 81,
+              "payout": 510
+            },
+            {
+              "phase": "admission",
+              "time": 51.23333333333107,
+              "round": 4,
+              "count": 5,
+              "ballId": 82,
+              "payout": 525
+            },
+            {
+              "phase": "admission",
+              "time": 51.74166666666437,
+              "round": 4,
+              "count": 6,
+              "ballId": 83,
+              "payout": 540
+            },
+            {
+              "phase": "admission",
+              "time": 52.333333333331005,
+              "round": 4,
+              "count": 7,
+              "ballId": 84,
+              "payout": 555
+            },
+            {
+              "phase": "admission",
+              "time": 52.999999999997634,
+              "round": 4,
+              "count": 8,
+              "ballId": 85,
+              "payout": 570
+            },
+            {
+              "phase": "admission",
+              "time": 53.408333333330944,
+              "round": 4,
+              "count": 9,
+              "ballId": 86,
+              "payout": 585
+            },
+            {
+              "phase": "admission",
+              "time": 54.47499999999755,
+              "round": 4,
+              "count": 10,
+              "ballId": 88,
+              "payout": 600
+            },
+            {
+              "phase": "closing",
+              "time": 54.47499999999755,
+              "round": 4,
+              "count": 10,
+              "payout": 600
+            },
+            {
+              "phase": "gap",
+              "time": 54.97499999999752,
+              "round": 4,
+              "count": 10,
+              "payout": 600
+            },
+            {
+              "phase": "opening",
+              "time": 55.624999999997485,
+              "round": 5,
+              "count": 0,
+              "payout": 600
+            }
+          ]
+        },
+        "win": {
+          "time": 39.14166666666445
+        },
+        "reach": null,
+        "time": 56.208333333330785,
+        "holds": 5,
+        "active": false,
+        "draws": 2,
+        "stopTimer": 0,
+        "reels": {
+          "spinning": false,
+          "numbers": [
+            7,
+            7,
+            7
+          ],
+          "stopped": [
+            true,
+            true,
+            true
+          ]
+        },
+        "accepted": 7,
+        "entries": 7,
+        "events": [
+          {
+            "time": 5.741666666666742,
+            "ballId": 7,
+            "accepted": 1,
+            "hold": 0,
+            "drawId": 1
+          },
+          {
+            "time": 8.15833333333351,
+            "ballId": 9,
+            "accepted": 1,
+            "hold": 1,
+            "drawId": 2
+          },
+          {
+            "time": 13.333333333333217,
+            "ballId": 17,
+            "accepted": 1,
+            "hold": 1,
+            "drawId": 3
+          },
+          {
+            "time": 15.941666666666402,
+            "ballId": 24,
+            "accepted": 1,
+            "hold": 2,
+            "drawId": 4
+          },
+          {
+            "time": 22.13333333333272,
+            "ballId": 33,
+            "accepted": 1,
+            "hold": 3,
+            "drawId": 5
+          },
+          {
+            "time": 22.533333333332696,
+            "ballId": 35,
+            "accepted": 1,
+            "hold": 4,
+            "drawId": 6
+          },
+          {
+            "time": 24.333333333332593,
+            "ballId": 38,
+            "accepted": 1,
+            "hold": 5,
+            "drawId": 7
+          }
+        ]
+      },
+      "lcd": {
+        "x": 108,
+        "y": 236,
+        "width": 210,
+        "height": 140
+      },
+      "gate": {
+        "count": 53,
+        "lastPass": 56.18166666663181,
+        "lit": true
+      },
+      "leftRoutes": {
+        "roadContact": 39,
+        "nearHeso": 20,
+        "admitted": 7,
+        "nearAdmitted": 7,
+        "deflectedAtHeso": 5,
+        "nearMiss": 8,
+        "earlySpill": 19,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 8
+        },
+        "outcomes": {
+          "out": 40,
+          "start": 7,
+          "normal": 1,
+          "bonus": 40
+        },
+        "tracked": 94,
+        "byPower": {
+          "0.24": {
+            "roadContact": 1,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 1,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "out": 1
+            },
+            "tracked": 1
+          },
+          "0.23": {
+            "roadContact": 38,
+            "nearHeso": 20,
+            "admitted": 7,
+            "nearAdmitted": 7,
+            "deflectedAtHeso": 5,
+            "nearMiss": 8,
+            "earlySpill": 18,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 8
+            },
+            "outcomes": {
+              "out": 30,
+              "start": 7,
+              "normal": 1
+            },
+            "tracked": 38
+          },
+          "0.6": {
+            "roadContact": 0,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 0,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "bonus": 40,
+              "out": 9
+            },
+            "tracked": 55
+          }
+        }
+      },
+      "time": 56.208333333330785,
+      "paused": false,
+      "mode": "bonus",
+      "counts": {
+        "normal": 1,
+        "start": 7,
+        "rush": 0,
+        "bonus": 40,
+        "out": 40,
+        "returned": 0
+      },
+      "spawned": 94,
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 480,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 357.25,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5,
+          "captureTray": {
+            "left": 335.125,
+            "right": 373.875,
+            "y": 600.5,
+            "radius": 1.4
+          }
+        },
+        {
+          "x": 359.5,
+          "y": 493,
+          "w": 20,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "guide": {
+        "a": {
+          "x": 359,
+          "y": 310
+        },
+        "b": {
+          "x": 359,
+          "y": 392
+        },
+        "r": 1.3,
+        "material": "resin",
+        "role": "right-inner-lower",
+        "restitution": 0.04
+      },
+      "attacker": {
+        "progress": 0.9705996392386642,
+        "target": 1,
+        "moving": true
+      },
+      "tulip": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "routeBalls": [
+        {
+          "id": 92,
+          "x": 372.53105888593666,
+          "y": 387.72522022761797,
+          "depth": 6.137389886191016,
+          "visual": {
+            "x": 372.53105888593666,
+            "y": 392.0213931479517
+          }
+        }
+      ],
+      "inFlight": 6
+    },
+    {
+      "spin": {
+        "round": {
+          "phase": "open",
+          "round": 6,
+          "count": 1,
+          "limit": 10,
+          "payout": 765,
+          "remainingSeconds": 14.7,
+          "history": [
+            {
+              "phase": "guide",
+              "time": 22.874999999999343,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "opening",
+              "time": 24.083333333332607,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "open",
+              "time": 24.73333333333257,
+              "round": 1,
+              "count": 0,
+              "payout": 0
+            },
+            {
+              "phase": "admission",
+              "time": 26.199999999999154,
+              "round": 1,
+              "count": 1,
+              "ballId": 40,
+              "payout": 15
+            },
+            {
+              "phase": "admission",
+              "time": 26.591666666665798,
+              "round": 1,
+              "count": 2,
+              "ballId": 41,
+              "payout": 30
+            },
+            {
+              "phase": "admission",
+              "time": 27.983333333332386,
+              "round": 1,
+              "count": 3,
+              "ballId": 42,
+              "payout": 45
+            },
+            {
+              "phase": "admission",
+              "time": 28.2916666666657,
+              "round": 1,
+              "count": 4,
+              "ballId": 43,
+              "payout": 60
+            },
+            {
+              "phase": "admission",
+              "time": 28.64166666666568,
+              "round": 1,
+              "count": 5,
+              "ballId": 44,
+              "payout": 75
+            },
+            {
+              "phase": "admission",
+              "time": 29.408333333332305,
+              "round": 1,
+              "count": 6,
+              "ballId": 45,
+              "payout": 90
+            },
+            {
+              "phase": "admission",
+              "time": 29.474999999998968,
+              "round": 1,
+              "count": 7,
+              "ballId": 46,
+              "payout": 105
+            },
+            {
+              "phase": "admission",
+              "time": 30.366666666665584,
+              "round": 1,
+              "count": 8,
+              "ballId": 47,
+              "payout": 120
+            },
+            {
+              "phase": "admission",
+              "time": 31.224999999998868,
+              "round": 1,
+              "count": 9,
+              "ballId": 49,
+              "payout": 135
+            },
+            {
+              "phase": "admission",
+              "time": 31.499999999998852,
+              "round": 1,
+              "count": 10,
+              "ballId": 48,
+              "payout": 150
+            },
+            {
+              "phase": "closing",
+              "time": 31.499999999998852,
+              "round": 1,
+              "count": 10,
+              "payout": 150
+            },
+            {
+              "phase": "gap",
+              "time": 31.999999999998824,
+              "round": 1,
+              "count": 10,
+              "payout": 150
+            },
+            {
+              "phase": "opening",
+              "time": 32.64999999999879,
+              "round": 2,
+              "count": 0,
+              "payout": 150
+            },
+            {
+              "phase": "open",
+              "time": 33.299999999998754,
+              "round": 2,
+              "count": 0,
+              "payout": 150
+            },
+            {
+              "phase": "admission",
+              "time": 33.34166666666542,
+              "round": 2,
+              "count": 1,
+              "ballId": 52,
+              "payout": 165
+            },
+            {
+              "phase": "admission",
+              "time": 34.07499999999871,
+              "round": 2,
+              "count": 2,
+              "ballId": 53,
+              "payout": 180
+            },
+            {
+              "phase": "admission",
+              "time": 34.24166666666537,
+              "round": 2,
+              "count": 3,
+              "ballId": 54,
+              "payout": 195
+            },
+            {
+              "phase": "admission",
+              "time": 35.23333333333198,
+              "round": 2,
+              "count": 4,
+              "ballId": 56,
+              "payout": 210
+            },
+            {
+              "phase": "admission",
+              "time": 35.87499999999861,
+              "round": 2,
+              "count": 5,
+              "ballId": 55,
+              "payout": 225
+            },
+            {
+              "phase": "admission",
+              "time": 36.29999999999858,
+              "round": 2,
+              "count": 6,
+              "ballId": 57,
+              "payout": 240
+            },
+            {
+              "phase": "admission",
+              "time": 36.37499999999858,
+              "round": 2,
+              "count": 7,
+              "ballId": 58,
+              "payout": 255
+            },
+            {
+              "phase": "admission",
+              "time": 37.54999999999851,
+              "round": 2,
+              "count": 8,
+              "ballId": 59,
+              "payout": 270
+            },
+            {
+              "phase": "admission",
+              "time": 37.89999999999849,
+              "round": 2,
+              "count": 9,
+              "ballId": 60,
+              "payout": 285
+            },
+            {
+              "phase": "admission",
+              "time": 38.84999999999844,
+              "round": 2,
+              "count": 10,
+              "ballId": 61,
+              "payout": 300
+            },
+            {
+              "phase": "closing",
+              "time": 38.84999999999844,
+              "round": 2,
+              "count": 10,
+              "payout": 300
+            },
+            {
+              "phase": "gap",
+              "time": 39.34999999999841,
+              "round": 2,
+              "count": 10,
+              "payout": 300
+            },
+            {
+              "phase": "opening",
+              "time": 39.99999999999837,
+              "round": 3,
+              "count": 0,
+              "payout": 300
+            },
+            {
+              "phase": "open",
+              "time": 40.649999999998336,
+              "round": 3,
+              "count": 0,
+              "payout": 300
+            },
+            {
+              "phase": "admission",
+              "time": 41.67499999999828,
+              "round": 3,
+              "count": 1,
+              "ballId": 66,
+              "payout": 315
+            },
+            {
+              "phase": "admission",
+              "time": 41.92499999999826,
+              "round": 3,
+              "count": 2,
+              "ballId": 67,
+              "payout": 330
+            },
+            {
+              "phase": "admission",
+              "time": 42.53333333333156,
+              "round": 3,
+              "count": 3,
+              "ballId": 68,
+              "payout": 345
+            },
+            {
+              "phase": "admission",
+              "time": 43.908333333331484,
+              "round": 3,
+              "count": 4,
+              "ballId": 69,
+              "payout": 360
+            },
+            {
+              "phase": "admission",
+              "time": 43.97499999999815,
+              "round": 3,
+              "count": 5,
+              "ballId": 70,
+              "payout": 375
+            },
+            {
+              "phase": "admission",
+              "time": 44.76666666666477,
+              "round": 3,
+              "count": 6,
+              "ballId": 71,
+              "payout": 390
+            },
+            {
+              "phase": "admission",
+              "time": 45.44999999999806,
+              "round": 3,
+              "count": 7,
+              "ballId": 72,
+              "payout": 405
+            },
+            {
+              "phase": "admission",
+              "time": 46.77499999999799,
+              "round": 3,
+              "count": 8,
+              "ballId": 73,
+              "payout": 420
+            },
+            {
+              "phase": "admission",
+              "time": 46.824999999997985,
+              "round": 3,
+              "count": 9,
+              "ballId": 74,
+              "payout": 435
+            },
+            {
+              "phase": "admission",
+              "time": 46.95833333333131,
+              "round": 3,
+              "count": 10,
+              "ballId": 75,
+              "payout": 450
+            },
+            {
+              "phase": "closing",
+              "time": 46.95833333333131,
+              "round": 3,
+              "count": 10,
+              "payout": 450
+            },
+            {
+              "phase": "gap",
+              "time": 47.45833333333128,
+              "round": 3,
+              "count": 10,
+              "payout": 450
+            },
+            {
+              "phase": "opening",
+              "time": 48.108333333331245,
+              "round": 4,
+              "count": 0,
+              "payout": 450
+            },
+            {
+              "phase": "open",
+              "time": 48.75833333333121,
+              "round": 4,
+              "count": 0,
+              "payout": 450
+            },
+            {
+              "phase": "admission",
+              "time": 49.24999999999785,
+              "round": 4,
+              "count": 1,
+              "ballId": 78,
+              "payout": 465
+            },
+            {
+              "phase": "admission",
+              "time": 49.66666666666449,
+              "round": 4,
+              "count": 2,
+              "ballId": 79,
+              "payout": 480
+            },
+            {
+              "phase": "admission",
+              "time": 49.72499999999782,
+              "round": 4,
+              "count": 3,
+              "ballId": 80,
+              "payout": 495
+            },
+            {
+              "phase": "admission",
+              "time": 50.85833333333109,
+              "round": 4,
+              "count": 4,
+              "ballId": 81,
+              "payout": 510
+            },
+            {
+              "phase": "admission",
+              "time": 51.23333333333107,
+              "round": 4,
+              "count": 5,
+              "ballId": 82,
+              "payout": 525
+            },
+            {
+              "phase": "admission",
+              "time": 51.74166666666437,
+              "round": 4,
+              "count": 6,
+              "ballId": 83,
+              "payout": 540
+            },
+            {
+              "phase": "admission",
+              "time": 52.333333333331005,
+              "round": 4,
+              "count": 7,
+              "ballId": 84,
+              "payout": 555
+            },
+            {
+              "phase": "admission",
+              "time": 52.999999999997634,
+              "round": 4,
+              "count": 8,
+              "ballId": 85,
+              "payout": 570
+            },
+            {
+              "phase": "admission",
+              "time": 53.408333333330944,
+              "round": 4,
+              "count": 9,
+              "ballId": 86,
+              "payout": 585
+            },
+            {
+              "phase": "admission",
+              "time": 54.47499999999755,
+              "round": 4,
+              "count": 10,
+              "ballId": 88,
+              "payout": 600
+            },
+            {
+              "phase": "closing",
+              "time": 54.47499999999755,
+              "round": 4,
+              "count": 10,
+              "payout": 600
+            },
+            {
+              "phase": "gap",
+              "time": 54.97499999999752,
+              "round": 4,
+              "count": 10,
+              "payout": 600
+            },
+            {
+              "phase": "opening",
+              "time": 55.624999999997485,
+              "round": 5,
+              "count": 0,
+              "payout": 600
+            },
+            {
+              "phase": "open",
+              "time": 56.27499999999745,
+              "round": 5,
+              "count": 0,
+              "payout": 600
+            },
+            {
+              "phase": "admission",
+              "time": 56.674999999997425,
+              "round": 5,
+              "count": 1,
+              "ballId": 91,
+              "payout": 615
+            },
+            {
+              "phase": "admission",
+              "time": 57.21666666666406,
+              "round": 5,
+              "count": 2,
+              "ballId": 92,
+              "payout": 630
+            },
+            {
+              "phase": "admission",
+              "time": 57.55833333333071,
+              "round": 5,
+              "count": 3,
+              "ballId": 93,
+              "payout": 645
+            },
+            {
+              "phase": "admission",
+              "time": 58.44166666666399,
+              "round": 5,
+              "count": 4,
+              "ballId": 94,
+              "payout": 660
+            },
+            {
+              "phase": "admission",
+              "time": 59.4333333333306,
+              "round": 5,
+              "count": 5,
+              "ballId": 95,
+              "payout": 675
+            },
+            {
+              "phase": "admission",
+              "time": 59.4833333333306,
+              "round": 5,
+              "count": 6,
+              "ballId": 96,
+              "payout": 690
+            },
+            {
+              "phase": "admission",
+              "time": 60.39999999999721,
+              "round": 5,
+              "count": 7,
+              "ballId": 97,
+              "payout": 705
+            },
+            {
+              "phase": "admission",
+              "time": 60.50833333333054,
+              "round": 5,
+              "count": 8,
+              "ballId": 98,
+              "payout": 720
+            },
+            {
+              "phase": "admission",
+              "time": 61.58333333333048,
+              "round": 5,
+              "count": 9,
+              "ballId": 99,
+              "payout": 735
+            },
+            {
+              "phase": "admission",
+              "time": 62.241666666663775,
+              "round": 5,
+              "count": 10,
+              "ballId": 100,
+              "payout": 750
+            },
+            {
+              "phase": "closing",
+              "time": 62.241666666663775,
+              "round": 5,
+              "count": 10,
+              "payout": 750
+            },
+            {
+              "phase": "gap",
+              "time": 62.74166666666375,
+              "round": 5,
+              "count": 10,
+              "payout": 750
+            },
+            {
+              "phase": "opening",
+              "time": 63.39166666666371,
+              "round": 6,
+              "count": 0,
+              "payout": 750
+            },
+            {
+              "phase": "open",
+              "time": 64.0416666666637,
+              "round": 6,
+              "count": 0,
+              "payout": 750
+            },
+            {
+              "phase": "admission",
+              "time": 64.19166666666382,
+              "round": 6,
+              "count": 1,
+              "ballId": 103,
+              "payout": 765
+            }
+          ]
+        },
+        "win": {
+          "time": 47.274999999997604
+        },
+        "reach": null,
+        "time": 64.34166666666394,
+        "holds": 5,
+        "active": false,
+        "draws": 2,
+        "stopTimer": 0,
+        "reels": {
+          "spinning": false,
+          "numbers": [
+            7,
+            7,
+            7
+          ],
+          "stopped": [
+            true,
+            true,
+            true
+          ]
+        },
+        "accepted": 7,
+        "entries": 7,
+        "events": [
+          {
+            "time": 5.741666666666742,
+            "ballId": 7,
+            "accepted": 1,
+            "hold": 0,
+            "drawId": 1
+          },
+          {
+            "time": 8.15833333333351,
+            "ballId": 9,
+            "accepted": 1,
+            "hold": 1,
+            "drawId": 2
+          },
+          {
+            "time": 13.333333333333217,
+            "ballId": 17,
+            "accepted": 1,
+            "hold": 1,
+            "drawId": 3
+          },
+          {
+            "time": 15.941666666666402,
+            "ballId": 24,
+            "accepted": 1,
+            "hold": 2,
+            "drawId": 4
+          },
+          {
+            "time": 22.13333333333272,
+            "ballId": 33,
+            "accepted": 1,
+            "hold": 3,
+            "drawId": 5
+          },
+          {
+            "time": 22.533333333332696,
+            "ballId": 35,
+            "accepted": 1,
+            "hold": 4,
+            "drawId": 6
+          },
+          {
+            "time": 24.333333333332593,
+            "ballId": 38,
+            "accepted": 1,
+            "hold": 5,
+            "drawId": 7
+          }
+        ]
+      },
+      "lcd": {
+        "x": 108,
+        "y": 236,
+        "width": 210,
+        "height": 140
+      },
+      "gate": {
+        "count": 66,
+        "lastPass": 64.02166666662468,
+        "lit": false
+      },
+      "leftRoutes": {
+        "roadContact": 39,
+        "nearHeso": 20,
+        "admitted": 7,
+        "nearAdmitted": 7,
+        "deflectedAtHeso": 5,
+        "nearMiss": 8,
+        "earlySpill": 19,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 8
+        },
+        "outcomes": {
+          "out": 44,
+          "start": 7,
+          "normal": 1,
+          "bonus": 51
+        },
+        "tracked": 108,
+        "byPower": {
+          "0.24": {
+            "roadContact": 1,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 1,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "out": 1
+            },
+            "tracked": 1
+          },
+          "0.23": {
+            "roadContact": 38,
+            "nearHeso": 20,
+            "admitted": 7,
+            "nearAdmitted": 7,
+            "deflectedAtHeso": 5,
+            "nearMiss": 8,
+            "earlySpill": 18,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 8
+            },
+            "outcomes": {
+              "out": 30,
+              "start": 7,
+              "normal": 1
+            },
+            "tracked": 38
+          },
+          "0.6": {
+            "roadContact": 0,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 0,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "bonus": 51,
+              "out": 13
+            },
+            "tracked": 69
+          }
+        }
+      },
+      "time": 64.34166666666394,
+      "paused": false,
+      "mode": "bonus",
+      "counts": {
+        "normal": 1,
+        "start": 7,
+        "rush": 0,
+        "bonus": 51,
+        "out": 44,
+        "returned": 0
+      },
+      "spawned": 108,
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 480,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 357.25,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5,
+          "captureTray": {
+            "left": 335.125,
+            "right": 373.875,
+            "y": 600.5,
+            "radius": 1.4
+          }
+        },
+        {
+          "x": 359.5,
+          "y": 493,
+          "w": 20,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "guide": {
+        "a": {
+          "x": 359,
+          "y": 310
+        },
+        "b": {
+          "x": 359,
+          "y": 392
+        },
+        "r": 1.3,
+        "material": "resin",
+        "role": "right-inner-lower",
+        "restitution": 0.04
+      },
+      "attacker": {
+        "progress": 1,
+        "target": 1,
+        "moving": false
+      },
+      "tulip": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "routeBalls": [],
+      "inFlight": 5
+    }
+  ],
+  "final": {
+    "spin": {
+      "round": {
+        "phase": "finished",
+        "round": 6,
+        "count": 10,
+        "limit": 10,
+        "payout": 900,
+        "remainingSeconds": 15,
+        "history": [
+          {
+            "phase": "guide",
+            "time": 22.874999999999343,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "opening",
+            "time": 24.083333333332607,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "open",
+            "time": 24.73333333333257,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "admission",
+            "time": 26.199999999999154,
+            "round": 1,
+            "count": 1,
+            "ballId": 40,
+            "payout": 15
+          },
+          {
+            "phase": "admission",
+            "time": 26.591666666665798,
+            "round": 1,
+            "count": 2,
+            "ballId": 41,
+            "payout": 30
+          },
+          {
+            "phase": "admission",
+            "time": 27.983333333332386,
+            "round": 1,
+            "count": 3,
+            "ballId": 42,
+            "payout": 45
+          },
+          {
+            "phase": "admission",
+            "time": 28.2916666666657,
+            "round": 1,
+            "count": 4,
+            "ballId": 43,
+            "payout": 60
+          },
+          {
+            "phase": "admission",
+            "time": 28.64166666666568,
+            "round": 1,
+            "count": 5,
+            "ballId": 44,
+            "payout": 75
+          },
+          {
+            "phase": "admission",
+            "time": 29.408333333332305,
+            "round": 1,
+            "count": 6,
+            "ballId": 45,
+            "payout": 90
+          },
+          {
+            "phase": "admission",
+            "time": 29.474999999998968,
+            "round": 1,
+            "count": 7,
+            "ballId": 46,
+            "payout": 105
+          },
+          {
+            "phase": "admission",
+            "time": 30.366666666665584,
+            "round": 1,
+            "count": 8,
+            "ballId": 47,
+            "payout": 120
+          },
+          {
+            "phase": "admission",
+            "time": 31.224999999998868,
+            "round": 1,
+            "count": 9,
+            "ballId": 49,
+            "payout": 135
+          },
+          {
+            "phase": "admission",
+            "time": 31.499999999998852,
+            "round": 1,
+            "count": 10,
+            "ballId": 48,
+            "payout": 150
+          },
+          {
+            "phase": "closing",
+            "time": 31.499999999998852,
+            "round": 1,
+            "count": 10,
+            "payout": 150
+          },
+          {
+            "phase": "gap",
+            "time": 31.999999999998824,
+            "round": 1,
+            "count": 10,
+            "payout": 150
+          },
+          {
+            "phase": "opening",
+            "time": 32.64999999999879,
+            "round": 2,
+            "count": 0,
+            "payout": 150
+          },
+          {
+            "phase": "open",
+            "time": 33.299999999998754,
+            "round": 2,
+            "count": 0,
+            "payout": 150
+          },
+          {
+            "phase": "admission",
+            "time": 33.34166666666542,
+            "round": 2,
+            "count": 1,
+            "ballId": 52,
+            "payout": 165
+          },
+          {
+            "phase": "admission",
+            "time": 34.07499999999871,
+            "round": 2,
+            "count": 2,
+            "ballId": 53,
+            "payout": 180
+          },
+          {
+            "phase": "admission",
+            "time": 34.24166666666537,
+            "round": 2,
+            "count": 3,
+            "ballId": 54,
+            "payout": 195
+          },
+          {
+            "phase": "admission",
+            "time": 35.23333333333198,
+            "round": 2,
+            "count": 4,
+            "ballId": 56,
+            "payout": 210
+          },
+          {
+            "phase": "admission",
+            "time": 35.87499999999861,
+            "round": 2,
+            "count": 5,
+            "ballId": 55,
+            "payout": 225
+          },
+          {
+            "phase": "admission",
+            "time": 36.29999999999858,
+            "round": 2,
+            "count": 6,
+            "ballId": 57,
+            "payout": 240
+          },
+          {
+            "phase": "admission",
+            "time": 36.37499999999858,
+            "round": 2,
+            "count": 7,
+            "ballId": 58,
+            "payout": 255
+          },
+          {
+            "phase": "admission",
+            "time": 37.54999999999851,
+            "round": 2,
+            "count": 8,
+            "ballId": 59,
+            "payout": 270
+          },
+          {
+            "phase": "admission",
+            "time": 37.89999999999849,
+            "round": 2,
+            "count": 9,
+            "ballId": 60,
+            "payout": 285
+          },
+          {
+            "phase": "admission",
+            "time": 38.84999999999844,
+            "round": 2,
+            "count": 10,
+            "ballId": 61,
+            "payout": 300
+          },
+          {
+            "phase": "closing",
+            "time": 38.84999999999844,
+            "round": 2,
+            "count": 10,
+            "payout": 300
+          },
+          {
+            "phase": "gap",
+            "time": 39.34999999999841,
+            "round": 2,
+            "count": 10,
+            "payout": 300
+          },
+          {
+            "phase": "opening",
+            "time": 39.99999999999837,
+            "round": 3,
+            "count": 0,
+            "payout": 300
+          },
+          {
+            "phase": "open",
+            "time": 40.649999999998336,
+            "round": 3,
+            "count": 0,
+            "payout": 300
+          },
+          {
+            "phase": "admission",
+            "time": 41.67499999999828,
+            "round": 3,
+            "count": 1,
+            "ballId": 66,
+            "payout": 315
+          },
+          {
+            "phase": "admission",
+            "time": 41.92499999999826,
+            "round": 3,
+            "count": 2,
+            "ballId": 67,
+            "payout": 330
+          },
+          {
+            "phase": "admission",
+            "time": 42.53333333333156,
+            "round": 3,
+            "count": 3,
+            "ballId": 68,
+            "payout": 345
+          },
+          {
+            "phase": "admission",
+            "time": 43.908333333331484,
+            "round": 3,
+            "count": 4,
+            "ballId": 69,
+            "payout": 360
+          },
+          {
+            "phase": "admission",
+            "time": 43.97499999999815,
+            "round": 3,
+            "count": 5,
+            "ballId": 70,
+            "payout": 375
+          },
+          {
+            "phase": "admission",
+            "time": 44.76666666666477,
+            "round": 3,
+            "count": 6,
+            "ballId": 71,
+            "payout": 390
+          },
+          {
+            "phase": "admission",
+            "time": 45.44999999999806,
+            "round": 3,
+            "count": 7,
+            "ballId": 72,
+            "payout": 405
+          },
+          {
+            "phase": "admission",
+            "time": 46.77499999999799,
+            "round": 3,
+            "count": 8,
+            "ballId": 73,
+            "payout": 420
+          },
+          {
+            "phase": "admission",
+            "time": 46.824999999997985,
+            "round": 3,
+            "count": 9,
+            "ballId": 74,
+            "payout": 435
+          },
+          {
+            "phase": "admission",
+            "time": 46.95833333333131,
+            "round": 3,
+            "count": 10,
+            "ballId": 75,
+            "payout": 450
+          },
+          {
+            "phase": "closing",
+            "time": 46.95833333333131,
+            "round": 3,
+            "count": 10,
+            "payout": 450
+          },
+          {
+            "phase": "gap",
+            "time": 47.45833333333128,
+            "round": 3,
+            "count": 10,
+            "payout": 450
+          },
+          {
+            "phase": "opening",
+            "time": 48.108333333331245,
+            "round": 4,
+            "count": 0,
+            "payout": 450
+          },
+          {
+            "phase": "open",
+            "time": 48.75833333333121,
+            "round": 4,
+            "count": 0,
+            "payout": 450
+          },
+          {
+            "phase": "admission",
+            "time": 49.24999999999785,
+            "round": 4,
+            "count": 1,
+            "ballId": 78,
+            "payout": 465
+          },
+          {
+            "phase": "admission",
+            "time": 49.66666666666449,
+            "round": 4,
+            "count": 2,
+            "ballId": 79,
+            "payout": 480
+          },
+          {
+            "phase": "admission",
+            "time": 49.72499999999782,
+            "round": 4,
+            "count": 3,
+            "ballId": 80,
+            "payout": 495
+          },
+          {
+            "phase": "admission",
+            "time": 50.85833333333109,
+            "round": 4,
+            "count": 4,
+            "ballId": 81,
+            "payout": 510
+          },
+          {
+            "phase": "admission",
+            "time": 51.23333333333107,
+            "round": 4,
+            "count": 5,
+            "ballId": 82,
+            "payout": 525
+          },
+          {
+            "phase": "admission",
+            "time": 51.74166666666437,
+            "round": 4,
+            "count": 6,
+            "ballId": 83,
+            "payout": 540
+          },
+          {
+            "phase": "admission",
+            "time": 52.333333333331005,
+            "round": 4,
+            "count": 7,
+            "ballId": 84,
+            "payout": 555
+          },
+          {
+            "phase": "admission",
+            "time": 52.999999999997634,
+            "round": 4,
+            "count": 8,
+            "ballId": 85,
+            "payout": 570
+          },
+          {
+            "phase": "admission",
+            "time": 53.408333333330944,
+            "round": 4,
+            "count": 9,
+            "ballId": 86,
+            "payout": 585
+          },
+          {
+            "phase": "admission",
+            "time": 54.47499999999755,
+            "round": 4,
+            "count": 10,
+            "ballId": 88,
+            "payout": 600
+          },
+          {
+            "phase": "closing",
+            "time": 54.47499999999755,
+            "round": 4,
+            "count": 10,
+            "payout": 600
+          },
+          {
+            "phase": "gap",
+            "time": 54.97499999999752,
+            "round": 4,
+            "count": 10,
+            "payout": 600
+          },
+          {
+            "phase": "opening",
+            "time": 55.624999999997485,
+            "round": 5,
+            "count": 0,
+            "payout": 600
+          },
+          {
+            "phase": "open",
+            "time": 56.27499999999745,
+            "round": 5,
+            "count": 0,
+            "payout": 600
+          },
+          {
+            "phase": "admission",
+            "time": 56.674999999997425,
+            "round": 5,
+            "count": 1,
+            "ballId": 91,
+            "payout": 615
+          },
+          {
+            "phase": "admission",
+            "time": 57.21666666666406,
+            "round": 5,
+            "count": 2,
+            "ballId": 92,
+            "payout": 630
+          },
+          {
+            "phase": "admission",
+            "time": 57.55833333333071,
+            "round": 5,
+            "count": 3,
+            "ballId": 93,
+            "payout": 645
+          },
+          {
+            "phase": "admission",
+            "time": 58.44166666666399,
+            "round": 5,
+            "count": 4,
+            "ballId": 94,
+            "payout": 660
+          },
+          {
+            "phase": "admission",
+            "time": 59.4333333333306,
+            "round": 5,
+            "count": 5,
+            "ballId": 95,
+            "payout": 675
+          },
+          {
+            "phase": "admission",
+            "time": 59.4833333333306,
+            "round": 5,
+            "count": 6,
+            "ballId": 96,
+            "payout": 690
+          },
+          {
+            "phase": "admission",
+            "time": 60.39999999999721,
+            "round": 5,
+            "count": 7,
+            "ballId": 97,
+            "payout": 705
+          },
+          {
+            "phase": "admission",
+            "time": 60.50833333333054,
+            "round": 5,
+            "count": 8,
+            "ballId": 98,
+            "payout": 720
+          },
+          {
+            "phase": "admission",
+            "time": 61.58333333333048,
+            "round": 5,
+            "count": 9,
+            "ballId": 99,
+            "payout": 735
+          },
+          {
+            "phase": "admission",
+            "time": 62.241666666663775,
+            "round": 5,
+            "count": 10,
+            "ballId": 100,
+            "payout": 750
+          },
+          {
+            "phase": "closing",
+            "time": 62.241666666663775,
+            "round": 5,
+            "count": 10,
+            "payout": 750
+          },
+          {
+            "phase": "gap",
+            "time": 62.74166666666375,
+            "round": 5,
+            "count": 10,
+            "payout": 750
+          },
+          {
+            "phase": "opening",
+            "time": 63.39166666666371,
+            "round": 6,
+            "count": 0,
+            "payout": 750
+          },
+          {
+            "phase": "open",
+            "time": 64.0416666666637,
+            "round": 6,
+            "count": 0,
+            "payout": 750
+          },
+          {
+            "phase": "admission",
+            "time": 64.19166666666382,
+            "round": 6,
+            "count": 1,
+            "ballId": 103,
+            "payout": 765
+          },
+          {
+            "phase": "admission",
+            "time": 64.74166666666426,
+            "round": 6,
+            "count": 2,
+            "ballId": 104,
+            "payout": 780
+          },
+          {
+            "phase": "admission",
+            "time": 65.40833333333146,
+            "round": 6,
+            "count": 3,
+            "ballId": 105,
+            "payout": 795
+          },
+          {
+            "phase": "admission",
+            "time": 65.6249999999983,
+            "round": 6,
+            "count": 4,
+            "ballId": 106,
+            "payout": 810
+          },
+          {
+            "phase": "admission",
+            "time": 66.51666666666567,
+            "round": 6,
+            "count": 5,
+            "ballId": 107,
+            "payout": 825
+          },
+          {
+            "phase": "admission",
+            "time": 67.07499999999945,
+            "round": 6,
+            "count": 6,
+            "ballId": 108,
+            "payout": 840
+          },
+          {
+            "phase": "admission",
+            "time": 67.61666666666655,
+            "round": 6,
+            "count": 7,
+            "ballId": 109,
+            "payout": 855
+          },
+          {
+            "phase": "admission",
+            "time": 68.55833333333396,
+            "round": 6,
+            "count": 8,
+            "ballId": 110,
+            "payout": 870
+          },
+          {
+            "phase": "admission",
+            "time": 68.76666666666746,
+            "round": 6,
+            "count": 9,
+            "ballId": 111,
+            "payout": 885
+          },
+          {
+            "phase": "admission",
+            "time": 69.6916666666682,
+            "round": 6,
+            "count": 10,
+            "ballId": 112,
+            "payout": 900
+          },
+          {
+            "phase": "closing",
+            "time": 69.6916666666682,
+            "round": 6,
+            "count": 10,
+            "payout": 900
+          },
+          {
+            "phase": "finished",
+            "time": 70.1916666666686,
+            "round": 6,
+            "count": 10,
+            "payout": 900
+          }
+        ]
+      },
+      "win": {
+        "time": 53.40833333333582
+      },
+      "reach": null,
+      "time": 70.47500000000215,
+      "holds": 0,
+      "active": false,
+      "draws": 2,
+      "stopTimer": 0,
+      "reels": {
+        "spinning": false,
+        "numbers": [
+          7,
+          7,
+          7
+        ],
+        "stopped": [
+          true,
+          true,
+          true
+        ]
+      },
+      "accepted": 7,
+      "entries": 7,
+      "events": [
+        {
+          "time": 5.741666666666742,
+          "ballId": 7,
+          "accepted": 1,
+          "hold": 0,
+          "drawId": 1
+        },
+        {
+          "time": 8.15833333333351,
+          "ballId": 9,
+          "accepted": 1,
+          "hold": 1,
+          "drawId": 2
+        },
+        {
+          "time": 13.333333333333217,
+          "ballId": 17,
+          "accepted": 1,
+          "hold": 1,
+          "drawId": 3
+        },
+        {
+          "time": 15.941666666666402,
+          "ballId": 24,
+          "accepted": 1,
+          "hold": 2,
+          "drawId": 4
+        },
+        {
+          "time": 22.13333333333272,
+          "ballId": 33,
+          "accepted": 1,
+          "hold": 3,
+          "drawId": 5
+        },
+        {
+          "time": 22.533333333332696,
+          "ballId": 35,
+          "accepted": 1,
+          "hold": 4,
+          "drawId": 6
+        },
+        {
+          "time": 24.333333333332593,
+          "ballId": 38,
+          "accepted": 1,
+          "hold": 5,
+          "drawId": 7
+        }
+      ]
+    },
+    "lcd": {
+      "x": 108,
+      "y": 236,
+      "width": 210,
+      "height": 140
+    },
+    "gate": {
+      "count": 76,
+      "lastPass": 70.03499999995255,
+      "lit": false
+    },
+    "leftRoutes": {
+      "roadContact": 39,
+      "nearHeso": 20,
+      "admitted": 7,
+      "nearAdmitted": 7,
+      "deflectedAtHeso": 5,
+      "nearMiss": 8,
+      "earlySpill": 19,
+      "pending": 0,
+      "nearPending": 0,
+      "nearMissOutcomes": {
+        "out": 8
+      },
+      "outcomes": {
+        "out": 44,
+        "start": 7,
+        "normal": 1,
+        "bonus": 60
+      },
+      "tracked": 118,
+      "byPower": {
+        "0.24": {
+          "roadContact": 1,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 1,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {
+            "out": 1
+          },
+          "tracked": 1
+        },
+        "0.23": {
+          "roadContact": 38,
+          "nearHeso": 20,
+          "admitted": 7,
+          "nearAdmitted": 7,
+          "deflectedAtHeso": 5,
+          "nearMiss": 8,
+          "earlySpill": 18,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {
+            "out": 8
+          },
+          "outcomes": {
+            "out": 30,
+            "start": 7,
+            "normal": 1
+          },
+          "tracked": 38
+        },
+        "0.6": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {
+            "bonus": 60,
+            "out": 13
+          },
+          "tracked": 79
+        }
+      }
+    },
+    "time": 70.47500000000215,
+    "paused": false,
+    "mode": "bonus",
+    "counts": {
+      "normal": 1,
+      "start": 7,
+      "rush": 0,
+      "bonus": 60,
+      "out": 44,
+      "returned": 0
+    },
+    "spawned": 118,
+    "pockets": [
+      {
+        "x": 67,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 0
+      },
+      {
+        "x": 139,
+        "y": 617,
+        "w": 18,
+        "kind": "normal",
+        "id": 1
+      },
+      {
+        "x": 268,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 2
+      },
+      {
+        "x": 210,
+        "y": 480,
+        "w": 20,
+        "kind": "start",
+        "id": 4
+      },
+      {
+        "x": 357.25,
+        "y": 581,
+        "w": 60,
+        "kind": "bonus",
+        "id": 5,
+        "captureTray": {
+          "left": 335.125,
+          "right": 373.875,
+          "y": 600.5,
+          "radius": 1.4
+        }
+      },
+      {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      }
+    ],
+    "guide": {
+      "a": {
+        "x": 359,
+        "y": 310
+      },
+      "b": {
+        "x": 359,
+        "y": 392
+      },
+      "r": 1.3,
+      "material": "resin",
+      "role": "right-inner-lower",
+      "restitution": 0.04
+    },
+    "attacker": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "tulip": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "routeBalls": [],
+    "inFlight": 6
+  },
+  "errors": []
+}

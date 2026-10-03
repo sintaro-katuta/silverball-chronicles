@@ -1,0 +1,2874 @@
+{
+  "before": {
+    "src/physics.js": "a6a1d8793b7a7fecfd2b00daf88061bd57c953887498eeeb794faa2e46a2fb21",
+    "src/pixi/lcd-layout.js": "ea70884843ad2a0bf9a03aeba4551cb7c9742214fdc60dce573975db84dc894e",
+    "src/pixi/source-layout.js": "3455b09ecf8042f49d596d0898731e826407ad9e145a76f51f84faca2716deb7",
+    "src/pixi/board-rails.js": "ab8f64ea6274b6d84e7dc2d4a546ec09282ca5a3b056f0d58341a1d1a56abd24"
+  },
+  "after": {
+    "src/physics.js": "a6a1d8793b7a7fecfd2b00daf88061bd57c953887498eeeb794faa2e46a2fb21",
+    "src/pixi/lcd-layout.js": "ea70884843ad2a0bf9a03aeba4551cb7c9742214fdc60dce573975db84dc894e",
+    "src/pixi/source-layout.js": "3455b09ecf8042f49d596d0898731e826407ad9e145a76f51f84faca2716deb7",
+    "src/pixi/board-rails.js": "ab8f64ea6274b6d84e7dc2d4a546ec09282ca5a3b056f0d58341a1d1a56abd24"
+  },
+  "seedsIdentical": true,
+  "seedLayouts": [
+    {
+      "pegSeed": 0,
+      "pins": [
+        {
+          "id": 1,
+          "role": "michi",
+          "x": 72.5,
+          "y": 488,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 2,
+          "role": "michi",
+          "x": 76.25,
+          "y": 489.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 3,
+          "role": "michi",
+          "x": 80,
+          "y": 491.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 4,
+          "role": "michi",
+          "x": 84,
+          "y": 493.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 5,
+          "role": "michi",
+          "x": 88,
+          "y": 495.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 6,
+          "role": "michi",
+          "x": 91.75,
+          "y": 497.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 7,
+          "role": "michi",
+          "x": 95.5,
+          "y": 499.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 8,
+          "role": "michi",
+          "x": 99.25,
+          "y": 501.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 9,
+          "role": "michi",
+          "x": 103.25,
+          "y": 504,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 10,
+          "role": "michi",
+          "x": 107.25,
+          "y": 506,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 11,
+          "role": "michi",
+          "x": 116.5,
+          "y": 511.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 12,
+          "role": "michi",
+          "x": 120.5,
+          "y": 513.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 13,
+          "role": "michi",
+          "x": 124.5,
+          "y": 515.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 14,
+          "role": "michi",
+          "x": 128.25,
+          "y": 517.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 15,
+          "role": "michi",
+          "x": 132,
+          "y": 519.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 16,
+          "role": "michi",
+          "x": 136,
+          "y": 521,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 17,
+          "role": "michi",
+          "x": 140,
+          "y": 523.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 18,
+          "role": "michi",
+          "x": 143.5,
+          "y": 525.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 19,
+          "role": "michi",
+          "x": 147.75,
+          "y": 527.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 20,
+          "role": "michi",
+          "x": 151.5,
+          "y": 529.5,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 21,
+          "role": "michi",
+          "x": 155.5,
+          "y": 531.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 22,
+          "role": "michi",
+          "x": 159.5,
+          "y": 533.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 23,
+          "role": "michi",
+          "x": 167.75,
+          "y": 538,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 24,
+          "role": "michi",
+          "x": 171.5,
+          "y": 540.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 25,
+          "role": "michi",
+          "x": 175.75,
+          "y": 542.5,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 26,
+          "role": "michi",
+          "x": 179.75,
+          "y": 544.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 27,
+          "role": "prize",
+          "x": 76.5,
+          "y": 250.25,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 28,
+          "role": "prize",
+          "x": 78.5,
+          "y": 254.25,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 29,
+          "role": "prize",
+          "x": 79.75,
+          "y": 258.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 30,
+          "role": "prize",
+          "x": 80.25,
+          "y": 262.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 31,
+          "role": "prize",
+          "x": 79.25,
+          "y": 273.5,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 32,
+          "role": "prize",
+          "x": 73,
+          "y": 281.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 33,
+          "role": "prize",
+          "x": 75.25,
+          "y": 294.25,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 34,
+          "role": "prize",
+          "x": 71.75,
+          "y": 296.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 35,
+          "role": "prize",
+          "x": 61.5,
+          "y": 298.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 36,
+          "role": "prize",
+          "x": 51.75,
+          "y": 294.25,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 37,
+          "role": "prize",
+          "x": 42,
+          "y": 404.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 38,
+          "role": "prize",
+          "x": 53,
+          "y": 404.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 39,
+          "role": "prize",
+          "x": 58,
+          "y": 410.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 40,
+          "role": "prize",
+          "x": 61.25,
+          "y": 414,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 41,
+          "role": "prize",
+          "x": 64,
+          "y": 417.5,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 42,
+          "role": "prize",
+          "x": 34,
+          "y": 411.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 43,
+          "role": "prize",
+          "x": 37.25,
+          "y": 414.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 44,
+          "role": "prize",
+          "x": 31,
+          "y": 423.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 45,
+          "role": "prize",
+          "x": 34.25,
+          "y": 425.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 46,
+          "role": "prize",
+          "x": 37.75,
+          "y": 428.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 47,
+          "role": "prize",
+          "x": 47.25,
+          "y": 420.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 48,
+          "role": "prize",
+          "x": 56.5,
+          "y": 425.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 49,
+          "role": "prize",
+          "x": 68.25,
+          "y": 425.5,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 50,
+          "role": "prize",
+          "x": 45.75,
+          "y": 434.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 51,
+          "role": "prize",
+          "x": 49.25,
+          "y": 437.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 52,
+          "role": "prize",
+          "x": 65,
+          "y": 435.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 53,
+          "role": "prize",
+          "x": 67.5,
+          "y": 438.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 54,
+          "role": "prize",
+          "x": 70,
+          "y": 448.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 55,
+          "role": "prize",
+          "x": 70,
+          "y": 453,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 56,
+          "role": "prize",
+          "x": 70,
+          "y": 457.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 57,
+          "role": "prize",
+          "x": 42.75,
+          "y": 446.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 58,
+          "role": "prize",
+          "x": 47.75,
+          "y": 461.5,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 59,
+          "role": "prize",
+          "x": 56.25,
+          "y": 445.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 60,
+          "role": "prize",
+          "x": 59.75,
+          "y": 448.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 61,
+          "role": "prize",
+          "x": 53,
+          "y": 452.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 62,
+          "role": "prize",
+          "x": 59.75,
+          "y": 453,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 63,
+          "role": "prize",
+          "x": 59.75,
+          "y": 457.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 64,
+          "role": "prize",
+          "x": 83.75,
+          "y": 508.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 65,
+          "role": "prize",
+          "x": 87.75,
+          "y": 510.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 66,
+          "role": "prize",
+          "x": 91.5,
+          "y": 513,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 67,
+          "role": "prize",
+          "x": 95.25,
+          "y": 514.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 68,
+          "role": "prize",
+          "x": 90,
+          "y": 524.5,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 69,
+          "role": "prize",
+          "x": 97.25,
+          "y": 533.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 70,
+          "role": "prize",
+          "x": 101.75,
+          "y": 524.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 71,
+          "role": "prize",
+          "x": 104.75,
+          "y": 519.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 72,
+          "role": "prize",
+          "x": 108.25,
+          "y": 521.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 73,
+          "role": "prize",
+          "x": 112.25,
+          "y": 523.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 74,
+          "role": "prize",
+          "x": 124.25,
+          "y": 521.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 75,
+          "role": "prize",
+          "x": 120.25,
+          "y": 531.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 76,
+          "role": "prize",
+          "x": 124.25,
+          "y": 533.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 77,
+          "role": "prize",
+          "x": 107.75,
+          "y": 533.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 78,
+          "role": "prize",
+          "x": 131.25,
+          "y": 542.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 79,
+          "role": "prize",
+          "x": 136.25,
+          "y": 528.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 80,
+          "role": "prize",
+          "x": 136.75,
+          "y": 533.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 81,
+          "role": "prize",
+          "x": 148.5,
+          "y": 533.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 82,
+          "role": "prize",
+          "x": 141.5,
+          "y": 542.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 83,
+          "role": "prize",
+          "x": 145.25,
+          "y": 544.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 84,
+          "role": "prize",
+          "x": 149.25,
+          "y": 546.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 85,
+          "role": "prize",
+          "x": 152.75,
+          "y": 548.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 86,
+          "role": "prize",
+          "x": 156.75,
+          "y": 550.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 87,
+          "role": "prize",
+          "x": 159.75,
+          "y": 560.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 88,
+          "role": "prize",
+          "x": 170,
+          "y": 552.5,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 89,
+          "role": "prize",
+          "x": 180.25,
+          "y": 548.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 90,
+          "role": "prize",
+          "x": 191.25,
+          "y": 547.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 91,
+          "role": "heso",
+          "x": 203.25,
+          "y": 543.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 92,
+          "role": "heso",
+          "x": 213.25,
+          "y": 543.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 93,
+          "role": "prize",
+          "x": 225.25,
+          "y": 547.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 94,
+          "role": "denchu-guide",
+          "x": 293.25,
+          "y": 523.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 95,
+          "role": "denchu-guide",
+          "x": 303.75,
+          "y": 523.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 96,
+          "role": "denchu-guide",
+          "x": 299.75,
+          "y": 533,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 97,
+          "role": "michi",
+          "x": 235.75,
+          "y": 548.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 98,
+          "role": "michi",
+          "x": 236.75,
+          "y": 544.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 99,
+          "role": "michi",
+          "x": 240.5,
+          "y": 542,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 100,
+          "role": "michi",
+          "x": 244.25,
+          "y": 540.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 101,
+          "role": "michi",
+          "x": 248.25,
+          "y": 538.25,
+          "r": 0.2,
+          "restitution": 0.46
+        }
+      ]
+    },
+    {
+      "pegSeed": 1,
+      "pins": [
+        {
+          "id": 1,
+          "role": "michi",
+          "x": 72.5,
+          "y": 488,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 2,
+          "role": "michi",
+          "x": 76.25,
+          "y": 489.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 3,
+          "role": "michi",
+          "x": 80,
+          "y": 491.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 4,
+          "role": "michi",
+          "x": 84,
+          "y": 493.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 5,
+          "role": "michi",
+          "x": 88,
+          "y": 495.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 6,
+          "role": "michi",
+          "x": 91.75,
+          "y": 497.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 7,
+          "role": "michi",
+          "x": 95.5,
+          "y": 499.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 8,
+          "role": "michi",
+          "x": 99.25,
+          "y": 501.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 9,
+          "role": "michi",
+          "x": 103.25,
+          "y": 504,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 10,
+          "role": "michi",
+          "x": 107.25,
+          "y": 506,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 11,
+          "role": "michi",
+          "x": 116.5,
+          "y": 511.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 12,
+          "role": "michi",
+          "x": 120.5,
+          "y": 513.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 13,
+          "role": "michi",
+          "x": 124.5,
+          "y": 515.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 14,
+          "role": "michi",
+          "x": 128.25,
+          "y": 517.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 15,
+          "role": "michi",
+          "x": 132,
+          "y": 519.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 16,
+          "role": "michi",
+          "x": 136,
+          "y": 521,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 17,
+          "role": "michi",
+          "x": 140,
+          "y": 523.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 18,
+          "role": "michi",
+          "x": 143.5,
+          "y": 525.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 19,
+          "role": "michi",
+          "x": 147.75,
+          "y": 527.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 20,
+          "role": "michi",
+          "x": 151.5,
+          "y": 529.5,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 21,
+          "role": "michi",
+          "x": 155.5,
+          "y": 531.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 22,
+          "role": "michi",
+          "x": 159.5,
+          "y": 533.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 23,
+          "role": "michi",
+          "x": 167.75,
+          "y": 538,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 24,
+          "role": "michi",
+          "x": 171.5,
+          "y": 540.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 25,
+          "role": "michi",
+          "x": 175.75,
+          "y": 542.5,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 26,
+          "role": "michi",
+          "x": 179.75,
+          "y": 544.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 27,
+          "role": "prize",
+          "x": 76.5,
+          "y": 250.25,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 28,
+          "role": "prize",
+          "x": 78.5,
+          "y": 254.25,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 29,
+          "role": "prize",
+          "x": 79.75,
+          "y": 258.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 30,
+          "role": "prize",
+          "x": 80.25,
+          "y": 262.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 31,
+          "role": "prize",
+          "x": 79.25,
+          "y": 273.5,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 32,
+          "role": "prize",
+          "x": 73,
+          "y": 281.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 33,
+          "role": "prize",
+          "x": 75.25,
+          "y": 294.25,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 34,
+          "role": "prize",
+          "x": 71.75,
+          "y": 296.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 35,
+          "role": "prize",
+          "x": 61.5,
+          "y": 298.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 36,
+          "role": "prize",
+          "x": 51.75,
+          "y": 294.25,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 37,
+          "role": "prize",
+          "x": 42,
+          "y": 404.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 38,
+          "role": "prize",
+          "x": 53,
+          "y": 404.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 39,
+          "role": "prize",
+          "x": 58,
+          "y": 410.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 40,
+          "role": "prize",
+          "x": 61.25,
+          "y": 414,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 41,
+          "role": "prize",
+          "x": 64,
+          "y": 417.5,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 42,
+          "role": "prize",
+          "x": 34,
+          "y": 411.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 43,
+          "role": "prize",
+          "x": 37.25,
+          "y": 414.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 44,
+          "role": "prize",
+          "x": 31,
+          "y": 423.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 45,
+          "role": "prize",
+          "x": 34.25,
+          "y": 425.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 46,
+          "role": "prize",
+          "x": 37.75,
+          "y": 428.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 47,
+          "role": "prize",
+          "x": 47.25,
+          "y": 420.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 48,
+          "role": "prize",
+          "x": 56.5,
+          "y": 425.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 49,
+          "role": "prize",
+          "x": 68.25,
+          "y": 425.5,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 50,
+          "role": "prize",
+          "x": 45.75,
+          "y": 434.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 51,
+          "role": "prize",
+          "x": 49.25,
+          "y": 437.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 52,
+          "role": "prize",
+          "x": 65,
+          "y": 435.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 53,
+          "role": "prize",
+          "x": 67.5,
+          "y": 438.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 54,
+          "role": "prize",
+          "x": 70,
+          "y": 448.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 55,
+          "role": "prize",
+          "x": 70,
+          "y": 453,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 56,
+          "role": "prize",
+          "x": 70,
+          "y": 457.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 57,
+          "role": "prize",
+          "x": 42.75,
+          "y": 446.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 58,
+          "role": "prize",
+          "x": 47.75,
+          "y": 461.5,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 59,
+          "role": "prize",
+          "x": 56.25,
+          "y": 445.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 60,
+          "role": "prize",
+          "x": 59.75,
+          "y": 448.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 61,
+          "role": "prize",
+          "x": 53,
+          "y": 452.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 62,
+          "role": "prize",
+          "x": 59.75,
+          "y": 453,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 63,
+          "role": "prize",
+          "x": 59.75,
+          "y": 457.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 64,
+          "role": "prize",
+          "x": 83.75,
+          "y": 508.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 65,
+          "role": "prize",
+          "x": 87.75,
+          "y": 510.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 66,
+          "role": "prize",
+          "x": 91.5,
+          "y": 513,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 67,
+          "role": "prize",
+          "x": 95.25,
+          "y": 514.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 68,
+          "role": "prize",
+          "x": 90,
+          "y": 524.5,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 69,
+          "role": "prize",
+          "x": 97.25,
+          "y": 533.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 70,
+          "role": "prize",
+          "x": 101.75,
+          "y": 524.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 71,
+          "role": "prize",
+          "x": 104.75,
+          "y": 519.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 72,
+          "role": "prize",
+          "x": 108.25,
+          "y": 521.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 73,
+          "role": "prize",
+          "x": 112.25,
+          "y": 523.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 74,
+          "role": "prize",
+          "x": 124.25,
+          "y": 521.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 75,
+          "role": "prize",
+          "x": 120.25,
+          "y": 531.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 76,
+          "role": "prize",
+          "x": 124.25,
+          "y": 533.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 77,
+          "role": "prize",
+          "x": 107.75,
+          "y": 533.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 78,
+          "role": "prize",
+          "x": 131.25,
+          "y": 542.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 79,
+          "role": "prize",
+          "x": 136.25,
+          "y": 528.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 80,
+          "role": "prize",
+          "x": 136.75,
+          "y": 533.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 81,
+          "role": "prize",
+          "x": 148.5,
+          "y": 533.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 82,
+          "role": "prize",
+          "x": 141.5,
+          "y": 542.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 83,
+          "role": "prize",
+          "x": 145.25,
+          "y": 544.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 84,
+          "role": "prize",
+          "x": 149.25,
+          "y": 546.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 85,
+          "role": "prize",
+          "x": 152.75,
+          "y": 548.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 86,
+          "role": "prize",
+          "x": 156.75,
+          "y": 550.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 87,
+          "role": "prize",
+          "x": 159.75,
+          "y": 560.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 88,
+          "role": "prize",
+          "x": 170,
+          "y": 552.5,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 89,
+          "role": "prize",
+          "x": 180.25,
+          "y": 548.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 90,
+          "role": "prize",
+          "x": 191.25,
+          "y": 547.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 91,
+          "role": "heso",
+          "x": 203.25,
+          "y": 543.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 92,
+          "role": "heso",
+          "x": 213.25,
+          "y": 543.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 93,
+          "role": "prize",
+          "x": 225.25,
+          "y": 547.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 94,
+          "role": "denchu-guide",
+          "x": 293.25,
+          "y": 523.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 95,
+          "role": "denchu-guide",
+          "x": 303.75,
+          "y": 523.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 96,
+          "role": "denchu-guide",
+          "x": 299.75,
+          "y": 533,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 97,
+          "role": "michi",
+          "x": 235.75,
+          "y": 548.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 98,
+          "role": "michi",
+          "x": 236.75,
+          "y": 544.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 99,
+          "role": "michi",
+          "x": 240.5,
+          "y": 542,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 100,
+          "role": "michi",
+          "x": 244.25,
+          "y": 540.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 101,
+          "role": "michi",
+          "x": 248.25,
+          "y": 538.25,
+          "r": 0.2,
+          "restitution": 0.46
+        }
+      ]
+    },
+    {
+      "pegSeed": 101,
+      "pins": [
+        {
+          "id": 1,
+          "role": "michi",
+          "x": 72.5,
+          "y": 488,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 2,
+          "role": "michi",
+          "x": 76.25,
+          "y": 489.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 3,
+          "role": "michi",
+          "x": 80,
+          "y": 491.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 4,
+          "role": "michi",
+          "x": 84,
+          "y": 493.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 5,
+          "role": "michi",
+          "x": 88,
+          "y": 495.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 6,
+          "role": "michi",
+          "x": 91.75,
+          "y": 497.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 7,
+          "role": "michi",
+          "x": 95.5,
+          "y": 499.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 8,
+          "role": "michi",
+          "x": 99.25,
+          "y": 501.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 9,
+          "role": "michi",
+          "x": 103.25,
+          "y": 504,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 10,
+          "role": "michi",
+          "x": 107.25,
+          "y": 506,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 11,
+          "role": "michi",
+          "x": 116.5,
+          "y": 511.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 12,
+          "role": "michi",
+          "x": 120.5,
+          "y": 513.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 13,
+          "role": "michi",
+          "x": 124.5,
+          "y": 515.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 14,
+          "role": "michi",
+          "x": 128.25,
+          "y": 517.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 15,
+          "role": "michi",
+          "x": 132,
+          "y": 519.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 16,
+          "role": "michi",
+          "x": 136,
+          "y": 521,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 17,
+          "role": "michi",
+          "x": 140,
+          "y": 523.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 18,
+          "role": "michi",
+          "x": 143.5,
+          "y": 525.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 19,
+          "role": "michi",
+          "x": 147.75,
+          "y": 527.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 20,
+          "role": "michi",
+          "x": 151.5,
+          "y": 529.5,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 21,
+          "role": "michi",
+          "x": 155.5,
+          "y": 531.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 22,
+          "role": "michi",
+          "x": 159.5,
+          "y": 533.75,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 23,
+          "role": "michi",
+          "x": 167.75,
+          "y": 538,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 24,
+          "role": "michi",
+          "x": 171.5,
+          "y": 540.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 25,
+          "role": "michi",
+          "x": 175.75,
+          "y": 542.5,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 26,
+          "role": "michi",
+          "x": 179.75,
+          "y": 544.25,
+          "r": 0.2,
+          "restitution": 0.85
+        },
+        {
+          "id": 27,
+          "role": "prize",
+          "x": 76.5,
+          "y": 250.25,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 28,
+          "role": "prize",
+          "x": 78.5,
+          "y": 254.25,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 29,
+          "role": "prize",
+          "x": 79.75,
+          "y": 258.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 30,
+          "role": "prize",
+          "x": 80.25,
+          "y": 262.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 31,
+          "role": "prize",
+          "x": 79.25,
+          "y": 273.5,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 32,
+          "role": "prize",
+          "x": 73,
+          "y": 281.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 33,
+          "role": "prize",
+          "x": 75.25,
+          "y": 294.25,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 34,
+          "role": "prize",
+          "x": 71.75,
+          "y": 296.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 35,
+          "role": "prize",
+          "x": 61.5,
+          "y": 298.75,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 36,
+          "role": "prize",
+          "x": 51.75,
+          "y": 294.25,
+          "r": 0.2,
+          "restitution": 0.8
+        },
+        {
+          "id": 37,
+          "role": "prize",
+          "x": 42,
+          "y": 404.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 38,
+          "role": "prize",
+          "x": 53,
+          "y": 404.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 39,
+          "role": "prize",
+          "x": 58,
+          "y": 410.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 40,
+          "role": "prize",
+          "x": 61.25,
+          "y": 414,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 41,
+          "role": "prize",
+          "x": 64,
+          "y": 417.5,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 42,
+          "role": "prize",
+          "x": 34,
+          "y": 411.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 43,
+          "role": "prize",
+          "x": 37.25,
+          "y": 414.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 44,
+          "role": "prize",
+          "x": 31,
+          "y": 423.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 45,
+          "role": "prize",
+          "x": 34.25,
+          "y": 425.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 46,
+          "role": "prize",
+          "x": 37.75,
+          "y": 428.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 47,
+          "role": "prize",
+          "x": 47.25,
+          "y": 420.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 48,
+          "role": "prize",
+          "x": 56.5,
+          "y": 425.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 49,
+          "role": "prize",
+          "x": 68.25,
+          "y": 425.5,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 50,
+          "role": "prize",
+          "x": 45.75,
+          "y": 434.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 51,
+          "role": "prize",
+          "x": 49.25,
+          "y": 437.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 52,
+          "role": "prize",
+          "x": 65,
+          "y": 435.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 53,
+          "role": "prize",
+          "x": 67.5,
+          "y": 438.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 54,
+          "role": "prize",
+          "x": 70,
+          "y": 448.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 55,
+          "role": "prize",
+          "x": 70,
+          "y": 453,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 56,
+          "role": "prize",
+          "x": 70,
+          "y": 457.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 57,
+          "role": "prize",
+          "x": 42.75,
+          "y": 446.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 58,
+          "role": "prize",
+          "x": 47.75,
+          "y": 461.5,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 59,
+          "role": "prize",
+          "x": 56.25,
+          "y": 445.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 60,
+          "role": "prize",
+          "x": 59.75,
+          "y": 448.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 61,
+          "role": "prize",
+          "x": 53,
+          "y": 452.25,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 62,
+          "role": "prize",
+          "x": 59.75,
+          "y": 453,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 63,
+          "role": "prize",
+          "x": 59.75,
+          "y": 457.75,
+          "r": 0.2,
+          "restitution": 0.7
+        },
+        {
+          "id": 64,
+          "role": "prize",
+          "x": 83.75,
+          "y": 508.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 65,
+          "role": "prize",
+          "x": 87.75,
+          "y": 510.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 66,
+          "role": "prize",
+          "x": 91.5,
+          "y": 513,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 67,
+          "role": "prize",
+          "x": 95.25,
+          "y": 514.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 68,
+          "role": "prize",
+          "x": 90,
+          "y": 524.5,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 69,
+          "role": "prize",
+          "x": 97.25,
+          "y": 533.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 70,
+          "role": "prize",
+          "x": 101.75,
+          "y": 524.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 71,
+          "role": "prize",
+          "x": 104.75,
+          "y": 519.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 72,
+          "role": "prize",
+          "x": 108.25,
+          "y": 521.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 73,
+          "role": "prize",
+          "x": 112.25,
+          "y": 523.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 74,
+          "role": "prize",
+          "x": 124.25,
+          "y": 521.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 75,
+          "role": "prize",
+          "x": 120.25,
+          "y": 531.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 76,
+          "role": "prize",
+          "x": 124.25,
+          "y": 533.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 77,
+          "role": "prize",
+          "x": 107.75,
+          "y": 533.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 78,
+          "role": "prize",
+          "x": 131.25,
+          "y": 542.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 79,
+          "role": "prize",
+          "x": 136.25,
+          "y": 528.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 80,
+          "role": "prize",
+          "x": 136.75,
+          "y": 533.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 81,
+          "role": "prize",
+          "x": 148.5,
+          "y": 533.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 82,
+          "role": "prize",
+          "x": 141.5,
+          "y": 542.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 83,
+          "role": "prize",
+          "x": 145.25,
+          "y": 544.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 84,
+          "role": "prize",
+          "x": 149.25,
+          "y": 546.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 85,
+          "role": "prize",
+          "x": 152.75,
+          "y": 548.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 86,
+          "role": "prize",
+          "x": 156.75,
+          "y": 550.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 87,
+          "role": "prize",
+          "x": 159.75,
+          "y": 560.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 88,
+          "role": "prize",
+          "x": 170,
+          "y": 552.5,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 89,
+          "role": "prize",
+          "x": 180.25,
+          "y": 548.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 90,
+          "role": "prize",
+          "x": 191.25,
+          "y": 547.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 91,
+          "role": "heso",
+          "x": 203.25,
+          "y": 543.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 92,
+          "role": "heso",
+          "x": 213.25,
+          "y": 543.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 93,
+          "role": "prize",
+          "x": 225.25,
+          "y": 547.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 94,
+          "role": "denchu-guide",
+          "x": 293.25,
+          "y": 523.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 95,
+          "role": "denchu-guide",
+          "x": 303.75,
+          "y": 523.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 96,
+          "role": "denchu-guide",
+          "x": 299.75,
+          "y": 533,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 97,
+          "role": "michi",
+          "x": 235.75,
+          "y": 548.75,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 98,
+          "role": "michi",
+          "x": 236.75,
+          "y": 544.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 99,
+          "role": "michi",
+          "x": 240.5,
+          "y": 542,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 100,
+          "role": "michi",
+          "x": 244.25,
+          "y": 540.25,
+          "r": 0.2,
+          "restitution": 0.46
+        },
+        {
+          "id": 101,
+          "role": "michi",
+          "x": 248.25,
+          "y": 538.25,
+          "r": 0.2,
+          "restitution": 0.46
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "power": 0.2,
+      "launchInterval": 0.6,
+      "shootSeconds": 300,
+      "drainSeconds": 45,
+      "spawned": 497,
+      "counts": {
+        "fuzu": 0,
+        "normal": 15,
+        "start": 8,
+        "rush": 0,
+        "bonus": 0,
+        "out": 474,
+        "returned": 0
+      },
+      "remain": 0,
+      "leftRoutes": {
+        "roadContact": 101,
+        "nearHeso": 41,
+        "admitted": 8,
+        "nearAdmitted": 8,
+        "deflectedAtHeso": 4,
+        "nearMiss": 29,
+        "earlySpill": 60,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 29
+        },
+        "outcomes": {
+          "out": 474,
+          "normal": 15,
+          "start": 8
+        },
+        "tracked": 497,
+        "byPower": {
+          "0.2": {
+            "roadContact": 101,
+            "nearHeso": 41,
+            "admitted": 8,
+            "nearAdmitted": 8,
+            "deflectedAtHeso": 4,
+            "nearMiss": 29,
+            "earlySpill": 60,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 29
+            },
+            "outcomes": {
+              "out": 474,
+              "normal": 15,
+              "start": 8
+            },
+            "tracked": 497
+          }
+        }
+      },
+      "admittedPer100": 1.6096579476861168
+    },
+    {
+      "power": 0.22,
+      "launchInterval": 0.6,
+      "shootSeconds": 300,
+      "drainSeconds": 45,
+      "spawned": 499,
+      "counts": {
+        "fuzu": 0,
+        "normal": 4,
+        "start": 4,
+        "rush": 0,
+        "bonus": 0,
+        "out": 491,
+        "returned": 0
+      },
+      "remain": 0,
+      "leftRoutes": {
+        "roadContact": 74,
+        "nearHeso": 29,
+        "admitted": 4,
+        "nearAdmitted": 4,
+        "deflectedAtHeso": 6,
+        "nearMiss": 19,
+        "earlySpill": 45,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 19
+        },
+        "outcomes": {
+          "out": 491,
+          "start": 4,
+          "normal": 4
+        },
+        "tracked": 499,
+        "byPower": {
+          "0.22": {
+            "roadContact": 74,
+            "nearHeso": 29,
+            "admitted": 4,
+            "nearAdmitted": 4,
+            "deflectedAtHeso": 6,
+            "nearMiss": 19,
+            "earlySpill": 45,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 19
+            },
+            "outcomes": {
+              "out": 491,
+              "start": 4,
+              "normal": 4
+            },
+            "tracked": 499
+          }
+        }
+      },
+      "admittedPer100": 0.8016032064128256
+    },
+    {
+      "power": 0.23,
+      "launchInterval": 0.6,
+      "shootSeconds": 300,
+      "drainSeconds": 45,
+      "spawned": 497,
+      "counts": {
+        "fuzu": 0,
+        "normal": 6,
+        "start": 1,
+        "rush": 0,
+        "bonus": 0,
+        "out": 490,
+        "returned": 0
+      },
+      "remain": 0,
+      "leftRoutes": {
+        "roadContact": 61,
+        "nearHeso": 34,
+        "admitted": 1,
+        "nearAdmitted": 1,
+        "deflectedAtHeso": 12,
+        "nearMiss": 21,
+        "earlySpill": 27,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 21
+        },
+        "outcomes": {
+          "out": 490,
+          "normal": 6,
+          "start": 1
+        },
+        "tracked": 497,
+        "byPower": {
+          "0.23": {
+            "roadContact": 61,
+            "nearHeso": 34,
+            "admitted": 1,
+            "nearAdmitted": 1,
+            "deflectedAtHeso": 12,
+            "nearMiss": 21,
+            "earlySpill": 27,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 21
+            },
+            "outcomes": {
+              "out": 490,
+              "normal": 6,
+              "start": 1
+            },
+            "tracked": 497
+          }
+        }
+      },
+      "admittedPer100": 0.2012072434607646
+    },
+    {
+      "power": 0.24,
+      "launchInterval": 0.6,
+      "shootSeconds": 300,
+      "drainSeconds": 45,
+      "spawned": 498,
+      "counts": {
+        "fuzu": 0,
+        "normal": 5,
+        "start": 13,
+        "rush": 0,
+        "bonus": 0,
+        "out": 480,
+        "returned": 0
+      },
+      "remain": 0,
+      "leftRoutes": {
+        "roadContact": 71,
+        "nearHeso": 39,
+        "admitted": 13,
+        "nearAdmitted": 13,
+        "deflectedAtHeso": 10,
+        "nearMiss": 16,
+        "earlySpill": 32,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 16
+        },
+        "outcomes": {
+          "out": 480,
+          "start": 13,
+          "normal": 5
+        },
+        "tracked": 498,
+        "byPower": {
+          "0.24": {
+            "roadContact": 71,
+            "nearHeso": 39,
+            "admitted": 13,
+            "nearAdmitted": 13,
+            "deflectedAtHeso": 10,
+            "nearMiss": 16,
+            "earlySpill": 32,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 16
+            },
+            "outcomes": {
+              "out": 480,
+              "start": 13,
+              "normal": 5
+            },
+            "tracked": 498
+          }
+        }
+      },
+      "admittedPer100": 2.610441767068273
+    },
+    {
+      "power": 0.25,
+      "launchInterval": 0.6,
+      "shootSeconds": 300,
+      "drainSeconds": 45,
+      "spawned": 498,
+      "counts": {
+        "fuzu": 0,
+        "normal": 6,
+        "start": 5,
+        "rush": 0,
+        "bonus": 0,
+        "out": 487,
+        "returned": 0
+      },
+      "remain": 0,
+      "leftRoutes": {
+        "roadContact": 55,
+        "nearHeso": 24,
+        "admitted": 5,
+        "nearAdmitted": 5,
+        "deflectedAtHeso": 4,
+        "nearMiss": 15,
+        "earlySpill": 31,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 15
+        },
+        "outcomes": {
+          "out": 487,
+          "normal": 6,
+          "start": 5
+        },
+        "tracked": 498,
+        "byPower": {
+          "0.25": {
+            "roadContact": 55,
+            "nearHeso": 24,
+            "admitted": 5,
+            "nearAdmitted": 5,
+            "deflectedAtHeso": 4,
+            "nearMiss": 15,
+            "earlySpill": 31,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 15
+            },
+            "outcomes": {
+              "out": 487,
+              "normal": 6,
+              "start": 5
+            },
+            "tracked": 498
+          }
+        }
+      },
+      "admittedPer100": 1.0040160642570282
+    },
+    {
+      "power": 0.26,
+      "launchInterval": 0.6,
+      "shootSeconds": 300,
+      "drainSeconds": 45,
+      "spawned": 497,
+      "counts": {
+        "fuzu": 41,
+        "normal": 3,
+        "start": 2,
+        "rush": 0,
+        "bonus": 0,
+        "out": 451,
+        "returned": 0
+      },
+      "remain": 0,
+      "leftRoutes": {
+        "roadContact": 40,
+        "nearHeso": 15,
+        "admitted": 2,
+        "nearAdmitted": 2,
+        "deflectedAtHeso": 1,
+        "nearMiss": 12,
+        "earlySpill": 25,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 12
+        },
+        "outcomes": {
+          "out": 451,
+          "fuzu": 41,
+          "normal": 3,
+          "start": 2
+        },
+        "tracked": 497,
+        "byPower": {
+          "0.26": {
+            "roadContact": 40,
+            "nearHeso": 15,
+            "admitted": 2,
+            "nearAdmitted": 2,
+            "deflectedAtHeso": 1,
+            "nearMiss": 12,
+            "earlySpill": 25,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 12
+            },
+            "outcomes": {
+              "out": 451,
+              "fuzu": 41,
+              "normal": 3,
+              "start": 2
+            },
+            "tracked": 497
+          }
+        }
+      },
+      "admittedPer100": 0.4024144869215292
+    },
+    {
+      "power": 0.28,
+      "launchInterval": 0.6,
+      "shootSeconds": 300,
+      "drainSeconds": 45,
+      "spawned": 500,
+      "counts": {
+        "fuzu": 197,
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 303,
+        "returned": 0
+      },
+      "remain": 0,
+      "leftRoutes": {
+        "roadContact": 0,
+        "nearHeso": 0,
+        "admitted": 0,
+        "nearAdmitted": 0,
+        "deflectedAtHeso": 0,
+        "nearMiss": 0,
+        "earlySpill": 0,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {},
+        "outcomes": {
+          "out": 303,
+          "fuzu": 197
+        },
+        "tracked": 500,
+        "byPower": {
+          "0.28": {
+            "roadContact": 0,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 0,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "out": 303,
+              "fuzu": 197
+            },
+            "tracked": 500
+          }
+        }
+      },
+      "admittedPer100": 0
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+✔ lower LCD housing has a physical surface matching the visible apron (2.409166ms)
+✔ compact lower assembly drains and accounts for all balls at increased firing rate (19893.743792ms)
+✔ left road has no bridging collision segments and an actual pin rebounds a falling ball (19.223ms)
+✔ right road stays five separate pins without an invisible supporting wall (7.026416ms)
+{"shots":29,"guideContact":17,"downstream":15}
+✔ reference inlet guides share their visible coordinates and feed falling left shots downstream (1455.73875ms)
+✔ a playfield ball beside the left inlet does not collide with the rear launch arc (39.888834ms)
+✔ dense-ball separation resolves the existing pin shaft before the frame is displayed (4.621625ms)
+✔ adaptive integration stops a fast front-plane ball at a pin instead of crossing its center (2.1785ms)
+✔ rear launch balls remain on their separate plane even when passing a front pin (0.561042ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 19997.089083

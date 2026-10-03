@@ -1,0 +1,3186 @@
+[
+  {
+    "name": "desktop",
+    "errors": [],
+    "closed": {
+      "viewport": {
+        "width": 1280,
+        "height": 960
+      },
+      "canvasLogical": {
+        "width": 396,
+        "height": 436
+      },
+      "board": {
+        "x": 204.03125,
+        "y": 0,
+        "width": 871.921875,
+        "height": 959.984375,
+        "right": 1075.953125,
+        "bottom": 959.984375
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "panelHidden": true,
+      "expanded": "false",
+      "documentHeight": 960,
+      "documentWidth": 1280,
+      "game": {
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 0,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 0
+        },
+        "cabinet": {
+          "phase": "normal",
+          "travel": 0,
+          "light": 0.06,
+          "rainbow": false,
+          "hue": 0
+        },
+        "session": {
+          "stock": 399,
+          "total": 0,
+          "phase": "playing",
+          "accounting": {
+            "basePrize": 0,
+            "gamePrize": 0,
+            "payout": 0,
+            "spent": 1,
+            "returned": 0,
+            "supply": 0,
+            "debugAdjustment": 0,
+            "extraBalls": 0,
+            "machineNet": -1,
+            "playNet": -1,
+            "balance": -1,
+            "reconciled": true
+          },
+          "jackpots": 0
+        },
+        "spin": {
+          "entryPrelude": null,
+          "lifecycle": true,
+          "mode": "normal",
+          "rush": null,
+          "lastRush": null,
+          "round": {
+            "phase": "celebration",
+            "phaseTime": 0.29166666666666674,
+            "fromRush": false,
+            "round": 1,
+            "count": 0,
+            "limit": 10,
+            "payout": 0,
+            "maxPayout": 0,
+            "remainingSeconds": 15,
+            "history": []
+          },
+          "win": null,
+          "reach": null,
+          "time": 0.29166666666666674,
+          "holds": 0,
+          "active": false,
+          "draws": 0,
+          "stopTimer": 0,
+          "reels": {
+            "spinning": false,
+            "numbers": [
+              3,
+              7,
+              1
+            ],
+            "stopped": [
+              true,
+              true,
+              true
+            ]
+          },
+          "accepted": 0,
+          "entries": 0,
+          "events": []
+        },
+        "lcd": {
+          "x": 82,
+          "y": 303,
+          "width": 259.5,
+          "height": 202
+        },
+        "gate": {
+          "kind": "fuzu-inlet",
+          "count": 0,
+          "lastPass": null,
+          "lit": false
+        },
+        "leftRoutes": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {},
+          "tracked": 1,
+          "byPower": {
+            "0.24": {
+              "roadContact": 0,
+              "nearHeso": 0,
+              "admitted": 0,
+              "nearAdmitted": 0,
+              "deflectedAtHeso": 0,
+              "nearMiss": 0,
+              "earlySpill": 0,
+              "pending": 0,
+              "nearPending": 0,
+              "nearMissOutcomes": {},
+              "outcomes": {},
+              "tracked": 1
+            }
+          }
+        },
+        "time": 0.29166666666666674,
+        "paused": false,
+        "mode": "normal",
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spawned": 1,
+        "pockets": [
+          {
+            "x": 356,
+            "y": 430,
+            "w": 60,
+            "kind": "bonus",
+            "id": 5,
+            "captureTray": {
+              "left": 333.875,
+              "right": 372.625,
+              "y": 449.5,
+              "radius": 1.4
+            }
+          },
+          {
+            "x": 280.5,
+            "y": 542,
+            "w": 12,
+            "kind": "rush",
+            "id": 6,
+            "geometryScale": 0.65,
+            "referenceSlot": true,
+            "captureTray": {
+              "left": 272.5,
+              "right": 303.5,
+              "y": 548,
+              "radius": 0.65,
+              "role": "right-channel-5-1"
+            }
+          },
+          {
+            "id": 0,
+            "kind": "normal",
+            "x": 102.5,
+            "y": 542.5,
+            "w": 10
+          },
+          {
+            "id": 1,
+            "kind": "normal",
+            "x": 136,
+            "y": 555.5,
+            "w": 10
+          },
+          {
+            "id": 2,
+            "kind": "normal",
+            "x": 148.5,
+            "y": 563,
+            "w": 9.5
+          },
+          {
+            "id": 4,
+            "kind": "start",
+            "x": 208.5,
+            "y": 553,
+            "w": 12
+          },
+          {
+            "id": 8,
+            "kind": "fuzu",
+            "x": 271,
+            "y": 569.5,
+            "w": 14
+          }
+        ],
+        "guide": {
+          "a": {
+            "x": 339,
+            "y": 242.5
+          },
+          "b": {
+            "x": 354.5,
+            "y": 270.5
+          },
+          "r": 0.65,
+          "active": true,
+          "denchuShelf": false,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.04
+        },
+        "attacker": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "tulip": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "routeBalls": [],
+        "inFlight": 1
+      }
+    },
+    "opened": {
+      "viewport": {
+        "width": 1280,
+        "height": 960
+      },
+      "canvasLogical": {
+        "width": 396,
+        "height": 436
+      },
+      "board": {
+        "x": 26.03125,
+        "y": 0,
+        "width": 871.921875,
+        "height": 959.984375,
+        "right": 897.953125,
+        "bottom": 959.984375
+      },
+      "panel": {
+        "x": 948,
+        "y": 56,
+        "width": 320,
+        "height": 888,
+        "right": 1268,
+        "bottom": 944
+      },
+      "panelHidden": false,
+      "expanded": "true",
+      "documentHeight": 960,
+      "documentWidth": 1280,
+      "game": {
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 0,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 0
+        },
+        "cabinet": {
+          "phase": "normal",
+          "travel": 0,
+          "light": 0.06,
+          "rainbow": false,
+          "hue": 0
+        },
+        "session": {
+          "stock": 398,
+          "total": 0,
+          "phase": "playing",
+          "accounting": {
+            "basePrize": 0,
+            "gamePrize": 0,
+            "payout": 0,
+            "spent": 2,
+            "returned": 0,
+            "supply": 0,
+            "debugAdjustment": 0,
+            "extraBalls": 0,
+            "machineNet": -2,
+            "playNet": -2,
+            "balance": -2,
+            "reconciled": true
+          },
+          "jackpots": 0
+        },
+        "spin": {
+          "entryPrelude": null,
+          "lifecycle": true,
+          "mode": "normal",
+          "rush": null,
+          "lastRush": null,
+          "round": {
+            "phase": "celebration",
+            "phaseTime": 0.8083333333333329,
+            "fromRush": false,
+            "round": 1,
+            "count": 0,
+            "limit": 10,
+            "payout": 0,
+            "maxPayout": 0,
+            "remainingSeconds": 15,
+            "history": []
+          },
+          "win": null,
+          "reach": null,
+          "time": 0.8083333333333329,
+          "holds": 0,
+          "active": false,
+          "draws": 0,
+          "stopTimer": 0,
+          "reels": {
+            "spinning": false,
+            "numbers": [
+              3,
+              7,
+              1
+            ],
+            "stopped": [
+              true,
+              true,
+              true
+            ]
+          },
+          "accepted": 0,
+          "entries": 0,
+          "events": []
+        },
+        "lcd": {
+          "x": 82,
+          "y": 303,
+          "width": 259.5,
+          "height": 202
+        },
+        "gate": {
+          "kind": "fuzu-inlet",
+          "count": 0,
+          "lastPass": null,
+          "lit": false
+        },
+        "leftRoutes": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {},
+          "tracked": 2,
+          "byPower": {
+            "0.24": {
+              "roadContact": 0,
+              "nearHeso": 0,
+              "admitted": 0,
+              "nearAdmitted": 0,
+              "deflectedAtHeso": 0,
+              "nearMiss": 0,
+              "earlySpill": 0,
+              "pending": 0,
+              "nearPending": 0,
+              "nearMissOutcomes": {},
+              "outcomes": {},
+              "tracked": 2
+            }
+          }
+        },
+        "time": 0.8083333333333329,
+        "paused": false,
+        "mode": "normal",
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spawned": 2,
+        "pockets": [
+          {
+            "x": 356,
+            "y": 430,
+            "w": 60,
+            "kind": "bonus",
+            "id": 5,
+            "captureTray": {
+              "left": 333.875,
+              "right": 372.625,
+              "y": 449.5,
+              "radius": 1.4
+            }
+          },
+          {
+            "x": 280.5,
+            "y": 542,
+            "w": 12,
+            "kind": "rush",
+            "id": 6,
+            "geometryScale": 0.65,
+            "referenceSlot": true,
+            "captureTray": {
+              "left": 272.5,
+              "right": 303.5,
+              "y": 548,
+              "radius": 0.65,
+              "role": "right-channel-5-1"
+            }
+          },
+          {
+            "id": 0,
+            "kind": "normal",
+            "x": 102.5,
+            "y": 542.5,
+            "w": 10
+          },
+          {
+            "id": 1,
+            "kind": "normal",
+            "x": 136,
+            "y": 555.5,
+            "w": 10
+          },
+          {
+            "id": 2,
+            "kind": "normal",
+            "x": 148.5,
+            "y": 563,
+            "w": 9.5
+          },
+          {
+            "id": 4,
+            "kind": "start",
+            "x": 208.5,
+            "y": 553,
+            "w": 12
+          },
+          {
+            "id": 8,
+            "kind": "fuzu",
+            "x": 271,
+            "y": 569.5,
+            "w": 14
+          }
+        ],
+        "guide": {
+          "a": {
+            "x": 339,
+            "y": 242.5
+          },
+          "b": {
+            "x": 354.5,
+            "y": 270.5
+          },
+          "r": 0.65,
+          "active": true,
+          "denchuShelf": false,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.04
+        },
+        "attacker": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "tulip": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "routeBalls": [],
+        "inFlight": 2
+      }
+    },
+    "reclosed": {
+      "viewport": {
+        "width": 1280,
+        "height": 960
+      },
+      "canvasLogical": {
+        "width": 396,
+        "height": 436
+      },
+      "board": {
+        "x": 204.03125,
+        "y": 0,
+        "width": 871.921875,
+        "height": 959.984375,
+        "right": 1075.953125,
+        "bottom": 959.984375
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "panelHidden": true,
+      "expanded": "false",
+      "documentHeight": 960,
+      "documentWidth": 1280,
+      "game": {
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 0,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 0
+        },
+        "cabinet": {
+          "phase": "normal",
+          "travel": 0,
+          "light": 0.06,
+          "rainbow": false,
+          "hue": 0
+        },
+        "session": {
+          "stock": 398,
+          "total": 0,
+          "phase": "playing",
+          "accounting": {
+            "basePrize": 0,
+            "gamePrize": 0,
+            "payout": 0,
+            "spent": 2,
+            "returned": 0,
+            "supply": 0,
+            "debugAdjustment": 0,
+            "extraBalls": 0,
+            "machineNet": -2,
+            "playNet": -2,
+            "balance": -2,
+            "reconciled": true
+          },
+          "jackpots": 0
+        },
+        "spin": {
+          "entryPrelude": null,
+          "lifecycle": true,
+          "mode": "normal",
+          "rush": null,
+          "lastRush": null,
+          "round": {
+            "phase": "celebration",
+            "phaseTime": 0.9916666666666656,
+            "fromRush": false,
+            "round": 1,
+            "count": 0,
+            "limit": 10,
+            "payout": 0,
+            "maxPayout": 0,
+            "remainingSeconds": 15,
+            "history": []
+          },
+          "win": null,
+          "reach": null,
+          "time": 0.9916666666666656,
+          "holds": 0,
+          "active": false,
+          "draws": 0,
+          "stopTimer": 0,
+          "reels": {
+            "spinning": false,
+            "numbers": [
+              3,
+              7,
+              1
+            ],
+            "stopped": [
+              true,
+              true,
+              true
+            ]
+          },
+          "accepted": 0,
+          "entries": 0,
+          "events": []
+        },
+        "lcd": {
+          "x": 82,
+          "y": 303,
+          "width": 259.5,
+          "height": 202
+        },
+        "gate": {
+          "kind": "fuzu-inlet",
+          "count": 0,
+          "lastPass": null,
+          "lit": false
+        },
+        "leftRoutes": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {},
+          "tracked": 2,
+          "byPower": {
+            "0.24": {
+              "roadContact": 0,
+              "nearHeso": 0,
+              "admitted": 0,
+              "nearAdmitted": 0,
+              "deflectedAtHeso": 0,
+              "nearMiss": 0,
+              "earlySpill": 0,
+              "pending": 0,
+              "nearPending": 0,
+              "nearMissOutcomes": {},
+              "outcomes": {},
+              "tracked": 2
+            }
+          }
+        },
+        "time": 0.9916666666666656,
+        "paused": false,
+        "mode": "normal",
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spawned": 2,
+        "pockets": [
+          {
+            "x": 356,
+            "y": 430,
+            "w": 60,
+            "kind": "bonus",
+            "id": 5,
+            "captureTray": {
+              "left": 333.875,
+              "right": 372.625,
+              "y": 449.5,
+              "radius": 1.4
+            }
+          },
+          {
+            "x": 280.5,
+            "y": 542,
+            "w": 12,
+            "kind": "rush",
+            "id": 6,
+            "geometryScale": 0.65,
+            "referenceSlot": true,
+            "captureTray": {
+              "left": 272.5,
+              "right": 303.5,
+              "y": 548,
+              "radius": 0.65,
+              "role": "right-channel-5-1"
+            }
+          },
+          {
+            "id": 0,
+            "kind": "normal",
+            "x": 102.5,
+            "y": 542.5,
+            "w": 10
+          },
+          {
+            "id": 1,
+            "kind": "normal",
+            "x": 136,
+            "y": 555.5,
+            "w": 10
+          },
+          {
+            "id": 2,
+            "kind": "normal",
+            "x": 148.5,
+            "y": 563,
+            "w": 9.5
+          },
+          {
+            "id": 4,
+            "kind": "start",
+            "x": 208.5,
+            "y": 553,
+            "w": 12
+          },
+          {
+            "id": 8,
+            "kind": "fuzu",
+            "x": 271,
+            "y": 569.5,
+            "w": 14
+          }
+        ],
+        "guide": {
+          "a": {
+            "x": 339,
+            "y": 242.5
+          },
+          "b": {
+            "x": 354.5,
+            "y": 270.5
+          },
+          "r": 0.65,
+          "active": true,
+          "denchuShelf": false,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.04
+        },
+        "attacker": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "tulip": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "routeBalls": [],
+        "inFlight": 2
+      }
+    }
+  },
+  {
+    "name": "mobile",
+    "errors": [],
+    "closed": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "canvasLogical": {
+        "width": 396,
+        "height": 436
+      },
+      "board": {
+        "x": 0,
+        "y": 207.296875,
+        "width": 390,
+        "height": 429.390625,
+        "right": 390,
+        "bottom": 636.6875
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "panelHidden": true,
+      "expanded": "false",
+      "documentHeight": 844,
+      "documentWidth": 390,
+      "game": {
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 0,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 0
+        },
+        "cabinet": {
+          "phase": "normal",
+          "travel": 0,
+          "light": 0.06,
+          "rainbow": false,
+          "hue": 0
+        },
+        "session": {
+          "stock": 399,
+          "total": 0,
+          "phase": "playing",
+          "accounting": {
+            "basePrize": 0,
+            "gamePrize": 0,
+            "payout": 0,
+            "spent": 1,
+            "returned": 0,
+            "supply": 0,
+            "debugAdjustment": 0,
+            "extraBalls": 0,
+            "machineNet": -1,
+            "playNet": -1,
+            "balance": -1,
+            "reconciled": true
+          },
+          "jackpots": 0
+        },
+        "spin": {
+          "entryPrelude": null,
+          "lifecycle": true,
+          "mode": "normal",
+          "rush": null,
+          "lastRush": null,
+          "round": {
+            "phase": "celebration",
+            "phaseTime": 0.2583333333333333,
+            "fromRush": false,
+            "round": 1,
+            "count": 0,
+            "limit": 10,
+            "payout": 0,
+            "maxPayout": 0,
+            "remainingSeconds": 15,
+            "history": []
+          },
+          "win": null,
+          "reach": null,
+          "time": 0.2583333333333333,
+          "holds": 0,
+          "active": false,
+          "draws": 0,
+          "stopTimer": 0,
+          "reels": {
+            "spinning": false,
+            "numbers": [
+              3,
+              7,
+              1
+            ],
+            "stopped": [
+              true,
+              true,
+              true
+            ]
+          },
+          "accepted": 0,
+          "entries": 0,
+          "events": []
+        },
+        "lcd": {
+          "x": 82,
+          "y": 303,
+          "width": 259.5,
+          "height": 202
+        },
+        "gate": {
+          "kind": "fuzu-inlet",
+          "count": 0,
+          "lastPass": null,
+          "lit": false
+        },
+        "leftRoutes": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {},
+          "tracked": 1,
+          "byPower": {
+            "0.24": {
+              "roadContact": 0,
+              "nearHeso": 0,
+              "admitted": 0,
+              "nearAdmitted": 0,
+              "deflectedAtHeso": 0,
+              "nearMiss": 0,
+              "earlySpill": 0,
+              "pending": 0,
+              "nearPending": 0,
+              "nearMissOutcomes": {},
+              "outcomes": {},
+              "tracked": 1
+            }
+          }
+        },
+        "time": 0.2583333333333333,
+        "paused": false,
+        "mode": "normal",
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spawned": 1,
+        "pockets": [
+          {
+            "x": 356,
+            "y": 430,
+            "w": 60,
+            "kind": "bonus",
+            "id": 5,
+            "captureTray": {
+              "left": 333.875,
+              "right": 372.625,
+              "y": 449.5,
+              "radius": 1.4
+            }
+          },
+          {
+            "x": 280.5,
+            "y": 542,
+            "w": 12,
+            "kind": "rush",
+            "id": 6,
+            "geometryScale": 0.65,
+            "referenceSlot": true,
+            "captureTray": {
+              "left": 272.5,
+              "right": 303.5,
+              "y": 548,
+              "radius": 0.65,
+              "role": "right-channel-5-1"
+            }
+          },
+          {
+            "id": 0,
+            "kind": "normal",
+            "x": 102.5,
+            "y": 542.5,
+            "w": 10
+          },
+          {
+            "id": 1,
+            "kind": "normal",
+            "x": 136,
+            "y": 555.5,
+            "w": 10
+          },
+          {
+            "id": 2,
+            "kind": "normal",
+            "x": 148.5,
+            "y": 563,
+            "w": 9.5
+          },
+          {
+            "id": 4,
+            "kind": "start",
+            "x": 208.5,
+            "y": 553,
+            "w": 12
+          },
+          {
+            "id": 8,
+            "kind": "fuzu",
+            "x": 271,
+            "y": 569.5,
+            "w": 14
+          }
+        ],
+        "guide": {
+          "a": {
+            "x": 339,
+            "y": 242.5
+          },
+          "b": {
+            "x": 354.5,
+            "y": 270.5
+          },
+          "r": 0.65,
+          "active": true,
+          "denchuShelf": false,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.04
+        },
+        "attacker": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "tulip": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "routeBalls": [],
+        "inFlight": 1
+      }
+    },
+    "opened": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "canvasLogical": {
+        "width": 396,
+        "height": 436
+      },
+      "board": {
+        "x": 0,
+        "y": 65.296875,
+        "width": 390,
+        "height": 429.390625,
+        "right": 390,
+        "bottom": 494.6875
+      },
+      "panel": {
+        "x": 12,
+        "y": 512,
+        "width": 366,
+        "height": 320,
+        "right": 378,
+        "bottom": 832
+      },
+      "panelHidden": false,
+      "expanded": "true",
+      "documentHeight": 844,
+      "documentWidth": 390,
+      "game": {
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 0,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 0
+        },
+        "cabinet": {
+          "phase": "normal",
+          "travel": 0,
+          "light": 0.06,
+          "rainbow": false,
+          "hue": 0
+        },
+        "session": {
+          "stock": 398,
+          "total": 0,
+          "phase": "playing",
+          "accounting": {
+            "basePrize": 0,
+            "gamePrize": 0,
+            "payout": 0,
+            "spent": 2,
+            "returned": 0,
+            "supply": 0,
+            "debugAdjustment": 0,
+            "extraBalls": 0,
+            "machineNet": -2,
+            "playNet": -2,
+            "balance": -2,
+            "reconciled": true
+          },
+          "jackpots": 0
+        },
+        "spin": {
+          "entryPrelude": null,
+          "lifecycle": true,
+          "mode": "normal",
+          "rush": null,
+          "lastRush": null,
+          "round": {
+            "phase": "celebration",
+            "phaseTime": 0.7583333333333331,
+            "fromRush": false,
+            "round": 1,
+            "count": 0,
+            "limit": 10,
+            "payout": 0,
+            "maxPayout": 0,
+            "remainingSeconds": 15,
+            "history": []
+          },
+          "win": null,
+          "reach": null,
+          "time": 0.7583333333333331,
+          "holds": 0,
+          "active": false,
+          "draws": 0,
+          "stopTimer": 0,
+          "reels": {
+            "spinning": false,
+            "numbers": [
+              3,
+              7,
+              1
+            ],
+            "stopped": [
+              true,
+              true,
+              true
+            ]
+          },
+          "accepted": 0,
+          "entries": 0,
+          "events": []
+        },
+        "lcd": {
+          "x": 82,
+          "y": 303,
+          "width": 259.5,
+          "height": 202
+        },
+        "gate": {
+          "kind": "fuzu-inlet",
+          "count": 0,
+          "lastPass": null,
+          "lit": false
+        },
+        "leftRoutes": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {},
+          "tracked": 2,
+          "byPower": {
+            "0.24": {
+              "roadContact": 0,
+              "nearHeso": 0,
+              "admitted": 0,
+              "nearAdmitted": 0,
+              "deflectedAtHeso": 0,
+              "nearMiss": 0,
+              "earlySpill": 0,
+              "pending": 0,
+              "nearPending": 0,
+              "nearMissOutcomes": {},
+              "outcomes": {},
+              "tracked": 2
+            }
+          }
+        },
+        "time": 0.7583333333333331,
+        "paused": false,
+        "mode": "normal",
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spawned": 2,
+        "pockets": [
+          {
+            "x": 356,
+            "y": 430,
+            "w": 60,
+            "kind": "bonus",
+            "id": 5,
+            "captureTray": {
+              "left": 333.875,
+              "right": 372.625,
+              "y": 449.5,
+              "radius": 1.4
+            }
+          },
+          {
+            "x": 280.5,
+            "y": 542,
+            "w": 12,
+            "kind": "rush",
+            "id": 6,
+            "geometryScale": 0.65,
+            "referenceSlot": true,
+            "captureTray": {
+              "left": 272.5,
+              "right": 303.5,
+              "y": 548,
+              "radius": 0.65,
+              "role": "right-channel-5-1"
+            }
+          },
+          {
+            "id": 0,
+            "kind": "normal",
+            "x": 102.5,
+            "y": 542.5,
+            "w": 10
+          },
+          {
+            "id": 1,
+            "kind": "normal",
+            "x": 136,
+            "y": 555.5,
+            "w": 10
+          },
+          {
+            "id": 2,
+            "kind": "normal",
+            "x": 148.5,
+            "y": 563,
+            "w": 9.5
+          },
+          {
+            "id": 4,
+            "kind": "start",
+            "x": 208.5,
+            "y": 553,
+            "w": 12
+          },
+          {
+            "id": 8,
+            "kind": "fuzu",
+            "x": 271,
+            "y": 569.5,
+            "w": 14
+          }
+        ],
+        "guide": {
+          "a": {
+            "x": 339,
+            "y": 242.5
+          },
+          "b": {
+            "x": 354.5,
+            "y": 270.5
+          },
+          "r": 0.65,
+          "active": true,
+          "denchuShelf": false,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.04
+        },
+        "attacker": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "tulip": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "routeBalls": [],
+        "inFlight": 2
+      }
+    },
+    "reclosed": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "canvasLogical": {
+        "width": 396,
+        "height": 436
+      },
+      "board": {
+        "x": 0,
+        "y": 207.296875,
+        "width": 390,
+        "height": 429.390625,
+        "right": 390,
+        "bottom": 636.6875
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "panelHidden": true,
+      "expanded": "false",
+      "documentHeight": 844,
+      "documentWidth": 390,
+      "game": {
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 0,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 0
+        },
+        "cabinet": {
+          "phase": "normal",
+          "travel": 0,
+          "light": 0.06,
+          "rainbow": false,
+          "hue": 0
+        },
+        "session": {
+          "stock": 398,
+          "total": 0,
+          "phase": "playing",
+          "accounting": {
+            "basePrize": 0,
+            "gamePrize": 0,
+            "payout": 0,
+            "spent": 2,
+            "returned": 0,
+            "supply": 0,
+            "debugAdjustment": 0,
+            "extraBalls": 0,
+            "machineNet": -2,
+            "playNet": -2,
+            "balance": -2,
+            "reconciled": true
+          },
+          "jackpots": 0
+        },
+        "spin": {
+          "entryPrelude": null,
+          "lifecycle": true,
+          "mode": "normal",
+          "rush": null,
+          "lastRush": null,
+          "round": {
+            "phase": "celebration",
+            "phaseTime": 0.9416666666666658,
+            "fromRush": false,
+            "round": 1,
+            "count": 0,
+            "limit": 10,
+            "payout": 0,
+            "maxPayout": 0,
+            "remainingSeconds": 15,
+            "history": []
+          },
+          "win": null,
+          "reach": null,
+          "time": 0.9416666666666658,
+          "holds": 0,
+          "active": false,
+          "draws": 0,
+          "stopTimer": 0,
+          "reels": {
+            "spinning": false,
+            "numbers": [
+              3,
+              7,
+              1
+            ],
+            "stopped": [
+              true,
+              true,
+              true
+            ]
+          },
+          "accepted": 0,
+          "entries": 0,
+          "events": []
+        },
+        "lcd": {
+          "x": 82,
+          "y": 303,
+          "width": 259.5,
+          "height": 202
+        },
+        "gate": {
+          "kind": "fuzu-inlet",
+          "count": 0,
+          "lastPass": null,
+          "lit": false
+        },
+        "leftRoutes": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {},
+          "tracked": 2,
+          "byPower": {
+            "0.24": {
+              "roadContact": 0,
+              "nearHeso": 0,
+              "admitted": 0,
+              "nearAdmitted": 0,
+              "deflectedAtHeso": 0,
+              "nearMiss": 0,
+              "earlySpill": 0,
+              "pending": 0,
+              "nearPending": 0,
+              "nearMissOutcomes": {},
+              "outcomes": {},
+              "tracked": 2
+            }
+          }
+        },
+        "time": 0.9416666666666658,
+        "paused": false,
+        "mode": "normal",
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spawned": 2,
+        "pockets": [
+          {
+            "x": 356,
+            "y": 430,
+            "w": 60,
+            "kind": "bonus",
+            "id": 5,
+            "captureTray": {
+              "left": 333.875,
+              "right": 372.625,
+              "y": 449.5,
+              "radius": 1.4
+            }
+          },
+          {
+            "x": 280.5,
+            "y": 542,
+            "w": 12,
+            "kind": "rush",
+            "id": 6,
+            "geometryScale": 0.65,
+            "referenceSlot": true,
+            "captureTray": {
+              "left": 272.5,
+              "right": 303.5,
+              "y": 548,
+              "radius": 0.65,
+              "role": "right-channel-5-1"
+            }
+          },
+          {
+            "id": 0,
+            "kind": "normal",
+            "x": 102.5,
+            "y": 542.5,
+            "w": 10
+          },
+          {
+            "id": 1,
+            "kind": "normal",
+            "x": 136,
+            "y": 555.5,
+            "w": 10
+          },
+          {
+            "id": 2,
+            "kind": "normal",
+            "x": 148.5,
+            "y": 563,
+            "w": 9.5
+          },
+          {
+            "id": 4,
+            "kind": "start",
+            "x": 208.5,
+            "y": 553,
+            "w": 12
+          },
+          {
+            "id": 8,
+            "kind": "fuzu",
+            "x": 271,
+            "y": 569.5,
+            "w": 14
+          }
+        ],
+        "guide": {
+          "a": {
+            "x": 339,
+            "y": 242.5
+          },
+          "b": {
+            "x": 354.5,
+            "y": 270.5
+          },
+          "r": 0.65,
+          "active": true,
+          "denchuShelf": false,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.04
+        },
+        "attacker": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "tulip": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "routeBalls": [],
+        "inFlight": 2
+      }
+    }
+  },
+  {
+    "name": "small",
+    "errors": [],
+    "closed": {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "canvasLogical": {
+        "width": 396,
+        "height": 436
+      },
+      "board": {
+        "x": 0,
+        "y": 107.84375,
+        "width": 320,
+        "height": 352.3125,
+        "right": 320,
+        "bottom": 460.15625
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "panelHidden": true,
+      "expanded": "false",
+      "documentHeight": 568,
+      "documentWidth": 320,
+      "game": {
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 0,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 0
+        },
+        "cabinet": {
+          "phase": "normal",
+          "travel": 0,
+          "light": 0.06,
+          "rainbow": false,
+          "hue": 0
+        },
+        "session": {
+          "stock": 399,
+          "total": 0,
+          "phase": "playing",
+          "accounting": {
+            "basePrize": 0,
+            "gamePrize": 0,
+            "payout": 0,
+            "spent": 1,
+            "returned": 0,
+            "supply": 0,
+            "debugAdjustment": 0,
+            "extraBalls": 0,
+            "machineNet": -1,
+            "playNet": -1,
+            "balance": -1,
+            "reconciled": true
+          },
+          "jackpots": 0
+        },
+        "spin": {
+          "entryPrelude": null,
+          "lifecycle": true,
+          "mode": "normal",
+          "rush": null,
+          "lastRush": null,
+          "round": {
+            "phase": "celebration",
+            "phaseTime": 0.26666666666666666,
+            "fromRush": false,
+            "round": 1,
+            "count": 0,
+            "limit": 10,
+            "payout": 0,
+            "maxPayout": 0,
+            "remainingSeconds": 15,
+            "history": []
+          },
+          "win": null,
+          "reach": null,
+          "time": 0.26666666666666666,
+          "holds": 0,
+          "active": false,
+          "draws": 0,
+          "stopTimer": 0,
+          "reels": {
+            "spinning": false,
+            "numbers": [
+              3,
+              7,
+              1
+            ],
+            "stopped": [
+              true,
+              true,
+              true
+            ]
+          },
+          "accepted": 0,
+          "entries": 0,
+          "events": []
+        },
+        "lcd": {
+          "x": 82,
+          "y": 303,
+          "width": 259.5,
+          "height": 202
+        },
+        "gate": {
+          "kind": "fuzu-inlet",
+          "count": 0,
+          "lastPass": null,
+          "lit": false
+        },
+        "leftRoutes": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {},
+          "tracked": 1,
+          "byPower": {
+            "0.24": {
+              "roadContact": 0,
+              "nearHeso": 0,
+              "admitted": 0,
+              "nearAdmitted": 0,
+              "deflectedAtHeso": 0,
+              "nearMiss": 0,
+              "earlySpill": 0,
+              "pending": 0,
+              "nearPending": 0,
+              "nearMissOutcomes": {},
+              "outcomes": {},
+              "tracked": 1
+            }
+          }
+        },
+        "time": 0.26666666666666666,
+        "paused": false,
+        "mode": "normal",
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spawned": 1,
+        "pockets": [
+          {
+            "x": 356,
+            "y": 430,
+            "w": 60,
+            "kind": "bonus",
+            "id": 5,
+            "captureTray": {
+              "left": 333.875,
+              "right": 372.625,
+              "y": 449.5,
+              "radius": 1.4
+            }
+          },
+          {
+            "x": 280.5,
+            "y": 542,
+            "w": 12,
+            "kind": "rush",
+            "id": 6,
+            "geometryScale": 0.65,
+            "referenceSlot": true,
+            "captureTray": {
+              "left": 272.5,
+              "right": 303.5,
+              "y": 548,
+              "radius": 0.65,
+              "role": "right-channel-5-1"
+            }
+          },
+          {
+            "id": 0,
+            "kind": "normal",
+            "x": 102.5,
+            "y": 542.5,
+            "w": 10
+          },
+          {
+            "id": 1,
+            "kind": "normal",
+            "x": 136,
+            "y": 555.5,
+            "w": 10
+          },
+          {
+            "id": 2,
+            "kind": "normal",
+            "x": 148.5,
+            "y": 563,
+            "w": 9.5
+          },
+          {
+            "id": 4,
+            "kind": "start",
+            "x": 208.5,
+            "y": 553,
+            "w": 12
+          },
+          {
+            "id": 8,
+            "kind": "fuzu",
+            "x": 271,
+            "y": 569.5,
+            "w": 14
+          }
+        ],
+        "guide": {
+          "a": {
+            "x": 339,
+            "y": 242.5
+          },
+          "b": {
+            "x": 354.5,
+            "y": 270.5
+          },
+          "r": 0.65,
+          "active": true,
+          "denchuShelf": false,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.04
+        },
+        "attacker": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "tulip": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "routeBalls": [],
+        "inFlight": 1
+      }
+    },
+    "opened": {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "canvasLogical": {
+        "width": 396,
+        "height": 436
+      },
+      "board": {
+        "x": 38.21875,
+        "y": 60,
+        "width": 243.546875,
+        "height": 268.140625,
+        "right": 281.765625,
+        "bottom": 328.140625
+      },
+      "panel": {
+        "x": 12,
+        "y": 340.171875,
+        "width": 296,
+        "height": 215.828125,
+        "right": 308,
+        "bottom": 556
+      },
+      "panelHidden": false,
+      "expanded": "true",
+      "documentHeight": 568,
+      "documentWidth": 320,
+      "game": {
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 0,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 0
+        },
+        "cabinet": {
+          "phase": "normal",
+          "travel": 0,
+          "light": 0.06,
+          "rainbow": false,
+          "hue": 0
+        },
+        "session": {
+          "stock": 398,
+          "total": 0,
+          "phase": "playing",
+          "accounting": {
+            "basePrize": 0,
+            "gamePrize": 0,
+            "payout": 0,
+            "spent": 2,
+            "returned": 0,
+            "supply": 0,
+            "debugAdjustment": 0,
+            "extraBalls": 0,
+            "machineNet": -2,
+            "playNet": -2,
+            "balance": -2,
+            "reconciled": true
+          },
+          "jackpots": 0
+        },
+        "spin": {
+          "entryPrelude": null,
+          "lifecycle": true,
+          "mode": "normal",
+          "rush": null,
+          "lastRush": null,
+          "round": {
+            "phase": "celebration",
+            "phaseTime": 0.7333333333333332,
+            "fromRush": false,
+            "round": 1,
+            "count": 0,
+            "limit": 10,
+            "payout": 0,
+            "maxPayout": 0,
+            "remainingSeconds": 15,
+            "history": []
+          },
+          "win": null,
+          "reach": null,
+          "time": 0.7333333333333332,
+          "holds": 0,
+          "active": false,
+          "draws": 0,
+          "stopTimer": 0,
+          "reels": {
+            "spinning": false,
+            "numbers": [
+              3,
+              7,
+              1
+            ],
+            "stopped": [
+              true,
+              true,
+              true
+            ]
+          },
+          "accepted": 0,
+          "entries": 0,
+          "events": []
+        },
+        "lcd": {
+          "x": 82,
+          "y": 303,
+          "width": 259.5,
+          "height": 202
+        },
+        "gate": {
+          "kind": "fuzu-inlet",
+          "count": 0,
+          "lastPass": null,
+          "lit": false
+        },
+        "leftRoutes": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {},
+          "tracked": 2,
+          "byPower": {
+            "0.24": {
+              "roadContact": 0,
+              "nearHeso": 0,
+              "admitted": 0,
+              "nearAdmitted": 0,
+              "deflectedAtHeso": 0,
+              "nearMiss": 0,
+              "earlySpill": 0,
+              "pending": 0,
+              "nearPending": 0,
+              "nearMissOutcomes": {},
+              "outcomes": {},
+              "tracked": 2
+            }
+          }
+        },
+        "time": 0.7333333333333332,
+        "paused": false,
+        "mode": "normal",
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spawned": 2,
+        "pockets": [
+          {
+            "x": 356,
+            "y": 430,
+            "w": 60,
+            "kind": "bonus",
+            "id": 5,
+            "captureTray": {
+              "left": 333.875,
+              "right": 372.625,
+              "y": 449.5,
+              "radius": 1.4
+            }
+          },
+          {
+            "x": 280.5,
+            "y": 542,
+            "w": 12,
+            "kind": "rush",
+            "id": 6,
+            "geometryScale": 0.65,
+            "referenceSlot": true,
+            "captureTray": {
+              "left": 272.5,
+              "right": 303.5,
+              "y": 548,
+              "radius": 0.65,
+              "role": "right-channel-5-1"
+            }
+          },
+          {
+            "id": 0,
+            "kind": "normal",
+            "x": 102.5,
+            "y": 542.5,
+            "w": 10
+          },
+          {
+            "id": 1,
+            "kind": "normal",
+            "x": 136,
+            "y": 555.5,
+            "w": 10
+          },
+          {
+            "id": 2,
+            "kind": "normal",
+            "x": 148.5,
+            "y": 563,
+            "w": 9.5
+          },
+          {
+            "id": 4,
+            "kind": "start",
+            "x": 208.5,
+            "y": 553,
+            "w": 12
+          },
+          {
+            "id": 8,
+            "kind": "fuzu",
+            "x": 271,
+            "y": 569.5,
+            "w": 14
+          }
+        ],
+        "guide": {
+          "a": {
+            "x": 339,
+            "y": 242.5
+          },
+          "b": {
+            "x": 354.5,
+            "y": 270.5
+          },
+          "r": 0.65,
+          "active": true,
+          "denchuShelf": false,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.04
+        },
+        "attacker": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "tulip": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "routeBalls": [],
+        "inFlight": 2
+      }
+    },
+    "reclosed": {
+      "viewport": {
+        "width": 320,
+        "height": 568
+      },
+      "canvasLogical": {
+        "width": 396,
+        "height": 436
+      },
+      "board": {
+        "x": 0,
+        "y": 107.84375,
+        "width": 320,
+        "height": 352.3125,
+        "right": 320,
+        "bottom": 460.15625
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "panelHidden": true,
+      "expanded": "false",
+      "documentHeight": 568,
+      "documentWidth": 320,
+      "game": {
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 0,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 0
+        },
+        "cabinet": {
+          "phase": "normal",
+          "travel": 0,
+          "light": 0.06,
+          "rainbow": false,
+          "hue": 0
+        },
+        "session": {
+          "stock": 398,
+          "total": 0,
+          "phase": "playing",
+          "accounting": {
+            "basePrize": 0,
+            "gamePrize": 0,
+            "payout": 0,
+            "spent": 2,
+            "returned": 0,
+            "supply": 0,
+            "debugAdjustment": 0,
+            "extraBalls": 0,
+            "machineNet": -2,
+            "playNet": -2,
+            "balance": -2,
+            "reconciled": true
+          },
+          "jackpots": 0
+        },
+        "spin": {
+          "entryPrelude": null,
+          "lifecycle": true,
+          "mode": "normal",
+          "rush": null,
+          "lastRush": null,
+          "round": {
+            "phase": "celebration",
+            "phaseTime": 0.9166666666666659,
+            "fromRush": false,
+            "round": 1,
+            "count": 0,
+            "limit": 10,
+            "payout": 0,
+            "maxPayout": 0,
+            "remainingSeconds": 15,
+            "history": []
+          },
+          "win": null,
+          "reach": null,
+          "time": 0.9166666666666659,
+          "holds": 0,
+          "active": false,
+          "draws": 0,
+          "stopTimer": 0,
+          "reels": {
+            "spinning": false,
+            "numbers": [
+              3,
+              7,
+              1
+            ],
+            "stopped": [
+              true,
+              true,
+              true
+            ]
+          },
+          "accepted": 0,
+          "entries": 0,
+          "events": []
+        },
+        "lcd": {
+          "x": 82,
+          "y": 303,
+          "width": 259.5,
+          "height": 202
+        },
+        "gate": {
+          "kind": "fuzu-inlet",
+          "count": 0,
+          "lastPass": null,
+          "lit": false
+        },
+        "leftRoutes": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {},
+          "tracked": 2,
+          "byPower": {
+            "0.24": {
+              "roadContact": 0,
+              "nearHeso": 0,
+              "admitted": 0,
+              "nearAdmitted": 0,
+              "deflectedAtHeso": 0,
+              "nearMiss": 0,
+              "earlySpill": 0,
+              "pending": 0,
+              "nearPending": 0,
+              "nearMissOutcomes": {},
+              "outcomes": {},
+              "tracked": 2
+            }
+          }
+        },
+        "time": 0.9166666666666659,
+        "paused": false,
+        "mode": "normal",
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spawned": 2,
+        "pockets": [
+          {
+            "x": 356,
+            "y": 430,
+            "w": 60,
+            "kind": "bonus",
+            "id": 5,
+            "captureTray": {
+              "left": 333.875,
+              "right": 372.625,
+              "y": 449.5,
+              "radius": 1.4
+            }
+          },
+          {
+            "x": 280.5,
+            "y": 542,
+            "w": 12,
+            "kind": "rush",
+            "id": 6,
+            "geometryScale": 0.65,
+            "referenceSlot": true,
+            "captureTray": {
+              "left": 272.5,
+              "right": 303.5,
+              "y": 548,
+              "radius": 0.65,
+              "role": "right-channel-5-1"
+            }
+          },
+          {
+            "id": 0,
+            "kind": "normal",
+            "x": 102.5,
+            "y": 542.5,
+            "w": 10
+          },
+          {
+            "id": 1,
+            "kind": "normal",
+            "x": 136,
+            "y": 555.5,
+            "w": 10
+          },
+          {
+            "id": 2,
+            "kind": "normal",
+            "x": 148.5,
+            "y": 563,
+            "w": 9.5
+          },
+          {
+            "id": 4,
+            "kind": "start",
+            "x": 208.5,
+            "y": 553,
+            "w": 12
+          },
+          {
+            "id": 8,
+            "kind": "fuzu",
+            "x": 271,
+            "y": 569.5,
+            "w": 14
+          }
+        ],
+        "guide": {
+          "a": {
+            "x": 339,
+            "y": 242.5
+          },
+          "b": {
+            "x": 354.5,
+            "y": 270.5
+          },
+          "r": 0.65,
+          "active": true,
+          "denchuShelf": false,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.04
+        },
+        "attacker": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "tulip": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "routeBalls": [],
+        "inFlight": 2
+      }
+    }
+  },
+  {
+    "name": "landscape",
+    "errors": [],
+    "closed": {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "canvasLogical": {
+        "width": 396,
+        "height": 436
+      },
+      "board": {
+        "x": 244.890625,
+        "y": 0,
+        "width": 354.21875,
+        "height": 389.984375,
+        "right": 599.109375,
+        "bottom": 389.984375
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "panelHidden": true,
+      "expanded": "false",
+      "documentHeight": 390,
+      "documentWidth": 844,
+      "game": {
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 0,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 0
+        },
+        "cabinet": {
+          "phase": "normal",
+          "travel": 0,
+          "light": 0.06,
+          "rainbow": false,
+          "hue": 0
+        },
+        "session": {
+          "stock": 399,
+          "total": 0,
+          "phase": "playing",
+          "accounting": {
+            "basePrize": 0,
+            "gamePrize": 0,
+            "payout": 0,
+            "spent": 1,
+            "returned": 0,
+            "supply": 0,
+            "debugAdjustment": 0,
+            "extraBalls": 0,
+            "machineNet": -1,
+            "playNet": -1,
+            "balance": -1,
+            "reconciled": true
+          },
+          "jackpots": 0
+        },
+        "spin": {
+          "entryPrelude": null,
+          "lifecycle": true,
+          "mode": "normal",
+          "rush": null,
+          "lastRush": null,
+          "round": {
+            "phase": "celebration",
+            "phaseTime": 0.2583333333333333,
+            "fromRush": false,
+            "round": 1,
+            "count": 0,
+            "limit": 10,
+            "payout": 0,
+            "maxPayout": 0,
+            "remainingSeconds": 15,
+            "history": []
+          },
+          "win": null,
+          "reach": null,
+          "time": 0.2583333333333333,
+          "holds": 0,
+          "active": false,
+          "draws": 0,
+          "stopTimer": 0,
+          "reels": {
+            "spinning": false,
+            "numbers": [
+              3,
+              7,
+              1
+            ],
+            "stopped": [
+              true,
+              true,
+              true
+            ]
+          },
+          "accepted": 0,
+          "entries": 0,
+          "events": []
+        },
+        "lcd": {
+          "x": 82,
+          "y": 303,
+          "width": 259.5,
+          "height": 202
+        },
+        "gate": {
+          "kind": "fuzu-inlet",
+          "count": 0,
+          "lastPass": null,
+          "lit": false
+        },
+        "leftRoutes": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {},
+          "tracked": 1,
+          "byPower": {
+            "0.24": {
+              "roadContact": 0,
+              "nearHeso": 0,
+              "admitted": 0,
+              "nearAdmitted": 0,
+              "deflectedAtHeso": 0,
+              "nearMiss": 0,
+              "earlySpill": 0,
+              "pending": 0,
+              "nearPending": 0,
+              "nearMissOutcomes": {},
+              "outcomes": {},
+              "tracked": 1
+            }
+          }
+        },
+        "time": 0.2583333333333333,
+        "paused": false,
+        "mode": "normal",
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spawned": 1,
+        "pockets": [
+          {
+            "x": 356,
+            "y": 430,
+            "w": 60,
+            "kind": "bonus",
+            "id": 5,
+            "captureTray": {
+              "left": 333.875,
+              "right": 372.625,
+              "y": 449.5,
+              "radius": 1.4
+            }
+          },
+          {
+            "x": 280.5,
+            "y": 542,
+            "w": 12,
+            "kind": "rush",
+            "id": 6,
+            "geometryScale": 0.65,
+            "referenceSlot": true,
+            "captureTray": {
+              "left": 272.5,
+              "right": 303.5,
+              "y": 548,
+              "radius": 0.65,
+              "role": "right-channel-5-1"
+            }
+          },
+          {
+            "id": 0,
+            "kind": "normal",
+            "x": 102.5,
+            "y": 542.5,
+            "w": 10
+          },
+          {
+            "id": 1,
+            "kind": "normal",
+            "x": 136,
+            "y": 555.5,
+            "w": 10
+          },
+          {
+            "id": 2,
+            "kind": "normal",
+            "x": 148.5,
+            "y": 563,
+            "w": 9.5
+          },
+          {
+            "id": 4,
+            "kind": "start",
+            "x": 208.5,
+            "y": 553,
+            "w": 12
+          },
+          {
+            "id": 8,
+            "kind": "fuzu",
+            "x": 271,
+            "y": 569.5,
+            "w": 14
+          }
+        ],
+        "guide": {
+          "a": {
+            "x": 339,
+            "y": 242.5
+          },
+          "b": {
+            "x": 354.5,
+            "y": 270.5
+          },
+          "r": 0.65,
+          "active": true,
+          "denchuShelf": false,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.04
+        },
+        "attacker": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "tulip": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "routeBalls": [],
+        "inFlight": 1
+      }
+    },
+    "opened": {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "canvasLogical": {
+        "width": 396,
+        "height": 436
+      },
+      "board": {
+        "x": 66.890625,
+        "y": 0,
+        "width": 354.21875,
+        "height": 389.984375,
+        "right": 421.109375,
+        "bottom": 389.984375
+      },
+      "panel": {
+        "x": 512,
+        "y": 56,
+        "width": 320,
+        "height": 318,
+        "right": 832,
+        "bottom": 374
+      },
+      "panelHidden": false,
+      "expanded": "true",
+      "documentHeight": 390,
+      "documentWidth": 844,
+      "game": {
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 0,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 0
+        },
+        "cabinet": {
+          "phase": "normal",
+          "travel": 0,
+          "light": 0.06,
+          "rainbow": false,
+          "hue": 0
+        },
+        "session": {
+          "stock": 398,
+          "total": 0,
+          "phase": "playing",
+          "accounting": {
+            "basePrize": 0,
+            "gamePrize": 0,
+            "payout": 0,
+            "spent": 2,
+            "returned": 0,
+            "supply": 0,
+            "debugAdjustment": 0,
+            "extraBalls": 0,
+            "machineNet": -2,
+            "playNet": -2,
+            "balance": -2,
+            "reconciled": true
+          },
+          "jackpots": 0
+        },
+        "spin": {
+          "entryPrelude": null,
+          "lifecycle": true,
+          "mode": "normal",
+          "rush": null,
+          "lastRush": null,
+          "round": {
+            "phase": "celebration",
+            "phaseTime": 0.7249999999999999,
+            "fromRush": false,
+            "round": 1,
+            "count": 0,
+            "limit": 10,
+            "payout": 0,
+            "maxPayout": 0,
+            "remainingSeconds": 15,
+            "history": []
+          },
+          "win": null,
+          "reach": null,
+          "time": 0.7249999999999999,
+          "holds": 0,
+          "active": false,
+          "draws": 0,
+          "stopTimer": 0,
+          "reels": {
+            "spinning": false,
+            "numbers": [
+              3,
+              7,
+              1
+            ],
+            "stopped": [
+              true,
+              true,
+              true
+            ]
+          },
+          "accepted": 0,
+          "entries": 0,
+          "events": []
+        },
+        "lcd": {
+          "x": 82,
+          "y": 303,
+          "width": 259.5,
+          "height": 202
+        },
+        "gate": {
+          "kind": "fuzu-inlet",
+          "count": 0,
+          "lastPass": null,
+          "lit": false
+        },
+        "leftRoutes": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {},
+          "tracked": 2,
+          "byPower": {
+            "0.24": {
+              "roadContact": 0,
+              "nearHeso": 0,
+              "admitted": 0,
+              "nearAdmitted": 0,
+              "deflectedAtHeso": 0,
+              "nearMiss": 0,
+              "earlySpill": 0,
+              "pending": 0,
+              "nearPending": 0,
+              "nearMissOutcomes": {},
+              "outcomes": {},
+              "tracked": 2
+            }
+          }
+        },
+        "time": 0.7249999999999999,
+        "paused": false,
+        "mode": "normal",
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spawned": 2,
+        "pockets": [
+          {
+            "x": 356,
+            "y": 430,
+            "w": 60,
+            "kind": "bonus",
+            "id": 5,
+            "captureTray": {
+              "left": 333.875,
+              "right": 372.625,
+              "y": 449.5,
+              "radius": 1.4
+            }
+          },
+          {
+            "x": 280.5,
+            "y": 542,
+            "w": 12,
+            "kind": "rush",
+            "id": 6,
+            "geometryScale": 0.65,
+            "referenceSlot": true,
+            "captureTray": {
+              "left": 272.5,
+              "right": 303.5,
+              "y": 548,
+              "radius": 0.65,
+              "role": "right-channel-5-1"
+            }
+          },
+          {
+            "id": 0,
+            "kind": "normal",
+            "x": 102.5,
+            "y": 542.5,
+            "w": 10
+          },
+          {
+            "id": 1,
+            "kind": "normal",
+            "x": 136,
+            "y": 555.5,
+            "w": 10
+          },
+          {
+            "id": 2,
+            "kind": "normal",
+            "x": 148.5,
+            "y": 563,
+            "w": 9.5
+          },
+          {
+            "id": 4,
+            "kind": "start",
+            "x": 208.5,
+            "y": 553,
+            "w": 12
+          },
+          {
+            "id": 8,
+            "kind": "fuzu",
+            "x": 271,
+            "y": 569.5,
+            "w": 14
+          }
+        ],
+        "guide": {
+          "a": {
+            "x": 339,
+            "y": 242.5
+          },
+          "b": {
+            "x": 354.5,
+            "y": 270.5
+          },
+          "r": 0.65,
+          "active": true,
+          "denchuShelf": false,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.04
+        },
+        "attacker": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "tulip": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "routeBalls": [],
+        "inFlight": 2
+      }
+    },
+    "reclosed": {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "canvasLogical": {
+        "width": 396,
+        "height": 436
+      },
+      "board": {
+        "x": 244.890625,
+        "y": 0,
+        "width": 354.21875,
+        "height": 389.984375,
+        "right": 599.109375,
+        "bottom": 389.984375
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "right": 0,
+        "bottom": 0
+      },
+      "panelHidden": true,
+      "expanded": "false",
+      "documentHeight": 390,
+      "documentWidth": 844,
+      "game": {
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 0,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 0
+        },
+        "cabinet": {
+          "phase": "normal",
+          "travel": 0,
+          "light": 0.06,
+          "rainbow": false,
+          "hue": 0
+        },
+        "session": {
+          "stock": 398,
+          "total": 0,
+          "phase": "playing",
+          "accounting": {
+            "basePrize": 0,
+            "gamePrize": 0,
+            "payout": 0,
+            "spent": 2,
+            "returned": 0,
+            "supply": 0,
+            "debugAdjustment": 0,
+            "extraBalls": 0,
+            "machineNet": -2,
+            "playNet": -2,
+            "balance": -2,
+            "reconciled": true
+          },
+          "jackpots": 0
+        },
+        "spin": {
+          "entryPrelude": null,
+          "lifecycle": true,
+          "mode": "normal",
+          "rush": null,
+          "lastRush": null,
+          "round": {
+            "phase": "celebration",
+            "phaseTime": 0.9083333333333325,
+            "fromRush": false,
+            "round": 1,
+            "count": 0,
+            "limit": 10,
+            "payout": 0,
+            "maxPayout": 0,
+            "remainingSeconds": 15,
+            "history": []
+          },
+          "win": null,
+          "reach": null,
+          "time": 0.9083333333333325,
+          "holds": 0,
+          "active": false,
+          "draws": 0,
+          "stopTimer": 0,
+          "reels": {
+            "spinning": false,
+            "numbers": [
+              3,
+              7,
+              1
+            ],
+            "stopped": [
+              true,
+              true,
+              true
+            ]
+          },
+          "accepted": 0,
+          "entries": 0,
+          "events": []
+        },
+        "lcd": {
+          "x": 82,
+          "y": 303,
+          "width": 259.5,
+          "height": 202
+        },
+        "gate": {
+          "kind": "fuzu-inlet",
+          "count": 0,
+          "lastPass": null,
+          "lit": false
+        },
+        "leftRoutes": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {},
+          "tracked": 2,
+          "byPower": {
+            "0.24": {
+              "roadContact": 0,
+              "nearHeso": 0,
+              "admitted": 0,
+              "nearAdmitted": 0,
+              "deflectedAtHeso": 0,
+              "nearMiss": 0,
+              "earlySpill": 0,
+              "pending": 0,
+              "nearPending": 0,
+              "nearMissOutcomes": {},
+              "outcomes": {},
+              "tracked": 2
+            }
+          }
+        },
+        "time": 0.9083333333333325,
+        "paused": false,
+        "mode": "normal",
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spawned": 2,
+        "pockets": [
+          {
+            "x": 356,
+            "y": 430,
+            "w": 60,
+            "kind": "bonus",
+            "id": 5,
+            "captureTray": {
+              "left": 333.875,
+              "right": 372.625,
+              "y": 449.5,
+              "radius": 1.4
+            }
+          },
+          {
+            "x": 280.5,
+            "y": 542,
+            "w": 12,
+            "kind": "rush",
+            "id": 6,
+            "geometryScale": 0.65,
+            "referenceSlot": true,
+            "captureTray": {
+              "left": 272.5,
+              "right": 303.5,
+              "y": 548,
+              "radius": 0.65,
+              "role": "right-channel-5-1"
+            }
+          },
+          {
+            "id": 0,
+            "kind": "normal",
+            "x": 102.5,
+            "y": 542.5,
+            "w": 10
+          },
+          {
+            "id": 1,
+            "kind": "normal",
+            "x": 136,
+            "y": 555.5,
+            "w": 10
+          },
+          {
+            "id": 2,
+            "kind": "normal",
+            "x": 148.5,
+            "y": 563,
+            "w": 9.5
+          },
+          {
+            "id": 4,
+            "kind": "start",
+            "x": 208.5,
+            "y": 553,
+            "w": 12
+          },
+          {
+            "id": 8,
+            "kind": "fuzu",
+            "x": 271,
+            "y": 569.5,
+            "w": 14
+          }
+        ],
+        "guide": {
+          "a": {
+            "x": 339,
+            "y": 242.5
+          },
+          "b": {
+            "x": 354.5,
+            "y": 270.5
+          },
+          "r": 0.65,
+          "active": true,
+          "denchuShelf": false,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.04
+        },
+        "attacker": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "tulip": {
+          "progress": 0,
+          "target": 0,
+          "moving": false
+        },
+        "routeBalls": [],
+        "inFlight": 2
+      }
+    }
+  }
+]

@@ -1,0 +1,2487 @@
+{
+  "normal": [
+    {
+      "course": 0,
+      "spawned": 500,
+      "left": 500,
+      "right": 0,
+      "start": 25,
+      "normal": 23,
+      "bonus": 0,
+      "rush": 0,
+      "out": 452,
+      "returned": 0,
+      "ballContacts": 987,
+      "stalled": 0,
+      "roleFlow": {
+        "heso": {
+          "contacts": 53,
+          "balls": 36,
+          "start": 12,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 22,
+          "returned": 0
+        },
+        "jump": {
+          "contacts": 26,
+          "balls": 25,
+          "start": 3,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 19,
+          "returned": 0
+        },
+        "michi": {
+          "contacts": 249,
+          "balls": 145,
+          "start": 15,
+          "normal": 13,
+          "bonus": 0,
+          "rush": 0,
+          "out": 117,
+          "returned": 0
+        },
+        "yori": {
+          "contacts": 176,
+          "balls": 136,
+          "start": 9,
+          "normal": 11,
+          "bonus": 0,
+          "rush": 0,
+          "out": 116,
+          "returned": 0
+        },
+        "spread": {
+          "contacts": 1626,
+          "balls": 458,
+          "start": 23,
+          "normal": 22,
+          "bonus": 0,
+          "rush": 0,
+          "out": 413,
+          "returned": 0
+        },
+        "prize": {
+          "contacts": 267,
+          "balls": 127,
+          "start": 1,
+          "normal": 15,
+          "bonus": 0,
+          "rush": 0,
+          "out": 111,
+          "returned": 0
+        },
+        "windmill": {
+          "contacts": 8453,
+          "balls": 90,
+          "start": 6,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 81,
+          "returned": 0
+        }
+      },
+      "routeFlow": {
+        "left:spread": {
+          "start": 3,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 195,
+          "returned": 0
+        },
+        "left:spread>heso": {
+          "start": 3,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>michi>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 5,
+          "returned": 0
+        },
+        "left:spread>windmill": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 7,
+          "returned": 0
+        },
+        "left:spread>windmill>michi": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 12,
+          "returned": 0
+        },
+        "left:spread>yori>michi>prize": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 5,
+          "returned": 0
+        },
+        "left:yori>spread": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 6,
+          "returned": 0
+        },
+        "left:spread>windmill>yori>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>michi": {
+          "start": 3,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 35,
+          "returned": 0
+        },
+        "left:spread>windmill>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 12,
+          "returned": 0
+        },
+        "left:spread>prize": {
+          "start": 0,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 24,
+          "returned": 0
+        },
+        "left:spread>michi>prize": {
+          "start": 0,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 10,
+          "returned": 0
+        },
+        "left:prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 13,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>michi": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:spread>michi>heso>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:yori>spread>windmill>michi>heso>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori": {
+          "start": 1,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 20,
+          "returned": 0
+        },
+        "left:spread>yori>michi>jump>heso": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>michi>windmill": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:yori>spread>windmill": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori>michi": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 9,
+          "returned": 0
+        },
+        "left:yori>spread>windmill>michi>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>michi>heso>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>michi>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 4,
+          "returned": 0
+        },
+        "left:spread>windmill>michi>prize": {
+          "start": 0,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 4,
+          "returned": 0
+        },
+        "left:yori>spread>michi": {
+          "start": 2,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori>michi>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>windmill>michi": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori>prize": {
+          "start": 0,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 4,
+          "returned": 0
+        },
+        "left:yori>michi": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 6,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>michi>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>michi>heso": {
+          "start": 3,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>windmill": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>spread>prize": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>windmill>yori>michi": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori>windmill": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 13,
+          "returned": 0
+        },
+        "left:spread>heso>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:yori>spread>michi>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 4,
+          "returned": 0
+        },
+        "left:spread>yori>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>heso>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:yori": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 9,
+          "returned": 0
+        },
+        "left:spread>windmill>heso>michi>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>michi>heso>jump": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:spread>jump>prize": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>spread>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:yori>spread>heso>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>spread>michi>prize": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:spread>windmill>heso>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori>michi>heso>jump>prize": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:yori>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>michi>heso>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>spread>windmill>michi": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>yori": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>yori>jump>michi>heso": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:spread>jump": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>michi>windmill>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>heso": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:no-pin": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>michi>heso": {
+          "start": 2,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori>michi>windmill>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>michi>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>windmill>heso>jump>michi": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "other": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        }
+      },
+      "inFlight": 0,
+      "flow": {
+        "left": 2,
+        "right": 0
+      }
+    },
+    {
+      "course": 1,
+      "spawned": 500,
+      "left": 500,
+      "right": 0,
+      "start": 26,
+      "normal": 48,
+      "bonus": 0,
+      "rush": 0,
+      "out": 426,
+      "returned": 0,
+      "ballContacts": 421,
+      "stalled": 0,
+      "roleFlow": {
+        "heso": {
+          "contacts": 78,
+          "balls": 49,
+          "start": 15,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 31,
+          "returned": 0
+        },
+        "jump": {
+          "contacts": 44,
+          "balls": 43,
+          "start": 2,
+          "normal": 5,
+          "bonus": 0,
+          "rush": 0,
+          "out": 36,
+          "returned": 0
+        },
+        "michi": {
+          "contacts": 465,
+          "balls": 221,
+          "start": 21,
+          "normal": 27,
+          "bonus": 0,
+          "rush": 0,
+          "out": 173,
+          "returned": 0
+        },
+        "yori": {
+          "contacts": 288,
+          "balls": 169,
+          "start": 12,
+          "normal": 22,
+          "bonus": 0,
+          "rush": 0,
+          "out": 135,
+          "returned": 0
+        },
+        "spread": {
+          "contacts": 1507,
+          "balls": 355,
+          "start": 19,
+          "normal": 37,
+          "bonus": 0,
+          "rush": 0,
+          "out": 299,
+          "returned": 0
+        },
+        "prize": {
+          "contacts": 271,
+          "balls": 195,
+          "start": 0,
+          "normal": 29,
+          "bonus": 0,
+          "rush": 0,
+          "out": 166,
+          "returned": 0
+        },
+        "windmill": {
+          "contacts": 12792,
+          "balls": 114,
+          "start": 10,
+          "normal": 13,
+          "bonus": 0,
+          "rush": 0,
+          "out": 91,
+          "returned": 0
+        }
+      },
+      "routeFlow": {
+        "left:spread": {
+          "start": 0,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 43,
+          "returned": 0
+        },
+        "left:yori>michi>prize": {
+          "start": 0,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 9,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>prize": {
+          "start": 0,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 5,
+          "returned": 0
+        },
+        "left:spread>prize": {
+          "start": 0,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 68,
+          "returned": 0
+        },
+        "left:spread>yori>michi>prize": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 8,
+          "returned": 0
+        },
+        "left:spread>michi": {
+          "start": 4,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 31,
+          "returned": 0
+        },
+        "left:spread>michi>prize": {
+          "start": 0,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 12,
+          "returned": 0
+        },
+        "left:spread>michi>heso": {
+          "start": 1,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>windmill>michi": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 5,
+          "returned": 0
+        },
+        "left:yori>michi": {
+          "start": 2,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 26,
+          "returned": 0
+        },
+        "left:spread>windmill>yori": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:no-pin": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 57,
+          "returned": 0
+        },
+        "left:michi>yori>windmill>heso>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 14,
+          "returned": 0
+        },
+        "left:spread>yori>michi": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 8,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>michi": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 7,
+          "returned": 0
+        },
+        "left:yori>michi>windmill>prize": {
+          "start": 0,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>yori>michi>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:yori>michi>windmill": {
+          "start": 2,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>heso": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:spread>yori>prize": {
+          "start": 0,
+          "normal": 5,
+          "bonus": 0,
+          "rush": 0,
+          "out": 9,
+          "returned": 0
+        },
+        "left:spread>michi>heso>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>jump": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 5,
+          "returned": 0
+        },
+        "left:yori>michi>jump>heso": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:spread>jump>prize": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>windmill>michi>prize": {
+          "start": 0,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>windmill>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>michi>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:michi>windmill": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 9,
+          "returned": 0
+        },
+        "left:spread>yori>michi>heso": {
+          "start": 2,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:spread>yori>windmill": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 12,
+          "returned": 0
+        },
+        "left:spread>yori": {
+          "start": 0,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 16,
+          "returned": 0
+        },
+        "left:spread>windmill>michi>heso": {
+          "start": 3,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>yori>michi>heso": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:spread>windmill": {
+          "start": 1,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 7,
+          "returned": 0
+        },
+        "left:michi>prize": {
+          "start": 0,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>michi>prize": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:spread>yori>heso": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:spread>michi>jump>prize": {
+          "start": 0,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>windmill>michi>jump>heso>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>heso>jump": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>heso": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>yori>michi>windmill>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>heso>michi>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>heso>michi>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>heso>michi": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:michi>yori>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>yori>michi>prize": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>michi>heso": {
+          "start": 2,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>michi>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>windmill>michi>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>michi>windmill": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>michi>windmill>heso>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:michi>windmill>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>michi>heso>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>michi>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 4,
+          "returned": 0
+        },
+        "left:yori>michi>heso>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:michi>windmill>yori>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>michi>jump>heso": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:spread>heso>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>heso>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>jump>michi>heso>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>yori>michi": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:michi>yori": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "other": {
+          "start": 2,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 11,
+          "returned": 0
+        }
+      },
+      "inFlight": 0,
+      "flow": {
+        "left": 2,
+        "right": 0
+      }
+    },
+    {
+      "course": 2,
+      "spawned": 500,
+      "left": 500,
+      "right": 0,
+      "start": 24,
+      "normal": 40,
+      "bonus": 0,
+      "rush": 0,
+      "out": 436,
+      "returned": 0,
+      "ballContacts": 216,
+      "stalled": 0,
+      "roleFlow": {
+        "heso": {
+          "contacts": 64,
+          "balls": 37,
+          "start": 14,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 23,
+          "returned": 0
+        },
+        "jump": {
+          "contacts": 134,
+          "balls": 43,
+          "start": 1,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 41,
+          "returned": 0
+        },
+        "michi": {
+          "contacts": 298,
+          "balls": 184,
+          "start": 15,
+          "normal": 17,
+          "bonus": 0,
+          "rush": 0,
+          "out": 152,
+          "returned": 0
+        },
+        "yori": {
+          "contacts": 300,
+          "balls": 175,
+          "start": 8,
+          "normal": 17,
+          "bonus": 0,
+          "rush": 0,
+          "out": 150,
+          "returned": 0
+        },
+        "spread": {
+          "contacts": 1729,
+          "balls": 480,
+          "start": 23,
+          "normal": 40,
+          "bonus": 0,
+          "rush": 0,
+          "out": 417,
+          "returned": 0
+        },
+        "prize": {
+          "contacts": 339,
+          "balls": 184,
+          "start": 1,
+          "normal": 25,
+          "bonus": 0,
+          "rush": 0,
+          "out": 158,
+          "returned": 0
+        },
+        "windmill": {
+          "contacts": 29123,
+          "balls": 127,
+          "start": 10,
+          "normal": 12,
+          "bonus": 0,
+          "rush": 0,
+          "out": 105,
+          "returned": 0
+        }
+      },
+      "routeFlow": {
+        "left:yori>spread>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:spread>michi": {
+          "start": 3,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 33,
+          "returned": 0
+        },
+        "left:spread>yori>prize": {
+          "start": 0,
+          "normal": 5,
+          "bonus": 0,
+          "rush": 0,
+          "out": 24,
+          "returned": 0
+        },
+        "left:spread>windmill>prize": {
+          "start": 0,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 5,
+          "returned": 0
+        },
+        "left:spread>prize": {
+          "start": 0,
+          "normal": 8,
+          "bonus": 0,
+          "rush": 0,
+          "out": 38,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>michi>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:yori>michi>heso>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread": {
+          "start": 4,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 109,
+          "returned": 0
+        },
+        "left:spread>windmill>michi>prize": {
+          "start": 0,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 6,
+          "returned": 0
+        },
+        "left:spread>windmill>heso>michi>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori>windmill": {
+          "start": 1,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 12,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>prize": {
+          "start": 0,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 4,
+          "returned": 0
+        },
+        "left:spread>michi>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 6,
+          "returned": 0
+        },
+        "left:spread>michi>prize": {
+          "start": 0,
+          "normal": 3,
+          "bonus": 0,
+          "rush": 0,
+          "out": 24,
+          "returned": 0
+        },
+        "left:spread>yori": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 27,
+          "returned": 0
+        },
+        "left:yori>windmill>michi>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 4,
+          "returned": 0
+        },
+        "left:spread>yori>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>windmill>spread>heso>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>michi": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 8,
+          "returned": 0
+        },
+        "left:spread>yori>michi": {
+          "start": 1,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 10,
+          "returned": 0
+        },
+        "left:yori>spread": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 6,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>michi>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:spread>michi>jump": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>spread>michi>prize": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:yori>spread>windmill>michi>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 4,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>michi>heso": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:spread>windmill>prize>michi": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:spread>heso>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 4,
+          "returned": 0
+        },
+        "left:spread>windmill": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 21,
+          "returned": 0
+        },
+        "left:spread>michi>heso": {
+          "start": 3,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori>michi>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>spread>windmill>michi": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>yori>michi>prize": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 6,
+          "returned": 0
+        },
+        "left:yori>michi": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:yori>michi>windmill": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>heso>michi": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>heso": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:spread>windmill>yori": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:yori>spread>windmill": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>michi>jump>heso": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>michi": {
+          "start": 0,
+          "normal": 2,
+          "bonus": 0,
+          "rush": 0,
+          "out": 6,
+          "returned": 0
+        },
+        "left:spread>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 4,
+          "returned": 0
+        },
+        "left:spread>heso>michi>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori>windmill>michi>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori>michi>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>michi>heso": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>spread>michi": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 4,
+          "returned": 0
+        },
+        "left:spread>michi>windmill>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 5,
+          "returned": 0
+        },
+        "left:spread>heso": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:spread>yori>michi>heso": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:yori>windmill": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>heso>michi>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:spread>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>windmill>heso": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:spread>heso>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>spread>windmill>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>jump>michi": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:yori>spread>michi>heso": {
+          "start": 1,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:yori>spread>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>jump": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "left:spread>prize>heso": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill>yori>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "left:spread>windmill>jump>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "other": {
+          "start": 3,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 10,
+          "returned": 0
+        }
+      },
+      "inFlight": 0,
+      "flow": {
+        "left": 2,
+        "right": 0
+      }
+    }
+  ],
+  "jackpots": [
+    {
+      "course": 0,
+      "fired": 100,
+      "elapsed": 77.692,
+      "finished": true,
+      "spawned": 100,
+      "left": 0,
+      "right": 100,
+      "start": 0,
+      "normal": 0,
+      "bonus": 100,
+      "rush": 0,
+      "out": 0,
+      "returned": 0,
+      "ballContacts": 0,
+      "stalled": 0,
+      "roleFlow": {
+        "heso": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "jump": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "michi": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "yori": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spread": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "prize": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "windmill": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        }
+      },
+      "routeFlow": {
+        "right:no-pin": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 100,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        }
+      },
+      "inFlight": 0,
+      "flow": {
+        "left": 0,
+        "right": 6
+      }
+    },
+    {
+      "course": 1,
+      "fired": 100,
+      "elapsed": 77.692,
+      "finished": true,
+      "spawned": 100,
+      "left": 0,
+      "right": 100,
+      "start": 0,
+      "normal": 0,
+      "bonus": 100,
+      "rush": 0,
+      "out": 0,
+      "returned": 0,
+      "ballContacts": 0,
+      "stalled": 0,
+      "roleFlow": {
+        "heso": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "jump": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "michi": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "yori": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spread": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "prize": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "windmill": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        }
+      },
+      "routeFlow": {
+        "right:no-pin": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 100,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        }
+      },
+      "inFlight": 0,
+      "flow": {
+        "left": 0,
+        "right": 6
+      }
+    },
+    {
+      "course": 2,
+      "fired": 100,
+      "elapsed": 77.692,
+      "finished": true,
+      "spawned": 100,
+      "left": 0,
+      "right": 100,
+      "start": 0,
+      "normal": 0,
+      "bonus": 100,
+      "rush": 0,
+      "out": 0,
+      "returned": 0,
+      "ballContacts": 0,
+      "stalled": 0,
+      "roleFlow": {
+        "heso": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "jump": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "michi": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "yori": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spread": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "prize": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "windmill": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        }
+      },
+      "routeFlow": {
+        "right:no-pin": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 100,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        }
+      },
+      "inFlight": 0,
+      "flow": {
+        "left": 0,
+        "right": 6
+      }
+    }
+  ],
+  "rush": [
+    {
+      "course": 0,
+      "fired": 100,
+      "spins": 100,
+      "elapsed": 94.325,
+      "finished": true,
+      "spawned": 100,
+      "left": 0,
+      "right": 100,
+      "start": 0,
+      "normal": 0,
+      "bonus": 0,
+      "rush": 100,
+      "out": 0,
+      "returned": 0,
+      "ballContacts": 0,
+      "stalled": 0,
+      "roleFlow": {
+        "heso": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "jump": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "michi": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "yori": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spread": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "prize": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "windmill": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        }
+      },
+      "routeFlow": {
+        "right:no-pin": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 100,
+          "out": 0,
+          "returned": 0
+        }
+      },
+      "inFlight": 0,
+      "flow": {
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "course": 1,
+      "fired": 100,
+      "spins": 100,
+      "elapsed": 94.325,
+      "finished": true,
+      "spawned": 100,
+      "left": 0,
+      "right": 100,
+      "start": 0,
+      "normal": 0,
+      "bonus": 0,
+      "rush": 100,
+      "out": 0,
+      "returned": 0,
+      "ballContacts": 0,
+      "stalled": 0,
+      "roleFlow": {
+        "heso": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "jump": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "michi": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "yori": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spread": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "prize": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "windmill": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        }
+      },
+      "routeFlow": {
+        "right:no-pin": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 100,
+          "out": 0,
+          "returned": 0
+        }
+      },
+      "inFlight": 0,
+      "flow": {
+        "left": 0,
+        "right": 0
+      }
+    },
+    {
+      "course": 2,
+      "fired": 100,
+      "spins": 100,
+      "elapsed": 94.325,
+      "finished": true,
+      "spawned": 100,
+      "left": 0,
+      "right": 100,
+      "start": 0,
+      "normal": 0,
+      "bonus": 0,
+      "rush": 100,
+      "out": 0,
+      "returned": 0,
+      "ballContacts": 0,
+      "stalled": 0,
+      "roleFlow": {
+        "heso": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "jump": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "michi": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "yori": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spread": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "prize": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "windmill": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        }
+      },
+      "routeFlow": {
+        "right:no-pin": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 100,
+          "out": 0,
+          "returned": 0
+        }
+      },
+      "inFlight": 0,
+      "flow": {
+        "left": 0,
+        "right": 0
+      }
+    }
+  ],
+  "settings": {
+    "normalPower": 0.57,
+    "bonusPower": 1,
+    "launchTolerance": 0.007,
+    "ballRadius": 4.6,
+    "pinRadius": 2.1,
+    "gravity": 690
+  },
+  "limitations": [
+    "2D sphere cross-sections; no needle bending or depth simulation",
+    "Sample entry rates are prototype measurements, not real-machine odds",
+    "Manual firing can waste balls while the attacker is closed"
+  ]
+}

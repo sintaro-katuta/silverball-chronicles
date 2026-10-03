@@ -1,0 +1,159 @@
+{
+  "before": {
+    "src/physics.js": "a6a1d8793b7a7fecfd2b00daf88061bd57c953887498eeeb794faa2e46a2fb21",
+    "src/pixi/lcd-layout.js": "56758d55103bdb1e85b64d1ff0df876c8a501df1a2a8450622e31a6d7877a094",
+    "src/pixi/source-layout.js": "3455b09ecf8042f49d596d0898731e826407ad9e145a76f51f84faca2716deb7",
+    "src/pixi/board-rails.js": "ab8f64ea6274b6d84e7dc2d4a546ec09282ca5a3b056f0d58341a1d1a56abd24"
+  },
+  "after": {
+    "src/physics.js": "a6a1d8793b7a7fecfd2b00daf88061bd57c953887498eeeb794faa2e46a2fb21",
+    "src/pixi/lcd-layout.js": "56758d55103bdb1e85b64d1ff0df876c8a501df1a2a8450622e31a6d7877a094",
+    "src/pixi/source-layout.js": "3455b09ecf8042f49d596d0898731e826407ad9e145a76f51f84faca2716deb7",
+    "src/pixi/board-rails.js": "ab8f64ea6274b6d84e7dc2d4a546ec09282ca5a3b056f0d58341a1d1a56abd24"
+  },
+  "results": [
+    {
+      "warmupTicks": 21,
+      "power": 0.24,
+      "spawned": 497,
+      "counts": {
+        "fuzu": 0,
+        "normal": 3,
+        "start": 3,
+        "rush": 0,
+        "bonus": 0,
+        "out": 491,
+        "returned": 0
+      },
+      "remain": 0,
+      "leftRoutes": {
+        "roadContact": 55,
+        "nearHeso": 26,
+        "admitted": 3,
+        "nearAdmitted": 3,
+        "deflectedAtHeso": 4,
+        "nearMiss": 19,
+        "earlySpill": 29,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 19
+        },
+        "outcomes": {
+          "out": 491,
+          "start": 3,
+          "normal": 3
+        },
+        "tracked": 497,
+        "byPower": {
+          "0.24": {
+            "roadContact": 55,
+            "nearHeso": 26,
+            "admitted": 3,
+            "nearAdmitted": 3,
+            "deflectedAtHeso": 4,
+            "nearMiss": 19,
+            "earlySpill": 29,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 19
+            },
+            "outcomes": {
+              "out": 491,
+              "start": 3,
+              "normal": 3
+            },
+            "tracked": 497
+          }
+        }
+      },
+      "entries": [
+        {
+          "id": 35,
+          "time": 25.824999999999175,
+          "shotAge": 5.015476190476334
+        },
+        {
+          "id": 206,
+          "time": 127.3250000000474,
+          "shotAge": 3.701041666666611
+        },
+        {
+          "id": 469,
+          "time": 293.93333333323034,
+          "shotAge": 11.521428571431251
+        }
+      ]
+    },
+    {
+      "warmupTicks": 42,
+      "power": 0.24,
+      "spawned": 497,
+      "counts": {
+        "fuzu": 0,
+        "normal": 8,
+        "start": 2,
+        "rush": 0,
+        "bonus": 0,
+        "out": 487,
+        "returned": 0
+      },
+      "remain": 0,
+      "leftRoutes": {
+        "roadContact": 62,
+        "nearHeso": 29,
+        "admitted": 2,
+        "nearAdmitted": 2,
+        "deflectedAtHeso": 6,
+        "nearMiss": 21,
+        "earlySpill": 33,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 21
+        },
+        "outcomes": {
+          "out": 487,
+          "normal": 8,
+          "start": 2
+        },
+        "tracked": 497,
+        "byPower": {
+          "0.24": {
+            "roadContact": 62,
+            "nearHeso": 29,
+            "admitted": 2,
+            "nearAdmitted": 2,
+            "deflectedAtHeso": 6,
+            "nearMiss": 21,
+            "earlySpill": 33,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 21
+            },
+            "outcomes": {
+              "out": 487,
+              "normal": 8,
+              "start": 2
+            },
+            "tracked": 497
+          }
+        }
+      },
+      "entries": [
+        {
+          "id": 247,
+          "time": 153.7833333333578,
+          "shotAge": 4.998809523809661
+        },
+        {
+          "id": 453,
+          "time": 277.63333333324516,
+          "shotAge": 4.224074074074083
+        }
+      ]
+    }
+  ]
+}

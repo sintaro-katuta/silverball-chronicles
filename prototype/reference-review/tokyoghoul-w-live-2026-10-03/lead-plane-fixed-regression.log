@@ -1,0 +1,29 @@
+✔ launcher holds new shots for an occupied muzzle or a returning ball (7.809125ms)
+✔ single-file launcher drains after sustained maximum-rate and weak-shot firing (18643.719416ms)
+✔ stage 6 normal firing keeps its full cadence without an upper-exit pileup (27017.691416ms)
+✔ normal: balls stay outside LCD, follow side lanes and drain (9697.55875ms)
+✔ rush: balls stay outside LCD, follow side lanes and drain (4510.666458ms)
+✔ bonus: balls stay outside LCD, follow side lanes and drain (3141.949041ms)
+✔ both modes launch at one origin no faster than 0.6 seconds (1937.913208ms)
+✔ manual power changes only future normal shots (136.417541ms)
+✔ left road has no bridging collision segments and an actual pin rebounds a falling ball (32.2975ms)
+✔ right road stays five separate pins without an invisible supporting wall (10.463875ms)
+{"shots":29,"guideContact":17,"downstream":15}
+✔ reference inlet guides share their visible coordinates and feed falling left shots downstream (2102.100417ms)
+✔ near arrivals reconcile and cohorts retain launch power after switching (4788.804417ms)
+✔ traced right channel guides physical balls and drains at 0.6s (1649.2565ms)
+✔ traced right channel guides physical balls and drains at 0.05s (22802.627375ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.2 (2868.645334ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.24 (1975.501834ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.28 (3484.589667ms)
+✔ production W bridge accepts physical fuzu/electric/V/attacker crossings and counts 3000 (237.76425ms)
+✔ natural right launches traverse fuzu, two electric admissions, two V entries and 3000 (17071.312208ms)
+✔ dense arrivals cannot be consumed beyond the ten-count closing boundary (128.868458ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 45762.076875

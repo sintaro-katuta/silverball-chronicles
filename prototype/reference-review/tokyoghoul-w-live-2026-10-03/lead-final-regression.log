@@ -1,0 +1,203 @@
+✔ launcher holds new shots for an occupied muzzle or a returning ball (6.709625ms)
+✔ single-file launcher drains after sustained maximum-rate and weak-shot firing (14105.487208ms)
+✔ stage 6 normal firing keeps its full cadence without an upper-exit pileup (65531.648084ms)
+✔ normal: balls stay outside LCD, follow side lanes and drain (11873.005625ms)
+✖ rush: balls stay outside LCD, follow side lanes and drain (22570.831ms)
+✖ bonus: balls stay outside LCD, follow side lanes and drain (9461.721041ms)
+✔ both modes launch at one origin no faster than 0.6 seconds (10910.391125ms)
+✔ manual power changes only future normal shots (353.779291ms)
+✔ left road has no bridging collision segments and an actual pin rebounds a falling ball (36.012875ms)
+✔ right road stays five separate pins without an invisible supporting wall (6.585333ms)
+✖ reference inlet guides share their visible coordinates and feed falling left shots downstream (1937.734667ms)
+✖ near arrivals reconcile and cohorts retain launch power after switching (7168.140542ms)
+✖ traced right channel guides physical balls and drains at 0.6s (2782.392375ms)
+✖ traced right channel guides physical balls and drains at 0.05s (38639.039917ms)
+✖ lower resin rim leaves normal pocket discharge clear at power 0.2 (10860.042917ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.24 (8589.183042ms)
+✖ lower resin rim leaves normal pocket discharge clear at power 0.28 (24233.7455ms)
+✔ production W bridge accepts physical fuzu/electric/V/attacker crossings and counts 3000 (174.616667ms)
+✖ natural right launches traverse fuzu, two electric admissions, two V entries and 3000 (152697.007959ms)
+✔ dense arrivals cannot be consumed beyond the ten-count closing boundary (116.658834ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 11
+ℹ fail 9
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 153106.450542
+
+✖ failing tests:
+
+test at tests/lcd-flow.test.js:5:45
+✖ rush: balls stay outside LCD, follow side lanes and drain (22570.831ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(flow.counts[mode==='normal'?'start':mode]>0)
+  
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/lcd-flow.test.js:10:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/lcd-flow.test.js:5:45
+✖ bonus: balls stay outside LCD, follow side lanes and drain (9461.721041ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/lcd-flow.test.js:13:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/left-inlet.test.js:4:1
+✖ reference inlet guides share their visible coordinates and feed falling left shots downstream (1937.734667ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(touched.size>p.metrics.spawned/2)
+  
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/left-inlet.test.js:12:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests/left-route-metrics.test.js:4:1
+✖ near arrivals reconcile and cohorts retain launch power after switching (7168.140542ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/left-route-metrics.test.js:8:42)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/right-resin-route.test.js:4:32
+✖ traced right channel guides physical balls and drains at 0.6s (2782.392375ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/right-resin-route.test.js:13:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/right-resin-route.test.js:4:32
+✖ traced right channel guides physical balls and drains at 0.05s (38639.039917ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/right-resin-route.test.js:13:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/right-resin-route.test.js:20:40
+✖ lower resin rim leaves normal pocket discharge clear at power 0.2 (10860.042917ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/right-resin-route.test.js:24:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/right-resin-route.test.js:20:40
+✖ lower resin rim leaves normal pocket discharge clear at power 0.28 (24233.7455ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/right-resin-route.test.js:24:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/w-session-flow.test.js:19:1
+✖ natural right launches traverse fuzu, two electric admissions, two V entries and 3000 (152697.007959ms)
+  TypeError: Cannot read properties of null (reading 'payout')
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/w-session-flow.test.js:25:24)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3)

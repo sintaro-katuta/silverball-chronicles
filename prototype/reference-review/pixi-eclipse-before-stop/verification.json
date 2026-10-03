@@ -1,0 +1,757 @@
+{
+  "normalWin": 15.187900000095368,
+  "reach": 74.92180000019073,
+  "win": 77.40409999990463,
+  "snapshots": [
+    {
+      "spin": {
+        "lifecycle": true,
+        "mode": "right-closed",
+        "rush": {
+          "remaining": 95,
+          "chain": 2,
+          "total": 900,
+          "startedAt": 67.07499999999945,
+          "consumed": 5
+        },
+        "lastRush": null,
+        "round": {
+          "phase": "celebration",
+          "round": 1,
+          "count": 0,
+          "limit": 10,
+          "payout": 0,
+          "maxPayout": 1500,
+          "remainingSeconds": 15,
+          "history": []
+        },
+        "win": {
+          "time": 0.058333333333379755,
+          "fromRush": true
+        },
+        "reach": null,
+        "time": 77.45833333334105,
+        "holds": 5,
+        "active": false,
+        "draws": 7,
+        "stopTimer": 0,
+        "reels": {
+          "spinning": false,
+          "numbers": [
+            7,
+            7,
+            7
+          ],
+          "stopped": [
+            true,
+            true,
+            true
+          ]
+        },
+        "accepted": 15,
+        "entries": 15,
+        "events": [
+          {
+            "time": 5.741666666666742,
+            "ballId": 7,
+            "accepted": 1,
+            "hold": 0,
+            "drawId": 1
+          },
+          {
+            "time": 8.15833333333351,
+            "ballId": 9,
+            "accepted": 1,
+            "hold": 1,
+            "drawId": 2
+          },
+          {
+            "time": 13.333333333333217,
+            "ballId": 17,
+            "accepted": 1,
+            "hold": 1,
+            "drawId": 3
+          },
+          {
+            "time": 15.941666666666402,
+            "ballId": 24,
+            "accepted": 1,
+            "hold": 2,
+            "drawId": 4
+          },
+          {
+            "time": 22.13333333333272,
+            "ballId": 33,
+            "accepted": 1,
+            "hold": 3,
+            "drawId": 5
+          },
+          {
+            "time": 70.65833333333563,
+            "ballId": 114,
+            "accepted": 1,
+            "mode": "rush",
+            "hold": 0,
+            "drawId": 6
+          },
+          {
+            "time": 70.89166666666915,
+            "ballId": 115,
+            "accepted": 1,
+            "mode": "rush",
+            "hold": 1,
+            "drawId": 7
+          },
+          {
+            "time": 71.55000000000301,
+            "ballId": 116,
+            "accepted": 1,
+            "mode": "rush",
+            "hold": 2,
+            "drawId": 8
+          },
+          {
+            "time": 72.00000000000337,
+            "ballId": 117,
+            "accepted": 1,
+            "mode": "rush",
+            "hold": 2,
+            "drawId": 9
+          },
+          {
+            "time": 72.47500000000375,
+            "ballId": 118,
+            "accepted": 1,
+            "mode": "rush",
+            "hold": 3,
+            "drawId": 10
+          },
+          {
+            "time": 73.06666666667088,
+            "ballId": 119,
+            "accepted": 1,
+            "mode": "rush",
+            "hold": 3,
+            "drawId": 11
+          },
+          {
+            "time": 74.03333333333832,
+            "ballId": 120,
+            "accepted": 1,
+            "mode": "rush",
+            "hold": 3,
+            "drawId": 12
+          },
+          {
+            "time": 74.19166666667178,
+            "ballId": 121,
+            "accepted": 1,
+            "mode": "rush",
+            "hold": 4,
+            "drawId": 13
+          },
+          {
+            "time": 74.5916666666721,
+            "ballId": 122,
+            "accepted": 1,
+            "mode": "rush",
+            "hold": 4,
+            "drawId": 14
+          },
+          {
+            "time": 75.19166666667257,
+            "ballId": 123,
+            "accepted": 1,
+            "mode": "rush",
+            "hold": 5,
+            "drawId": 15
+          }
+        ]
+      },
+      "lcd": {
+        "x": 108,
+        "y": 236,
+        "width": 210,
+        "height": 140
+      },
+      "gate": {
+        "count": 91,
+        "lastPass": 77.23666666661266,
+        "lit": false
+      },
+      "leftRoutes": {
+        "roadContact": 35,
+        "nearHeso": 16,
+        "admitted": 5,
+        "nearAdmitted": 5,
+        "deflectedAtHeso": 4,
+        "nearMiss": 7,
+        "earlySpill": 19,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 7
+        },
+        "outcomes": {
+          "out": 47,
+          "start": 5,
+          "normal": 1,
+          "bonus": 60,
+          "rush": 10
+        },
+        "tracked": 130,
+        "byPower": {
+          "0.24": {
+            "roadContact": 1,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 1,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "out": 1
+            },
+            "tracked": 1
+          },
+          "0.23": {
+            "roadContact": 33,
+            "nearHeso": 16,
+            "admitted": 5,
+            "nearAdmitted": 5,
+            "deflectedAtHeso": 4,
+            "nearMiss": 7,
+            "earlySpill": 17,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 7
+            },
+            "outcomes": {
+              "out": 28,
+              "start": 5,
+              "normal": 1
+            },
+            "tracked": 34
+          },
+          "0.6": {
+            "roadContact": 1,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 1,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "bonus": 60,
+              "out": 18,
+              "rush": 10
+            },
+            "tracked": 95
+          }
+        }
+      },
+      "time": 77.45833333334105,
+      "paused": false,
+      "mode": "rush",
+      "counts": {
+        "normal": 1,
+        "start": 5,
+        "rush": 10,
+        "bonus": 60,
+        "out": 47,
+        "returned": 0
+      },
+      "spawned": 130,
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 480,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 357.25,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5,
+          "captureTray": {
+            "left": 335.125,
+            "right": 373.875,
+            "y": 600.5,
+            "radius": 1.4
+          }
+        },
+        {
+          "x": 359.5,
+          "y": 493,
+          "w": 20,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "guide": {
+        "a": {
+          "x": 359,
+          "y": 310
+        },
+        "b": {
+          "x": 359,
+          "y": 392
+        },
+        "r": 1.3,
+        "material": "resin",
+        "role": "right-inner-lower",
+        "restitution": 0.04
+      },
+      "attacker": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "tulip": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "routeBalls": [],
+      "inFlight": 7,
+      "videoTime": 77.40409999990463
+    }
+  ],
+  "final": {
+    "spin": {
+      "lifecycle": true,
+      "mode": "right-closed",
+      "rush": {
+        "remaining": 95,
+        "chain": 2,
+        "total": 975,
+        "startedAt": 67.07499999999945,
+        "consumed": 5
+      },
+      "lastRush": null,
+      "round": {
+        "phase": "open",
+        "round": 1,
+        "count": 5,
+        "limit": 10,
+        "payout": 75,
+        "maxPayout": 1500,
+        "remainingSeconds": 12.300000000000008,
+        "history": [
+          {
+            "phase": "guide",
+            "time": 79.80000000000958,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "opening",
+            "time": 80.15000000000985,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "open",
+            "time": 80.80000000001037,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "admission",
+            "time": 80.89166666667711,
+            "round": 1,
+            "count": 1,
+            "ballId": 131,
+            "payout": 15
+          },
+          {
+            "phase": "admission",
+            "time": 81.15833333334399,
+            "round": 1,
+            "count": 2,
+            "ballId": 132,
+            "payout": 30
+          },
+          {
+            "phase": "admission",
+            "time": 82.03333333334469,
+            "round": 1,
+            "count": 3,
+            "ballId": 133,
+            "payout": 45
+          },
+          {
+            "phase": "admission",
+            "time": 82.63333333334516,
+            "round": 1,
+            "count": 4,
+            "ballId": 134,
+            "payout": 60
+          },
+          {
+            "phase": "admission",
+            "time": 83.1416666666789,
+            "round": 1,
+            "count": 5,
+            "ballId": 135,
+            "payout": 75
+          }
+        ]
+      },
+      "win": {
+        "time": 6.100000000004854,
+        "fromRush": true
+      },
+      "reach": null,
+      "time": 83.50000000001252,
+      "holds": 5,
+      "active": false,
+      "draws": 7,
+      "stopTimer": 0,
+      "reels": {
+        "spinning": false,
+        "numbers": [
+          7,
+          7,
+          7
+        ],
+        "stopped": [
+          true,
+          true,
+          true
+        ]
+      },
+      "accepted": 15,
+      "entries": 15,
+      "events": [
+        {
+          "time": 5.741666666666742,
+          "ballId": 7,
+          "accepted": 1,
+          "hold": 0,
+          "drawId": 1
+        },
+        {
+          "time": 8.15833333333351,
+          "ballId": 9,
+          "accepted": 1,
+          "hold": 1,
+          "drawId": 2
+        },
+        {
+          "time": 13.333333333333217,
+          "ballId": 17,
+          "accepted": 1,
+          "hold": 1,
+          "drawId": 3
+        },
+        {
+          "time": 15.941666666666402,
+          "ballId": 24,
+          "accepted": 1,
+          "hold": 2,
+          "drawId": 4
+        },
+        {
+          "time": 22.13333333333272,
+          "ballId": 33,
+          "accepted": 1,
+          "hold": 3,
+          "drawId": 5
+        },
+        {
+          "time": 70.65833333333563,
+          "ballId": 114,
+          "accepted": 1,
+          "mode": "rush",
+          "hold": 0,
+          "drawId": 6
+        },
+        {
+          "time": 70.89166666666915,
+          "ballId": 115,
+          "accepted": 1,
+          "mode": "rush",
+          "hold": 1,
+          "drawId": 7
+        },
+        {
+          "time": 71.55000000000301,
+          "ballId": 116,
+          "accepted": 1,
+          "mode": "rush",
+          "hold": 2,
+          "drawId": 8
+        },
+        {
+          "time": 72.00000000000337,
+          "ballId": 117,
+          "accepted": 1,
+          "mode": "rush",
+          "hold": 2,
+          "drawId": 9
+        },
+        {
+          "time": 72.47500000000375,
+          "ballId": 118,
+          "accepted": 1,
+          "mode": "rush",
+          "hold": 3,
+          "drawId": 10
+        },
+        {
+          "time": 73.06666666667088,
+          "ballId": 119,
+          "accepted": 1,
+          "mode": "rush",
+          "hold": 3,
+          "drawId": 11
+        },
+        {
+          "time": 74.03333333333832,
+          "ballId": 120,
+          "accepted": 1,
+          "mode": "rush",
+          "hold": 3,
+          "drawId": 12
+        },
+        {
+          "time": 74.19166666667178,
+          "ballId": 121,
+          "accepted": 1,
+          "mode": "rush",
+          "hold": 4,
+          "drawId": 13
+        },
+        {
+          "time": 74.5916666666721,
+          "ballId": 122,
+          "accepted": 1,
+          "mode": "rush",
+          "hold": 4,
+          "drawId": 14
+        },
+        {
+          "time": 75.19166666667257,
+          "ballId": 123,
+          "accepted": 1,
+          "mode": "rush",
+          "hold": 5,
+          "drawId": 15
+        }
+      ]
+    },
+    "lcd": {
+      "x": 108,
+      "y": 236,
+      "width": 210,
+      "height": 140
+    },
+    "gate": {
+      "count": 101,
+      "lastPass": 83.21999999994055,
+      "lit": false
+    },
+    "leftRoutes": {
+      "roadContact": 35,
+      "nearHeso": 16,
+      "admitted": 5,
+      "nearAdmitted": 5,
+      "deflectedAtHeso": 4,
+      "nearMiss": 7,
+      "earlySpill": 19,
+      "pending": 0,
+      "nearPending": 0,
+      "nearMissOutcomes": {
+        "out": 7
+      },
+      "outcomes": {
+        "out": 54,
+        "start": 5,
+        "normal": 1,
+        "bonus": 65,
+        "rush": 10
+      },
+      "tracked": 140,
+      "byPower": {
+        "0.24": {
+          "roadContact": 1,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 1,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {
+            "out": 1
+          },
+          "tracked": 1
+        },
+        "0.23": {
+          "roadContact": 33,
+          "nearHeso": 16,
+          "admitted": 5,
+          "nearAdmitted": 5,
+          "deflectedAtHeso": 4,
+          "nearMiss": 7,
+          "earlySpill": 17,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {
+            "out": 7
+          },
+          "outcomes": {
+            "out": 28,
+            "start": 5,
+            "normal": 1
+          },
+          "tracked": 34
+        },
+        "0.6": {
+          "roadContact": 1,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 1,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {
+            "bonus": 65,
+            "out": 25,
+            "rush": 10
+          },
+          "tracked": 105
+        }
+      }
+    },
+    "time": 83.50000000001252,
+    "paused": false,
+    "mode": "bonus",
+    "counts": {
+      "normal": 1,
+      "start": 5,
+      "rush": 10,
+      "bonus": 65,
+      "out": 54,
+      "returned": 0
+    },
+    "spawned": 140,
+    "pockets": [
+      {
+        "x": 67,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 0
+      },
+      {
+        "x": 139,
+        "y": 617,
+        "w": 18,
+        "kind": "normal",
+        "id": 1
+      },
+      {
+        "x": 268,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 2
+      },
+      {
+        "x": 210,
+        "y": 480,
+        "w": 20,
+        "kind": "start",
+        "id": 4
+      },
+      {
+        "x": 357.25,
+        "y": 581,
+        "w": 60,
+        "kind": "bonus",
+        "id": 5,
+        "captureTray": {
+          "left": 335.125,
+          "right": 373.875,
+          "y": 600.5,
+          "radius": 1.4
+        }
+      },
+      {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      }
+    ],
+    "guide": {
+      "a": {
+        "x": 359,
+        "y": 310
+      },
+      "b": {
+        "x": 359,
+        "y": 392
+      },
+      "r": 1.3,
+      "material": "resin",
+      "role": "right-inner-lower",
+      "restitution": 0.04
+    },
+    "attacker": {
+      "progress": 1,
+      "target": 1,
+      "moving": false
+    },
+    "tulip": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "routeBalls": [],
+    "inFlight": 5
+  },
+  "errors": []
+}

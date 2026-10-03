@@ -1,0 +1,113 @@
+{
+  "method": "Independent fresh record arithmetic, fixture script read, final source13/current match, 3 mp4 hashes. PM does not claim continuous video replay.",
+  "videos": [
+    {
+      "video": "left-mobile.mp4",
+      "sha256": "ad455bc9041eb59634e5e82e9590dd83c5040ea054d94947daf853f984fd4452",
+      "recordSha256": "ad68e3e93773ecf65ef3c81882755bd8058b26dbcf212093b9e8ba50f714acc9",
+      "fixture": "Natural .6s left launch at default .24 for120sec, then30sec drain. Results miss, no ball placement.",
+      "samples": 75,
+      "seconds": 150.495,
+      "spawned": 201,
+      "counts": {
+        "fuzu": 0,
+        "normal": 3,
+        "start": 4,
+        "rush": 0,
+        "bonus": 0,
+        "out": 194,
+        "returned": 0
+      },
+      "countSum": 201,
+      "inFlight": 0,
+      "accounting": {
+        "basePrize": 19,
+        "gamePrize": 0,
+        "payout": 19,
+        "spent": 201,
+        "returned": 0,
+        "supply": 0,
+        "debugAdjustment": 0,
+        "extraBalls": 0,
+        "machineNet": -182,
+        "playNet": -182,
+        "balance": -182,
+        "reconciled": true
+      },
+      "lastBonusPayout": null,
+      "errors": []
+    },
+    {
+      "video": "dense-mobile.mp4",
+      "sha256": "5fe0ffd0a965d59f8b58149fd4b78043a83bd191102d208070e762703ee1ea9f",
+      "recordSha256": "d6e730b91b2a73dc708db576fd8f27177afbdc65fbd9d5b02a5863ec03d48068",
+      "fixture": "Same production renderer/session, .05s requested launch cadence; all results miss. Natural launch for20sec then drain30sec; no physical ball placement.",
+      "samples": 25,
+      "seconds": 50.313,
+      "spawned": 312,
+      "counts": {
+        "fuzu": 0,
+        "normal": 5,
+        "start": 17,
+        "rush": 0,
+        "bonus": 0,
+        "out": 290,
+        "returned": 0
+      },
+      "countSum": 312,
+      "inFlight": 0,
+      "accounting": {
+        "basePrize": 42,
+        "gamePrize": 0,
+        "payout": 42,
+        "spent": 312,
+        "returned": 0,
+        "supply": 0,
+        "debugAdjustment": 0,
+        "extraBalls": 0,
+        "machineNet": -270,
+        "playNet": -270,
+        "balance": -270,
+        "reconciled": true
+      },
+      "lastBonusPayout": null,
+      "errors": []
+    },
+    {
+      "video": "rush-mobile.mp4",
+      "sha256": "46a2fec5d059e6560d3cfc79ed4f2507e1fe235a6e8824274afe31c30315d619",
+      "recordSha256": "654d67038fd95bd00d008223ad181fac5098da3fafa7df2758e236c78e36f73d",
+      "fixture": "Initial RUSH and first result fixed; all shots natural, no ball placement.",
+      "samples": 83,
+      "seconds": 166.741,
+      "spawned": 278,
+      "counts": {
+        "fuzu": 63,
+        "normal": 0,
+        "start": 0,
+        "rush": 2,
+        "bonus": 200,
+        "out": 9,
+        "returned": 0
+      },
+      "countSum": 274,
+      "inFlight": 4,
+      "accounting": {
+        "basePrize": 3065,
+        "gamePrize": 0,
+        "payout": 3065,
+        "spent": 278,
+        "returned": 0,
+        "supply": 0,
+        "debugAdjustment": 0,
+        "extraBalls": 0,
+        "machineNet": 2787,
+        "playNet": 2787,
+        "balance": 2787,
+        "reconciled": true
+      },
+      "lastBonusPayout": 3000,
+      "errors": []
+    }
+  ]
+}

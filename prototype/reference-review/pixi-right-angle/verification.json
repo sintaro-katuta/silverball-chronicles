@@ -1,0 +1,689 @@
+{
+  "states": [
+    {
+      "lcd": {
+        "x": 108,
+        "y": 236,
+        "width": 210,
+        "height": 140
+      },
+      "gate": {
+        "count": 15,
+        "lastPass": 10.033333333334088,
+        "lit": false
+      },
+      "leftRoutes": {
+        "roadContact": 0,
+        "nearHeso": 0,
+        "admitted": 0,
+        "nearAdmitted": 0,
+        "deflectedAtHeso": 0,
+        "nearMiss": 0,
+        "earlySpill": 0,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {},
+        "outcomes": {
+          "out": 12
+        },
+        "tracked": 18,
+        "byPower": {
+          "0.6": {
+            "roadContact": 0,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 0,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "out": 12
+            },
+            "tracked": 18
+          }
+        }
+      },
+      "time": 10.57500000000004,
+      "paused": false,
+      "mode": "right-closed",
+      "counts": {
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 12,
+        "returned": 0
+      },
+      "spawned": 18,
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 480,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 357.25,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5,
+          "captureTray": {
+            "left": 335.125,
+            "right": 373.875,
+            "y": 600.5,
+            "radius": 1.4
+          }
+        },
+        {
+          "x": 359.5,
+          "y": 493,
+          "w": 20,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "guide": {
+        "a": {
+          "x": 336,
+          "y": 468
+        },
+        "b": {
+          "x": 330,
+          "y": 558
+        },
+        "r": 1.3,
+        "material": "resin",
+        "role": "right-inner-lower",
+        "restitution": 0.08
+      },
+      "attacker": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "tulip": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "inFlight": 6
+    },
+    {
+      "lcd": {
+        "x": 108,
+        "y": 236,
+        "width": 210,
+        "height": 140
+      },
+      "gate": {
+        "count": 29,
+        "lastPass": 18.4433333333328,
+        "lit": false
+      },
+      "leftRoutes": {
+        "roadContact": 0,
+        "nearHeso": 0,
+        "admitted": 0,
+        "nearAdmitted": 0,
+        "deflectedAtHeso": 0,
+        "nearMiss": 0,
+        "earlySpill": 0,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {},
+        "outcomes": {
+          "out": 14,
+          "rush": 13
+        },
+        "tracked": 32,
+        "byPower": {
+          "0.6": {
+            "roadContact": 0,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 0,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "out": 14,
+              "rush": 13
+            },
+            "tracked": 32
+          }
+        }
+      },
+      "time": 18.67499999999958,
+      "paused": false,
+      "mode": "rush",
+      "counts": {
+        "normal": 0,
+        "start": 0,
+        "rush": 13,
+        "bonus": 0,
+        "out": 14,
+        "returned": 0
+      },
+      "spawned": 32,
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 480,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 357.25,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5,
+          "captureTray": {
+            "left": 335.125,
+            "right": 373.875,
+            "y": 600.5,
+            "radius": 1.4
+          }
+        },
+        {
+          "x": 359.5,
+          "y": 493,
+          "w": 20,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "guide": {
+        "a": {
+          "x": 336,
+          "y": 468
+        },
+        "b": {
+          "x": 330,
+          "y": 558
+        },
+        "r": 1.3,
+        "material": "resin",
+        "role": "right-inner-lower",
+        "restitution": 0.08
+      },
+      "attacker": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "tulip": {
+        "progress": 1,
+        "target": 1,
+        "moving": false
+      },
+      "inFlight": 5
+    },
+    {
+      "lcd": {
+        "x": 108,
+        "y": 236,
+        "width": 210,
+        "height": 140
+      },
+      "gate": {
+        "count": 42,
+        "lastPass": 26.18999999999242,
+        "lit": false
+      },
+      "leftRoutes": {
+        "roadContact": 0,
+        "nearHeso": 0,
+        "admitted": 0,
+        "nearAdmitted": 0,
+        "deflectedAtHeso": 0,
+        "nearMiss": 0,
+        "earlySpill": 0,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {},
+        "outcomes": {
+          "out": 15,
+          "rush": 13,
+          "bonus": 12
+        },
+        "tracked": 45,
+        "byPower": {
+          "0.6": {
+            "roadContact": 0,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 0,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "out": 15,
+              "rush": 13,
+              "bonus": 12
+            },
+            "tracked": 45
+          }
+        }
+      },
+      "time": 26.77499999999912,
+      "paused": false,
+      "mode": "bonus",
+      "counts": {
+        "normal": 0,
+        "start": 0,
+        "rush": 13,
+        "bonus": 12,
+        "out": 15,
+        "returned": 0
+      },
+      "spawned": 45,
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 480,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 357.25,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5,
+          "captureTray": {
+            "left": 335.125,
+            "right": 373.875,
+            "y": 600.5,
+            "radius": 1.4
+          }
+        },
+        {
+          "x": 359.5,
+          "y": 493,
+          "w": 20,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "guide": {
+        "a": {
+          "x": 336,
+          "y": 468
+        },
+        "b": {
+          "x": 330,
+          "y": 558
+        },
+        "r": 1.3,
+        "material": "resin",
+        "role": "right-inner-lower",
+        "restitution": 0.08
+      },
+      "attacker": {
+        "progress": 1,
+        "target": 1,
+        "moving": false
+      },
+      "tulip": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "inFlight": 5
+    },
+    {
+      "lcd": {
+        "x": 108,
+        "y": 236,
+        "width": 210,
+        "height": 140
+      },
+      "gate": {
+        "count": 56,
+        "lastPass": 34.59166666665145,
+        "lit": false
+      },
+      "leftRoutes": {
+        "roadContact": 0,
+        "nearHeso": 0,
+        "admitted": 0,
+        "nearAdmitted": 0,
+        "deflectedAtHeso": 0,
+        "nearMiss": 0,
+        "earlySpill": 0,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {},
+        "outcomes": {
+          "out": 27,
+          "rush": 13,
+          "bonus": 12
+        },
+        "tracked": 59,
+        "byPower": {
+          "0.6": {
+            "roadContact": 0,
+            "nearHeso": 0,
+            "admitted": 0,
+            "nearAdmitted": 0,
+            "deflectedAtHeso": 0,
+            "nearMiss": 0,
+            "earlySpill": 0,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {},
+            "outcomes": {
+              "out": 27,
+              "rush": 13,
+              "bonus": 12
+            },
+            "tracked": 59
+          }
+        }
+      },
+      "time": 34.874999999998664,
+      "paused": false,
+      "mode": "right-closed",
+      "counts": {
+        "normal": 0,
+        "start": 0,
+        "rush": 13,
+        "bonus": 12,
+        "out": 27,
+        "returned": 0
+      },
+      "spawned": 59,
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 480,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 357.25,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5,
+          "captureTray": {
+            "left": 335.125,
+            "right": 373.875,
+            "y": 600.5,
+            "radius": 1.4
+          }
+        },
+        {
+          "x": 359.5,
+          "y": 493,
+          "w": 20,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "guide": {
+        "a": {
+          "x": 336,
+          "y": 468
+        },
+        "b": {
+          "x": 330,
+          "y": 558
+        },
+        "r": 1.3,
+        "material": "resin",
+        "role": "right-inner-lower",
+        "restitution": 0.08
+      },
+      "attacker": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "tulip": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "inFlight": 7
+    }
+  ],
+  "final": {
+    "lcd": {
+      "x": 108,
+      "y": 236,
+      "width": 210,
+      "height": 140
+    },
+    "gate": {
+      "count": 59,
+      "lastPass": 36.40333333331647,
+      "lit": false
+    },
+    "leftRoutes": {
+      "roadContact": 0,
+      "nearHeso": 0,
+      "admitted": 0,
+      "nearAdmitted": 0,
+      "deflectedAtHeso": 0,
+      "nearMiss": 0,
+      "earlySpill": 0,
+      "pending": 0,
+      "nearPending": 0,
+      "nearMissOutcomes": {},
+      "outcomes": {
+        "out": 34,
+        "rush": 13,
+        "bonus": 12
+      },
+      "tracked": 59,
+      "byPower": {
+        "0.6": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {
+            "out": 34,
+            "rush": 13,
+            "bonus": 12
+          },
+          "tracked": 59
+        }
+      }
+    },
+    "time": 42.95833333333154,
+    "paused": true,
+    "mode": "right-closed",
+    "counts": {
+      "normal": 0,
+      "start": 0,
+      "rush": 13,
+      "bonus": 12,
+      "out": 34,
+      "returned": 0
+    },
+    "spawned": 59,
+    "pockets": [
+      {
+        "x": 67,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 0
+      },
+      {
+        "x": 139,
+        "y": 617,
+        "w": 18,
+        "kind": "normal",
+        "id": 1
+      },
+      {
+        "x": 268,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 2
+      },
+      {
+        "x": 210,
+        "y": 480,
+        "w": 20,
+        "kind": "start",
+        "id": 4
+      },
+      {
+        "x": 357.25,
+        "y": 581,
+        "w": 60,
+        "kind": "bonus",
+        "id": 5,
+        "captureTray": {
+          "left": 335.125,
+          "right": 373.875,
+          "y": 600.5,
+          "radius": 1.4
+        }
+      },
+      {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      }
+    ],
+    "guide": {
+      "a": {
+        "x": 336,
+        "y": 468
+      },
+      "b": {
+        "x": 330,
+        "y": 558
+      },
+      "r": 1.3,
+      "material": "resin",
+      "role": "right-inner-lower",
+      "restitution": 0.08
+    },
+    "attacker": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "tulip": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "inFlight": 0
+  },
+  "errors": []
+}

@@ -1,0 +1,7 @@
+# 通常液晶原画
+
+Built-in imagegen使用。参照：`public/moon-guardian.png`。保存先：`public/moon-guardian-pixel-v2.png`。元画像を直接縮小したファイルではなく、参照を渡して新たに生成したドット絵調原画。固定240×320の厳密なピクセルグリッドや24色への適合を保証するものではない。今回の折衷構成の美術素材として使用する。
+
+## 実際のプロンプト
+
+Use case: style-transfer. Create a newly redrawn pixel-art background for the LCD of the original Japanese pachinko game 月影機関. Reference image is ONLY character identity and world reference, NOT pixels to downsample or mosaic. Redesign as exquisite deliberate 1990s/modern premium pixel RPG key art: coherent large pixel clusters, stair-stepped silhouettes, clean 1 logical pixel outlines, controlled 24-color navy/ice blue/silver/brass palette, 3-step shadows, no smooth gradients, no blur, no noise, no checkerboard dithering. Portrait 3:4 composition. White silver-haired adult guardian, cyan eyes, black navy high-collared coat with gold trim, crescent mechanical hair ornament. Upper half: clearly legible large expressive face centered slightly right, moon upper left, simplified clockwork gothic city silhouette. Bottom 40%: dark navy coat and restrained architectural silhouettes as negative space for three live game digits, DO NOT draw digits, words, logo, borders, or any UI. Authentic drawn pixel-art shapes, reinterpreted hair locks and eyes, not a pixelation filter over the original. Aim for appearance of artwork authored at 240 by 320 logical pixels, uniformly enlarged without smoothing. Fill the entire rectangular image, no margins. Save new source artwork.

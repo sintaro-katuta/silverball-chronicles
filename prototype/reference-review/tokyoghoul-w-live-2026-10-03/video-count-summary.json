@@ -1,0 +1,203 @@
+{
+  "left": {
+    "pageErrors": 0,
+    "accountingReconciled": true,
+    "physicalCountReconciled": true,
+    "counts": {
+      "fuzu": 0,
+      "normal": 0,
+      "start": 0,
+      "rush": 0,
+      "bonus": 0,
+      "out": 41,
+      "returned": 11
+    },
+    "spawned": 56,
+    "inFlight": 4,
+    "w": {
+      "model": "e東京喰種W",
+      "rush": null,
+      "bonus": null,
+      "pendingV": false,
+      "electricOpen": false,
+      "payout": 0,
+      "holds": {
+        "tokuzu1": 0,
+        "tokuzu2": 0,
+        "fuzu": 0
+      },
+      "eventCount": 0
+    },
+    "lastBonus": null
+  },
+  "charge": {
+    "pageErrors": 0,
+    "accountingReconciled": true,
+    "physicalCountReconciled": true,
+    "counts": {
+      "fuzu": 16,
+      "normal": 0,
+      "start": 2,
+      "rush": 0,
+      "bonus": 20,
+      "out": 18,
+      "returned": 4
+    },
+    "spawned": 63,
+    "inFlight": 3,
+    "w": {
+      "model": "e東京喰種W",
+      "rush": null,
+      "bonus": null,
+      "pendingV": false,
+      "electricOpen": false,
+      "payout": 318,
+      "holds": {
+        "tokuzu1": 0,
+        "tokuzu2": 0,
+        "fuzu": 0
+      },
+      "eventCount": 87
+    },
+    "lastBonus": {
+      "maxPayout": 300,
+      "rounds": 2,
+      "round": 2,
+      "count": 10,
+      "payout": 300,
+      "open": true,
+      "fromRush": false,
+      "charge": true,
+      "displayRounds": 2,
+      "time": 5.408333333333392,
+      "gap": 0,
+      "entryEligible": false,
+      "entryRevealed": false,
+      "challenge": null,
+      "awardPerBall": 15,
+      "payoutMultiplier": 1,
+      "payoutAmount": 300,
+      "kind": "w-individual-bonus",
+      "initialRounds": 2,
+      "individualPayout": 300,
+      "displayMaxPayout": 300,
+      "endedAt": 27.458333333332416
+    }
+  },
+  "normal": {
+    "pageErrors": 0,
+    "accountingReconciled": true,
+    "physicalCountReconciled": true,
+    "counts": {
+      "fuzu": 50,
+      "normal": 0,
+      "start": 2,
+      "rush": 0,
+      "bonus": 100,
+      "out": 24,
+      "returned": 4
+    },
+    "spawned": 186,
+    "inFlight": 6,
+    "w": {
+      "model": "e東京喰種W",
+      "rush": {
+        "remaining": 107,
+        "consumed": 23
+      },
+      "bonus": null,
+      "pendingV": false,
+      "electricOpen": false,
+      "payout": 1552,
+      "holds": {
+        "tokuzu1": 0,
+        "tokuzu2": 0,
+        "fuzu": 3
+      },
+      "eventCount": 387
+    },
+    "lastBonus": {
+      "maxPayout": 1500,
+      "rounds": 10,
+      "round": 10,
+      "count": 10,
+      "payout": 1500,
+      "open": true,
+      "fromRush": false,
+      "charge": false,
+      "displayRounds": 10,
+      "time": 5.383333333333391,
+      "gap": 0,
+      "entryEligible": false,
+      "entryRevealed": false,
+      "challenge": null,
+      "awardPerBall": 15,
+      "payoutMultiplier": 1,
+      "payoutAmount": 1500,
+      "kind": "w-individual-bonus",
+      "initialRounds": 10,
+      "individualPayout": 1500,
+      "displayMaxPayout": 1500,
+      "endedAt": 87.49166666668236
+    }
+  },
+  "rush": {
+    "pageErrors": 0,
+    "accountingReconciled": true,
+    "physicalCountReconciled": true,
+    "counts": {
+      "fuzu": 88,
+      "normal": 0,
+      "start": 0,
+      "rush": 2,
+      "bonus": 200,
+      "out": 16,
+      "returned": 0
+    },
+    "spawned": 313,
+    "inFlight": 7,
+    "w": {
+      "model": "e東京喰種W",
+      "rush": {
+        "remaining": 110,
+        "consumed": 20
+      },
+      "bonus": null,
+      "pendingV": false,
+      "electricOpen": false,
+      "payout": 3090,
+      "holds": {
+        "tokuzu1": 0,
+        "tokuzu2": 0,
+        "fuzu": 4
+      },
+      "eventCount": 742
+    },
+    "lastBonus": {
+      "maxPayout": 1500,
+      "rounds": 10,
+      "round": 10,
+      "count": 10,
+      "payout": 3000,
+      "open": true,
+      "fromRush": true,
+      "followupRoll": 0.9,
+      "drawId": 7,
+      "charge": false,
+      "displayRounds": 10,
+      "time": 5.441666666666727,
+      "gap": 0,
+      "entryEligible": true,
+      "entryRevealed": true,
+      "challenge": null,
+      "awardPerBall": 15,
+      "payoutMultiplier": 1,
+      "payoutAmount": 3000,
+      "kind": "w-individual-bonus",
+      "initialRounds": 10,
+      "individualPayout": 1500,
+      "displayMaxPayout": 3000,
+      "endedAt": 165.658333333347
+    }
+  }
+}

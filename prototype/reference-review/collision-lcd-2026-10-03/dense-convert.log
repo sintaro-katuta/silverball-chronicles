@@ -1,0 +1,55 @@
+ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.1.1.101)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.0.1_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      61.  1.101 / 61.  1.101
+  libavcodec     63.  1.101 / 63.  1.101
+  libavformat    63.  1.101 / 63.  1.101
+  libavdevice    63.  1.101 / 63.  1.101
+  libavfilter    12.  1.101 / 12.  1.101
+  libswscale     10.  1.101 / 10.  1.101
+  libswresample   7.  1.101 /  7.  1.101
+Input #0, matroska,webm, from '/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/collision-lcd-2026-10-03/page@cd7bd4a7ca1d56e638e486404d49f031.webm':
+  Metadata:
+    creation_time   : 2026-10-03T01:41:39.994000Z
+    ENCODER         : Lavf61.1.100
+  Duration: 00:00:51.76, start: 0.000000, bitrate: 544 kb/s
+  Stream #0:0(eng): Video: vp8, yuv420p(progressive), 390x844, SAR 1:1 DAR 195:422, 25 fps, 25 tbr, 1k tbn (default)
+    Metadata:
+      ENCODER         : Lavc61.3.100 libvpx
+      DURATION        : 00:00:51.760000000
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp8 (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0xad901ca80] using SAR=1/1
+[libx264 @ 0xad901ca80] using cpu capabilities: ARMv8 NEON DotProd I8MM
+[libx264 @ 0xad901ca80] profile High, level 3.0, 4:2:0, 8-bit
+[libx264 @ 0xad901ca80] 264 - core 165 r3222 b35605a - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=15 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'reference-review/collision-lcd-2026-10-03/dense-mobile.mp4':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(eng): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt470bg/unknown/unknown, progressive), 390x844 [SAR 1:1 DAR 195:422], q=2-31, 25 fps, 12800 tbn (default)
+    Metadata:
+      encoder         : Lavc63.1.101 libx264
+      DURATION        : 00:00:51.760000000
+    Side data:
+      CPB properties: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+frame=  910 fps=0.0 q=28.0 size=     768KiB time=00:00:36.32 bitrate= 173.2kbits/s speed=71.2x elapsed=0:00:00.51    [out#0/mp4 @ 0xad9020240] video:1112KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 1.420801%
+frame= 1294 fps=0.0 q=-1.0 Lsize=    1128KiB time=00:00:51.68 bitrate= 178.8kbits/s speed=76.8x elapsed=0:00:00.67    
+[libx264 @ 0xad901ca80] frame I:9     Avg QP:11.52  size: 30976
+[libx264 @ 0xad901ca80] frame P:333   Avg QP:16.79  size:  1407
+[libx264 @ 0xad901ca80] frame B:952   Avg QP:18.70  size:   410
+[libx264 @ 0xad901ca80] consecutive B-frames:  1.1%  0.3%  6.5% 92.1%
+[libx264 @ 0xad901ca80] mb I  I16..4: 65.6% 13.2% 21.2%
+[libx264 @ 0xad901ca80] mb P  I16..4:  8.3%  0.3%  0.2%  P16..4:  5.0%  0.7%  1.0%  0.0%  0.0%    skip:84.4%
+[libx264 @ 0xad901ca80] mb B  I16..4:  0.1%  0.1%  0.1%  B16..8:  1.9%  0.4%  0.2%  direct: 3.1%  skip:94.1%  L0:47.0% L1:49.8% BI: 3.2%
+[libx264 @ 0xad901ca80] 8x8 transform intra:7.4% inter:24.6%
+[libx264 @ 0xad901ca80] coded y,uvDC,uvAC intra: 9.3% 11.9% 10.9% inter: 0.9% 3.6% 0.8%
+[libx264 @ 0xad901ca80] i16 v,h,dc,p: 93%  2%  5%  0%
+[libx264 @ 0xad901ca80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu:  6% 57% 29%  1%  1%  1%  2%  1%  2%
+[libx264 @ 0xad901ca80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 24% 34% 13%  4%  5%  5%  6%  4%  6%
+[libx264 @ 0xad901ca80] i8c dc,h,v,p: 89%  7%  4%  1%
+[libx264 @ 0xad901ca80] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0xad901ca80] ref P L0: 69.2%  3.4% 19.3%  8.1%
+[libx264 @ 0xad901ca80] ref B L0: 70.4% 22.9%  6.7%
+[libx264 @ 0xad901ca80] ref B L1: 87.6% 12.4%
+[libx264 @ 0xad901ca80] kb/s:175.92

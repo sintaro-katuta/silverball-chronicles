@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-03",
+  "reviewer": "designer",
+  "method": "independent visual inspection of interval frames decoded from final mp4; not full uninterrupted video viewing",
+  "videos": {
+    "left": {
+      "sha256": "b387e1ea355e4278d26b7b3b4f4de1d6e5c08d33a63cc09ca20141a620550628",
+      "samples": "final-left-board-motion-samples.jpg",
+      "observed": "natural ball position changes on left route; normal371; pixel character intact; no board clipping",
+      "fixture": "natural left launches; outcome fixed to miss; no ball reposition",
+      "intervalSec": 5
+    },
+    "charge": {
+      "sha256": "9afc165965c40601c038c2fb85cc175540648710f985363e92ce2fa528159951",
+      "samples": "final-charge-board-motion-samples.jpg",
+      "observed": "CHARGE300 card then 15/300,135/300,225/300,300/300 then normal129; no 777 or RUSH card in observed samples",
+      "fixture": "first two paid heso balls positioned over mouth; natural right payout; result fixed",
+      "intervalSec": 5
+    },
+    "normal": {
+      "sha256": "cd21b192d0ca165a814e31d578c172b80f2205eadf07b0bd322747e943197183",
+      "intervalSec": 12,
+      "samples": [
+        "final-normal-board-motion-samples.jpg"
+      ],
+      "observed": "right-shot prompt then 255/1500,495/1500,750/1500,990/1500,1230/1500,1500/1500 then RUSH residual120 display; character/pixel presentation and board intact",
+      "fixture": "first two paid heso balls positioned over mouth; natural right payout; result fixed"
+    },
+    "rush": {
+      "sha256": "01669bf2689495d0b733354a516b70c2169dcd8ad82fd0c4d19e0912594c6cc3",
+      "intervalSec": 18,
+      "focusedSamples": "78 sec onward every3sec near1500 boundary;156sec onward every2sec near3000 completion;169sec onward every3sec",
+      "samples": [
+        "final-rush-board-motion-samples.jpg",
+        "final-rush-boundary-samples.jpg",
+        "final-rush-payout-complete-samples.jpg",
+        "final-rush-end-samples.jpg"
+      ],
+      "observed": "777 then payout255 to2700/3000;1335/3000→1500/3000→777→3000 forecast→1530/3000→1605/3000;no RUSH entry card in observed between1500 chunks;2775→2835→2850→2895→2955→3000/3000→RUSH continuation and residual counter decreases",
+      "fixture": "initial rush and first hit fixed; all shots natural, no ball positioning or admission call"
+    }
+  },
+  "limitations": [
+    "sample frames do not establish every inter-frame contact or full-scene continuity",
+    "machine physical fidelity is separate from game visual review"
+  ],
+  "observedProblems": []
+}

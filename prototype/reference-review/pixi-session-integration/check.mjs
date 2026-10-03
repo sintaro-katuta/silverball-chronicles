@@ -1,0 +1,18 @@
+import {chromium} from '@playwright/test';import assert from 'node:assert/strict';import {writeFile} from 'node:fs/promises';
+const dir='reference-review/pixi-session-integration';const browser=await chromium.launch({channel:'chrome',headless:true});
+try{const context=await browser.newContext({viewport:{width:900,height:850},recordVideo:{dir,size:{width:900,height:850}}});const page=await context.newPage(),errors=[];page.on('pageerror',e=>{errors.push(String(e));console.log('ERROR',String(e));});
+const videoStart=Date.now();await page.goto('http://127.0.0.1:5173/?review=session');await page.waitForTimeout(1200);await page.locator('[data-unit="0"]').click();await page.waitForTimeout(1500);await page.screenshot({path:`${dir}/detail.png`});await page.locator('#playMachine').click();await page.waitForFunction(()=>!!window.__session?.snapshot());await page.waitForTimeout(2000);await page.screenshot({path:`${dir}/playing.png`});
+await page.locator('#menu').click();const paused=await page.evaluate(()=>__session.snapshot());await page.waitForTimeout(500);assert.equal((await page.evaluate(()=>__session.snapshot())).time,paused.time);await page.locator('#resume').click();
+const marks=[];let seenWin=false,seenEntry=false,seenRush=false,shortened=false;let started=videoStart;
+for(let i=0;i<3600;i++){const s=await page.evaluate(()=>__session.snapshot());assert.ok(s.session.accounting.reconciled);if(i%100===0)console.log('step',i,s.time,s.counts.start,s.spin.draws,s.spin.round?.phase,s.spin.rush?.remaining);
+if(s.spin.win&&!seenWin){seenWin=true;marks.push({event:'win',wall:(Date.now()-started)/1000,time:s.time});console.log('WIN');}
+if(seenWin&&s.spin.round?.phase==='open'&&!shortened){shortened=true;marks.push({event:'payout',wall:(Date.now()-started)/1000,time:s.time});await page.screenshot({path:`${dir}/payout.png`});}
+if(s.spin.entryPrelude&&!seenEntry){seenEntry=true;marks.push({event:'entry',wall:(Date.now()-started)/1000,time:s.time});console.log('ENTRY');}
+if(seenEntry&&s.spin.rush&&!s.spin.entryPrelude&&!s.spin.win&&!seenRush){seenRush=true;marks.push({event:'rush',wall:(Date.now()-started)/1000,time:s.time});await page.screenshot({path:`${dir}/rush.png`});console.log('RUSH');}
+if(seenRush&&!s.spin.rush&&s.spin.lastRush){marks.push({event:'end',wall:(Date.now()-started)/1000,time:s.time});await page.waitForTimeout(6500);break;}
+await page.waitForTimeout(100);}
+assert.ok(seenWin&&seenEntry&&seenRush,'complete win/entry/rush');await page.screenshot({path:`${dir}/returned.png`});await page.locator('#menu').click();await page.locator('#leave').click();await page.screenshot({path:`${dir}/result.png`});await page.waitForTimeout(1500);await page.locator('#floor').click();await page.waitForTimeout(1000);
+assert.deepEqual(errors,[]);await writeFile(`${dir}/verified.json`,JSON.stringify({errors,marks,fullBonus:true,fullRushSpins:100},null,2));await context.close();console.log('VIDEO',await page.video().path());
+// New session uses ordinary RNG, has no dev hook, and mounts after navigation again.
+const mobile=await browser.newPage({viewport:{width:390,height:844}});mobile.on('pageerror',e=>errors.push(String(e)));await mobile.goto('http://127.0.0.1:5173/');await mobile.locator('[data-unit="1"]').click();await mobile.locator('#playMachine').click();await mobile.waitForFunction(()=>!!window.__session?.snapshot());assert.equal(await mobile.evaluate(()=>typeof window.__sessionReview),'undefined');await mobile.waitForTimeout(1500);await mobile.screenshot({path:`${dir}/mobile.png`});assert.ok(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));assert.deepEqual(errors,[]);await mobile.close();console.log('verified desktop/mobile + accounting/pause/disposal');
+}finally{await browser.close();}

@@ -1,0 +1,80 @@
+{
+  "power": 0.25,
+  "spawned": 79,
+  "counts": {
+    "fuzu": 0,
+    "normal": 1,
+    "start": 0,
+    "rush": 0,
+    "bonus": 0,
+    "out": 52,
+    "returned": 25
+  },
+  "balls": [
+    {
+      "ball": {
+        "gold": false,
+        "large": false,
+        "hits": 13,
+        "extra": false,
+        "after": false,
+        "id": 24,
+        "x": 143.2866813378166,
+        "y": 560.7471494019193,
+        "vx": 0.029956729728301046,
+        "vy": -0.0661410278194231,
+        "r": 1.8,
+        "age": 71.4749999999094,
+        "power": 0.25,
+        "angle": 0,
+        "contactCount": 57435,
+        "observedSide": null,
+        "contactRoles": [
+          "prize",
+          "windmill",
+          "michi"
+        ],
+        "lastContact": "normal-rim",
+        "leftLaunchPlane": true,
+        "prediction": null
+      },
+      "nearPins": [],
+      "nearSegments": [
+        {
+          "c": {
+            "a": {
+              "x": 141,
+              "y": 555.5
+            },
+            "b": {
+              "x": 141,
+              "y": 560.5
+            },
+            "r": 0.5,
+            "material": "pocket",
+            "role": "normal-rim",
+            "restitution": 0.15
+          },
+          "distance": 2.2999987755622215
+        },
+        {
+          "c": {
+            "a": {
+              "x": 143.75,
+              "y": 563
+            },
+            "b": {
+              "x": 143.75,
+              "y": 568
+            },
+            "r": 0.5,
+            "material": "pocket",
+            "role": "normal-rim",
+            "restitution": 0.15
+          },
+          "distance": 2.300000000000025
+        }
+      ]
+    }
+  ]
+}

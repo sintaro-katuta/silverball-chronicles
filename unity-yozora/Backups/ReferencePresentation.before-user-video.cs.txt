@@ -1,0 +1,42 @@
+using UnityEngine;
+using UnityEngine.UI;
+namespace Yozora {
+ // Presentation only. All outcomes and awards belong to YozoraRules.
+ public sealed class ReferencePresentation:MonoBehaviour {
+  public YozoraMachine machine;
+  public RectTransform[] symbolRoots; public RawImage[] portraits;public Image[] plates;
+  public Text[] numbers,shadowNumbers;public Text stage,smallDigits;public Image[] crystals;
+  public RectTransform cutIn,slash; public RawImage cutPortrait;public Text cutTitle;
+  public CanvasGroup cutGroup; public Image rose;public Text modeRibbon;
+  public float clock;float modeAge;PlayMode lastMode;
+  static readonly Color[] palette={new Color(.62f,.06f,.8f),new Color(.03f,.7f,.86f),new Color(.93f,.12f,.4f)};
+  void LateUpdate(){
+   var r=machine.Rules;if(r==null)return;if(!machine.Paused){clock+=Time.deltaTime;modeAge+=Time.deltaTime;}
+   if(r.Mode!=lastMode){lastMode=r.Mode;modeAge=0;}
+   var a=r.Active;bool reach=a!=null&&a.reach;float t=a?.elapsed??0;bool bonus=r.Bonus!=null;bool rush=r.Mode!=PlayMode.Normal;
+   stage.text=rush?(r.Mode==PlayMode.SwordRush?"SWORD RUSH":"War of Underworld"):(reach?"CENTRAL CATHEDRAL":"セントリア");
+   stage.color=rush?new Color(1,.78f,.25f):new Color(.75f,.94f,1);
+   smallDigits.text=string.Join(" · ",r.Digits);modeRibbon.text=rush?$"LAST  {r.Remaining:00}":"ALICIZATION";
+   for(int i=0;i<symbolRoots.Length;i++){
+    bool show=!bonus&&(rush||i<3)&&(!reach||t<3.0f);symbolRoots[i].gameObject.SetActive(show);if(!show)continue;
+    int source=i%3;int d=int.Parse(machine.reels[source].text);if(i>=3)d=1+(d+i)%6;
+    Vector2 pos=rush?new Vector2((i%3-1)*305,400-(i/3)*390):new Vector2((i-1)*300,i==1?20:65);
+    
+    bool spinning=a!=null&&t<(reach?(source==1?9.2f:1.6f+source*.2f):a.duration-.6f+source*.2f);
+    float scale=rush?.48f:source==1?.81f:1f;
+    symbolRoots[i].anchoredPosition=pos+new Vector2(0,spinning?Mathf.Sin(t*21+i)*25:0);
+    symbolRoots[i].localScale=Vector3.one*scale;
+    symbolRoots[i].localRotation=Quaternion.Euler(0,0,rush?(i%2==0?-5:5):i==1?0:(i==0?-4:4));
+    numbers[i].text=shadowNumbers[i].text=d.ToString();
+    Color c=d==7?new Color(1,.78f,.15f):palette[d%3];plates[i].color=c;numbers[i].color=Color.Lerp(c,Color.white,.72f);
+    int person=rush?i%3:source;portraits[i].uvRect=new Rect(person/3f,0,1f/3f,1);
+   }
+   for(int i=0;i<crystals.Length;i++){bool held=i<r.Holds.Count;crystals[i].color=held?new Color(.22f,.87f,1):new Color(.07f,.18f,.24f);}
+   if(reach&&t>=3)machine.headline.text="";
+   bool cut=!rush&&reach&&t>=3&&t<8.5f;cutGroup.alpha=cut?1:0;
+   if(cut){float phase=t-3;cutIn.anchoredPosition=new Vector2(Mathf.Lerp(1100,0,Mathf.SmoothStep(0,1,phase/.32f)),0);cutPortrait.uvRect=new Rect((phase<1.6f?0:phase<3?1:2)/3f,0,1f/3f,1);cutTitle.text=phase<1.6f?"SYSTEM CALL":phase<3?(machine.Demo?"STAY COOL":"SWORD SKILL"):phase<4?"Project Alicization":"PUSH";slash.localRotation=Quaternion.Euler(0,0,Mathf.Lerp(-55,35,Mathf.Clamp01((phase-1.4f)/.35f)));}
+   if(rose)rose.color=bonus?new Color(.5f,.85f,1):reach&&t>4?new Color(.06f,.6f,1):new Color(.04f,.2f,.31f);
+   // Small result digits stay visible above full-screen scenes; no future outcome is shown.
+  }
+ }
+}

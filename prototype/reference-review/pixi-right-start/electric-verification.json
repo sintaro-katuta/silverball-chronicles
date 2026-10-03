@@ -1,0 +1,107 @@
+{
+  "time": 20.04166666666617,
+  "paused": true,
+  "motion": {
+    "progress": 0,
+    "target": 0,
+    "moving": false
+  },
+  "counts": {
+    "normal": 3,
+    "start": 0,
+    "rush": 72,
+    "bonus": 0,
+    "out": 83,
+    "returned": 0
+  },
+  "spawned": 185,
+  "electric": {
+    "phase": "drawing",
+    "passes": 166,
+    "draws": 9,
+    "wins": 6,
+    "openings": 6,
+    "holds": 5,
+    "remaining": 0.16666666666666669,
+    "accepted": 19,
+    "resolved": 14,
+    "ordinaryHolds": 3,
+    "activeDraw": null,
+    "prize": 84,
+    "jackpot": false,
+    "rush": true
+  },
+  "origin": {
+    "x": 270,
+    "y": 390
+  },
+  "pocket": {
+    "x": 359.5,
+    "y": 493,
+    "w": 20,
+    "kind": "rush",
+    "id": 6
+  },
+  "pose": {
+    "scoop": {
+      "a": {
+        "x": 166,
+        "y": 200
+      },
+      "b": {
+        "x": 179,
+        "y": 166
+      }
+    },
+    "cover": {
+      "a": {
+        "x": 192,
+        "y": 200
+      },
+      "b": {
+        "x": 179,
+        "y": 166
+      }
+    }
+  },
+  "housing": {
+    "x": 153,
+    "y": 191,
+    "width": 51.99999999999999,
+    "height": 51.99999999999999
+  },
+  "chucker": {
+    "open": false,
+    "scoop": {
+      "a": {
+        "x": 353,
+        "y": 490
+      },
+      "b": {
+        "x": 359.5,
+        "y": 473.2145896684055
+      },
+      "r": 1.3,
+      "material": "gate",
+      "role": "denchu-left-wing",
+      "restitution": 0.06,
+      "active": true
+    },
+    "cover": {
+      "a": {
+        "x": 366,
+        "y": 490
+      },
+      "b": {
+        "x": 359.5,
+        "y": 473.2145896684055
+      },
+      "r": 1.3,
+      "material": "gate",
+      "role": "denchu-right-wing",
+      "restitution": 0.08,
+      "active": true
+    },
+    "progress": 0
+  }
+}

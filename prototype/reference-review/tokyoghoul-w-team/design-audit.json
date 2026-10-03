@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-02",
+  "reviewerRole": "designer",
+  "reference": "../pixi-source-layout/reference.jpg",
+  "referenceStatus": "資料で確認済み（添付盤面図1ページ）",
+  "corrections": [
+    {
+      "before": "一般入賞口5個",
+      "after": "左側3個。右側①注記を独立普通口として扱わない。"
+    },
+    {
+      "before": "右上に非回収ゲートと2支柱を描画",
+      "after": "その表示を撤去。下部普図作動口を別の受口として描画。"
+    },
+    {
+      "before": "下部普通口座標570,916",
+      "after": "普図作動口の口座標570,899。916は賞球①注記位置で口ではない。"
+    }
+  ],
+  "unchanged": [
+    "白いLCD領域は玉の通路にしない",
+    "月影機関の既存演出とキャラクター",
+    "左上の釘・通路の既存試作配置"
+  ],
+  "limitations": [
+    "受口位置・幅は2D資料手動採寸で実寸値ではない",
+    "前縁・暗部は月影機関の描画表現。実機の内部断面を再現したものではない",
+    "下部普図作動口まで自然落下する頻度・経路は別途物理検証が必要",
+    "ワープ/ステージ内部、V内部、扉軸は未確認",
+    "今回の描画は構文確認のみ。実ブラウザでの見た目確認は統合担当へ引継ぎ"
+  ],
+  "validation": [
+    "node --check prototype/src/pixi/board-runtime.js 成功",
+    "node --test prototype/tests/left-pocket-access.test.js 1件成功（3つの左普通口へ実球落下・計数一致）"
+  ]
+}

@@ -1,0 +1,49 @@
+✔ lower LCD housing has a physical surface matching the visible apron (3.971916ms)
+✔ compact lower assembly drains and accounts for all balls at increased firing rate (44055.535875ms)
+✔ persistent views reuse introduction poses and preserve adopted board pose (1.694166ms)
+✔ introduction visits whole, board, LCD and returns exactly to adopted play view (0.1775ms)
+✔ skip and reduced motion restore adopted camera with no residual outer frame (0.1095ms)
+✔ LCD camera contains every corner with padding and clamps long frame gaps (0.114792ms)
+✔ a naturally launched ball leaves through the actual rail mouth before changing plane (76.662292ms)
+✔ natural 0.2/0.6 stream cannot cross launch rails and drains (6706.020167ms)
+✔ natural 0.24/0.05 stream cannot cross launch rails and drains (37955.852833ms)
+✔ launcher holds new shots for an occupied muzzle or a returning ball (53.885542ms)
+✔ single-file launcher drains after sustained maximum-rate and weak-shot firing (31481.370833ms)
+✔ stage 6 normal firing keeps its full cadence without an upper-exit pileup (30216.557417ms)
+✔ normal: balls stay outside LCD, follow side lanes and drain (22389.916625ms)
+✔ rush: balls stay outside LCD, follow side lanes and drain (4506.0035ms)
+✔ bonus: balls stay outside LCD, follow side lanes and drain (2935.396167ms)
+✔ normal HESO mouth admits a real ball independently of natural cohort frequency (4.133166ms)
+✔ both modes launch at one origin no faster than 0.6 seconds (2425.572833ms)
+✔ manual power changes only future normal shots (163.665125ms)
+✔ all active and five queued hold glyphs, travel and plate fit the stepped opening (5.862625ms)
+✔ normal and rush settled reels fit near aperture centroid, clear hold band and rush header (17.484208ms)
+{"shots":34,"guideContact":22,"downstream":34}
+✔ reference inlet guides share their visible coordinates and feed falling left shots downstream (5034.422417ms)
+✔ a front-plane ball rebounds from the visible inner launch rail instead of passing through (209.972792ms)
+✔ all three left ordinary receivers admit a physical ball through their visible mouth (55.712791ms)
+✔ near arrivals reconcile and cohorts retain launch power after switching (12561.591208ms)
+{"entries":10,"draws":10,"maxHolds":2}
+✔ physical admissions start spins, pause freezes and all accepted holds drain (22687.110167ms)
+✔ active draw is separate from five holds, full holds do not add a draw (343.603792ms)
+✔ dense-ball separation resolves the existing pin shaft before the frame is displayed (11.6505ms)
+✔ adaptive integration stops a fast front-plane ball at a pin instead of crossing its center (20.889042ms)
+✔ rear launch balls remain on their separate plane even when passing a front pin (0.513333ms)
+✔ a ball between staggered ordinary receivers clears their visible front edges (130.967208ms)
+✔ natural left power .25 drains after the ordinary receiver rim correction (14017.195708ms)
+✔ traced right channel guides physical balls and drains at 0.6s (3278.344334ms)
+✔ traced right channel guides physical balls and drains at 0.05s (35871.182625ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.2 (3692.072875ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.24 (2889.752333ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.28 (2760.262542ms)
+✔ production W bridge accepts physical fuzu/electric/V/attacker crossings and counts 3000 (260.796458ms)
+✔ natural right launches traverse fuzu, two electric admissions, two V entries and 3000 (20607.250458ms)
+✔ dense arrivals cannot be consumed beyond the ten-count closing boundary (112.021833ms)
+ℹ tests 39
+ℹ suites 0
+ℹ pass 39
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 61943.02625

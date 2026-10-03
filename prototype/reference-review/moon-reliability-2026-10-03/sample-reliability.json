@@ -1,0 +1,239 @@
+{
+  "scope": "Synthetic independent draw/reach sampling, not live ball admission or measured W internals.",
+  "output": [
+    {
+      "mode": "normal",
+      "draws": 8000000,
+      "wins": 20065,
+      "reaches": 459569,
+      "noCue": 338979,
+      "rows": [
+        {
+          "phase": "crescent",
+          "color": "none",
+          "expectation": 6,
+          "rank": 0,
+          "wins": 1691,
+          "losses": 25903,
+          "observed": 6.128143799376676
+        },
+        {
+          "phase": "half",
+          "color": "none",
+          "expectation": 11,
+          "rank": 2,
+          "wins": 1713,
+          "losses": 13560,
+          "observed": 11.215871145158122
+        },
+        {
+          "phase": "full",
+          "color": "none",
+          "expectation": 23,
+          "rank": 5,
+          "wins": 1652,
+          "losses": 5535,
+          "observed": 22.985946848476416
+        },
+        {
+          "phase": "crescent",
+          "color": "green",
+          "expectation": 8,
+          "rank": 1,
+          "wins": 1688,
+          "losses": 19036,
+          "observed": 8.14514572476356
+        },
+        {
+          "phase": "half",
+          "color": "green",
+          "expectation": 19,
+          "rank": 4,
+          "wins": 1716,
+          "losses": 6943,
+          "observed": 19.817530892712785
+        },
+        {
+          "phase": "full",
+          "color": "green",
+          "expectation": 31,
+          "rank": 8,
+          "wins": 1679,
+          "losses": 3604,
+          "observed": 31.78118493280333
+        },
+        {
+          "phase": "crescent",
+          "color": "blue",
+          "expectation": 14,
+          "rank": 3,
+          "wins": 1615,
+          "losses": 10214,
+          "observed": 13.652886972694226
+        },
+        {
+          "phase": "half",
+          "color": "blue",
+          "expectation": 28,
+          "rank": 7,
+          "wins": 1713,
+          "losses": 4324,
+          "observed": 28.375020705648502
+        },
+        {
+          "phase": "full",
+          "color": "blue",
+          "expectation": 39,
+          "rank": 10,
+          "wins": 1623,
+          "losses": 2658,
+          "observed": 37.91170287316047
+        },
+        {
+          "phase": "crescent",
+          "color": "red",
+          "expectation": 26,
+          "rank": 6,
+          "wins": 1627,
+          "losses": 4627,
+          "observed": 26.01535017588743
+        },
+        {
+          "phase": "half",
+          "color": "red",
+          "expectation": 38,
+          "rank": 9,
+          "wins": 1703,
+          "losses": 2641,
+          "observed": 39.20349907918968
+        },
+        {
+          "phase": "full",
+          "color": "red",
+          "expectation": 54,
+          "rank": 11,
+          "wins": 1645,
+          "losses": 1480,
+          "observed": 52.64
+        }
+      ]
+    },
+    {
+      "mode": "rush",
+      "draws": 3000000,
+      "wins": 31308,
+      "reaches": 194198,
+      "noCue": 4011,
+      "rows": [
+        {
+          "phase": "crescent",
+          "color": "none",
+          "expectation": 6,
+          "rank": 0,
+          "wins": 2655,
+          "losses": 41156,
+          "observed": 6.060121887197279
+        },
+        {
+          "phase": "half",
+          "color": "none",
+          "expectation": 11,
+          "rank": 2,
+          "wins": 2639,
+          "losses": 21309,
+          "observed": 11.019709370302323
+        },
+        {
+          "phase": "full",
+          "color": "none",
+          "expectation": 23,
+          "rank": 5,
+          "wins": 2589,
+          "losses": 8750,
+          "observed": 22.83270129641062
+        },
+        {
+          "phase": "crescent",
+          "color": "green",
+          "expectation": 8,
+          "rank": 1,
+          "wins": 2648,
+          "losses": 29949,
+          "observed": 8.123446942970212
+        },
+        {
+          "phase": "half",
+          "color": "green",
+          "expectation": 19,
+          "rank": 4,
+          "wins": 2730,
+          "losses": 11168,
+          "observed": 19.643114117139156
+        },
+        {
+          "phase": "full",
+          "color": "green",
+          "expectation": 31,
+          "rank": 8,
+          "wins": 2513,
+          "losses": 5806,
+          "observed": 30.20795768722202
+        },
+        {
+          "phase": "crescent",
+          "color": "blue",
+          "expectation": 14,
+          "rank": 3,
+          "wins": 2615,
+          "losses": 16035,
+          "observed": 14.021447721179625
+        },
+        {
+          "phase": "half",
+          "color": "blue",
+          "expectation": 28,
+          "rank": 7,
+          "wins": 2594,
+          "losses": 6726,
+          "observed": 27.83261802575107
+        },
+        {
+          "phase": "full",
+          "color": "blue",
+          "expectation": 39,
+          "rank": 10,
+          "wins": 2527,
+          "losses": 4133,
+          "observed": 37.94294294294294
+        },
+        {
+          "phase": "crescent",
+          "color": "red",
+          "expectation": 26,
+          "rank": 6,
+          "wins": 2574,
+          "losses": 7433,
+          "observed": 25.721994603777354
+        },
+        {
+          "phase": "half",
+          "color": "red",
+          "expectation": 38,
+          "rank": 9,
+          "wins": 2589,
+          "losses": 4234,
+          "observed": 37.945185402315694
+        },
+        {
+          "phase": "full",
+          "color": "red",
+          "expectation": 54,
+          "rank": 11,
+          "wins": 2635,
+          "losses": 2180,
+          "observed": 54.72481827622014
+        }
+      ]
+    }
+  ]
+}

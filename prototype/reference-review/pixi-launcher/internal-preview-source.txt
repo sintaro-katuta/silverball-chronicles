@@ -1,0 +1,28 @@
+import {Application,Sprite,Texture,Container,Graphics} from 'pixi.js';
+import {createPartFlow} from '../part-flow-fixture.js';
+import {startFrameLoop} from '../runtime/frame-loop.js';
+import {createSilverBallTexture} from './silver-ball.js';
+import {createPinTexture} from './pin-texture.js';
+import {pixelSurface,painter} from './pixel-primitives.js';
+import '@fontsource/dotgothic16/japanese-400.css';
+import '@fontsource/dotgothic16/latin-400.css';
+import './attacker-preview.css';
+const el=id=>document.getElementById(id),app=new Application();await app.init({width:256,height:384,resolution:1,antialias:false,autoStart:false,background:0x060d1a,preference:'webgl'});el('canvas').append(app.canvas);
+const scale=3,zones=[{name:'発射口',x:29,y:550},{name:'レーン上端',x:48,y:82}],ballTexture=createSilverBallTexture(),pinTexture=createPinTexture(),railLayer=new Container(),pinLayer=new Container(),ballLayer=new Container(),guides=new Graphics();app.stage.addChild(railLayer,pinLayer,ballLayer,guides);
+let flow,zone=0,demo=true,previous=performance.now(),railTexture,railSprite,sprites=new Map(),pins=[],escaped=new Set();
+const point=p=>({x:Math.round((p.x-zones[zone].x)*scale+128),y:Math.round((p.y-zones[zone].y)*scale)});
+function selectZone(n){zone=n;if(railSprite){railSprite.destroy();railTexture.destroy(true);}for(const s of pins)s.destroy();pins=[];
+ const canvas=pixelSurface(256,384,c=>{const d=painter(c);const left=point({x:22,y:680}),right=point({x:36,y:200});d.rect(left.x,left.y<0?0:Math.max(0,right.y),right.x-left.x,Math.max(0,left.y-Math.max(0,right.y)),'#0d1b2c');
+ for(const rail of flow.physics.colliders.filter(c=>c.role.startsWith('launch-'))){const a=point(rail.a),b=point(rail.b),dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy),nx=-dy/len,ny=dx/len;d.line(a.x,a.y,b.x,b.y,'#14253a',10);d.line(a.x,a.y,b.x,b.y,'#657f95',8);d.line(a.x+nx*2,a.y+ny*2,b.x+nx*2,b.y+ny*2,'#c7dbe2',2);d.line(a.x-nx*2,a.y-ny*2,b.x-nx*2,b.y-ny*2,'#344f69',2);}
+ // Board-side lugs stay outside the existing single-file channel.
+ for(const y of [205,590,644])for(const x of [15,43]){const q=point({x,y}),wall=point({x:x<29?22:36,y});d.rect(Math.min(q.x,wall.x),q.y-5,Math.abs(wall.x-q.x),10,'#213c50');d.rect(q.x-8,q.y-7,16,14,'#213c50');d.diamond(q.x,q.y,6,'#829bac');d.rect(q.x-2,q.y-3,4,2,'#e0edf0');d.rect(q.x-3,q.y,7,2,'#23394c');}
+ if(zone===0){const q=point(flow.physics.launcher.mouth);for(const side of [-1,1]){const x=q.x+side*24-4;d.rect(x,q.y-8,8,30,'#80591e');d.rect(x+2,q.y-6,4,24,'#e8c979');}const base=point({x:29,y:662});d.rect(base.x-30,base.y,60,27,'#23394c');d.rect(base.x-26,base.y+3,52,6,'#93adbc');d.rect(base.x-18,base.y+12,36,10,'#0d1b2c');}
+ });railTexture=Texture.from(canvas);railTexture.source.scaleMode='nearest';railSprite=new Sprite(railTexture);railLayer.addChild(railSprite);
+ for(const p of flow.physics.pins){const q=point(p);if(q.x<0||q.x>256||q.y<0||q.y>384)continue;const s=new Sprite(pinTexture);s.anchor.set(.5);s.position.set(q.x,q.y);pinLayer.addChild(s);pins.push(s);}el('state').textContent=zones[zone].name;}
+function reset(){for(const s of sprites.values())s.destroy();sprites.clear();escaped.clear();flow=createPartFlow('normal',{launchPower:.5});selectZone(0);demo=true;flow.start();previous=performance.now();}
+function render(){const alive=new Set();for(const b of flow.physics.balls){if(b.x>40&&b.y<200)escaped.add(b.id);alive.add(b.id);let s=sprites.get(b.id);if(!s){s=new Sprite(ballTexture);s.anchor.set(.5);ballLayer.addChild(s);sprites.set(b.id,s);}const q=point(b);s.position.set(q.x,q.y);s.visible=q.x>-15&&q.x<271&&q.y>-15&&q.y<399;}
+ for(const [id,s]of sprites)if(!alive.has(id)){s.destroy();sprites.delete(id);}guides.clear();if(el('guides').checked)for(const c of flow.physics.colliders.filter(c=>c.role.startsWith('launch-'))){const a=point(c.a),b=point(c.b);guides.moveTo(a.x,a.y).lineTo(b.x,b.y).stroke({color:0x65ff95,width:1});}
+ el('shots').textContent=flow.physics.metrics.spawned;el('escaped').textContent=escaped.size;el('pause').textContent=flow.paused?'再開':'一時停止';el('step').textContent=zones[zone].name+'の動き';app.render();}
+el('demo').onclick=reset;el('lower').onclick=()=>{demo=false;selectZone(0);};el('upper').onclick=()=>{demo=false;selectZone(1);};el('feed').onclick=()=>{demo=false;flow.continuous?flow.stop():flow.start();};el('pause').onclick=()=>flow.pause(!flow.paused);
+reset();const stop=startFrameLoop(now=>{const dt=(now-previous)/1000;previous=now;if(document.hidden)return;if(demo){if(flow.game.time>=10&&zone===0)selectZone(1);if(flow.game.time>=20)flow.stop();}flow.step(dt);render();});document.addEventListener('visibilitychange',()=>{if(document.hidden)flow.pause(true);});window.addEventListener('pagehide',()=>{stop();app.destroy(true,{children:true});for(const t of [railTexture,pinTexture,ballTexture])t.destroy(true);},{once:true});
+window.__launcher={snapshot:()=>({time:flow.game.time,paused:flow.paused,zone,spawned:flow.physics.metrics.spawned,escaped:[...escaped],launcher:structuredClone(flow.physics.launcher),colliders:flow.physics.colliders.filter(c=>c.role.startsWith('launch-')).map(c=>structuredClone(c)),counts:{...flow.counts}})};render();

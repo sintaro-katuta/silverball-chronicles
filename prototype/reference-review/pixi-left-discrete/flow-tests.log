@@ -1,0 +1,37 @@
+✔ normal: balls stay outside LCD, follow side lanes and drain (8448.029958ms)
+✔ rush: balls stay outside LCD, follow side lanes and drain (2481.039333ms)
+✔ bonus: balls stay outside LCD, follow side lanes and drain (1440.336667ms)
+✔ both modes launch at one origin no faster than 0.6 seconds (1357.89425ms)
+✔ manual power changes only future normal shots (83.72475ms)
+✔ left road has no bridging collision segments and an actual pin rebounds a falling ball (15.612209ms)
+✖ physical admissions start spins, pause freezes and all accepted holds drain (16400.42075ms)
+✔ active draw is separate from five holds, full holds do not add a draw (131.313583ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16606.670917
+
+✖ failing tests:
+
+test at prototype/tests/normal-spin-flow.test.js:6:1
+✖ physical admissions start spins, pause freezes and all accepted holds drain (16400.42075ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(maxHolds>0)
+  
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/normal-spin-flow.test.js:9:59)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

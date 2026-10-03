@@ -1,0 +1,18 @@
+import {chromium} from '@playwright/test';
+import {writeFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const dir='reference-review/pixi-hair-tips';
+const browser=await chromium.launch({channel:'chrome',headless:true});
+try{
+ const page=await browser.newPage({viewport:{width:1080,height:1250}}),errors=[];
+ page.on('pageerror',e=>errors.push(String(e)));
+ await page.goto('http://127.0.0.1:5173/lcd-play.html');
+ await page.waitForFunction(()=>!!window.__board);
+ await page.locator('#demo').click();await page.locator('#lcd-detail').click();
+ await page.evaluate(()=>{window.parts=[];window.rec=new MediaRecorder(document.querySelector('canvas').captureStream(30),{mimeType:'video/webm;codecs=vp9',videoBitsPerSecond:4000000});rec.ondataavailable=e=>parts.push(e.data);rec.start();});
+ for(let i=0;i<16;i++){await page.waitForTimeout(1000);if([0,3,7,11,15].includes(i))await page.locator('canvas').screenshot({path:`${dir}/frame-${i}.png`});}
+ await page.locator('#pause').click();const before=await page.locator('canvas').screenshot();await page.waitForTimeout(300);assert.ok(before.equals(await page.locator('canvas').screenshot()));
+ assert.deepEqual(errors,[]);
+ const data=await page.evaluate(()=>new Promise(resolve=>{rec.onstop=()=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result.split(',')[1]);reader.readAsDataURL(new Blob(parts,{type:'video/webm'}));};rec.stop();}));
+ await writeFile(`${dir}/idle.webm`,Buffer.from(data,'base64'));console.log('16s runtime capture, pause and page errors verified');
+}finally{await browser.close();}

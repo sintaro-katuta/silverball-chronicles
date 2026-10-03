@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-02",
+  "scope": "read-only監査。ランタイム変更なし。",
+  "reviewedImage": "../tokyoghoul-w-live/charge.png（五角形最終修正前）",
+  "pinCount": {
+    "implemented": 96,
+    "maximumPhysicalId": 98,
+    "missingIds": [
+      86,
+      87
+    ],
+    "reason": "ヘソ2点を元のprize配列から除き、heso役割の97/98へ差替え。実機の総釘数96を証明するものではない。"
+  },
+  "findings": [
+    {
+      "priority": "high",
+      "part": "左ワープ入口/ステージ",
+      "status": "未確認",
+      "evidence": "提供図 左風車上、液晶左下の口状部分と液晶下の立体部",
+      "implementation": "現状の可視暗部はあるがワープ移送とステージ分岐未実装。全玉通常道釘へ流れるため原機経路の不足。",
+      "next": "実機動画で入口から出口まで対応を追跡し、内部非表示経路を区別。"
+    },
+    {
+      "priority": "high",
+      "part": "左道釘30点",
+      "status": "未確認",
+      "evidence": "式ROAD_SOURCEで同間隔生成。原図は全点の採寸をまだ実施していない。",
+      "next": "pin-audit.htmlで先頭/終端だけでなく30点を個別照合。"
+    },
+    {
+      "priority": "medium",
+      "part": "液晶左下/左上の境界",
+      "status": "資料で確認済み（描画と実装輪郭の定義共有）",
+      "evidence": "source-layout UNIT_SOURCEとSCREEN_SOURCE、LCD非侵入テスト",
+      "limitation": "境界の奥行き・手前ロゴとの実際の前後関係は未測定。前面装飾全体を一律に壁とはしていない。"
+    },
+    {
+      "priority": "medium",
+      "part": "右入口〜アタッカー",
+      "status": "未確認（全線分の個別再採寸未完）",
+      "evidence": "RIGHT_EDGES_SOURCEとLOWER_RIGHT_SOURCEの既存手動座標",
+      "limitation": "本流の自然通過・停止後排出はテスト済みだが全ての線が実体の玉接触面かまでは証明されていない。"
+    },
+    {
+      "priority": "medium",
+      "part": "現行画面の液晶枠",
+      "status": "資料で確認済み（現在スクリーンショットの見た目）",
+      "evidence": "charge.png",
+      "observation": "大きな矩形の金色縦枠と、下の斜め開口が二重に読める。原機の外装に統合された開口と比べて額縁が目立つ。",
+      "next": "別工程で現在採用済みの月影機関素材を保持し、開口輪郭に沿った外装へ統合。"
+    },
+    {
+      "priority": "medium",
+      "part": "筐体・上部彫刻",
+      "status": "資料で確認済み（現在スクリーンショットの見た目）",
+      "evidence": "charge.png",
+      "observation": "現在は暗い円弧盤面と簡略形状の翼/月が中心で、実機写真の成形された外装密度・前景立体感との隔たりが大きい。",
+      "next": "機能完成と造形完成を同一扱いしない。"
+    },
+    {
+      "priority": "low",
+      "part": "釘の視認性",
+      "status": "資料で確認済み（現在スクリーンショットの見た目）",
+      "evidence": "charge.png",
+      "observation": "縮小画面では釘が微小な黄点。液晶優先は守られているが96点の視覚照合は全体スクリーンショットだけでは困難。"
+    }
+  ]
+}

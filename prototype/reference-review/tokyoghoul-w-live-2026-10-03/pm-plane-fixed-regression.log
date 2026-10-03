@@ -1,0 +1,47 @@
+✔ lower LCD housing has a physical surface matching the visible apron (4.619292ms)
+✖ compact lower assembly drains and accounts for all balls at increased firing rate (45265.198834ms)
+✔ launcher holds new shots for an occupied muzzle or a returning ball (14.355834ms)
+✔ single-file launcher drains after sustained maximum-rate and weak-shot firing (74159.915125ms)
+✔ stage 6 normal firing keeps its full cadence without an upper-exit pileup (50350.311292ms)
+✔ normal: balls stay outside LCD, follow side lanes and drain (54576.279292ms)
+✔ rush: balls stay outside LCD, follow side lanes and drain (10460.432458ms)
+✔ bonus: balls stay outside LCD, follow side lanes and drain (6587.960708ms)
+✔ both modes launch at one origin no faster than 0.6 seconds (3646.520291ms)
+✔ manual power changes only future normal shots (240.079333ms)
+{"shots":29,"guideContact":17,"downstream":15}
+✔ reference inlet guides share their visible coordinates and feed falling left shots downstream (13826.299ms)
+✔ a playfield ball beside the left inlet does not collide with the rear launch arc (596.056791ms)
+✔ production W bridge accepts physical fuzu/electric/V/attacker crossings and counts 3000 (788.050459ms)
+✔ natural right launches traverse fuzu, two electric admissions, two V entries and 3000 (70008.017ms)
+✔ dense arrivals cannot be consumed beyond the ten-count closing boundary (242.287208ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 14
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 124778.265708
+
+✖ failing tests:
+
+test at tests/compact-board.test.js:13:1
+✖ compact lower assembly drains and accounts for all balls at increased firing rate (45265.198834ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(m.flow.counts[mode==='normal'?'start':mode]>0)
+  
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/compact-board.test.js:16:149)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:385:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -1,0 +1,49 @@
+{"bonus":11,"round":2,"payout":165,"close":12.633333333333256,"gap":13.133333333333228,"next":13.783333333333191}
+✔ real right shots fill 10, pay 150, close completely and open next round (1269.223ms)
+✔ empty round closes on 15-second open limit with no payout (30.96775ms)
+✔ high-rate arrivals never count above 10 in one round or award twice (33308.233458ms)
+✔ payout denominator uses awarded rounds and remains after timeout completion (188.35375ms)
+{"entries":5,"draws":5,"maxHolds":2}
+✔ physical admissions start spins, pause freezes and all accepted holds drain (13796.311625ms)
+✔ active draw is separate from five holds, full holds do not add a draw (277.351458ms)
+{"time":180.316666666667,"bonus":60,"rushEntries":101,"draws":100}
+{"time":169.9250000000098,"payout":1500,"bonus":160,"held":5}
+✔ actual bonus admissions lead to 100 entry-driven rush draws then automatic normal return (19555.320292ms)
+✔ non-RUSH bonus returns to normal only after the door closes (65.938958ms)
+✔ RUSH win pays from real attacker entries and resumes at 100 with remaining holds (13667.333875ms)
+✔ ending holds normal draws through result and pauses on the shared clock (5.281875ms)
+✔ normal holds during RUSH do not close the electric chucker (0.350959ms)
+✔ real launches debit stock and ordinary admissions pay once and queue once (924.572083ms)
+✔ session uses supplied production draw RNG, not review loss RNG (0.610708ms)
+✔ pause freezes both clocks and stop-fire drains existing balls (302.807ms)
+✔ unsettled progression is not silently restored and in-flight last balls are preserved (0.564375ms)
+✔ normal symbol and charge are separate outcomes; entry waits for explicit policy (2.038416ms)
+✔ 130 misses consume fuzu draws, not electric admissions; no separate end roll (0.620709ms)
+✔ success at draw 130 keeps electric opportunity; V required and 3000 is two bonuses (3.511125ms)
+✔ physical capture counted once, closed inlets reject, timeout never fills missing balls (0.108833ms)
+✔ tokuzu1 holds are four and full holds do not suppress inlet prize (0.219916ms)
+✔ unknown fuzu storage does not invent capacity; no old pity or boosted prize (0.576709ms)
+✔ special symbol draws never run simultaneously; tokuzu2 has next-start priority (0.185833ms)
+✔ an arrival between resolve and next-start never overtakes queued records (0.202ms)
+✔ W continuation uses independent fuzu draws, not a separate termination lottery (1.527041ms)
+✔ announced awards preserve separate 10R bonuses and per-entry accounting (0.240458ms)
+✔ unknown timings stay explicit and published reference data is immutable (0.113875ms)
+✔ production W bridge accepts physical fuzu/electric/V/attacker crossings and counts 3000 (177.810292ms)
+✔ natural right launches traverse fuzu, two electric admissions, two V entries and 3000 (14980.285458ms)
+✔ control pause freezes an active reach even when flow itself has not been paused (24.401ms)
+✔ retirement is idempotent and rejects late capture and subsequent ticks (1.127291ms)
+✔ new play starts independently, including physical IDs and old profile upgrades (0.482917ms)
+✔ production SessionGame uses W control and actual prizes, no stage/gold multipliers (3.022209ms)
+✔ RUSH hit needs actual electric and V admissions before 1500 x 2 (4.91425ms)
+✔ charge is distinct from aligned symbols, fourth branch does not enter RUSH (2.74675ms)
+✔ 6000 plus alpha uses further fuzu and captured electric/V balls; no grant at reset (2.6945ms)
+✔ electric followup result is fixed at admission, not rolled after payout (1.616542ms)
+✔ production RUSH expires only after 130 resolved fuzu misses (20.420875ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34921.553208

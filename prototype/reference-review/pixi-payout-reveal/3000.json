@@ -1,0 +1,3632 @@
+{
+  "reveal": {
+    "spin": {
+      "lifecycle": true,
+      "mode": "right-closed",
+      "rush": {
+        "remaining": 100,
+        "chain": 2,
+        "total": 0,
+        "startedAt": 0,
+        "consumed": 0
+      },
+      "lastRush": null,
+      "round": {
+        "phase": "payout-reveal",
+        "phaseTime": 0.7333333333333307,
+        "fromRush": true,
+        "round": 1,
+        "count": 0,
+        "limit": 10,
+        "payout": 0,
+        "maxPayout": 3000,
+        "remainingSeconds": 15,
+        "history": [
+          {
+            "phase": "payout-reveal",
+            "time": 2.4083333333333274,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          }
+        ]
+      },
+      "win": {
+        "time": 3.141666666666658,
+        "fromRush": true
+      },
+      "reach": null,
+      "time": 3.141666666666658,
+      "holds": 0,
+      "active": false,
+      "draws": 0,
+      "stopTimer": 0,
+      "reels": {
+        "spinning": false,
+        "numbers": [
+          7,
+          7,
+          7
+        ],
+        "stopped": [
+          true,
+          true,
+          true
+        ]
+      },
+      "accepted": 0,
+      "entries": 0,
+      "events": []
+    },
+    "lcd": {
+      "x": 108,
+      "y": 236,
+      "width": 210,
+      "height": 140
+    },
+    "gate": {
+      "count": 3,
+      "lastPass": 2.781666666666613,
+      "lit": false
+    },
+    "leftRoutes": {
+      "roadContact": 0,
+      "nearHeso": 0,
+      "admitted": 0,
+      "nearAdmitted": 0,
+      "deflectedAtHeso": 0,
+      "nearMiss": 0,
+      "earlySpill": 0,
+      "pending": 0,
+      "nearPending": 0,
+      "nearMissOutcomes": {},
+      "outcomes": {},
+      "tracked": 6,
+      "byPower": {
+        "0.6": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {},
+          "tracked": 6
+        }
+      }
+    },
+    "time": 3.141666666666658,
+    "paused": false,
+    "mode": "bonus",
+    "counts": {
+      "normal": 0,
+      "start": 0,
+      "rush": 0,
+      "bonus": 0,
+      "out": 0,
+      "returned": 0
+    },
+    "spawned": 6,
+    "pockets": [
+      {
+        "x": 67,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 0
+      },
+      {
+        "x": 139,
+        "y": 617,
+        "w": 18,
+        "kind": "normal",
+        "id": 1
+      },
+      {
+        "x": 268,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 2
+      },
+      {
+        "x": 210,
+        "y": 480,
+        "w": 20,
+        "kind": "start",
+        "id": 4
+      },
+      {
+        "x": 357.25,
+        "y": 581,
+        "w": 60,
+        "kind": "bonus",
+        "id": 5,
+        "captureTray": {
+          "left": 335.125,
+          "right": 373.875,
+          "y": 600.5,
+          "radius": 1.4
+        }
+      },
+      {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      }
+    ],
+    "guide": {
+      "a": {
+        "x": 359,
+        "y": 310
+      },
+      "b": {
+        "x": 359,
+        "y": 392
+      },
+      "r": 1.3,
+      "material": "resin",
+      "role": "right-inner-lower",
+      "restitution": 0.04
+    },
+    "attacker": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "tulip": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "routeBalls": [],
+    "inFlight": 6
+  },
+  "open": {
+    "spin": {
+      "lifecycle": true,
+      "mode": "right-closed",
+      "rush": {
+        "remaining": 100,
+        "chain": 2,
+        "total": 0,
+        "startedAt": 0,
+        "consumed": 0
+      },
+      "lastRush": null,
+      "round": {
+        "phase": "open",
+        "phaseTime": 0.016666666666667496,
+        "fromRush": true,
+        "round": 1,
+        "count": 0,
+        "limit": 10,
+        "payout": 0,
+        "maxPayout": 3000,
+        "remainingSeconds": 14.983333333333333,
+        "history": [
+          {
+            "phase": "payout-reveal",
+            "time": 2.4083333333333274,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "guide",
+            "time": 5.008333333333372,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "opening",
+            "time": 5.358333333333389,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "open",
+            "time": 6.008333333333422,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          }
+        ]
+      },
+      "win": {
+        "time": 6.025000000000089,
+        "fromRush": true
+      },
+      "reach": null,
+      "time": 6.025000000000089,
+      "holds": 0,
+      "active": false,
+      "draws": 0,
+      "stopTimer": 0,
+      "reels": {
+        "spinning": false,
+        "numbers": [
+          7,
+          7,
+          7
+        ],
+        "stopped": [
+          true,
+          true,
+          true
+        ]
+      },
+      "accepted": 0,
+      "entries": 0,
+      "events": []
+    },
+    "lcd": {
+      "x": 108,
+      "y": 236,
+      "width": 210,
+      "height": 140
+    },
+    "gate": {
+      "count": 8,
+      "lastPass": 5.811666666666762,
+      "lit": false
+    },
+    "leftRoutes": {
+      "roadContact": 0,
+      "nearHeso": 0,
+      "admitted": 0,
+      "nearAdmitted": 0,
+      "deflectedAtHeso": 0,
+      "nearMiss": 0,
+      "earlySpill": 0,
+      "pending": 0,
+      "nearPending": 0,
+      "nearMissOutcomes": {},
+      "outcomes": {
+        "out": 5
+      },
+      "tracked": 11,
+      "byPower": {
+        "0.6": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {
+            "out": 5
+          },
+          "tracked": 11
+        }
+      }
+    },
+    "time": 6.025000000000089,
+    "paused": false,
+    "mode": "bonus",
+    "counts": {
+      "normal": 0,
+      "start": 0,
+      "rush": 0,
+      "bonus": 0,
+      "out": 5,
+      "returned": 0
+    },
+    "spawned": 11,
+    "pockets": [
+      {
+        "x": 67,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 0
+      },
+      {
+        "x": 139,
+        "y": 617,
+        "w": 18,
+        "kind": "normal",
+        "id": 1
+      },
+      {
+        "x": 268,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 2
+      },
+      {
+        "x": 210,
+        "y": 480,
+        "w": 20,
+        "kind": "start",
+        "id": 4
+      },
+      {
+        "x": 357.25,
+        "y": 581,
+        "w": 60,
+        "kind": "bonus",
+        "id": 5,
+        "captureTray": {
+          "left": 335.125,
+          "right": 373.875,
+          "y": 600.5,
+          "radius": 1.4
+        }
+      },
+      {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      }
+    ],
+    "guide": {
+      "a": {
+        "x": 359,
+        "y": 310
+      },
+      "b": {
+        "x": 359,
+        "y": 392
+      },
+      "r": 1.3,
+      "material": "resin",
+      "role": "right-inner-lower",
+      "restitution": 0.04
+    },
+    "attacker": {
+      "progress": 1,
+      "target": 1,
+      "moving": false
+    },
+    "tulip": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "routeBalls": [],
+    "inFlight": 6
+  },
+  "final": {
+    "spin": {
+      "lifecycle": true,
+      "mode": "right-closed",
+      "rush": {
+        "remaining": 100,
+        "chain": 2,
+        "total": 75,
+        "startedAt": 0,
+        "consumed": 0
+      },
+      "lastRush": null,
+      "round": {
+        "phase": "open",
+        "phaseTime": 3.4333333333333496,
+        "fromRush": true,
+        "round": 1,
+        "count": 5,
+        "limit": 10,
+        "payout": 75,
+        "maxPayout": 3000,
+        "remainingSeconds": 11.566666666666677,
+        "history": [
+          {
+            "phase": "payout-reveal",
+            "time": 2.4083333333333274,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "guide",
+            "time": 5.008333333333372,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "opening",
+            "time": 5.358333333333389,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "open",
+            "time": 6.008333333333422,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "admission",
+            "time": 7.333333333333488,
+            "round": 1,
+            "count": 1,
+            "ballId": 9,
+            "payout": 15
+          },
+          {
+            "phase": "admission",
+            "time": 7.491666666666829,
+            "round": 1,
+            "count": 2,
+            "ballId": 8,
+            "payout": 30
+          },
+          {
+            "phase": "admission",
+            "time": 7.91666666666685,
+            "round": 1,
+            "count": 3,
+            "ballId": 10,
+            "payout": 45
+          },
+          {
+            "phase": "admission",
+            "time": 8.975000000000131,
+            "round": 1,
+            "count": 4,
+            "ballId": 11,
+            "payout": 60
+          },
+          {
+            "phase": "admission",
+            "time": 9.216666666666784,
+            "round": 1,
+            "count": 5,
+            "ballId": 12,
+            "payout": 75
+          }
+        ]
+      },
+      "win": {
+        "time": 9.441666666666771,
+        "fromRush": true
+      },
+      "reach": null,
+      "time": 9.441666666666771,
+      "holds": 0,
+      "active": false,
+      "draws": 0,
+      "stopTimer": 0,
+      "reels": {
+        "spinning": false,
+        "numbers": [
+          7,
+          7,
+          7
+        ],
+        "stopped": [
+          true,
+          true,
+          true
+        ]
+      },
+      "accepted": 0,
+      "entries": 0,
+      "events": []
+    },
+    "lcd": {
+      "x": 108,
+      "y": 236,
+      "width": 210,
+      "height": 140
+    },
+    "gate": {
+      "count": 14,
+      "lastPass": 9.385000000000653,
+      "lit": true
+    },
+    "leftRoutes": {
+      "roadContact": 0,
+      "nearHeso": 0,
+      "admitted": 0,
+      "nearAdmitted": 0,
+      "deflectedAtHeso": 0,
+      "nearMiss": 0,
+      "earlySpill": 0,
+      "pending": 0,
+      "nearPending": 0,
+      "nearMissOutcomes": {},
+      "outcomes": {
+        "out": 7,
+        "bonus": 5
+      },
+      "tracked": 16,
+      "byPower": {
+        "0.6": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {
+            "out": 7,
+            "bonus": 5
+          },
+          "tracked": 16
+        }
+      }
+    },
+    "time": 9.441666666666771,
+    "paused": false,
+    "mode": "bonus",
+    "counts": {
+      "normal": 0,
+      "start": 0,
+      "rush": 0,
+      "bonus": 5,
+      "out": 7,
+      "returned": 0
+    },
+    "spawned": 16,
+    "pockets": [
+      {
+        "x": 67,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 0
+      },
+      {
+        "x": 139,
+        "y": 617,
+        "w": 18,
+        "kind": "normal",
+        "id": 1
+      },
+      {
+        "x": 268,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 2
+      },
+      {
+        "x": 210,
+        "y": 480,
+        "w": 20,
+        "kind": "start",
+        "id": 4
+      },
+      {
+        "x": 357.25,
+        "y": 581,
+        "w": 60,
+        "kind": "bonus",
+        "id": 5,
+        "captureTray": {
+          "left": 335.125,
+          "right": 373.875,
+          "y": 600.5,
+          "radius": 1.4
+        }
+      },
+      {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      }
+    ],
+    "guide": {
+      "a": {
+        "x": 359,
+        "y": 310
+      },
+      "b": {
+        "x": 359,
+        "y": 392
+      },
+      "r": 1.3,
+      "material": "resin",
+      "role": "right-inner-lower",
+      "restitution": 0.04
+    },
+    "attacker": {
+      "progress": 1,
+      "target": 1,
+      "moving": false
+    },
+    "tulip": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "routeBalls": [],
+    "inFlight": 4
+  },
+  "errors": [],
+  "states": [
+    {
+      "time": 0.05833333333333333,
+      "phase": "celebration",
+      "phaseTime": 0.05833333333333333,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 0.15833333333333333,
+      "phase": "celebration",
+      "phaseTime": 0.15833333333333333,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 0.2583333333333333,
+      "phase": "celebration",
+      "phaseTime": 0.2583333333333333,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 0.3583333333333336,
+      "phase": "celebration",
+      "phaseTime": 0.3583333333333336,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 0.47500000000000064,
+      "phase": "celebration",
+      "phaseTime": 0.47500000000000064,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 0.5750000000000004,
+      "phase": "celebration",
+      "phaseTime": 0.5750000000000004,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 0.675,
+      "phase": "celebration",
+      "phaseTime": 0.675,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 0.7749999999999997,
+      "phase": "celebration",
+      "phaseTime": 0.7749999999999997,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 0.8749999999999993,
+      "phase": "celebration",
+      "phaseTime": 0.8749999999999993,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 0.974999999999999,
+      "phase": "celebration",
+      "phaseTime": 0.974999999999999,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 1.0916666666666652,
+      "phase": "celebration",
+      "phaseTime": 1.0916666666666652,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 1.1916666666666649,
+      "phase": "celebration",
+      "phaseTime": 1.1916666666666649,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 1.2916666666666645,
+      "phase": "celebration",
+      "phaseTime": 1.2916666666666645,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 1.3916666666666642,
+      "phase": "celebration",
+      "phaseTime": 1.3916666666666642,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 1.4916666666666638,
+      "phase": "celebration",
+      "phaseTime": 1.4916666666666638,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 1.60833333333333,
+      "phase": "celebration",
+      "phaseTime": 1.60833333333333,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 1.7083333333333297,
+      "phase": "celebration",
+      "phaseTime": 1.7083333333333297,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 1.8083333333333294,
+      "phase": "celebration",
+      "phaseTime": 1.8083333333333294,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 1.908333333333329,
+      "phase": "celebration",
+      "phaseTime": 1.908333333333329,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 2.008333333333329,
+      "phase": "celebration",
+      "phaseTime": 2.008333333333329,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 2.1083333333333285,
+      "phase": "celebration",
+      "phaseTime": 2.1083333333333285,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 2.2249999999999948,
+      "phase": "celebration",
+      "phaseTime": 2.2249999999999948,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 2.3249999999999944,
+      "phase": "celebration",
+      "phaseTime": 2.3249999999999944,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    {
+      "time": 2.424999999999994,
+      "phase": "payout-reveal",
+      "phaseTime": 0.016666666666666607,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 2.5249999999999937,
+      "phase": "payout-reveal",
+      "phaseTime": 0.11666666666666625,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 2.6249999999999933,
+      "phase": "payout-reveal",
+      "phaseTime": 0.2166666666666659,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 2.7416666666666596,
+      "phase": "payout-reveal",
+      "phaseTime": 0.33333333333333215,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 2.8416666666666592,
+      "phase": "payout-reveal",
+      "phaseTime": 0.4333333333333318,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 2.941666666666659,
+      "phase": "payout-reveal",
+      "phaseTime": 0.5333333333333314,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 3.0416666666666585,
+      "phase": "payout-reveal",
+      "phaseTime": 0.6333333333333311,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 3.141666666666658,
+      "phase": "payout-reveal",
+      "phaseTime": 0.7333333333333307,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 3.3416666666666575,
+      "phase": "payout-reveal",
+      "phaseTime": 0.93333333333333,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 3.441666666666657,
+      "phase": "payout-reveal",
+      "phaseTime": 1.0333333333333297,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 3.5416666666666567,
+      "phase": "payout-reveal",
+      "phaseTime": 1.1333333333333293,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 3.6416666666666564,
+      "phase": "payout-reveal",
+      "phaseTime": 1.233333333333329,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 3.741666666666656,
+      "phase": "payout-reveal",
+      "phaseTime": 1.3333333333333286,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 3.8416666666666557,
+      "phase": "payout-reveal",
+      "phaseTime": 1.4333333333333282,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 3.958333333333322,
+      "phase": "payout-reveal",
+      "phaseTime": 1.5499999999999945,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 4.058333333333325,
+      "phase": "payout-reveal",
+      "phaseTime": 1.6499999999999972,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 4.15833333333333,
+      "phase": "payout-reveal",
+      "phaseTime": 1.7500000000000022,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 4.258333333333335,
+      "phase": "payout-reveal",
+      "phaseTime": 1.8500000000000072,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 4.35833333333334,
+      "phase": "payout-reveal",
+      "phaseTime": 1.9500000000000122,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 4.475000000000012,
+      "phase": "payout-reveal",
+      "phaseTime": 2.0666666666666846,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 4.575000000000017,
+      "phase": "payout-reveal",
+      "phaseTime": 2.1666666666666896,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 4.675000000000022,
+      "phase": "payout-reveal",
+      "phaseTime": 2.2666666666666946,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 4.775000000000027,
+      "phase": "payout-reveal",
+      "phaseTime": 2.3666666666666996,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 4.875000000000032,
+      "phase": "payout-reveal",
+      "phaseTime": 2.4666666666667045,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 4.991666666666704,
+      "phase": "payout-reveal",
+      "phaseTime": 2.583333333333377,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 5.091666666666709,
+      "phase": "guide",
+      "phaseTime": 0.08333333333333748,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 5.191666666666714,
+      "phase": "guide",
+      "phaseTime": 0.18333333333334245,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 5.291666666666719,
+      "phase": "guide",
+      "phaseTime": 0.2833333333333474,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 5.391666666666724,
+      "phase": "opening",
+      "phaseTime": 0.03333333333333499,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 5.508333333333397,
+      "phase": "opening",
+      "phaseTime": 0.15000000000000746,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 5.608333333333402,
+      "phase": "opening",
+      "phaseTime": 0.25000000000001243,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 5.708333333333407,
+      "phase": "opening",
+      "phaseTime": 0.3500000000000174,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 5.808333333333412,
+      "phase": "opening",
+      "phaseTime": 0.4500000000000224,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 5.925000000000084,
+      "phase": "opening",
+      "phaseTime": 0.5666666666666949,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 6.025000000000089,
+      "phase": "open",
+      "phaseTime": 0.016666666666667496,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 14.983333333333333,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 6.125000000000094,
+      "phase": "open",
+      "phaseTime": 0.11666666666667247,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 14.883333333333333,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 6.225000000000099,
+      "phase": "open",
+      "phaseTime": 0.21666666666667744,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 14.783333333333333,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 6.325000000000104,
+      "phase": "open",
+      "phaseTime": 0.3166666666666824,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 14.683333333333334,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 6.441666666666777,
+      "phase": "open",
+      "phaseTime": 0.4333333333333549,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 14.566666666666666,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 6.5416666666667815,
+      "phase": "open",
+      "phaseTime": 0.5333333333333599,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 14.466666666666667,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 6.6416666666667865,
+      "phase": "open",
+      "phaseTime": 0.6333333333333648,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 14.366666666666667,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 6.7416666666667915,
+      "phase": "open",
+      "phaseTime": 0.7333333333333698,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 14.266666666666667,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 6.858333333333464,
+      "phase": "open",
+      "phaseTime": 0.8500000000000423,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 14.15,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 6.958333333333469,
+      "phase": "open",
+      "phaseTime": 0.9500000000000473,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 14.05,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 7.058333333333474,
+      "phase": "open",
+      "phaseTime": 1.0500000000000522,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 13.950000000000001,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 7.158333333333479,
+      "phase": "open",
+      "phaseTime": 1.1500000000000572,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 13.850000000000001,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 7.275000000000151,
+      "phase": "open",
+      "phaseTime": 1.2666666666667297,
+      "fromRush": true,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 3000,
+      "remainingSeconds": 13.733333333333336,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        }
+      ]
+    },
+    {
+      "time": 7.375000000000156,
+      "phase": "open",
+      "phaseTime": 1.3666666666667346,
+      "fromRush": true,
+      "round": 1,
+      "count": 1,
+      "limit": 10,
+      "payout": 15,
+      "maxPayout": 3000,
+      "remainingSeconds": 13.633333333333336,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        }
+      ]
+    },
+    {
+      "time": 7.475000000000161,
+      "phase": "open",
+      "phaseTime": 1.4666666666667396,
+      "fromRush": true,
+      "round": 1,
+      "count": 1,
+      "limit": 10,
+      "payout": 15,
+      "maxPayout": 3000,
+      "remainingSeconds": 13.533333333333337,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        }
+      ]
+    },
+    {
+      "time": 7.575000000000166,
+      "phase": "open",
+      "phaseTime": 1.5666666666667446,
+      "fromRush": true,
+      "round": 1,
+      "count": 2,
+      "limit": 10,
+      "payout": 30,
+      "maxPayout": 3000,
+      "remainingSeconds": 13.433333333333337,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        }
+      ]
+    },
+    {
+      "time": 7.675000000000171,
+      "phase": "open",
+      "phaseTime": 1.6666666666667496,
+      "fromRush": true,
+      "round": 1,
+      "count": 2,
+      "limit": 10,
+      "payout": 30,
+      "maxPayout": 3000,
+      "remainingSeconds": 13.333333333333337,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        }
+      ]
+    },
+    {
+      "time": 7.791666666666844,
+      "phase": "open",
+      "phaseTime": 1.783333333333422,
+      "fromRush": true,
+      "round": 1,
+      "count": 2,
+      "limit": 10,
+      "payout": 30,
+      "maxPayout": 3000,
+      "remainingSeconds": 13.21666666666667,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        }
+      ]
+    },
+    {
+      "time": 7.891666666666849,
+      "phase": "open",
+      "phaseTime": 1.883333333333427,
+      "fromRush": true,
+      "round": 1,
+      "count": 2,
+      "limit": 10,
+      "payout": 30,
+      "maxPayout": 3000,
+      "remainingSeconds": 13.11666666666667,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        }
+      ]
+    },
+    {
+      "time": 7.991666666666854,
+      "phase": "open",
+      "phaseTime": 1.983333333333432,
+      "fromRush": true,
+      "round": 1,
+      "count": 3,
+      "limit": 10,
+      "payout": 45,
+      "maxPayout": 3000,
+      "remainingSeconds": 13.016666666666671,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        },
+        {
+          "phase": "admission",
+          "time": 7.91666666666685,
+          "round": 1,
+          "count": 3,
+          "ballId": 10,
+          "payout": 45
+        }
+      ]
+    },
+    {
+      "time": 8.091666666666848,
+      "phase": "open",
+      "phaseTime": 2.0833333333334263,
+      "fromRush": true,
+      "round": 1,
+      "count": 3,
+      "limit": 10,
+      "payout": 45,
+      "maxPayout": 3000,
+      "remainingSeconds": 12.916666666666671,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        },
+        {
+          "phase": "admission",
+          "time": 7.91666666666685,
+          "round": 1,
+          "count": 3,
+          "ballId": 10,
+          "payout": 45
+        }
+      ]
+    },
+    {
+      "time": 8.191666666666842,
+      "phase": "open",
+      "phaseTime": 2.1833333333334206,
+      "fromRush": true,
+      "round": 1,
+      "count": 3,
+      "limit": 10,
+      "payout": 45,
+      "maxPayout": 3000,
+      "remainingSeconds": 12.816666666666672,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        },
+        {
+          "phase": "admission",
+          "time": 7.91666666666685,
+          "round": 1,
+          "count": 3,
+          "ballId": 10,
+          "payout": 45
+        }
+      ]
+    },
+    {
+      "time": 8.308333333333502,
+      "phase": "open",
+      "phaseTime": 2.3000000000000806,
+      "fromRush": true,
+      "round": 1,
+      "count": 3,
+      "limit": 10,
+      "payout": 45,
+      "maxPayout": 3000,
+      "remainingSeconds": 12.700000000000006,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        },
+        {
+          "phase": "admission",
+          "time": 7.91666666666685,
+          "round": 1,
+          "count": 3,
+          "ballId": 10,
+          "payout": 45
+        }
+      ]
+    },
+    {
+      "time": 8.408333333333497,
+      "phase": "open",
+      "phaseTime": 2.400000000000075,
+      "fromRush": true,
+      "round": 1,
+      "count": 3,
+      "limit": 10,
+      "payout": 45,
+      "maxPayout": 3000,
+      "remainingSeconds": 12.600000000000005,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        },
+        {
+          "phase": "admission",
+          "time": 7.91666666666685,
+          "round": 1,
+          "count": 3,
+          "ballId": 10,
+          "payout": 45
+        }
+      ]
+    },
+    {
+      "time": 8.508333333333491,
+      "phase": "open",
+      "phaseTime": 2.5000000000000693,
+      "fromRush": true,
+      "round": 1,
+      "count": 3,
+      "limit": 10,
+      "payout": 45,
+      "maxPayout": 3000,
+      "remainingSeconds": 12.500000000000007,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        },
+        {
+          "phase": "admission",
+          "time": 7.91666666666685,
+          "round": 1,
+          "count": 3,
+          "ballId": 10,
+          "payout": 45
+        }
+      ]
+    },
+    {
+      "time": 8.608333333333485,
+      "phase": "open",
+      "phaseTime": 2.6000000000000636,
+      "fromRush": true,
+      "round": 1,
+      "count": 3,
+      "limit": 10,
+      "payout": 45,
+      "maxPayout": 3000,
+      "remainingSeconds": 12.400000000000006,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        },
+        {
+          "phase": "admission",
+          "time": 7.91666666666685,
+          "round": 1,
+          "count": 3,
+          "ballId": 10,
+          "payout": 45
+        }
+      ]
+    },
+    {
+      "time": 8.70833333333348,
+      "phase": "open",
+      "phaseTime": 2.700000000000058,
+      "fromRush": true,
+      "round": 1,
+      "count": 3,
+      "limit": 10,
+      "payout": 45,
+      "maxPayout": 3000,
+      "remainingSeconds": 12.300000000000008,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        },
+        {
+          "phase": "admission",
+          "time": 7.91666666666685,
+          "round": 1,
+          "count": 3,
+          "ballId": 10,
+          "payout": 45
+        }
+      ]
+    },
+    {
+      "time": 8.82500000000014,
+      "phase": "open",
+      "phaseTime": 2.816666666666718,
+      "fromRush": true,
+      "round": 1,
+      "count": 3,
+      "limit": 10,
+      "payout": 45,
+      "maxPayout": 3000,
+      "remainingSeconds": 12.18333333333334,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        },
+        {
+          "phase": "admission",
+          "time": 7.91666666666685,
+          "round": 1,
+          "count": 3,
+          "ballId": 10,
+          "payout": 45
+        }
+      ]
+    },
+    {
+      "time": 8.925000000000134,
+      "phase": "open",
+      "phaseTime": 2.9166666666667123,
+      "fromRush": true,
+      "round": 1,
+      "count": 3,
+      "limit": 10,
+      "payout": 45,
+      "maxPayout": 3000,
+      "remainingSeconds": 12.083333333333341,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        },
+        {
+          "phase": "admission",
+          "time": 7.91666666666685,
+          "round": 1,
+          "count": 3,
+          "ballId": 10,
+          "payout": 45
+        }
+      ]
+    },
+    {
+      "time": 9.025000000000128,
+      "phase": "open",
+      "phaseTime": 3.0166666666667066,
+      "fromRush": true,
+      "round": 1,
+      "count": 4,
+      "limit": 10,
+      "payout": 60,
+      "maxPayout": 3000,
+      "remainingSeconds": 11.983333333333341,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        },
+        {
+          "phase": "admission",
+          "time": 7.91666666666685,
+          "round": 1,
+          "count": 3,
+          "ballId": 10,
+          "payout": 45
+        },
+        {
+          "phase": "admission",
+          "time": 8.975000000000131,
+          "round": 1,
+          "count": 4,
+          "ballId": 11,
+          "payout": 60
+        }
+      ]
+    },
+    {
+      "time": 9.125000000000123,
+      "phase": "open",
+      "phaseTime": 3.116666666666701,
+      "fromRush": true,
+      "round": 1,
+      "count": 4,
+      "limit": 10,
+      "payout": 60,
+      "maxPayout": 3000,
+      "remainingSeconds": 11.883333333333342,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        },
+        {
+          "phase": "admission",
+          "time": 7.91666666666685,
+          "round": 1,
+          "count": 3,
+          "ballId": 10,
+          "payout": 45
+        },
+        {
+          "phase": "admission",
+          "time": 8.975000000000131,
+          "round": 1,
+          "count": 4,
+          "ballId": 11,
+          "payout": 60
+        }
+      ]
+    },
+    {
+      "time": 9.241666666666783,
+      "phase": "open",
+      "phaseTime": 3.233333333333361,
+      "fromRush": true,
+      "round": 1,
+      "count": 5,
+      "limit": 10,
+      "payout": 75,
+      "maxPayout": 3000,
+      "remainingSeconds": 11.766666666666676,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        },
+        {
+          "phase": "admission",
+          "time": 7.91666666666685,
+          "round": 1,
+          "count": 3,
+          "ballId": 10,
+          "payout": 45
+        },
+        {
+          "phase": "admission",
+          "time": 8.975000000000131,
+          "round": 1,
+          "count": 4,
+          "ballId": 11,
+          "payout": 60
+        },
+        {
+          "phase": "admission",
+          "time": 9.216666666666784,
+          "round": 1,
+          "count": 5,
+          "ballId": 12,
+          "payout": 75
+        }
+      ]
+    },
+    {
+      "time": 9.341666666666777,
+      "phase": "open",
+      "phaseTime": 3.3333333333333552,
+      "fromRush": true,
+      "round": 1,
+      "count": 5,
+      "limit": 10,
+      "payout": 75,
+      "maxPayout": 3000,
+      "remainingSeconds": 11.666666666666675,
+      "history": [
+        {
+          "phase": "payout-reveal",
+          "time": 2.4083333333333274,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "guide",
+          "time": 5.008333333333372,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 5.358333333333389,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 6.008333333333422,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 7.333333333333488,
+          "round": 1,
+          "count": 1,
+          "ballId": 9,
+          "payout": 15
+        },
+        {
+          "phase": "admission",
+          "time": 7.491666666666829,
+          "round": 1,
+          "count": 2,
+          "ballId": 8,
+          "payout": 30
+        },
+        {
+          "phase": "admission",
+          "time": 7.91666666666685,
+          "round": 1,
+          "count": 3,
+          "ballId": 10,
+          "payout": 45
+        },
+        {
+          "phase": "admission",
+          "time": 8.975000000000131,
+          "round": 1,
+          "count": 4,
+          "ballId": 11,
+          "payout": 60
+        },
+        {
+          "phase": "admission",
+          "time": 9.216666666666784,
+          "round": 1,
+          "count": 5,
+          "ballId": 12,
+          "payout": 75
+        }
+      ]
+    }
+  ]
+}

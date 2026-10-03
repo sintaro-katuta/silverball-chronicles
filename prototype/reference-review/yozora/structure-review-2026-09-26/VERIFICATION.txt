@@ -1,0 +1,66 @@
+SOURCE yozora-structure-round8.log
+YOZORA_LONG_RUN_PASS: payout units / award boundaries / presentation isolation / 20000 completed spins / seeded distribution samples
+YOZORA_RULE_TESTS_PASSED 15 + FAIR validation
+YOZORA_CABINET_PHYSICS_STRUCTURE_PASSED: decorative isolation / six-pocket orbit / guide lifecycle; not real-machine calibration
+
+SOURCE yozora-flows-round8.log
+LEFT_FLOW_SAMPLE name=upper left falling terminal=FAIR selector boundary time=0.575s final=(-0.1841, 0.5551, -0.0520) LCDsolidMax=0.00102 MeshAPImax=0.00550
+LEFT_FLOW_SAMPLE name=upper outer falling terminal=FAIR selector boundary time=0.292s final=(-0.1922, 0.5571, -0.0520) LCDsolidMax=0.00000 MeshAPImax=0.00000
+LEFT_FLOW_SAMPLE name=upper bank inward terminal=FAIR selector boundary time=0.383s final=(-0.1956, 0.5588, -0.0520) LCDsolidMax=0.00000 MeshAPImax=0.00000
+LEFT_FLOW_SAMPLE name=left vertical upper terminal=FAIR selector boundary time=0.100s final=(-0.1920, 0.5569, -0.0520) LCDsolidMax=0.00000 MeshAPImax=0.00000
+LEFT_FLOW_SAMPLE name=left vertical lower terminal=Out time=0.317s final=(-0.1975, 0.2152, -0.0520) LCDsolidMax=0.00000 MeshAPImax=0.00000
+LEFT_FLOW_SAMPLE name=after selector normal spill terminal=Out time=0.275s final=(-0.1972, 0.2152, -0.0520) LCDsolidMax=0.00000 MeshAPImax=0.00000
+LEFT_FLOW_SAMPLE name=lower nail bank terminal=Out time=0.183s final=(-0.1500, 0.2144, -0.0520) LCDsolidMax=0.00000 MeshAPImax=0.00000
+LEFT_FLOW_SAMPLE name=PLUS approach terminal=Plus time=0.058s final=(-0.0640, 0.3339, -0.0520) LCDsolidMax=0.00000 MeshAPImax=0.00000
+LEFT_FLOW_PASSED: 8/8 free-physics probes reached selector/PLUS/OUT/drain; no > half-radius LCD penetration or 12s trap. FAIR guided FixedUpdate and gameplay probabilities excluded.
+RIGHT_FLOW closed x=0.190 attacker=False right=True escaped=False stuck=False last=(0.24, 0.34, -0.05)
+RIGHT_FLOW closed x=0.205 attacker=False right=True escaped=False stuck=False last=(0.24, 0.34, -0.05)
+RIGHT_FLOW closed x=0.220 attacker=False right=True escaped=False stuck=False last=(0.24, 0.34, -0.05)
+RIGHT_FLOW closed x=0.225 attacker=False right=True escaped=False stuck=False last=(0.24, 0.34, -0.05)
+RIGHT_FLOW open x=0.190 attacker=True right=False escaped=False stuck=False last=(0.23, 0.36, -0.05)
+RIGHT_FLOW open x=0.205 attacker=True right=False escaped=False stuck=False last=(0.18, 0.36, -0.05)
+RIGHT_FLOW open x=0.220 attacker=True right=False escaped=False stuck=False last=(0.20, 0.35, -0.05)
+RIGHT_FLOW open x=0.225 attacker=False right=True escaped=False stuck=False last=(0.23, 0.34, -0.05)
+RIGHT_FLOW_PASS: right-lane injection, closed blocks and open accepts; does not certify real-machine port identity or admission rate
+LAUNCHER_FLOW normal-closed speed=3.60 pass=True terminal=FAIR_selector_boundary leftEntry=True rightEntry=False time=0.783s maxY=0.7951 maxLCD=0.000000 final=(-0.19595, 0.56140, -0.05200)
+LAUNCHER_FLOW normal-open speed=3.60 pass=True terminal=FAIR_selector_boundary leftEntry=True rightEntry=False time=0.767s maxY=0.7949 maxLCD=0.000000 final=(-0.18291, 0.55653, -0.05200)
+LAUNCHER_FLOW right-closed speed=5.50 pass=True terminal=Right leftEntry=False rightEntry=True time=1.242s maxY=0.9114 maxLCD=0.000000 final=(0.23649, 0.34470, -0.06702)
+LAUNCHER_FLOW right-open speed=5.50 pass=True terminal=Attacker leftEntry=False rightEntry=True time=1.008s maxY=0.9114 maxLCD=0.000000 final=(0.21372, 0.35450, -0.06770)
+LAUNCHER_FLOW_PASSED 4/4: normal enters left field, right enters traced right route; closed RIGHT/open attacker. Every fixed tick saved to /Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/yozora/structure-review-2026-09-26/launcher-flow
+
+SOURCE yozora-runtime-round8.log
+PASS open gate accepts exactly one real moving ball actual=1
+PASS closed gate physically blocks attacker sensor actual=0
+PASS closed normal gate cannot award actual=0
+PASS five physical selector arrivals actual=5
+PASS selected fifth ball reaches moving rotor pocket actual=1
+PASS pause freezes mechanism transforms actual=0
+PASS pause during gate opening keeps its position actual=0
+PASS resume completes gate travel actual=0
+PASS right admission once at preview rate 4 actual=1
+PASS right admission once at preview rate 8 actual=1
+PASS actual normal launcher reaches selector and rotor actual=2
+PASS actual bonus launcher reaches scoring aperture actual=10
+STRUCTURE_RUNTIME_PASS failures=0
+
+
+SOURCE yozora-runtime-round9.log (final FAIR depth)
+PASS open gate accepts exactly one real moving ball actual=1
+PASS closed gate physically blocks attacker sensor actual=0
+PASS closed normal gate cannot award actual=0
+PASS five physical selector arrivals actual=5
+PASS selected fifth ball reaches moving rotor pocket actual=1
+PASS pause freezes mechanism transforms actual=0
+PASS pause during gate opening keeps its position actual=0
+PASS resume completes gate travel actual=0
+PASS right admission once at preview rate 4 actual=1
+PASS right admission once at preview rate 8 actual=1
+PASS actual normal launcher reaches selector and rotor actual=2
+PASS actual bonus launcher reaches scoring aperture actual=10
+STRUCTURE_RUNTIME_PASS failures=0
+
+FINAL BUILD
+YOZORA_CABINET_PHYSICS_STRUCTURE_PASSED: decorative isolation / six-pocket orbit / guide lifecycle; not real-machine calibration
+YOZORA_WEB_BUILD_SUCCESS /Users/sintaro.katuta/dev/silverball-chronicles/prototype/public/unity-yozora
+VITE_BUILD_PASS
+BROWSER_PASS: launch / right view / BONUS / reset / Round9 FAIR close-up / front view

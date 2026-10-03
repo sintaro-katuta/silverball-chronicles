@@ -1,0 +1,18 @@
+import {chromium} from '@playwright/test';
+import {writeFile} from 'node:fs/promises';
+const dir='reference-review/lunar-decor-2026-10-03';
+const browser=await chromium.launch({headless:true,channel:'chrome'});
+const page=await browser.newPage({viewport:{width:1120,height:1100}}),errors=[];
+page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://localhost:5187/'+dir+'/');await page.waitForFunction(()=>window.__ready);
+await page.locator('#comparison').screenshot({path:dir+'/comparison.png'});
+await page.locator('#canvas').screenshot({path:dir+'/board-desktop.png'});
+await page.locator('[data-view="full"]').click();await page.locator('#canvas').screenshot({path:dir+'/full-desktop.png'});
+await page.setViewportSize({width:390,height:844});await page.locator('[data-view="board"]').click();await page.locator('#canvas').screenshot({path:dir+'/board-mobile.png'});
+const before=await page.evaluate(()=>{window.__board.feed(true);return window.__board.snapshot()});
+await page.waitForTimeout(4000);const during=await page.evaluate(()=>window.__board.snapshot());
+await page.evaluate(()=>{window.__board.feed(false);window.__board.pause(true)});await page.waitForTimeout(100);
+const paused=await page.evaluate(()=>window.__board.snapshot());await page.waitForTimeout(400);const held=await page.evaluate(()=>window.__board.snapshot());
+await writeFile(dir+'/browser-check.json',JSON.stringify({errors,shotsBefore:before.spawned,shotsAfter:during.spawned,pauseTime:paused.time,heldTime:held.time,mobileOverflow:await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)},null,2));
+await browser.close();if(errors.length)throw Error(errors.join('\n'));
+console.log('Desktop/mobile/full/board art captured; natural firing and pause checked.');

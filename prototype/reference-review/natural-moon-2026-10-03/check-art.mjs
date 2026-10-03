@@ -1,0 +1,5 @@
+import {chromium} from '@playwright/test';
+import {writeFile} from 'node:fs/promises';
+const browser=await chromium.launch({channel:'chrome',headless:true});
+try{const page=await browser.newPage();await page.goto('http://127.0.0.1:5194');
+const png=await page.evaluate(async()=>{const {createMoonCueArt}=await import('/src/pixi/moon-cue-art.js');const canvas=document.createElement('canvas');canvas.width=720;canvas.height=880;const c=canvas.getContext('2d');c.fillStyle='#102039';c.fillRect(0,0,720,880);c.font='18px sans-serif';c.fillStyle='#dbe5f0';const phases=['crescent','half','full'],colors=['none','green','blue','red'];for(let row=0;row<4;row++)for(let col=0;col<3;col++){const x=col*240,y=row*220;c.drawImage(createMoonCueArt(phases[col],colors[row]),x+24,y+10,192,192);c.fillText(`${colors[row]} / ${phases[col]}`,x+35,y+211);}return canvas.toDataURL().split(',')[1];});await writeFile('reference-review/natural-moon-2026-10-03/moon-matrix.png',Buffer.from(png,'base64'));}finally{await browser.close();}

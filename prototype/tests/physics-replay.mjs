@@ -1,0 +1,17 @@
+// Export sampled solver states for visual slow-motion verification, not a second simulation.
+import fs from 'node:fs';
+import {Physics} from '../src/physics.js';
+const tracks=[];
+for(const power of [.57,1]){
+ const p=new Physics(),g={phase:'playing',time:0,hit(){},lose(){},emit(){},rng:()=>1,value:()=>0};
+ const b=p.spawn({},power),frames=[];
+ for(let n=0;n<1200&&p.balls.length;n++){
+  frames.push({t:g.time,x:b.x,y:b.y,vx:b.vx,vy:b.vy,contact:b.lastContact??'発射',count:b.contactCount});
+  p.step(1/120,g);g.time+=1/120;
+ }
+ tracks.push({power,frames});
+}
+const p=new Physics();
+const payload=JSON.stringify({tracks,colliders:[...p.colliders,p.gate],pins:p.pins,pockets:p.pockets});
+fs.writeFileSync('reference-review/physics-audit/replay.html',`<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>発射・衝突のスロー確認</title><style>body{background:#101824;color:#e4edf8;font:15px system-ui;max-width:1000px;margin:24px auto;padding:12px}button,select,input{font:inherit;margin:8px;padding:8px}canvas{width:100%;background:#07121f;border:1px solid #607388}input{width:70%}p{line-height:1.7}#readout{white-space:pre-wrap;font:13px monospace}</style><h1>同じ盤面、異なる初速</h1><p>実装の物理ソルバーが計算した120分の1秒ごとの座標を表示します。左57%、右100%。玉が上部反射材に触れる前後の位置・速度を比較できます。アタッカー閉鎖状態です。</p><button id="play">再生</button><select id="rate"><option value="0.25">0.25倍速</option><option value="1">等速</option></select><input id="seek" type="range" min="0" step="1" value="0" aria-label="再生位置"><div id="readout"></div><canvas width="840" height="680"></canvas><script>const data=${payload};const canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d'),seek=document.querySelector('#seek'),readout=document.querySelector('#readout');let playing=false,index=0,last=0;seek.max=Math.max(...data.tracks.map(t=>t.frames.length))-1;function draw(){ctx.clearRect(0,0,840,680);readout.textContent='';data.tracks.forEach((track,k)=>{ctx.save();ctx.translate(k*420,0);ctx.strokeStyle='#7892a8';for(const c of data.colliders){ctx.strokeStyle=c.material==='rubber'?'#ff8c9e':'#7892a8';ctx.lineWidth=c.r*2;ctx.beginPath();ctx.moveTo(c.a.x,c.a.y);ctx.lineTo(c.b.x,c.b.y);ctx.stroke();}ctx.fillStyle='#b6c5d5';for(const p of data.pins){ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();}const j=Math.min(Math.floor(index),track.frames.length-1),b=track.frames[j];ctx.strokeStyle=k?'#edc783':'#7ee4de';ctx.lineWidth=1;ctx.beginPath();track.frames.slice(0,j+1).forEach((f,i)=>i?ctx.lineTo(f.x,f.y):ctx.moveTo(f.x,f.y));ctx.stroke();ctx.fillStyle='#fff';ctx.beginPath();ctx.arc(b.x,b.y,4.6,0,Math.PI*2);ctx.fill();readout.textContent+=(k?'右':'左')+' '+Math.round(track.power*100)+'%： '+b.t.toFixed(2)+'秒　速度 ('+b.vx.toFixed(1)+', '+b.vy.toFixed(1)+')　直近接触 '+b.contact+' / '+b.count+'回'+String.fromCharCode(10);ctx.restore();});}seek.oninput=()=>{index=Number(seek.value);draw();};document.querySelector('#play').onclick=()=>{if(index>=Number(seek.max))index=0;playing=!playing;document.querySelector('#play').textContent=playing?'停止':'再生';};function frame(t){if(playing){index=Math.min(Number(seek.max),index+(t-last)/1000*120*Number(document.querySelector('#rate').value));seek.value=Math.floor(index);if(index>=Number(seek.max))playing=false;draw();}last=t;requestAnimationFrame(frame);}draw();requestAnimationFrame(frame);</script></html>`);
+console.log('Wrote reference-review/physics-audit/replay.html');

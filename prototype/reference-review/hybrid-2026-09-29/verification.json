@@ -1,0 +1,294 @@
+{
+  "renderer": {
+    "engine": "PlayCanvas",
+    "cabinet": "hybrid-v3",
+    "legacyExteriorVisible": false,
+    "course": 0,
+    "entities": 640,
+    "balls": 4,
+    "gateOpen": false,
+    "canvas": {
+      "width": 540,
+      "height": 880,
+      "cssWidth": 351,
+      "pixelRatio": 1
+    },
+    "drawCalls": 563
+  },
+  "sizes": [
+    {
+      "width": 191.453125,
+      "height": 311.984375,
+      "x": 64.265625,
+      "y": 137,
+      "right": 255.71875,
+      "bottom": 448.984375,
+      "lcdX": 103.96875,
+      "lcdY": 197.96875,
+      "lcdWidth": 112.375,
+      "lcdHeight": 144.640625,
+      "overflow": false
+    },
+    {
+      "width": 351,
+      "height": 572,
+      "x": 19.5,
+      "y": 153,
+      "right": 370.5,
+      "bottom": 725,
+      "lcdX": 92.296875,
+      "lcdY": 264.796875,
+      "lcdWidth": 206.046875,
+      "lcdHeight": 265.1875,
+      "overflow": false
+    },
+    {
+      "width": 446.71875,
+      "height": 727.984375,
+      "x": 496.640625,
+      "y": 153,
+      "right": 943.359375,
+      "bottom": 880.984375,
+      "lcdX": 589.28125,
+      "lcdY": 295.28125,
+      "lcdWidth": 262.234375,
+      "lcdHeight": 337.515625,
+      "overflow": false
+    },
+    {
+      "width": 82.21875,
+      "height": 133.984375,
+      "x": 380.890625,
+      "y": 137,
+      "right": 463.109375,
+      "bottom": 270.984375,
+      "lcdX": 397.9375,
+      "lcdY": 163.1875,
+      "lcdWidth": 48.25,
+      "lcdHeight": 62.109375,
+      "overflow": false
+    }
+  ],
+  "bonusRenderer": {
+    "engine": "PlayCanvas",
+    "cabinet": "hybrid-v3",
+    "legacyExteriorVisible": false,
+    "course": 0,
+    "entities": 640,
+    "balls": 0,
+    "gateOpen": true,
+    "canvas": {
+      "width": 540,
+      "height": 880,
+      "cssWidth": 351,
+      "pixelRatio": 1
+    },
+    "drawCalls": 563
+  },
+  "bonus": {
+    "time": 24.766666666665902,
+    "fireRate": 100,
+    "stageStartStock": 400,
+    "target": 600,
+    "lowerBorder": 0,
+    "zeroTime": 0,
+    "payoutMultiplier": 1,
+    "phase": "playing",
+    "stock": 400,
+    "total": 4,
+    "ticketEstimate": 0,
+    "stage": 1,
+    "cleared": 0,
+    "balls": 0,
+    "skills": {},
+    "jackpot": {
+      "round": 1,
+      "rounds": 4,
+      "displayRounds": 4,
+      "count": 0,
+      "time": 0.5833333333333337,
+      "gap": 0,
+      "fromRush": false,
+      "entryEligible": false,
+      "entryRevealed": false,
+      "challenge": null,
+      "payout": 0,
+      "payoutMultiplier": 1,
+      "kind": "fixed-round-bonus",
+      "initialRounds": 4,
+      "continuation": null
+    },
+    "rush": null,
+    "normalHolds": 0,
+    "rushHolds": 0,
+    "rightPlay": true,
+    "practice": false,
+    "endless": false,
+    "debug": true,
+    "accounting": {
+      "basePrize": 4,
+      "gamePrize": 0,
+      "payout": 4,
+      "spent": 4,
+      "returned": 0,
+      "supply": 0,
+      "debugAdjustment": 0,
+      "extraBalls": 0,
+      "machineNet": 0,
+      "playNet": 0,
+      "balance": 0,
+      "reconciled": true
+    },
+    "physics": {
+      "spawned": 4,
+      "left": 4,
+      "right": 0,
+      "start": 0,
+      "normal": 1,
+      "bonus": 0,
+      "rush": 0,
+      "out": 3,
+      "returned": 0,
+      "ballContacts": 0,
+      "stalled": 0,
+      "roleFlow": {
+        "heso": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "jump": {
+          "contacts": 0,
+          "balls": 0,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "michi": {
+          "contacts": 3,
+          "balls": 2,
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "yori": {
+          "contacts": 1,
+          "balls": 1,
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "spread": {
+          "contacts": 10,
+          "balls": 4,
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        },
+        "prize": {
+          "contacts": 4,
+          "balls": 3,
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 2,
+          "returned": 0
+        },
+        "windmill": {
+          "contacts": 4,
+          "balls": 3,
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 3,
+          "returned": 0
+        }
+      },
+      "routeFlow": {
+        "left:spread>windmill>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>windmill": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        },
+        "left:spread>yori>michi>prize": {
+          "start": 0,
+          "normal": 1,
+          "bonus": 0,
+          "rush": 0,
+          "out": 0,
+          "returned": 0
+        },
+        "left:spread>windmill>michi>prize": {
+          "start": 0,
+          "normal": 0,
+          "bonus": 0,
+          "rush": 0,
+          "out": 1,
+          "returned": 0
+        }
+      },
+      "inFlight": 0,
+      "flow": {
+        "left": 0,
+        "right": 0
+      }
+    },
+    "pendingExtras": 0,
+    "draws": 0,
+    "lastRush": null,
+    "pityCount": 0,
+    "pityLimit": 1990,
+    "balance": 0,
+    "historyLength": 25,
+    "holds": 0,
+    "spinActive": false,
+    "stopTimer": 0,
+    "reels": [
+      7,
+      7,
+      7
+    ],
+    "presentation": null
+  },
+  "checks": [
+    "real balls",
+    "pause/resume",
+    "new LCD artwork",
+    "no frame overlay",
+    "viewport and LCD alignment",
+    "live reach to bonus",
+    "rush"
+  ],
+  "errors": [],
+  "failed": []
+}

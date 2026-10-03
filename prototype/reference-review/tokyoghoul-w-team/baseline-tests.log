@@ -1,0 +1,317 @@
+
+> tsukikage-pachinko@0.1.0 test
+> node --test tests/*.test.js
+
+✔ lower hinge is fixed, panel reverses without jumps and pauses (6.842666ms)
+✔ open tray physically receives balls; closed panel lets them reach slope (982.954125ms)
+✔ housing and open tray stay inside right guide (0.457541ms)
+✔ left guide moves left and tray is centred between guides with edge clearance (0.1755ms)
+✔ recessed opening captures side entry but rejects paths outside the visible hole (2.221625ms)
+✔ normal to RUSH and back follows the game clock without changing on pause (0.731375ms)
+✔ interrupted transition reverses continuously and reset removes old progress (0.072666ms)
+✔ second review draw reaches, retains left/middle, holds queue, misses and resumes (39.211416ms)
+✔ win review reveals stored winning second draw, holds queue through announcement (44.581583ms)
+✔ build branches retain their cause across contact, opening and final attack (0.864ms)
+✔ all live build branches keep result art and victory state hidden until judgment (0.182542ms)
+✔ style direction preserves every scene, beat interval, course rate and pause time (28.418542ms)
+✔ loss and revival dialogue never claims an early breakthrough (0.338375ms)
+✔ combined components admit in their own phases and keep accepted locations (2837.155ms)
+✔ combined closed chutes release launched balls after drain (6469.833125ms)
+✔ one 10R bonus retains its starting multiplier through real stage clears and round changes (8.364125ms)
+✔ ordinary entries stay at base prizes while the ongoing bonus stays fixed (0.863292ms)
+✔ the next bonus in the same RUSH captures the current multiplier afresh (0.430417ms)
+✔ course, permanent upgrades and bonus skills still apply alongside the captured stage multiplier (0.221625ms)
+✔ ordinary prizes keep upgrades and ball skills without stage or course amplification (2.557416ms)
+{"bonus":11,"round":2,"payout":165,"close":13.199999999999891,"gap":13.699999999999863,"next":14.349999999999826}
+✔ real right shots fill 10, pay 150, close completely and open next round (2031.473042ms)
+✔ empty round closes on 15-second open limit with no payout (49.330958ms)
+✔ high-rate arrivals never count above 10 in one round or award twice (36762.087166ms)
+✔ payout denominator uses awarded rounds and remains after timeout completion (249.518833ms)
+✔ cabinet lighting follows reach, win, payout, rush and returns to rest (1.30825ms)
+✔ centre pending and returned miss use the stored outcome (38.959ms)
+✔ centre pending and returned win use the stored outcome (31.169709ms)
+✔ linked zoom holds sixfold for one second then returns without pulsing (0.2265ms)
+✔ complete character drawings advance together and loop (1.829708ms)
+✔ no long frozen cels are introduced (0.113542ms)
+✔ winning draw resolves only after reach, and pause freezes the timeline (1.502667ms)
+✔ losing reach stays a loss, keeps subsequent draws queued, and survives stage selection (0.765833ms)
+✔ practice reach cannot overwrite an existing draw or jackpot (0.147917ms)
+✔ each windmill responds to ball contact with angular momentum (1.169125ms)
+✔ lower LCD housing has a physical surface matching the visible apron (4.296916ms)
+✔ compact lower assembly drains and accounts for all balls at increased firing rate (38338.726208ms)
+✔ 4R challenge is fixed at bonus start and pays 600 on either success or failure (12.665ms)
+✔ 6R and 10R initial wins enter RUSH, retain fixed grade and reveal only already selected rounds (0.631625ms)
+✔ challenge, bonus and RUSH clocks freeze through pause and stage choice (2.918875ms)
+✔ RUSH consumes exactly 100 accepted spins and retains normal holds until return (4.132292ms)
+✔ a winning final RUSH spin resolves its presentation before resetting, without extra residual draws (0.760875ms)
+✔ RUSH draws target 66% within 100 and 30/50/20 payouts, never normal rescue or wind, with 1-ball start prize (0.80525ms)
+✔ RUSH retained holds survive bonus/reset without rerolling or consuming spins during payout (0.65675ms)
+✔ full base payouts remain 600/900/1500, and a RUSH chain total includes its entry bonus once (1.315917ms)
+✔ campaign completion during bonus or RUSH finishes immediately and cannot start another RUSH (0.918334ms)
+✔ normal entries made during RUSH retain normal odds and wait without consuming right-side budget (0.44575ms)
+{
+  phase: 'closing',
+  passes: 166,
+  draws: 9,
+  wins: 6,
+  openings: 6,
+  holds: 5,
+  remaining: 0.008333333333332969,
+  accepted: 19,
+  resolved: 14,
+  ordinaryHolds: 4,
+  activeDraw: null,
+  prize: 84,
+  jackpot: false,
+  rush: true
+}
+✔ through passage opens only after a separate winning draw and opening expires (1.98725ms)
+✔ ordinary holds are bounded independently of start holds (0.15925ms)
+✔ real launched balls pass through, start draws and pay prizes; pause freezes both (1728.180708ms)
+✔ direction guidance enters from opposite sides, holds centrally and clears (2.364041ms)
+✔ direction reflects model changes and its clock freezes when paused (3.464208ms)
+✔ endless ignores every permanent upgrade and never mutates the original profile (3.561ms)
+✔ endless continues when all skills are maxed; zero balls still ends the run (0.596333ms)
+✔ each in-scene title retains all four landings and its entire shine (1.414083ms)
+✔ approved castle, slash and revival timing stays unchanged (0.092208ms)
+✔ all 50 scene/pattern combinations resolve once to their chosen draw result (2.59325ms)
+✔ revival visibly passes silence before a late comeback and pause freezes it (0.173541ms)
+✔ balance graph tracks current stock minus initial stock and freezes on pause (14.390667ms)
+✔ tap/diagonal gestures do not page; axes are distinct (0.886416ms)
+✔ 20 cabinets have five bounded pages; changing floors retains the page (1.458625ms)
+course 1: 12 physical entries / 100 balls
+course 2: 8 physical entries / 100 balls
+course 3: 15 physical entries / 100 balls
+✔ overshoot remains in stock and next stage measures a new net increase (1.691875ms)
+✔ 3 second failure timer pauses and resets when stock recovers (0.249375ms)
+✔ skills offered without duplicates and never at level 5 (0.421875ms)
+✔ jackpot carries round, count and time across skill choice (0.252375ms)
+✔ 10 counts or timeout closes each round and final round ends jackpot (0.193ms)
+✔ zero payout earns zero and ordinary failure keeps earned rewards (0.071917ms)
+✔ supply adds stock only and course clears without final skill (0.0885ms)
+✔ fractional payout upgrades accrue without losing value to rounding (0.500375ms)
+✔ a large payout cannot skip the next stage without a new net gain (0.094083ms)
+✔ normal firing on all three boards produces pocket entries and drains every ball (1414.64325ms)
+✔ LCD has no invisible collision shelf or side wall (3.901792ms)
+✔ pins on the LCD physically deflect balls (1.126583ms)
+✔ same-size queue replacement still moves consumed identity and lands new entry (2.8685ms)
+✔ full queue, immediate entry, mode switches and resets reconcile without ghost holds (0.226417ms)
+✔ one active spin plus five holds; overflow still pays the start award (4.425166ms)
+✔ misses stop on nonmatching varied digits instead of resetting to 371 (0.444125ms)
+✔ holds survive reach, jackpot, and stage choice, with no hidden overflow (0.460958ms)
+✔ pocket approach balls drain without the age timeout across all three boards (1169.6295ms)
+✔ reach stop digits persist after the reach ends (0.467708ms)
+✔ launcher holds new shots for an occupied muzzle or a returning ball (7.115625ms)
+✔ single-file launcher drains after sustained maximum-rate and weak-shot firing (22198.875791ms)
+✔ stage 6 normal firing keeps its full cadence without an upper-exit pileup (29934.794333ms)
+✔ source layout preserves aspect ratio and every stepped LCD opening corner (1.388208ms)
+✔ lower left lane stays open while the centre of the source screen is protected (0.282916ms)
+✔ normal: balls stay outside LCD, follow side lanes and drain (19416.851875ms)
+✔ rush: balls stay outside LCD, follow side lanes and drain (4890.686334ms)
+✔ bonus: balls stay outside LCD, follow side lanes and drain (2719.78475ms)
+✔ both modes launch at one origin no faster than 0.6 seconds (2436.251083ms)
+✔ manual power changes only future normal shots (149.123375ms)
+✔ left road has no bridging collision segments and an actual pin rebounds a falling ball (25.658792ms)
+{"shots":31,"guideContact":18,"downstream":29}
+✔ reference inlet guides share their visible coordinates and feed falling left shots downstream (3711.597833ms)
+✔ all five source-diagram receivers admit a physical ball through their visible mouth (31.504542ms)
+✖ near arrivals reconcile and cohorts retain launch power after switching (10301.926708ms)
+✔ accepted holds retain their draw and grade despite later RNG, odds and weight changes (3.465917ms)
+✔ hold overflow pays start prizes without consuming draw RNG or creating hidden draws (2.4665ms)
+✔ queued losing samples receive pity only on consumption and reset after jackpot (0.62425ms)
+✔ accounting reconciles prizes, fractional game modifiers, consumption, returns and supply (1.8465ms)
+✔ machine definitions expose RUSH draws and separate reliability from jackpot share (1.169958ms)
+✔ debug edits update runtime specifications and stock accounting without rerolling accepted holds (0.165375ms)
+✔ wind boost is fixed at entry while queued pity remains a consumption rule (0.126709ms)
+✔ practice shortcut cannot discard an accepted active draw (0.088625ms)
+✔ game clock runs once per browser frame, cancels pending/stale callbacks and can restart (1.769625ms)
+✔ leaving a game from inside a frame cannot schedule another update (0.071584ms)
+✔ all five unit pin layouts and mechanism endpoints preserve board/display alignment (1.697292ms)
+✔ migration baseline locks per-unit contacts and closed/open mechanism geometry (9.868333ms)
+✔ moon motion before resolve never reads hidden win (6.472791ms)
+✔ judgment closes; win opens; miss darkens and clears; normal resets (0.463084ms)
+✔ reactor can only expose announced rounds, independent of hidden award (0.226875ms)
+✔ same paused clock produces identical mechanism pose (0.120541ms)
+✔ FIFO keeps the entry and build snapshot after skills change, through the reach (4.097709ms)
+✔ normal and RUSH entry provenance stay separated and rejected holds emit nothing (1.069625ms)
+✔ double/back retain their real entry, opening/debug do not invent physical entries (0.747708ms)
+✔ immediate entries emit the same draw identity; snapshots sanitize missing inputs (0.203375ms)
+✔ build direction overrides are restricted to practice presentation demos (0.091833ms)
+✔ presentation provenance preserves the approved lottery/payout/RUSH regression trace (9.632375ms)
+✔ only a previously visible hold emits a consume trace, including the first spin (1.72725ms)
+✔ demo does not inherit a stale active draw, and result clears frozen trails (0.165291ms)
+✔ trace age freezes with game time and a new game clears all prior identities (0.155292ms)
+{"entries":14,"draws":14,"maxHolds":2}
+✔ physical admissions start spins, pause freezes and all accepted holds drain (19146.716542ms)
+✔ active draw is separate from five holds, full holds do not add a draw (287.98575ms)
+✔ part flow uses original launcher, fixed gates and actual physical crossing counts (897.426958ms)
+✔ pause freezes physics and stop cancels pending launches without erasing live balls (0.262792ms)
+✔ gate counts downward crossings once, not near misses or predictions (1.519042ms)
+✔ gate preserves right-closed flow at 0.6s (5547.958875ms)
+✔ gate preserves rush flow at 0.6s (3639.800875ms)
+✔ gate preserves bonus flow at 0.6s (2314.115833ms)
+✔ gate preserves right-closed flow at 0.05s (52143.748958ms)
+✔ gate preserves rush flow at 0.05s (33302.726292ms)
+✔ gate preserves bonus flow at 0.05s (15558.162583ms)
+✔ conditional payout boundaries are 30% / 50% / 20%, independent of win probability (5.162459ms)
+✔ invalid inputs do not silently award a different prize (0.261791ms)
+✔ life nail clearances physically change admission for independent incoming balls (106.754708ms)
+✔ normal launches reach the start through the role-based board without lifetime cleanup (4160.274334ms)
+✔ flow diagnostics retain role-to-pocket and role-to-out evidence with bounded route signatures (1463.731875ms)
+✔ ceiling counts consumed draws, guarantees at boundary, resets on jackpot, not stage (3.694208ms)
+✔ ordinary pockets and overflow holds do not advance pity; pause freezes it (0.963542ms)
+✔ grade weighting selects 4R/6R/10R; edited game never rewards (2.911167ms)
+✔ attacker demonstration keeps real launch physics and scores only during open interval (625.348125ms)
+✔ all course models retain the live physical layout and required mechanism nodes (23.477ms)
+✔ baked glyphs cover every cinematic label and remain individually addressable (10.215334ms)
+✔ entrance uses crossing position, rejecting a ball that enters sideways below the mouth (1.956209ms)
+✔ a diagonal ball through the mouth is accepted even if its next position is outside (1.616958ms)
+✔ sensor excludes upward, sideways, already-below and too-large balls (0.270833ms)
+✔ entrance clearance accounts for ball radius and includes a tangent passage (0.244417ms)
+✔ reach announces before battle, holding matching left and middle digits through the battle (2.3565ms)
+✔ red has higher conditional win expectation on every course without changing draw odds (0.11575ms)
+✔ both colors can win and lose; overrides are practice only and pause freezes the announcement (1.6945ms)
+✔ strip wraps to identical repeated digits with a buffer above and below (3.346ms)
+✔ fractional frame movement scrolls the existing strip without recreating symbols (2.086625ms)
+✔ left then middle then right land on their model results and stopped columns do not drift (1.166125ms)
+✔ reach locks matching left/middle while only the right strip continues, and disposal removes all columns (0.722458ms)
+✔ all courses stop left, then middle, then right, with time between each stop (4.753041ms)
+✔ reach begins only after left and middle have stopped matching, with right unresolved (1.042834ms)
+✔ fake normal return changes only display reels and ends at the blackout (1.359292ms)
+✔ revival silence stops a visible near miss without leaking or mutating the winning draw (4.121291ms)
+✔ launch strength changes only initial velocity, then gravity integrates in free space (3.246084ms)
+✔ the same upper geometry sends ordinary shots left and stronger shots right through actual contacts (67.329667ms)
+✔ weak shots physically return through the launcher instead of teleporting to the left (6.850541ms)
+✔ right arrivals drop under gravity between real guides without pins or locked x coordinates (15.6225ms)
+✔ closed physical gate diverts right shots to the outlet without awarding or hiding old balls (116.471375ms)
+✔ automatic shooting predicts physical arrivals and clears ten rounds without inter-round loss (1181.99075ms)
+✔ ball contacts separate overlapping balls and exchange momentum (0.324042ms)
+✔ adaptive collision steps prevent a fast ball from tunnelling through a thin guide (2.777583ms)
+✔ attacker door uses the configured count limit and never opens in round gaps (0.234459ms)
+✔ a weak paid shot returns to stock through the return outlet without an OUT loss (28.71325ms)
+✔ queued salute and twin balls can share the physical launcher without paid-ball loss (460.898792ms)
+✔ left launcher origin, muzzle, initial velocity and guide opening share one physical definition (8.944292ms)
+✔ both door poses reconstruct live contact endpoints rather than a horizontal closed door (2.179667ms)
+✔ native mouths stay at physical openings and backing stays behind balls (0.337ms)
+✔ decorative bearings follow moving physical pivots across open and close (1.918666ms)
+✔ closed shutter infill starts at the live slope and stays behind the ball plane (0.716625ms)
+✔ traced right channel guides physical balls and drains at 0.6s (1793.973625ms)
+✔ traced right channel guides physical balls and drains at 0.05s (19057.364917ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.2 (3227.54075ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.24 (4090.432208ms)
+✖ lower resin rim leaves normal pocket discharge clear at power 0.28 (4011.116125ms)
+✔ source-diagram route renders balls at their physical positions without the former depth offset (3.759ms)
+✔ right route advances real balls and pause freezes their physical/display coordinates (1181.332375ms)
+✔ right-start admits only when open and reverses continuously (764.046792ms)
+✔ closed tulip leaves a bypass and releases all launched balls (1698.892833ms)
+✔ only an actual completed RUSH shows an ending, then clears for left guidance (1.561791ms)
+✔ last miss holds before result; light fades before total appears (0.147917ms)
+✔ four separate downward arrivals precede the single shine (1.097833ms)
+✔ entry plays once, pauses with the clock, exits and resets cleanly (1.034167ms)
+✔ result split hands off directly to landed letters and the rainbow sweep (0.14125ms)
+{"time":219.94166666663097,"bonus":60,"rushEntries":100,"draws":100}
+{"time":182.09999999999872,"payout":1500,"bonus":160,"held":5}
+✔ actual bonus admissions lead to 100 entry-driven rush draws then automatic normal return (26839.441208ms)
+✔ non-RUSH bonus returns to normal only after the door closes (70.244292ms)
+✔ RUSH win pays from real attacker entries and resumes at 100 with remaining holds (13691.10775ms)
+✔ ending holds normal draws through result and pauses on the shared clock (4.294708ms)
+✔ normal holds during RUSH do not close the electric chucker (0.315125ms)
+✔ electric chucker opens only during RUSH and its physical scoop catches falling right shots (36.250875ms)
+✔ physical port and predictor switch RUSH to attacker and back without changing the launch (33.851583ms)
+✔ a full RUSH hold pool stops automatic firing while open-port entry still awards its prize (6.325167ms)
+✔ automatic RUSH shooting reserves remaining draws and consumes ten spins with no surplus paid shots (61.71525ms)
+✔ RUSH assist counts the actual active draw and predicted arrivals against both hold and spin limits (13.714041ms)
+✔ dense right-play streams keep reservations even when a temporary prediction says OUT (0.682542ms)
+✔ six preludes reveal existing entry only, without RNG or payout changes (0.765208ms)
+✔ loss and repeat RUSH bonuses cannot trigger initial entry preludes (0.068917ms)
+✔ 100 independent spins give 66% aggregate; normal odds and payouts are unchanged (3.581375ms)
+✔ each selected payout is earned exactly by admissions and retained independently of later RNG (3.467667ms)
+✔ missing admissions do not get an automatic payout top-up (0.40525ms)
+✔ RUSH hit darkens, bursts once, settles and sweeps a digit-shaped shine (1.320375ms)
+✔ real launches debit stock and ordinary admissions pay once and queue once (1088.649208ms)
+✔ session uses supplied production draw RNG, not review loss RNG (0.918292ms)
+✔ pause freezes both clocks and stop-fire drains existing balls (426.12625ms)
+✔ unsettled progression is not silently restored and in-flight last balls are preserved (0.273083ms)
+✔ manual and automatic shooting use the same power/angle parameters (1.388625ms)
+✔ normal right-fire warning follows observed balls instead of a power threshold (0.128625ms)
+✔ jackpot assist shows closed round waiting without normal warning (0.117ms)
+✔ RUSH auto maintains right shooting and waits for accepted spins without normal warning (0.07475ms)
+✔ extreme rates work in normal/manual play while assisted right play spaces shots (0.071333ms)
+✔ spending prevents a clear even when cumulative prizes exceed the required gain (1.288792ms)
+✔ stage targets, border, prize multiplier and firing speed rise together (1.387709ms)
+✔ upgraded initial stock and stage supplies cannot satisfy the new stage automatically (0.1785ms)
+✔ only bonus prizes scale with course and stage while accounting stays intact (0.643458ms)
+✔ below-border grace resets only on recovery to the border, pauses, and expires at three seconds (0.395875ms)
+✔ skill selection freezes the clock and the next stage begins above its new border (0.177375ms)
+✔ last-push skill uses the safety margin above the current border (0.246541ms)
+✔ live ticket milestones pay only the difference and cashout never pays them twice (0.145041ms)
+✔ turning on debug keeps previous confirmed tickets but prevents additional rewards (0.930458ms)
+✔ growth remains finite in late endless stages and firing is capped (0.141875ms)
+✔ any paid prize earns at least one ticket without clearing a stage (2.200375ms)
+✔ tickets preserve stage bonuses and upgrade rounding with an exact breakdown (1.156583ms)
+✔ zero prizes, supply and returns never earn tickets; cashing out preserves earnings (0.139125ms)
+✔ practice, endless and debug runs cannot grant progression (1.266708ms)
+✔ finished rewards can be claimed exactly once and use the played course (0.330708ms)
+✔ W continuation uses independent fuzu draws, not a separate termination lottery (1.207958ms)
+✔ announced awards preserve separate 10R bonuses and per-entry accounting (0.158584ms)
+✔ unknown timings stay explicit and published reference data is immutable (0.074ms)
+✔ ornament covers and retracts during winning reach, before center stop, never after win (0.718041ms)
+✔ normal payout branch boundaries preserve 50/48.5/1.5 (1.610291ms)
+✔ rush branch boundaries and WoU DRIVE (0.110167ms)
+✔ DRIVE handles the published tail and repeat without clipping (0.083042ms)
+✔ result fixed on admission; PUSH and pause cannot redraw or pay (0.303667ms)
+✔ bonus pays each count once, completes at 20 and resets ST to 53 (0.130375ms)
+✔ last ST spin remains available and then returns to normal on miss (0.11625ms)
+✔ last ST win renews only after payout and has no premature expiry (0.106042ms)
+✔ FAIR START every fifth launch, two of six slots award entry (0.143875ms)
+✔ hold limit, reset and empty stock (0.100542ms)
+ℹ tests 239
+ℹ suites 0
+ℹ pass 237
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 116058.446709
+
+✖ failing tests:
+
+test at tests/left-route-metrics.test.js:4:1
+✖ near arrivals reconcile and cohorts retain launch power after switching (10301.926708ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/left-route-metrics.test.js:8:42)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.start (node:internal/test_runner/test:1096:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:385:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/right-resin-route.test.js:19:40
+✖ lower resin rim leaves normal pocket discharge clear at power 0.28 (4011.116125ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  1 !== 0
+  
+      at TestContext.<anonymous> (file:///Users/sintaro.katuta/dev/silverball-chronicles/prototype/tests/right-resin-route.test.js:23:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

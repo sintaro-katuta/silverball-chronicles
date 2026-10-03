@@ -1,0 +1,7 @@
+<html><body style="background:#405070"><script type="module">
+import {Application} from 'pixi.js';
+import {createEclipseMechanism} from '/src/pixi/eclipse-mechanism.js';
+import '@fontsource/dotgothic16/japanese-400.css';
+await document.fonts.load('82px DotGothic16');
+const a=new Application();await a.init({width:240,height:180,resolution:3,background:0x405070});document.body.append(a.canvas);const v=createEclipseMechanism();v.root.position.set(15,20);a.stage.addChild(v.root);v.render({time:.7,previewWinAt:0});a.render();window.ready=true;
+</script></body></html>

@@ -1,0 +1,2 @@
+import {createBoardFlow} from '../src/pixi/board-flow.js';
+for(const power of [.23,.24,.25]){const m=createBoardFlow({lcd:true,normalPower:power});m.setMode('normal');m.flow.start();for(let i=0;i<120*120;i++)m.flow.step(1/120);m.flow.stop();for(let i=0;i<30*120;i++)m.flow.step(1/120);console.log(JSON.stringify({power,counts:m.flow.counts,spawned:m.flow.physics.metrics.spawned,remaining:m.flow.physics.balls.length}));}

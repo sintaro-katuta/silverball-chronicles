@@ -1,0 +1,55 @@
+ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers
+  built with Apple clang version 21.0.0 (clang-2100.1.1.101)
+  configuration: --prefix=/opt/homebrew/Cellar/ffmpeg/9.0.1_1 --enable-shared --enable-pthreads --enable-version3 --cc=clang --host-cflags= --host-ldflags= --enable-ffplay --enable-gpl --enable-libsvtav1 --enable-libopus --enable-libx264 --enable-libmp3lame --enable-libdav1d --enable-libvmaf --enable-libvpx --enable-libx265 --enable-openssl --enable-videotoolbox --enable-audiotoolbox --enable-neon
+  libavutil      61.  1.101 / 61.  1.101
+  libavcodec     63.  1.101 / 63.  1.101
+  libavformat    63.  1.101 / 63.  1.101
+  libavdevice    63.  1.101 / 63.  1.101
+  libavfilter    12.  1.101 / 12.  1.101
+  libswscale     10.  1.101 / 10.  1.101
+  libswresample   7.  1.101 /  7.  1.101
+Input #0, matroska,webm, from 'reference-review/view-switch-2026-10-03/page@789bad86e060b1abc243b9b902d279c3.webm':
+  Metadata:
+    creation_time   : 2026-10-03T01:12:46.592000Z
+    ENCODER         : Lavf61.1.100
+  Duration: 00:00:23.76, start: 0.000000, bitrate: 500 kb/s
+  Stream #0:0(eng): Video: vp8, yuv420p(progressive), 390x844, SAR 1:1 DAR 195:422, 25 fps, 25 tbr, 1k tbn (default)
+    Metadata:
+      ENCODER         : Lavc61.3.100 libvpx
+      DURATION        : 00:00:23.760000000
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp8 (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0xb7701ca80] using SAR=1/1
+[libx264 @ 0xb7701ca80] using cpu capabilities: ARMv8 NEON DotProd I8MM
+[libx264 @ 0xb7701ca80] profile High, level 3.0, 4:2:0, 8-bit
+[libx264 @ 0xb7701ca80] 264 - core 165 r3222 b35605a - H.264/MPEG-4 AVC codec - Copyleft 2003-2025 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=15 lookahead_threads=2 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to 'reference-review/view-switch-2026-10-03/views-left-mobile.mp4':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(eng): Video: h264 (avc1 / 0x31637661), yuv420p(tv, bt470bg/unknown/unknown, progressive), 390x844 [SAR 1:1 DAR 195:422], q=2-31, 25 fps, 12800 tbn (default)
+    Metadata:
+      encoder         : Lavc63.1.101 libx264
+      DURATION        : 00:00:23.760000000
+    Side data:
+      CPB properties: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: N/A
+[out#0/mp4 @ 0xb77008840] video:1413KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.529787%
+frame=  594 fps=0.0 q=-1.0 Lsize=    1420KiB time=00:00:23.68 bitrate= 491.4kbits/s speed=46.5x elapsed=0:00:00.50    
+[libx264 @ 0xb7701ca80] frame I:10    Avg QP:12.84  size: 31375
+[libx264 @ 0xb7701ca80] frame P:192   Avg QP:20.30  size:  4107
+[libx264 @ 0xb7701ca80] frame B:392   Avg QP:28.77  size:   877
+[libx264 @ 0xb7701ca80] consecutive B-frames: 10.6%  3.0%  3.5% 82.8%
+[libx264 @ 0xb7701ca80] mb I  I16..4: 59.0% 13.5% 27.5%
+[libx264 @ 0xb7701ca80] mb P  I16..4:  5.9%  4.8%  1.2%  P16..4: 13.1%  1.7%  1.9%  0.0%  0.0%    skip:71.5%
+[libx264 @ 0xb7701ca80] mb B  I16..4:  0.3%  0.1%  0.1%  B16..8:  5.2%  1.0%  0.4%  direct: 2.7%  skip:90.3%  L0:43.1% L1:45.9% BI:11.1%
+[libx264 @ 0xb7701ca80] 8x8 transform intra:31.3% inter:21.6%
+[libx264 @ 0xb7701ca80] coded y,uvDC,uvAC intra: 15.0% 22.0% 16.8% inter: 4.1% 6.0% 2.3%
+[libx264 @ 0xb7701ca80] i16 v,h,dc,p: 83% 13%  4%  0%
+[libx264 @ 0xb7701ca80] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 19% 17% 62%  0%  0%  0%  0%  0%  1%
+[libx264 @ 0xb7701ca80] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 28% 28% 18%  4%  4%  4%  5%  4%  5%
+[libx264 @ 0xb7701ca80] i8c dc,h,v,p: 73% 13% 13%  1%
+[libx264 @ 0xb7701ca80] Weighted P-Frames: Y:2.6% UV:2.6%
+[libx264 @ 0xb7701ca80] ref P L0: 79.6%  8.6% 10.0%  1.8%  0.0%
+[libx264 @ 0xb7701ca80] ref B L0: 90.6%  7.8%  1.5%
+[libx264 @ 0xb7701ca80] ref B L1: 91.3%  8.7%
+[libx264 @ 0xb7701ca80] kb/s:486.91

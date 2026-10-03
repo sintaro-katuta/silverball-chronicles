@@ -1,0 +1,29 @@
+.DS_Store
+.agents_hidden_message
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+
+# Local build output and synchronized copies of web assets
+/prototype/public/unity-yozora/
+/prototype/ios/App/App/public/
+/prototype/android/app/src/main/assets/public/
+/unity-yozora/*.slnx
+
+# Large local review captures and material export archives
+/prototype/reference-review/**/*.png
+/prototype/reference-review/**/*.jpg
+/prototype/reference-review/**/*.jpeg
+/prototype/reference-review/**/*.webp
+/prototype/reference-review/**/*.webm
+/prototype/reference-review/**/*.mp4
+/prototype/reference-review/**/*.zip
+/prototype/screenshots/
+/prototype/migration-prep/*.zip

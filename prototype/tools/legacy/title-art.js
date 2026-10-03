@@ -1,0 +1,21 @@
+import * as T from 'three';
+import {SVGLoader} from 'three/addons/loaders/SVGLoader.js';
+import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
+import font from '../../src/title-glyphs.json';
+
+export class TitleSculpture {
+ constructor(host){this.host=host;this.scene=new T.Scene();this.renderer=new T.WebGLRenderer({alpha:true,antialias:true});this.renderer.setPixelRatio(Math.min(devicePixelRatio,2));this.renderer.toneMapping=T.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.25;host.replaceChildren(this.renderer.domElement);const pmrem=new T.PMREMGenerator(this.renderer),room=new RoomEnvironment();this.env=pmrem.fromScene(room,.03);this.scene.environment=this.env.texture;room.dispose();pmrem.dispose();this.scene.add(new T.AmbientLight(0xffffff,1));this.key=new T.DirectionalLight(0xffffff,5);this.key.position.set(-150,160,350);this.scene.add(this.key);const rim=new T.DirectionalLight(0xffc778,3);rim.position.set(250,-80,80);this.scene.add(rim);this.camera=new T.OrthographicCamera(-250,250,85,-85,1,1600);this.camera.position.z=800;this.group=new T.Group();this.scene.add(this.group);this.materials=[];}
+ clear(){this.group.traverse(o=>o.geometry?.dispose());this.group.clear();this.materials.forEach(m=>m.dispose());this.materials=[];}
+ set(label,tone){this.clear();this.host.setAttribute('aria-label',label);let x=0;const scale=86/font.units;const side=new T.MeshStandardMaterial({color:'#ad7627',metalness:1,roughness:.18}),rim=new T.MeshStandardMaterial({color:'#fff0b0',metalness:.92,roughness:.12}),face=new T.MeshStandardMaterial({color:'#ffffff',vertexColors:true,metalness:.8,roughness:.2});this.materials=[side,rim,face];
+ const palette=tone==='normal'?['#51677b','#dcefff','#ffffff']:tone==='ice'?['#063f81','#80e4ff','#e7ffff']:tone==='red'?['#700320','#f53231','#fff0a5']:tone==='rainbow'?['#ff783e','#ffe75b','#68e7ed','#a650df']:['#63330b','#eabb54','#fff4c6'];
+ for(const char of label){const glyph=font.glyphs[char];if(!glyph){x+=45;continue;}if(!glyph.path){x+=glyph.advance*scale;continue;}const paths=new SVGLoader().parse(`<svg xmlns="http://www.w3.org/2000/svg"><path d="${glyph.path}"/></svg>`).paths;for(const path of paths){for(const shape of SVGLoader.createShapes(path)){const geometry=new T.ExtrudeGeometry(shape,{depth:145,bevelEnabled:true,bevelThickness:28,bevelSize:22,bevelSegments:4,curveSegments:7,steps:1});geometry.scale(scale,scale,scale);const position=geometry.attributes.position,colors=[];for(let i=0;i<position.count;i++){const height=Math.max(0,Math.min(.999,position.getY(i)/86)),v=height*(palette.length-1),a=Math.floor(v),color=new T.Color(palette[a]).lerp(new T.Color(palette[Math.min(a+1,palette.length-1)]),v-a);colors.push(color.r,color.g,color.b);}geometry.setAttribute('color',new T.Float32BufferAttribute(colors,3));const mesh=new T.Mesh(geometry,[face,side]);mesh.position.x=x;this.group.add(mesh);
+ // A larger, physically beveled gold rim behind the colored sculpted face.
+ const back=new T.Mesh(geometry,[rim,side]);back.scale.set(1.07,1.07,1.15);back.position.set(x-2.4,-2.4,-7);this.group.add(back);}}
+ x+=glyph.advance*scale+3;}
+ const box=new T.Box3().setFromObject(this.group),center=box.getCenter(new T.Vector3());for(const mesh of this.group.children)mesh.position.sub(center);this.width=Math.max(265,x+65);this.camera.left=-this.width/2;this.camera.right=this.width/2;this.camera.updateProjectionMatrix();this.host.style.aspectRatio=`${this.width}/170`;
+ }
+ render(time){const w=this.host.clientWidth,h=w*170/this.width;if(w&&this.lastWidth!==w){this.renderer.setSize(w,h,false);this.lastWidth=w;}const intro=1-Math.pow(1-Math.min(1,time/.4),3);this.group.scale.setScalar(.82+intro*.18);this.group.rotation.set(-.19,-.28+(1-intro)*.5+Math.sin(time*.6)*.06,-.035);this.key.position.x=-220+Math.sin(time*1.2)*280;this.renderer.render(this.scene,this.camera);}
+ dispose(){this.clear();this.env.dispose();this.renderer.dispose();this.renderer.forceContextLoss();}
+}
+export function updateTitle(host,label,tone,time){if(!label)return;host._sculpture??=new TitleSculpture(host);const key=label+tone;if(host.dataset.art!==key){host.dataset.art=key;host._sculpture.set(label,tone);}host.style.opacity=1;host.style.transform='none';host._sculpture.render(time);}
+export function disposeTitle(host){host?._sculpture?.dispose();}

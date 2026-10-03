@@ -1,0 +1,26 @@
+SCENE 0.06666667 normal-symbols
+SCENE 4.600016 sealed-road
+SCENE 7.13331 seal-challenge
+SCENE 10.13326 first-strike
+SCENE 10.66659 blade-repelled
+SCENE 14.1332 visible-fracture
+SCENE 17.13316 renewed-resolve
+SCENE 21.1331 gathering-light
+SCENE 27.13301 final-push
+SCENE 31.13294 held-breath
+SCENE 32.13296 final-strike
+SCENE 35.80041 contact-hold
+SCENE 36.60058 seal-outcome
+PASS continuous normal win resolves once
+PASS PUSH reacts without redrawing ticket
+PASS preview rate 4 resolves once
+PASS preview rate 8 resolves once
+PASS pause freezes ticket and symbol transforms
+PASS miss has no bonus or award
+PASS rush timeline reaches committed bonus
+PASS bonus presentation commits existing 300 payout once
+PASS decision route counted 1500 and returned to RUSH
+PASS DRIVE shows counted unit only
+PASS DRIVE final total equals counted 4500
+PASS upper result preview uses a completed session
+PASS reset clears result and sequence overlays

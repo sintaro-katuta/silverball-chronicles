@@ -1,0 +1,27 @@
+/* The housing and moving mechanics remain 3D; pixel art lives inside the LCD.
+   Do not pixelate either the physical ball path or the illustrated battle scenes. */
+.game-shell .board-canvas canvas,
+.game-shell .battle-canvas canvas,
+.game-shell #cinemaTitle canvas { image-rendering:auto; }
+.game-shell .anime-still img,
+.game-shell .cutin img { image-rendering:pixelated; }
+.game-shell .anime-still:after { background:linear-gradient(transparent 58%,#06102066); }
+.game-shell .lcd:not(.cinematic):not(:has(>.rush-screen:not([hidden]))) .reels {
+ top:59%;height:29%;font-size:25cqw;
+}
+.game-shell .lcd-title { top:4%;left:6%;font-size:5cqw;padding:2% 3%;background:#08192acc;border-left:2px solid #9fc7dd; }
+.game-shell .lcd .reel-symbol { font-style:normal;-webkit-text-stroke:0; }
+.game-shell .lcd .reel-symbol::after { -webkit-text-stroke:0;filter:none; }
+.game-shell .reel-window.spinning .reel-symbol { filter:none; }
+.game-shell .lcd .holds i { border-radius:0;transform:rotate(45deg); }
+.game-shell .lcd .holds i.filled { background:#9fe6f2;border-color:#e6faff;box-shadow:inset -2px -2px #337d9c; }
+.game-shell .lcd .holds i.filled[data-tone=silver] { background:#d7e9f3;border-color:white;box-shadow:inset -2px -2px #799baa; }
+.game-shell .lcd .holds i.filled[data-tone=gold] { background:#e9c979;border-color:#fff1c2;box-shadow:inset -2px -2px #97682e; }
+/* Tiny operational labels need full Japanese glyphs; reserve dot type for display art. */
+#app .game-shell .machine-dashboard, #app .game-shell .machine-dashboard *,
+#app .game-shell .control-panel, #app .game-shell .control-panel *,
+#app .game-shell .cinema-overlay>p, #app .game-shell .cinema-overlay>small {
+ font-family:system-ui,-apple-system,'Hiragino Kaku Gothic ProN',sans-serif !important;
+ -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+}
+#app .game-shell .machine-dashboard .counter-number { font-variant-numeric:tabular-nums; }

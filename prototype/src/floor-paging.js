@@ -1,0 +1,2 @@
+export function swipeDirection(dx,dy){if(Math.max(Math.abs(dx),Math.abs(dy))<55)return null;if(Math.abs(dx)>Math.abs(dy)*1.3)return dx<0?'next':'previous';if(Math.abs(dy)>Math.abs(dx)*1.3)return dy<0?'up':'down';return null;}
+export function pageAfter(state,direction){const s={...state};if(direction==='up')s.level=Math.min(2,s.level+1);if(direction==='down')s.level=Math.max(1,s.level-1);if(s.level===1){if(direction==='next')s.page=Math.min(4,s.page+1);if(direction==='previous')s.page=Math.max(0,s.page-1);}return s;}

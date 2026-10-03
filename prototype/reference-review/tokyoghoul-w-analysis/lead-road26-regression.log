@@ -1,0 +1,21 @@
+{"entries":7,"draws":7,"maxHolds":2}
+✔ physical admissions start spins, pause freezes and all accepted holds drain (12223.235166ms)
+✔ active draw is separate from five holds, full holds do not add a draw (242.127167ms)
+{"time":206.4583333333099,"bonus":60,"rushEntries":101,"draws":100}
+{"time":196.99999999998516,"payout":1500,"bonus":160,"held":5}
+✔ actual bonus admissions lead to 100 entry-driven rush draws then automatic normal return (18927.335084ms)
+✔ non-RUSH bonus returns to normal only after the door closes (58.137959ms)
+✔ RUSH win pays from real attacker entries and resumes at 100 with remaining holds (13789.85725ms)
+✔ ending holds normal draws through result and pauses on the shared clock (5.137833ms)
+✔ normal holds during RUSH do not close the electric chucker (0.404667ms)
+✔ production W bridge accepts physical fuzu/electric/V/attacker crossings and counts 3000 (119.971584ms)
+✔ natural right launches traverse fuzu, two electric admissions, two V entries and 3000 (13471.218667ms)
+✔ dense arrivals cannot be consumed beyond the ten-count closing boundary (88.181125ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 32863.217875

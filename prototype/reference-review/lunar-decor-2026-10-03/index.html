@@ -1,0 +1,10 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>月影機関 装飾試作</title><style>body{margin:0;background:#080f1b;color:#dbe9ef;font:15px system-ui}main{max-width:1100px;margin:auto;padding:20px}h1{font-size:23px}p{line-height:1.7}button{background:#243c54;color:#fff;border:1px solid #708499;padding:8px 16px;cursor:pointer}#canvas{width:min(100%,620px);margin:auto}#canvas canvas{width:100%;height:auto;image-rendering:pixelated}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:16px}.comparison canvas{width:100%;height:auto;image-rendering:pixelated;background:#152235}h2{font-size:17px}@media(max-width:600px){main{padding:10px}}</style><main><h1>月影機関 — 月の紋章を守る装備</h1><p>写真の上部「仮面と手」を、月影機関の「兜と籠手」へ翻案。右の装飾帯は鞘に収めた剣、左は盾形の銘板。元の占有範囲・液晶開口・物理を維持する装飾案です。採用未確定。</p><div><button data-view="full">全体</button> <button data-view="board">盤面</button> <button data-view="lcd">液晶</button></div><div id="canvas"></div><h2>装飾層の比較（左：変更前／右：試作）</h2><div class="comparison" id="comparison"></div><p>上部：月の紋章・兜・籠手。左：月影機関の銘板。右：三日月の鍔を持つ剣と鞘。右下：月の封印留め具。いずれも本作向けの提案で、実機のキャラクターや固有装飾の複製ではありません。</p></main><script type="module">
+import {mountBoard} from '/src/pixi/board-runtime.js';
+import {createCabinetForeground} from '/src/pixi/cabinet-foreground.js';
+const board=await mountBoard(document,{production:true});window.__board=board;board.feed(false);board.setView('board');
+for(const b of document.querySelectorAll('[data-view]'))b.onclick=()=>board.setView(b.dataset.view);
+let old=await(await fetch('./before/cabinet-foreground.txt')).text();old=old.replaceAll("'./", "'"+location.origin+"/src/pixi/");
+const url=URL.createObjectURL(new Blob([old],{type:'text/javascript'}));const before=await import(/* @vite-ignore */ url);URL.revokeObjectURL(url);
+for(const draw of [before.createCabinetForeground,createCabinetForeground]){const canvas=draw({pockets:board.snapshot().pockets});document.querySelector('#comparison').append(canvas);}
+window.__ready=true;
+</script></html>

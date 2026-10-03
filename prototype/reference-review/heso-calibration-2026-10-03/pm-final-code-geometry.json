@@ -1,0 +1,41 @@
+{
+  "pinmatch": true,
+  "mouth": {
+    "id": 4,
+    "kind": "start",
+    "x": 208.5,
+    "y": 553,
+    "w": 16
+  },
+  "rim": [
+    {
+      "a": {
+        "x": 200.5,
+        "y": 553
+      },
+      "b": {
+        "x": 200.5,
+        "y": 558
+      },
+      "r": 0.5,
+      "material": "pocket",
+      "role": "start-rim",
+      "restitution": 0.15
+    },
+    {
+      "a": {
+        "x": 216.5,
+        "y": 553
+      },
+      "b": {
+        "x": 216.5,
+        "y": 558
+      },
+      "r": 0.5,
+      "material": "pocket",
+      "role": "start-rim",
+      "restitution": 0.15
+    }
+  ],
+  "candidateExact": true
+}

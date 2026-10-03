@@ -1,0 +1,113 @@
+using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices;
+using UnityEngine;
+using UnityEngine.UI;
+namespace Yozora {
+ public class YozoraMachine:MonoBehaviour {
+  public GameObject ballPrefab;public Transform ballRoot,launchPoint,door,swordBlue,swordGold;public Rigidbody distributor;
+  public Camera viewCamera;public Text topStats,status,modeLabel,headline,subtitle,payoutLabel,titleLabel;public Text[] reels;public Image[] holds;public RawImage keyArt;
+  public Image flash;public Font font;public Material lampMaterial;public AudioSource audioSource;
+  public float normalSpeed=4.65f,rightSpeed=4.9f;
+  public YozoraRules Rules {get;private set;}
+  public bool AutoFire {get;private set;} public bool Paused {get;private set;} public bool Demo {get;private set;}
+  public int ContactCount,ScoredBalls,FairReceived,FairWon,DistributorCount;
+  readonly List<BallBody> balls=new List<BallBody>();float fireClock,reportClock,impact,gateAngle,camOrbit;bool sound;string view="front";AudioClip entryClip,winClip,contactClip;
+  int roundsSeen; float roundGap; bool wasBonus;
+  #if UNITY_WEBGL && !UNITY_EDITOR
+  [DllImport("__Internal")]static extern void YozoraReport(string data);
+  #endif
+  void Awake(){Physics.gravity=new Vector3(0,-9.81f,0);Time.fixedDeltaTime=1f/120;Time.maximumDeltaTime=.1f;Application.targetFrameRate=60;ResetMachine();MakeAudio();}
+  public void ResetMachine(){Time.timeScale=1;Paused=false;AutoFire=false;Demo=false;foreach(var b in balls)if(b)Destroy(b.gameObject);balls.Clear();Rules=new YozoraRules();Rules.Event+=OnGameEvent;ContactCount=ScoredBalls=FairReceived=FairWon=DistributorCount=0;fireClock=reportClock=impact=gateAngle=roundGap=0;roundsSeen=0;wasBonus=false;if(distributor){distributor.position=new Vector3(-.10f,.853f,-.047f);distributor.rotation=Quaternion.Euler(0,0,17);}if(door)door.localRotation=Quaternion.identity;Render();}
+  public void Command(string command){
+   if(command=="fire"){AutoFire=!AutoFire;}
+   else if(command=="pause")SetPaused(!Paused);
+   else if(command=="supply")Rules.Supply();
+   else if(command=="reset")ResetMachine();
+   else if(command=="sound"){sound=!sound;AudioListener.pause=!sound||Paused;}
+   else if(command=="angle"){view=view=="front"?"angle":"front";}
+   else if(command=="push"){if(Rules.Active!=null&&Rules.Active.reach&&Rules.Active.elapsed>7&&Rules.Active.elapsed<8.5f){impact=.35f;Play(entryClip,.3f);}}
+   else if(command.StartsWith("demo-")){ResetMachine();Demo=true;Rules.SetDemo(command.Substring(5));AutoFire=Rules.Bonus!=null||Rules.Mode!=PlayMode.Normal;}
+   Render();Report();
+  }
+  void SetPaused(bool value){Paused=value;Time.timeScale=value?0:1;AudioListener.pause=value||!sound;}
+  void OnApplicationFocus(bool focus){if(!focus)SetPaused(true);}
+  void OnApplicationPause(bool value){if(value)SetPaused(true);}
+  void OnDestroy(){Time.timeScale=1;AudioListener.pause=false;}
+  void FixedUpdate(){
+   if(Paused)return;
+   if(Rules.Bonus==null){wasBonus=false;roundsSeen=0;roundGap=0;}else if(!wasBonus){wasBonus=true;roundsSeen=0;}
+   int completed=Rules.BonusCount/10;if(Rules.Bonus!=null&&completed>roundsSeen){roundsSeen=completed;roundGap=.65f;}
+   if(roundGap>0)roundGap-=Time.fixedDeltaTime;
+   fireClock+=Time.fixedDeltaTime;
+   if(AutoFire&&fireClock>=.6f&&balls.Count<64){fireClock-=.6f;Fire();}else if(!AutoFire)fireClock=0;
+   Rules.Tick(Time.fixedDeltaTime);
+   // This kinematic blade physically opens the route; no position/velocity correction on balls.
+   if(distributor)distributor.MoveRotation(Quaternion.Euler(0,0,DistributorCount%5==4?-32:17));
+   float target=Rules.Bonus!=null&&roundGap<=0?78:0;gateAngle=Mathf.MoveTowards(gateAngle,target,Time.fixedDeltaTime*240);door.localRotation=Quaternion.Euler(gateAngle,0,0);
+  }
+  void Fire(){
+   Vector3 point=launchPoint.position;
+   if(Physics.CheckSphere(point,.006f,1<<8,QueryTriggerInteraction.Ignore))return;
+   if(!Rules.Shoot())return;
+   var go=Instantiate(ballPrefab,point,Quaternion.identity,ballRoot);go.SetActive(true);var b=go.GetComponent<BallBody>();b.owner=this;balls.Add(b);
+   go.GetComponent<Rigidbody>().linearVelocity=new Vector3(0,Rules.Bonus!=null||Rules.Mode!=PlayMode.Normal?rightSpeed:normalSpeed,0);
+  }
+  public void Receive(PocketSensor sensor,BallBody ball){
+   if(Paused)return;
+   switch(sensor.kind){
+    case PocketKind.Distributor:if(!ball.distributed){ball.distributed=true;DistributorCount++;}return;
+    case PocketKind.Plus:Rules.ReceiveStart();ball.Collect(true);break;
+    case PocketKind.Right:if(Rules.Mode!=PlayMode.Normal&&Rules.Bonus==null){Rules.ReceiveStart(true);ball.Collect(true);}break;
+    case PocketKind.Attacker:if(Rules.Bonus!=null&&gateAngle>60&&roundGap<=0&&Rules.CountBonus())ball.Collect(true);break;
+    case PocketKind.Fair:FairReceived++;if(sensor.winningSlot){FairWon++;Rules.ReceiveStart();}ball.Collect(sensor.winningSlot);break;
+    case PocketKind.Out:ball.Collect(false);break;
+   }
+  }
+  public void RemoveBall(BallBody ball,bool scored){balls.Remove(ball);if(scored)ScoredBalls++;}
+  public void Contact(float speed){ContactCount++;if(speed>.3f&&Time.frameCount%4==0)Play(contactClip,Mathf.Min(.12f,speed*.018f));}
+  void OnGameEvent(string type){if(type=="win"){impact=1;Play(winClip,.5f);}if(type=="entry")Play(entryClip,.15f);}
+  void Update(){
+   if(!Paused){impact=Mathf.Max(0,impact-Time.deltaTime*1.3f);camOrbit=Mathf.MoveTowards(camOrbit,view=="front"?0:1,Time.deltaTime*2);}
+   var target=new Vector3(0,.565f,0);viewCamera.transform.position=Vector3.Lerp(new Vector3(0,.6f,-1.68f),new Vector3(.46f,.68f,-1.60f),camOrbit);viewCamera.transform.LookAt(target);
+   if(swordBlue){float t=Rules.Active!=null&&Rules.Active.reach?Mathf.InverseLerp(6,8,Rules.Active.elapsed):Rules.Bonus!=null?.4f:0;swordBlue.localRotation=Quaternion.Euler(0,0,Mathf.Lerp(-14,-48,t));swordGold.localRotation=Quaternion.Euler(0,0,Mathf.Lerp(14,48,t));}
+   Render();reportClock+=Time.unscaledDeltaTime;if(reportClock>.3f){reportClock=0;Report();}
+  }
+  void Render(){if(Rules==null||topStats==null)return;var r=Rules;var a=r.Active;var b=r.Bonus;
+   topStats.text=$"大当り {r.Jackpots:00}       総スタート {r.Starts:0000}       ST {(b!=null||r.Mode==PlayMode.Normal?"—":r.Remaining.ToString("00"))}";
+   status.text=Paused?"一時停止":$"{(r.Mode==PlayMode.Normal&&b==null?"左打ち":"右打ち")}   持ち玉 {r.Stock:N0}   払出 {r.Payout:N0}";
+   modeLabel.text=r.Mode==PlayMode.Normal?"ALICIZATION":r.Mode==PlayMode.SwordRush?"SWORD RUSH":"WAR OF UNDERWORLD";
+   titleLabel.text=Demo?"試演モード":"UNITY / 制作中";
+   for(int i=0;i<3;i++){
+    int digit=r.Digits[i];if(a!=null){float stop=a.reach?(i==1?9.2f:1.6f+i*.2f):a.duration-.6f+i*.2f;digit=a.elapsed<stop?1+((int)(a.elapsed*13)+i*3)%9:(a.win||i!=1?a.digit:1+(a.digit+2)%9);}
+    reels[i].text=digit.ToString();reels[i].gameObject.SetActive(b==null);reels[i].rectTransform.localScale=Vector3.one*(a!=null&&a.reach?.55f:1);
+   }
+   for(int i=0;i<4;i++)holds[i].color=i<r.Holds.Count?new Color(.6f,.88f,1):new Color(.13f,.18f,.29f);
+   string text="",sub="";
+   if(b!=null){text=b.title;sub=$"{r.BonusPaid:N0} / {b.Payout:N0} 玉";payoutLabel.text=$"{Mathf.Min(b.rounds,r.BonusCount/10+1)} R  /  {b.rounds} R";}
+   else if(a!=null&&a.reach){float t=a.elapsed;text=t<2.5f?"REACH":t<5?"Project Alicization":t<7?"剣を、構えろ":t<8.5f?"PUSH":"";sub=t>=7&&t<8.5f?"ボタンを押せ":"";payoutLabel.text="";}
+   else payoutLabel.text=r.Mode==PlayMode.Normal?"夜空":$"LAST {r.Remaining:00}";
+   headline.text=text;subtitle.text=sub;headline.color=b!=null?new Color(1,.83f,.38f):Color.white;
+   if(keyArt)keyArt.color=new Color(1,1,1,b!=null?.23f:a!=null&&a.reach?.5f:.8f);
+   if(flash)flash.color=new Color(.7f,.87f,1,impact*.42f);
+   if(lampMaterial)lampMaterial.SetColor("_EmissionColor",(b!=null?new Color(1,.52f,.08f):new Color(.38f,.08f,.85f))*(1+impact*3));
+  }
+  [Serializable] public class Telemetry{public int shots,balls,contacts,starts,holds,stock,payout,remaining,bonusCount,fairReceived,fairWon;public bool paused,autoFire,demo,bonus;public string mode,view;public float activeTime;}
+  public string Snapshot(){return JsonUtility.ToJson(new Telemetry{shots=Rules.Shots,balls=balls.Count,contacts=ContactCount,starts=Rules.Starts,holds=Rules.Holds.Count,stock=Rules.Stock,payout=Rules.Payout,remaining=Rules.Remaining,bonusCount=Rules.BonusCount,fairReceived=FairReceived,fairWon=FairWon,paused=Paused,autoFire=AutoFire,demo=Demo,bonus=Rules.Bonus!=null,mode=Rules.Mode.ToString(),view=view,activeTime=Rules.Active?.elapsed??0});}
+  void Report(){
+   #if UNITY_WEBGL && !UNITY_EDITOR
+   YozoraReport(Snapshot());
+   #endif
+  }
+  #if UNITY_EDITOR || !UNITY_WEBGL
+  void OnGUI(){
+   GUI.skin.font=font;GUILayout.BeginArea(new Rect(12,Screen.height-106,Mathf.Min(Screen.width-24,880),100));
+   GUILayout.BeginHorizontal();if(GUILayout.Button(AutoFire?"発射停止":"発射開始",GUILayout.Height(34)))Command("fire");if(GUILayout.Button(Paused?"再開":"一時停止",GUILayout.Height(34)))Command("pause");if(GUILayout.Button("250玉補給",GUILayout.Height(34)))Command("supply");if(GUILayout.Button("PUSH",GUILayout.Height(34)))Command("push");if(GUILayout.Button("視点",GUILayout.Height(34)))Command("angle");if(GUILayout.Button("音",GUILayout.Height(34)))Command("sound");GUILayout.EndHorizontal();
+   GUILayout.BeginHorizontal();if(GUILayout.Button("当り試演"))Command("demo-win");if(GUILayout.Button("外れ試演"))Command("demo-miss");if(GUILayout.Button("300玉試演"))Command("demo-bonus");if(GUILayout.Button("DRIVE試演"))Command("demo-drive");if(GUILayout.Button("リセット"))Command("reset");GUILayout.EndHorizontal();GUILayout.EndArea();
+  }
+  #endif
+  void MakeAudio(){entryClip=Tone(740,.09f);winClip=Tone(880,.65f);contactClip=Tone(2800,.018f);AudioListener.pause=true;}
+  AudioClip Tone(float freq,float seconds){int n=(int)(44100*seconds);float[] data=new float[n];for(int i=0;i<n;i++)data[i]=Mathf.Sin(i*freq*2*Mathf.PI/44100)*Mathf.Exp(-5f*i/n)*.3f;var clip=AudioClip.Create("prototype tone",n,1,44100,false);clip.SetData(data,0);return clip;}
+  void Play(AudioClip clip,float volume){if(sound&&!Paused&&audioSource&&clip)audioSource.PlayOneShot(clip,volume);}
+ }
+}

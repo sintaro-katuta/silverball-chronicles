@@ -1,0 +1,9 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {Game,freshProfile} from '../src/game.js';
+import {Physics} from '../src/physics.js';
+import {DURATION} from '../src/cinematic.js';
+test('winning draw resolves only after reach, and pause freezes the timeline',()=>{const g=new Game(freshProfile(),0,()=>0);g.queue=1;g.tick(g.course.tempo+g.machine.reels.stopGap+.01);assert.ok(g.presentation.win);assert.equal(g.jackpot,null);assert.equal(g.draws,1);g.tick(3);g.pause();g.tick(50);assert.equal(g.presentation.time,3);g.resume();g.tick(DURATION-3);assert.equal(g.presentation,null);assert.equal(g.jackpots,1);});
+test('losing reach stays a loss, keeps subsequent draws queued, and survives stage selection',()=>{const g=new Game(freshProfile(),0,()=>.5);g.beginPresentation(false);g.queue=2;g.tick(4);g.award(g.target-g.stock);g.checkStage();g.tick(50);assert.equal(g.presentation.time,4);g.selectSkill(g.choices[0].id);g.tick(DURATION);assert.equal(g.jackpots,0);assert.equal(g.misses,1);assert.equal(g.queue,2);});
+test('practice reach cannot overwrite an existing draw or jackpot',()=>{const g=new Game(freshProfile());assert.equal(g.beginPresentation(true,true),false);g.practice=true;assert.equal(g.beginPresentation(false,true),true);assert.equal(g.beginPresentation(true,true),false);g.startJackpot();assert.equal(g.beginPresentation(true,true),false);});
+test('each windmill responds to ball contact with angular momentum',()=>{for(let index=0;index<2;index++){const g=new Game(freshProfile()),p=new Physics();p.pins=[];p.colliders=[];const m=p.mechanisms[index];p.mechanisms=[m];m.angle=0;m.omega=0;p.balls=[{id:1,x:m.x+12,y:m.y-8,vx:0,vy:180,r:4.6,age:0,hits:0,extra:false}];for(let n=0;n<6;n++)p.step(1/120,g);assert.ok(Math.abs(m.omega)>0);assert.ok(p.balls[0].vy<180);}});

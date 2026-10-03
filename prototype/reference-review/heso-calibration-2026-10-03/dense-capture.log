@@ -1,0 +1,104 @@
+{
+  file: '/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/heso-calibration-2026-10-03/page@659c1f6196e1a170fd74671c255aac9b.webm',
+  errors: [],
+  last: {
+    view: 'board',
+    intro: { active: false, phase: 'complete' },
+    w: {
+      model: 'e東京喰種W',
+      rush: null,
+      bonus: null,
+      pendingV: false,
+      electricOpen: false,
+      payout: 42,
+      holds: [Object],
+      eventCount: 71
+    },
+    cabinet: {
+      phase: 'normal',
+      travel: 0,
+      light: 0.06,
+      rainbow: false,
+      hue: 0,
+      sword: [Object],
+      fixedCarriers: true,
+      moon: [Object]
+    },
+    session: {
+      stock: 130,
+      total: 42,
+      phase: 'playing',
+      accounting: [Object],
+      jackpots: 0
+    },
+    spin: {
+      entryPrelude: null,
+      lifecycle: true,
+      mode: 'normal',
+      rush: null,
+      lastRush: null,
+      round: [Object],
+      win: null,
+      reach: null,
+      time: 50.058333333331134,
+      holds: 0,
+      active: false,
+      draws: 10,
+      stopTimer: 0,
+      reels: [Object],
+      accepted: 10,
+      entries: 17,
+      events: [Array]
+    },
+    lcd: { x: 82, y: 303, width: 259.5, height: 202 },
+    gate: { kind: 'fuzu-inlet', count: 0, lastPass: null, lit: false },
+    leftRoutes: {
+      roadContact: 58,
+      nearHeso: 39,
+      admitted: 17,
+      nearAdmitted: 17,
+      deflectedAtHeso: 2,
+      nearMiss: 20,
+      earlySpill: 21,
+      pending: 0,
+      nearPending: 0,
+      nearMissOutcomes: [Object],
+      outcomes: [Object],
+      tracked: 312,
+      byPower: [Object]
+    },
+    time: 50.058333333331134,
+    paused: false,
+    mode: 'normal',
+    counts: {
+      fuzu: 0,
+      normal: 5,
+      start: 17,
+      rush: 0,
+      bonus: 0,
+      out: 290,
+      returned: 0
+    },
+    spawned: 312,
+    pockets: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ],
+    guide: {
+      a: [Object],
+      b: [Object],
+      r: 0.65,
+      active: true,
+      denchuShelf: false,
+      material: 'resin',
+      role: 'right-inner-lower',
+      restitution: 0.04
+    },
+    attacker: { progress: 0, target: 0, moving: false },
+    tulip: { progress: 0, target: 0, moving: false },
+    routeBalls: [],
+    inFlight: 0
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "pin": {
+    "id": 1,
+    "role": "michi",
+    "x": 72.5,
+    "y": 488,
+    "r": 0.2,
+    "restitution": 0.85
+  },
+  "balls": [
+    {
+      "id": 1,
+      "x": 72.5,
+      "y": 486,
+      "r": 1.8,
+      "pinDistance": 2,
+      "contactRadius": 2
+    },
+    {
+      "id": 2,
+      "x": 72.5,
+      "y": 483.300000000345,
+      "r": 1.8,
+      "pinDistance": 4.699999999655006,
+      "contactRadius": 2
+    }
+  ],
+  "condition": "same installed pin and two-ball diagnostic as pm-before-pair-pin-probe, explicit normal"
+}

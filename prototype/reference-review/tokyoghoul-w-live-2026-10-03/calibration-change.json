@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-03",
+  "sourceCenters": {
+    "left": 70,
+    "leftRoad": 26,
+    "rightRoad": 5,
+    "total": 101,
+    "uncertaintySourcePx": 1,
+    "measuredMachineDimensions": false
+  },
+  "contactPolicy": {
+    "ballRadius": 1.8,
+    "pinShaftRadius": {
+      "before": 0.25,
+      "after": 0.2
+    },
+    "leftElectricMouldingRadius": {
+      "before": 0.65,
+      "after": 0.4
+    },
+    "notMachineMeasurement": true
+  },
+  "geometry": {
+    "lowerPinPitch": 4.031128874149275,
+    "pinPairContactWidth": 4.0,
+    "rightPinToMouldingDistance": 4.25,
+    "pinMouldingContactWidth": 4.2
+  },
+  "planeCorrection": "For a ball that has left the launch plane, launch-inner-arc is excluded in both surface loops; outer arc remains the playfield perimeter. No ball position correction or loss timeout introduced.",
+  "failedEvidence": [
+    "lead-final-regression.log",
+    "contact-range-final.jsonl",
+    "contact-range-calibrated.jsonl",
+    "before-calibration",
+    "before-plane-fix"
+  ],
+  "currentEvidence": [
+    "lead-plane-fixed-regression.log",
+    "inlet-plane-reproducer.log",
+    "contact-range-final-fixed.jsonl"
+  ]
+}

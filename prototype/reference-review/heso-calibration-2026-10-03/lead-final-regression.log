@@ -1,0 +1,16 @@
+✔ a naturally launched ball leaves through the actual rail mouth before changing plane (33.041875ms)
+✔ natural 0.2/0.6 stream cannot cross launch rails and drains (1659.876708ms)
+✔ natural 0.24/0.05 stream cannot cross launch rails and drains (15982.674791ms)
+✔ all three left ordinary receivers admit a physical ball through their visible mouth (13.653167ms)
+✔ entrance uses crossing position, rejecting a ball that enters sideways below the mouth (0.690875ms)
+✔ a diagonal ball through the mouth is accepted even if its next position is outside (0.600708ms)
+✔ sensor excludes upward, sideways, already-below and too-large balls (0.065834ms)
+✔ entrance clearance accounts for ball radius and includes a tangent passage (0.065792ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17753.355542

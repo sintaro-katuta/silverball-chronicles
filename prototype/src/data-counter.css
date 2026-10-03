@@ -1,0 +1,30 @@
+/* Overhead data lamp: a dark numeric face inside a shallow silver housing. */
+.game-shell .machine-dashboard,.game-shell.immersive .machine-dashboard{--lamp:#74dce9;display:flex;flex-direction:column;gap:0;height:144px;padding:4px 8px 0;border:1px solid #738594;border-radius:9px 9px 4px 4px;background:linear-gradient(110deg,#243543,#0c141d 24%,#111e2a 75%,#344654);box-shadow:inset 0 2px 0 #ccd8df66,0 2px 7px #000;overflow:hidden}
+.game-shell .machine-dashboard[data-state=bonus],.game-shell.immersive .machine-dashboard[data-state=bonus]{--lamp:#ffd17d}
+.game-shell .machine-dashboard[data-state=rush],.game-shell.immersive .machine-dashboard[data-state=rush]{--lamp:#a898ff}
+.counter-toolbar{display:flex;align-items:center;justify-content:space-between;min-height:29px;gap:4px}
+.counter-session{color:#b3c4d2;font-size:9px;white-space:nowrap;letter-spacing:.06em}
+.counter-toolbar>div{display:flex;align-items:center;gap:3px}
+.machine-dashboard .counter-toolbar button{min-height:26px;height:26px;border-color:#52637680}
+.counter-face{display:grid;grid-template-columns:minmax(54px,.8fr) minmax(76px,1fr) minmax(100px,1.6fr);height:76px;min-height:0;border:1px solid #000;border-top:2px solid var(--lamp);border-radius:4px;background:linear-gradient(165deg,#15212b,#03070b 42%);box-shadow:0 -2px 6px color-mix(in srgb,var(--lamp) 25%,transparent);overflow:hidden}
+.counter-hits,.counter-starts{display:flex;flex-direction:column;align-items:center;justify-content:center;min-width:0;border-right:1px solid #53667555;line-height:1.15}
+.counter-face span{font-size:10px;color:#d4dce2;letter-spacing:.12em}
+.counter-face strong{font:600 clamp(23px,5.5vw,34px)/1.08 'Courier New',monospace;font-variant-numeric:tabular-nums;letter-spacing:-.05em;color:#ffb46b;text-shadow:0 0 8px #ff822b65;white-space:nowrap}
+.counter-starts strong{color:#a9efda;text-shadow:0 0 8px #60ffc650}
+.counter-face small{font-size:9px;color:#a8b8c9;white-space:nowrap}
+.counter-face small b{font-family:monospace;color:#e4edf4}
+#counterState{color:var(--lamp);margin-top:2px}
+.game-shell .machine-dashboard .live-balance,.game-shell.immersive .machine-dashboard .live-balance{grid-column:auto;grid-row:auto;height:72px;min-width:0;padding:3px 6px;margin:0;color:#c7d4df}
+.machine-dashboard .balance-heading{gap:2px;flex-wrap:wrap;line-height:13px}
+.machine-dashboard .balance-heading span{font-size:9px;letter-spacing:0}
+.machine-dashboard .balance-heading b{font:600 12px monospace;color:#edf4dc}
+.game-shell .machine-dashboard .balance-chart{height:47px}
+.machine-dashboard .chart-note{display:none}
+.counter-game{display:flex;align-items:center;justify-content:space-between;gap:6px;min-height:29px;color:#aebdcc;font-size:9px;white-space:nowrap}
+.counter-game b{color:#edf4fa;font:600 15px monospace;font-variant-numeric:tabular-nums}
+.counter-game .stage{font-size:9px;letter-spacing:0}
+.counter-game .stage b{font-size:13px}
+.counter-game small{font-size:9px}
+.game-shell .machine-dashboard .progress{flex:none;width:calc(100% + 16px);height:3px;margin:0 -8px;border-radius:0}
+@media(max-width:360px){.counter-game{gap:3px;font-size:8px}.counter-game b{font-size:12px}.counter-game .stage{font-size:8px}.counter-toolbar>div{gap:1px}.counter-session{font-size:8px}.counter-face{grid-template-columns:minmax(50px,.8fr) minmax(70px,1fr) minmax(90px,1.4fr)}}
+@media(max-height:650px){.game-shell .machine-dashboard,.game-shell.immersive .machine-dashboard{height:128px}.counter-face{height:60px}.counter-face strong{font-size:24px}.game-shell .machine-dashboard .live-balance,.game-shell.immersive .machine-dashboard .live-balance{height:56px}.game-shell .machine-dashboard .balance-chart{height:32px}.counter-face small{font-size:8px}}

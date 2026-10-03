@@ -1,0 +1,620 @@
+{
+  "during": {
+    "spin": {
+      "reach": {
+        "time": 0.3833333333333337,
+        "duration": 4.4
+      },
+      "time": 12.158333333333283,
+      "holds": 1,
+      "active": false,
+      "draws": 2,
+      "stopTimer": 0,
+      "reels": {
+        "spinning": true,
+        "numbers": [
+          7,
+          7,
+          9
+        ],
+        "stopped": [
+          true,
+          true,
+          false
+        ]
+      },
+      "accepted": 3,
+      "entries": 3,
+      "events": [
+        {
+          "time": 4.850000000000031,
+          "ballId": 3,
+          "accepted": 1,
+          "hold": 0,
+          "drawId": 1
+        },
+        {
+          "time": 5.741666666666742,
+          "ballId": 7,
+          "accepted": 1,
+          "hold": 1,
+          "drawId": 2
+        },
+        {
+          "time": 8.15833333333351,
+          "ballId": 9,
+          "accepted": 1,
+          "hold": 2,
+          "drawId": 3
+        }
+      ]
+    },
+    "lcd": {
+      "x": 108,
+      "y": 236,
+      "width": 210,
+      "height": 140
+    },
+    "gate": {
+      "count": 0,
+      "lastPass": null,
+      "lit": false
+    },
+    "leftRoutes": {
+      "roadContact": 18,
+      "nearHeso": 10,
+      "admitted": 3,
+      "nearAdmitted": 3,
+      "deflectedAtHeso": 2,
+      "nearMiss": 3,
+      "earlySpill": 6,
+      "pending": 4,
+      "nearPending": 2,
+      "nearMissOutcomes": {
+        "out": 3
+      },
+      "outcomes": {
+        "out": 11,
+        "start": 3
+      },
+      "tracked": 21,
+      "byPower": {
+        "0.23": {
+          "roadContact": 18,
+          "nearHeso": 10,
+          "admitted": 3,
+          "nearAdmitted": 3,
+          "deflectedAtHeso": 2,
+          "nearMiss": 3,
+          "earlySpill": 6,
+          "pending": 4,
+          "nearPending": 2,
+          "nearMissOutcomes": {
+            "out": 3
+          },
+          "outcomes": {
+            "out": 11,
+            "start": 3
+          },
+          "tracked": 21
+        }
+      }
+    },
+    "time": 12.158333333333283,
+    "paused": false,
+    "mode": "normal",
+    "counts": {
+      "normal": 0,
+      "start": 3,
+      "rush": 0,
+      "bonus": 0,
+      "out": 11,
+      "returned": 0
+    },
+    "spawned": 21,
+    "pockets": [
+      {
+        "x": 67,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 0
+      },
+      {
+        "x": 139,
+        "y": 617,
+        "w": 18,
+        "kind": "normal",
+        "id": 1
+      },
+      {
+        "x": 268,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 2
+      },
+      {
+        "x": 210,
+        "y": 480,
+        "w": 20,
+        "kind": "start",
+        "id": 4
+      },
+      {
+        "x": 357.25,
+        "y": 581,
+        "w": 60,
+        "kind": "bonus",
+        "id": 5,
+        "captureTray": {
+          "left": 335.125,
+          "right": 373.875,
+          "y": 600.5,
+          "radius": 1.4
+        }
+      },
+      {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      }
+    ],
+    "guide": {
+      "a": {
+        "x": 336,
+        "y": 468
+      },
+      "b": {
+        "x": 330,
+        "y": 558
+      },
+      "r": 1.3,
+      "material": "resin",
+      "role": "right-inner-lower",
+      "restitution": 0.08
+    },
+    "attacker": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "tulip": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "inFlight": 7
+  },
+  "stopped": {
+    "spin": {
+      "reach": null,
+      "time": 16.274999999999718,
+      "holds": 3,
+      "active": false,
+      "draws": 2,
+      "stopTimer": 0.7500000000000003,
+      "reels": {
+        "spinning": false,
+        "numbers": [
+          7,
+          7,
+          5
+        ],
+        "stopped": [
+          true,
+          true,
+          true
+        ]
+      },
+      "accepted": 5,
+      "entries": 5,
+      "events": [
+        {
+          "time": 4.850000000000031,
+          "ballId": 3,
+          "accepted": 1,
+          "hold": 0,
+          "drawId": 1
+        },
+        {
+          "time": 5.741666666666742,
+          "ballId": 7,
+          "accepted": 1,
+          "hold": 1,
+          "drawId": 2
+        },
+        {
+          "time": 8.15833333333351,
+          "ballId": 9,
+          "accepted": 1,
+          "hold": 2,
+          "drawId": 3
+        },
+        {
+          "time": 14.191666666666501,
+          "ballId": 21,
+          "accepted": 1,
+          "hold": 2,
+          "drawId": 4
+        },
+        {
+          "time": 15.941666666666402,
+          "ballId": 24,
+          "accepted": 1,
+          "hold": 3,
+          "drawId": 5
+        }
+      ]
+    },
+    "lcd": {
+      "x": 108,
+      "y": 236,
+      "width": 210,
+      "height": 140
+    },
+    "gate": {
+      "count": 0,
+      "lastPass": null,
+      "lit": false
+    },
+    "leftRoutes": {
+      "roadContact": 25,
+      "nearHeso": 14,
+      "admitted": 5,
+      "nearAdmitted": 5,
+      "deflectedAtHeso": 3,
+      "nearMiss": 6,
+      "earlySpill": 9,
+      "pending": 2,
+      "nearPending": 0,
+      "nearMissOutcomes": {
+        "out": 6
+      },
+      "outcomes": {
+        "out": 18,
+        "start": 5
+      },
+      "tracked": 28,
+      "byPower": {
+        "0.23": {
+          "roadContact": 25,
+          "nearHeso": 14,
+          "admitted": 5,
+          "nearAdmitted": 5,
+          "deflectedAtHeso": 3,
+          "nearMiss": 6,
+          "earlySpill": 9,
+          "pending": 2,
+          "nearPending": 0,
+          "nearMissOutcomes": {
+            "out": 6
+          },
+          "outcomes": {
+            "out": 18,
+            "start": 5
+          },
+          "tracked": 28
+        }
+      }
+    },
+    "time": 16.274999999999718,
+    "paused": false,
+    "mode": "normal",
+    "counts": {
+      "normal": 0,
+      "start": 5,
+      "rush": 0,
+      "bonus": 0,
+      "out": 18,
+      "returned": 0
+    },
+    "spawned": 28,
+    "pockets": [
+      {
+        "x": 67,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 0
+      },
+      {
+        "x": 139,
+        "y": 617,
+        "w": 18,
+        "kind": "normal",
+        "id": 1
+      },
+      {
+        "x": 268,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 2
+      },
+      {
+        "x": 210,
+        "y": 480,
+        "w": 20,
+        "kind": "start",
+        "id": 4
+      },
+      {
+        "x": 357.25,
+        "y": 581,
+        "w": 60,
+        "kind": "bonus",
+        "id": 5,
+        "captureTray": {
+          "left": 335.125,
+          "right": 373.875,
+          "y": 600.5,
+          "radius": 1.4
+        }
+      },
+      {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      }
+    ],
+    "guide": {
+      "a": {
+        "x": 336,
+        "y": 468
+      },
+      "b": {
+        "x": 330,
+        "y": 558
+      },
+      "r": 1.3,
+      "material": "resin",
+      "role": "right-inner-lower",
+      "restitution": 0.08
+    },
+    "attacker": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "tulip": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "inFlight": 5
+  },
+  "final": {
+    "spin": {
+      "reach": null,
+      "time": 46.19999999999802,
+      "holds": 0,
+      "active": false,
+      "draws": 9,
+      "stopTimer": 0,
+      "reels": {
+        "spinning": false,
+        "numbers": [
+          6,
+          5,
+          4
+        ],
+        "stopped": [
+          true,
+          true,
+          true
+        ]
+      },
+      "accepted": 9,
+      "entries": 9,
+      "events": [
+        {
+          "time": 4.850000000000031,
+          "ballId": 3,
+          "accepted": 1,
+          "hold": 0,
+          "drawId": 1
+        },
+        {
+          "time": 5.741666666666742,
+          "ballId": 7,
+          "accepted": 1,
+          "hold": 1,
+          "drawId": 2
+        },
+        {
+          "time": 8.15833333333351,
+          "ballId": 9,
+          "accepted": 1,
+          "hold": 2,
+          "drawId": 3
+        },
+        {
+          "time": 14.191666666666501,
+          "ballId": 21,
+          "accepted": 1,
+          "hold": 2,
+          "drawId": 4
+        },
+        {
+          "time": 15.941666666666402,
+          "ballId": 24,
+          "accepted": 1,
+          "hold": 3,
+          "drawId": 5
+        },
+        {
+          "time": 19.508333333332867,
+          "ballId": 29,
+          "accepted": 1,
+          "hold": 3,
+          "drawId": 6
+        },
+        {
+          "time": 22.13333333333272,
+          "ballId": 33,
+          "accepted": 1,
+          "hold": 3,
+          "drawId": 7
+        },
+        {
+          "time": 22.533333333332696,
+          "ballId": 35,
+          "accepted": 1,
+          "hold": 4,
+          "drawId": 8
+        },
+        {
+          "time": 24.333333333332593,
+          "ballId": 38,
+          "accepted": 1,
+          "hold": 5,
+          "drawId": 9
+        }
+      ]
+    },
+    "lcd": {
+      "x": 108,
+      "y": 236,
+      "width": 210,
+      "height": 140
+    },
+    "gate": {
+      "count": 0,
+      "lastPass": null,
+      "lit": false
+    },
+    "leftRoutes": {
+      "roadContact": 39,
+      "nearHeso": 24,
+      "admitted": 9,
+      "nearAdmitted": 9,
+      "deflectedAtHeso": 6,
+      "nearMiss": 9,
+      "earlySpill": 15,
+      "pending": 0,
+      "nearPending": 0,
+      "nearMissOutcomes": {
+        "out": 9
+      },
+      "outcomes": {
+        "out": 30,
+        "start": 9
+      },
+      "tracked": 39,
+      "byPower": {
+        "0.23": {
+          "roadContact": 39,
+          "nearHeso": 24,
+          "admitted": 9,
+          "nearAdmitted": 9,
+          "deflectedAtHeso": 6,
+          "nearMiss": 9,
+          "earlySpill": 15,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {
+            "out": 9
+          },
+          "outcomes": {
+            "out": 30,
+            "start": 9
+          },
+          "tracked": 39
+        }
+      }
+    },
+    "time": 46.19999999999802,
+    "paused": true,
+    "mode": "normal",
+    "counts": {
+      "normal": 0,
+      "start": 9,
+      "rush": 0,
+      "bonus": 0,
+      "out": 30,
+      "returned": 0
+    },
+    "spawned": 39,
+    "pockets": [
+      {
+        "x": 67,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 0
+      },
+      {
+        "x": 139,
+        "y": 617,
+        "w": 18,
+        "kind": "normal",
+        "id": 1
+      },
+      {
+        "x": 268,
+        "y": 617,
+        "w": 19,
+        "kind": "normal",
+        "id": 2
+      },
+      {
+        "x": 210,
+        "y": 480,
+        "w": 20,
+        "kind": "start",
+        "id": 4
+      },
+      {
+        "x": 357.25,
+        "y": 581,
+        "w": 60,
+        "kind": "bonus",
+        "id": 5,
+        "captureTray": {
+          "left": 335.125,
+          "right": 373.875,
+          "y": 600.5,
+          "radius": 1.4
+        }
+      },
+      {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      }
+    ],
+    "guide": {
+      "a": {
+        "x": 336,
+        "y": 468
+      },
+      "b": {
+        "x": 330,
+        "y": 558
+      },
+      "r": 1.3,
+      "material": "resin",
+      "role": "right-inner-lower",
+      "restitution": 0.08
+    },
+    "attacker": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "tulip": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "inFlight": 0
+  },
+  "errors": []
+}

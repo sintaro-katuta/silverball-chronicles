@@ -1,0 +1,95 @@
+{
+  file: '/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/collision-lcd-2026-10-03/page@920488c5999a602d68f73e20556b3db5.webm',
+  errors: [],
+  last: {
+    view: 'board',
+    intro: { active: false, phase: 'complete', elapsed: 3.8 },
+    w: {
+      model: 'e東京喰種W',
+      rush: null,
+      bonus: null,
+      pendingV: false,
+      electricOpen: false,
+      payout: 6,
+      holds: [Object],
+      eventCount: 6
+    },
+    cabinet: { phase: 'normal', travel: 0, light: 0.06, rainbow: false, hue: 0 },
+    session: {
+      stock: 349,
+      total: 6,
+      phase: 'playing',
+      accounting: [Object],
+      jackpots: 0
+    },
+    spin: {
+      entryPrelude: null,
+      lifecycle: true,
+      mode: 'normal',
+      rush: null,
+      lastRush: null,
+      round: [Object],
+      win: null,
+      reach: null,
+      time: 90.40833333335135,
+      holds: 0,
+      active: false,
+      draws: 1,
+      stopTimer: 0,
+      reels: [Object],
+      accepted: 1,
+      entries: 1,
+      events: [Array]
+    },
+    lcd: { x: 82, y: 303, width: 259.5, height: 202 },
+    gate: { kind: 'fuzu-inlet', count: 0, lastPass: null, lit: false },
+    leftRoutes: {
+      roadContact: 7,
+      nearHeso: 2,
+      admitted: 1,
+      nearAdmitted: 1,
+      deflectedAtHeso: 0,
+      nearMiss: 1,
+      earlySpill: 5,
+      pending: 0,
+      nearPending: 0,
+      nearMissOutcomes: [Object],
+      outcomes: [Object],
+      tracked: 82,
+      byPower: [Object]
+    },
+    time: 90.40833333335135,
+    paused: false,
+    mode: 'normal',
+    counts: {
+      fuzu: 0,
+      normal: 1,
+      start: 1,
+      rush: 0,
+      bonus: 0,
+      out: 55,
+      returned: 25
+    },
+    spawned: 82,
+    pockets: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object]
+    ],
+    guide: {
+      a: [Object],
+      b: [Object],
+      r: 0.65,
+      active: true,
+      denchuShelf: false,
+      material: 'resin',
+      role: 'right-inner-lower',
+      restitution: 0.04
+    },
+    attacker: { progress: 0, target: 0, moving: false },
+    tulip: { progress: 0, target: 0, moving: false },
+    routeBalls: [],
+    inFlight: 0
+  }
+}

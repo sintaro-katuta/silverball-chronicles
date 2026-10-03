@@ -1,0 +1,8 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><title>W 引継ぎ録画確認 2026-10-03</title>
+<style>body{background:#101722;color:#eee;font:16px sans-serif;margin:10px}video{width:100%;max-height:85vh}button{margin:4px;padding:8px}</style>
+<p>今回のローカル録画。左右の自然経路を確認。当否等のfixtureはverification.md参照。</p>
+<button onclick="load('left')">左打ち</button><button onclick="load('rush')">RUSH</button><button onclick="load('normal')">通常1500</button><button onclick="load('charge')">チャージ300</button>
+<button onclick="v.play()">再生</button><button onclick="v.pause()">停止</button>
+<button onclick="v.currentTime=0">0秒</button><button onclick="v.currentTime=60">60秒</button><button onclick="v.currentTime=120">120秒</button><button onclick="v.currentTime=160">160秒</button>
+<span id="status"></span><video id="v" controls muted src="left.mp4"></video>
+<script>const v=document.getElementById('v');function load(s){v.src=s+'.mp4';v.play()}v.ontimeupdate=()=>document.getElementById('status').textContent=v.src.split('/').pop()+' '+v.currentTime.toFixed(1)+'秒 / '+v.duration.toFixed(1)+'秒';</script></html>

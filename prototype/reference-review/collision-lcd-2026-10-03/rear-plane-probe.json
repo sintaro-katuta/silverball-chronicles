@@ -1,0 +1,27 @@
+{
+  "rearFrames": 10,
+  "rearBalls": 3,
+  "frontFrames": 0,
+  "tolerance": 0.000001,
+  "first": {
+    "time": 2.6583333333333266,
+    "ball": {
+      "id": 4,
+      "x": 74.69396119470994,
+      "y": 250.36516089693484,
+      "vx": 126.80497991776859,
+      "vy": -97.58616521053031,
+      "leftLaunchPlane": false
+    },
+    "pin": {
+      "id": 27,
+      "role": "prize",
+      "x": 76.5,
+      "y": 250.25,
+      "r": 0.2,
+      "restitution": 0.8
+    },
+    "overlap": 0.19029333913023994
+  },
+  "meaning": "Software rear launch plane is intentionally noncolliding with front pins. Rendering layer now matches that rule. Real machine depth remains unverified."
+}

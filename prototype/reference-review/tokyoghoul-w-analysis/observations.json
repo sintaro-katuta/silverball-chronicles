@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-02",
+  "scope": "e東京喰種Wのみ。MW・L除外。アプリ実装変更なし。",
+  "sources": {
+    "diagram": "../pixi-source-layout/reference.jpg (ユーザー提供904x1280,1ページ)",
+    "official": "https://pachi-e-tokyoghoul.jp/",
+    "model": "https://www.sankyo-fever.jp/collection/980/",
+    "signals": "https://daiichi.net/pdf/bisty/w82.pdf",
+    "procedure": "https://cs62.cs-plaza.com/g/pachi/pla/p_conq/pachi_db/bisty_pachi/152/kr03.php",
+    "video1": "https://www.youtube.com/watch?v=gqHt1D4aMD0",
+    "video2": "https://www.youtube.com/watch?v=vpw3JRDR3nw"
+  },
+  "videoInspection": {
+    "method": "映像ファイルからフレーム抽出。音声聴取なし。全編連続視聴ではない。",
+    "video1": [
+      {
+        "seconds": [
+          360,
+          364
+        ],
+        "fps": 6,
+        "observation": "左ロゴと釘・風車の重なり。玉単位の全経路は追跡できず。"
+      },
+      {
+        "seconds": [
+          732,
+          736
+        ],
+        "fps": 5,
+        "observation": "アタッカー周囲の可動部姿勢変化。字幕が下部を遮る。"
+      },
+      {
+        "seconds": [
+          737,
+          738
+        ],
+        "fps": 24,
+        "observation": "OPEN表示の緑の部材が終盤に閉側へ移動。内部V位置や扉軸は断定不可。"
+      },
+      {
+        "seconds": [
+          740,
+          744
+        ],
+        "fps": 10,
+        "observation": "同部材の開閉。字幕・反射で玉の全接触順は未確認。"
+      },
+      {
+        "seconds": [
+          892,
+          900
+        ],
+        "fps": 2,
+        "observation": "図柄揃い→右打ち表示→決めろ表示。下部電チューは人の手・角度・反射で動作詳細確認不足。"
+      },
+      {
+        "seconds": [
+          950,
+          950
+        ],
+        "observation": "動画字幕が6000振分決定は電チュー入賞時と説明。センサー自体の映像確認ではない。"
+      }
+    ],
+    "video2": {
+      "requestedRange": [
+        1117,
+        1187
+      ],
+      "observation": "実戦映像の左釘・装飾は見えるが、入口から終端まで一玉を追える画角ではない。内部動作の根拠には不採用。"
+    }
+  },
+  "corrections": [
+    "左下の5賞球一般口は図上3箇所。右下の1表記を一般口として加算しない。",
+    "アタッカー上、電チュー下、普図作動口はその下。普図作動口を右上の通過ゲートと混同しない。",
+    "白い液晶領域は通路ではない。前面装飾輪郭もそのまま全て衝突壁とはしない。"
+  ],
+  "unconfirmed": [
+    "発射機構の実座標・断面",
+    "左右全区間の個体球追跡",
+    "ワープ内部形状・ステージへの出口と分岐率",
+    "電チューの短開放パターン・秒数・回数",
+    "アタッカー扉の回転軸・閉鎖時の全経路",
+    "Vセンサー内部位置・振分装置",
+    "釘角度・寸法・摩擦・反発"
+  ]
+}

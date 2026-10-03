@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-02",
+  "cause": "eclipse-mechanism.js の単体プレビュー用矩形housingが本盤面で常時表示され、非矩形LCD枠に重なっていた。",
+  "change": "本盤面ではhousingを表示せず、可動役物をLCD_OPENINGと同じ開口でマスク。既存斜め枠と物理境界、演出タイミングは維持。単体プレビューは従来housingを維持。",
+  "before": "../tokyoghoul-w-live/mobile-play.png",
+  "after": "frame-rush-idle.png",
+  "verifiedViewport": [
+    390,
+    844
+  ],
+  "reviewed": [
+    "frame-normal-idle.png（実際は月蝕役物移動中）",
+    "frame-normal-mechanism.png（実際は確定済みの数字6倍ズーム中）",
+    "frame-charge-payout.png（CHARGE 300の文字切れなし）",
+    "frame-rush-idle.png（RUSH残回数と3図柄の文字切れなし）"
+  ],
+  "browserErrors": 0,
+  "limitations": [
+    "撮影は当選指定レビューシナリオ。通常・chargeはヘソへ2球を実物理で投入。実際の確率を測る試験ではない。",
+    "通常数字の6倍ズームは採用済み意図どおり液晶へクロップされる。",
+    "ワープ経路や造形密度の不足は今回変更していない。"
+  ]
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "name": "mobile",
+    "size": {
+      "width": 390,
+      "height": 844
+    },
+    "closed": {
+      "canvas": {
+        "x": 0,
+        "y": 207.296875,
+        "right": 390,
+        "bottom": 636.6875,
+        "width": 390,
+        "height": 429.390625
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "bottom": 0,
+        "width": 0,
+        "height": 0
+      },
+      "panelHidden": true,
+      "scrollWidth": 390
+    },
+    "open": {
+      "canvas": {
+        "x": 0,
+        "y": 59.296875,
+        "right": 390,
+        "bottom": 488.6875,
+        "width": 390,
+        "height": 429.390625
+      },
+      "panel": {
+        "x": 12,
+        "y": 512,
+        "right": 378,
+        "bottom": 832,
+        "width": 366,
+        "height": 320
+      },
+      "panelHidden": false,
+      "scrollWidth": 390
+    },
+    "errors": [],
+    "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/focus-view-2026-10-03/page@ae4c8bd15df5d3a580130c62b20599f9.webm",
+    "checks": [
+      "closed by default",
+      "toggle preserves advancing game and feeding",
+      "full canvas in viewport",
+      "open panel does not cover canvas",
+      "fire stop/start",
+      "power accessible",
+      "menu freezes/resumes",
+      "close returns focus",
+      "fresh play resets panel/totals"
+    ]
+  },
+  {
+    "name": "desktop",
+    "size": {
+      "width": 1280,
+      "height": 960
+    },
+    "closed": {
+      "canvas": {
+        "x": 204.03125,
+        "y": 0,
+        "right": 1075.953125,
+        "bottom": 959.984375,
+        "width": 871.921875,
+        "height": 959.984375
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "bottom": 0,
+        "width": 0,
+        "height": 0
+      },
+      "panelHidden": true,
+      "scrollWidth": 1280
+    },
+    "open": {
+      "canvas": {
+        "x": 26.03125,
+        "y": 0,
+        "right": 897.953125,
+        "bottom": 959.984375,
+        "width": 871.921875,
+        "height": 959.984375
+      },
+      "panel": {
+        "x": 948,
+        "y": 56,
+        "right": 1268,
+        "bottom": 944,
+        "width": 320,
+        "height": 888
+      },
+      "panelHidden": false,
+      "scrollWidth": 1280
+    },
+    "errors": [],
+    "video": null,
+    "checks": [
+      "closed by default",
+      "toggle preserves advancing game and feeding",
+      "full canvas in viewport",
+      "open panel does not cover canvas",
+      "fire stop/start",
+      "power accessible",
+      "menu freezes/resumes",
+      "close returns focus",
+      "fresh play resets panel/totals"
+    ]
+  },
+  {
+    "name": "small",
+    "size": {
+      "width": 320,
+      "height": 568
+    },
+    "closed": {
+      "canvas": {
+        "x": 0,
+        "y": 107.84375,
+        "right": 320,
+        "bottom": 460.15625,
+        "width": 320,
+        "height": 352.3125
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "bottom": 0,
+        "width": 0,
+        "height": 0
+      },
+      "panelHidden": true,
+      "scrollWidth": 320
+    },
+    "open": {
+      "canvas": {
+        "x": 32.765625,
+        "y": 48,
+        "right": 287.21875,
+        "bottom": 328.140625,
+        "width": 254.453125,
+        "height": 280.140625
+      },
+      "panel": {
+        "x": 12,
+        "y": 340.171875,
+        "right": 308,
+        "bottom": 556,
+        "width": 296,
+        "height": 215.828125
+      },
+      "panelHidden": false,
+      "scrollWidth": 320
+    },
+    "errors": [],
+    "video": null,
+    "checks": [
+      "closed by default",
+      "toggle preserves advancing game and feeding",
+      "full canvas in viewport",
+      "open panel does not cover canvas",
+      "fire stop/start",
+      "power accessible",
+      "menu freezes/resumes",
+      "close returns focus",
+      "fresh play resets panel/totals"
+    ]
+  },
+  {
+    "name": "landscape",
+    "size": {
+      "width": 844,
+      "height": 390
+    },
+    "closed": {
+      "canvas": {
+        "x": 244.890625,
+        "y": 0,
+        "right": 599.109375,
+        "bottom": 389.984375,
+        "width": 354.21875,
+        "height": 389.984375
+      },
+      "panel": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "bottom": 0,
+        "width": 0,
+        "height": 0
+      },
+      "panelHidden": true,
+      "scrollWidth": 844
+    },
+    "open": {
+      "canvas": {
+        "x": 344.890625,
+        "y": 48,
+        "right": 499.109375,
+        "bottom": 217.78125,
+        "width": 154.21875,
+        "height": 169.78125
+      },
+      "panel": {
+        "x": 12,
+        "y": 229.8125,
+        "right": 832,
+        "bottom": 378,
+        "width": 820,
+        "height": 148.1875
+      },
+      "panelHidden": false,
+      "scrollWidth": 844
+    },
+    "errors": [],
+    "video": null,
+    "checks": [
+      "closed by default",
+      "toggle preserves advancing game and feeding",
+      "full canvas in viewport",
+      "open panel does not cover canvas",
+      "fire stop/start",
+      "power accessible",
+      "menu freezes/resumes",
+      "close returns focus",
+      "fresh play resets panel/totals"
+    ]
+  }
+]

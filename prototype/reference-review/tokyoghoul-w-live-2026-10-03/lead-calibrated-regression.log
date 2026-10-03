@@ -1,0 +1,26 @@
+✔ normal: balls stay outside LCD, follow side lanes and drain (11140.527ms)
+✔ rush: balls stay outside LCD, follow side lanes and drain (3872.0095ms)
+✔ bonus: balls stay outside LCD, follow side lanes and drain (2371.345792ms)
+✔ both modes launch at one origin no faster than 0.6 seconds (1848.484042ms)
+✔ manual power changes only future normal shots (117.431167ms)
+✔ left road has no bridging collision segments and an actual pin rebounds a falling ball (29.054292ms)
+✔ right road stays five separate pins without an invisible supporting wall (5.187708ms)
+{"shots":34,"guideContact":20,"downstream":34}
+✔ reference inlet guides share their visible coordinates and feed falling left shots downstream (2037.802792ms)
+✔ near arrivals reconcile and cohorts retain launch power after switching (5845.431792ms)
+✔ traced right channel guides physical balls and drains at 0.6s (1528.460916ms)
+✔ traced right channel guides physical balls and drains at 0.05s (18824.5465ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.2 (4621.135834ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.24 (5426.957708ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.28 (10803.924667ms)
+✔ production W bridge accepts physical fuzu/electric/V/attacker crossings and counts 3000 (173.64675ms)
+✔ natural right launches traverse fuzu, two electric admissions, two V entries and 3000 (14537.504583ms)
+✔ dense arrivals cannot be consumed beyond the ten-count closing boundary (95.976ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 41355.255875

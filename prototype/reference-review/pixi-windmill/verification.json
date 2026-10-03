@@ -1,0 +1,98 @@
+{
+  "initial": {
+    "time": 0,
+    "paused": false,
+    "spawned": 0,
+    "contacts": 0,
+    "mechanism": {
+      "kind": "windmill",
+      "x": 75,
+      "y": 384,
+      "angle": 0.28,
+      "omega": 0,
+      "radius": 18,
+      "armRadius": 1.3
+    },
+    "counts": {
+      "normal": 0,
+      "start": 0,
+      "rush": 0,
+      "bonus": 0,
+      "out": 0,
+      "returned": 0
+    }
+  },
+  "first": {
+    "time": 3.224999999999991,
+    "paused": false,
+    "spawned": 30,
+    "contacts": 1,
+    "mechanism": {
+      "kind": "windmill",
+      "x": 75,
+      "y": 384,
+      "angle": 0.28497540627895945,
+      "omega": 0.5956564529980983,
+      "radius": 18,
+      "armRadius": 1.3,
+      "lastHit": 3.216666666666658
+    },
+    "counts": {
+      "normal": 0,
+      "start": 0,
+      "rush": 0,
+      "bonus": 0,
+      "out": 0,
+      "returned": 0
+    }
+  },
+  "running": {
+    "time": 15.008333333333121,
+    "paused": false,
+    "spawned": 139,
+    "contacts": 3518,
+    "mechanism": {
+      "kind": "windmill",
+      "x": 75,
+      "y": 384,
+      "angle": -6.095601075188333,
+      "omega": -0.4642433983288889,
+      "radius": 18,
+      "armRadius": 1.3,
+      "lastHit": 15.008333333333121
+    },
+    "counts": {
+      "normal": 4,
+      "start": 8,
+      "rush": 0,
+      "bonus": 0,
+      "out": 88,
+      "returned": 0
+    }
+  },
+  "paused": {
+    "time": 35.04166666666532,
+    "paused": true,
+    "spawned": 277,
+    "contacts": 8703,
+    "mechanism": {
+      "kind": "windmill",
+      "x": 75,
+      "y": 384,
+      "angle": -3.416292108276465,
+      "omega": 0.42785472211469877,
+      "radius": 18,
+      "armRadius": 1.3,
+      "lastHit": 32.87499999999878
+    },
+    "counts": {
+      "normal": 14,
+      "start": 22,
+      "rush": 0,
+      "bonus": 0,
+      "out": 238,
+      "returned": 0
+    }
+  },
+  "errors": []
+}

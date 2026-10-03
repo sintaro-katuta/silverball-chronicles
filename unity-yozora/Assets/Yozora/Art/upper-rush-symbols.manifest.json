@@ -1,0 +1,26 @@
+{
+  "scope": "R2 upper RUSH presentation, incomplete reference reconstruction",
+  "invading": {
+    "source": "R2 13:05 and 14:20–14:30; R1 42:00",
+    "runtimeAtlas": "rush-symbols-video.png",
+    "runtimeExtra": "Amayori asset assigned by existing builder",
+    "status": "existing generated knight approximation, not original art"
+  },
+  "awakening": {
+    "source": "R2 16:39–16:45 stage logo; 16:50–17:15 changed cast",
+    "observed": [{"digit": 8, "time": "17:00", "form": "violet faceted numeral in oval frame", "character": null}],
+    "engineSupportedDigitSlots": [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    "engineSupportedDigitSlotsAreNotAnObservedMachineInventory": true,
+    "runtimeInspectorField": "ReferencePresentation.awakeningSymbols.symbols",
+    "assetEntryFields": ["digit", "texture", "uv", "evidence"],
+    "fallback": "numeric frames only; no knight portrait aliasing",
+    "missing": ["verified complete digit inventory", "all digit-to-character mappings", "character poses and animation", "stage background artwork", "full reel order", "general transition conditions"]
+  },
+  "ending": {
+    "source": "R2 17:30 enlarged frame",
+    "legible": ["WAR OF UNDERWORLD", "END", "SWORD DRIVE", "Alicization BONUS", "TOTAL"],
+    "unknown": ["which game award categories map to Alicization BONUS", "whether filmed TOTAL includes start prizes"],
+    "runtimeScope": "actual bonus payout counted only after upper mode begins; no initial trigger payout or supplied balls",
+    "resultVariant": "R2 18:00 RESULT/BATTLE observed, but BATTLE semantics and linkage to 17:30 session unknown; layout preview only"
+  }
+}

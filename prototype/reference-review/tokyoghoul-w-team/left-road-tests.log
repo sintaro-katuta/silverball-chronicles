@@ -1,0 +1,17 @@
+✔ normal: balls stay outside LCD, follow side lanes and drain (10089.482417ms)
+✔ rush: balls stay outside LCD, follow side lanes and drain (2972.774167ms)
+✔ bonus: balls stay outside LCD, follow side lanes and drain (2053.37875ms)
+✔ both modes launch at one origin no faster than 0.6 seconds (1635.977208ms)
+✔ manual power changes only future normal shots (103.987583ms)
+✔ left road has no bridging collision segments and an actual pin rebounds a falling ball (24.253125ms)
+{"shots":33,"guideContact":23,"downstream":32}
+✔ reference inlet guides share their visible coordinates and feed falling left shots downstream (1975.11ms)
+✔ near arrivals reconcile and cohorts retain launch power after switching (4929.635625ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16945.041

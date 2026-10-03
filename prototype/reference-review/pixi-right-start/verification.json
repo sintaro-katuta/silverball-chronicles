@@ -1,0 +1,557 @@
+{
+  "states": {
+    "closed": {
+      "time": 4.008333333333322,
+      "paused": false,
+      "motion": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "counts": {
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 5,
+        "returned": 0
+      },
+      "spawned": 37,
+      "electric": null,
+      "origin": {
+        "x": 270,
+        "y": 390
+      },
+      "pocket": {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      },
+      "pose": {
+        "scoop": {
+          "a": {
+            "x": 166,
+            "y": 200
+          },
+          "b": {
+            "x": 179,
+            "y": 166
+          }
+        },
+        "cover": {
+          "a": {
+            "x": 192,
+            "y": 200
+          },
+          "b": {
+            "x": 179,
+            "y": 166
+          }
+        }
+      },
+      "housing": {
+        "x": 153,
+        "y": 191,
+        "width": 51.99999999999999,
+        "height": 51.99999999999999
+      },
+      "chucker": {
+        "open": false,
+        "scoop": {
+          "a": {
+            "x": 353,
+            "y": 490
+          },
+          "b": {
+            "x": 359.5,
+            "y": 473.2145896684055
+          },
+          "r": 1.3,
+          "material": "gate",
+          "role": "denchu-left-wing",
+          "restitution": 0.06,
+          "active": true
+        },
+        "cover": {
+          "a": {
+            "x": 366,
+            "y": 490
+          },
+          "b": {
+            "x": 359.5,
+            "y": 473.2145896684055
+          },
+          "r": 1.3,
+          "material": "gate",
+          "role": "denchu-right-wing",
+          "restitution": 0.08,
+          "active": true
+        },
+        "progress": 0
+      }
+    },
+    "opening": {
+      "time": 5.208333333333382,
+      "paused": false,
+      "motion": {
+        "progress": 0.5000000000000373,
+        "target": 1,
+        "moving": true
+      },
+      "counts": {
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 15,
+        "returned": 0
+      },
+      "spawned": 49,
+      "electric": null,
+      "origin": {
+        "x": 270,
+        "y": 390
+      },
+      "pocket": {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      },
+      "pose": {
+        "scoop": {
+          "a": {
+            "x": 166,
+            "y": 200
+          },
+          "b": {
+            "x": 165,
+            "y": 164
+          }
+        },
+        "cover": {
+          "a": {
+            "x": 192,
+            "y": 200
+          },
+          "b": {
+            "x": 193,
+            "y": 164
+          }
+        }
+      },
+      "housing": {
+        "x": 153,
+        "y": 191,
+        "width": 51.99999999999999,
+        "height": 51.99999999999999
+      },
+      "chucker": {
+        "open": false,
+        "scoop": {
+          "a": {
+            "x": 353,
+            "y": 490
+          },
+          "b": {
+            "x": 352.7303151007839,
+            "y": 472.0020203896344
+          },
+          "r": 1.3,
+          "material": "gate",
+          "role": "denchu-left-wing",
+          "restitution": 0.06,
+          "active": true
+        },
+        "cover": {
+          "a": {
+            "x": 366,
+            "y": 490
+          },
+          "b": {
+            "x": 366.2696848992161,
+            "y": 472.0020203896344
+          },
+          "r": 1.3,
+          "material": "gate",
+          "role": "denchu-right-wing",
+          "restitution": 0.08,
+          "active": true
+        },
+        "progress": 0.5000000000000373
+      }
+    },
+    "open": {
+      "time": 11.008333333333349,
+      "paused": false,
+      "motion": {
+        "progress": 1,
+        "target": 1,
+        "moving": false
+      },
+      "counts": {
+        "normal": 0,
+        "start": 0,
+        "rush": 50,
+        "bonus": 0,
+        "out": 31,
+        "returned": 0
+      },
+      "spawned": 102,
+      "electric": null,
+      "origin": {
+        "x": 270,
+        "y": 390
+      },
+      "pocket": {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      },
+      "pose": {
+        "scoop": {
+          "a": {
+            "x": 166,
+            "y": 200
+          },
+          "b": {
+            "x": 152,
+            "y": 167
+          }
+        },
+        "cover": {
+          "a": {
+            "x": 192,
+            "y": 200
+          },
+          "b": {
+            "x": 206,
+            "y": 167
+          }
+        }
+      },
+      "housing": {
+        "x": 153,
+        "y": 191,
+        "width": 51.99999999999999,
+        "height": 51.99999999999999
+      },
+      "chucker": {
+        "open": true,
+        "scoop": {
+          "a": {
+            "x": 353,
+            "y": 490
+          },
+          "b": {
+            "x": 346,
+            "y": 473.416876048223
+          },
+          "r": 1.3,
+          "material": "gate",
+          "role": "denchu-left-wing",
+          "restitution": 0.06,
+          "active": true
+        },
+        "cover": {
+          "a": {
+            "x": 366,
+            "y": 490
+          },
+          "b": {
+            "x": 373,
+            "y": 473.416876048223
+          },
+          "r": 1.3,
+          "material": "gate",
+          "role": "denchu-right-wing",
+          "restitution": 0.08,
+          "active": true
+        },
+        "progress": 1
+      }
+    },
+    "closing": {
+      "time": 15.20833333333311,
+      "paused": false,
+      "motion": {
+        "progress": 0.5000000000000426,
+        "target": 0,
+        "moving": true
+      },
+      "counts": {
+        "normal": 0,
+        "start": 0,
+        "rush": 88,
+        "bonus": 0,
+        "out": 31,
+        "returned": 0
+      },
+      "spawned": 141,
+      "electric": null,
+      "origin": {
+        "x": 270,
+        "y": 390
+      },
+      "pocket": {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      },
+      "pose": {
+        "scoop": {
+          "a": {
+            "x": 166,
+            "y": 200
+          },
+          "b": {
+            "x": 165,
+            "y": 164
+          }
+        },
+        "cover": {
+          "a": {
+            "x": 192,
+            "y": 200
+          },
+          "b": {
+            "x": 193,
+            "y": 164
+          }
+        }
+      },
+      "housing": {
+        "x": 153,
+        "y": 191,
+        "width": 51.99999999999999,
+        "height": 51.99999999999999
+      },
+      "chucker": {
+        "open": false,
+        "scoop": {
+          "a": {
+            "x": 353,
+            "y": 490
+          },
+          "b": {
+            "x": 352.7303151007838,
+            "y": 472.0020203896344
+          },
+          "r": 1.3,
+          "material": "gate",
+          "role": "denchu-left-wing",
+          "restitution": 0.06,
+          "active": true
+        },
+        "cover": {
+          "a": {
+            "x": 366,
+            "y": 490
+          },
+          "b": {
+            "x": 366.2696848992162,
+            "y": 472.0020203896344
+          },
+          "r": 1.3,
+          "material": "gate",
+          "role": "denchu-right-wing",
+          "restitution": 0.08,
+          "active": true
+        },
+        "progress": 0.5000000000000426
+      }
+    },
+    "reclosed": {
+      "time": 17.00833333333301,
+      "paused": false,
+      "motion": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "counts": {
+        "normal": 0,
+        "start": 0,
+        "rush": 88,
+        "bonus": 0,
+        "out": 37,
+        "returned": 0
+      },
+      "spawned": 157,
+      "electric": null,
+      "origin": {
+        "x": 270,
+        "y": 390
+      },
+      "pocket": {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      },
+      "pose": {
+        "scoop": {
+          "a": {
+            "x": 166,
+            "y": 200
+          },
+          "b": {
+            "x": 179,
+            "y": 166
+          }
+        },
+        "cover": {
+          "a": {
+            "x": 192,
+            "y": 200
+          },
+          "b": {
+            "x": 179,
+            "y": 166
+          }
+        }
+      },
+      "housing": {
+        "x": 153,
+        "y": 191,
+        "width": 51.99999999999999,
+        "height": 51.99999999999999
+      },
+      "chucker": {
+        "open": false,
+        "scoop": {
+          "a": {
+            "x": 353,
+            "y": 490
+          },
+          "b": {
+            "x": 359.5,
+            "y": 473.2145896684055
+          },
+          "r": 1.3,
+          "material": "gate",
+          "role": "denchu-left-wing",
+          "restitution": 0.06,
+          "active": true
+        },
+        "cover": {
+          "a": {
+            "x": 366,
+            "y": 490
+          },
+          "b": {
+            "x": 359.5,
+            "y": 473.2145896684055
+          },
+          "r": 1.3,
+          "material": "gate",
+          "role": "denchu-right-wing",
+          "restitution": 0.08,
+          "active": true
+        },
+        "progress": 0
+      }
+    },
+    "end": {
+      "time": 20.108333333332833,
+      "paused": false,
+      "motion": {
+        "progress": 0,
+        "target": 0,
+        "moving": false
+      },
+      "counts": {
+        "normal": 1,
+        "start": 0,
+        "rush": 88,
+        "bonus": 0,
+        "out": 65,
+        "returned": 0
+      },
+      "spawned": 185,
+      "electric": null,
+      "origin": {
+        "x": 270,
+        "y": 390
+      },
+      "pocket": {
+        "x": 359.5,
+        "y": 493,
+        "w": 20,
+        "kind": "rush",
+        "id": 6
+      },
+      "pose": {
+        "scoop": {
+          "a": {
+            "x": 166,
+            "y": 200
+          },
+          "b": {
+            "x": 179,
+            "y": 166
+          }
+        },
+        "cover": {
+          "a": {
+            "x": 192,
+            "y": 200
+          },
+          "b": {
+            "x": 179,
+            "y": 166
+          }
+        }
+      },
+      "housing": {
+        "x": 153,
+        "y": 191,
+        "width": 51.99999999999999,
+        "height": 51.99999999999999
+      },
+      "chucker": {
+        "open": false,
+        "scoop": {
+          "a": {
+            "x": 353,
+            "y": 490
+          },
+          "b": {
+            "x": 359.5,
+            "y": 473.2145896684055
+          },
+          "r": 1.3,
+          "material": "gate",
+          "role": "denchu-left-wing",
+          "restitution": 0.06,
+          "active": true
+        },
+        "cover": {
+          "a": {
+            "x": 366,
+            "y": 490
+          },
+          "b": {
+            "x": 359.5,
+            "y": 473.2145896684055
+          },
+          "r": 1.3,
+          "material": "gate",
+          "role": "denchu-right-wing",
+          "restitution": 0.08,
+          "active": true
+        },
+        "progress": 0
+      }
+    }
+  },
+  "errors": []
+}

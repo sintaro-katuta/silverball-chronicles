@@ -1,0 +1,464 @@
+{
+  "reference": "../pixi-source-layout/reference.jpg",
+  "method": "crop x158 y720 w250 h140を6倍nearest拡大し26個の円を採番。局所輪郭はJPEGぼけがあるため中心±1pxを推定誤差とする。暗画素成分検出は7点のみを抽出し補助に使用、全点自動検出と称さない。",
+  "beforeCount": 30,
+  "afterCount": 26,
+  "groups": [
+    10,
+    12,
+    4
+  ],
+  "spillGapDistances": [
+    21.27204738618265,
+    18.560711193270585
+  ],
+  "oldFormulaComparison": [
+    {
+      "oldNumber": 1,
+      "x": 172,
+      "y": 737,
+      "nearestNewDistance": 1.4142135623730951
+    },
+    {
+      "oldNumber": 2,
+      "x": 179.45,
+      "y": 740.9,
+      "nearestNewDistance": 1.7499999999999887
+    },
+    {
+      "oldNumber": 3,
+      "x": 186.9,
+      "y": 744.8,
+      "nearestNewDistance": 1.7029386365926016
+    },
+    {
+      "oldNumber": 4,
+      "x": 194.35,
+      "y": 748.7,
+      "nearestNewDistance": 2.0402205763103476
+    },
+    {
+      "oldNumber": 5,
+      "x": 201.8,
+      "y": 752.6,
+      "nearestNewDistance": 2.459674775249769
+    },
+    {
+      "oldNumber": 6,
+      "x": 209.25,
+      "y": 756.5,
+      "nearestNewDistance": 2.462214450449026
+    },
+    {
+      "oldNumber": 7,
+      "x": 216.7,
+      "y": 760.4,
+      "nearestNewDistance": 2.469817807045696
+    },
+    {
+      "oldNumber": 8,
+      "x": 224.15,
+      "y": 764.3,
+      "nearestNewDistance": 2.482438317461262
+    },
+    {
+      "oldNumber": 9,
+      "x": 231.6,
+      "y": 768.2,
+      "nearestNewDistance": 2.9068883707497353
+    },
+    {
+      "oldNumber": 10,
+      "x": 239.05,
+      "y": 772.1,
+      "nearestNewDistance": 3.451448971084453
+    },
+    {
+      "oldNumber": 11,
+      "x": 246.5,
+      "y": 776,
+      "nearestNewDistance": 5.656854249492381
+    },
+    {
+      "oldNumber": 12,
+      "x": 253.95,
+      "y": 779.9,
+      "nearestNewDistance": 7.514153312250175
+    },
+    {
+      "oldNumber": 13,
+      "x": 261.4,
+      "y": 783.8,
+      "nearestNewDistance": 1.3601470508734943
+    },
+    {
+      "oldNumber": 14,
+      "x": 268.85,
+      "y": 787.7,
+      "nearestNewDistance": 1.2093386622448248
+    },
+    {
+      "oldNumber": 15,
+      "x": 276.3,
+      "y": 791.6,
+      "nearestNewDistance": 1.3038404810405428
+    },
+    {
+      "oldNumber": 16,
+      "x": 283.75,
+      "y": 795.5,
+      "nearestNewDistance": 1.25
+    },
+    {
+      "oldNumber": 17,
+      "x": 291.2,
+      "y": 799.4,
+      "nearestNewDistance": 1.20415945787922
+    },
+    {
+      "oldNumber": 18,
+      "x": 298.65,
+      "y": 803.3,
+      "nearestNewDistance": 1.874166481399116
+    },
+    {
+      "oldNumber": 19,
+      "x": 306.1,
+      "y": 807.2,
+      "nearestNewDistance": 2.024845673131653
+    },
+    {
+      "oldNumber": 20,
+      "x": 313.55,
+      "y": 811.1,
+      "nearestNewDistance": 1.5692354826475199
+    },
+    {
+      "oldNumber": 21,
+      "x": 321,
+      "y": 815,
+      "nearestNewDistance": 2.5495097567963927
+    },
+    {
+      "oldNumber": 22,
+      "x": 328.45000000000005,
+      "y": 818.9,
+      "nearestNewDistance": 2.5519600310349246
+    },
+    {
+      "oldNumber": 23,
+      "x": 335.9,
+      "y": 822.8,
+      "nearestNewDistance": 3.1780497164141726
+    },
+    {
+      "oldNumber": 24,
+      "x": 343.35,
+      "y": 826.7,
+      "nearestNewDistance": 3.736642878306644
+    },
+    {
+      "oldNumber": 25,
+      "x": 350.8,
+      "y": 830.6,
+      "nearestNewDistance": 4.904079934095715
+    },
+    {
+      "oldNumber": 26,
+      "x": 358.25,
+      "y": 834.5,
+      "nearestNewDistance": 5.460082416960389
+    },
+    {
+      "oldNumber": 27,
+      "x": 365.70000000000005,
+      "y": 838.4,
+      "nearestNewDistance": 3.2557641192199553
+    },
+    {
+      "oldNumber": 28,
+      "x": 373.15,
+      "y": 842.3,
+      "nearestNewDistance": 2.804014978561944
+    },
+    {
+      "oldNumber": 29,
+      "x": 380.6,
+      "y": 846.2,
+      "nearestNewDistance": 1.6278820596100194
+    },
+    {
+      "oldNumber": 30,
+      "x": 388.05,
+      "y": 850.1,
+      "nearestNewDistance": 1.6918924315688881
+    }
+  ],
+  "points": [
+    {
+      "number": 1,
+      "group": 1,
+      "sourceX": 173,
+      "sourceY": 736,
+      "boardX": 72.5,
+      "boardY": 488,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 2,
+      "group": 1,
+      "sourceX": 180.5,
+      "sourceY": 739.5,
+      "boardX": 76.25,
+      "boardY": 489.75,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 3,
+      "group": 1,
+      "sourceX": 188,
+      "sourceY": 743.5,
+      "boardX": 80,
+      "boardY": 491.75,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 4,
+      "group": 1,
+      "sourceX": 196,
+      "sourceY": 747.5,
+      "boardX": 84,
+      "boardY": 493.75,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 5,
+      "group": 1,
+      "sourceX": 204,
+      "sourceY": 751.5,
+      "boardX": 88,
+      "boardY": 495.75,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 6,
+      "group": 1,
+      "sourceX": 211.5,
+      "sourceY": 755.5,
+      "boardX": 91.75,
+      "boardY": 497.75,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 7,
+      "group": 1,
+      "sourceX": 219,
+      "sourceY": 759.5,
+      "boardX": 95.5,
+      "boardY": 499.75,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 8,
+      "group": 1,
+      "sourceX": 226.5,
+      "sourceY": 763.5,
+      "boardX": 99.25,
+      "boardY": 501.75,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 9,
+      "group": 1,
+      "sourceX": 234.5,
+      "sourceY": 768,
+      "boardX": 103.25,
+      "boardY": 504,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 10,
+      "group": 1,
+      "sourceX": 242.5,
+      "sourceY": 772,
+      "boardX": 107.25,
+      "boardY": 506,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 11,
+      "group": 2,
+      "sourceX": 261,
+      "sourceY": 782.5,
+      "boardX": 116.5,
+      "boardY": 511.25,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 12,
+      "group": 2,
+      "sourceX": 269,
+      "sourceY": 786.5,
+      "boardX": 120.5,
+      "boardY": 513.25,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 13,
+      "group": 2,
+      "sourceX": 277,
+      "sourceY": 790.5,
+      "boardX": 124.5,
+      "boardY": 515.25,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 14,
+      "group": 2,
+      "sourceX": 284.5,
+      "sourceY": 794.5,
+      "boardX": 128.25,
+      "boardY": 517.25,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 15,
+      "group": 2,
+      "sourceX": 292,
+      "sourceY": 798.5,
+      "boardX": 132,
+      "boardY": 519.25,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 16,
+      "group": 2,
+      "sourceX": 300,
+      "sourceY": 802,
+      "boardX": 136,
+      "boardY": 521,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 17,
+      "group": 2,
+      "sourceX": 308,
+      "sourceY": 806.5,
+      "boardX": 140,
+      "boardY": 523.25,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 18,
+      "group": 2,
+      "sourceX": 315,
+      "sourceY": 810.5,
+      "boardX": 143.5,
+      "boardY": 525.25,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 19,
+      "group": 2,
+      "sourceX": 323.5,
+      "sourceY": 814.5,
+      "boardX": 147.75,
+      "boardY": 527.25,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 20,
+      "group": 2,
+      "sourceX": 331,
+      "sourceY": 819,
+      "boardX": 151.5,
+      "boardY": 529.5,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 21,
+      "group": 2,
+      "sourceX": 339,
+      "sourceY": 823.5,
+      "boardX": 155.5,
+      "boardY": 531.75,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 22,
+      "group": 2,
+      "sourceX": 347,
+      "sourceY": 827.5,
+      "boardX": 159.5,
+      "boardY": 533.75,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 23,
+      "group": 3,
+      "sourceX": 363.5,
+      "sourceY": 836,
+      "boardX": 167.75,
+      "boardY": 538,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 24,
+      "group": 3,
+      "sourceX": 371,
+      "sourceY": 840.5,
+      "boardX": 171.5,
+      "boardY": 540.25,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 25,
+      "group": 3,
+      "sourceX": 379.5,
+      "sourceY": 845,
+      "boardX": 175.75,
+      "boardY": 542.5,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    },
+    {
+      "number": 26,
+      "group": 3,
+      "sourceX": 387.5,
+      "sourceY": 848.5,
+      "boardX": 179.75,
+      "boardY": 544.25,
+      "uncertaintySourcePixels": 1,
+      "status": "資料で確認済み（図の円中心を個別採寸、実寸未測定）"
+    }
+  ],
+  "validation": {
+    "designerRegression": "left-road-tests.log: 8 tests passed",
+    "leadRegression": "lead-road26-regression.log: 10 tests passed（LE報告）",
+    "visual": "left-road-overlay.pngを実見し26点が図の円に沿い、旧配置が2つの間隔を埋めていたことを確認。"
+  }
+}

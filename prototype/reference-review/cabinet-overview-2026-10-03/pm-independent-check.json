@@ -1,0 +1,121 @@
+[
+  {
+    "name": "desktop",
+    "size": {
+      "width": 1280,
+      "height": 960
+    },
+    "detail": {
+      "host": {
+        "width": 490,
+        "height": 500
+      },
+      "logical": {
+        "width": 490,
+        "height": 500
+      },
+      "documentWidth": 1280
+    },
+    "play": {
+      "logical": {
+        "width": 396,
+        "height": 436
+      },
+      "rect": {
+        "x": 204.03125,
+        "y": 0,
+        "right": 1075.953125,
+        "bottom": 959.984375
+      },
+      "controlsHidden": true
+    },
+    "errors": [],
+    "checks": [
+      "floor active/dummy selection intact",
+      "5th unit detail identity",
+      "back returns to same mobile page",
+      "detail/play/floor roundtrip",
+      "adopted play396x436 unchanged"
+    ]
+  },
+  {
+    "name": "mobile",
+    "size": {
+      "width": 390,
+      "height": 844
+    },
+    "detail": {
+      "host": {
+        "width": 362,
+        "height": 260
+      },
+      "logical": {
+        "width": 362,
+        "height": 260
+      },
+      "documentWidth": 390
+    },
+    "play": {
+      "logical": {
+        "width": 396,
+        "height": 436
+      },
+      "rect": {
+        "x": 0,
+        "y": 207.296875,
+        "right": 390,
+        "bottom": 636.6875
+      },
+      "controlsHidden": true
+    },
+    "errors": [],
+    "checks": [
+      "floor active/dummy selection intact",
+      "5th unit detail identity",
+      "back returns to same mobile page",
+      "detail/play/floor roundtrip",
+      "adopted play396x436 unchanged",
+      "mobile next/previous and floor up/down intact"
+    ]
+  },
+  {
+    "name": "small",
+    "size": {
+      "width": 320,
+      "height": 568
+    },
+    "detail": {
+      "host": {
+        "width": 292,
+        "height": 260
+      },
+      "logical": {
+        "width": 292,
+        "height": 260
+      },
+      "documentWidth": 320
+    },
+    "play": {
+      "logical": {
+        "width": 396,
+        "height": 436
+      },
+      "rect": {
+        "x": 0,
+        "y": 107.84375,
+        "right": 320,
+        "bottom": 460.15625
+      },
+      "controlsHidden": true
+    },
+    "errors": [],
+    "checks": [
+      "floor active/dummy selection intact",
+      "5th unit detail identity",
+      "back returns to same mobile page",
+      "detail/play/floor roundtrip",
+      "adopted play396x436 unchanged",
+      "mobile next/previous and floor up/down intact"
+    ]
+  }
+]

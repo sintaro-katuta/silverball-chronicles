@@ -1,0 +1,6 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><style>html,body{margin:0;background:#060d1a}#canvas{width:min(100vw,396px);height:auto;aspect-ratio:396/436;margin:180px auto}canvas{width:100%}</style><div id="canvas"></div><script type="module">
+import '@fontsource/dotgothic16/japanese-400.css';import '@fontsource/dotgothic16/latin-400.css';
+import {mountBoard} from '/src/pixi/board-runtime.js';import {SessionGame} from '/src/pixi/session-game.js';
+const game=new SessionGame(()=>.9);game.w.rng=()=>.9;
+window.denseBoard=await mountBoard(document.body,{production:true,sessionGame:game,launchInterval:.05,reviewHook:({model})=>window.denseModel=model});
+</script></html>

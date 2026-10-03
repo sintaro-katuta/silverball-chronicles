@@ -1,0 +1,15 @@
+{"time":314.15833333321194,"bonus":60,"rushEntries":100,"draws":100}
+{"time":270.95833333325123,"payout":1500,"bonus":160,"held":3}
+✔ actual bonus admissions lead to 100 entry-driven rush draws then automatic normal return (18325.750292ms)
+✔ non-RUSH bonus returns to normal only after the door closes (48.1215ms)
+✔ RUSH win pays from real attacker entries and resumes at 100 with remaining holds (15173.277833ms)
+✔ ending holds normal draws through result and pauses on the shared clock (4.639958ms)
+✔ normal holds during RUSH do not close the electric chucker (0.355416ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33624.559833

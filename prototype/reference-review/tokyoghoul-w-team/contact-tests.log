@@ -1,0 +1,24 @@
+✔ lower LCD housing has a physical surface matching the visible apron (4.119792ms)
+✔ compact lower assembly drains and accounts for all balls at increased firing rate (33502.164209ms)
+✔ normal: balls stay outside LCD, follow side lanes and drain (14646.41325ms)
+✔ rush: balls stay outside LCD, follow side lanes and drain (4127.738208ms)
+✔ bonus: balls stay outside LCD, follow side lanes and drain (2822.558917ms)
+✔ both modes launch at one origin no faster than 0.6 seconds (2167.884333ms)
+✔ manual power changes only future normal shots (145.2505ms)
+✔ left road has no bridging collision segments and an actual pin rebounds a falling ball (31.460167ms)
+{"shots":33,"guideContact":23,"downstream":32}
+✔ reference inlet guides share their visible coordinates and feed falling left shots downstream (2777.398958ms)
+✔ near arrivals reconcile and cohorts retain launch power after switching (7024.372833ms)
+✔ traced right channel guides physical balls and drains at 0.6s (1423.395375ms)
+✔ traced right channel guides physical balls and drains at 0.05s (21905.606125ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.2 (3404.498792ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.24 (3195.802125ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.28 (3808.248ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33834.302625

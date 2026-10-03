@@ -1,0 +1,71 @@
+{
+  "method": "Independent record JSON arithmetic, fixture recording-script read, final 11 product source hash match; selected layout/171-second image inspection. Does not claim all-frame continuous viewing or all-contact verification.",
+  "videos": [
+    {
+      "name": "left",
+      "file": "reference-review/collision-lcd-2026-10-03/left-mobile.mp4",
+      "sha256": "7d6e1bb26aa873aa87b9a2ff4926b1569ec2c0b76d26d87693e914b071990e3c",
+      "fixture": "Natural .6s left launch: first20sec default.24, next40sec.25 via power control, then30sec drain. Results miss, no ball placement.",
+      "pageerrors": [],
+      "spawned": 82,
+      "counted": 82,
+      "inFlight": 0,
+      "counts": {
+        "fuzu": 0,
+        "normal": 1,
+        "start": 1,
+        "rush": 0,
+        "bonus": 0,
+        "out": 55,
+        "returned": 25
+      },
+      "reconciled": true,
+      "lastBonusPayout": null,
+      "sessionTotal": 6
+    },
+    {
+      "name": "dense",
+      "file": "reference-review/collision-lcd-2026-10-03/dense-mobile.mp4",
+      "sha256": "ac2c4d9b751bb42cdf9dc905efc610f5ff293bf2ff30e9bbfc258bbac1acddb8",
+      "fixture": "Same production renderer/session, .05s requested launch cadence; all results miss. Natural launch for20sec then drain30sec; no physical ball placement.",
+      "pageerrors": [],
+      "spawned": 254,
+      "counted": 254,
+      "inFlight": 0,
+      "counts": {
+        "fuzu": 0,
+        "normal": 4,
+        "start": 3,
+        "rush": 0,
+        "bonus": 0,
+        "out": 131,
+        "returned": 116
+      },
+      "reconciled": true,
+      "lastBonusPayout": null,
+      "sessionTotal": 23
+    },
+    {
+      "name": "rush",
+      "file": "reference-review/collision-lcd-2026-10-03/rush-mobile.mp4",
+      "sha256": "be3b37a321afdc0d4358a9ac3c633385341f031f435aa4d5ccf47cdea08e055e",
+      "fixture": "Initial RUSH and first result fixed; all shots natural, no ball placement.",
+      "pageerrors": [],
+      "spawned": 278,
+      "counted": 274,
+      "inFlight": 4,
+      "counts": {
+        "fuzu": 63,
+        "normal": 0,
+        "start": 0,
+        "rush": 2,
+        "bonus": 200,
+        "out": 9,
+        "returned": 0
+      },
+      "reconciled": true,
+      "lastBonusPayout": 3000,
+      "sessionTotal": 3065
+    }
+  ]
+}

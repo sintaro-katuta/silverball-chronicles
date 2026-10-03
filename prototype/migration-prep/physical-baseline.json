@@ -1,0 +1,8021 @@
+{
+  "view": {
+    "width": 540,
+    "height": 880,
+    "boardOffset": {
+      "x": 60,
+      "y": 100
+    },
+    "lcd": {
+      "x": 112,
+      "y": 172,
+      "width": 317,
+      "height": 408,
+      "radius": 14
+    }
+  },
+  "ballRadius": 4.6,
+  "launcher": {
+    "origin": {
+      "x": 29,
+      "y": 652
+    },
+    "axis": {
+      "x": 0,
+      "y": -1
+    },
+    "mouth": {
+      "x": 29,
+      "y": 632
+    },
+    "innerWallX": 36,
+    "outerWallX": 22,
+    "throatWidth": 11.4
+  },
+  "layouts": [
+    {
+      "id": "legacy-course-0",
+      "course": 0,
+      "pegSeed": 0,
+      "pins": [
+        {
+          "x": 199.5,
+          "y": 522,
+          "r": 2.1,
+          "id": 0,
+          "role": "heso"
+        },
+        {
+          "x": 220.5,
+          "y": 522,
+          "r": 2.1,
+          "id": 1,
+          "role": "heso"
+        },
+        {
+          "x": 183,
+          "y": 507,
+          "r": 2.1,
+          "id": 2,
+          "role": "jump"
+        },
+        {
+          "x": 237,
+          "y": 507,
+          "r": 2.1,
+          "id": 3,
+          "role": "jump"
+        },
+        {
+          "x": 105,
+          "y": 429,
+          "r": 2.1,
+          "id": 4,
+          "role": "michi"
+        },
+        {
+          "x": 122,
+          "y": 443,
+          "r": 2.1,
+          "id": 5,
+          "role": "michi"
+        },
+        {
+          "x": 139,
+          "y": 457,
+          "r": 2.1,
+          "id": 6,
+          "role": "michi"
+        },
+        {
+          "x": 173,
+          "y": 485,
+          "r": 2.1,
+          "id": 7,
+          "role": "michi"
+        },
+        {
+          "x": 190,
+          "y": 499,
+          "r": 2.1,
+          "id": 8,
+          "role": "michi"
+        },
+        {
+          "x": 315,
+          "y": 429,
+          "r": 2.1,
+          "id": 9,
+          "role": "michi"
+        },
+        {
+          "x": 298,
+          "y": 443,
+          "r": 2.1,
+          "id": 10,
+          "role": "michi"
+        },
+        {
+          "x": 281,
+          "y": 457,
+          "r": 2.1,
+          "id": 11,
+          "role": "michi"
+        },
+        {
+          "x": 247,
+          "y": 485,
+          "r": 2.1,
+          "id": 12,
+          "role": "michi"
+        },
+        {
+          "x": 230,
+          "y": 499,
+          "r": 2.1,
+          "id": 13,
+          "role": "michi"
+        },
+        {
+          "x": 56,
+          "y": 291,
+          "r": 2.1,
+          "id": 14,
+          "role": "yori"
+        },
+        {
+          "x": 115,
+          "y": 291,
+          "r": 2.1,
+          "id": 15,
+          "role": "yori"
+        },
+        {
+          "x": 56,
+          "y": 313,
+          "r": 2.1,
+          "id": 16,
+          "role": "yori"
+        },
+        {
+          "x": 103,
+          "y": 313,
+          "r": 2.1,
+          "id": 17,
+          "role": "yori"
+        },
+        {
+          "x": 63,
+          "y": 335,
+          "r": 2.1,
+          "id": 18,
+          "role": "yori"
+        },
+        {
+          "x": 91,
+          "y": 335,
+          "r": 2.1,
+          "id": 19,
+          "role": "yori"
+        },
+        {
+          "x": 56,
+          "y": 354,
+          "r": 2.1,
+          "id": 20,
+          "role": "yori"
+        },
+        {
+          "x": 114,
+          "y": 360,
+          "r": 2.1,
+          "id": 21,
+          "role": "yori"
+        },
+        {
+          "x": 85,
+          "y": 170,
+          "r": 2.1,
+          "id": 22,
+          "role": "spread"
+        },
+        {
+          "x": 67,
+          "y": 185,
+          "r": 2.1,
+          "id": 23,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 200,
+          "r": 2.1,
+          "id": 24,
+          "role": "spread"
+        },
+        {
+          "x": 103,
+          "y": 185,
+          "r": 2.1,
+          "id": 25,
+          "role": "spread"
+        },
+        {
+          "x": 121,
+          "y": 200,
+          "r": 2.1,
+          "id": 26,
+          "role": "spread"
+        },
+        {
+          "x": 205,
+          "y": 170,
+          "r": 2.1,
+          "id": 27,
+          "role": "spread"
+        },
+        {
+          "x": 187,
+          "y": 185,
+          "r": 2.1,
+          "id": 28,
+          "role": "spread"
+        },
+        {
+          "x": 169,
+          "y": 200,
+          "r": 2.1,
+          "id": 29,
+          "role": "spread"
+        },
+        {
+          "x": 223,
+          "y": 185,
+          "r": 2.1,
+          "id": 30,
+          "role": "spread"
+        },
+        {
+          "x": 241,
+          "y": 200,
+          "r": 2.1,
+          "id": 31,
+          "role": "spread"
+        },
+        {
+          "x": 62,
+          "y": 240,
+          "r": 2.1,
+          "id": 32,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 255,
+          "r": 2.1,
+          "id": 33,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 270,
+          "r": 2.1,
+          "id": 34,
+          "role": "spread"
+        },
+        {
+          "x": 80,
+          "y": 255,
+          "r": 2.1,
+          "id": 35,
+          "role": "spread"
+        },
+        {
+          "x": 98,
+          "y": 270,
+          "r": 2.1,
+          "id": 36,
+          "role": "spread"
+        },
+        {
+          "x": 158,
+          "y": 240,
+          "r": 2.1,
+          "id": 37,
+          "role": "spread"
+        },
+        {
+          "x": 140,
+          "y": 255,
+          "r": 2.1,
+          "id": 38,
+          "role": "spread"
+        },
+        {
+          "x": 122,
+          "y": 270,
+          "r": 2.1,
+          "id": 39,
+          "role": "spread"
+        },
+        {
+          "x": 176,
+          "y": 255,
+          "r": 2.1,
+          "id": 40,
+          "role": "spread"
+        },
+        {
+          "x": 194,
+          "y": 270,
+          "r": 2.1,
+          "id": 41,
+          "role": "spread"
+        },
+        {
+          "x": 263,
+          "y": 240,
+          "r": 2.1,
+          "id": 42,
+          "role": "spread"
+        },
+        {
+          "x": 245,
+          "y": 255,
+          "r": 2.1,
+          "id": 43,
+          "role": "spread"
+        },
+        {
+          "x": 227,
+          "y": 270,
+          "r": 2.1,
+          "id": 44,
+          "role": "spread"
+        },
+        {
+          "x": 281,
+          "y": 255,
+          "r": 2.1,
+          "id": 45,
+          "role": "spread"
+        },
+        {
+          "x": 299,
+          "y": 270,
+          "r": 2.1,
+          "id": 46,
+          "role": "spread"
+        },
+        {
+          "x": 159,
+          "y": 306,
+          "r": 2.1,
+          "id": 47,
+          "role": "spread"
+        },
+        {
+          "x": 180,
+          "y": 329,
+          "r": 2.1,
+          "id": 48,
+          "role": "spread"
+        },
+        {
+          "x": 201,
+          "y": 352,
+          "r": 2.1,
+          "id": 49,
+          "role": "spread"
+        },
+        {
+          "x": 156,
+          "y": 386,
+          "r": 2.1,
+          "id": 50,
+          "role": "spread"
+        },
+        {
+          "x": 180,
+          "y": 403,
+          "r": 2.1,
+          "id": 51,
+          "role": "spread"
+        },
+        {
+          "x": 245,
+          "y": 366,
+          "r": 2.1,
+          "id": 52,
+          "role": "spread"
+        },
+        {
+          "x": 267,
+          "y": 389,
+          "r": 2.1,
+          "id": 53,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 565,
+          "r": 2.1,
+          "id": 54,
+          "role": "prize"
+        },
+        {
+          "x": 67,
+          "y": 584,
+          "r": 2.1,
+          "id": 55,
+          "role": "prize"
+        },
+        {
+          "x": 85,
+          "y": 603,
+          "r": 2.1,
+          "id": 56,
+          "role": "prize"
+        },
+        {
+          "x": 121,
+          "y": 565,
+          "r": 2.1,
+          "id": 57,
+          "role": "prize"
+        },
+        {
+          "x": 139,
+          "y": 584,
+          "r": 2.1,
+          "id": 58,
+          "role": "prize"
+        },
+        {
+          "x": 157,
+          "y": 603,
+          "r": 2.1,
+          "id": 59,
+          "role": "prize"
+        },
+        {
+          "x": 250,
+          "y": 565,
+          "r": 2.1,
+          "id": 60,
+          "role": "prize"
+        },
+        {
+          "x": 268,
+          "y": 584,
+          "r": 2.1,
+          "id": 61,
+          "role": "prize"
+        },
+        {
+          "x": 286,
+          "y": 603,
+          "r": 2.1,
+          "id": 62,
+          "role": "prize"
+        }
+      ],
+      "colliders": [
+        {
+          "a": {
+            "x": 36,
+            "y": 680
+          },
+          "b": {
+            "x": 36,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 36,
+            "y": 200
+          },
+          "b": {
+            "x": 39,
+            "y": 190
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 680
+          },
+          "b": {
+            "x": 22,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 200
+          },
+          "b": {
+            "x": 18,
+            "y": 165
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 18,
+            "y": 165
+          },
+          "b": {
+            "x": 68,
+            "y": 90
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-kicker",
+          "restitution": 0.95
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 10
+          },
+          "b": {
+            "x": 379,
+            "y": 155
+          },
+          "r": 1.3,
+          "material": "rubber",
+          "role": "upper-reflector",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 20,
+            "y": 10
+          },
+          "b": {
+            "x": 402,
+            "y": 10
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "board-top",
+          "restitution": 0.4
+        },
+        {
+          "a": {
+            "x": 340,
+            "y": 200
+          },
+          "b": {
+            "x": 346.313,
+            "y": 426
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-upper",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 347.486,
+            "y": 468
+          },
+          "b": {
+            "x": 350,
+            "y": 558
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 155
+          },
+          "b": {
+            "x": 379,
+            "y": 665
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-outer",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 60,
+            "y": 640
+          },
+          "b": {
+            "x": 176,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-left",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 635
+          },
+          "b": {
+            "x": 244,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-right",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 57.5,
+            "y": 617
+          },
+          "b": {
+            "x": 57.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 76.5,
+            "y": 617
+          },
+          "b": {
+            "x": 76.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 130,
+            "y": 617
+          },
+          "b": {
+            "x": 130,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 148,
+            "y": 617
+          },
+          "b": {
+            "x": 148,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 258.5,
+            "y": 617
+          },
+          "b": {
+            "x": 258.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 277.5,
+            "y": 617
+          },
+          "b": {
+            "x": 277.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 200,
+            "y": 535
+          },
+          "b": {
+            "x": 200,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 220,
+            "y": 535
+          },
+          "b": {
+            "x": 220,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        }
+      ],
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 535,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 359,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5
+        },
+        {
+          "x": 330,
+          "y": 477,
+          "w": 34,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "mechanisms": [
+        {
+          "kind": "windmill",
+          "x": 75,
+          "y": 384,
+          "angle": 0.28,
+          "omega": 0,
+          "radius": 18,
+          "armRadius": 1.3
+        },
+        {
+          "kind": "windmill",
+          "x": 290,
+          "y": 405,
+          "angle": -0.3,
+          "omega": 0,
+          "radius": 17,
+          "armRadius": 1.3
+        }
+      ],
+      "outlet": {
+        "x": 210,
+        "y": 668,
+        "w": 68
+      },
+      "returnOutlet": {
+        "x": 29,
+        "y": 668,
+        "w": 22
+      },
+      "states": {
+        "normal": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "rush": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": true,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 377,
+                "y": 440
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 477
+              },
+              "b": {
+                "x": 313,
+                "y": 497
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonus": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 581
+            },
+            "b": {
+              "x": 329,
+              "y": 608
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": true
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonusGap": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "legacy-course-1",
+      "course": 1,
+      "pegSeed": 0,
+      "pins": [
+        {
+          "x": 192,
+          "y": 522,
+          "r": 2.1,
+          "id": 0,
+          "role": "heso"
+        },
+        {
+          "x": 212,
+          "y": 522,
+          "r": 2.1,
+          "id": 1,
+          "role": "heso"
+        },
+        {
+          "x": 175,
+          "y": 507,
+          "r": 2.1,
+          "id": 2,
+          "role": "jump"
+        },
+        {
+          "x": 229,
+          "y": 507,
+          "r": 2.1,
+          "id": 3,
+          "role": "jump"
+        },
+        {
+          "x": 97,
+          "y": 429,
+          "r": 2.1,
+          "id": 4,
+          "role": "michi"
+        },
+        {
+          "x": 114,
+          "y": 443,
+          "r": 2.1,
+          "id": 5,
+          "role": "michi"
+        },
+        {
+          "x": 148,
+          "y": 471,
+          "r": 2.1,
+          "id": 6,
+          "role": "michi"
+        },
+        {
+          "x": 165,
+          "y": 485,
+          "r": 2.1,
+          "id": 7,
+          "role": "michi"
+        },
+        {
+          "x": 182,
+          "y": 499,
+          "r": 2.1,
+          "id": 8,
+          "role": "michi"
+        },
+        {
+          "x": 307,
+          "y": 429,
+          "r": 2.1,
+          "id": 9,
+          "role": "michi"
+        },
+        {
+          "x": 290,
+          "y": 443,
+          "r": 2.1,
+          "id": 10,
+          "role": "michi"
+        },
+        {
+          "x": 256,
+          "y": 471,
+          "r": 2.1,
+          "id": 11,
+          "role": "michi"
+        },
+        {
+          "x": 239,
+          "y": 485,
+          "r": 2.1,
+          "id": 12,
+          "role": "michi"
+        },
+        {
+          "x": 222,
+          "y": 499,
+          "r": 2.1,
+          "id": 13,
+          "role": "michi"
+        },
+        {
+          "x": 56,
+          "y": 291,
+          "r": 2.1,
+          "id": 14,
+          "role": "yori"
+        },
+        {
+          "x": 103,
+          "y": 291,
+          "r": 2.1,
+          "id": 15,
+          "role": "yori"
+        },
+        {
+          "x": 56,
+          "y": 313,
+          "r": 2.1,
+          "id": 16,
+          "role": "yori"
+        },
+        {
+          "x": 91,
+          "y": 313,
+          "r": 2.1,
+          "id": 17,
+          "role": "yori"
+        },
+        {
+          "x": 56,
+          "y": 335,
+          "r": 2.1,
+          "id": 18,
+          "role": "yori"
+        },
+        {
+          "x": 79,
+          "y": 335,
+          "r": 2.1,
+          "id": 19,
+          "role": "yori"
+        },
+        {
+          "x": 56,
+          "y": 354,
+          "r": 2.1,
+          "id": 20,
+          "role": "yori"
+        },
+        {
+          "x": 102,
+          "y": 360,
+          "r": 2.1,
+          "id": 21,
+          "role": "yori"
+        },
+        {
+          "x": 77,
+          "y": 170,
+          "r": 2.1,
+          "id": 22,
+          "role": "spread"
+        },
+        {
+          "x": 59,
+          "y": 185,
+          "r": 2.1,
+          "id": 23,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 200,
+          "r": 2.1,
+          "id": 24,
+          "role": "spread"
+        },
+        {
+          "x": 95,
+          "y": 185,
+          "r": 2.1,
+          "id": 25,
+          "role": "spread"
+        },
+        {
+          "x": 113,
+          "y": 200,
+          "r": 2.1,
+          "id": 26,
+          "role": "spread"
+        },
+        {
+          "x": 197,
+          "y": 170,
+          "r": 2.1,
+          "id": 27,
+          "role": "spread"
+        },
+        {
+          "x": 179,
+          "y": 185,
+          "r": 2.1,
+          "id": 28,
+          "role": "spread"
+        },
+        {
+          "x": 161,
+          "y": 200,
+          "r": 2.1,
+          "id": 29,
+          "role": "spread"
+        },
+        {
+          "x": 215,
+          "y": 185,
+          "r": 2.1,
+          "id": 30,
+          "role": "spread"
+        },
+        {
+          "x": 233,
+          "y": 200,
+          "r": 2.1,
+          "id": 31,
+          "role": "spread"
+        },
+        {
+          "x": 62,
+          "y": 240,
+          "r": 2.1,
+          "id": 32,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 255,
+          "r": 2.1,
+          "id": 33,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 270,
+          "r": 2.1,
+          "id": 34,
+          "role": "spread"
+        },
+        {
+          "x": 80,
+          "y": 255,
+          "r": 2.1,
+          "id": 35,
+          "role": "spread"
+        },
+        {
+          "x": 98,
+          "y": 270,
+          "r": 2.1,
+          "id": 36,
+          "role": "spread"
+        },
+        {
+          "x": 150,
+          "y": 240,
+          "r": 2.1,
+          "id": 37,
+          "role": "spread"
+        },
+        {
+          "x": 132,
+          "y": 255,
+          "r": 2.1,
+          "id": 38,
+          "role": "spread"
+        },
+        {
+          "x": 114,
+          "y": 270,
+          "r": 2.1,
+          "id": 39,
+          "role": "spread"
+        },
+        {
+          "x": 168,
+          "y": 255,
+          "r": 2.1,
+          "id": 40,
+          "role": "spread"
+        },
+        {
+          "x": 186,
+          "y": 270,
+          "r": 2.1,
+          "id": 41,
+          "role": "spread"
+        },
+        {
+          "x": 263,
+          "y": 240,
+          "r": 2.1,
+          "id": 42,
+          "role": "spread"
+        },
+        {
+          "x": 245,
+          "y": 255,
+          "r": 2.1,
+          "id": 43,
+          "role": "spread"
+        },
+        {
+          "x": 227,
+          "y": 270,
+          "r": 2.1,
+          "id": 44,
+          "role": "spread"
+        },
+        {
+          "x": 281,
+          "y": 255,
+          "r": 2.1,
+          "id": 45,
+          "role": "spread"
+        },
+        {
+          "x": 299,
+          "y": 270,
+          "r": 2.1,
+          "id": 46,
+          "role": "spread"
+        },
+        {
+          "x": 151,
+          "y": 306,
+          "r": 2.1,
+          "id": 47,
+          "role": "spread"
+        },
+        {
+          "x": 172,
+          "y": 329,
+          "r": 2.1,
+          "id": 48,
+          "role": "spread"
+        },
+        {
+          "x": 193,
+          "y": 352,
+          "r": 2.1,
+          "id": 49,
+          "role": "spread"
+        },
+        {
+          "x": 148,
+          "y": 386,
+          "r": 2.1,
+          "id": 50,
+          "role": "spread"
+        },
+        {
+          "x": 172,
+          "y": 403,
+          "r": 2.1,
+          "id": 51,
+          "role": "spread"
+        },
+        {
+          "x": 237,
+          "y": 366,
+          "r": 2.1,
+          "id": 52,
+          "role": "spread"
+        },
+        {
+          "x": 259,
+          "y": 389,
+          "r": 2.1,
+          "id": 53,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 565,
+          "r": 2.1,
+          "id": 54,
+          "role": "prize"
+        },
+        {
+          "x": 67,
+          "y": 584,
+          "r": 2.1,
+          "id": 55,
+          "role": "prize"
+        },
+        {
+          "x": 85,
+          "y": 603,
+          "r": 2.1,
+          "id": 56,
+          "role": "prize"
+        },
+        {
+          "x": 129,
+          "y": 565,
+          "r": 2.1,
+          "id": 57,
+          "role": "prize"
+        },
+        {
+          "x": 147,
+          "y": 584,
+          "r": 2.1,
+          "id": 58,
+          "role": "prize"
+        },
+        {
+          "x": 165,
+          "y": 603,
+          "r": 2.1,
+          "id": 59,
+          "role": "prize"
+        },
+        {
+          "x": 242,
+          "y": 565,
+          "r": 2.1,
+          "id": 60,
+          "role": "prize"
+        },
+        {
+          "x": 260,
+          "y": 584,
+          "r": 2.1,
+          "id": 61,
+          "role": "prize"
+        },
+        {
+          "x": 278,
+          "y": 603,
+          "r": 2.1,
+          "id": 62,
+          "role": "prize"
+        }
+      ],
+      "colliders": [
+        {
+          "a": {
+            "x": 36,
+            "y": 680
+          },
+          "b": {
+            "x": 36,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 36,
+            "y": 200
+          },
+          "b": {
+            "x": 39,
+            "y": 190
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 680
+          },
+          "b": {
+            "x": 22,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 200
+          },
+          "b": {
+            "x": 18,
+            "y": 165
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 18,
+            "y": 165
+          },
+          "b": {
+            "x": 68,
+            "y": 90
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-kicker",
+          "restitution": 0.95
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 10
+          },
+          "b": {
+            "x": 379,
+            "y": 155
+          },
+          "r": 1.3,
+          "material": "rubber",
+          "role": "upper-reflector",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 20,
+            "y": 10
+          },
+          "b": {
+            "x": 402,
+            "y": 10
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "board-top",
+          "restitution": 0.4
+        },
+        {
+          "a": {
+            "x": 340,
+            "y": 200
+          },
+          "b": {
+            "x": 346.313,
+            "y": 426
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-upper",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 347.486,
+            "y": 468
+          },
+          "b": {
+            "x": 350,
+            "y": 558
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 155
+          },
+          "b": {
+            "x": 379,
+            "y": 665
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-outer",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 60,
+            "y": 640
+          },
+          "b": {
+            "x": 176,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-left",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 635
+          },
+          "b": {
+            "x": 244,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-right",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 57.5,
+            "y": 617
+          },
+          "b": {
+            "x": 57.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 76.5,
+            "y": 617
+          },
+          "b": {
+            "x": 76.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 138,
+            "y": 617
+          },
+          "b": {
+            "x": 138,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 156,
+            "y": 617
+          },
+          "b": {
+            "x": 156,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 250.5,
+            "y": 617
+          },
+          "b": {
+            "x": 250.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 269.5,
+            "y": 617
+          },
+          "b": {
+            "x": 269.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 192,
+            "y": 535
+          },
+          "b": {
+            "x": 192,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 212,
+            "y": 535
+          },
+          "b": {
+            "x": 212,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        }
+      ],
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 147,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 260,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 202,
+          "y": 535,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 359,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5
+        },
+        {
+          "x": 330,
+          "y": 477,
+          "w": 34,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "mechanisms": [
+        {
+          "kind": "windmill",
+          "x": 63,
+          "y": 384,
+          "angle": 0.28,
+          "omega": 0,
+          "radius": 18,
+          "armRadius": 1.3
+        },
+        {
+          "kind": "windmill",
+          "x": 290,
+          "y": 405,
+          "angle": -0.3,
+          "omega": 0,
+          "radius": 17,
+          "armRadius": 1.3
+        }
+      ],
+      "outlet": {
+        "x": 210,
+        "y": 668,
+        "w": 68
+      },
+      "returnOutlet": {
+        "x": 29,
+        "y": 668,
+        "w": 22
+      },
+      "states": {
+        "normal": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "rush": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": true,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 377,
+                "y": 440
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 477
+              },
+              "b": {
+                "x": 313,
+                "y": 497
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonus": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 581
+            },
+            "b": {
+              "x": 329,
+              "y": 608
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": true
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonusGap": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "legacy-course-2",
+      "course": 2,
+      "pegSeed": 0,
+      "pins": [
+        {
+          "x": 208.5,
+          "y": 522,
+          "r": 2.1,
+          "id": 0,
+          "role": "heso"
+        },
+        {
+          "x": 227.5,
+          "y": 522,
+          "r": 2.1,
+          "id": 1,
+          "role": "heso"
+        },
+        {
+          "x": 191,
+          "y": 507,
+          "r": 2.1,
+          "id": 2,
+          "role": "jump"
+        },
+        {
+          "x": 245,
+          "y": 507,
+          "r": 2.1,
+          "id": 3,
+          "role": "jump"
+        },
+        {
+          "x": 113,
+          "y": 429,
+          "r": 2.1,
+          "id": 4,
+          "role": "michi"
+        },
+        {
+          "x": 130,
+          "y": 443,
+          "r": 2.1,
+          "id": 5,
+          "role": "michi"
+        },
+        {
+          "x": 147,
+          "y": 457,
+          "r": 2.1,
+          "id": 6,
+          "role": "michi"
+        },
+        {
+          "x": 164,
+          "y": 471,
+          "r": 2.1,
+          "id": 7,
+          "role": "michi"
+        },
+        {
+          "x": 198,
+          "y": 499,
+          "r": 2.1,
+          "id": 8,
+          "role": "michi"
+        },
+        {
+          "x": 323,
+          "y": 429,
+          "r": 2.1,
+          "id": 9,
+          "role": "michi"
+        },
+        {
+          "x": 306,
+          "y": 443,
+          "r": 2.1,
+          "id": 10,
+          "role": "michi"
+        },
+        {
+          "x": 289,
+          "y": 457,
+          "r": 2.1,
+          "id": 11,
+          "role": "michi"
+        },
+        {
+          "x": 272,
+          "y": 471,
+          "r": 2.1,
+          "id": 12,
+          "role": "michi"
+        },
+        {
+          "x": 238,
+          "y": 499,
+          "r": 2.1,
+          "id": 13,
+          "role": "michi"
+        },
+        {
+          "x": 56,
+          "y": 291,
+          "r": 2.1,
+          "id": 14,
+          "role": "yori"
+        },
+        {
+          "x": 127,
+          "y": 291,
+          "r": 2.1,
+          "id": 15,
+          "role": "yori"
+        },
+        {
+          "x": 62,
+          "y": 313,
+          "r": 2.1,
+          "id": 16,
+          "role": "yori"
+        },
+        {
+          "x": 115,
+          "y": 313,
+          "r": 2.1,
+          "id": 17,
+          "role": "yori"
+        },
+        {
+          "x": 75,
+          "y": 335,
+          "r": 2.1,
+          "id": 18,
+          "role": "yori"
+        },
+        {
+          "x": 103,
+          "y": 335,
+          "r": 2.1,
+          "id": 19,
+          "role": "yori"
+        },
+        {
+          "x": 56,
+          "y": 354,
+          "r": 2.1,
+          "id": 20,
+          "role": "yori"
+        },
+        {
+          "x": 126,
+          "y": 360,
+          "r": 2.1,
+          "id": 21,
+          "role": "yori"
+        },
+        {
+          "x": 93,
+          "y": 170,
+          "r": 2.1,
+          "id": 22,
+          "role": "spread"
+        },
+        {
+          "x": 75,
+          "y": 185,
+          "r": 2.1,
+          "id": 23,
+          "role": "spread"
+        },
+        {
+          "x": 57,
+          "y": 200,
+          "r": 2.1,
+          "id": 24,
+          "role": "spread"
+        },
+        {
+          "x": 111,
+          "y": 185,
+          "r": 2.1,
+          "id": 25,
+          "role": "spread"
+        },
+        {
+          "x": 129,
+          "y": 200,
+          "r": 2.1,
+          "id": 26,
+          "role": "spread"
+        },
+        {
+          "x": 213,
+          "y": 170,
+          "r": 2.1,
+          "id": 27,
+          "role": "spread"
+        },
+        {
+          "x": 195,
+          "y": 185,
+          "r": 2.1,
+          "id": 28,
+          "role": "spread"
+        },
+        {
+          "x": 177,
+          "y": 200,
+          "r": 2.1,
+          "id": 29,
+          "role": "spread"
+        },
+        {
+          "x": 231,
+          "y": 185,
+          "r": 2.1,
+          "id": 30,
+          "role": "spread"
+        },
+        {
+          "x": 249,
+          "y": 200,
+          "r": 2.1,
+          "id": 31,
+          "role": "spread"
+        },
+        {
+          "x": 62,
+          "y": 240,
+          "r": 2.1,
+          "id": 32,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 255,
+          "r": 2.1,
+          "id": 33,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 270,
+          "r": 2.1,
+          "id": 34,
+          "role": "spread"
+        },
+        {
+          "x": 80,
+          "y": 255,
+          "r": 2.1,
+          "id": 35,
+          "role": "spread"
+        },
+        {
+          "x": 98,
+          "y": 270,
+          "r": 2.1,
+          "id": 36,
+          "role": "spread"
+        },
+        {
+          "x": 166,
+          "y": 240,
+          "r": 2.1,
+          "id": 37,
+          "role": "spread"
+        },
+        {
+          "x": 148,
+          "y": 255,
+          "r": 2.1,
+          "id": 38,
+          "role": "spread"
+        },
+        {
+          "x": 130,
+          "y": 270,
+          "r": 2.1,
+          "id": 39,
+          "role": "spread"
+        },
+        {
+          "x": 184,
+          "y": 255,
+          "r": 2.1,
+          "id": 40,
+          "role": "spread"
+        },
+        {
+          "x": 202,
+          "y": 270,
+          "r": 2.1,
+          "id": 41,
+          "role": "spread"
+        },
+        {
+          "x": 263,
+          "y": 240,
+          "r": 2.1,
+          "id": 42,
+          "role": "spread"
+        },
+        {
+          "x": 245,
+          "y": 255,
+          "r": 2.1,
+          "id": 43,
+          "role": "spread"
+        },
+        {
+          "x": 227,
+          "y": 270,
+          "r": 2.1,
+          "id": 44,
+          "role": "spread"
+        },
+        {
+          "x": 281,
+          "y": 255,
+          "r": 2.1,
+          "id": 45,
+          "role": "spread"
+        },
+        {
+          "x": 299,
+          "y": 270,
+          "r": 2.1,
+          "id": 46,
+          "role": "spread"
+        },
+        {
+          "x": 167,
+          "y": 306,
+          "r": 2.1,
+          "id": 47,
+          "role": "spread"
+        },
+        {
+          "x": 188,
+          "y": 329,
+          "r": 2.1,
+          "id": 48,
+          "role": "spread"
+        },
+        {
+          "x": 209,
+          "y": 352,
+          "r": 2.1,
+          "id": 49,
+          "role": "spread"
+        },
+        {
+          "x": 164,
+          "y": 386,
+          "r": 2.1,
+          "id": 50,
+          "role": "spread"
+        },
+        {
+          "x": 188,
+          "y": 403,
+          "r": 2.1,
+          "id": 51,
+          "role": "spread"
+        },
+        {
+          "x": 253,
+          "y": 366,
+          "r": 2.1,
+          "id": 52,
+          "role": "spread"
+        },
+        {
+          "x": 275,
+          "y": 389,
+          "r": 2.1,
+          "id": 53,
+          "role": "spread"
+        },
+        {
+          "x": 57,
+          "y": 565,
+          "r": 2.1,
+          "id": 54,
+          "role": "prize"
+        },
+        {
+          "x": 75,
+          "y": 584,
+          "r": 2.1,
+          "id": 55,
+          "role": "prize"
+        },
+        {
+          "x": 93,
+          "y": 603,
+          "r": 2.1,
+          "id": 56,
+          "role": "prize"
+        },
+        {
+          "x": 113,
+          "y": 565,
+          "r": 2.1,
+          "id": 57,
+          "role": "prize"
+        },
+        {
+          "x": 131,
+          "y": 584,
+          "r": 2.1,
+          "id": 58,
+          "role": "prize"
+        },
+        {
+          "x": 149,
+          "y": 603,
+          "r": 2.1,
+          "id": 59,
+          "role": "prize"
+        },
+        {
+          "x": 258,
+          "y": 565,
+          "r": 2.1,
+          "id": 60,
+          "role": "prize"
+        },
+        {
+          "x": 276,
+          "y": 584,
+          "r": 2.1,
+          "id": 61,
+          "role": "prize"
+        },
+        {
+          "x": 294,
+          "y": 603,
+          "r": 2.1,
+          "id": 62,
+          "role": "prize"
+        }
+      ],
+      "colliders": [
+        {
+          "a": {
+            "x": 36,
+            "y": 680
+          },
+          "b": {
+            "x": 36,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 36,
+            "y": 200
+          },
+          "b": {
+            "x": 39,
+            "y": 190
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 680
+          },
+          "b": {
+            "x": 22,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 200
+          },
+          "b": {
+            "x": 18,
+            "y": 165
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 18,
+            "y": 165
+          },
+          "b": {
+            "x": 68,
+            "y": 90
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-kicker",
+          "restitution": 0.95
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 10
+          },
+          "b": {
+            "x": 379,
+            "y": 155
+          },
+          "r": 1.3,
+          "material": "rubber",
+          "role": "upper-reflector",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 20,
+            "y": 10
+          },
+          "b": {
+            "x": 402,
+            "y": 10
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "board-top",
+          "restitution": 0.4
+        },
+        {
+          "a": {
+            "x": 340,
+            "y": 200
+          },
+          "b": {
+            "x": 346.313,
+            "y": 426
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-upper",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 347.486,
+            "y": 468
+          },
+          "b": {
+            "x": 350,
+            "y": 558
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 155
+          },
+          "b": {
+            "x": 379,
+            "y": 665
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-outer",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 60,
+            "y": 640
+          },
+          "b": {
+            "x": 176,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-left",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 635
+          },
+          "b": {
+            "x": 244,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-right",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 65.5,
+            "y": 617
+          },
+          "b": {
+            "x": 65.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 84.5,
+            "y": 617
+          },
+          "b": {
+            "x": 84.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 122,
+            "y": 617
+          },
+          "b": {
+            "x": 122,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 140,
+            "y": 617
+          },
+          "b": {
+            "x": 140,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 266.5,
+            "y": 617
+          },
+          "b": {
+            "x": 266.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 285.5,
+            "y": 617
+          },
+          "b": {
+            "x": 285.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 208,
+            "y": 535
+          },
+          "b": {
+            "x": 208,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 228,
+            "y": 535
+          },
+          "b": {
+            "x": 228,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        }
+      ],
+      "pockets": [
+        {
+          "x": 75,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 131,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 276,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 218,
+          "y": 535,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 359,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5
+        },
+        {
+          "x": 330,
+          "y": 477,
+          "w": 34,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "mechanisms": [
+        {
+          "kind": "windmill",
+          "x": 87,
+          "y": 384,
+          "angle": 0.28,
+          "omega": 0,
+          "radius": 18,
+          "armRadius": 1.3
+        },
+        {
+          "kind": "windmill",
+          "x": 290,
+          "y": 405,
+          "angle": -0.3,
+          "omega": 0,
+          "radius": 17,
+          "armRadius": 1.3
+        }
+      ],
+      "outlet": {
+        "x": 210,
+        "y": 668,
+        "w": 68
+      },
+      "returnOutlet": {
+        "x": 29,
+        "y": 668,
+        "w": 22
+      },
+      "states": {
+        "normal": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "rush": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": true,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 377,
+                "y": 440
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 477
+              },
+              "b": {
+                "x": 313,
+                "y": 497
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonus": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 581
+            },
+            "b": {
+              "x": 329,
+              "y": 608
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": true
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonusGap": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "tsukikage-1",
+      "course": 0,
+      "pegSeed": 101,
+      "pins": [
+        {
+          "x": 197.32743768999353,
+          "y": 522.3953145806678,
+          "r": 2.1,
+          "id": 0,
+          "role": "heso"
+        },
+        {
+          "x": 220.09234609855338,
+          "y": 523.586161144264,
+          "r": 2.1,
+          "id": 1,
+          "role": "heso"
+        },
+        {
+          "x": 184.813068377506,
+          "y": 505.026624728553,
+          "r": 2.1,
+          "id": 2,
+          "role": "jump"
+        },
+        {
+          "x": 237.6270394162275,
+          "y": 507.47528520496564,
+          "r": 2.1,
+          "id": 3,
+          "role": "jump"
+        },
+        {
+          "x": 105.73255726816133,
+          "y": 428.7951057389379,
+          "r": 2.1,
+          "id": 4,
+          "role": "michi"
+        },
+        {
+          "x": 122.91867675324902,
+          "y": 442.5292189531028,
+          "r": 2.1,
+          "id": 5,
+          "role": "michi"
+        },
+        {
+          "x": 137.66814981522037,
+          "y": 459.1485969543457,
+          "r": 2.1,
+          "id": 6,
+          "role": "michi"
+        },
+        {
+          "x": 173.2968307237141,
+          "y": 486.07336369184776,
+          "r": 2.1,
+          "id": 7,
+          "role": "michi"
+        },
+        {
+          "x": 188.19149344097823,
+          "y": 498.3510915485211,
+          "r": 2.1,
+          "id": 8,
+          "role": "michi"
+        },
+        {
+          "x": 316.9683637336828,
+          "y": 429.38155207186935,
+          "r": 2.1,
+          "id": 9,
+          "role": "michi"
+        },
+        {
+          "x": 296.29759278986603,
+          "y": 441.9603516565636,
+          "r": 2.1,
+          "id": 10,
+          "role": "michi"
+        },
+        {
+          "x": 282.28294829744846,
+          "y": 457.9961120147258,
+          "r": 2.1,
+          "id": 11,
+          "role": "michi"
+        },
+        {
+          "x": 247.44296254655347,
+          "y": 486.95063669839874,
+          "r": 2.1,
+          "id": 12,
+          "role": "michi"
+        },
+        {
+          "x": 227.9130704075098,
+          "y": 500.5063542421907,
+          "r": 2.1,
+          "id": 13,
+          "role": "michi"
+        },
+        {
+          "x": 56,
+          "y": 292.3038360186853,
+          "r": 2.1,
+          "id": 14,
+          "role": "yori"
+        },
+        {
+          "x": 113.29592252280563,
+          "y": 293.1878797742538,
+          "r": 2.1,
+          "id": 15,
+          "role": "yori"
+        },
+        {
+          "x": 56.5365825470537,
+          "y": 314.650248027686,
+          "r": 2.1,
+          "id": 16,
+          "role": "yori"
+        },
+        {
+          "x": 102.18626631600782,
+          "y": 313.12897272687405,
+          "r": 2.1,
+          "id": 17,
+          "role": "yori"
+        },
+        {
+          "x": 63.51252738973126,
+          "y": 334.71303745834155,
+          "r": 2.1,
+          "id": 18,
+          "role": "yori"
+        },
+        {
+          "x": 90.85441402206197,
+          "y": 333.72744905855507,
+          "r": 2.1,
+          "id": 19,
+          "role": "yori"
+        },
+        {
+          "x": 56.20817943569273,
+          "y": 353.6538894788362,
+          "r": 2.1,
+          "id": 20,
+          "role": "yori"
+        },
+        {
+          "x": 115.51137300953269,
+          "y": 358.21168704489247,
+          "r": 2.1,
+          "id": 21,
+          "role": "yori"
+        },
+        {
+          "x": 82.89906328348442,
+          "y": 171.35820327010006,
+          "r": 2.1,
+          "id": 22,
+          "role": "spread"
+        },
+        {
+          "x": 68.61460025012494,
+          "y": 185.12030720766634,
+          "r": 2.1,
+          "id": 23,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 201.49650356601924,
+          "r": 2.1,
+          "id": 24,
+          "role": "spread"
+        },
+        {
+          "x": 105.00564786475152,
+          "y": 185.51790215307847,
+          "r": 2.1,
+          "id": 25,
+          "role": "spread"
+        },
+        {
+          "x": 122.3129443523474,
+          "y": 201.66611934499815,
+          "r": 2.1,
+          "id": 26,
+          "role": "spread"
+        },
+        {
+          "x": 205.55666478145866,
+          "y": 171.50860331188886,
+          "r": 2.1,
+          "id": 27,
+          "role": "spread"
+        },
+        {
+          "x": 186.01015242207797,
+          "y": 183.63050575936214,
+          "r": 2.1,
+          "id": 28,
+          "role": "spread"
+        },
+        {
+          "x": 168.9972100458108,
+          "y": 200.21884979456664,
+          "r": 2.1,
+          "id": 29,
+          "role": "spread"
+        },
+        {
+          "x": 224.14962609596552,
+          "y": 184.35463234614582,
+          "r": 2.1,
+          "id": 30,
+          "role": "spread"
+        },
+        {
+          "x": 240.14822550313548,
+          "y": 199.79770942367614,
+          "r": 2.1,
+          "id": 31,
+          "role": "spread"
+        },
+        {
+          "x": 61.06321106767282,
+          "y": 239.61663296706973,
+          "r": 2.1,
+          "id": 32,
+          "role": "spread"
+        },
+        {
+          "x": 57.41760122990236,
+          "y": 256.50193239804355,
+          "r": 2.1,
+          "id": 33,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 270.15943734999746,
+          "r": 2.1,
+          "id": 34,
+          "role": "spread"
+        },
+        {
+          "x": 80.18442052509636,
+          "y": 257.04319005599245,
+          "r": 2.1,
+          "id": 35,
+          "role": "spread"
+        },
+        {
+          "x": 98.7382877457887,
+          "y": 270.7854617753066,
+          "r": 2.1,
+          "id": 36,
+          "role": "spread"
+        },
+        {
+          "x": 156.25787909859793,
+          "y": 240.69824417084456,
+          "r": 2.1,
+          "id": 37,
+          "role": "spread"
+        },
+        {
+          "x": 140.58599592624233,
+          "y": 254.86046390421689,
+          "r": 2.1,
+          "id": 38,
+          "role": "spread"
+        },
+        {
+          "x": 120.06074149934575,
+          "y": 268.34066951945425,
+          "r": 2.1,
+          "id": 39,
+          "role": "spread"
+        },
+        {
+          "x": 175.07868772195653,
+          "y": 254.07869801977648,
+          "r": 2.1,
+          "id": 40,
+          "role": "spread"
+        },
+        {
+          "x": 192.66074275579302,
+          "y": 270.11092678494754,
+          "r": 2.1,
+          "id": 41,
+          "role": "spread"
+        },
+        {
+          "x": 261.3245704135858,
+          "y": 240.44914441434668,
+          "r": 2.1,
+          "id": 42,
+          "role": "spread"
+        },
+        {
+          "x": 246.42006189664826,
+          "y": 256.38199938684704,
+          "r": 2.1,
+          "id": 43,
+          "role": "spread"
+        },
+        {
+          "x": 228.5079171125777,
+          "y": 270.5988522719592,
+          "r": 2.1,
+          "id": 44,
+          "role": "spread"
+        },
+        {
+          "x": 281.19835089696574,
+          "y": 256.4286456664093,
+          "r": 2.1,
+          "id": 45,
+          "role": "spread"
+        },
+        {
+          "x": 298.1129058430903,
+          "y": 268.6138416994363,
+          "r": 2.1,
+          "id": 46,
+          "role": "spread"
+        },
+        {
+          "x": 160.25002202307806,
+          "y": 306.0971960619092,
+          "r": 2.1,
+          "id": 47,
+          "role": "spread"
+        },
+        {
+          "x": 177.8779261443764,
+          "y": 327.67183771636337,
+          "r": 2.1,
+          "id": 48,
+          "role": "spread"
+        },
+        {
+          "x": 202.37563892379404,
+          "y": 353.94759101467207,
+          "r": 2.1,
+          "id": 49,
+          "role": "spread"
+        },
+        {
+          "x": 154.80328393820673,
+          "y": 385.07491134172307,
+          "r": 2.1,
+          "id": 50,
+          "role": "spread"
+        },
+        {
+          "x": 179.15580157916992,
+          "y": 404.68868608418853,
+          "r": 2.1,
+          "id": 51,
+          "role": "spread"
+        },
+        {
+          "x": 244.79731095172465,
+          "y": 365.7951301209629,
+          "r": 2.1,
+          "id": 52,
+          "role": "spread"
+        },
+        {
+          "x": 266.43109522275626,
+          "y": 391.1947682556696,
+          "r": 2.1,
+          "id": 53,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 563.2008960410952,
+          "r": 2.1,
+          "id": 54,
+          "role": "prize"
+        },
+        {
+          "x": 65.62845347002148,
+          "y": 584.4165112733841,
+          "r": 2.1,
+          "id": 55,
+          "role": "prize"
+        },
+        {
+          "x": 83.15468240519985,
+          "y": 603.2643321059644,
+          "r": 2.1,
+          "id": 56,
+          "role": "prize"
+        },
+        {
+          "x": 119.5735646430403,
+          "y": 563.3944405555725,
+          "r": 2.1,
+          "id": 57,
+          "role": "prize"
+        },
+        {
+          "x": 138.95930210780352,
+          "y": 584.9785188572481,
+          "r": 2.1,
+          "id": 58,
+          "role": "prize"
+        },
+        {
+          "x": 155.48939594421535,
+          "y": 602.3263952166774,
+          "r": 2.1,
+          "id": 59,
+          "role": "prize"
+        },
+        {
+          "x": 248.99912291802465,
+          "y": 566.6836756641045,
+          "r": 2.1,
+          "id": 60,
+          "role": "prize"
+        },
+        {
+          "x": 266.7684009930119,
+          "y": 583.3854867528192,
+          "r": 2.1,
+          "id": 61,
+          "role": "prize"
+        },
+        {
+          "x": 285.2359480654821,
+          "y": 602.8516462903469,
+          "r": 2.1,
+          "id": 62,
+          "role": "prize"
+        }
+      ],
+      "colliders": [
+        {
+          "a": {
+            "x": 36,
+            "y": 680
+          },
+          "b": {
+            "x": 36,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 36,
+            "y": 200
+          },
+          "b": {
+            "x": 39,
+            "y": 190
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 680
+          },
+          "b": {
+            "x": 22,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 200
+          },
+          "b": {
+            "x": 18,
+            "y": 165
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 18,
+            "y": 165
+          },
+          "b": {
+            "x": 68,
+            "y": 90
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-kicker",
+          "restitution": 0.95
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 10
+          },
+          "b": {
+            "x": 379,
+            "y": 155
+          },
+          "r": 1.3,
+          "material": "rubber",
+          "role": "upper-reflector",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 20,
+            "y": 10
+          },
+          "b": {
+            "x": 402,
+            "y": 10
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "board-top",
+          "restitution": 0.4
+        },
+        {
+          "a": {
+            "x": 340,
+            "y": 200
+          },
+          "b": {
+            "x": 346.313,
+            "y": 426
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-upper",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 347.486,
+            "y": 468
+          },
+          "b": {
+            "x": 350,
+            "y": 558
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 155
+          },
+          "b": {
+            "x": 379,
+            "y": 665
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-outer",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 60,
+            "y": 640
+          },
+          "b": {
+            "x": 176,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-left",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 635
+          },
+          "b": {
+            "x": 244,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-right",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 57.5,
+            "y": 617
+          },
+          "b": {
+            "x": 57.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 76.5,
+            "y": 617
+          },
+          "b": {
+            "x": 76.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 130,
+            "y": 617
+          },
+          "b": {
+            "x": 130,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 148,
+            "y": 617
+          },
+          "b": {
+            "x": 148,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 258.5,
+            "y": 617
+          },
+          "b": {
+            "x": 258.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 277.5,
+            "y": 617
+          },
+          "b": {
+            "x": 277.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 200,
+            "y": 535
+          },
+          "b": {
+            "x": 200,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 220,
+            "y": 535
+          },
+          "b": {
+            "x": 220,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        }
+      ],
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 535,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 359,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5
+        },
+        {
+          "x": 330,
+          "y": 477,
+          "w": 34,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "mechanisms": [
+        {
+          "kind": "windmill",
+          "x": 75,
+          "y": 384,
+          "angle": 0.28,
+          "omega": 0,
+          "radius": 18,
+          "armRadius": 1.3
+        },
+        {
+          "kind": "windmill",
+          "x": 290,
+          "y": 405,
+          "angle": -0.3,
+          "omega": 0,
+          "radius": 17,
+          "armRadius": 1.3
+        }
+      ],
+      "outlet": {
+        "x": 210,
+        "y": 668,
+        "w": 68
+      },
+      "returnOutlet": {
+        "x": 29,
+        "y": 668,
+        "w": 22
+      },
+      "states": {
+        "normal": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "rush": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": true,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 377,
+                "y": 440
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 477
+              },
+              "b": {
+                "x": 313,
+                "y": 497
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonus": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 581
+            },
+            "b": {
+              "x": 329,
+              "y": 608
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": true
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonusGap": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "tsukikage-2",
+      "course": 0,
+      "pegSeed": 102,
+      "pins": [
+        {
+          "x": 197.32717762291432,
+          "y": 522.4646368298679,
+          "r": 2.1,
+          "id": 0,
+          "role": "heso"
+        },
+        {
+          "x": 222.08315465617926,
+          "y": 522.7823015083559,
+          "r": 2.1,
+          "id": 1,
+          "role": "heso"
+        },
+        {
+          "x": 183.07237013857812,
+          "y": 505.1018764751963,
+          "r": 2.1,
+          "id": 2,
+          "role": "jump"
+        },
+        {
+          "x": 236.62165884822608,
+          "y": 508.4062418268062,
+          "r": 2.1,
+          "id": 3,
+          "role": "jump"
+        },
+        {
+          "x": 105.371568890661,
+          "y": 429.19347194926814,
+          "r": 2.1,
+          "id": 4,
+          "role": "michi"
+        },
+        {
+          "x": 121.48681606687606,
+          "y": 444.14996877815577,
+          "r": 2.1,
+          "id": 5,
+          "role": "michi"
+        },
+        {
+          "x": 139.46410731785,
+          "y": 456.0000252230093,
+          "r": 2.1,
+          "id": 6,
+          "role": "michi"
+        },
+        {
+          "x": 173.4010734213516,
+          "y": 487.1578195782378,
+          "r": 2.1,
+          "id": 7,
+          "role": "michi"
+        },
+        {
+          "x": 191.32022516718135,
+          "y": 500.36261586546897,
+          "r": 2.1,
+          "id": 8,
+          "role": "michi"
+        },
+        {
+          "x": 317.12890820177273,
+          "y": 428.3373090362176,
+          "r": 2.1,
+          "id": 9,
+          "role": "michi"
+        },
+        {
+          "x": 297.2449544689618,
+          "y": 441.5332763207145,
+          "r": 2.1,
+          "id": 10,
+          "role": "michi"
+        },
+        {
+          "x": 278.81115181269126,
+          "y": 457.8385361565277,
+          "r": 2.1,
+          "id": 11,
+          "role": "michi"
+        },
+        {
+          "x": 248.92439780905843,
+          "y": 486.9000274607912,
+          "r": 2.1,
+          "id": 12,
+          "role": "michi"
+        },
+        {
+          "x": 230.2750294397585,
+          "y": 498.43361603831875,
+          "r": 2.1,
+          "id": 13,
+          "role": "michi"
+        },
+        {
+          "x": 56,
+          "y": 291.4644786048681,
+          "r": 2.1,
+          "id": 14,
+          "role": "yori"
+        },
+        {
+          "x": 117.0607614653185,
+          "y": 291.6123607886955,
+          "r": 2.1,
+          "id": 15,
+          "role": "yori"
+        },
+        {
+          "x": 56.457946033403275,
+          "y": 314.18732955381273,
+          "r": 2.1,
+          "id": 16,
+          "role": "yori"
+        },
+        {
+          "x": 101.3389749277383,
+          "y": 313.69604100696745,
+          "r": 2.1,
+          "id": 17,
+          "role": "yori"
+        },
+        {
+          "x": 63.46095080142841,
+          "y": 334.5934967283159,
+          "r": 2.1,
+          "id": 18,
+          "role": "yori"
+        },
+        {
+          "x": 89.06579563394189,
+          "y": 335.61339607611296,
+          "r": 2.1,
+          "id": 19,
+          "role": "yori"
+        },
+        {
+          "x": 57.52092651696876,
+          "y": 353.7055045548826,
+          "r": 2.1,
+          "id": 20,
+          "role": "yori"
+        },
+        {
+          "x": 113.89112483952195,
+          "y": 359.68699941542,
+          "r": 2.1,
+          "id": 21,
+          "role": "yori"
+        },
+        {
+          "x": 83.17055543847383,
+          "y": 169.05034103319048,
+          "r": 2.1,
+          "id": 22,
+          "role": "spread"
+        },
+        {
+          "x": 68.04200942395255,
+          "y": 183.4606628095731,
+          "r": 2.1,
+          "id": 23,
+          "role": "spread"
+        },
+        {
+          "x": 58.02841268433258,
+          "y": 200.48666960783302,
+          "r": 2.1,
+          "id": 24,
+          "role": "spread"
+        },
+        {
+          "x": 104.69517337167636,
+          "y": 187.00439437255264,
+          "r": 2.1,
+          "id": 25,
+          "role": "spread"
+        },
+        {
+          "x": 121.44772448511794,
+          "y": 201.42913379967212,
+          "r": 2.1,
+          "id": 26,
+          "role": "spread"
+        },
+        {
+          "x": 204.17301300531253,
+          "y": 169.46772611429915,
+          "r": 2.1,
+          "id": 27,
+          "role": "spread"
+        },
+        {
+          "x": 186.28330966141075,
+          "y": 186.5861645864323,
+          "r": 2.1,
+          "id": 28,
+          "role": "spread"
+        },
+        {
+          "x": 170.0711489004083,
+          "y": 198.45939443819225,
+          "r": 2.1,
+          "id": 29,
+          "role": "spread"
+        },
+        {
+          "x": 224.17339511997997,
+          "y": 184.2854765237309,
+          "r": 2.1,
+          "id": 30,
+          "role": "spread"
+        },
+        {
+          "x": 242.2663087219931,
+          "y": 197.83417759267613,
+          "r": 2.1,
+          "id": 31,
+          "role": "spread"
+        },
+        {
+          "x": 62.59482113132253,
+          "y": 241.64224459417164,
+          "r": 2.1,
+          "id": 32,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 255.48663543406875,
+          "r": 2.1,
+          "id": 33,
+          "role": "spread"
+        },
+        {
+          "x": 57.2752839718014,
+          "y": 271.32551393369215,
+          "r": 2.1,
+          "id": 34,
+          "role": "spread"
+        },
+        {
+          "x": 77.9138756566681,
+          "y": 254.3039993514307,
+          "r": 2.1,
+          "id": 35,
+          "role": "spread"
+        },
+        {
+          "x": 95.8006286546588,
+          "y": 269.4286709866486,
+          "r": 2.1,
+          "id": 36,
+          "role": "spread"
+        },
+        {
+          "x": 158.2246277054772,
+          "y": 241.94952520076185,
+          "r": 2.1,
+          "id": 37,
+          "role": "spread"
+        },
+        {
+          "x": 139.43579622264951,
+          "y": 257.053458582703,
+          "r": 2.1,
+          "id": 38,
+          "role": "spread"
+        },
+        {
+          "x": 121.56730149509386,
+          "y": 268.9737869391218,
+          "r": 2.1,
+          "id": 39,
+          "role": "spread"
+        },
+        {
+          "x": 177.01259473282843,
+          "y": 253.59633821761236,
+          "r": 2.1,
+          "id": 40,
+          "role": "spread"
+        },
+        {
+          "x": 192.4527375829406,
+          "y": 268.7452855752781,
+          "r": 2.1,
+          "id": 41,
+          "role": "spread"
+        },
+        {
+          "x": 262.9904863018543,
+          "y": 241.7928206147626,
+          "r": 2.1,
+          "id": 42,
+          "role": "spread"
+        },
+        {
+          "x": 247.06686072824522,
+          "y": 253.41631141845136,
+          "r": 2.1,
+          "id": 43,
+          "role": "spread"
+        },
+        {
+          "x": 227.47524678586052,
+          "y": 269.64146036459135,
+          "r": 2.1,
+          "id": 44,
+          "role": "spread"
+        },
+        {
+          "x": 281.6522290701978,
+          "y": 256.37654994791376,
+          "r": 2.1,
+          "id": 45,
+          "role": "spread"
+        },
+        {
+          "x": 298.5808009515516,
+          "y": 271.94228405179456,
+          "r": 2.1,
+          "id": 46,
+          "role": "spread"
+        },
+        {
+          "x": 157.89530318295584,
+          "y": 306.64507502242924,
+          "r": 2.1,
+          "id": 47,
+          "role": "spread"
+        },
+        {
+          "x": 179.76018419843166,
+          "y": 329.13358125025405,
+          "r": 2.1,
+          "id": 48,
+          "role": "spread"
+        },
+        {
+          "x": 200.11322365766392,
+          "y": 350.9183657531627,
+          "r": 2.1,
+          "id": 49,
+          "role": "spread"
+        },
+        {
+          "x": 155.4509927346371,
+          "y": 386.5114325353876,
+          "r": 2.1,
+          "id": 50,
+          "role": "spread"
+        },
+        {
+          "x": 178.56062135593965,
+          "y": 404.8026356726885,
+          "r": 2.1,
+          "id": 51,
+          "role": "spread"
+        },
+        {
+          "x": 243.26939630974084,
+          "y": 365.3778025660664,
+          "r": 2.1,
+          "id": 52,
+          "role": "spread"
+        },
+        {
+          "x": 265.5772932242602,
+          "y": 387.0787832112983,
+          "r": 2.1,
+          "id": 53,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 565.7874994057231,
+          "r": 2.1,
+          "id": 54,
+          "role": "prize"
+        },
+        {
+          "x": 68.95618009418249,
+          "y": 583.4785263351165,
+          "r": 2.1,
+          "id": 55,
+          "role": "prize"
+        },
+        {
+          "x": 86.18216140968725,
+          "y": 603.6015647271648,
+          "r": 2.1,
+          "id": 56,
+          "role": "prize"
+        },
+        {
+          "x": 122.71852926788851,
+          "y": 566.4396011730656,
+          "r": 2.1,
+          "id": 57,
+          "role": "prize"
+        },
+        {
+          "x": 137.8842883163132,
+          "y": 584.2733692205511,
+          "r": 2.1,
+          "id": 58,
+          "role": "prize"
+        },
+        {
+          "x": 156.2260269918479,
+          "y": 601.1664889695123,
+          "r": 2.1,
+          "id": 59,
+          "role": "prize"
+        },
+        {
+          "x": 249.27622779468075,
+          "y": 564.6200180619023,
+          "r": 2.1,
+          "id": 60,
+          "role": "prize"
+        },
+        {
+          "x": 268.04265665188433,
+          "y": 585.1301804332063,
+          "r": 2.1,
+          "id": 61,
+          "role": "prize"
+        },
+        {
+          "x": 287.39792313063515,
+          "y": 604.6787527406589,
+          "r": 2.1,
+          "id": 62,
+          "role": "prize"
+        }
+      ],
+      "colliders": [
+        {
+          "a": {
+            "x": 36,
+            "y": 680
+          },
+          "b": {
+            "x": 36,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 36,
+            "y": 200
+          },
+          "b": {
+            "x": 39,
+            "y": 190
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 680
+          },
+          "b": {
+            "x": 22,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 200
+          },
+          "b": {
+            "x": 18,
+            "y": 165
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 18,
+            "y": 165
+          },
+          "b": {
+            "x": 68,
+            "y": 90
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-kicker",
+          "restitution": 0.95
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 10
+          },
+          "b": {
+            "x": 379,
+            "y": 155
+          },
+          "r": 1.3,
+          "material": "rubber",
+          "role": "upper-reflector",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 20,
+            "y": 10
+          },
+          "b": {
+            "x": 402,
+            "y": 10
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "board-top",
+          "restitution": 0.4
+        },
+        {
+          "a": {
+            "x": 340,
+            "y": 200
+          },
+          "b": {
+            "x": 346.313,
+            "y": 426
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-upper",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 347.486,
+            "y": 468
+          },
+          "b": {
+            "x": 350,
+            "y": 558
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 155
+          },
+          "b": {
+            "x": 379,
+            "y": 665
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-outer",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 60,
+            "y": 640
+          },
+          "b": {
+            "x": 176,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-left",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 635
+          },
+          "b": {
+            "x": 244,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-right",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 57.5,
+            "y": 617
+          },
+          "b": {
+            "x": 57.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 76.5,
+            "y": 617
+          },
+          "b": {
+            "x": 76.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 130,
+            "y": 617
+          },
+          "b": {
+            "x": 130,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 148,
+            "y": 617
+          },
+          "b": {
+            "x": 148,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 258.5,
+            "y": 617
+          },
+          "b": {
+            "x": 258.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 277.5,
+            "y": 617
+          },
+          "b": {
+            "x": 277.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 200,
+            "y": 535
+          },
+          "b": {
+            "x": 200,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 220,
+            "y": 535
+          },
+          "b": {
+            "x": 220,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        }
+      ],
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 535,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 359,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5
+        },
+        {
+          "x": 330,
+          "y": 477,
+          "w": 34,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "mechanisms": [
+        {
+          "kind": "windmill",
+          "x": 75,
+          "y": 384,
+          "angle": 0.28,
+          "omega": 0,
+          "radius": 18,
+          "armRadius": 1.3
+        },
+        {
+          "kind": "windmill",
+          "x": 290,
+          "y": 405,
+          "angle": -0.3,
+          "omega": 0,
+          "radius": 17,
+          "armRadius": 1.3
+        }
+      ],
+      "outlet": {
+        "x": 210,
+        "y": 668,
+        "w": 68
+      },
+      "returnOutlet": {
+        "x": 29,
+        "y": 668,
+        "w": 22
+      },
+      "states": {
+        "normal": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "rush": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": true,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 377,
+                "y": 440
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 477
+              },
+              "b": {
+                "x": 313,
+                "y": 497
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonus": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 581
+            },
+            "b": {
+              "x": 329,
+              "y": 608
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": true
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonusGap": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "tsukikage-3",
+      "course": 0,
+      "pegSeed": 103,
+      "pins": [
+        {
+          "x": 197.3269174288027,
+          "y": 522.5328491969965,
+          "r": 2.1,
+          "id": 0,
+          "role": "heso"
+        },
+        {
+          "x": 219.43121704319492,
+          "y": 523.0968862310052,
+          "r": 2.1,
+          "id": 1,
+          "role": "heso"
+        },
+        {
+          "x": 180.98563745552673,
+          "y": 505.86556095210835,
+          "r": 2.1,
+          "id": 2,
+          "role": "jump"
+        },
+        {
+          "x": 236.11155101489277,
+          "y": 508.2402048240416,
+          "r": 2.1,
+          "id": 3,
+          "role": "jump"
+        },
+        {
+          "x": 106.68606413444505,
+          "y": 427.46289742523805,
+          "r": 2.1,
+          "id": 4,
+          "role": "michi"
+        },
+        {
+          "x": 124.13583877803758,
+          "y": 443.4804999566637,
+          "r": 2.1,
+          "id": 5,
+          "role": "michi"
+        },
+        {
+          "x": 137.62022513691335,
+          "y": 455.92055600993336,
+          "r": 2.1,
+          "id": 6,
+          "role": "michi"
+        },
+        {
+          "x": 173.31604733066632,
+          "y": 483.6990645346232,
+          "r": 2.1,
+          "id": 7,
+          "role": "michi"
+        },
+        {
+          "x": 192.09591783648358,
+          "y": 496.9603482030332,
+          "r": 2.1,
+          "id": 8,
+          "role": "michi"
+        },
+        {
+          "x": 316.8046322019771,
+          "y": 429.65571689838544,
+          "r": 2.1,
+          "id": 9,
+          "role": "michi"
+        },
+        {
+          "x": 299.5471295462921,
+          "y": 444.2628944138065,
+          "r": 2.1,
+          "id": 10,
+          "role": "michi"
+        },
+        {
+          "x": 280.2149333599955,
+          "y": 456.61292854761706,
+          "r": 2.1,
+          "id": 11,
+          "role": "michi"
+        },
+        {
+          "x": 248.87975198756902,
+          "y": 485.88624350698666,
+          "r": 2.1,
+          "id": 12,
+          "role": "michi"
+        },
+        {
+          "x": 227.82523781768978,
+          "y": 498.1218421707861,
+          "r": 2.1,
+          "id": 13,
+          "role": "michi"
+        },
+        {
+          "x": 56,
+          "y": 289.86898708250374,
+          "r": 2.1,
+          "id": 14,
+          "role": "yori"
+        },
+        {
+          "x": 117.00314039988443,
+          "y": 290.6009943464771,
+          "r": 2.1,
+          "id": 15,
+          "role": "yori"
+        },
+        {
+          "x": 56.439879699703305,
+          "y": 312.6068712770939,
+          "r": 2.1,
+          "id": 16,
+          "role": "yori"
+        },
+        {
+          "x": 102.0192376870662,
+          "y": 313.3155525609851,
+          "r": 2.1,
+          "id": 17,
+          "role": "yori"
+        },
+        {
+          "x": 62.278077775705604,
+          "y": 333.5710374051705,
+          "r": 2.1,
+          "id": 18,
+          "role": "yori"
+        },
+        {
+          "x": 89.88144108075649,
+          "y": 336.5617733587511,
+          "r": 2.1,
+          "id": 19,
+          "role": "yori"
+        },
+        {
+          "x": 56.557836511917415,
+          "y": 355.5713139580563,
+          "r": 2.1,
+          "id": 20,
+          "role": "yori"
+        },
+        {
+          "x": 112.6515459655784,
+          "y": 361.7174936464988,
+          "r": 2.1,
+          "id": 21,
+          "role": "yori"
+        },
+        {
+          "x": 83.09892275268211,
+          "y": 171.9590372095816,
+          "r": 2.1,
+          "id": 22,
+          "role": "spread"
+        },
+        {
+          "x": 66.75369364805519,
+          "y": 185.74182643610985,
+          "r": 2.1,
+          "id": 23,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 197.8599790859036,
+          "r": 2.1,
+          "id": 24,
+          "role": "spread"
+        },
+        {
+          "x": 103.9404218673706,
+          "y": 183.44179396713153,
+          "r": 2.1,
+          "id": 25,
+          "role": "spread"
+        },
+        {
+          "x": 121.03486512685194,
+          "y": 198.21459695762024,
+          "r": 2.1,
+          "id": 26,
+          "role": "spread"
+        },
+        {
+          "x": 203.11510804696007,
+          "y": 169.53502756385132,
+          "r": 2.1,
+          "id": 27,
+          "role": "spread"
+        },
+        {
+          "x": 186.95432104039938,
+          "y": 185.6239566585049,
+          "r": 2.1,
+          "id": 28,
+          "role": "spread"
+        },
+        {
+          "x": 169.69322185479103,
+          "y": 201.65083291558548,
+          "r": 2.1,
+          "id": 29,
+          "role": "spread"
+        },
+        {
+          "x": 224.97436467660592,
+          "y": 184.16672155773267,
+          "r": 2.1,
+          "id": 30,
+          "role": "spread"
+        },
+        {
+          "x": 242.6545430750586,
+          "y": 198.7353449130431,
+          "r": 2.1,
+          "id": 31,
+          "role": "spread"
+        },
+        {
+          "x": 62.7578063220717,
+          "y": 239.76274850107728,
+          "r": 2.1,
+          "id": 32,
+          "role": "spread"
+        },
+        {
+          "x": 56.26016999902204,
+          "y": 254.9392331790179,
+          "r": 2.1,
+          "id": 33,
+          "role": "spread"
+        },
+        {
+          "x": 56.85593506200239,
+          "y": 268.31791525380686,
+          "r": 2.1,
+          "id": 34,
+          "role": "spread"
+        },
+        {
+          "x": 81.84011121904477,
+          "y": 252.83769192043692,
+          "r": 2.1,
+          "id": 35,
+          "role": "spread"
+        },
+        {
+          "x": 100.01595191955566,
+          "y": 271.27340791737663,
+          "r": 2.1,
+          "id": 36,
+          "role": "spread"
+        },
+        {
+          "x": 155.91130506489426,
+          "y": 240.72046972149982,
+          "r": 2.1,
+          "id": 37,
+          "role": "spread"
+        },
+        {
+          "x": 140.8269209962338,
+          "y": 254.22694376725704,
+          "r": 2.1,
+          "id": 38,
+          "role": "spread"
+        },
+        {
+          "x": 120.64425557926297,
+          "y": 272.15021668914704,
+          "r": 2.1,
+          "id": 39,
+          "role": "spread"
+        },
+        {
+          "x": 174.04880093941466,
+          "y": 256.6855865295045,
+          "r": 2.1,
+          "id": 40,
+          "role": "spread"
+        },
+        {
+          "x": 195.36528115374966,
+          "y": 268.85369125474244,
+          "r": 2.1,
+          "id": 41,
+          "role": "spread"
+        },
+        {
+          "x": 262.42876666560767,
+          "y": 237.9021579904482,
+          "r": 2.1,
+          "id": 42,
+          "role": "spread"
+        },
+        {
+          "x": 246.85522311720996,
+          "y": 254.22000464601442,
+          "r": 2.1,
+          "id": 43,
+          "role": "spread"
+        },
+        {
+          "x": 227.0089919924736,
+          "y": 270.4111544502899,
+          "r": 2.1,
+          "id": 44,
+          "role": "spread"
+        },
+        {
+          "x": 282.1278606894426,
+          "y": 256.35735161826017,
+          "r": 2.1,
+          "id": 45,
+          "role": "spread"
+        },
+        {
+          "x": 300.08540789280084,
+          "y": 268.5913616711274,
+          "r": 2.1,
+          "id": 46,
+          "role": "spread"
+        },
+        {
+          "x": 158.24314910089598,
+          "y": 308.1925674593076,
+          "r": 2.1,
+          "id": 47,
+          "role": "spread"
+        },
+        {
+          "x": 177.9726452271454,
+          "y": 330.2371074391529,
+          "r": 2.1,
+          "id": 48,
+          "role": "spread"
+        },
+        {
+          "x": 202.66691527878865,
+          "y": 351.06923727467654,
+          "r": 2.1,
+          "id": 49,
+          "role": "spread"
+        },
+        {
+          "x": 157.05492580784485,
+          "y": 386.1850490609184,
+          "r": 2.1,
+          "id": 50,
+          "role": "spread"
+        },
+        {
+          "x": 180.95687417658047,
+          "y": 401.18479098211975,
+          "r": 2.1,
+          "id": 51,
+          "role": "spread"
+        },
+        {
+          "x": 245.38731865128503,
+          "y": 367.78349298732354,
+          "r": 2.1,
+          "id": 52,
+          "role": "spread"
+        },
+        {
+          "x": 268.40208994392304,
+          "y": 388.79474181057884,
+          "r": 2.1,
+          "id": 53,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 564.8114895592444,
+          "r": 2.1,
+          "id": 54,
+          "role": "prize"
+        },
+        {
+          "x": 65.74827570384369,
+          "y": 585.5835143648088,
+          "r": 2.1,
+          "id": 55,
+          "role": "prize"
+        },
+        {
+          "x": 85.12845115438104,
+          "y": 603.784412950743,
+          "r": 2.1,
+          "id": 56,
+          "role": "prize"
+        },
+        {
+          "x": 121.33206712529064,
+          "y": 563.6659380858764,
+          "r": 2.1,
+          "id": 57,
+          "role": "prize"
+        },
+        {
+          "x": 137.93779968181624,
+          "y": 583.6792865787633,
+          "r": 2.1,
+          "id": 58,
+          "role": "prize"
+        },
+        {
+          "x": 156.42109687961639,
+          "y": 603.6423060685396,
+          "r": 2.1,
+          "id": 59,
+          "role": "prize"
+        },
+        {
+          "x": 250.9699134069495,
+          "y": 566.472437811736,
+          "r": 2.1,
+          "id": 60,
+          "role": "prize"
+        },
+        {
+          "x": 266.4092783055268,
+          "y": 584.5704144446179,
+          "r": 2.1,
+          "id": 61,
+          "role": "prize"
+        },
+        {
+          "x": 287.1748746079393,
+          "y": 604.3158244974911,
+          "r": 2.1,
+          "id": 62,
+          "role": "prize"
+        }
+      ],
+      "colliders": [
+        {
+          "a": {
+            "x": 36,
+            "y": 680
+          },
+          "b": {
+            "x": 36,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 36,
+            "y": 200
+          },
+          "b": {
+            "x": 39,
+            "y": 190
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 680
+          },
+          "b": {
+            "x": 22,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 200
+          },
+          "b": {
+            "x": 18,
+            "y": 165
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 18,
+            "y": 165
+          },
+          "b": {
+            "x": 68,
+            "y": 90
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-kicker",
+          "restitution": 0.95
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 10
+          },
+          "b": {
+            "x": 379,
+            "y": 155
+          },
+          "r": 1.3,
+          "material": "rubber",
+          "role": "upper-reflector",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 20,
+            "y": 10
+          },
+          "b": {
+            "x": 402,
+            "y": 10
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "board-top",
+          "restitution": 0.4
+        },
+        {
+          "a": {
+            "x": 340,
+            "y": 200
+          },
+          "b": {
+            "x": 346.313,
+            "y": 426
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-upper",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 347.486,
+            "y": 468
+          },
+          "b": {
+            "x": 350,
+            "y": 558
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 155
+          },
+          "b": {
+            "x": 379,
+            "y": 665
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-outer",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 60,
+            "y": 640
+          },
+          "b": {
+            "x": 176,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-left",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 635
+          },
+          "b": {
+            "x": 244,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-right",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 57.5,
+            "y": 617
+          },
+          "b": {
+            "x": 57.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 76.5,
+            "y": 617
+          },
+          "b": {
+            "x": 76.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 130,
+            "y": 617
+          },
+          "b": {
+            "x": 130,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 148,
+            "y": 617
+          },
+          "b": {
+            "x": 148,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 258.5,
+            "y": 617
+          },
+          "b": {
+            "x": 258.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 277.5,
+            "y": 617
+          },
+          "b": {
+            "x": 277.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 200,
+            "y": 535
+          },
+          "b": {
+            "x": 200,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 220,
+            "y": 535
+          },
+          "b": {
+            "x": 220,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        }
+      ],
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 535,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 359,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5
+        },
+        {
+          "x": 330,
+          "y": 477,
+          "w": 34,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "mechanisms": [
+        {
+          "kind": "windmill",
+          "x": 75,
+          "y": 384,
+          "angle": 0.28,
+          "omega": 0,
+          "radius": 18,
+          "armRadius": 1.3
+        },
+        {
+          "kind": "windmill",
+          "x": 290,
+          "y": 405,
+          "angle": -0.3,
+          "omega": 0,
+          "radius": 17,
+          "armRadius": 1.3
+        }
+      ],
+      "outlet": {
+        "x": 210,
+        "y": 668,
+        "w": 68
+      },
+      "returnOutlet": {
+        "x": 29,
+        "y": 668,
+        "w": 22
+      },
+      "states": {
+        "normal": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "rush": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": true,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 377,
+                "y": 440
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 477
+              },
+              "b": {
+                "x": 313,
+                "y": 497
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonus": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 581
+            },
+            "b": {
+              "x": 329,
+              "y": 608
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": true
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonusGap": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "tsukikage-4",
+      "course": 0,
+      "pegSeed": 104,
+      "pins": [
+        {
+          "x": 197.32880607787519,
+          "y": 522.6023120095954,
+          "r": 2.1,
+          "id": 0,
+          "role": "heso"
+        },
+        {
+          "x": 218.31439019022508,
+          "y": 522.1342136298306,
+          "r": 2.1,
+          "id": 1,
+          "role": "heso"
+        },
+        {
+          "x": 183.75122121348977,
+          "y": 505.26095401002095,
+          "r": 2.1,
+          "id": 2,
+          "role": "jump"
+        },
+        {
+          "x": 238.02770123519002,
+          "y": 505.69399731261655,
+          "r": 2.1,
+          "id": 3,
+          "role": "jump"
+        },
+        {
+          "x": 104.95852978974581,
+          "y": 427.9457420598716,
+          "r": 2.1,
+          "id": 4,
+          "role": "michi"
+        },
+        {
+          "x": 119.88181485813111,
+          "y": 443.8072429994121,
+          "r": 2.1,
+          "id": 5,
+          "role": "michi"
+        },
+        {
+          "x": 139.3000435134396,
+          "y": 455.1393300019205,
+          "r": 2.1,
+          "id": 6,
+          "role": "michi"
+        },
+        {
+          "x": 170.9895655472763,
+          "y": 484.93725153198466,
+          "r": 2.1,
+          "id": 7,
+          "role": "michi"
+        },
+        {
+          "x": 189.2523149792105,
+          "y": 498.46708147199826,
+          "r": 2.1,
+          "id": 8,
+          "role": "michi"
+        },
+        {
+          "x": 313.2911495641805,
+          "y": 427.5705104225315,
+          "r": 2.1,
+          "id": 9,
+          "role": "michi"
+        },
+        {
+          "x": 298.6638475681655,
+          "y": 442.29625888010486,
+          "r": 2.1,
+          "id": 10,
+          "role": "michi"
+        },
+        {
+          "x": 279.2104613861069,
+          "y": 456.25285171363504,
+          "r": 2.1,
+          "id": 11,
+          "role": "michi"
+        },
+        {
+          "x": 246.81284716576337,
+          "y": 485.5317080956884,
+          "r": 2.1,
+          "id": 12,
+          "role": "michi"
+        },
+        {
+          "x": 230.01881157848985,
+          "y": 498.5615720101632,
+          "r": 2.1,
+          "id": 13,
+          "role": "michi"
+        },
+        {
+          "x": 56,
+          "y": 290.6866388278082,
+          "r": 2.1,
+          "id": 14,
+          "role": "yori"
+        },
+        {
+          "x": 116.16133740441873,
+          "y": 292.6097122196108,
+          "r": 2.1,
+          "id": 15,
+          "role": "yori"
+        },
+        {
+          "x": 56,
+          "y": 312.68820494059474,
+          "r": 2.1,
+          "id": 16,
+          "role": "yori"
+        },
+        {
+          "x": 102.88113125087693,
+          "y": 314.91786395600064,
+          "r": 2.1,
+          "id": 17,
+          "role": "yori"
+        },
+        {
+          "x": 62.77799970768392,
+          "y": 333.2967855204828,
+          "r": 2.1,
+          "id": 18,
+          "role": "yori"
+        },
+        {
+          "x": 93.18975417623297,
+          "y": 334.68328330796214,
+          "r": 2.1,
+          "id": 19,
+          "role": "yori"
+        },
+        {
+          "x": 56,
+          "y": 352.22763945292684,
+          "r": 2.1,
+          "id": 20,
+          "role": "yori"
+        },
+        {
+          "x": 115.37906597722322,
+          "y": 359.86273533059284,
+          "r": 2.1,
+          "id": 21,
+          "role": "yori"
+        },
+        {
+          "x": 83.02538816547022,
+          "y": 168.7731449103914,
+          "r": 2.1,
+          "id": 22,
+          "role": "spread"
+        },
+        {
+          "x": 68.35293889278546,
+          "y": 184.2937848309055,
+          "r": 2.1,
+          "id": 23,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 198.90717187020928,
+          "r": 2.1,
+          "id": 24,
+          "role": "spread"
+        },
+        {
+          "x": 102.41582393888385,
+          "y": 183.25908847572282,
+          "r": 2.1,
+          "id": 25,
+          "role": "spread"
+        },
+        {
+          "x": 120.33602538099512,
+          "y": 198.47273748191074,
+          "r": 2.1,
+          "id": 26,
+          "role": "spread"
+        },
+        {
+          "x": 203.79252259340137,
+          "y": 169.36132908342407,
+          "r": 2.1,
+          "id": 27,
+          "role": "spread"
+        },
+        {
+          "x": 188.32331165289506,
+          "y": 183.20673009827732,
+          "r": 2.1,
+          "id": 28,
+          "role": "spread"
+        },
+        {
+          "x": 169.5224509753287,
+          "y": 199.07814443102106,
+          "r": 2.1,
+          "id": 29,
+          "role": "spread"
+        },
+        {
+          "x": 221.49830897171051,
+          "y": 186.5458360839635,
+          "r": 2.1,
+          "id": 30,
+          "role": "spread"
+        },
+        {
+          "x": 242.8787508114241,
+          "y": 198.59776718765497,
+          "r": 2.1,
+          "id": 31,
+          "role": "spread"
+        },
+        {
+          "x": 60.55237768162042,
+          "y": 241.4094172485173,
+          "r": 2.1,
+          "id": 32,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 253.7269073145464,
+          "r": 2.1,
+          "id": 33,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 271.37297748131675,
+          "r": 2.1,
+          "id": 34,
+          "role": "spread"
+        },
+        {
+          "x": 80.26335241058841,
+          "y": 253.82621669871733,
+          "r": 2.1,
+          "id": 35,
+          "role": "spread"
+        },
+        {
+          "x": 99.30798255288974,
+          "y": 269.14091409705577,
+          "r": 2.1,
+          "id": 36,
+          "role": "spread"
+        },
+        {
+          "x": 156.8674450413324,
+          "y": 241.9472882063128,
+          "r": 2.1,
+          "id": 37,
+          "role": "spread"
+        },
+        {
+          "x": 138.95264326501638,
+          "y": 253.93128001643345,
+          "r": 2.1,
+          "id": 38,
+          "role": "spread"
+        },
+        {
+          "x": 123.58910177014768,
+          "y": 267.9356315613724,
+          "r": 2.1,
+          "id": 39,
+          "role": "spread"
+        },
+        {
+          "x": 177.38475806647912,
+          "y": 255.93518239045517,
+          "r": 2.1,
+          "id": 40,
+          "role": "spread"
+        },
+        {
+          "x": 192.6178039526567,
+          "y": 267.8496653889306,
+          "r": 2.1,
+          "id": 41,
+          "role": "spread"
+        },
+        {
+          "x": 264.3819151787087,
+          "y": 242.15076697915794,
+          "r": 2.1,
+          "id": 42,
+          "role": "spread"
+        },
+        {
+          "x": 246.21092026941477,
+          "y": 256.7541669361293,
+          "r": 2.1,
+          "id": 43,
+          "role": "spread"
+        },
+        {
+          "x": 228.18187443120405,
+          "y": 271.61258837655186,
+          "r": 2.1,
+          "id": 44,
+          "role": "spread"
+        },
+        {
+          "x": 279.5268084835261,
+          "y": 255.57757910061628,
+          "r": 2.1,
+          "id": 45,
+          "role": "spread"
+        },
+        {
+          "x": 300.49444245919585,
+          "y": 268.9671707916074,
+          "r": 2.1,
+          "id": 46,
+          "role": "spread"
+        },
+        {
+          "x": 160.51739939581603,
+          "y": 304.5540013380349,
+          "r": 2.1,
+          "id": 47,
+          "role": "spread"
+        },
+        {
+          "x": 180.12638682257383,
+          "y": 330.2136635269038,
+          "r": 2.1,
+          "id": 48,
+          "role": "spread"
+        },
+        {
+          "x": 200.28118460401893,
+          "y": 351.6042131302878,
+          "r": 2.1,
+          "id": 49,
+          "role": "spread"
+        },
+        {
+          "x": 157.49404606586322,
+          "y": 384.40968210157007,
+          "r": 2.1,
+          "id": 50,
+          "role": "spread"
+        },
+        {
+          "x": 180.31256285654382,
+          "y": 404.47074615098535,
+          "r": 2.1,
+          "id": 51,
+          "role": "spread"
+        },
+        {
+          "x": 243.99276656815783,
+          "y": 366.03816784834487,
+          "r": 2.1,
+          "id": 52,
+          "role": "spread"
+        },
+        {
+          "x": 265.6668619402684,
+          "y": 389.0177802977152,
+          "r": 2.1,
+          "id": 53,
+          "role": "spread"
+        },
+        {
+          "x": 57.85284568537027,
+          "y": 563.1836919090711,
+          "r": 2.1,
+          "id": 54,
+          "role": "prize"
+        },
+        {
+          "x": 65.55272834021598,
+          "y": 582.0124060689471,
+          "r": 2.1,
+          "id": 55,
+          "role": "prize"
+        },
+        {
+          "x": 83.71937389476224,
+          "y": 603.2710261960514,
+          "r": 2.1,
+          "id": 56,
+          "role": "prize"
+        },
+        {
+          "x": 122.40694037079811,
+          "y": 564.6947927783243,
+          "r": 2.1,
+          "id": 57,
+          "role": "prize"
+        },
+        {
+          "x": 137.42807221319526,
+          "y": 584.1446444629692,
+          "r": 2.1,
+          "id": 58,
+          "role": "prize"
+        },
+        {
+          "x": 156.71457825070246,
+          "y": 601.0082540569827,
+          "r": 2.1,
+          "id": 59,
+          "role": "prize"
+        },
+        {
+          "x": 249.19934577057137,
+          "y": 564.2763133356348,
+          "r": 2.1,
+          "id": 60,
+          "role": "prize"
+        },
+        {
+          "x": 267.34159912010654,
+          "y": 585.9045137277805,
+          "r": 2.1,
+          "id": 61,
+          "role": "prize"
+        },
+        {
+          "x": 286.4765861550346,
+          "y": 603.5333876125515,
+          "r": 2.1,
+          "id": 62,
+          "role": "prize"
+        }
+      ],
+      "colliders": [
+        {
+          "a": {
+            "x": 36,
+            "y": 680
+          },
+          "b": {
+            "x": 36,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 36,
+            "y": 200
+          },
+          "b": {
+            "x": 39,
+            "y": 190
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 680
+          },
+          "b": {
+            "x": 22,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 200
+          },
+          "b": {
+            "x": 18,
+            "y": 165
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 18,
+            "y": 165
+          },
+          "b": {
+            "x": 68,
+            "y": 90
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-kicker",
+          "restitution": 0.95
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 10
+          },
+          "b": {
+            "x": 379,
+            "y": 155
+          },
+          "r": 1.3,
+          "material": "rubber",
+          "role": "upper-reflector",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 20,
+            "y": 10
+          },
+          "b": {
+            "x": 402,
+            "y": 10
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "board-top",
+          "restitution": 0.4
+        },
+        {
+          "a": {
+            "x": 340,
+            "y": 200
+          },
+          "b": {
+            "x": 346.313,
+            "y": 426
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-upper",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 347.486,
+            "y": 468
+          },
+          "b": {
+            "x": 350,
+            "y": 558
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 155
+          },
+          "b": {
+            "x": 379,
+            "y": 665
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-outer",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 60,
+            "y": 640
+          },
+          "b": {
+            "x": 176,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-left",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 635
+          },
+          "b": {
+            "x": 244,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-right",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 57.5,
+            "y": 617
+          },
+          "b": {
+            "x": 57.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 76.5,
+            "y": 617
+          },
+          "b": {
+            "x": 76.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 130,
+            "y": 617
+          },
+          "b": {
+            "x": 130,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 148,
+            "y": 617
+          },
+          "b": {
+            "x": 148,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 258.5,
+            "y": 617
+          },
+          "b": {
+            "x": 258.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 277.5,
+            "y": 617
+          },
+          "b": {
+            "x": 277.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 200,
+            "y": 535
+          },
+          "b": {
+            "x": 200,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 220,
+            "y": 535
+          },
+          "b": {
+            "x": 220,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        }
+      ],
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 535,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 359,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5
+        },
+        {
+          "x": 330,
+          "y": 477,
+          "w": 34,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "mechanisms": [
+        {
+          "kind": "windmill",
+          "x": 75,
+          "y": 384,
+          "angle": 0.28,
+          "omega": 0,
+          "radius": 18,
+          "armRadius": 1.3
+        },
+        {
+          "kind": "windmill",
+          "x": 290,
+          "y": 405,
+          "angle": -0.3,
+          "omega": 0,
+          "radius": 17,
+          "armRadius": 1.3
+        }
+      ],
+      "outlet": {
+        "x": 210,
+        "y": 668,
+        "w": 68
+      },
+      "returnOutlet": {
+        "x": 29,
+        "y": 668,
+        "w": 22
+      },
+      "states": {
+        "normal": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "rush": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": true,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 377,
+                "y": 440
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 477
+              },
+              "b": {
+                "x": 313,
+                "y": 497
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonus": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 581
+            },
+            "b": {
+              "x": 329,
+              "y": 608
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": true
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonusGap": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "tsukikage-5",
+      "course": 0,
+      "pegSeed": 105,
+      "pins": [
+        {
+          "x": 197.32854588376358,
+          "y": 522.6705264748074,
+          "r": 2.1,
+          "id": 0,
+          "role": "heso"
+        },
+        {
+          "x": 221.00024948604405,
+          "y": 522.3713157355785,
+          "r": 2.1,
+          "id": 1,
+          "role": "heso"
+        },
+        {
+          "x": 181.4410439494066,
+          "y": 505.7409423242323,
+          "r": 2.1,
+          "id": 2,
+          "role": "jump"
+        },
+        {
+          "x": 237.52375496495515,
+          "y": 505.5902692959644,
+          "r": 2.1,
+          "id": 3,
+          "role": "jump"
+        },
+        {
+          "x": 102.97302496796473,
+          "y": 430.91596507877114,
+          "r": 2.1,
+          "id": 4,
+          "role": "michi"
+        },
+        {
+          "x": 122.457792001497,
+          "y": 445.0610951456241,
+          "r": 2.1,
+          "id": 5,
+          "role": "michi"
+        },
+        {
+          "x": 137.4497199498117,
+          "y": 455.2016115101054,
+          "r": 2.1,
+          "id": 6,
+          "role": "michi"
+        },
+        {
+          "x": 171.04396984707563,
+          "y": 485.921542898193,
+          "r": 2.1,
+          "id": 7,
+          "role": "michi"
+        },
+        {
+          "x": 189.473501489684,
+          "y": 499.6690832187422,
+          "r": 2.1,
+          "id": 8,
+          "role": "michi"
+        },
+        {
+          "x": 313.06971296276896,
+          "y": 430.4353894179687,
+          "r": 2.1,
+          "id": 9,
+          "role": "michi"
+        },
+        {
+          "x": 296.49700405802577,
+          "y": 443.9086519535631,
+          "r": 2.1,
+          "id": 10,
+          "role": "michi"
+        },
+        {
+          "x": 279.9873770895414,
+          "y": 457.2269755418412,
+          "r": 2.1,
+          "id": 11,
+          "role": "michi"
+        },
+        {
+          "x": 246.8574969580397,
+          "y": 486.16792513970285,
+          "r": 2.1,
+          "id": 12,
+          "role": "michi"
+        },
+        {
+          "x": 228.08249625051394,
+          "y": 498.82155239181594,
+          "r": 2.1,
+          "id": 13,
+          "role": "michi"
+        },
+        {
+          "x": 56,
+          "y": 292.25364725217224,
+          "r": 2.1,
+          "id": 14,
+          "role": "yori"
+        },
+        {
+          "x": 116.11694016382098,
+          "y": 289.19207478836177,
+          "r": 2.1,
+          "id": 15,
+          "role": "yori"
+        },
+        {
+          "x": 56,
+          "y": 314.13328646142037,
+          "r": 2.1,
+          "id": 16,
+          "role": "yori"
+        },
+        {
+          "x": 101.36085703196004,
+          "y": 314.47319130031394,
+          "r": 2.1,
+          "id": 17,
+          "role": "yori"
+        },
+        {
+          "x": 64.03524604383855,
+          "y": 334.3191103040241,
+          "r": 2.1,
+          "id": 18,
+          "role": "yori"
+        },
+        {
+          "x": 92.3574143528007,
+          "y": 333.1608703910373,
+          "r": 2.1,
+          "id": 19,
+          "role": "yori"
+        },
+        {
+          "x": 56,
+          "y": 354.7788675531745,
+          "r": 2.1,
+          "id": 20,
+          "role": "yori"
+        },
+        {
+          "x": 114.4144949710928,
+          "y": 362.03075795341283,
+          "r": 2.1,
+          "id": 21,
+          "role": "yori"
+        },
+        {
+          "x": 82.97121130283922,
+          "y": 170.0319055516273,
+          "r": 2.1,
+          "id": 22,
+          "role": "spread"
+        },
+        {
+          "x": 64.86420389357954,
+          "y": 186.5759003235027,
+          "r": 2.1,
+          "id": 23,
+          "role": "spread"
+        },
+        {
+          "x": 57.67002946063876,
+          "y": 201.63759373212233,
+          "r": 2.1,
+          "id": 24,
+          "role": "spread"
+        },
+        {
+          "x": 100.97328719561919,
+          "y": 186.29741174541414,
+          "r": 2.1,
+          "id": 25,
+          "role": "spread"
+        },
+        {
+          "x": 119.92293141437695,
+          "y": 201.85822472479194,
+          "r": 2.1,
+          "id": 26,
+          "role": "spread"
+        },
+        {
+          "x": 204.51929968763142,
+          "y": 169.43585017761217,
+          "r": 2.1,
+          "id": 27,
+          "role": "spread"
+        },
+        {
+          "x": 188.78566862000153,
+          "y": 184.71954106129706,
+          "r": 2.1,
+          "id": 28,
+          "role": "spread"
+        },
+        {
+          "x": 169.14413536423817,
+          "y": 200.20708288997412,
+          "r": 2.1,
+          "id": 29,
+          "role": "spread"
+        },
+        {
+          "x": 221.31955754095688,
+          "y": 186.10169832687825,
+          "r": 2.1,
+          "id": 30,
+          "role": "spread"
+        },
+        {
+          "x": 242.1796009405516,
+          "y": 198.2466672805138,
+          "r": 2.1,
+          "id": 31,
+          "role": "spread"
+        },
+        {
+          "x": 60.44096757937223,
+          "y": 239.99562829062342,
+          "r": 2.1,
+          "id": 32,
+          "role": "spread"
+        },
+        {
+          "x": 57.62622267892584,
+          "y": 256.47457025237384,
+          "r": 2.1,
+          "id": 33,
+          "role": "spread"
+        },
+        {
+          "x": 56,
+          "y": 268.2960923477076,
+          "r": 2.1,
+          "id": 34,
+          "role": "spread"
+        },
+        {
+          "x": 79.50137714436278,
+          "y": 254.69096425026655,
+          "r": 2.1,
+          "id": 35,
+          "role": "spread"
+        },
+        {
+          "x": 96.7857392036356,
+          "y": 271.56089313589035,
+          "r": 2.1,
+          "id": 36,
+          "role": "spread"
+        },
+        {
+          "x": 158.91868967162446,
+          "y": 240.7184934200719,
+          "r": 2.1,
+          "id": 37,
+          "role": "spread"
+        },
+        {
+          "x": 140.75846262574197,
+          "y": 256.74756038673223,
+          "r": 2.1,
+          "id": 38,
+          "role": "spread"
+        },
+        {
+          "x": 122.20148952538148,
+          "y": 271.07782285073773,
+          "r": 2.1,
+          "id": 39,
+          "role": "spread"
+        },
+        {
+          "x": 175.5189309740439,
+          "y": 254.89996726261452,
+          "r": 2.1,
+          "id": 40,
+          "role": "spread"
+        },
+        {
+          "x": 195.18606068454682,
+          "y": 267.9602200304158,
+          "r": 2.1,
+          "id": 41,
+          "role": "spread"
+        },
+        {
+          "x": 264.9566261479631,
+          "y": 238.0854791689664,
+          "r": 2.1,
+          "id": 42,
+          "role": "spread"
+        },
+        {
+          "x": 246.47412090906874,
+          "y": 255.40031319083647,
+          "r": 2.1,
+          "id": 43,
+          "role": "spread"
+        },
+        {
+          "x": 228.64785175099968,
+          "y": 268.36896854648364,
+          "r": 2.1,
+          "id": 44,
+          "role": "spread"
+        },
+        {
+          "x": 280.14311866648495,
+          "y": 256.090663638059,
+          "r": 2.1,
+          "id": 45,
+          "role": "spread"
+        },
+        {
+          "x": 297.0455665674992,
+          "y": 270.4965541258454,
+          "r": 2.1,
+          "id": 46,
+          "role": "spread"
+        },
+        {
+          "x": 159.8941524816677,
+          "y": 305.75560343470426,
+          "r": 2.1,
+          "id": 47,
+          "role": "spread"
+        },
+        {
+          "x": 182.18905979050322,
+          "y": 329.1140983864665,
+          "r": 2.1,
+          "id": 48,
+          "role": "spread"
+        },
+        {
+          "x": 203.10880859568715,
+          "y": 351.4533458664082,
+          "r": 2.1,
+          "id": 49,
+          "role": "spread"
+        },
+        {
+          "x": 153.9978769841604,
+          "y": 384.70216087456794,
+          "r": 2.1,
+          "id": 50,
+          "role": "spread"
+        },
+        {
+          "x": 177.96773443939165,
+          "y": 401.5401454778388,
+          "r": 2.1,
+          "id": 51,
+          "role": "spread"
+        },
+        {
+          "x": 246.24838747158645,
+          "y": 364.86888383794576,
+          "r": 2.1,
+          "id": 52,
+          "role": "spread"
+        },
+        {
+          "x": 268.35388916684315,
+          "y": 390.7401192324236,
+          "r": 2.1,
+          "id": 53,
+          "role": "spread"
+        },
+        {
+          "x": 56.69094142038375,
+          "y": 566.3499996929429,
+          "r": 2.1,
+          "id": 54,
+          "role": "prize"
+        },
+        {
+          "x": 68.87718061516061,
+          "y": 584.8563474819064,
+          "r": 2.1,
+          "id": 55,
+          "role": "prize"
+        },
+        {
+          "x": 84.84123840704561,
+          "y": 603.0241528237239,
+          "r": 2.1,
+          "id": 56,
+          "role": "prize"
+        },
+        {
+          "x": 121.5751748229377,
+          "y": 565.2684136743658,
+          "r": 2.1,
+          "id": 57,
+          "role": "prize"
+        },
+        {
+          "x": 138.3412439344451,
+          "y": 583.6365622472949,
+          "r": 2.1,
+          "id": 58,
+          "role": "prize"
+        },
+        {
+          "x": 156.51534363236277,
+          "y": 604.0324369538575,
+          "r": 2.1,
+          "id": 59,
+          "role": "prize"
+        },
+        {
+          "x": 251.04677795795723,
+          "y": 566.8161078520119,
+          "r": 2.1,
+          "id": 60,
+          "role": "prize"
+        },
+        {
+          "x": 270.0749118849635,
+          "y": 584.2448745421134,
+          "r": 2.1,
+          "id": 61,
+          "role": "prize"
+        },
+        {
+          "x": 286.2527677586302,
+          "y": 603.8622140327468,
+          "r": 2.1,
+          "id": 62,
+          "role": "prize"
+        }
+      ],
+      "colliders": [
+        {
+          "a": {
+            "x": 36,
+            "y": 680
+          },
+          "b": {
+            "x": 36,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 36,
+            "y": 200
+          },
+          "b": {
+            "x": 39,
+            "y": 190
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-inner-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 680
+          },
+          "b": {
+            "x": 22,
+            "y": 200
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 22,
+            "y": 200
+          },
+          "b": {
+            "x": 18,
+            "y": 165
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-outer-exit",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 18,
+            "y": 165
+          },
+          "b": {
+            "x": 68,
+            "y": 90
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "launch-kicker",
+          "restitution": 0.95
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 10
+          },
+          "b": {
+            "x": 379,
+            "y": 155
+          },
+          "r": 1.3,
+          "material": "rubber",
+          "role": "upper-reflector",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 20,
+            "y": 10
+          },
+          "b": {
+            "x": 402,
+            "y": 10
+          },
+          "r": 1.3,
+          "material": "rail",
+          "role": "board-top",
+          "restitution": 0.4
+        },
+        {
+          "a": {
+            "x": 340,
+            "y": 200
+          },
+          "b": {
+            "x": 346.313,
+            "y": 426
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-upper",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 347.486,
+            "y": 468
+          },
+          "b": {
+            "x": 350,
+            "y": 558
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-inner-lower",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 155
+          },
+          "b": {
+            "x": 379,
+            "y": 665
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "right-outer",
+          "restitution": 0.08
+        },
+        {
+          "a": {
+            "x": 60,
+            "y": 640
+          },
+          "b": {
+            "x": 176,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-left",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 379,
+            "y": 635
+          },
+          "b": {
+            "x": 244,
+            "y": 668
+          },
+          "r": 1.3,
+          "material": "resin",
+          "role": "out-right",
+          "restitution": 0.05
+        },
+        {
+          "a": {
+            "x": 57.5,
+            "y": 617
+          },
+          "b": {
+            "x": 57.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 76.5,
+            "y": 617
+          },
+          "b": {
+            "x": 76.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 130,
+            "y": 617
+          },
+          "b": {
+            "x": 130,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 148,
+            "y": 617
+          },
+          "b": {
+            "x": 148,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 258.5,
+            "y": 617
+          },
+          "b": {
+            "x": 258.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 277.5,
+            "y": 617
+          },
+          "b": {
+            "x": 277.5,
+            "y": 632
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "normal-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 200,
+            "y": 535
+          },
+          "b": {
+            "x": 200,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        },
+        {
+          "a": {
+            "x": 220,
+            "y": 535
+          },
+          "b": {
+            "x": 220,
+            "y": 550
+          },
+          "r": 1,
+          "material": "pocket",
+          "role": "start-rim",
+          "restitution": 0.15
+        }
+      ],
+      "pockets": [
+        {
+          "x": 67,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 0
+        },
+        {
+          "x": 139,
+          "y": 617,
+          "w": 18,
+          "kind": "normal",
+          "id": 1
+        },
+        {
+          "x": 268,
+          "y": 617,
+          "w": 19,
+          "kind": "normal",
+          "id": 2
+        },
+        {
+          "x": 210,
+          "y": 535,
+          "w": 20,
+          "kind": "start",
+          "id": 4
+        },
+        {
+          "x": 359,
+          "y": 581,
+          "w": 60,
+          "kind": "bonus",
+          "id": 5
+        },
+        {
+          "x": 330,
+          "y": 477,
+          "w": 34,
+          "kind": "rush",
+          "id": 6
+        }
+      ],
+      "mechanisms": [
+        {
+          "kind": "windmill",
+          "x": 75,
+          "y": 384,
+          "angle": 0.28,
+          "omega": 0,
+          "radius": 18,
+          "armRadius": 1.3
+        },
+        {
+          "kind": "windmill",
+          "x": 290,
+          "y": 405,
+          "angle": -0.3,
+          "omega": 0,
+          "radius": 17,
+          "armRadius": 1.3
+        }
+      ],
+      "outlet": {
+        "x": 210,
+        "y": 668,
+        "w": 68
+      },
+      "returnOutlet": {
+        "x": 29,
+        "y": 668,
+        "w": 22
+      },
+      "states": {
+        "normal": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "rush": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": true,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 377,
+                "y": 440
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 477
+              },
+              "b": {
+                "x": 313,
+                "y": 497
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonus": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 581
+            },
+            "b": {
+              "x": 329,
+              "y": 608
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": true
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        },
+        "bonusGap": {
+          "gate": {
+            "a": {
+              "x": 329,
+              "y": 596
+            },
+            "b": {
+              "x": 389,
+              "y": 579
+            },
+            "r": 1.4,
+            "material": "gate",
+            "role": "attacker-door",
+            "restitution": 0.08,
+            "open": false
+          },
+          "rightChucker": {
+            "open": false,
+            "scoop": {
+              "a": {
+                "x": 347.486,
+                "y": 468
+              },
+              "b": {
+                "x": 346.313,
+                "y": 426
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-scoop",
+              "restitution": 0.06
+            },
+            "cover": {
+              "a": {
+                "x": 313,
+                "y": 480
+              },
+              "b": {
+                "x": 347,
+                "y": 470
+              },
+              "r": 1.3,
+              "material": "gate",
+              "role": "right-chucker-cover",
+              "restitution": 0.08
+            }
+          }
+        }
+      }
+    }
+  ]
+}

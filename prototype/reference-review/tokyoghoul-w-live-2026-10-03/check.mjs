@@ -1,0 +1,12 @@
+import {spawn} from 'node:child_process';import {chromium} from '@playwright/test';import {writeFile} from 'node:fs/promises';
+const dir='reference-review/tokyoghoul-w-live-2026-10-03',scenario=process.argv[2]??'charge',port={rush:5176,left:5177,normal:5178,charge:5179}[scenario];
+const server=spawn(process.execPath,['node_modules/vite/bin/vite.js','--host','127.0.0.1','--port',String(port),'--config','reference-review/tokyoghoul-w-live/vite-record.config.mjs'],{stdio:'ignore'});await new Promise(r=>setTimeout(r,1500));
+let browser;try{
+ browser=await chromium.launch({channel:'chrome',headless:true});const ctx=await browser.newContext({viewport:{width:1280,height:960},recordVideo:{dir,size:{width:1280,height:960}}}),p=await ctx.newPage(),errors=[],samples=[];p.on('pageerror',e=>errors.push(String(e)));
+ await p.goto(`http://127.0.0.1:${port}/?review=session&scenario=${scenario}`);await p.locator('[data-unit="0"]').click();await p.locator('#playMachine').click();await p.waitForFunction(()=>window.__sessionReview?.model());
+ if(scenario==='left')await p.evaluate(()=>{__sessionReview.game().w.rng=()=>.9;});
+ if(!['rush','left'].includes(scenario))for(let i=0;i<2;i++){await p.evaluate(()=>{const g=__sessionReview.game(),m=__sessionReview.model(),p=m.flow.physics.pockets.find(p=>p.kind==='start'),ball=m.flow.physics.spawn(g.fire(),0);Object.assign(ball,{x:p.x,y:p.y-4,vx:0,vy:40,leftLaunchPlane:true});});await p.waitForTimeout(700);}
+ const seconds=scenario==='left'?40:scenario==='charge'?38:scenario==='rush'?185:110;
+ for(let t=0;t<seconds;t+=2){await p.waitForTimeout(2000);samples.push(await p.evaluate(()=>({snapshot:__session.snapshot(),lastBonus:__sessionReview.game().lastBonus,charge:__sessionReview.game().jackpot?.charge})));if(errors.length)break;}
+ await p.screenshot({path:`${dir}/${scenario}.png`});await ctx.close();const file=await p.video().path();await writeFile(`${dir}/${scenario}.json`,JSON.stringify({file,errors,samples,fixture:scenario==='left'?'Natural left launch, all results fixed to miss; no ball placement.':scenario==='rush'?'Initial RUSH and first result fixed; all balls launched naturally at 0.6s.':'Two paid physical balls dropped through heso; subsequent launch and payout use live physics; forced test result.'},null,2));console.log(JSON.stringify({file,errors,last:samples.at(-1)?.snapshot.session}));
+}finally{await browser?.close();server.kill();}

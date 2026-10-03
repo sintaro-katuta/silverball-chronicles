@@ -1,0 +1,20 @@
+✔ lower LCD housing has a physical surface matching the visible apron (1.902542ms)
+✔ compact lower assembly drains and accounts for all balls at increased firing rate (20572.703375ms)
+✔ normal: balls stay outside LCD, follow side lanes and drain (10105.456209ms)
+✔ rush: balls stay outside LCD, follow side lanes and drain (2682.017292ms)
+✔ bonus: balls stay outside LCD, follow side lanes and drain (1544.428083ms)
+✔ both modes launch at one origin no faster than 0.6 seconds (1380.730792ms)
+✔ manual power changes only future normal shots (83.643542ms)
+{"shots":31,"guideContact":18,"downstream":29}
+✔ reference inlet guides share their visible coordinates and feed falling left shots downstream (1949.750417ms)
+{"entries":14,"draws":14,"maxHolds":2}
+✔ physical admissions start spins, pause freezes and all accepted holds drain (10051.280833ms)
+✔ active draw is separate from five holds, full holds do not add a draw (156.830458ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 20646.328083
