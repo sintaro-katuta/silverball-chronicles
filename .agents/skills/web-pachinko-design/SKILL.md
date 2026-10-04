@@ -9,7 +9,7 @@ description: silverball-chronicles専用。液晶演出中心の現代的パチ�
 
 ## 最初に読むもの
 
-プロジェクトルートから `pachinko.md` の冒頭と対象箇所の最新追記、`prototype/DESIGN.md`、変更対象コードを確認する。[プロジェクト対応表](references/project.md)は入口であり、現在の仕様より優先しない。
+プロジェクトルートから `docs/pachinko.md` の冒頭と対象箇所の最新追記、`docs/prototype/DESIGN.md`、変更対象コードを確認する。[プロジェクト対応表](references/project.md)は入口であり、現在の仕様より優先しない。
 
 必要な資料だけ読む：
 - 図柄、配色、文字、画面構図、素材 → [visual-patterns.md](references/visual-patterns.md)
@@ -42,4 +42,4 @@ description: silverball-chronicles専用。液晶演出中心の現代的パチ�
 
 該当する通常／期待／当落／復帰を実際に再生し、[レビュー手順](references/review.md)で確認する。ソースコードや音イベントのログだけで「見た」「聴いた」と報告しない。確認できない環境・音声・連続再生は未検証と明示する。
 
-報告には変更の意図、参照ID、確認した画面・条件、残る問題を短く残す。ユーザーが採用した設計判断は `prototype/DESIGN.md` に適用範囲付きで整理する。AIの仮説や一度の好みを全画面の禁止規則へ昇格させない。
+報告には変更の意図、参照ID、確認した画面・条件、残る問題を短く残す。ユーザーが採用した設計判断は `docs/prototype/DESIGN.md` に適用範囲付きで整理する。AIの仮説や一度の好みを全画面の禁止規則へ昇格させない。

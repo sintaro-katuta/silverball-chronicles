@@ -26,7 +26,7 @@ export class RightUnitPreview extends Script {
  update(){this.controller.applyState(states[this.mode]||states.normal);}
 }
 `);
-await copyFile(new URL('../EDITOR_IMPORT.md',import.meta.url),new URL('README.md',output));
+await copyFile(new URL('../../docs/prototype/EDITOR_IMPORT.md',import.meta.url),new URL('README.md',output));
 const {dependencies}=JSON.parse(await readFile(new URL('../package.json',import.meta.url),'utf8'));
 await writeFile(new URL('manifest.json',output),JSON.stringify({engine:dependencies.playcanvas,scope:'cabinet assets and right-unit preview; not a playable game export',models:[0,1,2].map(i=>`course-${i}.glb`),scripts:['right-unit.mjs','right-unit-preview.mjs']},null,2));
 console.log(`Editor preparation exported to ${fileURLToPath(output)}`);

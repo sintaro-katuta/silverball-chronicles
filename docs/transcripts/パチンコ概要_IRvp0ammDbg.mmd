@@ -1,0 +1,89 @@
+flowchart TB
+    ROOT["パチンコの基本<br/>動画で説明された2つのタイプ"]
+
+    subgraph BASIC["共通の遊び方と抽選"]
+        RENT["お金を入れて玉を借りる<br/>動画例：4円パチンコ<br/>1000円で250玉・500円で125玉"]
+        PLAY["ハンドルをひねって玉を打つ<br/>通常時は主に左打ち"]
+        HESO["ヘソへの入賞を目指す<br/>動画例：1000円で20回程度の入賞"]
+        ENTRY{"ヘソに入賞した？"}
+        DRAW["1回分の大当たり抽選<br/>通常時の例：1/319"]
+        PAPER["抽選箱のたとえ<br/>319枚のうち1枚が当たり<br/>引いた紙は毎回箱に戻す"]
+        INDEPENDENT["外れても次の当たり確率は同じ<br/>319回で必ず当たるわけではない<br/>早い当たり・連続当たりもあり得る"]
+        RESULT{"抽選結果"}
+        MISS["液晶演出を経てハズレ<br/>通常時の抽選を続ける"]
+        HIT["液晶演出を経て初当たり<br/>大当たりの出玉を受け取る"]
+        EFFECT["演出は抽選結果を見せるためのもの<br/>赤文字・バトル・熱い演出でも外れることがある<br/>演出の途中で当たりに変わるという意味ではない"]
+        SPEC{"遊んでいる機種のタイプ"}
+        OTHER["その他の方式<br/>転落・Vストック・混合タイプなど<br/>動画では詳細を説明していない"]
+    end
+
+    subgraph STTYPE["例A：STタイプ　動画では北斗無双を例示"]
+        ST_FIRST{"ヘソ初当たりの振り分け"}
+        ST_ENTER["50%：6R確変<br/>STに入る"]
+        ST_NORMAL["50%：6R通常<br/>時短に入る"]
+        ST["ST：確率が上がる回数限定の状態<br/>電チューで1/80を最大140回抽選<br/>動画の説明では右打ち"]
+        ST_CHECK{"140回以内に当たった？"}
+        ST_PAYOUT["電チュー大当たりの出玉を受け取る<br/>50%：16R確変<br/>50%：4R確変<br/>どちらも確変なのでST140回に戻る"]
+        ST_TIME["時短：確率は通常時と同じ<br/>電チューで1/319を最大100回抽選"]
+        ST_TIME_CHECK{"100回以内に当たった？"}
+        ST_TIME_HIT["時短中の電チュー大当たり<br/>この例では必ず確変<br/>出玉を受け取りST140回へ"]
+        ST_END["規定回数で当たらず終了<br/>電サポが終わり通常時へ"]
+    end
+
+    subgraph LOOPTYPE["例B：確変ループタイプ　動画では海物語沖縄を例示"]
+        LOOP_FIRST{"ヘソ初当たりの振り分け"}
+        LOOP["60%：確変へ<br/>電チューで1/30の抽選<br/>次の大当たりまで継続<br/>動画の海物語例では左打ち"]
+        LOOP_NORMAL["40%：通常大当たり<br/>時短100回へ"]
+        LOOP_HIT["確変中の次の大当たり<br/>出玉を受け取る"]
+        LOOP_SPLIT{"電チュー大当たり後の振り分け"}
+        LOOP_TIME["時短：電チューで抽選<br/>1/319を最大100回"]
+        LOOP_TIME_CHECK{"100回以内に当たった？"}
+        LOOP_TIME_HIT["時短中の大当たりで出玉を受け取る<br/>確変か通常かを再び振り分け"]
+        LOOP_END["100回で当たらず終了<br/>電サポが終わり通常時へ"]
+    end
+
+    subgraph TERMS["状態と出玉を読むポイント"]
+        SUPPORT["電チューと電サポ<br/>電チューはもう1つの入賞口<br/>電サポ中は入賞しやすく玉の減少を抑えられる<br/>完全に無料・玉が必ず減らないという保証ではない"]
+        STATE["確変と時短<br/>確変：大当たり確率が上がる<br/>時短：通常確率のまま電サポが付く<br/>STも確変の一種"]
+        ROUND["ラウンドと連チャン<br/>Rは大当たりのラウンド数<br/>動画例では16Rの方が4Rより出玉が多い<br/>大当たりが続くことを連チャンと呼ぶ"]
+        ODDS["例の数値からの計算補足<br/>ST：1/80を140回で約82.8%<br/>時短：1/319を100回で約26.9%<br/>どちらも当たりを保証する回数ではない"]
+    end
+
+    ROOT --> RENT --> PLAY --> HESO --> ENTRY
+    ENTRY -->|いいえ| PLAY
+    ENTRY -->|はい| DRAW --> RESULT
+    DRAW -.-> PAPER --> INDEPENDENT
+    RESULT -->|ハズレ| MISS --> PLAY
+    RESULT -->|大当たり| HIT --> SPEC
+    RESULT -.-> EFFECT
+    SPEC -->|STタイプ| ST_FIRST
+    SPEC -->|確変ループタイプ| LOOP_FIRST
+    SPEC -->|その他| OTHER
+
+    ST_FIRST -->|50%| ST_ENTER --> ST --> ST_CHECK
+    ST_FIRST -->|50%| ST_NORMAL --> ST_TIME --> ST_TIME_CHECK
+    ST_CHECK -->|当たり| ST_PAYOUT --> ST
+    ST_CHECK -->|140回で当たらず| ST_END --> PLAY
+    ST_TIME_CHECK -->|当たり| ST_TIME_HIT --> ST
+    ST_TIME_CHECK -->|100回で当たらず| ST_END
+
+    LOOP_FIRST -->|60%| LOOP --> LOOP_HIT --> LOOP_SPLIT
+    LOOP_FIRST -->|40%| LOOP_NORMAL --> LOOP_TIME --> LOOP_TIME_CHECK
+    LOOP_SPLIT -->|60%：確変| LOOP
+    LOOP_SPLIT -->|40%：通常| LOOP_TIME
+    LOOP_TIME_CHECK -->|当たり| LOOP_TIME_HIT --> LOOP_SPLIT
+    LOOP_TIME_CHECK -->|100回で当たらず| LOOP_END --> PLAY
+
+    ROOT -.-> SUPPORT
+    ROOT -.-> STATE
+    ROOT -.-> ROUND
+    ROOT -.-> ODDS
+
+    classDef normal fill:#edf2f7,stroke:#64748b,color:#172033;
+    classDef high fill:#fff0d5,stroke:#d48a16,color:#51330b;
+    classDef time fill:#e3f1ff,stroke:#4083bd,color:#153954;
+    classDef note fill:#f4f0ff,stroke:#8b78ac,color:#352849;
+    class PLAY,HESO,DRAW,MISS,ST_END,LOOP_END normal;
+    class ST,ST_ENTER,ST_PAYOUT,ST_TIME_HIT,LOOP,LOOP_HIT high;
+    class ST_TIME,ST_NORMAL,LOOP_TIME,LOOP_NORMAL time;
+    class PAPER,INDEPENDENT,EFFECT,SUPPORT,STATE,ROUND,ODDS,OTHER note;

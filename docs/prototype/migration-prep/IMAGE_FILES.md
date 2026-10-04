@@ -1,0 +1,61 @@
+# 画像ファイル一覧
+
+55件。使用中53件、旧／使用停止2件。寸法は現在のファイル寸法であり、新素材の推奨寸法ではありません。
+
+| ID | 原本 | 用途 | 現寸法 | 現状 | 判断欄 |
+|---|---|---|---|---|---|
+| IMG-001 | [/moon-guardian-pixel-v2.png](../../../prototype/public/moon-guardian-pixel-v2.png) | 通常液晶・人物カットイン（現行のドット絵調案／採用判断は保留） | 1086×1448 | 使用中 | 未検討 |
+| IMG-002 | [/eclipse-battle.png](../../../prototype/public/eclipse-battle.png) | 戦闘のフォールバック原画 | 1086×1448 | 使用中 | 未検討 |
+| IMG-003 | [/battles/eclipse-victory.png](../../../prototype/public/battles/eclipse-victory.png) | 黒蝕竜・月下の機関都市／正面突破（BONUS背景にも使用） | 1086×1448 | 使用中 | 未検討 |
+| IMG-004 | [/battles/eclipse-defeat.png](../../../prototype/public/battles/eclipse-defeat.png) | 黒蝕竜・月下の機関都市／攻撃失敗 | 1086×1448 | 使用中 | 未検討 |
+| IMG-005 | [/battles/eclipse-feint.png](../../../prototype/public/battles/eclipse-feint.png) | 黒蝕竜・月下の機関都市／好機からの敗北 | 1086×1448 | 使用中 | 未検討 |
+| IMG-006 | [/battles/eclipse-awakening.png](../../../prototype/public/battles/eclipse-awakening.png) | 黒蝕竜・月下の機関都市／劣勢から覚醒 | 1086×1448 | 使用中 | 未検討 |
+| IMG-007 | [/battles/eclipse-revival.png](../../../prototype/public/battles/eclipse-revival.png) | 黒蝕竜・月下の機関都市／敗北後の復活 | 1086×1448 | 使用中 | 未検討 |
+| IMG-008 | [/battles/bridge-victory.png](../../../prototype/public/battles/bridge-victory.png) | 雷獣・崩落する天空橋／正面突破 | 1086×1448 | 使用中 | 未検討 |
+| IMG-009 | [/battles/bridge-defeat.png](../../../prototype/public/battles/bridge-defeat.png) | 雷獣・崩落する天空橋／攻撃失敗 | 1086×1448 | 使用中 | 未検討 |
+| IMG-010 | [/battles/bridge-feint.png](../../../prototype/public/battles/bridge-feint.png) | 雷獣・崩落する天空橋／好機からの敗北 | 1086×1448 | 使用中 | 未検討 |
+| IMG-011 | [/battles/bridge-awakening.png](../../../prototype/public/battles/bridge-awakening.png) | 雷獣・崩落する天空橋／劣勢から覚醒 | 1086×1448 | 使用中 | 未検討 |
+| IMG-012 | [/battles/bridge-revival.png](../../../prototype/public/battles/bridge-revival.png) | 雷獣・崩落する天空橋／敗北後の復活 | 1086×1448 | 使用中 | 未検討 |
+| IMG-013 | [/battles/furnace-victory.png](../../../prototype/public/battles/furnace-victory.png) | 炎王・灼熱の炉心／正面突破 | 1086×1448 | 使用中 | 未検討 |
+| IMG-014 | [/battles/furnace-defeat.png](../../../prototype/public/battles/furnace-defeat.png) | 炎王・灼熱の炉心／攻撃失敗 | 1086×1448 | 使用中 | 未検討 |
+| IMG-015 | [/battles/furnace-feint.png](../../../prototype/public/battles/furnace-feint.png) | 炎王・灼熱の炉心／好機からの敗北 | 1086×1448 | 使用中 | 未検討 |
+| IMG-016 | [/battles/furnace-awakening.png](../../../prototype/public/battles/furnace-awakening.png) | 炎王・灼熱の炉心／劣勢から覚醒 | 1086×1448 | 使用中 | 未検討 |
+| IMG-017 | [/battles/furnace-revival.png](../../../prototype/public/battles/furnace-revival.png) | 炎王・灼熱の炉心／敗北後の復活 | 1086×1448 | 使用中 | 未検討 |
+| IMG-018 | [/battles/cathedral-victory.png](../../../prototype/public/battles/cathedral-victory.png) | 鏡騎士・水晶聖堂／正面突破 | 1086×1448 | 使用中 | 未検討 |
+| IMG-019 | [/battles/cathedral-defeat.png](../../../prototype/public/battles/cathedral-defeat.png) | 鏡騎士・水晶聖堂／攻撃失敗 | 1086×1448 | 使用中 | 未検討 |
+| IMG-020 | [/battles/cathedral-feint.png](../../../prototype/public/battles/cathedral-feint.png) | 鏡騎士・水晶聖堂／好機からの敗北 | 1086×1448 | 使用中 | 未検討 |
+| IMG-021 | [/battles/cathedral-awakening.png](../../../prototype/public/battles/cathedral-awakening.png) | 鏡騎士・水晶聖堂／劣勢から覚醒 | 1086×1448 | 使用中 | 未検討 |
+| IMG-022 | [/battles/cathedral-revival.png](../../../prototype/public/battles/cathedral-revival.png) | 鏡騎士・水晶聖堂／敗北後の復活 | 1086×1448 | 使用中 | 未検討 |
+| IMG-023 | [/battles/harbor-victory.png](../../../prototype/public/battles/harbor-victory.png) | 深海竜・沈みゆく港／正面突破 | 1086×1448 | 使用中 | 未検討 |
+| IMG-024 | [/battles/harbor-defeat.png](../../../prototype/public/battles/harbor-defeat.png) | 深海竜・沈みゆく港／攻撃失敗 | 1086×1448 | 使用中 | 未検討 |
+| IMG-025 | [/battles/harbor-feint.png](../../../prototype/public/battles/harbor-feint.png) | 深海竜・沈みゆく港／好機からの敗北 | 1086×1448 | 使用中 | 未検討 |
+| IMG-026 | [/battles/harbor-awakening.png](../../../prototype/public/battles/harbor-awakening.png) | 深海竜・沈みゆく港／劣勢から覚醒 | 1086×1448 | 使用中 | 未検討 |
+| IMG-027 | [/battles/harbor-revival.png](../../../prototype/public/battles/harbor-revival.png) | 深海竜・沈みゆく港／敗北後の復活 | 1086×1448 | 使用中 | 未検討 |
+| IMG-028 | [/battles/forest-victory.png](../../../prototype/public/battles/forest-victory.png) | 影蜘蛛・月光の森／正面突破 | 1086×1448 | 使用中 | 未検討 |
+| IMG-029 | [/battles/forest-defeat.png](../../../prototype/public/battles/forest-defeat.png) | 影蜘蛛・月光の森／攻撃失敗 | 1086×1448 | 使用中 | 未検討 |
+| IMG-030 | [/battles/forest-feint.png](../../../prototype/public/battles/forest-feint.png) | 影蜘蛛・月光の森／好機からの敗北 | 1086×1448 | 使用中 | 未検討 |
+| IMG-031 | [/battles/forest-awakening.png](../../../prototype/public/battles/forest-awakening.png) | 影蜘蛛・月光の森／劣勢から覚醒 | 1086×1448 | 使用中 | 未検討 |
+| IMG-032 | [/battles/forest-revival.png](../../../prototype/public/battles/forest-revival.png) | 影蜘蛛・月光の森／敗北後の復活 | 1086×1448 | 使用中 | 未検討 |
+| IMG-033 | [/battles/train-victory.png](../../../prototype/public/battles/train-victory.png) | 装甲鷲・疾走する列車／正面突破 | 1086×1448 | 使用中 | 未検討 |
+| IMG-034 | [/battles/train-defeat.png](../../../prototype/public/battles/train-defeat.png) | 装甲鷲・疾走する列車／攻撃失敗 | 1086×1448 | 使用中 | 未検討 |
+| IMG-035 | [/battles/train-feint.png](../../../prototype/public/battles/train-feint.png) | 装甲鷲・疾走する列車／好機からの敗北 | 1086×1448 | 使用中 | 未検討 |
+| IMG-036 | [/battles/train-awakening.png](../../../prototype/public/battles/train-awakening.png) | 装甲鷲・疾走する列車／劣勢から覚醒 | 1086×1448 | 使用中 | 未検討 |
+| IMG-037 | [/battles/train-revival.png](../../../prototype/public/battles/train-revival.png) | 装甲鷲・疾走する列車／敗北後の復活 | 1086×1448 | 使用中 | 未検討 |
+| IMG-038 | [/battles/desert-victory.png](../../../prototype/public/battles/desert-victory.png) | 砂時計の巨人・遺跡／正面突破 | 1086×1448 | 使用中 | 未検討 |
+| IMG-039 | [/battles/desert-defeat.png](../../../prototype/public/battles/desert-defeat.png) | 砂時計の巨人・遺跡／攻撃失敗 | 1086×1448 | 使用中 | 未検討 |
+| IMG-040 | [/battles/desert-feint.png](../../../prototype/public/battles/desert-feint.png) | 砂時計の巨人・遺跡／好機からの敗北 | 1086×1448 | 使用中 | 未検討 |
+| IMG-041 | [/battles/desert-awakening.png](../../../prototype/public/battles/desert-awakening.png) | 砂時計の巨人・遺跡／劣勢から覚醒 | 1086×1448 | 使用中 | 未検討 |
+| IMG-042 | [/battles/desert-revival.png](../../../prototype/public/battles/desert-revival.png) | 砂時計の巨人・遺跡／敗北後の復活 | 1086×1448 | 使用中 | 未検討 |
+| IMG-043 | [/battles/snow-victory.png](../../../prototype/public/battles/snow-victory.png) | 氷の女王・白夜の砦／正面突破 | 1086×1448 | 使用中 | 未検討 |
+| IMG-044 | [/battles/snow-defeat.png](../../../prototype/public/battles/snow-defeat.png) | 氷の女王・白夜の砦／攻撃失敗 | 1086×1448 | 使用中 | 未検討 |
+| IMG-045 | [/battles/snow-feint.png](../../../prototype/public/battles/snow-feint.png) | 氷の女王・白夜の砦／好機からの敗北 | 1086×1448 | 使用中 | 未検討 |
+| IMG-046 | [/battles/snow-awakening.png](../../../prototype/public/battles/snow-awakening.png) | 氷の女王・白夜の砦／劣勢から覚醒 | 1086×1448 | 使用中 | 未検討 |
+| IMG-047 | [/battles/snow-revival.png](../../../prototype/public/battles/snow-revival.png) | 氷の女王・白夜の砦／敗北後の復活 | 1086×1448 | 使用中 | 未検討 |
+| IMG-048 | [/battles/moon-victory.png](../../../prototype/public/battles/moon-victory.png) | 虚無王・月の祭壇／正面突破 | 1086×1448 | 使用中 | 未検討 |
+| IMG-049 | [/battles/moon-defeat.png](../../../prototype/public/battles/moon-defeat.png) | 虚無王・月の祭壇／攻撃失敗 | 1086×1448 | 使用中 | 未検討 |
+| IMG-050 | [/battles/moon-feint.png](../../../prototype/public/battles/moon-feint.png) | 虚無王・月の祭壇／好機からの敗北 | 1086×1448 | 使用中 | 未検討 |
+| IMG-051 | [/battles/moon-awakening.png](../../../prototype/public/battles/moon-awakening.png) | 虚無王・月の祭壇／劣勢から覚醒（RUSH背景にも使用） | 1086×1448 | 使用中 | 未検討 |
+| IMG-052 | [/battles/moon-revival.png](../../../prototype/public/battles/moon-revival.png) | 虚無王・月の祭壇／敗北後の復活 | 1086×1448 | 使用中 | 未検討 |
+| IMG-053 | [/machines/moonlit-pachinko.png](../../../prototype/public/machines/moonlit-pachinko.png) | フロア一覧・機種詳細で共用。現行は96×120へ縮小表示 | 1122×1402 | 使用中 | 未検討 |
+| IMG-054 | [/moon-guardian.png](../../../prototype/public/moon-guardian.png) | 守護者の旧原画・人物と世界観の参考 | 1536×1024 | 旧原画・参照用 | 未検討 |
+| IMG-055 | [/machines/moonlit-pachinko-frame.png](../../../prototype/public/machines/moonlit-pachinko-frame.png) | 遊技画面の重ね枠・現在は未使用 | 1086×1448 | 使用停止・参照用 | 未検討 |

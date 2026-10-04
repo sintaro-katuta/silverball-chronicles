@@ -7,8 +7,8 @@
 - ユーザー指定：液晶演出中心の現代的パチンコ、プロジェクト専用、Webでできる表現。
 - 実装：`prototype/`。Vite、Three.js、Canvas、Web Audio、Capacitor。iOS/Android向け縦画面、オフライン。
 - 作品：「月影機関」。独自IP、3D筐体・玉・釘と、イラストを使った液晶映像。
-- `pachinko.md` には旧仕様も残る。冒頭の優先記述と日付付き更新を確認する。`prototype/README.md` にも過去のパス・発射位置が残るため、その一文だけを根拠に修正しない。
-- `prototype/DESIGN.md` は筐体の夜色・青鋼・銀・真鍮などの方向性。演出の全状態を同じ寒色に固定する意味ではない。
+- `docs/pachinko.md` には旧仕様も残る。冒頭の優先記述と日付付き更新を確認する。`docs/prototype/README.md` にも過去のパス・発射位置が残るため、その一文だけを根拠に修正しない。
+- `docs/prototype/DESIGN.md` は筐体の夜色・青鋼・銀・真鍮などの方向性。演出の全状態を同じ寒色に固定する意味ではない。
 - `prototype/reference-review/**/REVIEW.md` は過去の観察記録。現在の画面の欠陥としてそのまま再利用しない。
 
 ## 変更箇所の入口（パスはプロジェクトルート基準）

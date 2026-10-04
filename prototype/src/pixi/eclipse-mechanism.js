@@ -32,9 +32,8 @@ export function createEclipseMechanism({height=140,leftHeight=height,opening=nul
  const own=canvas=>{const t=Texture.from(canvas);t.source.scaleMode='nearest';textures.push(t);return t;};
  const veil=new Graphics().rect(0,0,210,height).fill(0x010510);root.addChild(veil);
  const body=new Container();body.y=(height-140)/2;root.addChild(body);
- const mask=new Graphics().rect(0,-2,210,144).fill(0xffffff);body.addChild(mask);body.mask=mask;
  const dim=new Graphics().rect(0,0,210,140).fill(0x010510);body.addChild(dim);
- const rails=new Graphics();for(const y of [28,112])rails.rect(0,y,210,5).fill(0x23364a).rect(0,y,210,1).fill(0x9d9f92);body.addChild(rails);
+ const rails=new Graphics();for(const y of [28,112])rails.rect(-38,y,286,5).fill(0x23364a).rect(-38,y,286,1).fill(0x9d9f92);body.addChild(rails);
  const pieces=[];
  for(const char of ['月','蝕']){const texture=own(plate(char)),shadow=new Sprite(texture),sprite=new Sprite(texture);shadow.tint=0x000000;shadow.alpha=.7;body.addChild(shadow,sprite);pieces.push({sprite,shadow});}
  const crest=new Sprite(own(pixelSurface(124,38,c=>{const d=painter(c);
@@ -46,12 +45,13 @@ export function createEclipseMechanism({height=140,leftHeight=height,opening=nul
  const glow=new Graphics();for(const x of [10,198])glow.rect(x,22,2,88).fill(0xa4e6ff);glow.rect(22,8,166,2).fill(0xffe8ab);body.addChild(glow);
  // Housing lips stay attached to the existing frame; the plates pass behind them.
  const housing=new Graphics();for(const x of [-5,207]){const h=x<0?leftHeight:height;housing.rect(x,-2,8,h+4).fill(0x503e30).rect(x,0,3,h).fill(0xd2b37c).rect(x+3,4,2,h-8).fill(0x152239);}housing.rect(40,-8,130,7).fill(0x3c3940).rect(42,-8,126,2).fill(0xf6d28a);root.addChild(housing);
- // The integrated board already owns the shaped frame. Clip moving plates to
- // that same aperture and omit the obsolete rectangular preview housing.
- if(opening){const aperture=new Graphics().poly(opening.flat()).fill(0xffffff);root.addChild(aperture);root.mask=aperture;}
- return {root,textures,render(game,overrideTime){const t=overrideTime??mechanismTime(game),p=eclipsePose(t);body.visible=p.visible;veil.visible=p.visible;veil.alpha=.65*p.travel;housing.visible=!opening;
+ // Only the LCD darkening is clipped. Physical carriers cross the frame in
+ // front of the board, so their approach and return remain visible outside.
+ if(opening){const aperture=new Graphics().poly(opening.flat()).fill(0xffffff);root.addChild(aperture);veil.mask=aperture;}
+ return {root,textures,render(game,overrideTime){const t=overrideTime??mechanismTime(game),p=eclipsePose(t);body.visible=p.visible;veil.visible=p.visible;veil.alpha=.65*p.travel;housing.visible=!opening||p.visible;
   dim.alpha=.58*p.travel;rails.alpha=.75*p.travel;
   pieces.forEach(({sprite,shadow},i)=>{const x=i===0?-112+113*p.travel-p.bounce:212-107*p.travel+p.bounce;const y=20+(i===0?-1:1)*p.bounce; sprite.position.set(Math.round(x),Math.round(y));shadow.position.set(Math.round(x+5),Math.round(y+7));});
-  crest.position.set(43,Math.round(-43+48*p.travel-p.bounce));glow.alpha=p.light*(.65+.35*Math.sin(Math.max(0,t-.36)*12));
+  const crestStart=-body.y-43;
+  crest.position.set(43,Math.round(crestStart+(5-crestStart)*p.travel-p.bounce));glow.alpha=p.light*(.65+.35*Math.sin(Math.max(0,t-.36)*12));
  }};
 }
