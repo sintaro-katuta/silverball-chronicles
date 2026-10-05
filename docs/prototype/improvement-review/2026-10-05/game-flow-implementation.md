@@ -6,7 +6,7 @@
 
 | 改善点 | 実装 | 維持したもの |
 |---|---|---|
-| GF07 四分岐/演出事前確率の重複を整理 | `prototype/src/tokyoghoul-w-spec.js` に `W_NORMAL_MODEL` と `wPublishedNormalOutcome`、`wNormalSymbolProbability`、`wPresentationWinProbability` を集約。既存policyのresolverはre-export。演出担当が `normal-spin-flow.js` のW priorを共通helperへ接続。 | 公表近似の1/199.9と25/0.5/24.5/50という既存四分岐、symbol-only prior .495/199.9、普図1/95.3と保証時1/1。公表カテゴリ約1/399.9とsymbol-only事前確率を混同しない。 |
+| GF07 四分岐/演出事前確率の重複を整理 | `prototype/src/domain/tokyoghoul-w-spec.js` に `W_NORMAL_MODEL` と `wPublishedNormalOutcome`、`wNormalSymbolProbability`、`wPresentationWinProbability` を集約。既存policyのresolverはre-export。演出担当が `normal-spin-flow.js` のW priorを共通helperへ接続。 | 公表近似の1/199.9と25/0.5/24.5/50という既存四分岐、symbol-only prior .495/199.9、普図1/95.3と保証時1/1。公表カテゴリ約1/399.9とsymbol-only事前確率を混同しない。 |
 | GF08 消費済みWイベント | event sequenceを配列長と独立した累計へ変更。SessionGameはsequenceで未処理を取得し、処理後に消費済み履歴だけを直近2048件へ制限。未処理イベントは削除しない。単独WMachine制御レビューは明示pruneしない限り全履歴を保持できる。 | 賞球、払出、RUSH開始終了、各大当り群の処理順。履歴を捨ててもsequenceはリセットしない。 |
 | GF08 捕球済み数値ID | Physicsの単調増加nextIdと生存球最小IDから退役境界を進め、境界未満のseen要素を削除。以後、境界未満の遅延入賞は常に拒否。V代用入口の特別処理にも同じ拒否を適用。演出担当が物理step終了後にretireを接続。 | 抽選済み保留record、球の座標/速度/接触、自然入賞、二重払出防止。IDの忘却で古い球を再受理する処理にはしない。 |
 

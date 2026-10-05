@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Physics} from '../src/physics.js';
-import {Game,freshProfile} from '../src/game.js';
+import {Physics} from '../src/physics/physics.js';
+import {Game,freshProfile} from '../src/domain/game.js';
 
 test('life nail clearances physically change admission for independent incoming balls',()=>{
  const sample=halfGap=>{let starts=0;for(let n=0;n<=40;n++){const g=new Game(freshProfile()),p=new Physics();p.pins=p.pins.filter(pin=>pin.role==='heso');p.pins[0].x=210-halfGap;p.pins[1].x=210+halfGap;p.mechanisms=[];g.hit=(b,kind)=>{if(kind==='start')starts++;};p.balls.push({id:1,x:190+n,y:500,vx:0,vy:100,r:4.6,age:0,hits:0});for(let i=0;i<1200&&p.balls.length;i++)p.step(1/120,g);}return starts;};

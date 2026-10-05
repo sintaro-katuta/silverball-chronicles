@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createPartFlow} from '../src/part-flow-fixture.js';
+import {createPartFlow} from '../src/physics/ball-flow.js';
 test('attacker demonstration keeps real launch physics and scores only during open interval',()=>{
  const flow=createPartFlow();flow.start();const checkpoints=[];
  for(let i=0;i<2400;i++){

@@ -7,7 +7,7 @@ try{
  page.on('pageerror',e=>errors.push(e.message));
  // Browser-only fixture: exercise real payout, result rendering and Preferences.
  // No mutable diagnostics are shipped in the application.
- await page.route('**/src/main.js*',async route=>{
+ await page.route('**/src/legacy/main.js*',async route=>{
   const response=await route.fetch();
   await route.fulfill({response,body:await response.text()+`
    window.__ticketTest={

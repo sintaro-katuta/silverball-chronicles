@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createBoardFlow} from '../src/pixi/board-flow.js';
 import {attachNormalSpin} from '../src/pixi/normal-spin-flow.js';
-import {reelState} from '../src/reels.js';
+import {reelState} from '../src/domain/reels.js';
 test('physical admissions start spins, pause freezes and all accepted holds drain',()=>{
  const m=createBoardFlow({lcd:true,normalPower:.24,launchInterval:.6}),s=attachNormalSpin(m.flow);m.setMode('normal');m.flow.start();let maxHolds=0,states=new Set();
  for(let i=0;i<120*120;i++){m.flow.step(1/120);maxHolds=Math.max(maxHolds,s.game.holdCount);states.add(reelState(s.game).stopped.join());}

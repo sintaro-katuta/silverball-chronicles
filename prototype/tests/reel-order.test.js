@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Game,freshProfile} from '../src/game.js';
-import {reelState} from '../src/reels.js';
+import {Game,freshProfile} from '../src/domain/game.js';
+import {reelState} from '../src/domain/reels.js';
 test('all courses stop left, then middle, then right, with time between each stop',()=>{
  for(let c=0;c<3;c++){
   const g=new Game(freshProfile(),c,()=>.8);g.enqueueDraw();

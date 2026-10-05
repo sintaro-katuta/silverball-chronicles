@@ -4,7 +4,7 @@ import {createReachEndingSelector,reachSchedule} from '../src/pixi/reach-ending.
 import {longReachPose,upperReachPose} from '../src/pixi/long-reach-timeline.js';
 import {reachSeconds,mechanismTime} from '../src/pixi/win-sequence.js';
 import {createMoonCueController,MOON_CUES} from '../src/pixi/moon-cue.js';
-import {SessionGame} from '../src/pixi/session-game.js';
+import {SessionGame} from '../src/domain/session-game.js';
 import {createBoardFlow} from '../src/pixi/board-flow.js';
 import {attachNormalSpin} from '../src/pixi/normal-spin-flow.js';
 

@@ -1,6 +1,6 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-import {SessionGame} from '../src/pixi/session-game.js';
-import {W_RUNTIME_POLICY,wPublishedNormalOutcome} from '../src/pixi/w-runtime-policy.js';
+import {SessionGame} from '../src/domain/session-game.js';
+import {W_RUNTIME_POLICY,wPublishedNormalOutcome} from '../src/domain/w-runtime-policy.js';
 const ball=(id)=>({id,x:200,y:500,hits:0});
 const settle=g=>{for(let n=0;n<2000;n++){g.tick(.01);if(g.presentation){const win=g.presentation.win;g.presentation=null;g.resolveDraw(win);}if(g.jackpot||g.w.electricOpen||g.w.pendingV)return;}};
 const bonus=(g,prefix)=>{let id=0;while(g.jackpot){g.jackpot.gap=0;g.openWRound();const left=10-g.jackpot.count;for(let n=0;n<left;n++)g.hit(ball(`${prefix}-${id++}`),'bonus');}};

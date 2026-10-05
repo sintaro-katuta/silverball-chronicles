@@ -8,7 +8,7 @@ const context=await browser.newContext({viewport:{width:390,height:740},recordVi
 const page=await context.newPage(),errors=[],checks=[];page.on('pageerror',e=>errors.push(e.message));
 const movementChecks=[];
 try{
- await page.goto(process.env.SPECIAL_ROUTES_URL??'http://localhost:5194/special-routes.html');await page.waitForFunction(()=>!!window.__specialRoutes);
+ await page.goto(process.env.SPECIAL_ROUTES_URL??'http://localhost:5194/dev/special-routes.html');await page.waitForFunction(()=>!!window.__specialRoutes);
  for(const mode of ['normal','rush'])for(const route of ['basic','direct'])for(const column of route==='basic'?[1]:[0,1,2]){
   let lo=0,hi=SPECIAL_ROUTE_TIMINGS[mode][route].decisionAt;
   for(let i=0;i<60;i++){const t=(lo+hi)/2;if(specialRoutePose({mode,route,win:true,time:t}).positions[column]<3.4)lo=t;else hi=t;}

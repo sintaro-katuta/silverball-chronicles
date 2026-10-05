@@ -2,7 +2,7 @@ import {installRightResinRoute,attachRightRouteDepth} from './right-resin-route.
 import {attachPassGate} from './pass-gate.js';
 import {attachLeftRouteMetrics} from './left-route-metrics.js';
 import {installLcdBoundary} from './lcd-layout.js';
-import {createPartFlow} from '../part-flow-fixture.js';
+import {createPartFlow} from '../physics/ball-flow.js';
 import {attachRightStartMotion} from './right-start-motion.js';
 import {attachAttackerMotion} from './attacker-motion.js';
 // Combined mechanical review only. Individual approved previews remain unchanged.

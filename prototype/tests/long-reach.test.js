@@ -4,7 +4,7 @@ import {LONG_REACH,REACH_CUTS,REACH_STRIKES,strikePose,longReachPose,upperReachP
 import {reachSeconds,mechanismTime} from '../src/pixi/win-sequence.js';
 import {cabinetSwordPose,cabinetLightPose} from '../src/pixi/cabinet-light-motion.js';
 import {createMoonCueController,MOON_CUES} from '../src/pixi/moon-cue.js';
-import {SessionGame} from '../src/pixi/session-game.js';
+import {SessionGame} from '../src/domain/session-game.js';
 import {createBoardFlow} from '../src/pixi/board-flow.js';
 import {attachNormalSpin} from '../src/pixi/normal-spin-flow.js';
 import {weaponPose,REACH_SCRIPTS} from '../src/pixi/long-reach-timeline.js';

@@ -5,7 +5,7 @@ const dir=process.env.STORY_EVIDENCE??'reference-review/story-presentations-2026
 const browser=await chromium.launch({channel:'chrome',headless:true});const context=await browser.newContext({viewport:{width:390,height:740},recordVideo:{dir:dir+'/raw',size:{width:390,height:740}}});
 const page=await context.newPage(),errors=[],checks=[];page.on('pageerror',e=>errors.push(e.message));
 try{
- await page.goto(process.env.STORY_URL??'http://127.0.0.1:5203/story-predictions.html');await page.waitForFunction(()=>!!window.__storyPredictions);
+ await page.goto(process.env.STORY_URL??'http://127.0.0.1:5203/dev/story-predictions.html');await page.waitForFunction(()=>!!window.__storyPredictions);
  const available=await page.evaluate(()=>__storyPredictions.available);
  for(const family of available){
   for(const window of [6,5,2,1.43]){

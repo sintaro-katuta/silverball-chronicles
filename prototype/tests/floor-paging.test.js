@@ -1,3 +1,3 @@
-import test from 'node:test';import assert from 'node:assert/strict';import {swipeDirection,pageAfter} from '../src/floor-paging.js';
+import test from 'node:test';import assert from 'node:assert/strict';import {swipeDirection,pageAfter} from '../src/ui/floor-paging.js';
 test('tap/diagonal gestures do not page; axes are distinct',()=>{assert.equal(swipeDirection(20,2),null);assert.equal(swipeDirection(90,80),null);assert.equal(swipeDirection(-90,10),'next');assert.equal(swipeDirection(2,-90),'up');});
 test('20 cabinets have five bounded pages; changing floors retains the page',()=>{let s={level:1,page:4};assert.deepEqual(pageAfter(s,'next'),s);s=pageAfter(s,'up');assert.equal(s.level,2);assert.deepEqual(pageAfter(s,'next'),s);s=pageAfter(s,'down');assert.deepEqual(s,{level:1,page:4});assert.equal(pageAfter({level:1,page:0},'previous').page,0);});

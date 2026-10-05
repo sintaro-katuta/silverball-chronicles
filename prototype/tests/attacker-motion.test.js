@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createPartFlow} from '../src/part-flow-fixture.js';
+import {createPartFlow} from '../src/physics/ball-flow.js';
 import {attachAttackerMotion} from '../src/pixi/attacker-motion.js';
 test('lower hinge is fixed, panel reverses without jumps and pauses',()=>{
  const f=createPartFlow(),m=attachAttackerMotion(f),hinge=structuredClone(f.physics.gate.panel.hingeA);m.request(true);

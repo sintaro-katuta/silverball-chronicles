@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {shotSettings,shotStatus,shotInterval} from '../src/shot-control.js';
+import {shotSettings,shotStatus,shotInterval} from '../src/legacy/shot-control.js';
 test('manual and automatic shooting use the same power/angle parameters',()=>{
  const physics={normalPower:.57,bonusPower:1};
  assert.deepEqual(shotSettings({},physics),{power:.57,angle:0});

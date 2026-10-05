@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
-import {Physics} from '../src/physics.js';
-import {SCENES,PATTERNS} from '../src/reach-scenes.js';
-import {beatsFor} from '../src/cinematic.js';
+import {Physics} from '../src/physics/physics.js';
+import {SCENES,PATTERNS} from '../src/presentation/reach-scenes.js';
+import {beatsFor} from '../src/presentation/cinematic.js';
 const read=path=>readFileSync(new URL(path,import.meta.url));
 const glb=path=>{const b=read(path);assert.equal(b.readUInt32LE(0),0x46546c67);assert.equal(b.readUInt32LE(8),b.length);return JSON.parse(b.subarray(20,20+b.readUInt32LE(12)).toString());};
 test('all course models retain the live physical layout and required mechanism nodes',()=>{

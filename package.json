@@ -1,0 +1,12 @@
+{
+  "name": "silverball-chronicles",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix prototype run dev",
+    "build": "npm --prefix prototype run build",
+    "build:previews": "npm --prefix prototype run build:previews",
+    "test": "npm --prefix prototype test",
+    "test:browser": "npm --prefix prototype run test:browser",
+    "test:previews": "npm --prefix prototype run test:previews"
+  }
+}

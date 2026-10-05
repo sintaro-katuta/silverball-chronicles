@@ -6,13 +6,13 @@
 
 - [ゲーム仕様書](pachinko.md)：冒頭の優先関係と最新追記を確認してください。
 - [試作の起動方法と実装範囲](prototype/README.md)
+- [月影機関のアーキテクチャとディレクトリ構成](prototype/ARCHITECTURE.md)
 - [PixiJSの接続範囲と検証](prototype/PIXI_SESSION_INTEGRATION.md)
 - [採用済みのデザイン方針](prototype/DESIGN.md)
 - [PlayCanvas移行記録](prototype/PLAYCANVAS_MIGRATION.md)
 - [パチンコ初心者講座の概要と全体図](transcripts/パチンコ概要_IRvp0ammDbg.md)
 - [月影機関の改善点24項目と担当レビュー](prototype/improvement-review/2026-10-05/README.md)
 - [改善実装・動作確認動画・残る課題](prototype/improvement-review/2026-10-05/implementation.md)
-- [Unity版の説明](unity-yozora/README.md)
 
 ## 配置方針
 
@@ -24,8 +24,7 @@ docs/
 │   ├── reference-review/     レビュー文書と参考PDF
 │   ├── material-review/      素材レビュー文書
 │   └── migration-prep/       移行と素材一覧の文書
-├── transcripts/              文字起こし・概要・Mermaid
-└── unity-yozora/              Unity版の説明
+└── transcripts/              文字起こし・概要・Mermaid
 ```
 
 新しいプロジェクト資料は`docs/`配下へ追加します。Markdownのファイルリンクは、その文書の位置を基準にした相対パスにします。
@@ -40,6 +39,7 @@ docs/
 
 ### 試作の設計と開発資料
 
+- [prototype/ARCHITECTURE.md](prototype/ARCHITECTURE.md)
 - [prototype/ASSET_PROMPT.md](prototype/ASSET_PROMPT.md)
 - [prototype/COMPONENTS.md](prototype/COMPONENTS.md)
 - [prototype/DESIGN.md](prototype/DESIGN.md)
@@ -224,49 +224,7 @@ docs/
 - [prototype/reference-review/view-switch-2026-10-03/lead-verification.md](prototype/reference-review/view-switch-2026-10-03/lead-verification.md)
 - [prototype/reference-review/view-switch-2026-10-03/pm-review.md](prototype/reference-review/view-switch-2026-10-03/pm-review.md)
 - [prototype/reference-review/view-switch-2026-10-03/root-review.md](prototype/reference-review/view-switch-2026-10-03/root-review.md)
-- [prototype/reference-review/yozora/CABINET_SPECTACLE_DIRECTION.md](prototype/reference-review/yozora/CABINET_SPECTACLE_DIRECTION.md)
-- [prototype/reference-review/yozora/IMPLEMENTATION.md](prototype/reference-review/yozora/IMPLEMENTATION.md)
-- [prototype/reference-review/yozora/REFERENCE_ALIGNMENT.md](prototype/reference-review/yozora/REFERENCE_ALIGNMENT.md)
-- [prototype/reference-review/yozora/STRUCTURE_FIRST.md](prototype/reference-review/yozora/STRUCTURE_FIRST.md)
-- [prototype/reference-review/yozora/github-samples-2026-09-26/COMPARISON.md](prototype/reference-review/yozora/github-samples-2026-09-26/COMPARISON.md)
-- [prototype/reference-review/yozora/maximum-model-2026-09-26/README.md](prototype/reference-review/yozora/maximum-model-2026-09-26/README.md)
-- [prototype/reference-review/yozora/original-direction-2026-09-27/DIRECTION.md](prototype/reference-review/yozora/original-direction-2026-09-27/DIRECTION.md)
-- [prototype/reference-review/yozora/original-direction-2026-09-27/GENERATED_ART.md](prototype/reference-review/yozora/original-direction-2026-09-27/GENERATED_ART.md)
-- [prototype/reference-review/yozora/original-direction-2026-09-27/INDEPENDENT_REVIEW.md](prototype/reference-review/yozora/original-direction-2026-09-27/INDEPENDENT_REVIEW.md)
-- [prototype/reference-review/yozora/original-direction-2026-09-27/VERIFICATION.md](prototype/reference-review/yozora/original-direction-2026-09-27/VERIFICATION.md)
-- [prototype/reference-review/yozora/presentation-review-2026-09-27/BASELINE_REVIEW.md](prototype/reference-review/yozora/presentation-review-2026-09-27/BASELINE_REVIEW.md)
-- [prototype/reference-review/yozora/presentation-review-2026-09-27/BONUS_IMPLEMENTATION.md](prototype/reference-review/yozora/presentation-review-2026-09-27/BONUS_IMPLEMENTATION.md)
-- [prototype/reference-review/yozora/presentation-review-2026-09-27/GENERATED_ART.md](prototype/reference-review/yozora/presentation-review-2026-09-27/GENERATED_ART.md)
-- [prototype/reference-review/yozora/presentation-review-2026-09-27/REACH_DIRECTOR.md](prototype/reference-review/yozora/presentation-review-2026-09-27/REACH_DIRECTOR.md)
-- [prototype/reference-review/yozora/presentation-review-2026-09-27/VERIFICATION.md](prototype/reference-review/yozora/presentation-review-2026-09-27/VERIFICATION.md)
-- [prototype/reference-review/yozora/real-model-comparison-2026-09-26/INDEPENDENT_MECHANISM_REVIEW.md](prototype/reference-review/yozora/real-model-comparison-2026-09-26/INDEPENDENT_MECHANISM_REVIEW.md)
-- [prototype/reference-review/yozora/right-structure-2026-09-26/IMPLEMENTATION.md](prototype/reference-review/yozora/right-structure-2026-09-26/IMPLEMENTATION.md)
-- [prototype/reference-review/yozora/structure-pass-2026-09-26/LEFT_STRUCTURE.md](prototype/reference-review/yozora/structure-pass-2026-09-26/LEFT_STRUCTURE.md)
-- [prototype/reference-review/yozora/structure-review-2026-09-26/REVIEW_RESULT.md](prototype/reference-review/yozora/structure-review-2026-09-26/REVIEW_RESULT.md)
-- [prototype/reference-review/yozora/user-video-2026-09-26/ALIGNMENT.md](prototype/reference-review/yozora/user-video-2026-09-26/ALIGNMENT.md)
-- [prototype/reference-review/yozora/user-video-2026-09-26/CABINET_PASS.md](prototype/reference-review/yozora/user-video-2026-09-26/CABINET_PASS.md)
-- [prototype/reference-review/yozora/user-video-2026-09-26/FAIR_IMPLEMENTATION.md](prototype/reference-review/yozora/user-video-2026-09-26/FAIR_IMPLEMENTATION.md)
-- [prototype/reference-review/yozora/user-video-2026-09-26/NEXT_AUDIO_INPUT.md](prototype/reference-review/yozora/user-video-2026-09-26/NEXT_AUDIO_INPUT.md)
-- [prototype/reference-review/yozora/user-video-2026-09-26/NEXT_CABINET_PHYSICS.md](prototype/reference-review/yozora/user-video-2026-09-26/NEXT_CABINET_PHYSICS.md)
-- [prototype/reference-review/yozora/user-video-2026-09-26/NEXT_PRESENTATION.md](prototype/reference-review/yozora/user-video-2026-09-26/NEXT_PRESENTATION.md)
-- [prototype/reference-review/yozora/user-video-2026-09-26/NEXT_RULES.md](prototype/reference-review/yozora/user-video-2026-09-26/NEXT_RULES.md)
-- [prototype/reference-review/yozora/user-video-2026-09-26/NEXT_VERIFICATION.md](prototype/reference-review/yozora/user-video-2026-09-26/NEXT_VERIFICATION.md)
-- [prototype/reference-review/yozora/user-video-2026-09-26/SEQUENCE_IMPLEMENTATION.md](prototype/reference-review/yozora/user-video-2026-09-26/SEQUENCE_IMPLEMENTATION.md)
-- [prototype/reference-review/yozora/user-video-r2-2026-09-26/ANALYSIS.md](prototype/reference-review/yozora/user-video-r2-2026-09-26/ANALYSIS.md)
-- [prototype/reference-review/yozora/user-video-r2-2026-09-26/TASKS.md](prototype/reference-review/yozora/user-video-r2-2026-09-26/TASKS.md)
-- [prototype/reference-review/yozora/user-video-r2-2026-09-26/TASK_A_PROGRESS.md](prototype/reference-review/yozora/user-video-r2-2026-09-26/TASK_A_PROGRESS.md)
-- [prototype/reference-review/yozora/user-video-r2-2026-09-26/TASK_B_PROGRESS.md](prototype/reference-review/yozora/user-video-r2-2026-09-26/TASK_B_PROGRESS.md)
-- [prototype/reference-review/yozora/user-video-r2-2026-09-26/TASK_C_PROGRESS.md](prototype/reference-review/yozora/user-video-r2-2026-09-26/TASK_C_PROGRESS.md)
-- [prototype/reference-review/yozora/user-video-r3-2026-09-26/CABINET_BRIEF.md](prototype/reference-review/yozora/user-video-r3-2026-09-26/CABINET_BRIEF.md)
-- [prototype/reference-review/yozora/user-video-r3-2026-09-26/FAIR_PRODUCTION_SPEC.md](prototype/reference-review/yozora/user-video-r3-2026-09-26/FAIR_PRODUCTION_SPEC.md)
-- [prototype/reference-review/yozora/user-video-r3-2026-09-26/FAIR_PROGRESS.md](prototype/reference-review/yozora/user-video-r3-2026-09-26/FAIR_PROGRESS.md)
-- [prototype/reference-review/yozora/user-video-r3-2026-09-26/MAX_CABINET_PROGRESS.md](prototype/reference-review/yozora/user-video-r3-2026-09-26/MAX_CABINET_PROGRESS.md)
-- [prototype/reference-review/yozora/user-video-r3-2026-09-26/MAX_CONTROLS_PROGRESS.md](prototype/reference-review/yozora/user-video-r3-2026-09-26/MAX_CONTROLS_PROGRESS.md)
-- [prototype/reference-review/yozora/user-video-r3-2026-09-26/MAX_FAIR_PROGRESS.md](prototype/reference-review/yozora/user-video-r3-2026-09-26/MAX_FAIR_PROGRESS.md)
 
-### Unity版の資料
-
-- [unity-yozora/README.md](unity-yozora/README.md)
 
 ### 月影機関の改善レビュー 2026年10月5日
 

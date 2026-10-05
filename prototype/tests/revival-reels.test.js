@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Game,freshProfile} from '../src/game.js';
-import {reelState} from '../src/reels.js';
-import {REACH_DURATION} from '../src/cinematic.js';
+import {Game,freshProfile} from '../src/domain/game.js';
+import {reelState} from '../src/domain/reels.js';
+import {REACH_DURATION} from '../src/presentation/cinematic.js';
 
 test('revival silence stops a visible near miss without leaking or mutating the winning draw',()=>{
  for(const rate of [.5,1,2]){

@@ -1,6 +1,6 @@
 # 液晶と枠の仮配置
 
-確認ページ: `/lcd-pixi.html`。従来の `/board-pixi.html` は部品だけの比較用として維持。
+確認ページ: `/dev/lcd-pixi.html`。従来の `/dev/board-pixi.html` は部品だけの比較用として維持。
 
 - ユーザー提供素材表の13（銀髪の人物・月・城）を参照し、内蔵imagegenで新規ドット絵を制作。生成指示は `../../../../prototype/reference-review/pixi-lcd/prompt.txt`。素材は `public/assets/lcd/moon-castle-v1.png`。
 - 承認済み中央始動口v3を画風の参照に使用。実写調画像へのモザイク加工ではない。生成絵の全ピクセルが厳密な共通グリッドになっている保証はなく、最終的な粒度の採用は確認待ち。

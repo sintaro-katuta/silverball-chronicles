@@ -17,7 +17,7 @@ all.push({name:'normal-revival',mode:'normal',variant:'pressure',win:true,ending
 const fixtures=selected?all.filter(f=>selected.includes(f.name)):all;
 assert.ok(fixtures.length,'Unknown QUALITY_CASES');
 await mkdir(dir+'/raw',{recursive:true});
-const files=['src/pixi/board-runtime.js','src/pixi/normal-spin-view.js','src/pixi/normal-spin-flow.js','src/pixi/long-reach-view.js','src/pixi/long-reach-timeline.js','src/pixi/prediction-view.js','src/pixi/story-prediction-window.js','src/pixi/story-prediction-motion.js','src/pixi/story-prediction-view.js','src/pixi/session-game.js','src/tokyoghoul-w-machine.js'];
+const files=['src/pixi/board-runtime.js','src/pixi/normal-spin-view.js','src/pixi/normal-spin-flow.js','src/pixi/long-reach-view.js','src/pixi/long-reach-timeline.js','src/pixi/prediction-view.js','src/pixi/story-prediction-window.js','src/pixi/story-prediction-motion.js','src/pixi/story-prediction-view.js','src/domain/session-game.js','src/domain/tokyoghoul-w-machine.js'];
 async function sourceHashes(){const hashes={};for(const file of files)hashes[file]=createHash('sha256').update(await readFile(file)).digest('hex');return hashes;}
 const hashes=await sourceHashes();
 const browser=await chromium.launch({channel:'chrome',headless:true}),runs=[],errors=[];

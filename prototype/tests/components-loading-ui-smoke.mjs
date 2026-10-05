@@ -13,7 +13,7 @@ try{
  release();await expect(page.locator('#auto')).toBeVisible({timeout:60000});
  assert.ok((await page.evaluate(()=>window.__pachinko.snapshot())).time<3);
  await page.screenshot({path:'screenshots/components-game.png'});
- await page.goto('http://localhost:5173/parts.html');await page.waitForFunction(()=>window.__partsReady,{},{timeout:60000});
+ await page.goto('http://localhost:5173/dev/parts.html');await page.waitForFunction(()=>window.__partsReady,{},{timeout:60000});
  await page.screenshot({path:'screenshots/component-right-closed.png'});
  await page.locator('#state').selectOption('bonus');
  await page.screenshot({path:'screenshots/component-right-open.png'});

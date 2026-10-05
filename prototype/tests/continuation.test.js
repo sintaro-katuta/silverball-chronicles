@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Game,freshProfile} from '../src/game.js';
-import {durationFor} from '../src/cinematic.js';
+import {Game,freshProfile} from '../src/domain/game.js';
+import {durationFor} from '../src/presentation/cinematic.js';
 const ball=()=>({gold:false,large:false,hits:0});
 const setup=(roll=.99)=>{const g=new Game(freshProfile(),0,()=>roll);g.rules.targetBase=1e8;return g;};
 function finishBonus(g){for(let n=0;n<20&&g.jackpot;n++){const j=g.jackpot;j.gap=0;for(let i=j.count;i<10;i++)g.hit(ball(),'bonus',5);g.tick(.01);}assert.equal(g.jackpot,null);}

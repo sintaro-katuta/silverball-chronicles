@@ -1,6 +1,6 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-import {createPartFlow} from '../src/part-flow-fixture.js';
-import {LAUNCHER} from '../src/physics.js';
+import {createPartFlow} from '../src/physics/ball-flow.js';
+import {LAUNCHER} from '../src/physics/physics.js';
 test('part flow uses original launcher, fixed gates and actual physical crossing counts',()=>{
  for(const mode of ['normal','rush','bonus']){const f=createPartFlow(mode);f.single();f.step(1/120);assert.equal(f.physics.metrics.spawned,1);const b=f.physics.balls[0];assert.equal(b.power,1);assert.equal(b.x,LAUNCHER.origin.x);assert.ok(b.y<LAUNCHER.origin.y&&b.y>LAUNCHER.origin.y-12);
   f.start();for(let i=0;i<1200;i++)f.step(1/120);f.stop();for(let i=0;i<1200;i++)f.step(1/120);

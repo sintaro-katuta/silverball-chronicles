@@ -1,6 +1,6 @@
 import {mkdir,copyFile,writeFile,readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
-import {Physics} from '../src/physics.js';
+import {Physics} from '../src/physics/physics.js';
 const output=new URL('../builds/playcanvas-editor/',import.meta.url);
 await mkdir(output,{recursive:true});
 const states={};

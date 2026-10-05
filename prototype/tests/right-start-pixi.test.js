@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {createPartFlow} from '../src/part-flow-fixture.js';
+import {createPartFlow} from '../src/physics/ball-flow.js';
 import {attachRightStartMotion} from '../src/pixi/right-start-motion.js';
 test('right-start admits only when open and reverses continuously',()=>{
  const f=createPartFlow(),m=attachRightStartMotion(f);f.start();let atClose;

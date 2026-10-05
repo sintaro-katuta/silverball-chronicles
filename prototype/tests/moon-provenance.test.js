@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
-import {Game, freshProfile} from '../src/game.js';
-import {moonBuildStyle, moonOrigin} from '../src/moon-state.js';
+import {Game, freshProfile} from '../src/domain/game.js';
+import {moonBuildStyle, moonOrigin} from '../src/domain/moon-state.js';
 
 const ball = (x = 200) => ({x, y: 500, gold: false, large: false, hits: 0});
 test('FIFO keeps the entry and build snapshot after skills change, through the reach', () => {

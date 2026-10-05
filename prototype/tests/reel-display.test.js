@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Game,freshProfile} from '../src/game.js';
-import {mountReelDisplay,stripOffset,centeredDigit} from '../src/reel-display.js';
+import {Game,freshProfile} from '../src/domain/game.js';
+import {mountReelDisplay,stripOffset,centeredDigit} from '../src/legacy/reel-display.js';
 
 // Small DOM surface keeps the renderer test independent of an extra DOM package.
 class Element{

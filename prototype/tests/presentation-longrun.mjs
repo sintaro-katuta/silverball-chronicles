@@ -4,7 +4,7 @@
 import assert from 'node:assert/strict';
 import {mkdir,writeFile,readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
-import {SessionGame} from '../src/pixi/session-game.js';
+import {SessionGame} from '../src/domain/session-game.js';
 import {createBoardFlow} from '../src/pixi/board-flow.js';
 import {attachNormalSpin} from '../src/pixi/normal-spin-flow.js';
 import {queuedHoldPrediction} from '../src/pixi/hold-prediction.js';
@@ -12,11 +12,11 @@ import {predictionPose} from '../src/pixi/prediction-plan.js';
 import {createMoonCueController} from '../src/pixi/moon-cue.js';
 import {specialRoutePose} from '../src/pixi/special-route-motion.js';
 import {longReachPose} from '../src/pixi/long-reach-timeline.js';
-import {wPublishedNormalOutcome,TOKYOGHOUL_W} from '../src/tokyoghoul-w-spec.js';
+import {wPublishedNormalOutcome,TOKYOGHOUL_W} from '../src/domain/tokyoghoul-w-spec.js';
 
 const target=Number(process.env.LONGRUN_DRAWS??10000),dir=process.env.LONGRUN_DIR??'reference-review/parallel-distribution-2026-10-05/longrun';
 await mkdir(dir,{recursive:true});
-const sourceFiles=['tests/presentation-longrun.mjs','src/pixi/session-game.js','src/pixi/normal-spin-flow.js','src/pixi/presentation-distribution.js','src/pixi/prediction-plan.js','src/pixi/hold-prediction.js','src/pixi/prediction-view.js','src/pixi/normal-spin-view.js','src/pixi/moon-cue.js','src/tokyoghoul-w-machine.js'];
+const sourceFiles=['tests/presentation-longrun.mjs','src/domain/session-game.js','src/pixi/normal-spin-flow.js','src/pixi/presentation-distribution.js','src/pixi/prediction-plan.js','src/pixi/hold-prediction.js','src/pixi/prediction-view.js','src/pixi/normal-spin-view.js','src/pixi/moon-cue.js','src/domain/tokyoghoul-w-machine.js'];
 async function sourceHashes(){const hashes={};for(const file of sourceFiles)hashes[file]=createHash('sha256').update(await readFile(new URL('../'+file,import.meta.url))).digest('hex');return hashes;}
 const loadedSourceHashes=await sourceHashes();
 let seed=Number(process.env.LONGRUN_SEED??739391)>>>0,rngCalls=0;

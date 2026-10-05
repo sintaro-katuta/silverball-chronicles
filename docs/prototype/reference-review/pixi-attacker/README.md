@@ -4,7 +4,7 @@
 
 ## 開くもの
 
-- `/attacker-pixi.html`：実際に操作できる独立したPixiJS試作。
+- `/dev/attacker-pixi.html`：実際に操作できる独立したPixiJS試作。
 - `../../../../prototype/reference-review/pixi-attacker/index.html`：録画・画像・ソース素材の閲覧。
 - `../../../../prototype/reference-review/pixi-attacker/attacker-demo.mp4` / `../../../../prototype/reference-review/pixi-attacker/attacker-demo.webm`：ローカルChromeの実画面録画。アニメーションGIFや生成動画ではない。
 

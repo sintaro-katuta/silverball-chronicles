@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Physics} from '../src/physics.js';
+import {Physics} from '../src/physics/physics.js';
 import {rightGatePose} from '../src/playcanvas/right-mechanism-geometry.mjs';
 import {RIGHT_HOUSING,RightHousing} from '../src/playcanvas/right-housing.mjs';
 

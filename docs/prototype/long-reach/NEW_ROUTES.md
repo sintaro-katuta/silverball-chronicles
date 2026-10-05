@@ -61,7 +61,7 @@ premiumView.render({
 
 - `prototype/src/pixi/special-route-motion.js`：DOM/PixiJSなしの純粋な表示ポーズ計算。
 - `prototype/src/pixi/special-route-view.js`：210×140のPixiJS描画器。
-- `prototype/src/special-routes.js` と `prototype/special-routes.html`：開発用の独立確認画面。
+- `prototype/src/dev/special-routes.js` と `prototype/dev/special-routes.html`：開発用の独立確認画面。
 - `prototype/tests/special-route.test.js`：関連ユニットテスト。
 - `prototype/tests/special-routes.browser.mjs`：等速録画・スクリーンショット・表示終了・停止・低効果・破棄のブラウザ確認。
 

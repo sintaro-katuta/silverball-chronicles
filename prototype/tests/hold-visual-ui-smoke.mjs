@@ -7,7 +7,7 @@ try{
  await page.addInitScript(()=>Math.random=()=>.9);
  await page.clock.install({time:new Date('2026-09-24T00:00:00Z')});
  await page.clock.pauseAt(new Date('2026-09-24T00:00:01Z'));
- await page.route('**/src/main.js*',async route=>{
+ await page.route('**/src/legacy/main.js*',async route=>{
   const response=await route.fetch();
   await route.fulfill({response,body:await response.text()+`
    window.__holdTest={

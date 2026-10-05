@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Physics,BALL_RADIUS} from '../src/physics.js';
+import {Physics,BALL_RADIUS} from '../src/physics/physics.js';
 
 const dummy=()=>({phase:'playing',time:0,hit(){},lose(){},emit(){},rng:()=>1,value:()=>0});
 test('launcher holds new shots for an occupied muzzle or a returning ball',()=>{

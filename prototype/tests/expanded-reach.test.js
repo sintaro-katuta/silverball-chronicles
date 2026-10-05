@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Game,freshProfile} from '../src/game.js';
-import {SCENES,PATTERNS} from '../src/reach-scenes.js';
-import {durationFor,beatAt,REACH_DURATION} from '../src/cinematic.js';
-import {balanceChart} from '../src/balance-chart.js';
+import {Game,freshProfile} from '../src/domain/game.js';
+import {SCENES,PATTERNS} from '../src/presentation/reach-scenes.js';
+import {durationFor,beatAt,REACH_DURATION} from '../src/presentation/cinematic.js';
+import {balanceChart} from '../src/legacy/balance-chart.js';
 test('all 50 scene/pattern combinations resolve once to their chosen draw result',()=>{for(const scene of SCENES)for(const pattern of PATTERNS){const g=new Game(freshProfile(),0,()=>.5);g.practice=true;assert.ok(g.beginPresentation(pattern.win,true,{sceneId:scene.id,pattern:pattern.id}));assert.equal(g.presentation.sceneId,scene.id);assert.equal(g.presentation.pattern,pattern.id);g.tick(durationFor(pattern.id)-.1);assert.equal(g.jackpots,0);g.tick(.2);assert.equal(g.jackpots,pattern.win?1:0);assert.equal(g.misses,pattern.win?0:1);g.tick(.1);assert.equal(g.jackpots,pattern.win?1:0);}});
 test('revival visibly passes silence before a late comeback and pause freezes it',()=>{const g=new Game(freshProfile());g.practice=true;g.beginPresentation(true,true,{sceneId:'moon',pattern:'revival'});g.tick(16+REACH_DURATION);assert.equal(beatAt(g.presentation.time-REACH_DURATION,'revival').id,'silence');assert.equal(g.jackpot,null);g.pause();g.tick(60);assert.equal(g.presentation.time,16+REACH_DURATION);g.resume();g.tick(2);assert.equal(beatAt(g.presentation.time-REACH_DURATION,'revival').id,'revival');g.tick(8);assert.equal(g.jackpots,1);});
 test('balance graph tracks current stock minus initial stock and freezes on pause',()=>{const g=new Game(freshProfile(),0,()=>.5);g.fire();g.tick(1);assert.equal(g.balanceHistory.at(-1).value,-1);g.addStock(100);g.tick(1);assert.equal(g.balanceHistory.at(-1).value,99);g.pause();const before=structuredClone(g.balanceHistory);g.tick(50);assert.deepEqual(g.balanceHistory,before);assert.match(balanceChart(g),/\+99玉/);assert.match(balanceChart(g),/開始/);});

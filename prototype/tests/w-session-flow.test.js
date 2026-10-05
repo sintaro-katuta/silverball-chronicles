@@ -1,7 +1,7 @@
 import {LONG_REACH} from '../src/pixi/long-reach-timeline.js';
 import test from 'node:test';import assert from 'node:assert/strict';
 import {createBoardFlow} from '../src/pixi/board-flow.js';
-import {SessionGame} from '../src/pixi/session-game.js';
+import {SessionGame} from '../src/domain/session-game.js';
 import {attachNormalSpin} from '../src/pixi/normal-spin-flow.js';
 test('production W bridge accepts physical fuzu/electric/V/attacker crossings and counts 3000',()=>{
  const g=new SessionGame(()=>.9),m=createBoardFlow({lcd:true}),s=attachNormalSpin(m.flow,{sessionGame:g,roundModel:m,lifecycle:true});

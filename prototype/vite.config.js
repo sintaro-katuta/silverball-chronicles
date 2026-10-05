@@ -1,6 +1,18 @@
 import {defineConfig} from 'vite';
+import {readdirSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
-export default defineConfig({
- server:{watch:{usePolling:true,interval:300}},
- build:{rollupOptions:{input:{reachComparison:fileURLToPath(new URL('./reach-comparison.html',import.meta.url)),lcdRushWin:fileURLToPath(new URL('./lcd-rush-win.html',import.meta.url)),lcdRush:fileURLToPath(new URL('./lcd-rush.html',import.meta.url)),lcdBonus:fileURLToPath(new URL('./lcd-bonus.html',import.meta.url)),lcdWin:fileURLToPath(new URL('./lcd-win.html',import.meta.url)),lcdReach:fileURLToPath(new URL('./lcd-reach.html',import.meta.url)),lcdPlay:fileURLToPath(new URL('./lcd-play.html',import.meta.url)),lcdPixi:fileURLToPath(new URL('./lcd-pixi.html',import.meta.url)),boardPixi:fileURLToPath(new URL('./board-pixi.html',import.meta.url)),launcherPixi:fileURLToPath(new URL('./launcher-pixi.html',import.meta.url)),resinPixi:fileURLToPath(new URL('./resin-pixi.html',import.meta.url)),outletPixi:fileURLToPath(new URL('./outlet-pixi.html',import.meta.url)),pinsPixi:fileURLToPath(new URL('./pins-pixi.html',import.meta.url)),normalPocketPixi:fileURLToPath(new URL('./normal-pocket-pixi.html',import.meta.url)),windmillPixi:fileURLToPath(new URL('./windmill-pixi.html',import.meta.url)),centralStartPixi:fileURLToPath(new URL('./central-start-pixi.html',import.meta.url)),rightStartPixi:fileURLToPath(new URL('./right-start-pixi.html',import.meta.url)),attackerPixi:fileURLToPath(new URL('./attacker-pixi.html',import.meta.url)),saoUnity:fileURLToPath(new URL('./sao-unity.html',import.meta.url)),yozora:fileURLToPath(new URL('./yozora.html',import.meta.url)),game:fileURLToPath(new URL('./index.html',import.meta.url)),parts:fileURLToPath(new URL('./parts.html',import.meta.url))}}}
-});
+
+const entry = path => fileURLToPath(new URL(path, import.meta.url));
+
+export default defineConfig(({mode}) => ({
+ server: {watch: {usePolling: true, interval: 300}},
+ build: {
+  rollupOptions: {
+   input: mode === 'previews'
+    ? Object.fromEntries(readdirSync(entry('./dev/'))
+      .filter(name => name.endsWith('.html'))
+      .map(name => [name.slice(0, -5), entry(`./dev/${name}`)]))
+    : {game: entry('./index.html')}
+  }
+ }
+}));

@@ -4,18 +4,18 @@
 
 | ファイル | 担当 |
 | --- | --- |
-| `../../prototype/src/scene.js` | PlayCanvasの盤面、玉、風車、右ユニット、発光、部品プレビュー |
+| `../../prototype/src/legacy/scene.js` | PlayCanvasの盤面、玉、風車、右ユニット、発光、部品プレビュー |
 | `../../prototype/src/playcanvas/runtime.js` | Application、素材ロード、カメラ・照明、リサイズ・解放 |
-| `../../prototype/src/title-art.js` | PlayCanvasによる立体文字 |
+| `../../prototype/src/legacy/title-art.js` | PlayCanvasによる立体文字 |
 | `public/models/course-*.glb` | 各コースの筐体・入賞口・釘・部品階層・材質 |
 | `../../prototype/src/playcanvas/board-metadata.json` | GLBと物理配置の対応 |
 | `../../prototype/tools/legacy`、`tools/bake-models.*` | 旧造形から素材を生成する開発用ツール |
 
-`/parts.html` で右側ユニット／入賞口／全体、通常／RUSH／大当りを比較する。保存データは変更しない。材質はモデルのインスタンス用に複製し、他のコースや表示と共有しない。開閉は既存の物理状態へ同期する。
+`/dev/parts.html` で右側ユニット／入賞口／全体、通常／RUSH／大当りを比較する。保存データは変更しない。材質はモデルのインスタンス用に複製し、他のコースや表示と共有しない。開閉は既存の物理状態へ同期する。
 
 開始前に液晶画像52点と、選択コースのGLB・文字GLB・文字表示の初期化を準備する。進捗は55工程の完了数で、通信バイト数ではない。準備中にゲームは進行しない。失敗時の再試行とコース選択へ戻る操作に対応する。
 
-部品プレビューは製品ビルドにも `../../prototype/parts.html` として出力する開発確認用ページ。遊技画面からのリンクや報酬保存は持たない。クラウドのPlayCanvas Editorとは別のページ。
+部品プレビューは製品ビルドにも `../../prototype/dev/parts.html` として出力する開発確認用ページ。遊技画面からのリンクや報酬保存は持たない。クラウドのPlayCanvas Editorとは別のページ。
 
 次はEditorへの部品登録、右ユニットの造形改善、画像とGLBの容量削減、モバイル実機の負荷確認を行う。
 

@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createBoardFlow} from '../src/pixi/board-flow.js';
-import {SessionGame} from '../src/pixi/session-game.js';
+import {SessionGame} from '../src/domain/session-game.js';
 import {attachNormalSpin} from '../src/pixi/normal-spin-flow.js';
 
 const advance=(flow,seconds)=>{for(let i=0;i<seconds*120;i++)flow.step(1/120);};

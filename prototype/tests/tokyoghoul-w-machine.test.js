@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {WMachine} from '../src/tokyoghoul-w-machine.js';
+import {WMachine} from '../src/domain/tokyoghoul-w-machine.js';
 const finishBonus=(m,prefix)=>{while(m.bonus){m.openRound();for(let n=0;n<10;n++)m.admit('attacker',`${prefix}-${m.bonus?.round}-${n}`);}};
 
 test('normal symbol and charge are separate outcomes; entry waits for explicit policy',()=>{

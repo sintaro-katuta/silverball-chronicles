@@ -1,4 +1,4 @@
-import test from 'node:test';import assert from 'node:assert/strict';import {Game,freshProfile} from '../src/game.js';
+import test from 'node:test';import assert from 'node:assert/strict';import {Game,freshProfile} from '../src/domain/game.js';
 const ball={gold:false,large:false,hits:0};
 test('100 independent spins give 66% aggregate; normal odds and payouts are unchanged',()=>{
  const g=new Game(freshProfile(),0,()=>.5),p=1/g.machine.rightDraw.odds;

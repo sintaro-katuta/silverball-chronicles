@@ -8,7 +8,7 @@ const context=await browser.newContext({viewport:{width:390,height:740},recordVi
 const page=await context.newPage(),errors=[],runs=[];page.on('pageerror',e=>errors.push(e.message));
 const fixtures=[{route:'basic',mode:'normal',win:false},{route:'basic',mode:'normal',win:true},{route:'basic',mode:'rush',win:false},{route:'basic',mode:'rush',win:true},{route:'direct',mode:'normal',win:true},{route:'direct',mode:'rush',win:true},{route:'moon',mode:'normal',win:true},{route:'sword',mode:'normal',win:true}];
 try{
- await page.goto(process.env.SPECIAL_ROUTES_URL??'http://localhost:5183/special-routes.html');await page.waitForFunction(()=>!!window.__specialRoutes);
+ await page.goto(process.env.SPECIAL_ROUTES_URL??'http://localhost:5183/dev/special-routes.html');await page.waitForFunction(()=>!!window.__specialRoutes);
  const glyphComparison=await page.evaluate(()=>__specialRoutes.compareWithProduction());assert.ok(glyphComparison.every(c=>c.differentChannels===0));
  const directionSamples=[];
  for(const mode of ['normal','rush'])for(const route of ['basic','direct'])for(const column of route==='basic'?[1]:[0,1,2]){

@@ -10,7 +10,7 @@ try{
  for(const [width,height,name] of [[390,844,'mobile'],[320,740,'small'],[1440,1000,'desktop']]){
   await page.setViewportSize({width,height});await page.clock.runFor(100);
   const data=await page.evaluate(async()=>{
-   const {MACHINE_VIEW}=await import('/src/scene.js');
+   const {MACHINE_VIEW}=await import('/src/legacy/scene.js');
    const r=sel=>{const b=document.querySelector(sel).getBoundingClientRect();return {x:b.x,y:b.y,width:b.width,height:b.height,right:b.right,bottom:b.bottom};};
    return {board:r('.board-wrap'),lcd:r('#lcd'),panel:r('.machine-dashboard'),controls:r('.control-panel'),view:MACHINE_VIEW,labels:document.querySelectorAll('.pocket-label,#lcdCaption').length,overflow:document.documentElement.scrollWidth>innerWidth};
   });

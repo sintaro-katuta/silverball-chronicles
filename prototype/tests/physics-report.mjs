@@ -2,8 +2,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-import {Physics} from '../src/physics.js';
-import {Game,freshProfile} from '../src/game.js';
+import {Physics} from '../src/physics/physics.js';
+import {Game,freshProfile} from '../src/domain/game.js';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const destination=path.join(root,'reference-review','physics-audit');fs.mkdirSync(destination,{recursive:true});
 const dummy=()=>({phase:'playing',time:0,hit(){},lose(){},emit(){},rng:()=>1,value:()=>0});

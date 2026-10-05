@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {SessionGame} from '../src/pixi/session-game.js';
+import {SessionGame} from '../src/domain/session-game.js';
 import {createBoardFlow} from '../src/pixi/board-flow.js';
 import {attachNormalSpin} from '../src/pixi/normal-spin-flow.js';
 import {holdPredictionCue,predictionPose} from '../src/pixi/prediction-plan.js';

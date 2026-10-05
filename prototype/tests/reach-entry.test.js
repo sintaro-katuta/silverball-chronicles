@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Game,freshProfile,COURSES} from '../src/game.js';
-import {timeline,reachBeat,reachColor,RED_RATE,REACH_DURATION,durationFor} from '../src/cinematic.js';
-import {reelState} from '../src/reels.js';
+import {Game,freshProfile,COURSES} from '../src/domain/game.js';
+import {timeline,reachBeat,reachColor,RED_RATE,REACH_DURATION,durationFor} from '../src/presentation/cinematic.js';
+import {reelState} from '../src/domain/reels.js';
 test('reach announces before battle, holding matching left and middle digits through the battle',()=>{
  const g=new Game(freshProfile(),0,()=>.5);g.beginPresentation(false);
  assert.equal(reachBeat(timeline(g)).title,'リーチ');

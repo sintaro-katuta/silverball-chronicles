@@ -1,6 +1,6 @@
 import {holdPredictionCue} from './prediction-plan.js';
-import {wPublishedNormalOutcome} from './w-runtime-policy.js';
-import {TOKYOGHOUL_W} from '../tokyoghoul-w-spec.js';
+import {wPublishedNormalOutcome} from '../domain/w-runtime-policy.js';
+import {TOKYOGHOUL_W} from '../domain/tokyoghoul-w-spec.js';
 
 // Pure adapter for an already admitted record. No peek at future RNG calls;
 // a charge is excluded from symbol predictions, and guaranteed followups stay

@@ -34,7 +34,7 @@ test('cue is retained through reach, strike retains its color without pre-result
  const idle=moon.render({time:5},{phase:'rest'});assert.equal(idle.color,'none');assert.equal(idle.cueActive,false);assert.equal(idle.expectation,null);
 });
 
-import {SessionGame} from '../src/pixi/session-game.js';
+import {SessionGame} from '../src/domain/session-game.js';
 import {createBoardFlow} from '../src/pixi/board-flow.js';
 import {attachNormalSpin} from '../src/pixi/normal-spin-flow.js';
 test('W draw result and lottery RNG call count are identical with moon presentation attached',()=>{

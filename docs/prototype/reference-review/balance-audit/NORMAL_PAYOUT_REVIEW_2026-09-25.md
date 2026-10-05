@@ -76,6 +76,6 @@
 
 - 実行：`node prototype/tests/normal-payout-report.mjs`
 - 生データ：`../../../../prototype/reference-review/balance-audit/normal-payout-2026-09-25.json`
-- 計算：`prototype/src/game.js` の `hit`、`payoutMultiplier`、`fire`。
-- 基礎賞球・コース倍率：`prototype/src/machine-spec.js`。
+- 計算：`prototype/src/domain/game.js` の `hit`、`payoutMultiplier`、`fire`。
+- 基礎賞球・コース倍率：`prototype/src/domain/machine-spec.js`。
 - 今回は計測スクリプトとレポートのみ追加。ゲームバランスは変更していない。

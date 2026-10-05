@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {DenchuControl} from '../src/denchu-control.js';
-import {createDenchuFlow} from '../src/denchu-flow-fixture.js';
+import {DenchuControl} from '../src/legacy/denchu-control.js';
+import {createDenchuFlow} from '../src/legacy/denchu-flow-fixture.js';
 test('through passage opens only after a separate winning draw and opening expires',()=>{
  const c=new DenchuControl(()=>0);c.tick(0,true);assert.equal(c.tick(.3,true),false);c.pass();assert.equal(c.tick(.1,true),false);assert.equal(c.tick(.11,true),true);assert.equal(c.openings,1);assert.equal(c.tick(1.81,true),false);c.pass();c.tick(.1,false);assert.equal(c.queue.length,0);assert.equal(c.phase,'idle');
  const lose=new DenchuControl(()=>.99);lose.tick(0,true);lose.pass();assert.equal(lose.tick(.21,true),false);assert.equal(lose.wins,0);

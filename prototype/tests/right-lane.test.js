@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Game,freshProfile} from '../src/game.js';
-import {Physics,GRAVITY,attackerOpen} from '../src/physics.js';
+import {Game,freshProfile} from '../src/domain/game.js';
+import {Physics,GRAVITY,attackerOpen} from '../src/physics/physics.js';
 const dummy=()=>({phase:'playing',time:0,hit(){},lose(){},emit(){},rng:()=>1,value:()=>0});
 const run=(p,g,seconds=8)=>{for(let n=0;n<seconds*120&&p.balls.length;n++){p.step(1/120,g);g.time+=1/120;}};
 

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {pocketCrossing} from '../src/pocket-sensor.js';
+import {pocketCrossing} from '../src/physics/pocket-sensor.js';
 const mouth={x:100,y:100,w:20};
 const ball=(x,y,vy=10)=>({x,y,vy,r:4});
 test('entrance uses crossing position, rejecting a ball that enters sideways below the mouth',()=>{

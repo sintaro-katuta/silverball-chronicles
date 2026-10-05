@@ -12,7 +12,7 @@ import {createHoldView} from './hold-view.js';
 import {LCD_REEL_LAYOUT} from './lcd-safe-layout.js';
 import {createBackgroundTransition} from './background-transition.js';
 import {createDevelopmentView} from './development-view.js';
-import {wAcquisitionLabel} from '../session-status.js';
+import {wAcquisitionLabel} from '../ui/session-status.js';
 import {createPredictionView} from './prediction-view.js';
 const GLYPHS=['00100/01100/00100/00100/00100/00100/01110','11110/00001/00001/01110/10000/10000/11111','11110/00001/00001/01110/00001/00001/11110','10010/10010/10010/11111/00010/00010/00010','11111/10000/10000/11110/00001/00001/11110','01110/10000/10000/11110/10001/10001/01110','11111/00001/00010/00100/01000/01000/01000','01110/10001/10001/01110/10001/10001/01110','01110/10001/10001/01111/00001/00001/01110'];
 const mod=n=>((n%9)+9)%9;

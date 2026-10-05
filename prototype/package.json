@@ -9,8 +9,10 @@
     "preview": "vite preview --host 0.0.0.0",
     "test": "node --test tests/*.test.js",
     "sync": "npm run build && cap sync",
-    "test:browser": "node tests/browser-smoke.mjs",
-    "export:editor": "node tools/export-editor.mjs"
+    "test:browser": "node tests/session-controls.browser.mjs",
+    "export:editor": "node tools/export-editor.mjs",
+    "build:previews": "vite build --mode previews --outDir dist-previews",
+    "test:previews": "node tests/preview-navigation.browser.mjs"
   },
   "dependencies": {
     "@capacitor/android": "8.5.2",

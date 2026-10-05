@@ -141,7 +141,7 @@ selector.reset(); // または reset('normal') / reset('rush')
 
 ## SessionGame.startSpinから読んだ接続条件
 
-対象ソース：`prototype/src/pixi/session-game.js`、`tokyoghoul-w-machine.js`、`tokyoghoul-w-spec.js`。共有ファイルを今回編集していない。
+対象ソース：`prototype/src/domain/session-game.js`、`tokyoghoul-w-machine.js`、`tokyoghoul-w-spec.js`。共有ファイルを今回編集していない。
 
 1. **通常は record.kind==='tokuzu1' のみ。** `wPublishedNormalOutcome(record.roll)` を既存の保存rollから読み、symbol/missの場合だけselectorへ渡す。chargeはN06の既存専用処理へ流し、このselectorへwin=falseとして入れない。`record.roll`を引き直さず、`record.entry`や払出条件を変えない。
 2. **チャージを除外したpriorが必要。** 図柄質量S、チャージ質量Cを現行仕様から得て、`baseWinProbability = S/(1-C)` とする。現行S=C=1/399.9なら `1/398.9`。実機の図柄確率を1/398.9へ変更する意味ではなく、「selectorへ入る非チャージ集団」での条件付き比率。この条件下で `S*w_i / (S*w_i+(1-S-C)*l_i)` が各信頼度と一致する。上の第一成果表の1/399.9は全記録を対象とした数学的基準値であり、チャージを除いて接続する場合はこの補正を優先する。

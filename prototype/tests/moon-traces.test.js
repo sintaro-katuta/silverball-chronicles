@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {mountMoonTraces} from '../src/moon-traces.js';
+import {mountMoonTraces} from '../src/legacy/moon-traces.js';
 
 function fixture() {
  const context = new Proxy({}, {get: () => () => {}});

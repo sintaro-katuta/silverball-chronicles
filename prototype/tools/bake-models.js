@@ -3,8 +3,8 @@ import * as T from 'three';
 import {GLTFExporter} from 'three/addons/exporters/GLTFExporter.js';
 import {Machine} from './legacy/scene.js';
 import {TitleSculpture} from './legacy/title-art.js';
-import {Physics} from '../src/physics.js';
-import font from '../src/title-glyphs.json';
+import {Physics} from '../src/physics/physics.js';
+import font from '../src/legacy/title-glyphs.json';
 const host=document.querySelector('#host');
 const exportModel=async root=>{
  root.updateMatrixWorld(true);

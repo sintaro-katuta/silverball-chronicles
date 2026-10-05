@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {BUILD_STYLES,directionFrame,directionLine} from '../src/battle-direction.js';
-import {beatsFor,reachBeat,timeline,durationFor} from '../src/cinematic.js';
-import {SCENES} from '../src/reach-scenes.js';
+import {BUILD_STYLES,directionFrame,directionLine} from '../src/presentation/battle-direction.js';
+import {beatsFor,reachBeat,timeline,durationFor} from '../src/presentation/cinematic.js';
+import {SCENES} from '../src/presentation/reach-scenes.js';
 
 test('build branches retain their cause across contact, opening and final attack',()=>{
  const expected={assault:['援護','防壁','援護','核心'],fortify:['防壁','受け止め','守り','突き'],counter:['受け流','隙','残した','返す'],balanced:['刃','亀裂','同じ','亀裂']};

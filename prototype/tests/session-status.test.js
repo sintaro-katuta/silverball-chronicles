@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {sessionStatus,wAcquisitionLabel} from '../src/session-status.js';
+import {sessionStatus,wAcquisitionLabel} from '../src/ui/session-status.js';
 test('status follows announced mechanics through RUSH without leaking a pending win',()=>{
  const game={phase:'playing',rush:{remaining:0},w:{},spinActive:true,spinResult:{win:true}};
  assert.deepEqual(sessionStatus(game),{label:'RUSH・チャンス演出中',remaining:0});

@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Game,freshProfile} from '../src/game.js';
+import {Game,freshProfile} from '../src/domain/game.js';
 
 const ball=()=>({gold:false,large:false,extra:false,hits:0,after:false});
 function choose(g){

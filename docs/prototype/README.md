@@ -1,5 +1,11 @@
 # 月影機関 — 縦持ちパチンコ・ローグライト試作
 
+> **2026-10-06 構成整理後の入口**：開発対象は月影機関のみ。SAO夜空・Unity版は削除しました。本編は `/`、確認ページは `/dev/board-pixi.html`・`/dev/parts.html` などです。[アーキテクチャとディレクトリ構成](ARCHITECTURE.md)を参照してください。
+>
+> ルートから `npm run dev`・`npm test`・`npm run build` を実行できます。依存導入は `npm --prefix prototype ci`。本番ビルドは本編だけ、確認ページのビルドは `npm run build:previews` です。開発サーバーを起動して `npm run test:browser` で現行本編の操作を確認できます（Chromeが必要）。
+>
+> 以下のPlayCanvas版や報酬・保存の説明は制作履歴です。現行本編の接続範囲は [PIXI_SESSION_INTEGRATION.md](PIXI_SESSION_INTEGRATION.md) と仕様書の最新追記を優先してください。
+
 > **2026-10-01 現在の入口**：`/` はPixiJSの台選択・盤面・演出を接続した版です。SEは未搭載。旧ステージ報酬・強化・保存の接続は次の単位です。[接続範囲と検証](PIXI_SESSION_INTEGRATION.md)を優先してください。以下のPlayCanvas・旧操作説明は移行前の記録です。
 
 iOS / Android 向けオフラインアプリのプロトタイプです。PlayCanvasで筐体・釘・玉・立体文字を3D表示し、Engineの更新イベントから120Hzのゲーム更新と、速度に応じて細分化する盤面物理を実装しています。Capacitorで同じゲームを両OSのアプリに組み込みます。
@@ -16,7 +22,7 @@ npm run dev
 
 PCの確認用プレビュー: http://localhost:5173
 
-部品プレビュー: http://localhost:5173/parts.html 。移行範囲・素材再生成・Editorの残作業は [PlayCanvas移行記録](PLAYCANVAS_MIGRATION.md) を参照。
+部品プレビュー: http://localhost:5173/dev/parts.html 。移行範囲・素材再生成・Editorの残作業は [PlayCanvas移行記録](PLAYCANVAS_MIGRATION.md) を参照。
 
 「遊技をはじめる」で自動発射が始まります。AUTOをOFFにするとホールド発射。「発射調整」を手動にすると強さ・方向を変えられます。音は初期ONで、上部の音ボタンから切り替えられます。赤リーチ、好機、月光収束、ラウンド昇格、RUSH挑戦・突入でも効果音が鳴ります。
 
@@ -97,11 +103,11 @@ npx cap open android
 npm test
 npm run build
 # ローカル開発サーバーを起動した状態で
-node tests/browser-smoke.mjs
+npm run test:browser
 node tests/cinematic-smoke.mjs
 ```
 
-`../../prototype/src/machine-spec.js` が機種の基礎スペック、`../../prototype/src/game.js` がゲームルールと収支内訳、`../../prototype/src/physics.js` が盤面物理、`../../prototype/src/scene.js` が3D表示、`../../prototype/src/main.js` が画面・操作・保存、`../../prototype/src/battle.js` と `../../prototype/src/cinematic.js` が戦闘描画と演出の時間管理です。
+`../../prototype/src/domain/machine-spec.js` が機種の基礎スペック、`../../prototype/src/domain/game.js` がゲームルールと収支内訳、`../../prototype/src/physics/physics.js` が盤面物理、`../../prototype/src/legacy/scene.js` が3D表示、`../../prototype/src/legacy/main.js` が画面・操作・保存、`../../prototype/src/legacy/battle.js` と `../../prototype/src/presentation/cinematic.js` が戦闘描画と演出の時間管理です。
 
 検証結果の詳細は [VERIFICATION.md](VERIFICATION.md) に記載しています。過去版にはiOS Simulatorでの起動記録がありますが、今回の物理改修版のネイティブ動作確認とは区別します。最新のビルド・同期・確認範囲は検証記録を参照してください。
 
@@ -124,7 +130,7 @@ node tests/cinematic-smoke.mjs
 - 試遊サポートの「交戦シーン」「展開」から10×5を指定再生できます。試遊内で演出を切り替えると、進行中の演出・大当りは置き換わります。
 - 大きなハズレ表示を撤去。通常勝利／敗北／好機からの敗北／覚醒／復活で映像の順序を変えます。復活は26秒、他は18.5秒が第一コースの基準です。
 - [画像一覧](http://localhost:5173/battles/)で50枚を確認できます。画像は端末に同梱し、場面ごとに5枚を読み込みます。
-- 文字は `../../prototype/src/title-art.js` で実際に厚みと面取りを持つ3Dメッシュとして描画します。キャラクターはイラスト方式です。
+- 文字は `../../prototype/src/legacy/title-art.js` で実際に厚みと面取りを持つ3Dメッシュとして描画します。キャラクターはイラスト方式です。
 
 ## 保留・図柄停止の更新
 
@@ -174,11 +180,3 @@ node tests/cinematic-smoke.mjs
 ヘソと一般入賞口は上が開いたU字を維持し、縁・奥行きとヘソの発光を強めています。釘の金属頭部と座金は全て揃え、風車の軸と羽根を目立たせています。右打ちアタッカーは受け口を44から60盤面ピクセルへ広げ、閉時には前面扉が開口を覆い、開放時には口と扉が見えます。見える受け口幅と物理入賞幅は同じ値です。
 
 保留が増えた時に点灯し、消化で繰り上がり、受付から少し後に青・白・金へ変化することがあります。色は抽選済みの結果と対応する期待度演出で、金色でも当り確定ではありません。演出にゲームの抽選用乱数は使わず、当選確率・保留上限・通常とRUSHの保留分離は変更しません。動きを減らす端末設定ではランプのアニメーションを停止します。
-
-### 新規台：SAO アリシゼーション 夜空（制作途中）
-
-`npm run dev` 後、`http://localhost:5173/yozora.html` またはホームの新規台リンクで開く。通常／ST53／上位ST70／SWORD DRIVEの公開スペックモデル。完全再現には未到達で、映像・筐体・音・玉経路は仮実装。[再現範囲と残作業](reference-review/yozora/IMPLEMENTATION.md)を参照。`node --test tests/yozora.test.js` と `node tests/yozora-browser.mjs` で検証。
-
-## SAO Unity版（2026-09-25）
-
-`npm run dev` → [Unity版](http://localhost:5173/sao-unity.html)。Unityプロジェクトは `../../unity-yozora`。実際のUnity Webビルドを埋め込む独立した試作。編集・再ビルド・未再現範囲は [Unity README](../unity-yozora/README.md)。ローカルのみ。

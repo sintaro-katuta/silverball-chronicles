@@ -8,7 +8,7 @@ try {
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto('http://localhost:5173/');
  const captures=await page.evaluate(async()=>{
-  const [{Machine},{Physics},{Game,freshProfile}]=await Promise.all([import('/src/scene.js'),import('/src/physics.js'),import('/src/game.js')]);
+  const [{Machine},{Physics},{Game,freshProfile}]=await Promise.all([import('/src/legacy/scene.js'),import('/src/physics/physics.js'),import('/src/domain/game.js')]);
   const host=document.createElement('div');host.style.cssText='position:fixed;inset:0;width:600px;height:800px';document.body.append(host);
   const physics=new Physics(),machine=await Machine.create(host,physics),results={};machine.app.timeScale=0;machine.app.autoRender=false;
   try {

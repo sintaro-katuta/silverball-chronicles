@@ -1,7 +1,7 @@
 // Fixed terminal-state fixture. Excluded from reliability statistics.
 import assert from 'node:assert/strict';
 import {writeFile} from 'node:fs/promises';
-import {SessionGame} from '../src/pixi/session-game.js';
+import {SessionGame} from '../src/domain/session-game.js';
 import {createBoardFlow} from '../src/pixi/board-flow.js';
 import {attachNormalSpin} from '../src/pixi/normal-spin-flow.js';
 const g=new SessionGame(()=>.9),m=createBoardFlow({lcd:true,fire:()=>null});attachNormalSpin(m.flow,{sessionGame:g,roundModel:m,lifecycle:true,presentationPatterns:true});

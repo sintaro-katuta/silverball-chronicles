@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {TOKYOGHOUL_W as W,wRushHitProbability,wBonusSequence} from '../src/tokyoghoul-w-spec.js';
+import {TOKYOGHOUL_W as W,wRushHitProbability,wBonusSequence} from '../src/domain/tokyoghoul-w-spec.js';
 
 test('W continuation uses independent fuzu draws, not a separate termination lottery',()=>{
   assert.equal(wRushHitProbability(0),0);

@@ -7,7 +7,7 @@ try{
  await page.clock.install({time:new Date('2026-09-23T00:00:00Z')});
  await page.clock.pauseAt(new Date('2026-09-23T00:00:01Z'));
  await page.goto('http://localhost:5173');await page.locator('#start').click();await page.clock.runFor(2500);
- await page.evaluate(async()=>{const {mountRushScreen}=await import('/src/rush-screen.js');window.previewRush=mountRushScreen(document.querySelector('#lcd'));window.previewState={machine:{rightDraw:{spins:100}},time:10,phase:'playing',rush:{remaining:100,chain:3,total:2100,startedAt:0,consumed:0},jackpot:null,presentation:null,lastBonus:null,lastRush:null};window.previewRush.update(window.previewState);});
+ await page.evaluate(async()=>{const {mountRushScreen}=await import('/src/legacy/rush-screen.js');window.previewRush=mountRushScreen(document.querySelector('#lcd'));window.previewState={machine:{rightDraw:{spins:100}},time:10,phase:'playing',rush:{remaining:100,chain:3,total:2100,startedAt:0,consumed:0},jackpot:null,presentation:null,lastBonus:null,lastRush:null};window.previewRush.update(window.previewState);});
  const panel=page.locator('.rush-screen:not([hidden])');
  await page.evaluate(()=>Promise.all(['/battles/moon-awakening.png','/battles/eclipse-victory.png'].map(src=>new Promise(resolve=>{const image=new Image();image.onload=resolve;image.src=src;}))));
  assert.equal(await panel.locator('.rush-screen-focus-value').textContent(),'100');

@@ -1,7 +1,7 @@
 // Diagnostic only: isolate ordinary physical prizes with no jackpots or upgrades.
 import fs from 'node:fs';
-import {Game,freshProfile} from '../src/game.js';
-import {Physics} from '../src/physics.js';
+import {Game,freshProfile} from '../src/domain/game.js';
+import {Physics} from '../src/physics/physics.js';
 const rows=[];
 for(const course of [0,1,2])for(const stage of (process.argv.includes('--stage6')?[6]:course===0?[1,2,3,4,5,6,7,8,9,10]:[1,6])){
  const g=new Game(freshProfile(),course,()=>.9),p=new Physics(course);

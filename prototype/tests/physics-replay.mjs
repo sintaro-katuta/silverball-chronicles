@@ -1,6 +1,6 @@
 // Export sampled solver states for visual slow-motion verification, not a second simulation.
 import fs from 'node:fs';
-import {Physics} from '../src/physics.js';
+import {Physics} from '../src/physics/physics.js';
 const tracks=[];
 for(const power of [.57,1]){
  const p=new Physics(),g={phase:'playing',time:0,hit(){},lose(){},emit(){},rng:()=>1,value:()=>0};

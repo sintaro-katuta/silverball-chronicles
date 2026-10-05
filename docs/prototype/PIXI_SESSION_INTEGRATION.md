@@ -1,6 +1,6 @@
 # PixiJS本編接続（2026-10-01）
 
-入口 `/` は `../../prototype/src/pixi-main.js`。台選択→機種詳細→PixiJS盤面→遊技結果→台選択を接続した。旧 `../../prototype/src/main.js` とPlayCanvas実装は履歴・後続移行の参照用に保持しているが、現在の入口からは起動しない。
+入口 `/` は `../../prototype/src/app/main.js`。台選択→機種詳細→PixiJS盤面→遊技結果→台選択を接続した。旧 `../../prototype/src/legacy/main.js` とPlayCanvas実装は履歴・後続移行の参照用に保持しているが、現在の入口からは起動しない。
 
 ## この単位で接続したもの
 

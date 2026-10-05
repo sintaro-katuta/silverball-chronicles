@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {startFrameLoop} from '../src/runtime/frame-loop.js';
-import {MACHINE_VIEW,boardToMachine,machineToBoard} from '../src/machine-layout.js';
-import {Physics,LAUNCHER} from '../src/physics.js';
-import {FLOOR_ONE} from '../src/floor-catalog.js';
+import {MACHINE_VIEW,boardToMachine,machineToBoard} from '../src/legacy/machine-layout.js';
+import {Physics,LAUNCHER} from '../src/physics/physics.js';
+import {FLOOR_ONE} from '../src/ui/floor-catalog.js';
 function driver(){let id=0,time=0;const queue=new Map();return {queue,request:f=>{queue.set(++id,f);return id;},cancel:id=>queue.delete(id),now:()=>time,step(t){time=t;const callbacks=[...queue.values()];queue.clear();callbacks.forEach(f=>f());}};}
 test('game clock runs once per browser frame, cancels pending/stale callbacks and can restart',()=>{
  const d=driver(),times=[];const stop=startFrameLoop(t=>times.push(t),d);

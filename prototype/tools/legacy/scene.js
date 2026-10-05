@@ -2,8 +2,8 @@ import {MeshBuilder} from './machine/mesh-builder.js';
 import {ReceivingPorts} from './machine/receiving-ports.js';
 import {RightUnit} from './machine/right-unit.js';
 import * as THREE from 'three';
-import {BALL_RADIUS} from '../../src/physics.js';
-import {timeline,beatAt} from '../../src/cinematic.js';
+import {BALL_RADIUS} from '../../src/physics/physics.js';
+import {timeline,beatAt} from '../../src/presentation/cinematic.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 export const MACHINE_VIEW=Object.freeze({width:460,height:740,boardOffset:{x:20,y:30},lcd:{x:72,y:102,width:317,height:408,radius:14}});
 export class Machine extends MeshBuilder {

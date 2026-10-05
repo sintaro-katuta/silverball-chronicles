@@ -5,12 +5,12 @@ const dir='reference-review/reel-direction-2026-10-05';await mkdir(dir,{recursiv
 const browser=await chromium.launch({channel:'chrome',headless:true}),errors=[];
 try{
  const page=await browser.newPage({viewport:{width:440,height:500}});page.on('pageerror',e=>errors.push(e.message));
- await page.goto('http://127.0.0.1:5186/special-routes.html');await page.waitForFunction(()=>!!window.__specialRoutes);
+ await page.goto('http://127.0.0.1:5186/dev/special-routes.html');await page.waitForFunction(()=>!!window.__specialRoutes);
  const results=await page.evaluate(async()=>{
   const pixiUrl=performance.getEntriesByType('resource').find(r=>/\/pixi__js\.js\?/.test(r.name))?.name;
   if(!pixiUrl)throw Error('Loaded Pixi module not found');
   const {Application}=await import(pixiUrl);
-  const {SessionGame}=await import('/src/pixi/session-game.js');
+  const {SessionGame}=await import('/src/domain/session-game.js');
   const {createNormalSpinView}=await import('/src/pixi/normal-spin-view.js');
   const app=new Application();await app.init({width:420,height:280,autoStart:false,antialias:false,preference:'webgl'});
   window.__specialRoutes.destroy();document.body.replaceChildren(app.canvas);app.canvas.style.width='420px';

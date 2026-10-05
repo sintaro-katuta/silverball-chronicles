@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Game,freshProfile,ticketReward,candidates} from '../src/game.js';
-import {Physics} from '../src/physics.js';
+import {Game,freshProfile,ticketReward,candidates} from '../src/domain/game.js';
+import {Physics} from '../src/physics/physics.js';
 const normal=()=>({gold:false,large:false,extra:false,hits:0,after:false});
 test('overshoot remains in stock and next stage measures a new net increase',()=>{const g=new Game(freshProfile());g.award(210);g.checkStage();assert.equal(g.phase,'skill');assert.equal(g.stock,610);assert.equal(g.total,210);g.selectSkill(g.choices[0].id);assert.equal(g.stage,2);assert.equal(g.stageStartStock,610);assert.equal(g.progress,0);assert.equal(g.target,1010);assert.equal(g.phase,'playing');});
 test('3 second failure timer pauses and resets when stock recovers',()=>{const g=new Game(freshProfile());g.stock=0;g.tick(2);g.pause();g.tick(20);assert.equal(g.zeroTime,2);g.resume();g.addStock(1);assert.equal(g.zeroTime,0);g.stock=0;g.tick(2.9);assert.equal(g.phase,'playing');g.tick(.11);assert.equal(g.phase,'result');});

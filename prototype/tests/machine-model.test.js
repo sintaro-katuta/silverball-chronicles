@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Game,freshProfile} from '../src/game.js';
-import {MACHINE_SPECS,presentationMetrics} from '../src/machine-spec.js';
+import {Game,freshProfile} from '../src/domain/game.js';
+import {MACHINE_SPECS,presentationMetrics} from '../src/domain/machine-spec.js';
 const ball=()=>({gold:false,large:false,hits:0,after:false});
 
 test('accepted holds retain their draw and grade despite later RNG, odds and weight changes',()=>{

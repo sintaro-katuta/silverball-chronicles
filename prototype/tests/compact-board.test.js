@@ -1,7 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import {createBoardFlow} from '../src/pixi/board-flow.js';
 import {LCD_APRON} from '../src/pixi/lcd-layout.js';
-import {collideSegment} from '../src/physics.js';
+import {collideSegment} from '../src/physics/physics.js';
 test('lower LCD housing has a physical surface matching the visible apron',()=>{
  const m=createBoardFlow({lcd:true});
  for(let i=1;i<LCD_APRON.length;i++){

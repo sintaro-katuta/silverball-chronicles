@@ -1,8 +1,8 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {W_NORMAL_MODEL,wPublishedNormalOutcome,wNormalSymbolProbability,wPresentationWinProbability} from '../src/tokyoghoul-w-spec.js';
-import {WMachine} from '../src/tokyoghoul-w-machine.js';
-import {SessionGame} from '../src/pixi/session-game.js';
+import {W_NORMAL_MODEL,wPublishedNormalOutcome,wNormalSymbolProbability,wPresentationWinProbability} from '../src/domain/tokyoghoul-w-spec.js';
+import {WMachine} from '../src/domain/tokyoghoul-w-machine.js';
+import {SessionGame} from '../src/domain/session-game.js';
 
 test('normal model matches public symbol and charge odds with conditional entry separate',()=>{
  const d=W_NORMAL_MODEL.combinedOdds;

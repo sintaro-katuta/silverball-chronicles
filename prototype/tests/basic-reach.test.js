@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createBoardFlow} from '../src/pixi/board-flow.js';
 import {attachNormalSpin} from '../src/pixi/normal-spin-flow.js';
-import {reelState} from '../src/reels.js';
+import {reelState} from '../src/domain/reels.js';
 test('second review draw reaches, retains left/middle, holds queue, misses and resumes',()=>{
  const m=createBoardFlow({lcd:true}),s=attachNormalSpin(m.flow,{reach:true});
  for(let i=0;i<3;i++)m.flow.game.hit({id:i,x:210,y:480},'start',4);

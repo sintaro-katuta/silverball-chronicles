@@ -8,12 +8,12 @@
 
 ## 現在の実装
 
-- ゲーム本体の3D描画はPlayCanvas 2.22.4。`../../prototype/src/scene.js` が筐体・釘・入賞口のGLBを読み込み、玉・風車・扉・RUSH始動口・筐体発光を更新する。
-- `../../prototype/src/title-art.js` の立体文字もPlayCanvas。元の文字輪郭をGLB化し、色別の材質と既存の登場動作を適用する。
+- ゲーム本体の3D描画はPlayCanvas 2.22.4。`../../prototype/src/legacy/scene.js` が筐体・釘・入賞口のGLBを読み込み、玉・風車・扉・RUSH始動口・筐体発光を更新する。
+- `../../prototype/src/legacy/title-art.js` の立体文字もPlayCanvas。元の文字輪郭をGLB化し、色別の材質と既存の登場動作を適用する。
 - ゲーム更新はPlayCanvas Applicationの`update`イベントから呼ぶ。既存の120Hz物理、時間上限、ポーズ、非表示時の停止を維持する。
 - 抽選・賞球・ステージ・保存・音は既存ロジックを利用。ゲーム内UIはDOM、戦闘イラストの合成はCanvas 2Dを継続している。これらまでEditorのEntityとして編集できる段階ではない。
 - ロード画面で画像と選択コースのGLB・文字GLBを準備する。失敗時の再試行・中断に対応し、準備完了前に遊技を開始しない。
-- `/parts.html` もPlayCanvasへ移行。右ユニット・一般入賞口・全体を、通常・RUSH・大当りで確認できる。
+- `/dev/parts.html` もPlayCanvasへ移行。右ユニット・一般入賞口・全体を、通常・RUSH・大当りで確認できる。
 - `../../prototype/src` にThree.jsの実行時importはない。Three.jsは`../../prototype/tools/legacy`で既存造形を書き出す開発用依存としてのみ保持する。
 
 ## 構成と座標

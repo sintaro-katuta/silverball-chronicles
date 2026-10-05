@@ -1,4 +1,4 @@
-import {reelState} from '../reels.js';
+import {reelState} from '../domain/reels.js';
 // The review presentation waits for the centre: preserve the stored result, swap its display columns.
 export function reviewReelState(game){const s=reelState(game);if(!game.previewCenterPending)return s;return {...s,numbers:[s.numbers[0],s.numbers[2],s.numbers[1]],stopped:[s.stopped[0],s.stopped[2],s.stopped[1]]};}
 export const WIN_ZOOM = {start:.18, holdStart:.26, holdEnd:1.26, end:1.51};

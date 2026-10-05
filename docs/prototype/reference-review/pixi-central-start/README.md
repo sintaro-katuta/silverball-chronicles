@@ -10,7 +10,7 @@
 - 完成承認済みのアタッカー・電チューは変更なし。
 
 ## 実働確認
-`/central-start-pixi.html` を追加。30秒間通常打ちで実発射し、さらに5秒間残った玉を排出。入口の物理位置(210,535)・幅20と既存釘配置は維持。実入賞時のみ手前の縁に隠れながら0.26秒で縮小・消失。入賞カウント・一時停止・発射切替・判定線表示を用意。抽選・賞球・保存なし。
+`/dev/central-start-pixi.html` を追加。30秒間通常打ちで実発射し、さらに5秒間残った玉を排出。入口の物理位置(210,535)・幅20と既存釘配置は維持。実入賞時のみ手前の縁に隠れながら0.26秒で縮小・消失。入賞カウント・一時停止・発射切替・判定線表示を用意。抽選・賞球・保存なし。
 録画は `../../../../prototype/reference-review/pixi-central-start/central-start-demo.mp4`。検証値は `../../../../prototype/reference-review/pixi-central-start/verification.json`、入賞画面は `../../../../prototype/reference-review/pixi-central-start/entry.png`、判定位置は `../../../../prototype/reference-review/pixi-central-start/alignment.png`。
 
 ## 玉を基準としたドット表現 v2

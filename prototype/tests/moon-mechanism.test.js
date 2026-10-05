@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {moonMechanismState as state} from '../src/playcanvas/moon-mechanism-state.mjs';
-import {beatAt,beatsFor} from '../src/cinematic.js';
+import {beatAt,beatsFor} from '../src/presentation/cinematic.js';
 const pose=(t,win=true,pattern='awakening')=>state({}, {t,win,pattern},beatAt(t,pattern));
 test('moon motion before resolve never reads hidden win',()=>{
  for(const pattern of ['awakening','victory','defeat','feint','revival'])for(let t=0;t<26;t+=.1){const b=beatAt(t,pattern);if(b.id!=='resolve')assert.deepEqual(pose(t,true,pattern),pose(t,false,pattern));}

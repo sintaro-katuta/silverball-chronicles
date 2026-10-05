@@ -8,10 +8,10 @@ import {beginRushPrelude,preludePose} from './rush-prelude-motion.js';
 import {RUSH_END_SECONDS,rushEndPose} from './rush-end-motion.js';
 import {reachSeconds,developsReach,developmentPose,DEVELOPMENT} from './win-sequence.js';
 import {attachBonusRounds} from './bonus-round-flow.js';
-import {Game,freshProfile} from '../game.js';
+import {Game,freshProfile} from '../domain/game.js';
 import {reviewReelState} from './review-reel-state.js';
-import {wPresentationWinProbability,TOKYOGHOUL_W} from '../tokyoghoul-w-spec.js';
-import {wPublishedNormalOutcome} from './w-runtime-policy.js';
+import {wPresentationWinProbability,TOKYOGHOUL_W} from '../domain/tokyoghoul-w-spec.js';
+import {wPublishedNormalOutcome} from '../domain/w-runtime-policy.js';
 import {presentationDistribution,createPresentationSelector,presentationRoll} from './presentation-distribution.js';
 import {createPredictionPlan} from './prediction-plan.js';
 // Review-only deterministic losses. Production odds and Game logic are untouched.

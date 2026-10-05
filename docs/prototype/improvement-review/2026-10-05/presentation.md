@@ -6,7 +6,7 @@
 
 ## 現行経路
 
-本編は `prototype/src/pixi-main.js:44` の SessionGame と `prototype/src/pixi/normal-spin-flow.js:25` の basicReach アダプターを使う。通常のリーチは左右7→中央待ち。勝ち側は月蝕役物→中央停止、負け側は中央減速→不揃い停止。旧 `cinematic.js` に戦闘演出があることと、本編で戦闘が再生されることは別である。
+本編は `prototype/src/app/main.js:44` の SessionGame と `prototype/src/pixi/normal-spin-flow.js:25` の basicReach アダプターを使う。通常のリーチは左右7→中央待ち。勝ち側は月蝕役物→中央停止、負け側は中央減速→不揃い停止。旧 `cinematic.js` に戦闘演出があることと、本編で戦闘が再生されることは別である。
 
 初心者資料の原則は「演出は抽選結果を伝える」「強い演出でも外れる」「発展は次の演出段階へ進む」。資料の抽選時点に関する説明を W 本編の実球 V 成立まで一律に拡張しない。月予告12値、初出時の色・形固定、予告なし非表示、採用人物、ドット絵、既存の SE 制約を維持する。
 

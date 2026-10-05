@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Physics,rightStartOpen} from '../src/physics.js';
-import {Game,freshProfile} from '../src/game.js';
+import {Physics,rightStartOpen} from '../src/physics/physics.js';
+import {Game,freshProfile} from '../src/domain/game.js';
 const dummy=()=>({phase:'playing',time:0,rush:null,jackpot:null,rng:()=>1,value:()=>0,hit(){},lose(){},emit(){},machine:{countLimit:10,holdLimit:5}});
 const settle=(p,g)=>{for(let i=0;i<1440&&p.balls.length;i++){p.step(1/120,g);g.time+=1/120;}};
 

@@ -140,41 +140,10 @@ Presentation scope clarification (user instruction, 2026-09-25): lighting and mo
 Overhead data display (2026-09-25): user requested real-machine-style upper information. Implemented a separate DOM `data-counter` component with a dark glass face, silver housing, prominent jackpot / starts counts, total starts and the existing balance graph. Lamp rim and text follow normal / RUSH / active jackpot without revealing pending results. Stage, current stock and target occupy a separate lower strip. Reference: [Daiichi, デー太郎ランプε](https://www.daiichi.net/products/dle-1l.html), documenting jackpot counts, starts between jackpots, total starts and state-responsive lamps. This is an original adaptation, not a replica of that product. Data is explicitly “今回の遊技”; no fabricated previous-day history, and RUSH is not relabelled 確変. Counts retain existing game semantics: starts are completed spins (including RUSH), jackpots count bonus entries rather than rounds; the graph remains stock minus initial stock, including supply and returns, explained in its expanded view. Game rules are unchanged. Local build, five viewport sizes (320×568, 390×664, 390×844, 1440×900, 844×390), both view modes and manual controls passed. Current normal screenshot inspected; a short viewport makes the board smaller to preserve complete device visibility. No cloud upload.
 Data-lamp transition QA: local debug inputs exercised normal → RUSH → winning presentation → active 4R bonus. Waited for bonus entry (the pending win must not increment the lamp early). Screenshots `counter-rush.png` / `counter-bonus.png` inspected; fixed a CSS specificity issue that initially kept the rim cyan across states. Existing browser smoke passed play, pause, retirement, jackpot, skills, result and persistence. Native mobile hardware and sound were not assessed for this HUD change.
 
-SAO 夜空 new-machine request (2026-09-25): the user explicitly requested a new machine reproducing DMM machine 5034. Added an isolated `/yozora.html` entry, linked from home. This is an incomplete public-spec simulator with provisional procedural cabinet, typography-only LCD, synthetic sound and interpolated ball routes; it is not an adopted replacement art direction for 月影機関 or a complete real-machine replica. Sources, approximations and missing production assets are recorded in [the reproduction work log](reference-review/yozora/IMPLEMENTATION.md). Existing 月影 rules remain unchanged. Local-only workflow continues.
-
-SAO Unity prototype (2026-09-25): user's follow-up explicitly requests a Unity machine. The home link now opens `/sao-unity.html`, embedding an actual Unity 6000.4.6f1 WebAssembly build from the independent `unity-yozora` project. The previous `/yozora.html` remains a comparison prototype. New editable 3D cabinet, metallic lighting, free-depth PhysX balls, rotating FAIR assembly, opening attacker, illustrated world-space LCD and camera angle toggle are implemented. Geometry is original/provisional, the fan illustration is generated, and full official effects/audio/FAIR routing calibration remain incomplete. This does not migrate 月影機関 or change its adopted rules. See [Unity README](../unity-yozora/README.md).
-
-SAO Unity reference alignment (2026-09-25, user requested closer matching): inspected official product/FAIR diagrams, DMM close-ups, and sampled frames from the official PV. Enlarged and tapered the LCD, narrowed the frame LEDs, added resin/grille/blue-rose details, moved the FAIR assembly to lower center with a connected transfer ramp, and replaced plain numeric presentation with illustrated symbols/crystal holds. Research and explicitly unimplemented mechanics are in [REFERENCE_ALIGNMENT.md](reference-review/yozora/REFERENCE_ALIGNMENT.md). This is an implementation revision for review, not evidence of exact reproduction. Existing 月影 rules and cloud restrictions remain unchanged.
-
-### 2026-09-26 — 提供されたSAO実戦MP4との照合
-
-SAO Unity独立試作に限り、提供動画R1の07:15通常画面・42:00 WoU図柄等を参照する。通常とRUSHの人物素材を分け、透過人物と数字の重なり、段差のある縦列、結晶保留、右辺がほぼ直線の液晶輪郭、横軸ハンドルを反映。現段階を「一致」とは扱わない。観察／反映／未再現を `reference-review/yozora/user-video-2026-09-26/ALIGNMENT.md` に記録。原画・動画尺・全役物・音声・FAIRの5:1振分は残課題。既存の月影機関には適用しない。
-
-SAO Unity parallel continuation (2026-09-26, requested): three subagents handled cabinet, FAIR and LCD sequences, with root integration/audio/Web QA. Added a constrained fifth-ball FAIR transfer to horizontal six-pocket contact judgment; it is an explicit approximation limited to this independent SAO prototype. Replaced the short reach with reconstructed representative normal150s/right23s timelines based on the edited user video, generated scene illustrations, procedural effects and original synthesized audio. Added0/8 display previews, Amayori0, volume and silent4×/8× preview. Exact official films, voices, mechanics and all routes remain incomplete. This does not alter 月影機関's free-physics rules. Current implementation and observed checks are recorded in [ALIGNMENT.md](reference-review/yozora/user-video-2026-09-26/ALIGNMENT.md), superseding earlier SAO notes on9.4s and uncounted FAIR. Local only.
-
-
-### 2026-09-26 SAO夜空・筐体モデリング強化
-ユーザーの「今できる最大のモデリング」に基づき、SAO Unity試作のみで外枠/上部/FAIR/下皿/操作部を造形更新。プリミティブの積み重ねから連続曲面、内壁、面取り、複層レンズへ進める。平面文字の一部をBlender立体文字へ置換。同条件の変更前後画像は `../../prototype/reference-review/yozora/maximum-model-2026-09-26/index.html`。資料からの推定を実測一致と扱わない。元ゲーム/月影機関のルール変更やクラウド更新は含まない。
-
 ### 2026-09-26 ユーザー修正：装飾より釘・機構を優先
 SAO Unity試作は装飾追加を保留。釘、左右の玉通路、入賞口、可動ギミック、右側アタッカーの構造照合を先に行う。初期表示は装飾非表示の構造確認モードとし、完成外観と構造一致を混同しない。現釘配置と右側機構は暫定実装で未照合。右下青薔薇は全体画像を参考にした装飾であり、アタッカー開口の再現根拠ではないため、薔薇上のATTACKER表示を撤去。後工程の明示差分：上部ロゴの形、神器の詰まった字間と中央の十字星。既存ルールや玉の物理パラメータは今回変更しない。
 
-SAO Unity structure correction (2026-09-26, user-requested): prioritize reference-based nails, physical guide walls, receiving apertures and FAIR placement before decorative polish. This applies to `unity-yozora`, not the separate Tsukikage/PlayCanvas scene. Use LCD-relative landmarks from R3 rather than preserving earlier guessed component positions. In particular, the left FAIR unit belongs around 55–80% of the LCD height, the rotor near the LCD bottom, and PLUS just below it. Earlier notes preserving the guessed FAIR world coordinates are superseded for this correction. Preserve the ball prefab/material and lottery/payout rules; update visible geometry, contact surfaces, sensors and constrained guide coordinates together. The guided FAIR transport remains an explicit approximation. Keep structure view as default, with a right-side inspection camera. Separate independent approval of this structural revision from claims of exact dimensions or identification of hidden real-machine internals. See `../../prototype/reference-review/yozora/structure-review-2026-09-26` for current evidence and review status.
 
-SAO FAIR depth follow-up (2026-09-26): after the vertical alignment, Web close-up review exposed the upper case intersecting the LCD plane. Move housing/base/rotor/pocket sensors/entry together 40 mm toward the viewer in the model coordinate system; keep the free playfield and PLUS positions. Use the shared guide route to reach the relocated rotor. Composite the front resin after the world-space LCD canvas, and audit rear-case clearance so a future layout edit cannot silently hide the shoulder again. This is a model clearance correction, not a claim of a measured real-machine protrusion.
-
-### 2026-09-27 — 独立Unity SAO版の代表演出改修
-
-- 対象はSAO Unity版の演出。球・釘・FAIR/右球路・確率・出玉・既存待機時間は維持。通常150秒/RUSH23秒は編集資料から組んだ代表ルートであり無編集実機尺の証明ではない。
-- 通常24/RUSH13の内部カットへ分解。街俯瞰、青い本、敵の突進、キリトの防御/反撃は新生成原画で補完し、攻撃・反応・当落前静止を別構図へ。PUSHの立体的な面と押込み、図柄停止の反動・当り後の強調を追加。
-- 大当り払出中は小ROUND/実計数を上端に残し、Alice/Quinella/防御/反撃・決意の人物カットを同時進行。決意は顔を金円内に収め下帯タイトルへ。DRIVEは暗青の曲線光と横線、小金光体、実払出からの数字段階表示。ptを実払出と同一扱いしない。
-- 「液晶・演出を拡大」と決意/RUSHリーチ/AWAKENING/上位RESULT試演を追加。結果プレビューも完了した試演セッションのsnapshotを用いる。PUSHは通常と大当りの所定窓のみ表示反応し、再抽選しない。
-- 独立査読と修正を反復。通常Round2、LAST FLOOR/DRIVE/上位Round3、決意Round4が最新の確認画像。比較・再生資料は `../../prototype/reference-review/yozora/presentation-review-2026-09-27`。過去の構造PASSを演出の検証に流用しない。
-- 新規合成音・BGMと生成原画による代表経路の再構成。全原作画、全分岐、実機音声/楽曲の一致ではない。音の実聴は未検証として記録。
-
-### 2026-09-27 — SAO独立Unity版・オリジナル演出への転換
-
-ユーザーが「演出が軽い／繋がりがわからない」「自由に作り替えて」と指示。上記の実機場面順を追う通常150秒／RUSH23秒を採用方針として維持せず、通常40秒／RUSH18秒の「封印を斬り裂け」へ変更。同じ対象へ挑戦、反発、残る亀裂、収束、PUSH、最後の一撃、結果の順で因果を示す。抽選・賞球・保留・球路は変更しない。大当り後も同じ剣士から払出、次の道の開放へ繋ぐ。非DRIVEの代表BONUS後演出は8秒のStoryへ整理。実機再現という説明は撤回し、独立試作内の創作演出と明示する。月影機関には適用しない。ローカルのみ。設計と現在の検証は `../../prototype/reference-review/yozora/original-direction-2026-09-27`。
 
 ### 2026-09-27 — 月影機関・入賞から決着までのギミック
 
@@ -188,7 +157,7 @@ SAO FAIR depth follow-up (2026-09-26): after the vertical alignment, Web close-u
 
 ### 2026-09-29 — PixiJSアタッカー接続例
 
-ユーザー承認の代表部品試作として `/attacker-pixi.html` を追加。提供された銀・金・青の意匠を簡略化したドット素材をケース／球路／開閉扉／玉に分割し、既存Physicsの実発射・衝突・入賞と同期する。部品内の画素基準は物理1単位=2画素。これはアタッカー試作限定で、全台の解像度・全素材の採用を意味しない。現行扉の接触線は開閉で基点と長さが変化するため、2状態の即時交換で一致を保ち、連続回転アニメを完成扱いにしない。実画面動画・座標仕様・検証結果は `reference-review/pixi-attacker/README.md`。本編外観・抽選・賞球・保存・物理パラメータは変更せず、クラウド未更新。
+ユーザー承認の代表部品試作として `/dev/attacker-pixi.html` を追加。提供された銀・金・青の意匠を簡略化したドット素材をケース／球路／開閉扉／玉に分割し、既存Physicsの実発射・衝突・入賞と同期する。部品内の画素基準は物理1単位=2画素。これはアタッカー試作限定で、全台の解像度・全素材の採用を意味しない。現行扉の接触線は開閉で基点と長さが変化するため、2状態の即時交換で一致を保ち、連続回転アニメを完成扱いにしない。実画面動画・座標仕様・検証結果は `reference-review/pixi-attacker/README.md`。本編外観・抽選・賞球・保存・物理パラメータは変更せず、クラウド未更新。
 
 ### 2026-09-29 — アタッカーの立体感・参照意匠の修正
 提供パーツシート10を基準にPixiJS試作の固定枠を再作画。金の浮き彫り、中央星、銀の面取り、ケース右側面、暗い内壁と青い下皿を追加。描画だけの変更で、入賞・扉接触線は維持。`../../prototype/reference-review/pixi-attacker` に新しい実画面と約22秒の録画、v1に旧画面を保存。参照どおりの扉機構や全台完成の採用判断は含まない。
@@ -873,11 +842,11 @@ RUSH当りの新しい確認案：通常の3図柄連動6倍拡大を用いず�
 通常強度0.23/0.24/0.25を各200玉（pegSeed0）で確認：中央37/26/10、一般14/22/21、OUT149/152/169、残球0。入賞率を維持したと扱わず、新しい配置の試行値として記録。スマホ/PC実画面と通常→当たり→右打ち払出を撮影、ブラウザエラーなし。動画だけ既存の当選指定。証拠 reference-review/pixi-compact-board/。
 
 ### 2026-10-01 装飾の意図を訂正：SAO試作の前景積層を参照
-ユーザーは盤面の上に重なって張り出す装飾を意図していた。直前の『空白を縮めるための釘/入賞口移動』だけを解決策・採用確定と扱わない。SAO Unityの maximum-model-2026-09-26/after-front.png と after-oblique.png、PremiumMainCabinetGeometry.cs、READMEを今回参照。上部の剣/ロゴ、側面の複層レンズ、下部の薔薇/プレートが盤面とは異なる奥行きに載る構成を確認。
+ユーザーは盤面の上に重なって張り出す装飾を意図していた。直前の『空白を縮めるための釘/入賞口移動』だけを解決策・採用確定と扱わない。当時のSAO Unity試作を参照（実装・画像は2026-10-06に対象外として削除）。上部の剣/ロゴ、側面の複層レンズ、下部の薔薇/プレートが盤面とは異なる奥行きに載る構成を確認。
 月影へはSAO固有意匠の転用ではなく、盤面印刷→玉/釘/球路→手前の立体装飾という層構造を翻案する。前景装飾は側面・厚み・落ち影を持ち、玉が裏を通る部分と玉へ接触するガイドを区別する。前景にあるという理由だけで物理壁を追加しない。釘のない領域にだけ小模様を描く方針を改める。このターンは参照と方針記録のみ、新しい前景装飾はまだ未実装。
 
 ### 2026-10-01 SAOの積層を参考に前景装飾を実装（確認候補）
-ユーザー「お願いします」により前景専用cabinet-foreground.jsを追加。参照はSAO試作の正面/斜め画像とPremiumMainCabinetGeometry.cs。月影の月メダリオン、上部の銀の翼、液晶側面の金属パネル、下部の翼と台座を、玉の表示層より手前・可動する月蝕役物より奥へ配置。各部品は別の面色、厚み、盤面に落ちる影を持つ。画面に一様な加工をかける方式ではなく、透明な画面上に専用のドット形状を描く。
+ユーザー「お願いします」により前景専用cabinet-foreground.jsを追加。参照は当時のSAO試作の正面/斜め画像と造形コード（2026-10-06に対象外として削除）。月影の月メダリオン、上部の銀の翼、液晶側面の金属パネル、下部の翼と台座を、玉の表示層より手前・可動する月蝕役物より奥へ配置。各部品は別の面色、厚み、盤面に落ちる影を持つ。画面に一様な加工をかける方式ではなく、透明な画面上に専用のドット形状を描く。
 LCD全域、一般/中央の入口、右側通路と開閉機構の表示範囲を抜き、前景の隙間から盤面が見える構成。前景の奥を通る玉は一時的に隠れる。前景外装は遊技面より手前にあるため、新たな衝突壁は足していない。この変更で釘/入口/物理設定は変更なし（直前の再配置を元に戻したという意味でもない）。SEなし。
 スマホ390×844/PC1280×960、通常から当たり/払出を撮影。ブラウザエラーなし、計数整合、ビルド成功。証拠 reference-review/pixi-raised-decoration/。動画は既存の当選指定。採用未確定・クラウド未更新。
 
@@ -958,7 +927,7 @@ RUSHが進みにくかった原因は電チューへの受け渡し。通常保�
 
 ### 2026-10-02 役割分担によるW移行・第一統合
 ユーザー指示によりLE/デザイナー/PMの3名が直接調整。W独立制御を実装し、PMが特図排他と保留追越しを指摘してLEが修正。新制御11テスト成功。一般入賞口を左3個、下部普図口を別分類へ訂正。上部架空ゲートを撤去し、普図口への実入賞を計数。旧Sessionには賞球1のみ互換接続し、特図抽選を増やさない。旧本編の開放条件は互換動作であり実機W制御へ移行済みではない。
-W制御の操作レビューは /w-control-review.html （開発サーバー用）。ブラウザで普図1消化→電チュー2玉→特図2/V→10入賞150払出と閉鎖を確認。既存盤面起動とerror logなしも確認。fuzu観測8テスト＋別途下部口実玉1テスト成功、ビルド成功（既存チャンク警告）。証拠 reference-review/tokyoghoul-w-team/。
+W制御の操作レビューは /dev/w-control-review.html （開発サーバー用）。ブラウザで普図1消化→電チュー2玉→特図2/V→10入賞150払出と閉鎖を確認。既存盤面起動とerror logなしも確認。fuzu観測8テスト＋別途下部口実玉1テスト成功、ビルド成功（既存チャンク警告）。証拠 reference-review/tokyoghoul-w-team/。
 変更前全テスト239件のうち237成功、左道釘の残球2件あり。位置126.939/515.005と153.014/528.655、隣接釘の谷で停滞。球径と釘軸径の再校正が必要で、強制移動・消去は未導入。本編W接続、通常突入母数の解決、開閉時間、6000+α、内部V経路は未完了。クラウド更新なし。
 
 

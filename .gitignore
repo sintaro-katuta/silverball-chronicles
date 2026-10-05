@@ -12,10 +12,8 @@ node_modules/
 *.jks
 
 # Local build output and synchronized copies of web assets
-/prototype/public/unity-yozora/
 /prototype/ios/App/App/public/
 /prototype/android/app/src/main/assets/public/
-/unity-yozora/*.slnx
 
 # Large local review captures and material export archives
 /prototype/reference-review/**/*.png
@@ -27,3 +25,7 @@ node_modules/
 /prototype/reference-review/**/*.zip
 /prototype/screenshots/
 /prototype/migration-prep/*.zip
+
+# Vite output is reproducible; keep it outside source control.
+/prototype/dist/
+/prototype/dist-previews/

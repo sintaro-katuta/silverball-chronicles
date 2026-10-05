@@ -1,7 +1,7 @@
 import * as T from 'three';
 import {SVGLoader} from 'three/addons/loaders/SVGLoader.js';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
-import font from '../../src/title-glyphs.json';
+import font from '../../src/legacy/title-glyphs.json';
 
 export class TitleSculpture {
  constructor(host){this.host=host;this.scene=new T.Scene();this.renderer=new T.WebGLRenderer({alpha:true,antialias:true});this.renderer.setPixelRatio(Math.min(devicePixelRatio,2));this.renderer.toneMapping=T.ACESFilmicToneMapping;this.renderer.toneMappingExposure=1.25;host.replaceChildren(this.renderer.domElement);const pmrem=new T.PMREMGenerator(this.renderer),room=new RoomEnvironment();this.env=pmrem.fromScene(room,.03);this.scene.environment=this.env.texture;room.dispose();pmrem.dispose();this.scene.add(new T.AmbientLight(0xffffff,1));this.key=new T.DirectionalLight(0xffffff,5);this.key.position.set(-150,160,350);this.scene.add(this.key);const rim=new T.DirectionalLight(0xffc778,3);rim.position.set(250,-80,80);this.scene.add(rim);this.camera=new T.OrthographicCamera(-250,250,85,-85,1,1600);this.camera.position.z=800;this.group=new T.Group();this.scene.add(this.group);this.materials=[];}

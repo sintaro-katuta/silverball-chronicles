@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {presentationDistribution,selectPresentation,battleAntiRepeatKernel,createPresentationSelector} from '../src/pixi/presentation-distribution.js';
 import {MOON_CUES} from '../src/pixi/moon-cue.js';
-import {TOKYOGHOUL_W,W_NORMAL_MODEL,wNormalSymbolProbability} from '../src/tokyoghoul-w-spec.js';
+import {TOKYOGHOUL_W,W_NORMAL_MODEL,wNormalSymbolProbability} from '../src/domain/tokyoghoul-w-spec.js';
 const sum=xs=>xs.reduce((a,b)=>a+b,0);
 const near=(a,b,e=1e-10)=>assert.ok(Math.abs(a-b)<e,`${a} != ${b}`);
 const config=mode=>({mode,baseWinProbability:1/(mode==='rush'?95.3:399.9),lossReachRate:.055});

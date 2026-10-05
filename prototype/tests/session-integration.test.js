@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';
-import {SessionGame} from '../src/pixi/session-game.js';
+import {SessionGame} from '../src/domain/session-game.js';
 import {createBoardFlow} from '../src/pixi/board-flow.js';
 import {attachNormalSpin} from '../src/pixi/normal-spin-flow.js';
 function session(rng=()=>.9){const game=new SessionGame(rng),model=createBoardFlow({lcd:true,fire:()=>game.fire()}),spin=attachNormalSpin(model.flow,{sessionGame:game,roundModel:model,lifecycle:true});return {game,model,spin};}

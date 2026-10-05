@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {createBoardFlow} from '../src/pixi/board-flow.js';
 import {attachPassGate} from '../src/pixi/pass-gate.js';
-import {SessionGame} from '../src/pixi/session-game.js';
+import {SessionGame} from '../src/domain/session-game.js';
 test('fuzu sensor counts only captured admissions, never upper passage or other prizes',()=>{
  const flow={physics:{time:1},game:{hit(){}}},gate=attachPassGate(flow);
  flow.game.hit({id:1},'normal',0);assert.equal(gate.snapshot().count,0);
