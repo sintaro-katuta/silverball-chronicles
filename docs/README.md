@@ -263,3 +263,5 @@ docs/
 - [オリジナル効果音・割当と試聴](prototype/ORIGINAL_SE.md)
 
 - [効果音の素材感・溜め・ミックスの仕上げ](prototype/SOUND_FINISH.md)
+
+- [月輪パルス：当たり音の識別リズムと試聴](prototype/SIGNATURE_SOUND.md)

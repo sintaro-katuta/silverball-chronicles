@@ -1,3 +1,4 @@
+import {synthesizeSignature} from './signature-sound.js';
 // Authored material models, original synthesis only. No borrowed samples.
 // Percussion uses independent body, inharmonic metal, friction and room layers.
 const families={
@@ -52,6 +53,7 @@ const envelope=(t,attack,decay)=>t<0?0:(1-Math.exp(-t/attack))*Math.exp(-t/decay
 const modes=[1,1.571,2.193,3.107,4.731,6.817];
 export function synthesizeSe(name,variant=0,sampleRate=44100){
  const s=SE_CATALOG[name];if(!s||!Number.isInteger(variant)||variant<0||variant>3)throw new RangeError('Invalid SE');
+ if(s.kind==='victory')return synthesizeSignature({mode:name,variant,sampleRate,duration:s.duration,level:s.level});
  const n=Math.ceil(s.duration*sampleRate),dryL=new Float32Array(n),dryR=new Float32Array(n);
  let seed=2166136261;for(const c of name)seed=Math.imul(seed^c.charCodeAt(0),16777619)>>>0;seed^=variant*7919;
  let low=0,mid=0,slow=0;const detune=[.993,1.004,1.013,.986][variant],f=s.frequency*detune;
@@ -95,16 +97,6 @@ export function synthesizeSe(name,variant=0,sampleRate=44100){
    for(let j=0;j<4;j++)centre+=Math.sin(TAU*f*modes[j]*t+.10*Math.sin(TAU*(9+j)*t))*s.metal*.045*growth*(.25+.75*u);
    if(release>0)centre+=s.body*body(release)*.5+s.metal*metal(release)*.4;
    side=grain*s.air*.15*Math.sin(TAU*(.7+variant*.1)*t)*growth;
-  }else if(s.kind==='victory'){
-   centre=s.body*body(t)+s.air*edge*envelope(t,.001,.026)+s.metal*metal(t)*.62;
-   const notes=name==='rushWin'?[1,1.5,2,2.5]:[1,1.25,1.5,2];
-   for(let j=0;j<notes.length;j++){
-    const age=t-(.095+j*(name==='rushWin'?.064:.092));if(age<0)continue;
-    const bell=(Math.sin(TAU*f*notes[j]*age)+.18*Math.sin(TAU*f*notes[j]*2.017*age)+.06*Math.sin(TAU*f*notes[j]*3.12*age))*envelope(age,.012,.62-j*.045);
-    centre+=bell*.095;side+=bell*.030*(j%2?1:-1);
-   }
-   // A distinct second reveal brightens and widens the tail, after the impact.
-   const age=t-.45;if(age>0)for(let j=0;j<3;j++)centre+=Math.sin(TAU*f*[2,2.5,3][j]*age)*envelope(age,.045,.5)*.026;
   }
   const attack=Math.min(1,t/.0008),end=Math.min(1,(s.duration-t)/.10);
   dryL[i]=Math.tanh((centre-side*s.width)*1.16)*attack*end*vel;

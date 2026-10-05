@@ -1,0 +1,21 @@
+{
+  "sources": {
+    "src/pixi/se/signature-sound.js": "961be1e3f6b85daca10b2442f140411e9a5c29550ffd38b26c0a3b9a288fc173",
+    "src/pixi/se/original-se.js": "eebdc36006da03360e53a2987684e4c54ab65dab41eb92b34bc7c805b63ebc88",
+    "src/pixi/se/presentation-cues.js": "3f8f7e46ee58a7ab69098df7e2b7b148104889e0fba9dac725474f526f070fab"
+  },
+  "tests": 21,
+  "browserCases": 8,
+  "builds": "production and previews passed",
+  "videoDuration": 70.7185,
+  "videoSha256": "fbfcbf5ec2110b7eae72384c9d503b056cf6c9ba897d7b34c759558b73d04b5a",
+  "meanDb": -31.6,
+  "peakDb": -5.4,
+  "intentionalSilences": [
+    0.824021,
+    0.548729
+  ],
+  "condition": "-50dB / >=0.4sec",
+  "abComparison": "Previous material win then new dedicated signature, same peak target .54 and output gain .65, 650ms gap. Source before: 2302157. No claimed proof of preference or addiction.",
+  "scope": "Actual admitted forced-win fixture; full 54sec reach, no seek or speed change; live canvas and audio in one MediaRecorder. Hardware speaker/headphone listening unverified."
+}
