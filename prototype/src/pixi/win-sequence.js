@@ -1,7 +1,7 @@
 // Winning reach: announcement -> mechanical cover/retract -> center reel stop.
 import {reachSchedule} from './reach-ending.js';
 import {SPECIAL_ROUTE_TIMINGS} from './special-route-motion.js';
-// No sound is attached; the ornament never starts from the post-win clock.
+// The ornament and its SE share the pre-result presentation clock.
 export const WIN_SEQUENCE=Object.freeze({
  normal:Object.freeze({reachSeconds:2.5,mechanismAt:.45,mechanismSeconds:1.9,bonusAt:5.8}),
  rush:Object.freeze({reachSeconds:2.5,mechanismAt:.45,mechanismSeconds:1.9,bonusAt:2.4})

@@ -98,9 +98,9 @@ export function strikePose(t,event){
  const trail=age>=-.16&&age<.23?smooth((age+.16)/.1)*(1-smooth((age-.03)/.2)):0;
  return {event,age,anticipation,travel,impact,trail,active:age>=-.34&&age<.65};
 }
-const FLASH_CUTS=Object.freeze([{id:'reach',at:0,end:2,label:'リーチ'},{id:'arrival',at:2,end:4,label:''},{id:'gather',at:4,end:6,label:''},{id:'vow',at:6,end:8,label:''},{id:'final',at:8,end:9.7,label:'月影の一閃'},{id:'decision',at:9.7,end:12,label:''}].map(Object.freeze));
-const FLASH_STRIKES=Object.freeze([{id:'flash',at:8.4,side:'hero',weight:.85,x:124,y:71,angle:-.45}].map(Object.freeze));
-const REVIVAL_STRIKES=Object.freeze([{id:'defeat',at:51.85,side:'enemy',weight:.6,x:78,y:76,angle:-.5},{id:'revival',at:55.25,side:'hero',weight:.9,x:128,y:71,angle:-.45}].map(Object.freeze));
+export const FLASH_CUTS=Object.freeze([{id:'reach',at:0,end:2,label:'リーチ'},{id:'arrival',at:2,end:4,label:''},{id:'gather',at:4,end:6,label:''},{id:'vow',at:6,end:8,label:''},{id:'final',at:8,end:9.7,label:'月影の一閃'},{id:'decision',at:9.7,end:12,label:''}].map(Object.freeze));
+export const FLASH_STRIKES=Object.freeze([{id:'flash',at:8.4,side:'hero',weight:.85,x:124,y:71,angle:-.45}].map(Object.freeze));
+export const REVIVAL_STRIKES=Object.freeze([{id:'defeat',at:51.85,side:'enemy',weight:.6,x:78,y:76,angle:-.5},{id:'revival',at:55.25,side:'hero',weight:.9,x:128,y:71,angle:-.45}].map(Object.freeze));
 // Long-hair base v4 / motion v7: local source pixels in each 512px cell.
 // Keep measurements in pixels so the source/overlay review remains readable.
 // Grip means blade root at the guard; it excludes the pommel below the hands.
