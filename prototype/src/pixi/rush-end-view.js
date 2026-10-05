@@ -15,7 +15,7 @@ export function createRushEndView(){
   c.textAlign='center';c.textBaseline='middle';c.lineJoin='miter';
   const text=(label,y,size,color)=>{c.font=`${size}px "DotGothic16"`;c.lineWidth=3;c.strokeStyle='#060a15';c.strokeText(label,105,y);c.fillStyle=color;c.fillText(label,105,y);};
   text('RUSH 終了',32,25,'#cee6ef');
-  text('合計払出',69,14,'#91a9ba');
+  text('獲得玉数',69,14,'#91a9ba');
   let size=33;while(size>16){c.font=`${size}px "DotGothic16"`;if(c.measureText(String(total)).width<=180)break;size--;}
   const gold=c.createLinearGradient(0,83,0,116);gold.addColorStop(0,'#fff5cd');gold.addColorStop(.5,'#edcf89');gold.addColorStop(1,'#af8246');
   text(String(total),103,size,gold);texture.source.update();

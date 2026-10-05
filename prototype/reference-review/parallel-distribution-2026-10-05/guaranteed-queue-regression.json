@@ -1,0 +1,25 @@
+{
+  "scope": "Fixed winning/followup rolls to reproduce a state transition; excluded from natural reliability statistics",
+  "finding": {
+    "saved": {
+      "id": 2,
+      "kind": "fuzu",
+      "ballId": 2,
+      "roll": 0.9,
+      "followupRoll": null,
+      "admissionOdds": 95.3,
+      "admittedWin": false
+    },
+    "effectiveOdds": 1,
+    "actualWin": true,
+    "actualPlan": {
+      "route": "flash",
+      "reach": true,
+      "variant": null,
+      "ending": "flash",
+      "premium": null,
+      "moonCue": null
+    },
+    "time": 106.25000000003062
+  }
+}

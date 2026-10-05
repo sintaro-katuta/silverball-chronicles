@@ -1,0 +1,14 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><style>body{margin:0;background:#060d1a;color:#dde8f4;font:16px sans-serif}canvas{display:block;width:420px;height:280px}p{margin:12px}</style><div id="stage"></div><p id="label"></p><script type="module">
+import {Application,Assets} from 'pixi.js';
+import {createLongReachView} from '/src/pixi/long-reach-view.js';
+const params=new URLSearchParams(location.search);
+const [atlas,landscape,motionAtlas]=await Promise.all([params.get('base')||'/assets/lcd/long-reach/duel-poses-longhair-v4.png','/assets/lcd/long-reach/moon-bridge-v1.png',params.get('motion')||'/assets/lcd/long-reach/duel-intermediates-longhair-v7.png'].map(p=>Assets.load(p)));
+atlas.source.scaleMode='nearest';motionAtlas.source.scaleMode='nearest';const app=new Application();await app.init({width:840,height:560,autoStart:false,antialias:false,preference:'webgl',background:0x060d1a});document.querySelector('#stage').append(app.canvas);
+const view=createLongReachView(atlas,landscape,{motionAtlas});view.root.scale.set(4);app.stage.addChild(view.root);
+const backdrop=new (await import('pixi.js')).Graphics().rect(0,0,840,560).fill(params.get('background')==='sky'?0xa6daf5:0x000000);
+if(params.has('background')){app.stage.addChildAt(backdrop,0);view.root.children[0].children[0].visible=false;}
+let t=5,options={variant:'pressure',ending:'standard',win:true},playing=false,previous=performance.now();
+function draw(){const p=view.render(t,options);app.render();document.querySelector('#label').textContent=`未採用候補 / ${options.ending} / ${options.win?'当たり':'外れ'} / ${t.toFixed(2)}秒`;return p;}
+window.__combat={seek(value,next={}){t=value;options={...options,...next};return draw();},play(value){playing=value;previous=performance.now();},pose:()=>draw(),times:[]};
+function loop(now){if(playing){window.__combat.times.push(now-previous);t+=(now-previous)/1000;}previous=now;draw();requestAnimationFrame(loop);}requestAnimationFrame(loop);
+</script></html>

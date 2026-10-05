@@ -44,7 +44,7 @@ test('W draw result and lottery RNG call count are identical with moon presentat
   if(kind==='fuzu'){baseline.startRush();decorated.startRush();}
   const model=createBoardFlow({lcd:true});attachNormalSpin(model.flow,{sessionGame:decorated,roundModel:model,lifecycle:true});
   const record={kind,roll,id:7};baseline.startSpin(record);decorated.startSpin(record);
-  const {moonCue,...actual}=decorated.spinResult;assert.deepEqual(actual,baseline.spinResult);assert.equal(afterCalls,beforeCalls);
+  const {moonCue,reachVariant,...actual}=decorated.spinResult;assert.deepEqual(actual,baseline.spinResult);assert.equal(afterCalls,beforeCalls);
  }
 });
 

@@ -1,0 +1,186 @@
+{
+  "date": "2026-10-05",
+  "scope": "Offline predetermined outcome fixtures, not gameplay or smartphone verification",
+  "recordsPerRun": 1000000,
+  "rows": [
+    {
+      "mode": "normal",
+      "lane": "winning",
+      "records": 1000000,
+      "wins": 1000000,
+      "losses": 0,
+      "keys": {
+        "winning": {
+          "exchange": 340042,
+          "initiative": 297762,
+          "pressure": 212245,
+          "direct": 99693,
+          "basic": 50258
+        },
+        "losing": {}
+      },
+      "battleCount": 850049,
+      "independentRepeats": 293090,
+      "statefulRepeats": 0,
+      "independentRepeatRate": 0.3447922940822165,
+      "statefulRepeatRate": 0,
+      "stationaryWeights": [
+        0.4,
+        0.35,
+        0.25
+      ],
+      "theoreticalStatefulRepeatRate": 0,
+      "theoreticalIndependentRepeatRate": 0.34500000000000003
+    },
+    {
+      "mode": "normal",
+      "lane": "losing",
+      "records": 1000000,
+      "wins": 0,
+      "losses": 1000000,
+      "keys": {
+        "winning": {},
+        "losing": {
+          "ordinary": 944614,
+          "basic": 35349,
+          "exchange": 16466,
+          "initiative": 3000,
+          "pressure": 571
+        }
+      },
+      "battleCount": 20037,
+      "independentRepeats": 13763,
+      "statefulRepeats": 12894,
+      "independentRepeatRate": 0.6869135555999202,
+      "statefulRepeatRate": 0.6435416250748652,
+      "stationaryWeights": [
+        0.8216216216216217,
+        0.1513513513513514,
+        0.027027027027027032
+      ],
+      "theoreticalStatefulRepeatRate": 0.6432432432432433,
+      "theoreticalIndependentRepeatRate": 0.6986997808619432
+    },
+    {
+      "mode": "normal",
+      "lane": "mixed",
+      "records": 1000000,
+      "wins": 2534,
+      "losses": 997466,
+      "keys": {
+        "winning": {
+          "basic": 118,
+          "direct": 256,
+          "pressure": 520,
+          "exchange": 870,
+          "initiative": 770
+        },
+        "losing": {
+          "ordinary": 942208,
+          "basic": 35268,
+          "exchange": 16431,
+          "initiative": 2989,
+          "pressure": 570
+        }
+      },
+      "battleCount": 22150,
+      "independentRepeats": 13927,
+      "statefulRepeats": 13170,
+      "independentRepeatRate": 0.6287868526795792,
+      "statefulRepeatRate": 0.594609237437356
+    },
+    {
+      "mode": "rush",
+      "lane": "winning",
+      "records": 1000000,
+      "wins": 1000000,
+      "losses": 0,
+      "keys": {
+        "winning": {
+          "pressure": 71899,
+          "basic": 512155,
+          "exchange": 115223,
+          "direct": 99689,
+          "flash": 100189,
+          "initiative": 100845
+        },
+        "losing": {}
+      },
+      "battleCount": 287967,
+      "independentRepeats": 99266,
+      "statefulRepeats": 0,
+      "independentRepeatRate": 0.34471430655007884,
+      "statefulRepeatRate": 0,
+      "stationaryWeights": [
+        0.4,
+        0.35,
+        0.25
+      ],
+      "theoreticalStatefulRepeatRate": 0,
+      "theoreticalIndependentRepeatRate": 0.34500000000000003
+    },
+    {
+      "mode": "rush",
+      "lane": "losing",
+      "records": 1000000,
+      "wins": 0,
+      "losses": 1000000,
+      "keys": {
+        "winning": {},
+        "losing": {
+          "ordinary": 944782,
+          "basic": 49095,
+          "exchange": 4872,
+          "initiative": 1036,
+          "pressure": 215
+        }
+      },
+      "battleCount": 6123,
+      "independentRepeats": 4118,
+      "statefulRepeats": 3620,
+      "independentRepeatRate": 0.67265599477295,
+      "statefulRepeatRate": 0.5913100294021562,
+      "stationaryWeights": [
+        0.7950310559006211,
+        0.17391304347826084,
+        0.031055900621118
+      ],
+      "theoreticalStatefulRepeatRate": 0.5900621118012421,
+      "theoreticalIndependentRepeatRate": 0.6632845955017166
+    },
+    {
+      "mode": "rush",
+      "lane": "mixed",
+      "records": 1000000,
+      "wins": 10420,
+      "losses": 989580,
+      "keys": {
+        "winning": {
+          "pressure": 766,
+          "flash": 999,
+          "direct": 1098,
+          "exchange": 1207,
+          "basic": 5293,
+          "initiative": 1057
+        },
+        "losing": {
+          "ordinary": 934935,
+          "basic": 48588,
+          "exchange": 4819,
+          "initiative": 1025,
+          "pressure": 213
+        }
+      },
+      "battleCount": 9087,
+      "independentRepeats": 4511,
+      "statefulRepeats": 3950,
+      "independentRepeatRate": 0.4964780981730134,
+      "statefulRepeatRate": 0.4347347567686551
+    }
+  ],
+  "sourceHashes": {
+    "src/pixi/presentation-distribution.js": "d32b7ce8fb48599a238477397564ace6a62f5983b04dd8d6120641b9d13f5fe7",
+    "tests/presentation-distribution.test.js": "1871c20e1d7a79645a226e93eca6f4cc353e946ca6700760471ac0d123ccb7af",
+    "src/pixi/session-game.js": "f48b66f12876ed3ec217f8450855da2e365a2ad3f596d7b0552cdf6357072eb4"
+  }
+}

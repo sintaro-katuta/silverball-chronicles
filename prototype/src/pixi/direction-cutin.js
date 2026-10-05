@@ -17,5 +17,5 @@ export function createDirectionCutin(){
   }));texture.source.scaleMode='nearest';textures.push(texture);const sprite=new Sprite(texture);root.addChild(sprite);sprites[direction]=sprite;
  }
  let last=null,since=-Infinity;root.visible=false;
- return {root,textures,announce(direction,time,delay=0){last=direction;since=time+delay;},render(direction,time,delay=0){if(last!==direction){if(last!==null)since=time+delay;last=direction;}const p=directionCutinPose(time-since,direction);root.visible=p.visible;if(!p.visible)return;root.position.set(p.x,70);root.pivot.set(0,70);root.scale.set(1,p.scaleY);root.alpha=p.alpha;for(const [key,s]of Object.entries(sprites))s.visible=key===direction;}};
+ return {root,textures,snapshot:()=>({direction:last,since,visible:root.visible}),announce(direction,time,delay=0){last=direction;since=time+delay;},render(direction,time,delay=0){if(last!==direction){if(last!==null)since=time+delay;last=direction;}const p=directionCutinPose(time-since,direction);root.visible=p.visible;if(!p.visible)return;root.position.set(p.x,70);root.pivot.set(0,70);root.scale.set(1,p.scaleY);root.alpha=p.alpha;for(const [key,s]of Object.entries(sprites))s.visible=key===direction;}};
 }

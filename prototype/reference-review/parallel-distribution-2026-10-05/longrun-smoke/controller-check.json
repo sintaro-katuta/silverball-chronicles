@@ -1,0 +1,340 @@
+{
+  "scope": "Production SessionGame + boardFlow + normalSpin; seeded uniform saved lottery results; controlled inlet callbacks, no route/result overrides, no clock seeks. Pose visibility is sampled headlessly, not a rendered browser.",
+  "seed": 739391,
+  "target": 100,
+  "counters": {
+    "accepted": 104,
+    "started": 104,
+    "resolved": 104,
+    "fifoChecks": 104,
+    "rollChecks": 208,
+    "pauseChecks": 2,
+    "queueCueChecks": 104,
+    "queueCueChanges": 0,
+    "premiumLeakChecks": 1330,
+    "revivalLeakChecks": 0,
+    "payout": 0,
+    "vEntries": 0,
+    "normalJackpots": 0,
+    "chargeBonuses": 0,
+    "rushBonuses": 0
+  },
+  "excluded": {
+    "charge": 0,
+    "guaranteed": 0,
+    "changedPrior": 0
+  },
+  "tables": {
+    "normal": {
+      "route:ordinary": {
+        "seen": 100,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.03699480747600191
+        ]
+      },
+      "before:story:blue": {
+        "seen": 4,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.48990002040399916
+        ]
+      },
+      "before:background:blue": {
+        "seen": 1,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.7934567085261071
+        ]
+      },
+      "hold:blue": {
+        "seen": 6,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.3903430336530645
+        ]
+      },
+      "before:route:blue": {
+        "seen": 3,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.5615060804490177
+        ]
+      },
+      "before:serial:blue": {
+        "seen": 3,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.5615060804490177
+        ]
+      },
+      "precursor:long:blue": {
+        "seen": 2,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.6576280471103807
+        ]
+      },
+      "route:basic": {
+        "seen": 3,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.5615060804490177
+        ]
+      },
+      "before:step:blue": {
+        "seen": 4,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.48990002040399916
+        ]
+      },
+      "precursor:character:blue": {
+        "seen": 1,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.7934567085261071
+        ]
+      },
+      "development:long:blue": {
+        "seen": 1,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.7934567085261071
+        ]
+      },
+      "moon:crescent:none": {
+        "seen": 1,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.7934567085261071
+        ]
+      },
+      "route:battle": {
+        "seen": 1,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.7934567085261071
+        ]
+      },
+      "battle:exchange": {
+        "seen": 1,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.7934567085261071
+        ]
+      }
+    },
+    "rush": {}
+  },
+  "repeats": {
+    "normal": {
+      "battles": 1,
+      "repeats": 0,
+      "last": "exchange"
+    },
+    "rush": {
+      "battles": 0,
+      "repeats": 0,
+      "last": null
+    }
+  },
+  "violations": [],
+  "routeSamples": [
+    {
+      "id": 1,
+      "mode": "normal",
+      "roll": 0.2836768387351185,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 2,
+      "mode": "normal",
+      "roll": 0.8596796474885195,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 3,
+      "mode": "normal",
+      "roll": 0.9846046771854162,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "before:story:blue",
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 4,
+      "mode": "normal",
+      "roll": 0.6607124083675444,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "before:background:blue",
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 5,
+      "mode": "normal",
+      "roll": 0.7845621081069112,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 6,
+      "mode": "normal",
+      "roll": 0.7585705446545035,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 7,
+      "mode": "normal",
+      "roll": 0.05972085380926728,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "hold:blue",
+        "before:route:blue",
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 8,
+      "mode": "normal",
+      "roll": 0.19731831969693303,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 9,
+      "mode": "normal",
+      "roll": 0.31716305180452764,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 10,
+      "mode": "normal",
+      "roll": 0.23919394984841347,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 11,
+      "mode": "normal",
+      "roll": 0.9747906061820686,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "before:serial:blue",
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 12,
+      "mode": "normal",
+      "roll": 0.8376448869239539,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    }
+  ],
+  "rareSamples": [],
+  "virtualSeconds": 436.4499999997674,
+  "wallSeconds": 0.252,
+  "steps": 8729,
+  "rngCalls": 541,
+  "accounting": {
+    "basePrize": 104,
+    "gamePrize": 0,
+    "payout": 104,
+    "spent": 0,
+    "returned": 0,
+    "supply": 0,
+    "debugAdjustment": 0,
+    "extraBalls": 0,
+    "machineNet": 104,
+    "playNet": 104,
+    "balance": 104,
+    "reconciled": true
+  },
+  "hashes": {
+    "src/pixi/session-game.js": "f48b66f12876ed3ec217f8450855da2e365a2ad3f596d7b0552cdf6357072eb4",
+    "src/pixi/normal-spin-flow.js": "bafe364379b3b430c4e26046c0b4ab9dea786fe221a85ac16ed60f02564d2644",
+    "src/pixi/presentation-distribution.js": "d32b7ce8fb48599a238477397564ace6a62f5983b04dd8d6120641b9d13f5fe7",
+    "src/pixi/prediction-plan.js": "4c40422c81d7da55d2ad69aa2633400127f0933549b36426da47b0c9e63d62d1",
+    "src/pixi/hold-prediction.js": "c81bdfef809c74a53309db2acd1f98398fe2d4ac011a054baefcf317c44aa99b",
+    "src/pixi/prediction-view.js": "26800bef3e9161b233a6d529d6c9439e880e835d050fd79fa8ca3748b3aaca80",
+    "src/pixi/normal-spin-view.js": "bccfd9d08df37ad1089a218c0e55ef3448296ba8f89dd3b2a6c8071deed1fae7",
+    "src/pixi/moon-cue.js": "2bf303f508f739fa16f74f88ee1d8aa0cd20873fdfd74b5c004a29c48e10e78a",
+    "src/tokyoghoul-w-machine.js": "2f917752bd07c39217ff6f5d2937d60436d09c1078e708669cd971dc15e36652"
+  }
+}

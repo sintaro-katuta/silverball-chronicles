@@ -1,0 +1,194 @@
+{
+  "scope": "Fixed winning/followup rolls; excluded from natural reliability statistics. Actual SessionGame + boardFlow + normalSpin, electric/V/bonus acquisition paths.",
+  "admitted": [
+    {
+      "id": 1,
+      "kind": "fuzu",
+      "ballId": 1,
+      "roll": 0,
+      "followupRoll": null,
+      "odds": 95.3,
+      "guaranteed": false,
+      "cue": "none"
+    },
+    {
+      "id": 2,
+      "kind": "fuzu",
+      "ballId": 2,
+      "roll": 0.9,
+      "followupRoll": null,
+      "odds": 95.3,
+      "guaranteed": false,
+      "cue": "none"
+    },
+    {
+      "id": 3,
+      "kind": "fuzu",
+      "ballId": 3,
+      "roll": 0.9,
+      "followupRoll": null,
+      "odds": 95.3,
+      "guaranteed": false,
+      "cue": "none"
+    },
+    {
+      "id": 4,
+      "kind": "fuzu",
+      "ballId": 4,
+      "roll": 0.9,
+      "followupRoll": null,
+      "odds": 95.3,
+      "guaranteed": false,
+      "cue": "none"
+    },
+    {
+      "id": 5,
+      "kind": "fuzu",
+      "ballId": 5,
+      "roll": 0.9,
+      "followupRoll": null,
+      "odds": 95.3,
+      "guaranteed": false,
+      "cue": "blue"
+    },
+    {
+      "id": 8,
+      "kind": "fuzu",
+      "ballId": 208,
+      "roll": 0.9,
+      "followupRoll": null,
+      "odds": 1,
+      "guaranteed": true,
+      "cue": "none"
+    }
+  ],
+  "transitions": [
+    {
+      "time": 103.7000000000286,
+      "remaining": 5,
+      "queue": [
+        {
+          "id": 2,
+          "kind": "fuzu",
+          "ballId": 2,
+          "roll": 0.9,
+          "followupRoll": null,
+          "odds": 95.3,
+          "guaranteed": false
+        },
+        {
+          "id": 3,
+          "kind": "fuzu",
+          "ballId": 3,
+          "roll": 0.9,
+          "followupRoll": null,
+          "odds": 95.3,
+          "guaranteed": false
+        },
+        {
+          "id": 4,
+          "kind": "fuzu",
+          "ballId": 4,
+          "roll": 0.9,
+          "followupRoll": null,
+          "odds": 95.3,
+          "guaranteed": false
+        },
+        {
+          "id": 5,
+          "kind": "fuzu",
+          "ballId": 5,
+          "roll": 0.9,
+          "followupRoll": null,
+          "odds": 95.3,
+          "guaranteed": false
+        }
+      ],
+      "active": null
+    }
+  ],
+  "starts": [
+    {
+      "id": 1,
+      "win": true,
+      "odds": 95.3,
+      "guaranteed": false,
+      "route": "battle",
+      "cue": "none",
+      "remaining": 130
+    },
+    {
+      "id": 2,
+      "win": false,
+      "odds": 95.3,
+      "guaranteed": false,
+      "route": "ordinary",
+      "cue": "none",
+      "remaining": 5
+    },
+    {
+      "id": 3,
+      "win": false,
+      "odds": 95.3,
+      "guaranteed": false,
+      "route": "ordinary",
+      "cue": "none",
+      "remaining": 4
+    },
+    {
+      "id": 4,
+      "win": false,
+      "odds": 95.3,
+      "guaranteed": false,
+      "route": "ordinary",
+      "cue": "none",
+      "remaining": 3
+    },
+    {
+      "id": 5,
+      "win": false,
+      "odds": 95.3,
+      "guaranteed": false,
+      "route": "ordinary",
+      "cue": "blue",
+      "remaining": 2
+    },
+    {
+      "id": 8,
+      "win": true,
+      "odds": 1,
+      "guaranteed": true,
+      "route": "flash",
+      "cue": "none",
+      "remaining": 1
+    }
+  ],
+  "resolved": [
+    {
+      "id": 1,
+      "win": true
+    },
+    {
+      "id": 2,
+      "win": false
+    },
+    {
+      "id": 3,
+      "win": false
+    },
+    {
+      "id": 4,
+      "win": false
+    },
+    {
+      "id": 5,
+      "win": false
+    },
+    {
+      "id": 8,
+      "win": true
+    }
+  ],
+  "time": 122.45000000004352,
+  "passed": true
+}

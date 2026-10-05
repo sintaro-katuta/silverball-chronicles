@@ -9,7 +9,14 @@ flowchart TB
         DRAW["1回分の大当たり抽選<br/>通常時の例：1/319"]
         PAPER["抽選箱のたとえ<br/>319枚のうち1枚が当たり<br/>引いた紙は毎回箱に戻す"]
         INDEPENDENT["外れても次の当たり確率は同じ<br/>319回で必ず当たるわけではない<br/>早い当たり・連続当たりもあり得る"]
-        RESULT{"抽選結果"}
+        FIXED["抽選結果は内部で確定済み<br/>保留があれば変動の順番を待つ"]
+        SPIN["通常変動と予告<br/>図柄・保留・色・文字などで期待を見せる"]
+        REACH_CHECK{"リーチ演出へ進む？"}
+        REACH["リーチ<br/>あと1つの図柄や結果を待つ場面<br/>当たり確定ではない"]
+        DEVELOP_CHECK{"次の演出へ発展する？"}
+        DEVELOP["発展<br/>敵登場・バトル・より大がかりなリーチへ<br/>発展後も外れることがある"]
+        NOTICE["当たり・ハズレを告知<br/>演出の経路で抽選結果を変更しない"]
+        RESULT{"告知された結果"}
         MISS["液晶演出を経てハズレ<br/>通常時の抽選を続ける"]
         HIT["液晶演出を経て初当たり<br/>大当たりの出玉を受け取る"]
         EFFECT["演出は抽選結果を見せるためのもの<br/>赤文字・バトル・熱い演出でも外れることがある<br/>演出の途中で当たりに変わるという意味ではない"]
@@ -51,7 +58,12 @@ flowchart TB
 
     ROOT --> RENT --> PLAY --> HESO --> ENTRY
     ENTRY -->|いいえ| PLAY
-    ENTRY -->|はい| DRAW --> RESULT
+    ENTRY -->|はい| DRAW --> FIXED --> SPIN --> REACH_CHECK
+    REACH_CHECK -->|進まない| NOTICE
+    REACH_CHECK -->|進む| REACH --> DEVELOP_CHECK
+    DEVELOP_CHECK -->|発展なし| NOTICE
+    DEVELOP_CHECK -->|発展あり| DEVELOP --> NOTICE
+    NOTICE --> RESULT
     DRAW -.-> PAPER --> INDEPENDENT
     RESULT -->|ハズレ| MISS --> PLAY
     RESULT -->|大当たり| HIT --> SPEC

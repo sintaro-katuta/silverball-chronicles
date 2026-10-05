@@ -1,0 +1,59 @@
+{
+  "counters": {
+    "accepted": 60004,
+    "started": 60000,
+    "resolved": 60000,
+    "fifoChecks": 60000,
+    "rollChecks": 120000,
+    "pauseChecks": 120,
+    "queueCueChecks": 59871,
+    "queueCueChanges": 2,
+    "premiumLeakChecks": 1357693,
+    "revivalLeakChecks": 12961,
+    "payout": 602880,
+    "vEntries": 288,
+    "normalJackpots": 91,
+    "chargeBonuses": 129,
+    "rushBonuses": 288
+  },
+  "excluded": {
+    "charge": 129,
+    "guaranteed": 0,
+    "changedPrior": 3
+  },
+  "violations": [
+    {
+      "type": "admitted-outcome-changed",
+      "drawId": 44016,
+      "roll": 0.8046046069357544,
+      "mode": "rush",
+      "admissionOdds": 95.3,
+      "effectiveOdds": 1,
+      "admittedWin": false,
+      "startWin": true
+    },
+    {
+      "type": "admitted-outcome-changed",
+      "drawId": 50062,
+      "roll": 0.45544063206762075,
+      "mode": "rush",
+      "admissionOdds": 95.3,
+      "effectiveOdds": 1,
+      "admittedWin": false,
+      "startWin": true
+    }
+  ],
+  "time": 267820.5499682392,
+  "loadedSourceHashes": {
+    "tests/presentation-longrun.mjs": "4f1cd3595d7152162efe1243a140d97ba05b8915406dc00e7a7f43c40e5417a2",
+    "src/pixi/session-game.js": "f48b66f12876ed3ec217f8450855da2e365a2ad3f596d7b0552cdf6357072eb4",
+    "src/pixi/normal-spin-flow.js": "bafe364379b3b430c4e26046c0b4ab9dea786fe221a85ac16ed60f02564d2644",
+    "src/pixi/presentation-distribution.js": "d32b7ce8fb48599a238477397564ace6a62f5983b04dd8d6120641b9d13f5fe7",
+    "src/pixi/prediction-plan.js": "4c40422c81d7da55d2ad69aa2633400127f0933549b36426da47b0c9e63d62d1",
+    "src/pixi/hold-prediction.js": "c81bdfef809c74a53309db2acd1f98398fe2d4ac011a054baefcf317c44aa99b",
+    "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+    "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+    "src/pixi/moon-cue.js": "2bf303f508f739fa16f74f88ee1d8aa0cd20873fdfd74b5c004a29c48e10e78a",
+    "src/tokyoghoul-w-machine.js": "2f917752bd07c39217ff6f5d2937d60436d09c1078e708669cd971dc15e36652"
+  }
+}

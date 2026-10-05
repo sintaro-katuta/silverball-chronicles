@@ -10,6 +10,8 @@
 - [採用済みのデザイン方針](prototype/DESIGN.md)
 - [PlayCanvas移行記録](prototype/PLAYCANVAS_MIGRATION.md)
 - [パチンコ初心者講座の概要と全体図](transcripts/パチンコ概要_IRvp0ammDbg.md)
+- [月影機関の改善点24項目と担当レビュー](prototype/improvement-review/2026-10-05/README.md)
+- [改善実装・動作確認動画・残る課題](prototype/improvement-review/2026-10-05/implementation.md)
 - [Unity版の説明](unity-yozora/README.md)
 
 ## 配置方針
@@ -265,3 +267,37 @@ docs/
 ### Unity版の資料
 
 - [unity-yozora/README.md](unity-yozora/README.md)
+
+### 月影機関の改善レビュー 2026年10月5日
+
+- [統合した改善点一覧](prototype/improvement-review/2026-10-05/README.md)
+- [抽選・状態の詳細](prototype/improvement-review/2026-10-05/game-flow.md)
+- [演出の詳細](prototype/improvement-review/2026-10-05/presentation.md)
+- [初心者案内の詳細](prototype/improvement-review/2026-10-05/onboarding.md)
+- [改善作業のMermaid](prototype/improvement-review/2026-10-05/improvements.mmd)
+
+### 液晶主役の長尺リーチ 2026年10月5日
+
+- [リーチの絵コンテ（現行54秒）](prototype/long-reach/STORYBOARD.md)
+- [旧90秒版の実装・エンジン比較・検証の履歴](prototype/long-reach/IMPLEMENTATION.md)
+
+- [最新訂正：54秒の攻防・案内文言の点検](prototype/long-reach/REVISION-54S.md)
+
+- [月影機関の全演出パターン表](prototype/PRESENTATION_PATTERNS.md)：通常・RUSHの全ルート、戦闘信頼度、復活・直当たり・プレミア、月予告12種類、突入6種類、獲得・継続・終了。制作目標と実装状況を区別。
+
+- [54秒本編の変化と連続抑制](prototype/long-reach/VARIETY.md)：3種類の攻防と当落に依存しない選択。
+
+- [復活58秒・RUSH即告知12秒](prototype/long-reach/SPECIALS.md)：特殊決着の接続、当落と月予告の維持、検証記録。
+
+- [並列制作の担当・引き継ぎ](prototype/long-reach/PARALLEL_DELIVERY.md)：演出配分／新規ルート／戦闘品質の3セッション、編集範囲、統合と品質確認の条件。
+
+- [全演出パターンの本編統合](prototype/long-reach/INTEGRATION.md)：配分・短尺・直当たり・プレミア・敗北/復活の接続、回帰・実画面確認、素材品質の残作業。
+
+- [東京喰種Wの予告・リーチ構造の照合](prototype/long-reach/W_PREDICTION_STRUCTURE.md)：先読み・リーチ前・発展・チャンスアップの役割、公式情報と月影の未実装範囲。
+
+- [予告・発展構造の実装対応](prototype/long-reach/PREDICTION_IMPLEMENTATION.md)：掲載全項目から月影への翻案、通常／RUSH・保留・発展・全回転、専用映像の未達と検証範囲。
+
+- [続行分の本編受け入れ確認](prototype/long-reach/QUALITY_ACCEPTANCE.md)：長髪・専用5映像・入賞済み当落固定の修正と、全尺/タッチ/再入場/比較/長期検証の範囲。
+- [専用5映像の制作と編集](prototype/long-reach/STORY_PRESENTATIONS.md)：決意・回想・門の防衛・追跡・救出の素材と、通常/RUSHのカット構成。
+
+- [決意の一閃：溜めから一撃へ](prototype/long-reach/RESOLVE_SINGLE_STRIKE.md)：反復斬撃を廃止し、一撃の加速・接触保持・振り抜きへ集中。

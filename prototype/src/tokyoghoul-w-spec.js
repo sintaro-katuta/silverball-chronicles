@@ -19,6 +19,33 @@ export const TOKYOGHOUL_W = Object.freeze({
     'electric-opening-pattern','attacker-timing','v-routing','6000-plus-alpha']),
 });
 
+// Public-rounded reconstruction, not an exact internal ROM table.
+// Equal symbol/charge masses; 50% symbol entry plus 1% charge entry.
+// Shares describe the combined normal hit stream, not the published 51% basis.
+export const W_NORMAL_MODEL=Object.freeze({
+  combinedOdds:1/(1/TOKYOGHOUL_W.normal.symbolOdds+1/TOKYOGHOUL_W.normal.chargeOdds),
+  branches:Object.freeze([
+    Object.freeze({outcome:'symbol',entry:true,share:.25}),
+    Object.freeze({outcome:'charge',entry:true,share:.005}),
+    Object.freeze({outcome:'symbol',entry:false,share:.25}),
+    Object.freeze({outcome:'charge',entry:false,share:.495}),
+  ]),
+});
+export function wPublishedNormalOutcome(roll){
+  const hit=1/W_NORMAL_MODEL.combinedOdds;
+  if(roll>=hit)return {outcome:'miss',entry:false};
+  const r=roll/hit;let end=0;
+  for(const branch of W_NORMAL_MODEL.branches){end+=branch.share;if(r<end)return {outcome:branch.outcome,entry:branch.entry};}
+  return {outcome:'charge',entry:false};
+}
+export function wNormalSymbolProbability(){
+  return W_NORMAL_MODEL.branches.filter(b=>b.outcome==='symbol').reduce((n,b)=>n+b.share,0)/W_NORMAL_MODEL.combinedOdds;
+}
+// Cues describe a symbol win / successful fuzu, before electric and V entry.
+export function wPresentationWinProbability(kind,rushOdds=TOKYOGHOUL_W.rush.odds){
+  return kind==='fuzu'?1/rushOdds:wNormalSymbolProbability();
+}
+
 // Public rounded odds give an approximation, not an exact internal probability.
 export function wRushHitProbability(draws=TOKYOGHOUL_W.rush.draws) {
   if(!Number.isInteger(draws)||draws<0)throw new RangeError('Nonnegative integer draws required');

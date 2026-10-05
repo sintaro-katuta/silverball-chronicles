@@ -1,0 +1,24 @@
+✔ prediction attachment preserves admitted records, resolved outcomes and gameplay RNG consumption (159.971791ms)
+✔ queued holds remain FIFO and their cue agrees with the eventual active draw (32.746417ms)
+✔ queued cues agree on winning records, while charge and guaranteed followups remain excluded (0.686125ms)
+✔ all supported routes transfer the same prediction plan without permitting a false confirmed outcome (19.348417ms)
+✔ standard, revival and flash clocks retain duration and upper windows through prediction overlays (88.754083ms)
+✔ pause freezes prediction and physics clocks; active choreography does not extend electric deadlines (22.647541ms)
+✔ charge bypasses prediction and symbol reach even under an explicit review override (2.832ms)
+✔ story stays on one timeline across entrance/title split and original end (2.064958ms)
+✔ RUSH stories use the existing two-second window, short cues fall back (0.129667ms)
+✔ plain reels and missing films preserve existing fallback; basic windows fit (0.080542ms)
+✔ dedicated entrance choice cannot distinguish ordinary defeat from revival (9.7785ms)
+✔ all five films carry unique causal events and complete six shots (2.875417ms)
+✔ family mapping never infers or changes an outcome (0.33925ms)
+✔ brief windows use edited two/three-shot versions; normal entrance has five events (7.553042ms)
+✔ reduced effects preserve shots/timing; replay seeks remain deterministic (0.610208ms)
+✔ short edits leave reading time for the final shot instead of rushing it (17.821542ms)
+ℹ tests 16
+ℹ suites 0
+ℹ pass 16
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 428.950042

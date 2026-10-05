@@ -1,0 +1,294 @@
+{
+  "cases": [
+    {
+      "name": "normal-pressure-loss",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "86579de76bd622717c0b7dff4bbce352b7234b42149d6b6d73d2a7b95a3bdb36",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-normal-pressure/raw/page@518f24360e6dfce4d04f901eeb4530a1.webm"
+    },
+    {
+      "name": "normal-pressure-win",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "86579de76bd622717c0b7dff4bbce352b7234b42149d6b6d73d2a7b95a3bdb36",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-normal-pressure/raw/page@38774fa05ca7aa305d6af7473be1ff4f.webm"
+    },
+    {
+      "name": "normal-revival",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "86579de76bd622717c0b7dff4bbce352b7234b42149d6b6d73d2a7b95a3bdb36",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-normal-pressure/raw/page@3df6dd84564867a8fbd1549aaec533b3.webm"
+    },
+    {
+      "name": "normal-initiative-loss",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "86579de76bd622717c0b7dff4bbce352b7234b42149d6b6d73d2a7b95a3bdb36",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-normal-initiative/raw/page@d57e4f0d300a90f14c073e65258b3686.webm"
+    },
+    {
+      "name": "normal-initiative-win",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "86579de76bd622717c0b7dff4bbce352b7234b42149d6b6d73d2a7b95a3bdb36",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-normal-initiative/raw/page@f5758451620dfa557bb539e0c911af93.webm"
+    },
+    {
+      "name": "normal-sword",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "86579de76bd622717c0b7dff4bbce352b7234b42149d6b6d73d2a7b95a3bdb36",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-normal-initiative/raw/page@eced62a90ae7f1f261718767d20772fd.webm"
+    },
+    {
+      "name": "normal-exchange-loss",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "86579de76bd622717c0b7dff4bbce352b7234b42149d6b6d73d2a7b95a3bdb36",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-normal-exchange/raw/page@8a2708d7212c4433f19770bb40fb0e6b.webm"
+    },
+    {
+      "name": "normal-exchange-win",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "86579de76bd622717c0b7dff4bbce352b7234b42149d6b6d73d2a7b95a3bdb36",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-normal-exchange/raw/page@d70d7b3a4a7a4506c443a64c596e636c.webm"
+    },
+    {
+      "name": "normal-moon",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "86579de76bd622717c0b7dff4bbce352b7234b42149d6b6d73d2a7b95a3bdb36",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-normal-exchange/raw/page@66636e4f1ebc01e8356dc1c57a3a628b.webm"
+    },
+    {
+      "name": "rush-pressure-loss",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "f2119c990224bee9a8ddb8d8ee8c9eb528edcf24d07cde7c0bb1ceabffd49880",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-rush/raw/page@cd91c48299a1cd1024592b55cec5b382.webm"
+    },
+    {
+      "name": "rush-pressure-win",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "f2119c990224bee9a8ddb8d8ee8c9eb528edcf24d07cde7c0bb1ceabffd49880",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-rush/raw/page@60cd29723025886c1f74164d0d618259.webm"
+    },
+    {
+      "name": "rush-initiative-loss",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "f2119c990224bee9a8ddb8d8ee8c9eb528edcf24d07cde7c0bb1ceabffd49880",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-rush/raw/page@ec39dfd927dce367e8dfdce74af2cedf.webm"
+    },
+    {
+      "name": "rush-initiative-win",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "f2119c990224bee9a8ddb8d8ee8c9eb528edcf24d07cde7c0bb1ceabffd49880",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-rush/raw/page@f4afcd1dbca8af0dc2d20c021f4fc336.webm"
+    },
+    {
+      "name": "rush-exchange-loss",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "f2119c990224bee9a8ddb8d8ee8c9eb528edcf24d07cde7c0bb1ceabffd49880",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-rush/raw/page@b0c751bf38535ebae08331c971729a5b.webm"
+    },
+    {
+      "name": "rush-exchange-win",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "f2119c990224bee9a8ddb8d8ee8c9eb528edcf24d07cde7c0bb1ceabffd49880",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-rush/raw/page@1cafa3ac1eee366cbb85d8c624bbbf26.webm"
+    },
+    {
+      "name": "rush-flash",
+      "sourceChanged": false,
+      "sourceHashes": {
+        "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+        "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+        "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+        "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+        "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+        "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+        "src/pixi/story-prediction-window.js": "f2119c990224bee9a8ddb8d8ee8c9eb528edcf24d07cde7c0bb1ceabffd49880",
+        "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+        "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a",
+        "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+        "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/presentation-quality-2026-10-05/final-rush/raw/page@ab5021b93974ec2008e883e8415c2009.webm"
+    }
+  ],
+  "mainCases": 16,
+  "rushScope": "Recorded before final normal-only story memory mapping; RUSH code path unchanged"
+}

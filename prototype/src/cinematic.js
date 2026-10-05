@@ -30,4 +30,4 @@ export function beatsFor(pattern='awakening'){
 }
 export function beatAt(t,pattern='awakening'){if(t<0)return {id:'reach',from:-REACH_DURATION,to:0,title:'リーチ',line:'',heat:.4};const beats=beatsFor(pattern);return beats.find(b=>t>=b.from&&t<b.to)||beats.at(-1);}
 export function timeline(game){if(!game.presentation)return null;const p=game.presentation;return {...p,t:p.time/p.rate-REACH_DURATION,scene:SCENES.find(s=>s.id===p.sceneId)||SCENES[0]};}
-export function reachBeat(p){const b={...beatAt(p.t,p.pattern)};if(b.id==='enemy')b.title=`VS ${p.scene.enemy}`;if(b.id==='resolve'&&p.win){b.title='大当り';b.line='アタッカー開放へ';}b.line=directionLine(p,b);return b;}
+export function reachBeat(p){const b={...beatAt(p.t,p.pattern)};if(b.id==='enemy')b.title=`VS ${p.scene.enemy}`;if(b.id==='resolve'&&p.win){b.title='大当り';b.line='右打ちでつなげ！';}b.line=directionLine(p,b);return b;}

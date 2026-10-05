@@ -1,0 +1,49 @@
+{
+  "alpha": {
+    "corner": 0,
+    "clearPixels": 967966
+  },
+  "results": [
+    {
+      "pixi": {
+        "frames": 600,
+        "p50IntervalMs": 16.69999999999891,
+        "p95IntervalMs": 16.700000000000728,
+        "p95CpuSubmitMs": 0.5,
+        "over33ms": 0
+      },
+      "three": {
+        "frames": 0,
+        "p50IntervalMs": null,
+        "p95IntervalMs": null,
+        "p95CpuSubmitMs": null,
+        "over33ms": 0
+      }
+    },
+    {
+      "pixi": {
+        "frames": 600,
+        "p50IntervalMs": 16.69999999999891,
+        "p95IntervalMs": 16.700000000000728,
+        "p95CpuSubmitMs": 0.5,
+        "over33ms": 0
+      },
+      "three": {
+        "frames": 600,
+        "p50IntervalMs": 16.69999999999709,
+        "p95IntervalMs": 16.700000000004366,
+        "p95CpuSubmitMs": 3.299999713897705,
+        "over33ms": 0
+      }
+    }
+  ],
+  "errors": [],
+  "conditions": {
+    "viewport": "1100x900",
+    "canvas": "840x560",
+    "dpr": 1,
+    "browser": "headless Chrome",
+    "duration": 10,
+    "physicalMobile": false
+  }
+}

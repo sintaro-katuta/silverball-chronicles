@@ -10,15 +10,27 @@ export class WMachine {
   this.rng=rng;this.normalResolver=normalResolver;this.fuzuHoldLimit=fuzuHoldLimit;this.serial=0;this.seen=new Set();
   this.queues={tokuzu1:[],tokuzu2:[],fuzu:[]};this.active={tokuzu1:null,tokuzu2:null,fuzu:null};
   this.rush=null;this.bonus=null;this.pendingV=null;this.entryDecision=null;this.pendingEntry=false;
-  this.electricOpen=false;this.electricAuthorization=false;this.payout=0;this.events=[];
+  this.electricOpen=false;this.electricAuthorization=false;this.payout=0;this.events=[];this.eventSequence=0;this.retiredBallIdBefore=0;
  }
- emit(type,data={}){this.events.push({sequence:this.events.length+1,type,...data});}
+ emit(type,data={}){this.events.push({sequence:++this.eventSequence,type,...data});}
+ eventsSince(sequence){const first=this.events[0]?.sequence??this.eventSequence+1;return this.events.slice(Math.max(0,sequence-first+1));}
+ pruneConsumedEvents(sequence,keep=2048){
+  const excess=this.events.length-keep;if(excess<=0)return;
+  let remove=0;while(remove<excess&&this.events[remove].sequence<=sequence)remove++;
+  if(remove)this.events.splice(0,remove);
+ }
+ isCapturedOrRetired(ballId){return this.seen.has(ballId)||(Number.isSafeInteger(ballId)&&ballId<this.retiredBallIdBefore);}
+ retireBallIdsBefore(floor){
+  if(!Number.isSafeInteger(floor)||floor<this.retiredBallIdBefore)return;
+  this.retiredBallIdBefore=floor;
+  for(const id of this.seen)if(Number.isSafeInteger(id)&&id<floor)this.seen.delete(id);
+ }
  random(){const n=this.rng();if(!(n>=0&&n<1))throw new RangeError('RNG must return [0,1)');return n;}
  award(amount,kind,ballId){this.payout+=amount;this.emit('prize',{amount,kind,ballId,total:this.payout});}
  admit(kind,ballId){
   if(!['ordinary','start','fuzu','electric','attacker'].includes(kind))throw new RangeError('Unknown inlet');
   if(ballId===undefined||ballId===null)throw new TypeError('A physical ball ID is required');
-  if(this.seen.has(ballId))return {captured:false,reason:'already-captured'};
+  if(this.isCapturedOrRetired(ballId))return {captured:false,reason:'already-captured'};
   if(kind==='electric'&&!this.electricOpen)return {captured:false,reason:'closed'};
   if(kind==='attacker'&&(!this.bonus?.open||this.bonus.count>=W.attacker.countLimit))return {captured:false,reason:'closed'};
   this.seen.add(ballId);this.award(W.prizes[kind],kind,ballId);
@@ -43,6 +55,8 @@ export class WMachine {
    this.emit('drawRejected',{kind,ballId,reason:capacity===null?'unknown-hold-capacity':'hold-full'});return false;
   }
   const record={id:++this.serial,kind,ballId,roll:kind==='tokuzu2'?null:this.random(),followupRoll:kind==='tokuzu2'?this.random():null};
+  // A later guarantee/RUSH reset cannot change an already admitted draw.
+  if(kind==='fuzu'){record.odds=this.rush.odds??W.rush.odds;record.guaranteed=!!this.rush.guaranteed;}
   if(immediate)this.active[kind]=record;else this.queues[kind].push(record);
   this.emit('drawAccepted',{kind,drawId:record.id,immediate});return true;
  }
@@ -65,7 +79,7 @@ export class WMachine {
    if(outcome!=='miss')this.beginBonus(outcome==='symbol'?1500:300,false);
   }else if(kind==='fuzu'){
    if(!this.rush)throw new Error('Fuzu result outside RUSH');
-   this.rush.remaining--;this.rush.consumed++;outcome=record.roll<1/(this.rush.odds??W.rush.odds)?'electric-open':'miss';
+   this.rush.remaining--;this.rush.consumed++;outcome=record.roll<1/(record.odds??W.rush.odds)?'electric-open':'miss';
    if(outcome==='electric-open')this.electricAuthorization=true;
    else if(this.rush.remaining===0)this.endRushIfDrained();
   }else if(kind==='tokuzu2'){
@@ -110,5 +124,5 @@ export class WMachine {
  snapshot(){return JSON.parse(JSON.stringify({model:W.model,probabilityBasis:'public-rounded-approximation',
   unresolved:[...W.unresolved,'normal-fuzu-processing','physical-v-sensor','tokuzu2-direct-hit-table'],fuzuHoldLimit:this.fuzuHoldLimit,rush:this.rush,bonus:this.bonus,pendingV:this.pendingV,
   pendingEntry:this.pendingEntry,electricOpen:this.electricOpen,electricAuthorization:this.electricAuthorization,
-  active:this.active,holds:this.queues,payout:this.payout,events:this.events}));}
+  active:this.active,holds:this.queues,payout:this.payout,retiredBallIdBefore:this.retiredBallIdBefore,eventSequence:this.eventSequence,events:this.events}));}
 }

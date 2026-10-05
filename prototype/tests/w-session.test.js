@@ -7,7 +7,7 @@ const bonus=(g,prefix)=>{let id=0;while(g.jackpot){g.jackpot.gap=0;g.openWRound(
 test('production SessionGame uses W control and actual prizes, no stage/gold multipliers',()=>{
  const g=new SessionGame(()=>0);g.profile.upgrades.bonus=99;g.stage=10;g.hit(ball('start'),'start');settle(g);
  assert.equal(g.jackpot.rounds,10);assert.equal(g.jackpot.charge,false);bonus(g,'n');
- assert.equal(g.total,1501);assert.equal(g.rush.remaining,130);assert.equal(g.accounting.reconciled,true);
+ assert.equal(g.total,1501);assert.equal(g.rush.remaining,130);assert.equal(g.lastBonus.entryEligible,true);assert.equal(g.lastBonus.entryRevealed,true);assert.equal(g.accounting.reconciled,true);
 });
 test('RUSH hit needs actual electric and V admissions before 1500 x 2',()=>{
  const g=new SessionGame(()=>.9,{policy:{...W_RUNTIME_POLICY,nextGuaranteedFuzuRate:0}});g.startRush();g.w.rng=()=>0;

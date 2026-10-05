@@ -10,7 +10,7 @@ const lines={
 };
 export function directionLine(p,beat){
  const style=buildStyle(p.buildStyle);
- if(beat.id==='resolve')return p.win?'突破成功。アタッカー開放へ':'防壁は残った……次の一手を。';
+ if(beat.id==='resolve')return p.win?'突破成功。右打ちでつなげ！':'防壁は残った……次の一手を。';
  if(beat.id==='silence')return '刃が、届かなかった……';
  if(beat.id==='revival')return 'まだ繋がっている。もう一度！';
  if(p.pattern==='revival'&&beat.id==='strike'&&p.t>=20.3)return '残った亀裂へ、もう一度！';

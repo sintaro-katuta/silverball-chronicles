@@ -46,3 +46,8 @@
 @media(max-width:699px),(max-width:899px) and (orientation:portrait){
  .focus-view.view-ready.controls-open .board-frame{width:min(100vw,calc((100dvh - var(--controls-height) - var(--panel-bottom) - 12px - var(--controls-top)) * 396 / 436))}
 }
+
+.session-state{display:grid;gap:6px;margin:12px 0;padding:10px 12px;background:#17243b;border-left:2px solid #91aeca;font-size:13px;line-height:1.7}
+.session-state [hidden]{display:none}
+
+.focus-view .session-panel .effect-control{display:flex;align-items:center;gap:10px;min-height:44px}.effect-control input{width:20px;height:20px;margin:0}

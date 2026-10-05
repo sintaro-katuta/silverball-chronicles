@@ -1,0 +1,29 @@
+✔ development is separate from win-only ornament, and RUSH timing stays unchanged (0.697708ms)
+✔ developed losing reach preserves stored results and RNG calls, freezes during pause, retains readable stop (32.473084ms)
+✔ presentation admission trace stays bounded while lifetime counters retain rejected entries (0.593209ms)
+{"entries":10,"draws":10,"maxHolds":2}
+✔ physical admissions start spins, pause freezes and all accepted holds drain (7149.494ms)
+✔ active draw is separate from five holds, full holds do not add a draw (130.008375ms)
+✔ presentation advances announced mechanical deadlines without consuming a queued draw (3.321667ms)
+✔ pause stops both presentation time and mechanical expiry (0.373458ms)
+✔ status follows announced mechanics through RUSH without leaking a pending win (1.15675ms)
+✔ LCD acquisition guidance uses announced openings and stops at actual bonus (0.066542ms)
+✔ normal and RUSH idle differ; unresolved records are never read (0.065708ms)
+✔ single normal model preserves original four branches, including boundaries and cue prior (5.510333ms)
+✔ consumed W diagnostics are bounded without losing payout or replaying events (26.365166ms)
+✔ pruning consumed history never drops unconsumed events or resets sequence (0.162375ms)
+✔ live older balls constrain retirement, and stale V callbacks cannot grant another bonus (0.224458ms)
+✔ production W bridge accepts physical fuzu/electric/V/attacker crossings and counts 3000 (94.167458ms)
+✔ natural right launches traverse fuzu, two electric admissions, two V entries and 3000 (7343.916417ms)
+✔ dense arrivals cannot be consumed beyond the ten-count closing boundary (47.777292ms)
+✔ control pause freezes an active reach even when flow itself has not been paused (12.509583ms)
+✔ retirement is idempotent and rejects late capture and subsequent ticks (0.231917ms)
+✔ new play starts independently, including physical IDs and old profile upgrades (0.147458ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7578.685

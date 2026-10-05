@@ -1,0 +1,26 @@
+✔ new intermediate poses keep blade crossings and particle origin stable in all three stories (34.896417ms)
+✔ guard alignment never teleports the actors at contact or recovery (371.008ms)
+✔ new kneeling and rise poses preserve indistinguishable defeat before 54 seconds (1.565584ms)
+✔ new no-cue records omit upper action and arrows while LCD attacks continue (0.206166ms)
+✔ ordinary loss and revival share the complete defeat and silence until the reveal (0.887292ms)
+✔ blade light follows atlas weapon landmarks and recoil starts after contact (0.296834ms)
+✔ normal and RUSH use 54s with a separate 5s upper window and late win-only mechanism (0.306958ms)
+✔ moon reveal uses the same stored phase/colour only in the upper window (0.154125ms)
+✔ long reach preserves accepted outcomes, FIFO, pause and physical mechanics without extra lottery calls (251.275417ms)
+✔ authored exchanges accelerate in 180ms, recover quickly and change framing instead of stretching playback (0.363042ms)
+✔ special endings are limited to winning records and appropriate mode, with no consecutive specials (1.468959ms)
+✔ revival stages defeat, silence, rising moonlight and final strike before delayed winning mechanism (1.077334ms)
+✔ 12s flash has one quick attack and a full stored five-second upper cue, without new cue selection (0.310959ms)
+✔ both endings preserve accepted results, pause, queued records and paid-ball accounting (186.031334ms)
+✔ each mode visits every story per bag, never repeats consecutively, and reuses a draw (3.949375ms)
+✔ RUSH history does not influence normal story choice (0.256959ms)
+✔ stories differ in attacking side and framing but retain timing and upper guidance (1.736542ms)
+✔ selected story survives presentation and pause without drawing extra lottery randomness (274.723917ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 828.587208

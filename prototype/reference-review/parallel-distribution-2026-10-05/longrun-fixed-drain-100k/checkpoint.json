@@ -1,0 +1,38 @@
+{
+  "counters": {
+    "accepted": 100008,
+    "started": 100000,
+    "resolved": 100000,
+    "fifoChecks": 100000,
+    "rollChecks": 200000,
+    "pauseChecks": 200,
+    "queueCueChecks": 99801,
+    "queueCueChanges": 0,
+    "premiumLeakChecks": 2232216,
+    "revivalLeakChecks": 11880,
+    "payout": 1086690,
+    "vEntries": 534,
+    "normalJackpots": 156,
+    "chargeBonuses": 199,
+    "rushBonuses": 534
+  },
+  "excluded": {
+    "charge": 199,
+    "guaranteed": 4,
+    "changedPrior": 0
+  },
+  "violations": [],
+  "time": 439674.6505284198,
+  "loadedSourceHashes": {
+    "tests/presentation-longrun.mjs": "25b244cca9c3f0392c6cb9cde336cc00f5cc1cbf87b16720f324dfd57e83df9b",
+    "src/pixi/session-game.js": "7a4dd81a67f983541a3e7756419123f6cb043509959afd01c0bc3e4d1f7f02fe",
+    "src/pixi/normal-spin-flow.js": "5aa0eb927d9737dc5e7c3cc7b9c49c10d67624bbaa63c2d8dac0483cbb729234",
+    "src/pixi/presentation-distribution.js": "d32b7ce8fb48599a238477397564ace6a62f5983b04dd8d6120641b9d13f5fe7",
+    "src/pixi/prediction-plan.js": "4c40422c81d7da55d2ad69aa2633400127f0933549b36426da47b0c9e63d62d1",
+    "src/pixi/hold-prediction.js": "06e5b06a176c0637eb03487bb035f14879d14ace191a5b0d025bcf540b44c3b1",
+    "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+    "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+    "src/pixi/moon-cue.js": "2bf303f508f739fa16f74f88ee1d8aa0cd20873fdfd74b5c004a29c48e10e78a",
+    "src/tokyoghoul-w-machine.js": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+  }
+}

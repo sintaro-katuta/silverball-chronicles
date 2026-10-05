@@ -1,0 +1,140 @@
+{
+  "runs": [
+    {
+      "variant": "pressure",
+      "cases": [
+        {
+          "name": "win",
+          "win": true,
+          "ending": "standard",
+          "seconds": 54,
+          "timing": {
+            "frames": 3241,
+            "p95Ms": 16.700000000004366,
+            "maxMs": 16.80000000000291,
+            "time": 53.990600000000896
+          }
+        },
+        {
+          "name": "loss",
+          "win": false,
+          "ending": "standard",
+          "seconds": 54,
+          "timing": {
+            "frames": 3242,
+            "p95Ms": 16.70000000001164,
+            "maxMs": 16.80000000000291,
+            "time": 54.023000000382666
+          }
+        },
+        {
+          "name": "revival",
+          "win": true,
+          "ending": "revival",
+          "seconds": 58,
+          "timing": {
+            "frames": 3480,
+            "p95Ms": 16.70000000001164,
+            "maxMs": 16.800000000017462,
+            "time": 57.98910000009717
+          }
+        }
+      ],
+      "errors": [],
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/parallel-combat-2026-10-05/hair-full/raw/page@f84b5889f972f8425c3a6a0d87ed1a7d.webm"
+    },
+    {
+      "variant": "initiative",
+      "cases": [
+        {
+          "name": "win",
+          "win": true,
+          "ending": "standard",
+          "seconds": 54,
+          "timing": {
+            "frames": 3241,
+            "p95Ms": 16.700000000004366,
+            "maxMs": 16.80000000000291,
+            "time": 53.991699999619506
+          }
+        },
+        {
+          "name": "loss",
+          "win": false,
+          "ending": "standard",
+          "seconds": 54,
+          "timing": {
+            "frames": 3240,
+            "p95Ms": 16.70000000001164,
+            "maxMs": 16.80000000000291,
+            "time": 53.99249999981044
+          }
+        },
+        {
+          "name": "revival",
+          "win": true,
+          "ending": "revival",
+          "seconds": 58,
+          "timing": {
+            "frames": 3481,
+            "p95Ms": 16.79999999998836,
+            "maxMs": 16.800000000017462,
+            "time": 58.001199999715496
+          }
+        }
+      ],
+      "errors": [],
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/parallel-combat-2026-10-05/hair-full/raw/page@5172ec06f9c009c534c8c901c72c640c.webm"
+    },
+    {
+      "variant": "exchange",
+      "cases": [
+        {
+          "name": "win",
+          "win": true,
+          "ending": "standard",
+          "seconds": 54,
+          "timing": {
+            "frames": 3241,
+            "p95Ms": 16.799999999995634,
+            "maxMs": 16.80000000000291,
+            "time": 53.9902999999055
+          }
+        },
+        {
+          "name": "loss",
+          "win": false,
+          "ending": "standard",
+          "seconds": 54,
+          "timing": {
+            "frames": 3240,
+            "p95Ms": 16.79999999998836,
+            "maxMs": 16.80000000000291,
+            "time": 53.992300000001094
+          }
+        },
+        {
+          "name": "revival",
+          "win": true,
+          "ending": "revival",
+          "seconds": 58,
+          "timing": {
+            "frames": 3480,
+            "p95Ms": 16.70000000001164,
+            "maxMs": 16.800000000017462,
+            "time": 57.991100000097106
+          }
+        }
+      ],
+      "errors": [],
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/parallel-combat-2026-10-05/hair-full/raw/page@18d5be2510947e9709cb4708fa21e981.webm"
+    }
+  ],
+  "sources": {
+    "src/pixi/long-reach-timeline.js": "16279dd46040d9b07c2df5a1813dfcc03189fe35e7e9f3157d4bd1bb645013bb",
+    "src/pixi/long-reach-view.js": "2a6ddab1c1fe2534fbeda27dfe061565641bc58b087d19b3d893ec13482914db",
+    "public/assets/lcd/long-reach/duel-poses-longhair-v4.png": "804c6dc3a8d900703c701436213c3020c66f90a3385d1813cff31e2aae703a9e",
+    "public/assets/lcd/long-reach/duel-intermediates-longhair-v7.png": "0391ea3c361d9f24a03b3b73a271cd2e77d9b6691bfe63b2fe8ccc2bde910259"
+  },
+  "fixture": "Independent actual Pixi view, all nine stories/outcomes at real-time speed. Explicit stored result; gameplay accounting and main result handoff are checked by root. Three concurrent headless contexts; timing is a desktop verification condition, not a mobile benchmark."
+}

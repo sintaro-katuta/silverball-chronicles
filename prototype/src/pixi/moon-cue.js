@@ -1,4 +1,5 @@
 // Cue reliability means P(existing winning presentation | this moon cue).
+import {reachSchedule} from './reach-ending.js';
 // Selection uses a separate deterministic presentation hash, never the game RNG.
 export const MOON_PHASES=Object.freeze(['crescent','half','full']);
 export const MOON_COLORS=Object.freeze(['none','green','blue','red']);
@@ -40,6 +41,11 @@ export function createMoonCueController(){
   const resultEffect=resultAge>=0&&resultAge<2.4;
   const predictive=!!record&&!resultEffect;
   const displayed=predictive||resultEffect||game.moonCueReview?cue:neutral();
+  if(game.isWMachine&&game.spinResult?.reach&&!game.presentation)return {...neutral(),strike:false,resultEffect:false,reliabilityAssigned:true};
+  // During a long reach the upper cue belongs to the announced viewing window.
+  // Keep the stored cue; visibility alone changes, never its colour or result.
+  if(game.presentation?.longReach&&(game.presentation.time<reachSchedule(game.presentation).upperAt||game.presentation.time>=reachSchedule(game.presentation).upperEnd))return {...displayed,cueActive:false,strike:false,resultEffect:false,expectation:null,reliabilityAssigned:true};
+  if(!game.presentation&&game.lastReachWasLong)return {...neutral(),strike:false,resultEffect:false,reliabilityAssigned:true};
   const strike=['spin','settle'].includes(blade.phase);
   // Lock the phase and color from the first cue until this draw ends.
   // Reliability applies only before resolution, including the sword lead-in.

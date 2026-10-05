@@ -1,0 +1,44 @@
+flowchart TB
+    SOURCE["初心者資料と補足説明<br/>入賞・抽選・保留・演出・発展・当落<br/>確変・時短・ST・連チャン・払出"]
+    GENERAL["一般原則を月影へ適用<br/>発射数と抽選回数を分ける<br/>期待の示唆と抽選結果を分ける<br/>払出と持ち玉を分ける"]
+    RULES["月影の現行W仕様を優先<br/>動画の1/319・ST140へ置換しない<br/>普図→電チュー→特図2→実球V→払出を維持"]
+    SOURCE --> GENERAL --> RULES
+
+    subgraph REVIEW["3サブエージェントのレビュー完了　合計24項目"]
+        FLOW["抽選・状態担当 GF01〜GF08<br/>関連23テスト成功<br/>既知の未達6件・改善提案2件"]
+        PRESENT["演出担当 E01〜E08<br/>リーチと発展・役物の意味<br/>当落・保留・復帰・検証"]
+        GUIDE["初心者案内担当 O1〜O8<br/>入賞口・停止・状態・残回数<br/>スペック・払出・用語"]
+    end
+    RULES --> FLOW
+    RULES --> PRESENT
+    RULES --> GUIDE
+
+    subgraph NEXT["対応順の提案　実装の完了を示す図ではない"]
+        MEANING["第1段階：意味と案内を整える<br/>入賞口と開始・停止を任意説明<br/>普図当選とV後大当りを区別<br/>払出・持ち玉・現在状態の意味"]
+        STORY["第2段階：通常の発展を設計<br/>リーチ止まりと発展を分ける<br/>発展当りと発展外れを用意<br/>勝ち側専用月蝕の意味を維持"]
+        RESEARCH["並行：W未達の根拠取得<br/>通常普図・V内部・開閉時間<br/>特図2直撃・普図容量・コンプリート<br/>未確認値は推測で埋めない"]
+        REFACTOR["第3段階：保守と長時間動作<br/>確率モデルの重複を整理<br/>履歴・球ID保持量を計測"]
+        VERIFIED{"最新の実再生と関連テストで確認"}
+        READY["採用判断可能な改善結果<br/>通常・当り・外れ・復帰<br/>RUSH待機・V・払出・終了"]
+        UNKNOWN["未確認は未確認として残す<br/>コード確認だけで画面や音を評価しない"]
+    end
+    GUIDE --> MEANING
+    PRESENT --> MEANING
+    PRESENT --> STORY
+    FLOW --> RESEARCH
+    FLOW --> REFACTOR
+    MEANING --> VERIFIED
+    STORY --> VERIFIED
+    RESEARCH --> VERIFIED
+    REFACTOR --> VERIFIED
+    VERIFIED -->|確認できた| READY
+    VERIFIED -->|確認できない| UNKNOWN
+
+    classDef basis fill:#edf2f7,stroke:#64748b,color:#172033;
+    classDef review fill:#e3f1ff,stroke:#4083bd,color:#153954;
+    classDef task fill:#fff0d5,stroke:#d48a16,color:#51330b;
+    classDef caution fill:#f4f0ff,stroke:#8b78ac,color:#352849;
+    class SOURCE,GENERAL,RULES basis;
+    class FLOW,PRESENT,GUIDE review;
+    class MEANING,STORY,RESEARCH,REFACTOR,READY task;
+    class UNKNOWN caution;

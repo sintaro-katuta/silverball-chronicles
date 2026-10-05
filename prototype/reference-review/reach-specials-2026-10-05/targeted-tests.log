@@ -1,0 +1,16 @@
+✔ normal and RUSH use 54s with a separate 5s upper window and late win-only mechanism (1.656875ms)
+✔ moon reveal uses the same stored phase/colour only in the upper window (0.130667ms)
+✔ long reach preserves accepted outcomes, FIFO, pause and physical mechanics without extra lottery calls (120.055625ms)
+✔ authored exchanges accelerate in 180ms, recover quickly and change framing instead of stretching playback (0.451542ms)
+✔ special endings are limited to winning records and appropriate mode, with no consecutive specials (1.011583ms)
+✔ revival stages defeat, silence, rising moonlight and final strike before delayed winning mechanism (0.679375ms)
+✔ 12s flash has one quick attack and a full stored five-second upper cue, without new cue selection (0.218042ms)
+✔ both endings preserve accepted results, pause, queued records and paid-ball accounting (103.148542ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 190.173792

@@ -1,6 +1,7 @@
 import {revivalReels} from './revival-entry-motion.js';
 import {rushEndPose} from './rush-end-motion.js';
-import {reachSeconds} from './win-sequence.js';
+import {reachSeconds,isShortRoute} from './win-sequence.js';
+import {createSpecialRouteView} from './special-route-view.js';
 import {rushWinPose} from './rush-win-motion.js';
 import {createRushEndView} from './rush-end-view.js';
 import {Container,Graphics,Sprite,Texture} from 'pixi.js';
@@ -10,6 +11,9 @@ import {createRushEntryView} from './rush-entry-view.js';
 import {createHoldView} from './hold-view.js';
 import {LCD_REEL_LAYOUT} from './lcd-safe-layout.js';
 import {createBackgroundTransition} from './background-transition.js';
+import {createDevelopmentView} from './development-view.js';
+import {wAcquisitionLabel} from '../session-status.js';
+import {createPredictionView} from './prediction-view.js';
 const GLYPHS=['00100/01100/00100/00100/00100/00100/01110','11110/00001/00001/01110/10000/10000/11111','11110/00001/00001/01110/00001/00001/11110','10010/10010/10010/11111/00010/00010/00010','11111/10000/10000/11110/00001/00001/11110','01110/10000/10000/11110/10001/10001/01110','11111/00001/00010/00100/01000/01000/01000','01110/10001/10001/01110/10001/10001/01110','01110/10001/10001/01111/00001/00001/01110'];
 const mod=n=>((n%9)+9)%9;
 const RAINBOW=['#ff6282','#ffc75b','#f7ff91','#65f1b4','#75d8ff','#bc9aff'];
@@ -44,7 +48,7 @@ function rushShineTexture(frame){
   });c.globalCompositeOperation='source-in';c.drawImage(light,0,0);
  }));t.source.scaleMode='nearest';return t;
 }
-export function createNormalSpinView(rushScene=null){
+export function createNormalSpinView(rushScene=null,reachAtlas=null,reachLandscape=null,motionAtlas=null,character=null,storySheets=null){
  const root=new Container(),textures=Array.from({length:9},(_,i)=>digitTexture(i+1));
  const lcdMask=new Graphics().rect(0,0,210,140).fill(0xffffff);root.addChild(lcdMask);root.mask=lcdMask;
  const shade=new Graphics().rect(24,LCD_REEL_LAYOUT.normalTop-3,162,57).fill({color:0x061024,alpha:.6});root.addChild(shade);
@@ -76,6 +80,18 @@ export function createNormalSpinView(rushScene=null){
  const shards=[];for(let i=0;i<28;i++){const g=new Graphics().poly([0,-3,3,0,0,4,-2,1]).fill(i%3===0?0xffffff:i%2?0xffd36b:0xd88b36);celebration.addChild(g);shards.push(g);}
  const rushGlints=[];for(let i=0;i<12;i++){const g=new Graphics().rect(-4,-1,8,2).rect(-1,-4,2,8).fill(i%2?0xffdfa1:0xffffff);celebration.addChild(g);rushGlints.push(g);}
  celebration.visible=false;
+ const development=createDevelopmentView(reachAtlas,reachLandscape,motionAtlas);root.addChild(development.root);textures.push(...development.textures);
+ const special=createSpecialRouteView({background:reachLandscape});root.addChild(special.root);
+ const prediction=createPredictionView({character,landscape:reachLandscape,storySheets});root.addChild(prediction.root);textures.push(...prediction.textures);
+ const fullRotation=new Container();fullRotation.label='fullrotation';root.addChild(fullRotation);
+ fullRotation.addChild(new Graphics().rect(0,0,210,140).fill({color:0x030d24,alpha:.94}));
+ const fullMoon=new Graphics().circle(105,44,23).stroke({color:0xffdf91,width:1.5}).circle(105,44,28).stroke({color:0xc7eaff,width:.7});fullRotation.addChild(fullMoon);
+ const fullColumns=Array.from({length:3},(_,i)=>{
+  const c=new Container();c.position.set(32+i*53,57);fullRotation.addChild(c);
+  const m=new Graphics().rect(0,0,40,50).fill(0xffffff),strip=new Container();c.addChild(m,strip);strip.mask=m;
+  return Array.from({length:3},()=>{const s=new Sprite(textures[0]);s.scale.set(1/3);strip.addChild(s);return s;});
+ });
+ fullRotation.visible=false;
  const holdView=createHoldView();root.addChild(holdView.root);
  const banner=new Container();banner.position.set(105,70);root.addChild(banner);
  banner.addChild(new Graphics().poly([-88,-21,88,-21,100,0,88,21,-88,21,-100,0]).fill({color:0x07162c,alpha:.94}));
@@ -92,8 +108,14 @@ export function createNormalSpinView(rushScene=null){
   c.font='30px "DotGothic16"';c.fillStyle='#f5d78d';c.fillText('300',105,61);
  }));chargeTexture.source.scaleMode='nearest';textures.push(chargeTexture);
  const chargeBanner=new Sprite(chargeTexture);chargeBanner.position.set(0,25);chargeBanner.visible=false;root.addChild(chargeBanner);
+ const acquisition=new Container(),acquisitionTitles={};root.addChild(acquisition);
+ for(const text of ['右打ちを続けて']){
+  const t=Texture.from(pixelSurface(210,58,c=>{c.fillStyle='rgba(4,14,31,.94)';c.fillRect(12,0,186,58);c.fillStyle='#a8dfef';c.fillRect(12,0,186,2);c.textAlign='center';c.font='23px "DotGothic16"';c.fillStyle='#f4dfaa';c.fillText(text,105,28);c.font='13px "DotGothic16"';c.fillStyle='#d4e9f3';c.fillText('▶ ▶ ▶',105,49);}));
+  t.source.scaleMode='nearest';textures.push(t);const s=new Sprite(t);s.y=40;acquisition.addChild(s);acquisitionTitles[text]=s;
+ }
+ acquisition.visible=false;
  let previousPosition=0,reachStart=null;
- return {root,textures,render(game,payout=false){const ending=rushEndPose(game.time,game.lastRush?.endedAt,!!game.rush||!!game.jackpot);const isRush=!game.entryPrelude&&((!!game.rush&&!game.jackpot)||ending.visible);const state=revivalReels(game,reviewReelState(game)),winTime=game.entryPrelude||game.previewWinAt===undefined?-1:game.time-game.previewWinAt,reach=game.presentation?.basicReach?game.presentation:null;
+ return {root,textures,frames:development.frames,dispose(){special.destroy();prediction.dispose();},render(game,payout=false){const ending=rushEndPose(game.time,game.lastRush?.endedAt,!!game.rush||!!game.jackpot);const isRush=!game.entryPrelude&&((!!game.rush&&!game.jackpot)||ending.visible);const state=revivalReels(game,reviewReelState(game)),winTime=game.entryPrelude||game.previewWinAt===undefined?-1:game.time-game.previewWinAt,reach=game.presentation?.basicReach?game.presentation:null,short=isShortRoute(reach);
   const transitionMix=backgroundTransition.update(game.time,(isRush&&game.previewWinAt===undefined&&(!ending.visible||ending.age<.25))||(!!game.previewRushWin&&winTime>=0));const mix=game.entryBackdropReady&&game.time-game.entryGuideAt<1.5?1:transitionMix;rushBackdrop.visible=mix>0;rushBackdrop.alpha=mix;shade.visible=mix<1;shade.alpha=1-mix;
   for(let i=0;i<sparks.length;i++){sparks[i].position.set(i%2===0?3+(i*3)%14:192+(i*3)%12,28+Math.floor(((i*19-game.time*7)%105+105)%105));sparks[i].alpha=.25+.15*Math.sin(game.time*.8+i);}
   for(let i=0;i<3;i++){const c=columns[i];c.column.position.set(isRush?10+i*65:32+i*53,isRush?LCD_REEL_LAYOUT.rushTop:LCD_REEL_LAYOUT.normalTop);c.column.scale.set(isRush?1.5:1);c.rim.visible=!isRush;}
@@ -111,26 +133,44 @@ export function createNormalSpinView(rushScene=null){
 
   if(rays.visible)rays.alpha=Math.max(0,1-winTime/5.8);
   if(reach&&reachStart===null)reachStart=previousPosition;if(!reach)reachStart=null;
-  const reachDuration=reach?.win?.45:reachSeconds(reach,isRush);
-  banner.visible=!!reach&&reach.time<reachDuration;
+  const reachDuration=reach?.longReach?2:(reach?.win||reach?.developed)? .45:reachSeconds(reach,isRush);
+  banner.visible=!!reach&&!short&&reach.time<reachDuration;
   if(reach){const t=reach.time;const scale=t<.1?1.24-.24*(1-(1-t/.1)**3):t<.23?1-.045*Math.sin((t-.1)/.13*Math.PI):1;banner.scale.set(scale);banner.position.set(105+(t<.2?Math.round(Math.sin(t*125)*2*(1-t/.2)):0),70);const fade=Math.min(.2,reachDuration*.25);banner.alpha=Math.min(1,Math.max(0,(reachDuration-t)/fade));}
 
   for(let i=0;i<3;i++){
    const index=game.previewCenterPending?[0,2,1][i]:i,remaining=game.drawTempo+index*game.reelStopGap-game.drawTimer,speed=8+index*.6,target=game.spinResult?.reels[index]??state.numbers[i];
    const offset=state.stopped[i]?0:remaining>.28?speed*(remaining-.14):speed*Math.max(0,remaining)**2/.56;
-   let position=target-1+offset;
-   if(reach&&i===1){const target=game.reelOutcome[2]-1,end=target-9*Math.ceil((target-reachStart+18)/9),progress=Math.min(1,reach.time/reachSeconds(reach,isRush));position=end+(reachStart-end)*(1-progress)**1.6;}
+   let position=-(target-1)+offset;
+   if(reach&&i===1){const target=-(game.reelOutcome[2]-1),end=target-9*Math.ceil((target-reachStart+18)/9),progress=Math.min(1,reach.time/reachSeconds(reach,isRush));position=end+(reachStart-end)*(1-progress)**1.6;}
    if(i===1)previousPosition=position;
    const base=Math.floor(position),fraction=position-base;
-   columns[i].sprites.forEach((s,j)=>{const row=base+j-1;s.texture=(isRush?rushDigits:textures)[mod(row)];s.y=Math.round((j-1-fraction)*50);});
+   columns[i].sprites.forEach((s,j)=>{const row=base+j-1;s.texture=(isRush?rushDigits:textures)[mod(-row)];s.y=Math.round((j-1-fraction)*50);});
    columns[i].rim.alpha=state.stopped[i]?1:.25;
   }
   for(const c of columns)c.column.alpha=ending.visible?1-ending.dim:1;
+  const developmentPose=development.render(short?null:reach,isRush,{reducedEffects:!!game.reducedEffects});
+  if(developmentPose.visible){
+   shade.alpha=.2;
+   for(let i=0;i<3;i++){const c=columns[i];c.column.visible=!reach?.longReach;c.column.scale.set(.42);c.column.position.set(74+i*23,104);c.column.alpha=.78;c.rim.visible=false;}
+  }
+  const full=reach?.win&&reach.predictionPlan?.resultFamily==='fullrotation';
+  special.render({route:short?reach.displayRoute:'battle',mode:reach?.presentationMode??(isRush?'rush':'normal'),win:!!reach?.win,time:reach?.time??-1,premium:full?null:reach?.premium??null,premiumAt:reach?.premiumAt??45.5,reducedEffects:!!game.reducedEffects,battlePose:developmentPose});
+  if(short){shade.visible=false;for(const c of columns)c.column.visible=false;}
+  prediction.render(game);
+  fullRotation.visible=!!full&&reach.time>=45.5&&reach.time<51.7;
+  if(fullRotation.visible){
+   const age=reach.time-45.5,position=age<5?-6+18*(1-age/5)**2:-6;
+   const base=Math.floor(position),fraction=position-base;
+   fullMoon.alpha=.6+.3*Math.sin(age*1.5)**2;
+   for(const col of fullColumns)col.forEach((s,j)=>{s.texture=(isRush?rushDigits:textures)[mod(-(base+j-1))];s.y=Math.round((j-1-fraction)*50);});
+  }
   holdView.render(game);
   rushEntry.render(game.time,!game.entryPrelude&&!!game.rush&&!game.hasPendingWBonus&&!game.jackpot&&game.previewWinAt===undefined,game.time-game.entryGuideAt<.2?(game.entryTitleOffset||0):0);
   rushEnd.render(game);
   const charge=!!game.jackpot?.charge;
   chargeBanner.visible=charge&&!payout;
+  const acquisitionLabel=wAcquisitionLabel(game);acquisition.visible=!!acquisitionLabel&&!payout;
+  for(const [text,s]of Object.entries(acquisitionTitles))s.visible=text===acquisitionLabel;
   if(charge){celebration.visible=false;rays.visible=false;banner.visible=false;for(const c of columns)c.column.visible=false;}
   if(rushEntry.root.visible||rushEnd.root.visible)for(const c of columns)c.column.visible=false;
   // Reuse the live reel backdrop during payout without drawing reels or win overlays.

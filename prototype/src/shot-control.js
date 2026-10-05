@@ -14,7 +14,7 @@ export function shotStatus(game,physics,settings,{assisted=true}={}) {
  const recentRight=flow.right??0,recentLeft=flow.left??0;
  const right=game.rightPlay??!!(game.jackpot||game.rush);
  const waiting=right&&physics.shouldWaitToFire(game,settings.power,settings.angle);
- if(game.jackpot)return {waiting:waiting&&assisted,label:waiting?(assisted?'ラウンド待機 ── 止め打ち中':'アタッカー閉鎖 ── 発射を止めてください'):recentLeft>recentRight?'右打ちしてください ── 発射を強める':'右打ち ── アタッカー開放',warning:false};
- if(game.rush)return {waiting:waiting&&assisted,label:waiting?(assisted?'RUSH ── 保留消化を待っています':'RUSH ── 保留を消化中'):recentLeft>recentRight?'右打ちしてください ── 発射を強める':'RUSH ── 右側の始動口を狙う',warning:false};
+ if(game.jackpot)return {waiting:waiting&&assisted,label:waiting?(assisted?'ラウンド待機 ── 止め打ち中':'次のラウンドまで ── 発射を止めてください'):recentLeft>recentRight?'右打ちしてください ── 発射を強める':'右打ちを続けて',warning:false};
+ if(game.rush)return {waiting:waiting&&assisted,label:waiting?(assisted?'RUSH ── 次の結果を待っています':'RUSH ── 次の結果を待っています'):recentLeft>recentRight?'右打ちしてください ── 発射を強める':'RUSH ── 右打ちを続けて',warning:false};
  return {waiting:false,label:'自動発射中',warning:recentRight>0&&recentRight>=recentLeft};
 }

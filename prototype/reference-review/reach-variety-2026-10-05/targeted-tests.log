@@ -1,0 +1,22 @@
+✔ normal and RUSH use 54s with a separate 5s upper window and late win-only mechanism (1.70975ms)
+✔ moon reveal uses the same stored phase/colour only in the upper window (0.136042ms)
+✔ long reach preserves accepted outcomes, FIFO, pause and physical mechanics without extra lottery calls (119.945875ms)
+✔ authored exchanges accelerate in 180ms, recover quickly and change framing instead of stretching playback (0.422709ms)
+✔ moon expectations preserve all 12 user values and numerical strength (1.174167ms)
+✔ Bayes reliability of each cue equals its target without changing normal or rush odds (0.188375ms)
+✔ selection has a non-cue branch, skips non-reaches and does not use an RNG callback (0.148625ms)
+✔ cue is retained through reach, strike retains its color without pre-result reliability and idle has no active cue (0.138625ms)
+✔ W draw result and lottery RNG call count are identical with moon presentation attached (3.06025ms)
+✔ all twelve moon cues keep their first phase and color through the result and reset on the next draw (0.179708ms)
+✔ each mode visits every story per bag, never repeats consecutively, and reuses a draw (2.062375ms)
+✔ RUSH history does not influence normal story choice (0.104375ms)
+✔ stories differ in attacking side and framing but retain timing and upper guidance (0.730292ms)
+✔ selected story survives presentation and pause without drawing extra lottery randomness (120.219708ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 192.652833

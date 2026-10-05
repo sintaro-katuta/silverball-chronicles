@@ -1,0 +1,607 @@
+{
+  "hashes": {
+    "src/pixi/board-runtime.js": "02456aa7d3305ba76b27f89b67a872b571b8f76f249546487b6ba2fdef3225c0",
+    "src/pixi/normal-spin-view.js": "0ac387c2f8cb6d6420cc1167dfb9f85a2bffd93f7e3b3699347f450ef2635553",
+    "src/pixi/prediction-view.js": "ec236ad59057fa96786f7b804d7563aa3b57d127be757a982d8f29c3dd8ae87f",
+    "src/pixi/story-prediction-window.js": "86579de76bd622717c0b7dff4bbce352b7234b42149d6b6d73d2a7b95a3bdb36",
+    "src/pixi/story-prediction-motion.js": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da",
+    "src/pixi/story-prediction-view.js": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a"
+  },
+  "runs": [
+    {
+      "fixture": {
+        "name": "step",
+        "kind": "step",
+        "mode": "normal",
+        "variant": "pressure",
+        "id": 8
+      },
+      "prediction": {
+        "drawId": 8,
+        "mode": "normal",
+        "route": "battle",
+        "holdCue": "none",
+        "beforeCue": {
+          "family": "step",
+          "text": "その気配は、近い",
+          "tier": "blue",
+          "start": 0.42,
+          "end": 1.85,
+          "steps": [
+            "気配",
+            "接近",
+            "その気配は、近い"
+          ]
+        },
+        "development": {
+          "family": "character",
+          "text": "その声を、信じて",
+          "tier": "blue",
+          "title": "決意の一閃"
+        },
+        "basicFamily": null,
+        "basicPrelude": null,
+        "battleFamily": "climax",
+        "chanceUps": [
+          {
+            "family": "resolve",
+            "text": "最後まで、信じる",
+            "tier": "blue",
+            "start": 40.6,
+            "end": 42.35
+          }
+        ],
+        "precursorSeconds": 5,
+        "resultFamily": null
+      },
+      "screenshots": [
+        {
+          "phase": "reach",
+          "age": 0.175,
+          "win": false,
+          "cut": 0
+        },
+        {
+          "phase": "reach",
+          "age": 1.1749999999999983,
+          "win": false,
+          "cut": 1
+        },
+        {
+          "phase": "reach",
+          "age": 2.1416666666666617,
+          "win": false,
+          "cut": 2
+        },
+        {
+          "phase": "reach",
+          "age": 3.1749999999999914,
+          "win": false,
+          "cut": 3
+        },
+        {
+          "phase": "reach",
+          "age": 4.15833333333333,
+          "win": false,
+          "cut": 4
+        }
+      ],
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/story-integration-2026-10-05/raw/page@9d8e4c9bd2aadc19cd166548d09f3f8f.webm"
+    },
+    {
+      "fixture": {
+        "name": "memory",
+        "kind": "memory",
+        "mode": "normal",
+        "variant": "pressure",
+        "before": "story",
+        "id": 1
+      },
+      "prediction": {
+        "drawId": 1,
+        "mode": "normal",
+        "route": "battle",
+        "holdCue": "none",
+        "beforeCue": {
+          "family": "story",
+          "text": "守ると決めたあの日",
+          "tier": "blue",
+          "start": 0.42,
+          "end": 1.85,
+          "steps": [
+            "あの日の約束",
+            "守ると決めたあの日",
+            "今、この刃に"
+          ]
+        },
+        "development": {
+          "family": "character",
+          "text": "その声を、信じて",
+          "tier": "blue",
+          "title": "決意の一閃"
+        },
+        "basicFamily": null,
+        "basicPrelude": null,
+        "battleFamily": "climax",
+        "chanceUps": [
+          {
+            "family": "resolve",
+            "text": "最後まで、信じる",
+            "tier": "blue",
+            "start": 40.6,
+            "end": 42.35
+          }
+        ],
+        "precursorSeconds": 5,
+        "resultFamily": null
+      },
+      "screenshots": [
+        {
+          "phase": "reach",
+          "age": 0.16666666666666666,
+          "win": false,
+          "cut": 0
+        },
+        {
+          "phase": "reach",
+          "age": 1.1833333333333316,
+          "win": false,
+          "cut": 1
+        },
+        {
+          "phase": "reach",
+          "age": 2.149999999999995,
+          "win": false,
+          "cut": 2
+        },
+        {
+          "phase": "reach",
+          "age": 3.1999999999999913,
+          "win": false,
+          "cut": 3
+        },
+        {
+          "phase": "reach",
+          "age": 4.149999999999996,
+          "win": false,
+          "cut": 4
+        }
+      ],
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/story-integration-2026-10-05/raw/page@6a36220a38b4db3f4c40773ebe83425d.webm"
+    },
+    {
+      "fixture": {
+        "name": "episode",
+        "kind": "episode",
+        "mode": "normal",
+        "variant": "initiative",
+        "id": 5
+      },
+      "prediction": {
+        "drawId": 5,
+        "mode": "normal",
+        "route": "battle",
+        "holdCue": "none",
+        "beforeCue": {
+          "family": "route",
+          "text": "この先に、待つもの",
+          "tier": "blue",
+          "start": 0.42,
+          "end": 1.85,
+          "steps": null
+        },
+        "development": {
+          "family": "special",
+          "text": "闇の向こうに、誰かいる",
+          "tier": "blue",
+          "title": "守り抜く約束"
+        },
+        "basicFamily": null,
+        "basicPrelude": null,
+        "battleFamily": "episode",
+        "chanceUps": [
+          {
+            "family": "dialogue",
+            "text": "この刃は、折れない",
+            "tier": "blue",
+            "start": 28.1,
+            "end": 29.85
+          },
+          {
+            "family": "resolve",
+            "text": "最後まで、信じる",
+            "tier": "blue",
+            "start": 40.6,
+            "end": 42.35
+          }
+        ],
+        "precursorSeconds": 5,
+        "resultFamily": null
+      },
+      "screenshots": [
+        {
+          "phase": "reach",
+          "age": 0.14166666666666666,
+          "win": false,
+          "cut": 0
+        },
+        {
+          "phase": "reach",
+          "age": 1.1749999999999983,
+          "win": false,
+          "cut": 1
+        },
+        {
+          "phase": "reach",
+          "age": 2.1583333333333283,
+          "win": false,
+          "cut": 2
+        },
+        {
+          "phase": "reach",
+          "age": 3.1749999999999914,
+          "win": false,
+          "cut": 3
+        },
+        {
+          "phase": "reach",
+          "age": 4.174999999999997,
+          "win": false,
+          "cut": 4
+        }
+      ],
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/story-integration-2026-10-05/raw/page@94b067ce1885c1047920d0ba506ac5a3.webm"
+    },
+    {
+      "fixture": {
+        "name": "pursuit",
+        "kind": "pursuit",
+        "mode": "normal",
+        "variant": "exchange",
+        "id": 7
+      },
+      "prediction": {
+        "drawId": 7,
+        "mode": "normal",
+        "route": "battle",
+        "holdCue": "blue",
+        "beforeCue": {
+          "family": "route",
+          "text": "この先に、待つもの",
+          "tier": "blue",
+          "start": 0.42,
+          "end": 1.85,
+          "steps": null
+        },
+        "development": {
+          "family": "long",
+          "text": "影の向こうへ",
+          "tier": "blue",
+          "title": "月下の攻防"
+        },
+        "basicFamily": null,
+        "basicPrelude": null,
+        "battleFamily": "battleSP",
+        "chanceUps": [],
+        "precursorSeconds": 5,
+        "resultFamily": null
+      },
+      "screenshots": [
+        {
+          "phase": "reach",
+          "age": 0.15,
+          "win": false,
+          "cut": 0
+        },
+        {
+          "phase": "reach",
+          "age": 1.1499999999999984,
+          "win": false,
+          "cut": 1
+        },
+        {
+          "phase": "reach",
+          "age": 2.199999999999995,
+          "win": false,
+          "cut": 2
+        },
+        {
+          "phase": "reach",
+          "age": 3.166666666666658,
+          "win": false,
+          "cut": 3
+        },
+        {
+          "phase": "reach",
+          "age": 4.183333333333331,
+          "win": false,
+          "cut": 4
+        }
+      ],
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/story-integration-2026-10-05/raw/page@145b7582a69225d9ed4e1ee43ad34e91.webm"
+    },
+    {
+      "fixture": {
+        "name": "rescue",
+        "kind": "rescue",
+        "mode": "normal",
+        "variant": "initiative",
+        "id": 1
+      },
+      "prediction": {
+        "drawId": 1,
+        "mode": "normal",
+        "route": "battle",
+        "holdCue": "none",
+        "beforeCue": {
+          "family": "story",
+          "text": "守ると決めたあの日",
+          "tier": "blue",
+          "start": 0.42,
+          "end": 1.85,
+          "steps": [
+            "あの日の約束",
+            "守ると決めたあの日",
+            "今、この刃に"
+          ]
+        },
+        "development": {
+          "family": "character",
+          "text": "その声を、信じて",
+          "tier": "blue",
+          "title": "守り抜く約束"
+        },
+        "basicFamily": null,
+        "basicPrelude": null,
+        "battleFamily": "episode",
+        "chanceUps": [
+          {
+            "family": "resolve",
+            "text": "最後まで、信じる",
+            "tier": "blue",
+            "start": 40.6,
+            "end": 42.35
+          }
+        ],
+        "precursorSeconds": 5,
+        "resultFamily": null
+      },
+      "screenshots": [
+        {
+          "phase": "reach",
+          "age": 0.19999999999999998,
+          "win": false,
+          "cut": 0
+        },
+        {
+          "phase": "reach",
+          "age": 1.166666666666665,
+          "win": false,
+          "cut": 1
+        },
+        {
+          "phase": "reach",
+          "age": 2.1666666666666616,
+          "win": false,
+          "cut": 2
+        },
+        {
+          "phase": "reach",
+          "age": 3.1499999999999915,
+          "win": false,
+          "cut": 3
+        },
+        {
+          "phase": "reach",
+          "age": 4.166666666666663,
+          "win": false,
+          "cut": 4
+        }
+      ],
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/story-integration-2026-10-05/raw/page@265e9117d92aa29984973a8422b1af48.webm"
+    },
+    {
+      "fixture": {
+        "name": "rush-memory",
+        "kind": "memory",
+        "mode": "rush",
+        "variant": "pressure",
+        "before": "identity",
+        "id": 8
+      },
+      "prediction": {
+        "drawId": 8,
+        "mode": "rush",
+        "route": "battle",
+        "holdCue": "none",
+        "beforeCue": {
+          "family": "identity",
+          "text": "この刃を継ぐ理由",
+          "tier": "blue",
+          "start": 0.1,
+          "end": 0.58,
+          "steps": null
+        },
+        "development": {
+          "family": "directbattle",
+          "text": "月下の決戦",
+          "tier": "blue",
+          "title": "決意の一閃"
+        },
+        "basicFamily": null,
+        "basicPrelude": null,
+        "battleFamily": "climax",
+        "chanceUps": [
+          {
+            "family": "title",
+            "text": "追いついてみせる",
+            "tier": "blue",
+            "start": 8.2,
+            "end": 9.95
+          },
+          {
+            "family": "dialogue",
+            "text": "迷いを、断ち切れ",
+            "tier": "blue",
+            "start": 28.1,
+            "end": 29.85
+          },
+          {
+            "family": "resolve",
+            "text": "この一撃に賭ける",
+            "tier": "blue",
+            "start": 40.6,
+            "end": 42.35
+          }
+        ],
+        "precursorSeconds": 2,
+        "resultFamily": null
+      },
+      "screenshots": [
+        {
+          "phase": "reach",
+          "age": 0.15,
+          "win": false,
+          "cut": 0
+        },
+        {
+          "phase": "reach",
+          "age": 0.8333333333333328,
+          "win": false,
+          "cut": 1
+        },
+        {
+          "phase": "reach",
+          "age": 1.4833333333333305,
+          "win": false,
+          "cut": 2
+        }
+      ],
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/story-integration-2026-10-05/raw/page@4bcb46b083570459dacbc69eda725297.webm"
+    },
+    {
+      "fixture": {
+        "name": "rush-rescue",
+        "kind": "rescue",
+        "mode": "rush",
+        "variant": "exchange",
+        "before": "resolve",
+        "id": 7
+      },
+      "prediction": {
+        "drawId": 7,
+        "mode": "rush",
+        "route": "battle",
+        "holdCue": "none",
+        "beforeCue": {
+          "family": "resolve",
+          "text": "ここは、通さない",
+          "tier": "blue",
+          "start": 0.1,
+          "end": 0.58,
+          "steps": null
+        },
+        "development": {
+          "family": "long",
+          "text": "影の向こうへ",
+          "tier": "blue",
+          "title": "月下の攻防"
+        },
+        "basicFamily": null,
+        "basicPrelude": null,
+        "battleFamily": "battleSP",
+        "chanceUps": [
+          {
+            "family": "title",
+            "text": "追いついてみせる",
+            "tier": "blue",
+            "start": 8.2,
+            "end": 9.95
+          }
+        ],
+        "precursorSeconds": 2,
+        "resultFamily": null
+      },
+      "screenshots": [
+        {
+          "phase": "reach",
+          "age": 0.15833333333333333,
+          "win": false,
+          "cut": 0
+        },
+        {
+          "phase": "reach",
+          "age": 0.8249999999999995,
+          "win": false,
+          "cut": 1
+        },
+        {
+          "phase": "reach",
+          "age": 1.4749999999999972,
+          "win": false,
+          "cut": 2
+        }
+      ],
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/story-integration-2026-10-05/raw/page@ba0551d6cb56ae17ec80663855c6e741.webm"
+    },
+    {
+      "fixture": {
+        "name": "rush-pursuit",
+        "kind": "pursuit",
+        "mode": "rush",
+        "variant": "exchange",
+        "before": "search",
+        "id": 17
+      },
+      "prediction": {
+        "drawId": 17,
+        "mode": "rush",
+        "route": "battle",
+        "holdCue": "none",
+        "beforeCue": {
+          "family": "search",
+          "text": "影を追え",
+          "tier": "blue",
+          "start": 0.1,
+          "end": 0.58,
+          "steps": null
+        },
+        "development": {
+          "family": "directbattle",
+          "text": "月下の決戦",
+          "tier": "blue",
+          "title": "月下の攻防"
+        },
+        "basicFamily": null,
+        "basicPrelude": null,
+        "battleFamily": "battleSP",
+        "chanceUps": [],
+        "precursorSeconds": 2,
+        "resultFamily": null
+      },
+      "screenshots": [
+        {
+          "phase": "reach",
+          "age": 0.19999999999999998,
+          "win": false,
+          "cut": 0
+        },
+        {
+          "phase": "reach",
+          "age": 0.866666666666666,
+          "win": false,
+          "cut": 1
+        },
+        {
+          "phase": "reach",
+          "age": 1.5166666666666637,
+          "win": false,
+          "cut": 2
+        }
+      ],
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/story-integration-2026-10-05/raw/page@7b280c792f28a25d66feb44a5cc0bf54.webm"
+    }
+  ],
+  "errors": [],
+  "scope": "Actual production view/flow; specified saved losses and routes; entrance/precursor real-time, later combat seeked after the new film; mobile touch emulation"
+}

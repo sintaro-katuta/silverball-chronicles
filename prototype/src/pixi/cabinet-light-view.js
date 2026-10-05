@@ -29,5 +29,5 @@ export function createCabinetLightView(physics,portrait=null,background=null){
   node.position.set(px,py);node.scale.set(1);
   node.light.alpha=pose.light;
   node.light.tint=pose.rainbow?rainbow(pose.hue+i*.19):pose.phase==='reach'||pose.phase==='payout'?0xffb749:pose.phase==='rush'?(i%2?0xca74ff:0x55cfff):0x67b8ff;
- });sword.rotation=blade.angle;lunar=moonController.render(game,blade);moon.texture=moonTextures[`${lunar.phase}-${lunar.color}`];moon.alpha=lunar.cueActive||lunar.resultEffect||lunar.strike?1:0;}};
+ });sword.rotation=blade.angle;lunar=moonController.render(game,blade);moon.texture=moonTextures[`${lunar.phase}-${lunar.color}`];moon.alpha=game.presentation?.longReach?(lunar.cueActive?1:0):lunar.cueActive||lunar.resultEffect||lunar.strike?1:0;}};
 }

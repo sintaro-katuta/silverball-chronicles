@@ -16,11 +16,4 @@ export const W_RUNTIME_POLICY=Object.freeze({
 
 // Secondary breakdown cross-checked against official 49/50/1 diagram.
 // Rounded 1/199.9 combined stream, not exact ROM denominators.
-export function wPublishedNormalOutcome(roll){
- const hit=1/199.9;if(roll>=hit)return {outcome:'miss',entry:false};
- const r=roll/hit;
- if(r<.25)return {outcome:'symbol',entry:true};
- if(r<.255)return {outcome:'charge',entry:true};
- if(r<.5)return {outcome:'symbol',entry:false};
- return {outcome:'charge',entry:false};
-}
+export {wPublishedNormalOutcome} from '../tokyoghoul-w-spec.js';

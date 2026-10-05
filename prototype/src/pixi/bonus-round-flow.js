@@ -1,5 +1,6 @@
 import {payoutRevealSeconds} from './payout-reveal.js';
 import {RUSH_WIN_SECONDS} from './rush-win-motion.js';
+import {advancePresentationClock} from './presentation-clock.js';
 // Bridges the review's approved moving door to the existing bonus/payout rules.
 // This isolated fixture does not run the obsolete stage progression or persist rewards.
 export function attachBonusRounds(model,game){
@@ -15,7 +16,7 @@ export function attachBonusRounds(model,game){
     if(!game.jackpot||game.jackpot.round!==round){close();return;}
    }else if(phase==='gap'){
     game.tick(dt);if(game.jackpot?.gap<=0){shownRound=game.jackpot.round;shownCount=0;attacker.request(true);transition('opening');}
-   }else game.time+=dt;
+   }else advancePresentationClock(game,dt);
    if(phase==='celebration'&&game.time-game.previewWinAt>=(game.previewRushWin?RUSH_WIN_SECONDS:5.8)){model.setMode('right-closed');transition(j.fromRush?'payout-reveal':'guide');}
    else if(phase==='payout-reveal'&&game.time-since>=payoutRevealSeconds(j.payoutAmount)){transition('guide');}
    else if(phase==='guide'&&game.time-since>=(game.previewRushWin?.35:1.2)){shownRound=j.round;attacker.request(true);transition('opening');}

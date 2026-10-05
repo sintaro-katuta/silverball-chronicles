@@ -1,0 +1,52 @@
+{
+  "scope": "Fixed terminal state: all stored rolls=.9, remaining2. No forced resolution/RUSH exit. Excluded from natural reliability statistics.",
+  "waiting": {
+    "draws": 1,
+    "normalIds": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "remaining": 2
+  },
+  "resolved": [
+    {
+      "id": 1,
+      "kind": "tokuzu1",
+      "outcome": "miss"
+    },
+    {
+      "id": 6,
+      "kind": "fuzu",
+      "outcome": "miss"
+    },
+    {
+      "id": 7,
+      "kind": "fuzu",
+      "outcome": "miss"
+    },
+    {
+      "id": 2,
+      "kind": "tokuzu1",
+      "outcome": "miss"
+    },
+    {
+      "id": 3,
+      "kind": "tokuzu1",
+      "outcome": "miss"
+    },
+    {
+      "id": 4,
+      "kind": "tokuzu1",
+      "outcome": "miss"
+    },
+    {
+      "id": 5,
+      "kind": "tokuzu1",
+      "outcome": "miss"
+    }
+  ],
+  "time": 34.89999999999866,
+  "passed": true
+}

@@ -1,0 +1,58 @@
+{
+  "runs": [
+    {
+      "name": "attack",
+      "win": true,
+      "ending": "standard",
+      "start": 5.9,
+      "duration": 3.5,
+      "pixels": {
+        "6.39": "5c13e05ba3d7bf9caf94d9c5c7516f1002652c9f6b4743c4fe08a12714de7e2d",
+        "6.48": "331d1f4ad0aa67deb7918d4104472865f0654294bee68f64167d7b298645cd74",
+        "6.7": "4bf13885b056075796783c184f35b3d3c4c440a6436573c166fce9a235b9f22e"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/parallel-combat-2026-10-05/raw/page@ca5c55710424ff11d35e3ee445e9b092.webm"
+    },
+    {
+      "name": "counter",
+      "win": true,
+      "ending": "standard",
+      "start": 27.8,
+      "duration": 3.5,
+      "pixels": {
+        "28.29": "3ee63b8da3b75c9af2daa97fcda778b8e62ec37574820a1d5092e1fb8ead1996",
+        "28.38": "3f90acb3c8749a03513ca9b661a07bd36ef4a241132e30615a180aacac229228"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/parallel-combat-2026-10-05/raw/page@e0e0d821bc8fac5124b14b1310777775.webm"
+    },
+    {
+      "name": "loss",
+      "win": false,
+      "ending": "standard",
+      "start": 50.8,
+      "duration": 3.5,
+      "pixels": {
+        "51.85": "0c3926a15a53cc53b74894be63101847f89a2d29a245816fedea630b298654a3",
+        "53.5": "175697136d4e091f7fba303f5479dcd6893e3f10ce99e1af83f83827a5d25ccd"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/parallel-combat-2026-10-05/raw/page@85a26d3cd7e1c0103894aee6927aae2f.webm"
+    },
+    {
+      "name": "revival",
+      "win": true,
+      "ending": "revival",
+      "start": 50.8,
+      "duration": 7.5,
+      "pixels": {
+        "51.85": "0c3926a15a53cc53b74894be63101847f89a2d29a245816fedea630b298654a3",
+        "53.5": "175697136d4e091f7fba303f5479dcd6893e3f10ce99e1af83f83827a5d25ccd",
+        "54.4": "fc362f46ff056d0716a8f51571edf9fe8fed8ddea74db384e28a9de65966ae36",
+        "55.25": "3dceda05ef29372622a1ee502b29e580b9a41d7e6dee1957fad5f67198859f1b"
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/parallel-combat-2026-10-05/raw/page@da5afb068cbedb920f968c33dfe877b5.webm"
+    }
+  ],
+  "errors": [],
+  "defeatPixelsEqual": true,
+  "fixture": "Standalone display fixture uses actual PixiJS view; outcomes fixed, no gameplay/payout validation"
+}

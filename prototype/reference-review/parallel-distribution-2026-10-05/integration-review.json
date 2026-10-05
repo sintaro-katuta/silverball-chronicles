@@ -1,0 +1,317 @@
+{
+  "date": "2026-10-05",
+  "scope": "Headless focused control-flow review, not rendered browser verification",
+  "rows": [
+    {
+      "patterns": false,
+      "id": 1,
+      "kind": "tokuzu1",
+      "legacy": true,
+      "win": false,
+      "route": "legacy",
+      "afterStart": 4,
+      "afterBegin": 7,
+      "plan": null,
+      "outcome": "miss",
+      "charge": false
+    },
+    {
+      "patterns": true,
+      "id": 1,
+      "kind": "tokuzu1",
+      "legacy": true,
+      "win": false,
+      "route": "ordinary",
+      "afterStart": 4,
+      "afterBegin": 7,
+      "plan": {
+        "route": "ordinary",
+        "reach": false,
+        "variant": null,
+        "ending": "standard",
+        "premium": null,
+        "moonCue": null
+      },
+      "outcome": "miss",
+      "charge": false
+    },
+    {
+      "patterns": false,
+      "id": 13,
+      "kind": "tokuzu1",
+      "legacy": false,
+      "win": false,
+      "route": "legacy",
+      "afterStart": 4,
+      "afterBegin": 4,
+      "plan": null,
+      "outcome": "miss",
+      "charge": false
+    },
+    {
+      "patterns": true,
+      "id": 13,
+      "kind": "tokuzu1",
+      "legacy": false,
+      "win": false,
+      "route": "basic",
+      "afterStart": 4,
+      "afterBegin": 4,
+      "plan": {
+        "route": "basic",
+        "reach": true,
+        "variant": null,
+        "ending": "standard",
+        "premium": null,
+        "moonCue": null
+      },
+      "outcome": "miss",
+      "charge": false
+    },
+    {
+      "patterns": false,
+      "id": 54,
+      "kind": "tokuzu1",
+      "legacy": false,
+      "win": false,
+      "route": "legacy",
+      "afterStart": 4,
+      "afterBegin": 4,
+      "plan": null,
+      "outcome": "miss",
+      "charge": false
+    },
+    {
+      "patterns": true,
+      "id": 54,
+      "kind": "tokuzu1",
+      "legacy": false,
+      "win": false,
+      "route": "battle",
+      "afterStart": 4,
+      "afterBegin": 4,
+      "plan": {
+        "route": "battle",
+        "reach": true,
+        "variant": "exchange",
+        "ending": "standard",
+        "premium": null,
+        "moonCue": {
+          "phase": "crescent",
+          "color": "none",
+          "expectation": 6,
+          "rank": 0
+        }
+      },
+      "outcome": "miss",
+      "charge": false
+    },
+    {
+      "patterns": false,
+      "id": 13,
+      "kind": "tokuzu1",
+      "legacy": true,
+      "win": false,
+      "route": "legacy",
+      "afterStart": 4,
+      "afterBegin": 7,
+      "plan": null,
+      "outcome": "miss",
+      "charge": false
+    },
+    {
+      "patterns": true,
+      "id": 13,
+      "kind": "tokuzu1",
+      "legacy": true,
+      "win": false,
+      "route": "basic",
+      "afterStart": 4,
+      "afterBegin": 7,
+      "plan": {
+        "route": "basic",
+        "reach": true,
+        "variant": null,
+        "ending": "standard",
+        "premium": null,
+        "moonCue": null
+      },
+      "outcome": "miss",
+      "charge": false
+    },
+    {
+      "patterns": false,
+      "id": 54,
+      "kind": "tokuzu1",
+      "legacy": true,
+      "win": false,
+      "route": "legacy",
+      "afterStart": 4,
+      "afterBegin": 7,
+      "plan": null,
+      "outcome": "miss",
+      "charge": false
+    },
+    {
+      "patterns": true,
+      "id": 54,
+      "kind": "tokuzu1",
+      "legacy": true,
+      "win": false,
+      "route": "battle",
+      "afterStart": 4,
+      "afterBegin": 7,
+      "plan": {
+        "route": "battle",
+        "reach": true,
+        "variant": "exchange",
+        "ending": "standard",
+        "premium": null,
+        "moonCue": {
+          "phase": "crescent",
+          "color": "none",
+          "expectation": 6,
+          "rank": 0
+        }
+      },
+      "outcome": "miss",
+      "charge": false
+    },
+    {
+      "patterns": false,
+      "id": 1,
+      "kind": "tokuzu1",
+      "legacy": false,
+      "win": false,
+      "route": "legacy",
+      "afterStart": 4,
+      "afterBegin": 4,
+      "plan": null,
+      "outcome": "miss",
+      "charge": false
+    },
+    {
+      "patterns": true,
+      "id": 1,
+      "kind": "tokuzu1",
+      "legacy": false,
+      "win": false,
+      "route": "ordinary",
+      "afterStart": 4,
+      "afterBegin": 4,
+      "plan": {
+        "route": "ordinary",
+        "reach": false,
+        "variant": null,
+        "ending": "standard",
+        "premium": null,
+        "moonCue": null
+      },
+      "outcome": "miss",
+      "charge": false
+    },
+    {
+      "patterns": false,
+      "id": 77,
+      "kind": "tokuzu1",
+      "legacy": true,
+      "win": false,
+      "route": "legacy",
+      "afterStart": 4,
+      "afterBegin": 7,
+      "plan": null,
+      "outcome": "charge",
+      "charge": true
+    },
+    {
+      "patterns": true,
+      "id": 77,
+      "kind": "tokuzu1",
+      "legacy": true,
+      "win": false,
+      "route": "ordinary",
+      "afterStart": 4,
+      "afterBegin": 7,
+      "plan": {
+        "route": "ordinary",
+        "reach": false,
+        "variant": null,
+        "ending": "standard",
+        "premium": null,
+        "moonCue": null
+      },
+      "outcome": "charge",
+      "charge": true
+    },
+    {
+      "patterns": false,
+      "id": 77,
+      "kind": "tokuzu1",
+      "legacy": false,
+      "win": false,
+      "route": "legacy",
+      "afterStart": 4,
+      "afterBegin": 4,
+      "plan": null,
+      "outcome": "charge",
+      "charge": true
+    },
+    {
+      "patterns": true,
+      "id": 77,
+      "kind": "tokuzu1",
+      "legacy": false,
+      "win": false,
+      "route": "ordinary",
+      "afterStart": 4,
+      "afterBegin": 4,
+      "plan": {
+        "route": "ordinary",
+        "reach": false,
+        "variant": null,
+        "ending": "standard",
+        "premium": null,
+        "moonCue": null
+      },
+      "outcome": "charge",
+      "charge": true
+    },
+    {
+      "patterns": true,
+      "id": 500,
+      "kind": "fuzu",
+      "legacy": true,
+      "win": true,
+      "route": "flash",
+      "afterStart": 3,
+      "afterBegin": 6,
+      "plan": {
+        "route": "flash",
+        "reach": true,
+        "variant": null,
+        "ending": "flash",
+        "premium": null,
+        "moonCue": null
+      },
+      "outcome": "electric-open",
+      "charge": false
+    }
+  ],
+  "tokuzu2Bypass": true,
+  "sources": {
+    "src/pixi/normal-spin-flow.js": "b15e58334990630a802a593a2012789efca7e0714cee8e0eecc83c06bed18365",
+    "src/pixi/session-game.js": "f48b66f12876ed3ec217f8450855da2e365a2ad3f596d7b0552cdf6357072eb4",
+    "src/game.js": "1c0ab7ed959334a600f2bdb3562a486c95635330bd35b0633396f7e69879f329",
+    "src/pixi/presentation-distribution.js": "d32b7ce8fb48599a238477397564ace6a62f5983b04dd8d6120641b9d13f5fe7"
+  },
+  "historyFixture": {
+    "records": 2000,
+    "counts": {
+      "normal": 858,
+      "rush": 909,
+      "charge": 142,
+      "guaranteed": 91
+    },
+    "description": "Monotonic admitted-record fixtures interleave modes, charges and guarantees; plans match an independently advanced selector."
+  }
+}

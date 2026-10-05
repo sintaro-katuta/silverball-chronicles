@@ -19,7 +19,7 @@ export function createRushPreludeView(sheets,rushScene){
  let previous='',sequence=null;
  function resultArt(c,payout){
   c.fillStyle='#080e20';c.fillRect(0,0,210,140);c.textAlign='center';c.textBaseline='middle';
-  for(const [s,y,size,col]of [['RESULT',35,30,'#d9e8f0'],['合計払出',73,14,'#9fb5c4'],[String(payout),104,32,'#f0d394']]){c.font=`${size}px "DotGothic16"`;c.fillStyle=col;c.fillText(s,105,y);}
+  for(const [s,y,size,col]of [['RESULT',35,30,'#d9e8f0'],['獲得玉数',73,14,'#9fb5c4'],[String(payout),104,32,'#f0d394']]){c.font=`${size}px "DotGothic16"`;c.fillStyle=col;c.fillText(s,105,y);}
  }
  const slash=createResultSlashPainter(rushScene,resultArt);
  return {root,textures:[texture,...left.textures,...sceneTitle.textures],render(game){

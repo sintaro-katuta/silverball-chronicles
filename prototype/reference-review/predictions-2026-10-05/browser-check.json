@@ -1,0 +1,1684 @@
+{
+  "hashes": {
+    "src/pixi/prediction-plan.js": "4c40422c81d7da55d2ad69aa2633400127f0933549b36426da47b0c9e63d62d1",
+    "src/pixi/prediction-view.js": "26800bef3e9161b233a6d529d6c9439e880e835d050fd79fa8ca3748b3aaca80",
+    "src/pixi/hold-prediction.js": "c81bdfef809c74a53309db2acd1f98398fe2d4ac011a054baefcf317c44aa99b",
+    "src/pixi/normal-spin-flow.js": "bafe364379b3b430c4e26046c0b4ab9dea786fe221a85ac16ed60f02564d2644",
+    "src/pixi/normal-spin-view.js": "bccfd9d08df37ad1089a218c0e55ef3448296ba8f89dd3b2a6c8071deed1fae7"
+  },
+  "runs": [
+    {
+      "fixture": {
+        "name": "normal-serial-climax-loss",
+        "mode": "normal",
+        "win": false,
+        "route": "battle",
+        "variant": "pressure",
+        "before": "serial",
+        "id": 181
+      },
+      "admitted": {
+        "record": {
+          "id": 181,
+          "kind": "tokuzu1",
+          "ballId": 900001,
+          "roll": 0.9,
+          "followupRoll": null
+        },
+        "prediction": {
+          "drawId": 181,
+          "mode": "normal",
+          "route": "battle",
+          "holdCue": "none",
+          "beforeCue": {
+            "family": "serial",
+            "text": "まだ、終わらない",
+            "tier": "red",
+            "start": 0.42,
+            "end": 1.85,
+            "steps": [
+              "まだ、終わらない",
+              "もう一度",
+              "まだ、終わらない"
+            ]
+          },
+          "development": {
+            "family": "long",
+            "text": "影の向こうへ",
+            "tier": "red",
+            "title": "決意の一閃"
+          },
+          "basicFamily": null,
+          "basicPrelude": null,
+          "battleFamily": "climax",
+          "chanceUps": [
+            {
+              "family": "title",
+              "text": "退けない理由がある",
+              "tier": "blue",
+              "start": 8.2,
+              "end": 9.95
+            },
+            {
+              "family": "dialogue",
+              "text": "この刃は、折れない",
+              "tier": "red",
+              "start": 28.1,
+              "end": 29.85
+            },
+            {
+              "family": "resolve",
+              "text": "最後まで、信じる",
+              "tier": "red",
+              "start": 40.6,
+              "end": 42.35
+            }
+          ],
+          "precursorSeconds": 5,
+          "resultFamily": null
+        }
+      },
+      "samples": [
+        {
+          "id": 1,
+          "drawId": 181,
+          "origin": {
+            "kind": "debug",
+            "mark": "plain"
+          },
+          "buildStyle": "balanced",
+          "win": false,
+          "time": 8.966666666666645,
+          "rate": 1,
+          "demo": false,
+          "pattern": "feint",
+          "sceneId": "forest",
+          "reachColor": "normal",
+          "grade": null,
+          "basicReach": true,
+          "longReach": true,
+          "moonCue": null,
+          "reachVariant": "pressure",
+          "presentationMode": "normal",
+          "predictionPlan": {
+            "drawId": 181,
+            "mode": "normal",
+            "route": "battle",
+            "holdCue": "none",
+            "beforeCue": {
+              "family": "serial",
+              "text": "まだ、終わらない",
+              "tier": "red",
+              "start": 0.42,
+              "end": 1.85,
+              "steps": [
+                "まだ、終わらない",
+                "もう一度",
+                "まだ、終わらない"
+              ]
+            },
+            "development": {
+              "family": "long",
+              "text": "影の向こうへ",
+              "tier": "red",
+              "title": "決意の一閃"
+            },
+            "basicFamily": null,
+            "basicPrelude": null,
+            "battleFamily": "climax",
+            "chanceUps": [
+              {
+                "family": "title",
+                "text": "退けない理由がある",
+                "tier": "blue",
+                "start": 8.2,
+                "end": 9.95
+              },
+              {
+                "family": "dialogue",
+                "text": "この刃は、折れない",
+                "tier": "red",
+                "start": 28.1,
+                "end": 29.85
+              },
+              {
+                "family": "resolve",
+                "text": "最後まで、信じる",
+                "tier": "red",
+                "start": 40.6,
+                "end": 42.35
+              }
+            ],
+            "precursorSeconds": 5,
+            "resultFamily": null
+          },
+          "displayRoute": "battle",
+          "premium": null,
+          "premiumAt": 45.5,
+          "reachEnding": "standard",
+          "developed": false
+        },
+        {
+          "id": 1,
+          "drawId": 181,
+          "origin": {
+            "kind": "debug",
+            "mark": "plain"
+          },
+          "buildStyle": "balanced",
+          "win": false,
+          "time": 28.94999999999998,
+          "rate": 1,
+          "demo": false,
+          "pattern": "feint",
+          "sceneId": "forest",
+          "reachColor": "normal",
+          "grade": null,
+          "basicReach": true,
+          "longReach": true,
+          "moonCue": null,
+          "reachVariant": "pressure",
+          "presentationMode": "normal",
+          "predictionPlan": {
+            "drawId": 181,
+            "mode": "normal",
+            "route": "battle",
+            "holdCue": "none",
+            "beforeCue": {
+              "family": "serial",
+              "text": "まだ、終わらない",
+              "tier": "red",
+              "start": 0.42,
+              "end": 1.85,
+              "steps": [
+                "まだ、終わらない",
+                "もう一度",
+                "まだ、終わらない"
+              ]
+            },
+            "development": {
+              "family": "long",
+              "text": "影の向こうへ",
+              "tier": "red",
+              "title": "決意の一閃"
+            },
+            "basicFamily": null,
+            "basicPrelude": null,
+            "battleFamily": "climax",
+            "chanceUps": [
+              {
+                "family": "title",
+                "text": "退けない理由がある",
+                "tier": "blue",
+                "start": 8.2,
+                "end": 9.95
+              },
+              {
+                "family": "dialogue",
+                "text": "この刃は、折れない",
+                "tier": "red",
+                "start": 28.1,
+                "end": 29.85
+              },
+              {
+                "family": "resolve",
+                "text": "最後まで、信じる",
+                "tier": "red",
+                "start": 40.6,
+                "end": 42.35
+              }
+            ],
+            "precursorSeconds": 5,
+            "resultFamily": null
+          },
+          "displayRoute": "battle",
+          "premium": null,
+          "premiumAt": 45.5,
+          "reachEnding": "standard",
+          "developed": false
+        },
+        {
+          "id": 1,
+          "drawId": 181,
+          "origin": {
+            "kind": "debug",
+            "mark": "plain"
+          },
+          "buildStyle": "balanced",
+          "win": false,
+          "time": 41.44999999999998,
+          "rate": 1,
+          "demo": false,
+          "pattern": "feint",
+          "sceneId": "forest",
+          "reachColor": "normal",
+          "grade": null,
+          "basicReach": true,
+          "longReach": true,
+          "moonCue": null,
+          "reachVariant": "pressure",
+          "presentationMode": "normal",
+          "predictionPlan": {
+            "drawId": 181,
+            "mode": "normal",
+            "route": "battle",
+            "holdCue": "none",
+            "beforeCue": {
+              "family": "serial",
+              "text": "まだ、終わらない",
+              "tier": "red",
+              "start": 0.42,
+              "end": 1.85,
+              "steps": [
+                "まだ、終わらない",
+                "もう一度",
+                "まだ、終わらない"
+              ]
+            },
+            "development": {
+              "family": "long",
+              "text": "影の向こうへ",
+              "tier": "red",
+              "title": "決意の一閃"
+            },
+            "basicFamily": null,
+            "basicPrelude": null,
+            "battleFamily": "climax",
+            "chanceUps": [
+              {
+                "family": "title",
+                "text": "退けない理由がある",
+                "tier": "blue",
+                "start": 8.2,
+                "end": 9.95
+              },
+              {
+                "family": "dialogue",
+                "text": "この刃は、折れない",
+                "tier": "red",
+                "start": 28.1,
+                "end": 29.85
+              },
+              {
+                "family": "resolve",
+                "text": "最後まで、信じる",
+                "tier": "red",
+                "start": 40.6,
+                "end": 42.35
+              }
+            ],
+            "precursorSeconds": 5,
+            "resultFamily": null
+          },
+          "displayRoute": "battle",
+          "premium": null,
+          "premiumAt": 45.5,
+          "reachEnding": "standard",
+          "developed": false
+        }
+      ],
+      "result": {
+        "win": false,
+        "accounting": {
+          "basePrize": 1,
+          "gamePrize": 0,
+          "payout": 1,
+          "spent": 1,
+          "returned": 0,
+          "supply": 0,
+          "debugAdjustment": 0,
+          "extraBalls": 0,
+          "machineNet": 0,
+          "playNet": 0,
+          "balance": 0,
+          "reconciled": true
+        },
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 1,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 4
+        }
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/predictions-2026-10-05/raw/page@e8c4d984b5d2db3dd374776bf0beee11.webm"
+    },
+    {
+      "fixture": {
+        "name": "normal-character-loss",
+        "mode": "normal",
+        "win": false,
+        "route": "basic",
+        "basic": "character",
+        "id": 6
+      },
+      "admitted": {
+        "record": {
+          "id": 6,
+          "kind": "tokuzu1",
+          "ballId": 900001,
+          "roll": 0.9,
+          "followupRoll": null
+        },
+        "prediction": {
+          "drawId": 6,
+          "mode": "normal",
+          "route": "basic",
+          "holdCue": "none",
+          "beforeCue": null,
+          "development": null,
+          "basicFamily": "character",
+          "basicPrelude": {
+            "family": "character",
+            "text": "その声を、信じて",
+            "tier": "blue",
+            "start": 0.5,
+            "end": 3
+          },
+          "battleFamily": null,
+          "chanceUps": [],
+          "precursorSeconds": 0,
+          "resultFamily": null
+        }
+      },
+      "samples": [],
+      "result": {
+        "win": false,
+        "accounting": {
+          "basePrize": 1,
+          "gamePrize": 0,
+          "payout": 1,
+          "spent": 1,
+          "returned": 0,
+          "supply": 0,
+          "debugAdjustment": 0,
+          "extraBalls": 0,
+          "machineNet": 0,
+          "playNet": 0,
+          "balance": 0,
+          "reconciled": true
+        },
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 1,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 4
+        }
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/predictions-2026-10-05/raw/page@91a3c8a5e22d6132279e9804526492c5.webm"
+    },
+    {
+      "fixture": {
+        "name": "normal-digits-loss",
+        "mode": "normal",
+        "win": false,
+        "route": "basic",
+        "plain": true,
+        "id": 1
+      },
+      "admitted": {
+        "record": {
+          "id": 1,
+          "kind": "tokuzu1",
+          "ballId": 900001,
+          "roll": 0.9,
+          "followupRoll": null
+        },
+        "prediction": {
+          "drawId": 1,
+          "mode": "normal",
+          "route": "basic",
+          "holdCue": "none",
+          "beforeCue": null,
+          "development": null,
+          "basicFamily": null,
+          "basicPrelude": null,
+          "battleFamily": null,
+          "chanceUps": [],
+          "precursorSeconds": 0,
+          "resultFamily": null
+        }
+      },
+      "samples": [],
+      "result": {
+        "win": false,
+        "accounting": {
+          "basePrize": 1,
+          "gamePrize": 0,
+          "payout": 1,
+          "spent": 1,
+          "returned": 0,
+          "supply": 0,
+          "debugAdjustment": 0,
+          "extraBalls": 0,
+          "machineNet": 0,
+          "playNet": 0,
+          "balance": 0,
+          "reconciled": true
+        },
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 1,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 4
+        }
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/predictions-2026-10-05/raw/page@82063a4ace3cd9e368c70e621a40dcec.webm"
+    },
+    {
+      "fixture": {
+        "name": "normal-long-win",
+        "mode": "normal",
+        "win": true,
+        "route": "basic",
+        "basic": "long",
+        "id": 4
+      },
+      "admitted": {
+        "record": {
+          "id": 4,
+          "kind": "tokuzu1",
+          "ballId": 900001,
+          "roll": 0,
+          "followupRoll": null
+        },
+        "prediction": {
+          "drawId": 4,
+          "mode": "normal",
+          "route": "basic",
+          "holdCue": "red",
+          "beforeCue": {
+            "family": "background",
+            "text": "月影に染まる街",
+            "tier": "blue",
+            "start": 0.42,
+            "end": 1.85,
+            "steps": null
+          },
+          "development": null,
+          "basicFamily": "long",
+          "basicPrelude": {
+            "family": "long",
+            "text": "影の向こうへ",
+            "tier": "blue",
+            "start": 0.5,
+            "end": 3
+          },
+          "battleFamily": null,
+          "chanceUps": [],
+          "precursorSeconds": 0,
+          "resultFamily": null
+        }
+      },
+      "samples": [],
+      "result": {
+        "win": true,
+        "accounting": {
+          "basePrize": 1,
+          "gamePrize": 0,
+          "payout": 1,
+          "spent": 1,
+          "returned": 0,
+          "supply": 0,
+          "debugAdjustment": 0,
+          "extraBalls": 0,
+          "machineNet": 0,
+          "playNet": 0,
+          "balance": 0,
+          "reconciled": true
+        },
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": {
+            "maxPayout": 1500,
+            "rounds": 10,
+            "round": 1,
+            "count": 0,
+            "payout": 0,
+            "open": false,
+            "fromRush": false
+          },
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 1,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 5
+        }
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/predictions-2026-10-05/raw/page@6250762c78f4a4cd0197bc878d87f06c.webm"
+    },
+    {
+      "fixture": {
+        "name": "normal-episode",
+        "mode": "normal",
+        "win": false,
+        "route": "battle",
+        "variant": "initiative",
+        "before": "story",
+        "id": 1
+      },
+      "admitted": {
+        "record": {
+          "id": 1,
+          "kind": "tokuzu1",
+          "ballId": 900001,
+          "roll": 0.9,
+          "followupRoll": null
+        },
+        "prediction": {
+          "drawId": 1,
+          "mode": "normal",
+          "route": "battle",
+          "holdCue": "none",
+          "beforeCue": {
+            "family": "story",
+            "text": "守ると決めたあの日",
+            "tier": "blue",
+            "start": 0.42,
+            "end": 1.85,
+            "steps": [
+              "あの日の約束",
+              "守ると決めたあの日",
+              "今、この刃に"
+            ]
+          },
+          "development": {
+            "family": "character",
+            "text": "その声を、信じて",
+            "tier": "blue",
+            "title": "守り抜く約束"
+          },
+          "basicFamily": null,
+          "basicPrelude": null,
+          "battleFamily": "episode",
+          "chanceUps": [
+            {
+              "family": "resolve",
+              "text": "最後まで、信じる",
+              "tier": "blue",
+              "start": 40.6,
+              "end": 42.35
+            }
+          ],
+          "precursorSeconds": 5,
+          "resultFamily": null
+        }
+      },
+      "samples": [
+        {
+          "id": 1,
+          "drawId": 1,
+          "origin": {
+            "kind": "debug",
+            "mark": "plain"
+          },
+          "buildStyle": "balanced",
+          "win": false,
+          "time": 8.94999999999998,
+          "rate": 1,
+          "demo": false,
+          "pattern": "feint",
+          "sceneId": "snow",
+          "reachColor": "normal",
+          "grade": null,
+          "basicReach": true,
+          "longReach": true,
+          "moonCue": null,
+          "reachVariant": "initiative",
+          "presentationMode": "normal",
+          "predictionPlan": {
+            "drawId": 1,
+            "mode": "normal",
+            "route": "battle",
+            "holdCue": "none",
+            "beforeCue": {
+              "family": "story",
+              "text": "守ると決めたあの日",
+              "tier": "blue",
+              "start": 0.42,
+              "end": 1.85,
+              "steps": [
+                "あの日の約束",
+                "守ると決めたあの日",
+                "今、この刃に"
+              ]
+            },
+            "development": {
+              "family": "character",
+              "text": "その声を、信じて",
+              "tier": "blue",
+              "title": "守り抜く約束"
+            },
+            "basicFamily": null,
+            "basicPrelude": null,
+            "battleFamily": "episode",
+            "chanceUps": [
+              {
+                "family": "resolve",
+                "text": "最後まで、信じる",
+                "tier": "blue",
+                "start": 40.6,
+                "end": 42.35
+              }
+            ],
+            "precursorSeconds": 5,
+            "resultFamily": null
+          },
+          "displayRoute": "battle",
+          "premium": null,
+          "premiumAt": 45.5,
+          "reachEnding": "standard",
+          "developed": false
+        },
+        {
+          "id": 1,
+          "drawId": 1,
+          "origin": {
+            "kind": "debug",
+            "mark": "plain"
+          },
+          "buildStyle": "balanced",
+          "win": false,
+          "time": 28.94999999999998,
+          "rate": 1,
+          "demo": false,
+          "pattern": "feint",
+          "sceneId": "snow",
+          "reachColor": "normal",
+          "grade": null,
+          "basicReach": true,
+          "longReach": true,
+          "moonCue": null,
+          "reachVariant": "initiative",
+          "presentationMode": "normal",
+          "predictionPlan": {
+            "drawId": 1,
+            "mode": "normal",
+            "route": "battle",
+            "holdCue": "none",
+            "beforeCue": {
+              "family": "story",
+              "text": "守ると決めたあの日",
+              "tier": "blue",
+              "start": 0.42,
+              "end": 1.85,
+              "steps": [
+                "あの日の約束",
+                "守ると決めたあの日",
+                "今、この刃に"
+              ]
+            },
+            "development": {
+              "family": "character",
+              "text": "その声を、信じて",
+              "tier": "blue",
+              "title": "守り抜く約束"
+            },
+            "basicFamily": null,
+            "basicPrelude": null,
+            "battleFamily": "episode",
+            "chanceUps": [
+              {
+                "family": "resolve",
+                "text": "最後まで、信じる",
+                "tier": "blue",
+                "start": 40.6,
+                "end": 42.35
+              }
+            ],
+            "precursorSeconds": 5,
+            "resultFamily": null
+          },
+          "displayRoute": "battle",
+          "premium": null,
+          "premiumAt": 45.5,
+          "reachEnding": "standard",
+          "developed": false
+        },
+        {
+          "id": 1,
+          "drawId": 1,
+          "origin": {
+            "kind": "debug",
+            "mark": "plain"
+          },
+          "buildStyle": "balanced",
+          "win": false,
+          "time": 41.44999999999998,
+          "rate": 1,
+          "demo": false,
+          "pattern": "feint",
+          "sceneId": "snow",
+          "reachColor": "normal",
+          "grade": null,
+          "basicReach": true,
+          "longReach": true,
+          "moonCue": null,
+          "reachVariant": "initiative",
+          "presentationMode": "normal",
+          "predictionPlan": {
+            "drawId": 1,
+            "mode": "normal",
+            "route": "battle",
+            "holdCue": "none",
+            "beforeCue": {
+              "family": "story",
+              "text": "守ると決めたあの日",
+              "tier": "blue",
+              "start": 0.42,
+              "end": 1.85,
+              "steps": [
+                "あの日の約束",
+                "守ると決めたあの日",
+                "今、この刃に"
+              ]
+            },
+            "development": {
+              "family": "character",
+              "text": "その声を、信じて",
+              "tier": "blue",
+              "title": "守り抜く約束"
+            },
+            "basicFamily": null,
+            "basicPrelude": null,
+            "battleFamily": "episode",
+            "chanceUps": [
+              {
+                "family": "resolve",
+                "text": "最後まで、信じる",
+                "tier": "blue",
+                "start": 40.6,
+                "end": 42.35
+              }
+            ],
+            "precursorSeconds": 5,
+            "resultFamily": null
+          },
+          "displayRoute": "battle",
+          "premium": null,
+          "premiumAt": 45.5,
+          "reachEnding": "standard",
+          "developed": false
+        }
+      ],
+      "result": {
+        "win": false,
+        "accounting": {
+          "basePrize": 1,
+          "gamePrize": 0,
+          "payout": 1,
+          "spent": 1,
+          "returned": 0,
+          "supply": 0,
+          "debugAdjustment": 0,
+          "extraBalls": 0,
+          "machineNet": 0,
+          "playNet": 0,
+          "balance": 0,
+          "reconciled": true
+        },
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 1,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 4
+        }
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/predictions-2026-10-05/raw/page@b7be5030eb3464995a4b72d9d6a4263a.webm"
+    },
+    {
+      "fixture": {
+        "name": "normal-special",
+        "mode": "normal",
+        "win": false,
+        "route": "battle",
+        "variant": "exchange",
+        "entrance": "special",
+        "id": 3
+      },
+      "admitted": {
+        "record": {
+          "id": 3,
+          "kind": "tokuzu1",
+          "ballId": 900001,
+          "roll": 0.9,
+          "followupRoll": null
+        },
+        "prediction": {
+          "drawId": 3,
+          "mode": "normal",
+          "route": "battle",
+          "holdCue": "none",
+          "beforeCue": {
+            "family": "story",
+            "text": "守ると決めたあの日",
+            "tier": "blue",
+            "start": 0.42,
+            "end": 1.85,
+            "steps": [
+              "あの日の約束",
+              "守ると決めたあの日",
+              "今、この刃に"
+            ]
+          },
+          "development": {
+            "family": "special",
+            "text": "闇の向こうに、誰かいる",
+            "tier": "blue",
+            "title": "月下の攻防"
+          },
+          "basicFamily": null,
+          "basicPrelude": null,
+          "battleFamily": "battleSP",
+          "chanceUps": [
+            {
+              "family": "title",
+              "text": "退けない理由がある",
+              "tier": "blue",
+              "start": 8.2,
+              "end": 9.95
+            }
+          ],
+          "precursorSeconds": 5,
+          "resultFamily": null
+        }
+      },
+      "samples": [
+        {
+          "id": 1,
+          "drawId": 3,
+          "origin": {
+            "kind": "debug",
+            "mark": "plain"
+          },
+          "buildStyle": "balanced",
+          "win": false,
+          "time": 8.94999999999998,
+          "rate": 1,
+          "demo": false,
+          "pattern": "defeat",
+          "sceneId": "furnace",
+          "reachColor": "normal",
+          "grade": null,
+          "basicReach": true,
+          "longReach": true,
+          "moonCue": null,
+          "reachVariant": "exchange",
+          "presentationMode": "normal",
+          "predictionPlan": {
+            "drawId": 3,
+            "mode": "normal",
+            "route": "battle",
+            "holdCue": "none",
+            "beforeCue": {
+              "family": "story",
+              "text": "守ると決めたあの日",
+              "tier": "blue",
+              "start": 0.42,
+              "end": 1.85,
+              "steps": [
+                "あの日の約束",
+                "守ると決めたあの日",
+                "今、この刃に"
+              ]
+            },
+            "development": {
+              "family": "special",
+              "text": "闇の向こうに、誰かいる",
+              "tier": "blue",
+              "title": "月下の攻防"
+            },
+            "basicFamily": null,
+            "basicPrelude": null,
+            "battleFamily": "battleSP",
+            "chanceUps": [
+              {
+                "family": "title",
+                "text": "退けない理由がある",
+                "tier": "blue",
+                "start": 8.2,
+                "end": 9.95
+              }
+            ],
+            "precursorSeconds": 5,
+            "resultFamily": null
+          },
+          "displayRoute": "battle",
+          "premium": null,
+          "premiumAt": 45.5,
+          "reachEnding": "standard",
+          "developed": false
+        },
+        {
+          "id": 1,
+          "drawId": 3,
+          "origin": {
+            "kind": "debug",
+            "mark": "plain"
+          },
+          "buildStyle": "balanced",
+          "win": false,
+          "time": 28.94999999999998,
+          "rate": 1,
+          "demo": false,
+          "pattern": "defeat",
+          "sceneId": "furnace",
+          "reachColor": "normal",
+          "grade": null,
+          "basicReach": true,
+          "longReach": true,
+          "moonCue": null,
+          "reachVariant": "exchange",
+          "presentationMode": "normal",
+          "predictionPlan": {
+            "drawId": 3,
+            "mode": "normal",
+            "route": "battle",
+            "holdCue": "none",
+            "beforeCue": {
+              "family": "story",
+              "text": "守ると決めたあの日",
+              "tier": "blue",
+              "start": 0.42,
+              "end": 1.85,
+              "steps": [
+                "あの日の約束",
+                "守ると決めたあの日",
+                "今、この刃に"
+              ]
+            },
+            "development": {
+              "family": "special",
+              "text": "闇の向こうに、誰かいる",
+              "tier": "blue",
+              "title": "月下の攻防"
+            },
+            "basicFamily": null,
+            "basicPrelude": null,
+            "battleFamily": "battleSP",
+            "chanceUps": [
+              {
+                "family": "title",
+                "text": "退けない理由がある",
+                "tier": "blue",
+                "start": 8.2,
+                "end": 9.95
+              }
+            ],
+            "precursorSeconds": 5,
+            "resultFamily": null
+          },
+          "displayRoute": "battle",
+          "premium": null,
+          "premiumAt": 45.5,
+          "reachEnding": "standard",
+          "developed": false
+        },
+        {
+          "id": 1,
+          "drawId": 3,
+          "origin": {
+            "kind": "debug",
+            "mark": "plain"
+          },
+          "buildStyle": "balanced",
+          "win": false,
+          "time": 41.44999999999998,
+          "rate": 1,
+          "demo": false,
+          "pattern": "defeat",
+          "sceneId": "furnace",
+          "reachColor": "normal",
+          "grade": null,
+          "basicReach": true,
+          "longReach": true,
+          "moonCue": null,
+          "reachVariant": "exchange",
+          "presentationMode": "normal",
+          "predictionPlan": {
+            "drawId": 3,
+            "mode": "normal",
+            "route": "battle",
+            "holdCue": "none",
+            "beforeCue": {
+              "family": "story",
+              "text": "守ると決めたあの日",
+              "tier": "blue",
+              "start": 0.42,
+              "end": 1.85,
+              "steps": [
+                "あの日の約束",
+                "守ると決めたあの日",
+                "今、この刃に"
+              ]
+            },
+            "development": {
+              "family": "special",
+              "text": "闇の向こうに、誰かいる",
+              "tier": "blue",
+              "title": "月下の攻防"
+            },
+            "basicFamily": null,
+            "basicPrelude": null,
+            "battleFamily": "battleSP",
+            "chanceUps": [
+              {
+                "family": "title",
+                "text": "退けない理由がある",
+                "tier": "blue",
+                "start": 8.2,
+                "end": 9.95
+              }
+            ],
+            "precursorSeconds": 5,
+            "resultFamily": null
+          },
+          "displayRoute": "battle",
+          "premium": null,
+          "premiumAt": 45.5,
+          "reachEnding": "standard",
+          "developed": false
+        }
+      ],
+      "result": {
+        "win": false,
+        "accounting": {
+          "basePrize": 1,
+          "gamePrize": 0,
+          "payout": 1,
+          "spent": 1,
+          "returned": 0,
+          "supply": 0,
+          "debugAdjustment": 0,
+          "extraBalls": 0,
+          "machineNet": 0,
+          "playNet": 0,
+          "balance": 0,
+          "reconciled": true
+        },
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 1,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 4
+        }
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/predictions-2026-10-05/raw/page@e7fd756a18a097d81ae7aa31218d2806.webm"
+    },
+    {
+      "fixture": {
+        "name": "normal-fullrotation",
+        "mode": "normal",
+        "win": true,
+        "route": "battle",
+        "variant": "pressure",
+        "premium": "moon",
+        "full": true,
+        "id": 6
+      },
+      "admitted": {
+        "record": {
+          "id": 6,
+          "kind": "tokuzu1",
+          "ballId": 900001,
+          "roll": 0,
+          "followupRoll": null
+        },
+        "prediction": {
+          "drawId": 6,
+          "mode": "normal",
+          "route": "battle",
+          "holdCue": "red",
+          "beforeCue": {
+            "family": "route",
+            "text": "この先に、待つもの",
+            "tier": "blue",
+            "start": 0.42,
+            "end": 1.85,
+            "steps": null
+          },
+          "development": {
+            "family": "special",
+            "text": "闇の向こうに、誰かいる",
+            "tier": "blue",
+            "title": "決意の一閃"
+          },
+          "basicFamily": null,
+          "basicPrelude": null,
+          "battleFamily": "climax",
+          "chanceUps": [
+            {
+              "family": "dialogue",
+              "text": "この刃は、折れない",
+              "tier": "blue",
+              "start": 28.1,
+              "end": 29.85
+            },
+            {
+              "family": "resolve",
+              "text": "最後まで、信じる",
+              "tier": "blue",
+              "start": 40.6,
+              "end": 42.35
+            }
+          ],
+          "precursorSeconds": 5,
+          "resultFamily": "fullrotation"
+        }
+      },
+      "samples": [
+        {
+          "id": 1,
+          "drawId": 6,
+          "origin": {
+            "kind": "debug",
+            "mark": "plain"
+          },
+          "buildStyle": "balanced",
+          "win": true,
+          "time": 51.41666666666633,
+          "rate": 1,
+          "demo": false,
+          "pattern": "revival",
+          "sceneId": "moon",
+          "reachColor": "normal",
+          "grade": 10,
+          "basicReach": true,
+          "longReach": true,
+          "moonCue": {
+            "phase": "half",
+            "color": "red",
+            "expectation": 38,
+            "rank": 9
+          },
+          "reachVariant": "pressure",
+          "presentationMode": "normal",
+          "predictionPlan": {
+            "drawId": 6,
+            "mode": "normal",
+            "route": "battle",
+            "holdCue": "red",
+            "beforeCue": {
+              "family": "route",
+              "text": "この先に、待つもの",
+              "tier": "blue",
+              "start": 0.42,
+              "end": 1.85,
+              "steps": null
+            },
+            "development": {
+              "family": "special",
+              "text": "闇の向こうに、誰かいる",
+              "tier": "blue",
+              "title": "決意の一閃"
+            },
+            "basicFamily": null,
+            "basicPrelude": null,
+            "battleFamily": "climax",
+            "chanceUps": [
+              {
+                "family": "dialogue",
+                "text": "この刃は、折れない",
+                "tier": "blue",
+                "start": 28.1,
+                "end": 29.85
+              },
+              {
+                "family": "resolve",
+                "text": "最後まで、信じる",
+                "tier": "blue",
+                "start": 40.6,
+                "end": 42.35
+              }
+            ],
+            "precursorSeconds": 5,
+            "resultFamily": "fullrotation"
+          },
+          "displayRoute": "battle",
+          "premium": "moon",
+          "premiumAt": 45.5,
+          "reachEnding": "standard",
+          "developed": false
+        }
+      ],
+      "result": {
+        "win": true,
+        "accounting": {
+          "basePrize": 1,
+          "gamePrize": 0,
+          "payout": 1,
+          "spent": 1,
+          "returned": 0,
+          "supply": 0,
+          "debugAdjustment": 0,
+          "extraBalls": 0,
+          "machineNet": 0,
+          "playNet": 0,
+          "balance": 0,
+          "reconciled": true
+        },
+        "w": {
+          "model": "e東京喰種W",
+          "rush": null,
+          "bonus": {
+            "maxPayout": 1500,
+            "rounds": 10,
+            "round": 1,
+            "count": 0,
+            "payout": 0,
+            "open": false,
+            "fromRush": false
+          },
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 1,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 5
+        }
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/predictions-2026-10-05/raw/page@ebc0c24181b5d0a7003bdb13884574d8.webm"
+    },
+    {
+      "fixture": {
+        "name": "rush-search",
+        "mode": "rush",
+        "win": false,
+        "route": "battle",
+        "variant": "exchange",
+        "before": "search",
+        "id": 17
+      },
+      "admitted": {
+        "record": {
+          "id": 17,
+          "kind": "fuzu",
+          "ballId": 900001,
+          "roll": 0.9,
+          "followupRoll": null
+        },
+        "prediction": {
+          "drawId": 17,
+          "mode": "rush",
+          "route": "battle",
+          "holdCue": "none",
+          "beforeCue": {
+            "family": "search",
+            "text": "影を追え",
+            "tier": "blue",
+            "start": 0.1,
+            "end": 0.58,
+            "steps": null
+          },
+          "development": {
+            "family": "directbattle",
+            "text": "月下の決戦",
+            "tier": "blue",
+            "title": "月下の攻防"
+          },
+          "basicFamily": null,
+          "basicPrelude": null,
+          "battleFamily": "battleSP",
+          "chanceUps": [],
+          "precursorSeconds": 2,
+          "resultFamily": null
+        }
+      },
+      "samples": [
+        {
+          "id": 1,
+          "drawId": 17,
+          "origin": {
+            "kind": "debug",
+            "mark": "plain"
+          },
+          "buildStyle": "balanced",
+          "win": false,
+          "time": 8.941666666666647,
+          "rate": 0.45,
+          "demo": false,
+          "pattern": "defeat",
+          "sceneId": "forest",
+          "reachColor": "normal",
+          "grade": null,
+          "basicReach": true,
+          "longReach": true,
+          "moonCue": null,
+          "reachVariant": "exchange",
+          "presentationMode": "rush",
+          "predictionPlan": {
+            "drawId": 17,
+            "mode": "rush",
+            "route": "battle",
+            "holdCue": "none",
+            "beforeCue": {
+              "family": "search",
+              "text": "影を追え",
+              "tier": "blue",
+              "start": 0.1,
+              "end": 0.58,
+              "steps": null
+            },
+            "development": {
+              "family": "directbattle",
+              "text": "月下の決戦",
+              "tier": "blue",
+              "title": "月下の攻防"
+            },
+            "basicFamily": null,
+            "basicPrelude": null,
+            "battleFamily": "battleSP",
+            "chanceUps": [],
+            "precursorSeconds": 2,
+            "resultFamily": null
+          },
+          "displayRoute": "battle",
+          "premium": null,
+          "premiumAt": 45.5,
+          "reachEnding": "standard",
+          "developed": false
+        },
+        {
+          "id": 1,
+          "drawId": 17,
+          "origin": {
+            "kind": "debug",
+            "mark": "plain"
+          },
+          "buildStyle": "balanced",
+          "win": false,
+          "time": 28.94999999999998,
+          "rate": 0.45,
+          "demo": false,
+          "pattern": "defeat",
+          "sceneId": "forest",
+          "reachColor": "normal",
+          "grade": null,
+          "basicReach": true,
+          "longReach": true,
+          "moonCue": null,
+          "reachVariant": "exchange",
+          "presentationMode": "rush",
+          "predictionPlan": {
+            "drawId": 17,
+            "mode": "rush",
+            "route": "battle",
+            "holdCue": "none",
+            "beforeCue": {
+              "family": "search",
+              "text": "影を追え",
+              "tier": "blue",
+              "start": 0.1,
+              "end": 0.58,
+              "steps": null
+            },
+            "development": {
+              "family": "directbattle",
+              "text": "月下の決戦",
+              "tier": "blue",
+              "title": "月下の攻防"
+            },
+            "basicFamily": null,
+            "basicPrelude": null,
+            "battleFamily": "battleSP",
+            "chanceUps": [],
+            "precursorSeconds": 2,
+            "resultFamily": null
+          },
+          "displayRoute": "battle",
+          "premium": null,
+          "premiumAt": 45.5,
+          "reachEnding": "standard",
+          "developed": false
+        },
+        {
+          "id": 1,
+          "drawId": 17,
+          "origin": {
+            "kind": "debug",
+            "mark": "plain"
+          },
+          "buildStyle": "balanced",
+          "win": false,
+          "time": 41.46666666666665,
+          "rate": 0.45,
+          "demo": false,
+          "pattern": "defeat",
+          "sceneId": "forest",
+          "reachColor": "normal",
+          "grade": null,
+          "basicReach": true,
+          "longReach": true,
+          "moonCue": null,
+          "reachVariant": "exchange",
+          "presentationMode": "rush",
+          "predictionPlan": {
+            "drawId": 17,
+            "mode": "rush",
+            "route": "battle",
+            "holdCue": "none",
+            "beforeCue": {
+              "family": "search",
+              "text": "影を追え",
+              "tier": "blue",
+              "start": 0.1,
+              "end": 0.58,
+              "steps": null
+            },
+            "development": {
+              "family": "directbattle",
+              "text": "月下の決戦",
+              "tier": "blue",
+              "title": "月下の攻防"
+            },
+            "basicFamily": null,
+            "basicPrelude": null,
+            "battleFamily": "battleSP",
+            "chanceUps": [],
+            "precursorSeconds": 2,
+            "resultFamily": null
+          },
+          "displayRoute": "battle",
+          "premium": null,
+          "premiumAt": 45.5,
+          "reachEnding": "standard",
+          "developed": false
+        }
+      ],
+      "result": {
+        "win": false,
+        "accounting": {
+          "basePrize": 1,
+          "gamePrize": 0,
+          "payout": 1,
+          "spent": 1,
+          "returned": 0,
+          "supply": 0,
+          "debugAdjustment": 0,
+          "extraBalls": 0,
+          "machineNet": 0,
+          "playNet": 0,
+          "balance": 0,
+          "reconciled": true
+        },
+        "w": {
+          "model": "e東京喰種W",
+          "rush": {
+            "remaining": 129,
+            "consumed": 1
+          },
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": false,
+          "payout": 1,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 5
+        }
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/predictions-2026-10-05/raw/page@5a4b71a542663bb2390fc17f042aede8.webm"
+    },
+    {
+      "fixture": {
+        "name": "rush-flash",
+        "mode": "rush",
+        "win": true,
+        "route": "flash",
+        "id": 1
+      },
+      "admitted": {
+        "record": {
+          "id": 1,
+          "kind": "fuzu",
+          "ballId": 900001,
+          "roll": 0,
+          "followupRoll": null
+        },
+        "prediction": {
+          "drawId": 1,
+          "mode": "rush",
+          "route": "flash",
+          "holdCue": "none",
+          "beforeCue": null,
+          "development": null,
+          "basicFamily": null,
+          "basicPrelude": null,
+          "battleFamily": null,
+          "chanceUps": [],
+          "precursorSeconds": 0,
+          "resultFamily": null
+        }
+      },
+      "samples": [
+        {
+          "id": 1,
+          "drawId": 1,
+          "origin": {
+            "kind": "debug",
+            "mark": "plain"
+          },
+          "buildStyle": "balanced",
+          "win": true,
+          "time": 5.550000000000018,
+          "rate": 0.45,
+          "demo": false,
+          "pattern": "revival",
+          "sceneId": "moon",
+          "reachColor": "normal",
+          "grade": 10,
+          "basicReach": true,
+          "longReach": true,
+          "moonCue": null,
+          "reachVariant": null,
+          "presentationMode": "rush",
+          "predictionPlan": {
+            "drawId": 1,
+            "mode": "rush",
+            "route": "flash",
+            "holdCue": "none",
+            "beforeCue": null,
+            "development": null,
+            "basicFamily": null,
+            "basicPrelude": null,
+            "battleFamily": null,
+            "chanceUps": [],
+            "precursorSeconds": 0,
+            "resultFamily": null
+          },
+          "displayRoute": "flash",
+          "premium": null,
+          "premiumAt": 45.5,
+          "reachEnding": "flash",
+          "developed": false
+        }
+      ],
+      "result": {
+        "win": true,
+        "accounting": {
+          "basePrize": 1,
+          "gamePrize": 0,
+          "payout": 1,
+          "spent": 1,
+          "returned": 0,
+          "supply": 0,
+          "debugAdjustment": 0,
+          "extraBalls": 0,
+          "machineNet": 0,
+          "playNet": 0,
+          "balance": 0,
+          "reconciled": true
+        },
+        "w": {
+          "model": "e東京喰種W",
+          "rush": {
+            "remaining": 129,
+            "consumed": 1
+          },
+          "bonus": null,
+          "pendingV": false,
+          "electricOpen": true,
+          "payout": 1,
+          "holds": {
+            "tokuzu1": 0,
+            "tokuzu2": 0,
+            "fuzu": 0
+          },
+          "eventCount": 6
+        }
+      },
+      "video": "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/reference-review/predictions-2026-10-05/raw/page@72b30e24b2b7d61d273ac424808f6252.webm"
+    }
+  ],
+  "errors": [],
+  "scope": "Actual production view and flow; specified inlet result and route; scene-time seeks for battle excerpts; basic and flash real-time"
+}

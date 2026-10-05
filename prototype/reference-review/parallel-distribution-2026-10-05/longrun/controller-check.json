@@ -1,0 +1,1812 @@
+{
+  "scope": "Production SessionGame + boardFlow + normalSpin; seeded uniform saved lottery results; controlled inlet callbacks, no route/result overrides, no clock seeks. Pose visibility is sampled headlessly, not a rendered browser.",
+  "seed": 739391,
+  "target": 10000,
+  "counters": {
+    "accepted": 10004,
+    "started": 10004,
+    "resolved": 10004,
+    "fifoChecks": 10004,
+    "rollChecks": 20008,
+    "pauseChecks": 22,
+    "queueCueChecks": 9986,
+    "queueCueChanges": 0,
+    "premiumLeakChecks": 194538,
+    "revivalLeakChecks": 1080,
+    "payout": 134760,
+    "vEntries": 76,
+    "normalJackpots": 11,
+    "chargeBonuses": 18,
+    "rushBonuses": 76
+  },
+  "excluded": {
+    "charge": 18,
+    "guaranteed": 0,
+    "changedPrior": 0
+  },
+  "tables": {
+    "normal": {
+      "route:ordinary": {
+        "seen": 7036,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.000545694096298985
+        ]
+      },
+      "before:story:blue": {
+        "seen": 161,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.023304796847397745
+        ]
+      },
+      "before:background:blue": {
+        "seen": 144,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.025984567266588023
+        ]
+      },
+      "hold:blue": {
+        "seen": 292,
+        "wins": 1,
+        "reliability": 0.003424657534246575,
+        "interval95": [
+          0.0006047766025466181,
+          0.019140925151364934
+        ]
+      },
+      "before:route:blue": {
+        "seen": 188,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          1.734723475976807e-18,
+          0.020024853837749476
+        ]
+      },
+      "before:serial:blue": {
+        "seen": 144,
+        "wins": 1,
+        "reliability": 0.006944444444444444,
+        "interval95": [
+          0.001226887030401979,
+          0.03828567235748344
+        ]
+      },
+      "precursor:long:blue": {
+        "seen": 126,
+        "wins": 1,
+        "reliability": 0.007936507936507936,
+        "interval95": [
+          0.0014023289659406447,
+          0.04358787448195278
+        ]
+      },
+      "route:basic": {
+        "seen": 266,
+        "wins": 1,
+        "reliability": 0.0037593984962406013,
+        "interval95": [
+          0.0006639175999955567,
+          0.020984338265667857
+        ]
+      },
+      "before:step:blue": {
+        "seen": 151,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.02480987021575597
+        ]
+      },
+      "precursor:character:blue": {
+        "seen": 134,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.0278696706944783
+        ]
+      },
+      "development:long:blue": {
+        "seen": 35,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.09890426758938868
+        ]
+      },
+      "moon:crescent:none": {
+        "seen": 14,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.21531701192718142
+        ]
+      },
+      "route:battle": {
+        "seen": 135,
+        "wins": 9,
+        "reliability": 0.06666666666666667,
+        "interval95": [
+          0.03546649508631035,
+          0.12184658687183476
+        ]
+      },
+      "battle:exchange": {
+        "seen": 104,
+        "wins": 5,
+        "reliability": 0.04807692307692308,
+        "interval95": [
+          0.020707736946876366,
+          0.10764347445948261
+        ]
+      },
+      "development:character:blue": {
+        "seen": 48,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.0741026511527422
+        ]
+      },
+      "chanceUp:title:blue": {
+        "seen": 53,
+        "wins": 6,
+        "reliability": 0.11320754716981132,
+        "interval95": [
+          0.052929589110686695,
+          0.22576770301339144
+        ]
+      },
+      "moon:crescent:blue": {
+        "seen": 9,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.2991527535509594
+        ]
+      },
+      "chanceUp:dialogue:blue": {
+        "seen": 51,
+        "wins": 1,
+        "reliability": 0.0196078431372549,
+        "interval95": [
+          0.003469603253442241,
+          0.10304807675589372
+        ]
+      },
+      "moon:crescent:green": {
+        "seen": 17,
+        "wins": 1,
+        "reliability": 0.058823529411764705,
+        "interval95": [
+          0.01046013064516424,
+          0.269825452035628
+        ]
+      },
+      "precursor:directbattle:blue": {
+        "seen": 28,
+        "wins": 1,
+        "reliability": 0.03571428571428571,
+        "interval95": [
+          0.00633235649754188,
+          0.17712576118498663
+        ]
+      },
+      "development:directbattle:blue": {
+        "seen": 28,
+        "wins": 1,
+        "reliability": 0.03571428571428571,
+        "interval95": [
+          0.00633235649754188,
+          0.17712576118498663
+        ]
+      },
+      "chanceUp:resolve:blue": {
+        "seen": 53,
+        "wins": 1,
+        "reliability": 0.018867924528301886,
+        "interval95": [
+          0.003338367386749398,
+          0.09943143501149412
+        ]
+      },
+      "before:background:red": {
+        "seen": 2,
+        "wins": 1,
+        "reliability": 0.5,
+        "interval95": [
+          0.09452865480086614,
+          0.9054713451991339
+        ]
+      },
+      "precursor:long:red": {
+        "seen": 5,
+        "wins": 1,
+        "reliability": 0.2,
+        "interval95": [
+          0.03622316096978745,
+          0.6244717358814613
+        ]
+      },
+      "development:long:red": {
+        "seen": 5,
+        "wins": 1,
+        "reliability": 0.2,
+        "interval95": [
+          0.03622316096978745,
+          0.6244717358814613
+        ]
+      },
+      "battle:initiative": {
+        "seen": 29,
+        "wins": 3,
+        "reliability": 0.10344827586206896,
+        "interval95": [
+          0.035814240381301043,
+          0.26385447247069155
+        ]
+      },
+      "moon:full:blue": {
+        "seen": 3,
+        "wins": 1,
+        "reliability": 0.3333333333333333,
+        "interval95": [
+          0.0614903152761605,
+          0.7923450448735121
+        ]
+      },
+      "precursor:character:red": {
+        "seen": 4,
+        "wins": 1,
+        "reliability": 0.25,
+        "interval95": [
+          0.045586062644636216,
+          0.6993639475573634
+        ]
+      },
+      "precursor:special:blue": {
+        "seen": 10,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.2775401687666166
+        ]
+      },
+      "development:special:blue": {
+        "seen": 10,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.2775401687666166
+        ]
+      },
+      "moon:half:blue": {
+        "seen": 3,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.5615060804490177
+        ]
+      },
+      "moon:half:none": {
+        "seen": 10,
+        "wins": 1,
+        "reliability": 0.1,
+        "interval95": [
+          0.01787574951572113,
+          0.4041563854975721
+        ]
+      },
+      "before:serial:red": {
+        "seen": 3,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.5615060804490177
+        ]
+      },
+      "development:character:red": {
+        "seen": 2,
+        "wins": 1,
+        "reliability": 0.5,
+        "interval95": [
+          0.09452865480086614,
+          0.9054713451991339
+        ]
+      },
+      "moon:half:green": {
+        "seen": 7,
+        "wins": 2,
+        "reliability": 0.2857142857142857,
+        "interval95": [
+          0.0822171657090155,
+          0.6410709098517873
+        ]
+      },
+      "before:serial:gold": {
+        "seen": 2,
+        "wins": 2,
+        "reliability": 1,
+        "interval95": [
+          0.34237195288961925,
+          1
+        ]
+      },
+      "precursor:character:gold": {
+        "seen": 2,
+        "wins": 2,
+        "reliability": 1,
+        "interval95": [
+          0.34237195288961925,
+          1
+        ]
+      },
+      "development:character:gold": {
+        "seen": 2,
+        "wins": 2,
+        "reliability": 1,
+        "interval95": [
+          0.34237195288961925,
+          1
+        ]
+      },
+      "precursor:directbattle:gold": {
+        "seen": 2,
+        "wins": 1,
+        "reliability": 0.5,
+        "interval95": [
+          0.09452865480086614,
+          0.9054713451991339
+        ]
+      },
+      "development:directbattle:gold": {
+        "seen": 2,
+        "wins": 1,
+        "reliability": 0.5,
+        "interval95": [
+          0.09452865480086614,
+          0.9054713451991339
+        ]
+      },
+      "moon:crescent:red": {
+        "seen": 7,
+        "wins": 1,
+        "reliability": 0.14285714285714285,
+        "interval95": [
+          0.02567895594897479,
+          0.51313450331903
+        ]
+      },
+      "hold:red": {
+        "seen": 4,
+        "wins": 2,
+        "reliability": 0.5,
+        "interval95": [
+          0.15003570882017148,
+          0.8499642911798285
+        ]
+      },
+      "moon:full:green": {
+        "seen": 3,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.5615060804490177
+        ]
+      },
+      "moon:half:red": {
+        "seen": 5,
+        "wins": 1,
+        "reliability": 0.2,
+        "interval95": [
+          0.03622316096978745,
+          0.6244717358814613
+        ]
+      },
+      "chanceUp:dialogue:red": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "chanceUp:resolve:red": {
+        "seen": 3,
+        "wins": 2,
+        "reliability": 0.6666666666666666,
+        "interval95": [
+          0.2076549551264879,
+          0.9385096847238394
+        ]
+      },
+      "revival:revealed": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "battle:pressure": {
+        "seen": 2,
+        "wins": 1,
+        "reliability": 0.5,
+        "interval95": [
+          0.09452865480086614,
+          0.9054713451991339
+        ]
+      },
+      "moon:full:none": {
+        "seen": 1,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.7934567085261071
+        ]
+      },
+      "route:direct": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "before:route:red": {
+        "seen": 1,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.7934567085261071
+        ]
+      },
+      "precursor:long:gold": {
+        "seen": 2,
+        "wins": 2,
+        "reliability": 1,
+        "interval95": [
+          0.34237195288961925,
+          1
+        ]
+      },
+      "development:long:gold": {
+        "seen": 2,
+        "wins": 2,
+        "reliability": 1,
+        "interval95": [
+          0.34237195288961925,
+          1
+        ]
+      },
+      "chanceUp:dialogue:gold": {
+        "seen": 3,
+        "wins": 3,
+        "reliability": 1,
+        "interval95": [
+          0.43849391955098227,
+          1
+        ]
+      },
+      "precursor:directbattle:red": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "development:directbattle:red": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "moon:full:red": {
+        "seen": 2,
+        "wins": 2,
+        "reliability": 1,
+        "interval95": [
+          0.34237195288961925,
+          1
+        ]
+      },
+      "before:background:gold": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "chanceUp:resolve:gold": {
+        "seen": 3,
+        "wins": 3,
+        "reliability": 1,
+        "interval95": [
+          0.43849391955098227,
+          1
+        ]
+      },
+      "before:step:gold": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "before:step:red": {
+        "seen": 1,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.7934567085261071
+        ]
+      }
+    },
+    "rush": {
+      "hold:blue": {
+        "seen": 100,
+        "wins": 7,
+        "reliability": 0.07,
+        "interval95": [
+          0.034318824364064096,
+          0.13749671006529757
+        ]
+      },
+      "route:ordinary": {
+        "seen": 2372,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.0016169428130225515
+        ]
+      },
+      "before:search:blue": {
+        "seen": 33,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.10427343003561192
+        ]
+      },
+      "precursor:character:blue": {
+        "seen": 51,
+        "wins": 8,
+        "reliability": 0.1568627450980392,
+        "interval95": [
+          0.08169125888021325,
+          0.2801070839835982
+        ]
+      },
+      "route:basic": {
+        "seen": 147,
+        "wins": 23,
+        "reliability": 0.1564625850340136,
+        "interval95": [
+          0.10657865288228369,
+          0.22384478468401103
+        ]
+      },
+      "before:alert:blue": {
+        "seen": 28,
+        "wins": 2,
+        "reliability": 0.07142857142857142,
+        "interval95": [
+          0.019811647447770794,
+          0.2264573842591786
+        ]
+      },
+      "before:awakening:blue": {
+        "seen": 36,
+        "wins": 2,
+        "reliability": 0.05555555555555555,
+        "interval95": [
+          0.015369663767066846,
+          0.18144974107611211
+        ]
+      },
+      "before:crest:blue": {
+        "seen": 31,
+        "wins": 1,
+        "reliability": 0.03225806451612903,
+        "interval95": [
+          0.00571707408694444,
+          0.16194457176169622
+        ]
+      },
+      "before:trail:blue": {
+        "seen": 26,
+        "wins": 2,
+        "reliability": 0.07692307692307693,
+        "interval95": [
+          0.02135463918337556,
+          0.24141947480515052
+        ]
+      },
+      "before:approach:blue": {
+        "seen": 27,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          6.938893903907228e-18,
+          0.12455903714463581
+        ]
+      },
+      "precursor:long:blue": {
+        "seen": 56,
+        "wins": 4,
+        "reliability": 0.07142857142857142,
+        "interval95": [
+          0.028125581246379636,
+          0.16975682831486205
+        ]
+      },
+      "before:pursuit:blue": {
+        "seen": 32,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.1071827150573635
+        ]
+      },
+      "hold:gold": {
+        "seen": 10,
+        "wins": 10,
+        "reliability": 1,
+        "interval95": [
+          0.7224598312333834,
+          1
+        ]
+      },
+      "hold:red": {
+        "seen": 9,
+        "wins": 5,
+        "reliability": 0.5555555555555556,
+        "interval95": [
+          0.2666473457440297,
+          0.811224570528086
+        ]
+      },
+      "before:identity:blue": {
+        "seen": 31,
+        "wins": 2,
+        "reliability": 0.06451612903225806,
+        "interval95": [
+          0.017874407775063147,
+          0.20718988318746434
+        ]
+      },
+      "before:resolve:blue": {
+        "seen": 20,
+        "wins": 1,
+        "reliability": 0.05,
+        "interval95": [
+          0.008881219432873136,
+          0.23613589351256675
+        ]
+      },
+      "route:direct": {
+        "seen": 4,
+        "wins": 4,
+        "reliability": 1,
+        "interval95": [
+          0.5100999795960008,
+          1
+        ]
+      },
+      "development:character:blue": {
+        "seen": 5,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.43449149475208104
+        ]
+      },
+      "moon:crescent:none": {
+        "seen": 6,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.3903430336530645
+        ]
+      },
+      "chanceUp:dialogue:blue": {
+        "seen": 7,
+        "wins": 1,
+        "reliability": 0.14285714285714285,
+        "interval95": [
+          0.02567895594897479,
+          0.51313450331903
+        ]
+      },
+      "chanceUp:resolve:blue": {
+        "seen": 8,
+        "wins": 1,
+        "reliability": 0.125,
+        "interval95": [
+          0.02241690886329617,
+          0.4708948057698615
+        ]
+      },
+      "route:battle": {
+        "seen": 20,
+        "wins": 6,
+        "reliability": 0.3,
+        "interval95": [
+          0.14547527396899385,
+          0.5189767762289793
+        ]
+      },
+      "battle:initiative": {
+        "seen": 6,
+        "wins": 3,
+        "reliability": 0.5,
+        "interval95": [
+          0.18761280689940868,
+          0.8123871931005913
+        ]
+      },
+      "before:moon:blue": {
+        "seen": 29,
+        "wins": 1,
+        "reliability": 0.034482758620689655,
+        "interval95": [
+          0.006113056614032261,
+          0.1717589106470025
+        ]
+      },
+      "moon:half:none": {
+        "seen": 2,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.6576280471103807
+        ]
+      },
+      "battle:exchange": {
+        "seen": 13,
+        "wins": 3,
+        "reliability": 0.23076923076923078,
+        "interval95": [
+          0.08179379092465713,
+          0.5025687399512693
+        ]
+      },
+      "route:flash": {
+        "seen": 5,
+        "wins": 5,
+        "reliability": 1,
+        "interval95": [
+          0.5655085052479191,
+          1
+        ]
+      },
+      "development:long:blue": {
+        "seen": 5,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.43449149475208104
+        ]
+      },
+      "chanceUp:title:blue": {
+        "seen": 12,
+        "wins": 5,
+        "reliability": 0.4166666666666667,
+        "interval95": [
+          0.19325746190524656,
+          0.6804926643446272
+        ]
+      },
+      "moon:full:blue": {
+        "seen": 2,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.6576280471103807
+        ]
+      },
+      "moon:full:red": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "precursor:character:red": {
+        "seen": 3,
+        "wins": 2,
+        "reliability": 0.6666666666666666,
+        "interval95": [
+          0.2076549551264879,
+          0.9385096847238394
+        ]
+      },
+      "precursor:long:red": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "before:alert:gold": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "precursor:long:gold": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "development:long:gold": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "moon:crescent:red": {
+        "seen": 3,
+        "wins": 1,
+        "reliability": 0.3333333333333333,
+        "interval95": [
+          0.0614903152761605,
+          0.7923450448735121
+        ]
+      },
+      "chanceUp:dialogue:gold": {
+        "seen": 3,
+        "wins": 3,
+        "reliability": 1,
+        "interval95": [
+          0.43849391955098227,
+          1
+        ]
+      },
+      "precursor:directbattle:blue": {
+        "seen": 3,
+        "wins": 1,
+        "reliability": 0.3333333333333333,
+        "interval95": [
+          0.0614903152761605,
+          0.7923450448735121
+        ]
+      },
+      "development:directbattle:blue": {
+        "seen": 3,
+        "wins": 1,
+        "reliability": 0.3333333333333333,
+        "interval95": [
+          0.0614903152761605,
+          0.7923450448735121
+        ]
+      },
+      "premium:moon": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "moon:crescent:green": {
+        "seen": 2,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.6576280471103807
+        ]
+      },
+      "before:identity:gold": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "precursor:character:gold": {
+        "seen": 3,
+        "wins": 3,
+        "reliability": 1,
+        "interval95": [
+          0.43849391955098227,
+          1
+        ]
+      },
+      "development:character:gold": {
+        "seen": 3,
+        "wins": 3,
+        "reliability": 1,
+        "interval95": [
+          0.43849391955098227,
+          1
+        ]
+      },
+      "chanceUp:resolve:gold": {
+        "seen": 2,
+        "wins": 2,
+        "reliability": 1,
+        "interval95": [
+          0.34237195288961925,
+          1
+        ]
+      },
+      "before:pursuit:red": {
+        "seen": 1,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.7934567085261071
+        ]
+      },
+      "precursor:directbattle:red": {
+        "seen": 2,
+        "wins": 1,
+        "reliability": 0.5,
+        "interval95": [
+          0.09452865480086614,
+          0.9054713451991339
+        ]
+      },
+      "development:directbattle:red": {
+        "seen": 2,
+        "wins": 1,
+        "reliability": 0.5,
+        "interval95": [
+          0.09452865480086614,
+          0.9054713451991339
+        ]
+      },
+      "before:moon:gold": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "moon:full:green": {
+        "seen": 2,
+        "wins": 2,
+        "reliability": 1,
+        "interval95": [
+          0.34237195288961925,
+          1
+        ]
+      },
+      "before:search:gold": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "precursor:special:blue": {
+        "seen": 1,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.7934567085261071
+        ]
+      },
+      "development:special:blue": {
+        "seen": 1,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.7934567085261071
+        ]
+      },
+      "battle:pressure": {
+        "seen": 1,
+        "wins": 0,
+        "reliability": 0,
+        "interval95": [
+          0,
+          0.7934567085261071
+        ]
+      },
+      "before:crest:red": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "before:awakening:red": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      },
+      "chanceUp:resolve:red": {
+        "seen": 1,
+        "wins": 1,
+        "reliability": 1,
+        "interval95": [
+          0.20654329147389294,
+          1
+        ]
+      }
+    }
+  },
+  "repeats": {
+    "normal": {
+      "battles": 135,
+      "repeats": 74,
+      "last": "exchange"
+    },
+    "rush": {
+      "battles": 20,
+      "repeats": 8,
+      "last": "initiative"
+    }
+  },
+  "violations": [],
+  "routeSamples": [
+    {
+      "id": 1,
+      "mode": "normal",
+      "roll": 0.2836768387351185,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 2,
+      "mode": "normal",
+      "roll": 0.8596796474885195,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 3,
+      "mode": "normal",
+      "roll": 0.9846046771854162,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "before:story:blue",
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 4,
+      "mode": "normal",
+      "roll": 0.6607124083675444,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "before:background:blue",
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 5,
+      "mode": "normal",
+      "roll": 0.7845621081069112,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 6,
+      "mode": "normal",
+      "roll": 0.7585705446545035,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 7,
+      "mode": "normal",
+      "roll": 0.05972085380926728,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "hold:blue",
+        "before:route:blue",
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 8,
+      "mode": "normal",
+      "roll": 0.19731831969693303,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 9,
+      "mode": "normal",
+      "roll": 0.31716305180452764,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 10,
+      "mode": "normal",
+      "roll": 0.23919394984841347,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 11,
+      "mode": "normal",
+      "roll": 0.9747906061820686,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "before:serial:blue",
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 12,
+      "mode": "normal",
+      "roll": 0.8376448869239539,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "shown": [
+        "route:ordinary"
+      ]
+    }
+  ],
+  "rareSamples": [
+    {
+      "id": 445,
+      "mode": "normal",
+      "roll": 0.5133129628375173,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:background:red",
+        "precursor:long:red",
+        "development:long:red",
+        "route:battle",
+        "battle:initiative"
+      ]
+    },
+    {
+      "id": 752,
+      "mode": "normal",
+      "roll": 0.3710271492600441,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "basic",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "precursor:character:red",
+        "route:basic"
+      ]
+    },
+    {
+      "id": 1415,
+      "mode": "normal",
+      "roll": 0.35342887975275517,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:serial:red",
+        "precursor:character:red",
+        "development:character:red",
+        "chanceUp:title:blue",
+        "moon:half:green",
+        "route:battle",
+        "battle:initiative"
+      ]
+    },
+    {
+      "id": 1745,
+      "mode": "normal",
+      "roll": 0.32461858727037907,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "precursor:directbattle:gold",
+        "development:directbattle:gold",
+        "moon:crescent:red",
+        "route:battle",
+        "battle:exchange"
+      ]
+    },
+    {
+      "id": 1778,
+      "mode": "normal",
+      "roll": 0.09139906521886587,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "hold:red",
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 2192,
+      "mode": "normal",
+      "roll": 0.0013413582928478718,
+      "admitted": "symbol",
+      "resolved": "symbol",
+      "route": "battle",
+      "ending": "revival",
+      "premium": null,
+      "shown": [
+        "precursor:long:red",
+        "development:long:red",
+        "moon:half:red",
+        "chanceUp:dialogue:red",
+        "chanceUp:resolve:red",
+        "revival:revealed",
+        "route:battle",
+        "battle:pressure"
+      ]
+    },
+    {
+      "id": 2366,
+      "mode": "normal",
+      "roll": 0.4526206727605313,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:route:blue",
+        "precursor:character:blue",
+        "development:character:blue",
+        "moon:crescent:red",
+        "route:battle",
+        "battle:initiative"
+      ]
+    },
+    {
+      "id": 2498,
+      "mode": "normal",
+      "roll": 0.134377145441249,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:step:blue",
+        "precursor:directbattle:blue",
+        "development:directbattle:blue",
+        "moon:crescent:red",
+        "chanceUp:dialogue:blue",
+        "chanceUp:resolve:blue",
+        "route:battle",
+        "battle:exchange"
+      ]
+    },
+    {
+      "id": 2952,
+      "mode": "normal",
+      "roll": 0.4616749887354672,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:serial:blue",
+        "precursor:long:blue",
+        "development:long:blue",
+        "chanceUp:title:blue",
+        "moon:crescent:red",
+        "route:battle",
+        "battle:exchange"
+      ]
+    },
+    {
+      "id": 3237,
+      "mode": "normal",
+      "roll": 0.5328998574987054,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:serial:blue",
+        "precursor:character:blue",
+        "development:character:blue",
+        "moon:half:red",
+        "chanceUp:dialogue:blue",
+        "chanceUp:resolve:blue",
+        "route:battle",
+        "battle:exchange"
+      ]
+    },
+    {
+      "id": 3375,
+      "mode": "normal",
+      "roll": 0.44352285424247384,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "basic",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "precursor:character:red",
+        "route:basic"
+      ]
+    },
+    {
+      "id": 3778,
+      "mode": "normal",
+      "roll": 0.6504530732054263,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:route:blue",
+        "precursor:character:blue",
+        "development:character:blue",
+        "moon:half:red",
+        "chanceUp:dialogue:blue",
+        "chanceUp:resolve:blue",
+        "route:battle",
+        "battle:exchange"
+      ]
+    },
+    {
+      "id": 4369,
+      "mode": "normal",
+      "roll": 0.9546434234362096,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:serial:blue",
+        "precursor:long:blue",
+        "development:long:blue",
+        "moon:crescent:red",
+        "chanceUp:dialogue:blue",
+        "chanceUp:resolve:blue",
+        "route:battle",
+        "battle:exchange"
+      ]
+    },
+    {
+      "id": 4745,
+      "mode": "normal",
+      "roll": 0.9042572793550789,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:serial:red",
+        "precursor:long:red",
+        "development:long:red",
+        "moon:crescent:none",
+        "route:battle",
+        "battle:exchange"
+      ]
+    },
+    {
+      "id": 4800,
+      "mode": "normal",
+      "roll": 0.5518348349723965,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:route:red",
+        "precursor:long:red",
+        "development:long:red",
+        "chanceUp:title:blue",
+        "chanceUp:resolve:red",
+        "route:battle",
+        "battle:exchange"
+      ]
+    },
+    {
+      "id": 4906,
+      "mode": "normal",
+      "roll": 0.21336206723935902,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "hold:red",
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 5112,
+      "mode": "normal",
+      "roll": 0.1704149623401463,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:background:blue",
+        "precursor:character:blue",
+        "development:character:blue",
+        "chanceUp:title:blue",
+        "moon:half:red",
+        "chanceUp:dialogue:blue",
+        "route:battle",
+        "battle:exchange"
+      ]
+    },
+    {
+      "id": 5555,
+      "mode": "normal",
+      "roll": 0.2669288865290582,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:story:blue",
+        "precursor:long:blue",
+        "development:long:blue",
+        "chanceUp:title:blue",
+        "moon:half:red",
+        "chanceUp:dialogue:blue",
+        "route:battle",
+        "battle:exchange"
+      ]
+    },
+    {
+      "id": 5835,
+      "mode": "rush",
+      "roll": 0.08661786210723221,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "basic",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "precursor:character:red",
+        "route:basic"
+      ]
+    },
+    {
+      "id": 6045,
+      "mode": "rush",
+      "roll": 0.46197806508280337,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "hold:red",
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 6051,
+      "mode": "rush",
+      "roll": 0.0037020735908299685,
+      "admitted": "electric-open",
+      "resolved": "electric-open",
+      "route": "battle",
+      "ending": "standard",
+      "premium": "moon",
+      "shown": [
+        "before:trail:blue",
+        "precursor:directbattle:blue",
+        "development:directbattle:blue",
+        "chanceUp:title:blue",
+        "chanceUp:dialogue:blue",
+        "chanceUp:resolve:blue",
+        "premium:moon",
+        "route:battle",
+        "battle:exchange"
+      ]
+    },
+    {
+      "id": 6230,
+      "mode": "rush",
+      "roll": 0.262003306299448,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "hold:red",
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 6345,
+      "mode": "rush",
+      "roll": 0.5560347221326083,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:pursuit:red",
+        "precursor:directbattle:red",
+        "development:directbattle:red",
+        "chanceUp:title:blue",
+        "moon:crescent:none",
+        "route:battle",
+        "battle:exchange"
+      ]
+    },
+    {
+      "id": 6885,
+      "mode": "rush",
+      "roll": 0.07424400630407035,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:crest:blue",
+        "precursor:long:blue",
+        "development:long:blue",
+        "moon:crescent:red",
+        "chanceUp:dialogue:blue",
+        "chanceUp:resolve:blue",
+        "route:battle",
+        "battle:exchange"
+      ]
+    },
+    {
+      "id": 7305,
+      "mode": "normal",
+      "roll": 0.9398739112075418,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:background:blue",
+        "precursor:directbattle:blue",
+        "development:directbattle:blue",
+        "chanceUp:title:blue",
+        "moon:crescent:red",
+        "chanceUp:resolve:blue",
+        "route:battle",
+        "battle:exchange"
+      ]
+    },
+    {
+      "id": 7548,
+      "mode": "rush",
+      "roll": 0.254307754104957,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "hold:red",
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 7677,
+      "mode": "rush",
+      "roll": 0.20932625606656075,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "ordinary",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "hold:red",
+        "route:ordinary"
+      ]
+    },
+    {
+      "id": 7922,
+      "mode": "rush",
+      "roll": 0.5270979257766157,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:trail:blue",
+        "precursor:character:blue",
+        "development:character:blue",
+        "moon:crescent:red",
+        "chanceUp:dialogue:blue",
+        "chanceUp:resolve:blue",
+        "route:battle",
+        "battle:initiative"
+      ]
+    },
+    {
+      "id": 8613,
+      "mode": "normal",
+      "roll": 0.35876722424291074,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "basic",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:serial:red",
+        "route:basic"
+      ]
+    },
+    {
+      "id": 9456,
+      "mode": "normal",
+      "roll": 0.3139953939244151,
+      "admitted": "miss",
+      "resolved": "miss",
+      "route": "battle",
+      "ending": "standard",
+      "premium": null,
+      "shown": [
+        "before:step:red",
+        "precursor:long:red",
+        "development:long:red",
+        "moon:half:green",
+        "route:battle",
+        "battle:initiative"
+      ]
+    }
+  ],
+  "virtualSeconds": 41934.600001007246,
+  "wallSeconds": 21.341,
+  "steps": 838692,
+  "rngCalls": 51865,
+  "accounting": {
+    "basePrize": 147892,
+    "gamePrize": 0,
+    "payout": 147892,
+    "spent": 0,
+    "returned": 0,
+    "supply": 0,
+    "debugAdjustment": 0,
+    "extraBalls": 0,
+    "machineNet": 147892,
+    "playNet": 147892,
+    "balance": 147892,
+    "reconciled": true
+  },
+  "hashes": {
+    "src/pixi/session-game.js": "f48b66f12876ed3ec217f8450855da2e365a2ad3f596d7b0552cdf6357072eb4",
+    "src/pixi/normal-spin-flow.js": "bafe364379b3b430c4e26046c0b4ab9dea786fe221a85ac16ed60f02564d2644",
+    "src/pixi/presentation-distribution.js": "d32b7ce8fb48599a238477397564ace6a62f5983b04dd8d6120641b9d13f5fe7",
+    "src/pixi/prediction-plan.js": "4c40422c81d7da55d2ad69aa2633400127f0933549b36426da47b0c9e63d62d1",
+    "src/pixi/hold-prediction.js": "c81bdfef809c74a53309db2acd1f98398fe2d4ac011a054baefcf317c44aa99b",
+    "src/pixi/prediction-view.js": "26800bef3e9161b233a6d529d6c9439e880e835d050fd79fa8ca3748b3aaca80",
+    "src/pixi/normal-spin-view.js": "bccfd9d08df37ad1089a218c0e55ef3448296ba8f89dd3b2a6c8071deed1fae7",
+    "src/pixi/moon-cue.js": "2bf303f508f739fa16f74f88ee1d8aa0cd20873fdfd74b5c004a29c48e10e78a",
+    "src/tokyoghoul-w-machine.js": "2f917752bd07c39217ff6f5d2937d60436d09c1078e708669cd971dc15e36652"
+  }
+}
