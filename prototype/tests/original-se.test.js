@@ -83,3 +83,13 @@ test('PUSH prompt and actual press are separate once-only cues with no early con
  assert.equal(heard.filter(n=>n==='pushPress').length,1);assert.ok(!heard.includes('win'));
  presentation.time=50.21;tracker.sync(g,{pushAvailable:true});assert.equal(heard.at(-1),'decisiveHit');
 });
+
+test('small cues cannot cut a confirmation when all six effect voices are occupied',async()=>{
+ const sources=[],node=()=>({connect(){},disconnect(){},gain:{value:0},threshold:{value:0},knee:{value:0},ratio:{value:0}});
+ const ctx={state:'running',sampleRate:16000,currentTime:0,destination:node(),resume:async()=>{},close:async()=>{},createGain:node,createDynamicsCompressor:node,createBuffer:(n,length)=>({length,copyToChannel(){}}),createBufferSource:()=>{const s={...node(),start(){},stop(){s.stopped=true;}};sources.push(s);return s;}};
+ const sound=createPresentationSound({contextFactory:()=>ctx});await sound.unlock();for(let i=0;i<6;i++)sound.audition('win');const count=sound.snapshot().cues.length;sound.audition('payout');assert.equal(sound.snapshot().cues.length,count);assert.ok(sources.every(s=>!s.stopped));sound.audition('decisiveHit');assert.equal(sound.snapshot().voices,6);assert.equal(sources.filter(s=>s.stopped).length,1);sound.dispose();
+});
+test('important sounds have authored body, resonance and stereo tails',()=>{
+ assert.equal(SE_CATALOG.decisiveHit.kind,'blade');assert.equal(SE_CATALOG.win.kind,'victory');assert.ok(SE_CATALOG.decisiveHit.body>SE_CATALOG.heroHit.body);assert.ok(SE_CATALOG.win.duration>2);
+ for(const name of ['decisiveHit','win','heroHit']){const {left,right,sampleRate}=synthesizeSe(name,0,16000);let tail=0,width=0;for(let i=Math.round(sampleRate*.25);i<left.length;i++){tail+=left[i]*left[i];width+=(left[i]-right[i])**2;}assert.ok(tail>.2&&width>.001,name);}
+});

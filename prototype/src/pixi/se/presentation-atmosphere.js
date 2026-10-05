@@ -28,44 +28,59 @@ export function atmospherePose(game){
   pitch:pressure?140+590*charge:170+350*charge,charge:t>=24?(pressure?charge:charge*.65):0};
 }
 
-export function synthesizeAtmosphere(variant=0,sampleRate=44100){
+export function synthesizeAtmosphere(variant=0,sampleRate=44100,{charge=false}={}){
  const seconds=3,n=Math.round(sampleRate*seconds),left=new Float32Array(n),right=new Float32Array(n);
- let seed=93491+variant*1979,low=0,slow=0;
+ let seed=93491+variant*1979,low=0,slow=0,grain=0;
+ const frequencies=charge?[183,293,451,719,1123,1709]:[63,147,233];
  for(let i=0;i<n;i++){
   seed=(Math.imul(seed,1664525)+1013904223)>>>0;const noise=seed/2147483648-1;
-  low+=.16*(noise-low);slow+=.016*(noise-slow);const t=i/sampleRate;
-  const breath=.72+.15*Math.sin(2*Math.PI*t/seconds)+.10*Math.sin(4*Math.PI*t/seconds+variant);
-  const resonance=.11*Math.sin(2*Math.PI*(63+variant*3)*t)+.06*Math.sin(2*Math.PI*(147+variant*6)*t);
-  left[i]=((low-slow)*1.2+slow*.5+resonance)*breath;
-  right[i]=((low-slow)*1.0+slow*.7+resonance)*breath;
+  low+=.12*(noise-low);slow+=.012*(noise-slow);grain+=.35*(noise-grain);const t=i/sampleRate;
+  const breath=.72+.12*Math.sin(2*Math.PI*t/seconds)+.08*Math.sin(4*Math.PI*t/seconds+variant);
+  let resonance=0,spread=0;
+  for(let j=0;j<frequencies.length;j++){
+   const f=frequencies[j]+variant*(j+1)*1.33,w=(charge?.053:.073)/(1+j*.42);
+   const shimmer=.7+.3*Math.sin(2*Math.PI*(1+j*.667)*t+variant);
+   resonance+=Math.sin(2*Math.PI*f*t)*w*shimmer;
+   spread+=Math.sin(2*Math.PI*(f+1.7)*t+.4)*w*shimmer;
+  }
+  const friction=charge?((grain-low)*.75+(low-slow)*.38):((low-slow)*.85+slow*.40);
+  left[i]=(friction+resonance)*breath;
+  right[i]=(friction*.89+spread)*breath;
  }
- // Crossfade the last 40ms into the first; neither edge drops to zero.
  const edge=Math.round(sampleRate*.04);
  for(const data of [left,right])for(let i=0;i<edge;i++){const u=i/edge;data[n-edge+i]=data[n-edge+i]*(1-u)+data[i]*u;}
  return {left,right,sampleRate};
 }
 
 export function createAtmosphere(context,destination){
- let noise,tone,airGain,toneGain,filter,variant=null,buffer,pose=null;
- const stop=()=>{for(const source of [noise,tone])if(source){source.stop();source.disconnect();}airGain?.disconnect();toneGain?.disconnect();filter?.disconnect();noise=tone=airGain=toneGain=filter=null;pose=null;};
+ let noise,tone,airGain,toneGain,filter,toneFilter,variant=null,buffer,chargeBuffer,pose=null,duckUntil=0,duckDepth=1;
+ const stop=()=>{for(const source of [noise,tone])if(source){source.stop();source.disconnect();}airGain?.disconnect();toneGain?.disconnect();filter?.disconnect();toneFilter?.disconnect();noise=tone=airGain=toneGain=filter=toneFilter=null;pose=null;duckUntil=0;};
+ function createBuffer(charge){const pcm=synthesizeAtmosphere(variant,context.sampleRate,{charge}),b=context.createBuffer(2,pcm.left.length,context.sampleRate);b.copyToChannel(pcm.left,0);b.copyToChannel(pcm.right,1);return b;}
  function start(next){
-  if(!buffer||variant!==next.variant){const pcm=synthesizeAtmosphere(next.variant,context.sampleRate);buffer=context.createBuffer(2,pcm.left.length,context.sampleRate);buffer.copyToChannel(pcm.left,0);buffer.copyToChannel(pcm.right,1);variant=next.variant;}
+  if(!buffer||variant!==next.variant){variant=next.variant;buffer=createBuffer(false);chargeBuffer=createBuffer(true);}
   noise=context.createBufferSource();noise.buffer=buffer;noise.loop=true;noise.loopStart=.04;airGain=context.createGain();airGain.gain.value=0;
   filter=context.createBiquadFilter();filter.type='lowpass';filter.frequency.value=1600;filter.Q.value=.45;
   noise.connect(filter);filter.connect(airGain);airGain.connect(destination);noise.start(0,.04);
-  tone=context.createOscillator();tone.type='triangle';toneGain=context.createGain();toneGain.gain.value=0;tone.connect(toneGain);toneGain.connect(destination);tone.start();
+  tone=context.createBufferSource();tone.buffer=chargeBuffer;tone.loop=true;tone.loopStart=.04;
+  toneFilter=context.createBiquadFilter();toneFilter.type='lowpass';toneFilter.Q.value=.6;toneGain=context.createGain();toneGain.gain.value=0;
+  tone.connect(toneFilter);toneFilter.connect(toneGain);toneGain.connect(destination);tone.start(0,.04);
  }
  const target=(param,value,seconds)=>{param.cancelScheduledValues(context.currentTime);param.setTargetAtTime(value,context.currentTime,seconds);};
  return {
   sync(next){
    pose=next;
    if(!next.active){if(noise){target(airGain.gain,0,.002);target(toneGain.gain,0,.002);}return;}
-   if(noise&&variant!==next.variant)stop();if(!noise)start(next);pose=next;
-   target(airGain.gain,next.level,.035);target(toneGain.gain,next.charge*.068,.035);
-   target(tone.frequency,next.pitch,.045);target(filter.frequency,1100+next.charge*2100,.06);
+   if(noise&&variant!==next.variant){const until=duckUntil,depth=duckDepth;stop();duckUntil=until;duckDepth=depth;}if(!noise)start(next);pose=next;
+   const duck=context.currentTime<duckUntil?duckDepth:1;
+   target(airGain.gain,next.level*duck,.045);target(toneGain.gain,next.charge*.057*duck,.045);
+   // Opening the texture and tightening its grain replaces the exposed siren.
+   target(tone.playbackRate,.72+.48*next.charge,.07);
+   target(toneFilter.frequency,480+next.charge**1.7*3800,.07);
+   target(filter.frequency,1000+next.charge*1400,.06);
   },
+  duck(seconds,depth=.3){duckDepth=context.currentTime<duckUntil?Math.min(duckDepth,depth):depth;duckUntil=Math.max(duckUntil,context.currentTime+seconds);if(airGain){target(airGain.gain,(pose?.level??0)*duckDepth,.006);target(toneGain.gain,(pose?.charge??0)*.057*duckDepth,.006);}},
   stop,
-  snapshot:()=>({mode:pose?.mode??'stopped',level:pose?.level??0,charge:pose?.charge??0,pitch:pose?.pitch??0,voices:noise?2:0,bufferBytes:buffer?buffer.length*8:0}),
-  dispose(){stop();buffer=null;}
+  snapshot:()=>({mode:pose?.mode??'stopped',level:pose?.level??0,charge:pose?.charge??0,pitch:pose?.pitch??0,ducked:context.currentTime<duckUntil,voices:noise?2:0,bufferBytes:buffer?buffer.length*16:0}),
+  dispose(){stop();buffer=chargeBuffer=null;}
  };
 }

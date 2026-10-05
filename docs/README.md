@@ -261,3 +261,5 @@ docs/
 - [決意の一閃：溜めから一撃へ](prototype/long-reach/RESOLVE_SINGLE_STRIKE.md)：反復斬撃を廃止し、一撃の加速・接触保持・振り抜きへ集中。
 
 - [オリジナル効果音・割当と試聴](prototype/ORIGINAL_SE.md)
+
+- [効果音の素材感・溜め・ミックスの仕上げ](prototype/SOUND_FINISH.md)

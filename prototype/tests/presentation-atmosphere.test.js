@@ -21,9 +21,10 @@ test('atmosphere PCM has no dropouts and remains within its support-layer budget
 test('only two bed sources exist; silence mutes them and pause/dispose stops and disconnects',()=>{
  const sources=[],params=[];const param=()=>{const p={value:0,target:null,cancelScheduledValues(){},setTargetAtTime(v){p.target=v;}};params.push(p);return p;};
  const node=()=>({connect(){},disconnect(){this.disconnected=true;}});
- const source=()=>{const s={...node(),start(){},stop(){this.stopped=true;}};sources.push(s);return s;};
+ const source=()=>{const s={...node(),playbackRate:param(),start(){},stop(){this.stopped=true;}};sources.push(s);return s;};
  const context={currentTime:0,sampleRate:16000,createBuffer:(n,length)=>({length,copyToChannel(){}}),createBufferSource:source,createGain:()=>({...node(),gain:param()}),createBiquadFilter:()=>({...node(),frequency:param(),Q:{value:0}}),createOscillator:()=>{const s=source();s.frequency=param();return s;}};
  const bed=createAtmosphere(context,node());bed.sync(atmospherePose(game(30)));assert.equal(sources.length,2);for(let i=0;i<100;i++)bed.sync(atmospherePose(game(30+i*.01)));assert.equal(sources.length,2);
- bed.sync(atmospherePose(game(49.9)));assert.equal(params[0].target,0);assert.equal(params[3].target,0);
+ bed.sync(atmospherePose(game(49.9)));assert.equal(params[1].target,0);assert.equal(params[5].target,0);
+ bed.sync(atmospherePose(game(49.5)));bed.duck(.23,.22);bed.sync(atmospherePose(game(49.5)));assert.ok(params[1].target<.025);bed.duck(.1,.58);bed.sync(atmospherePose(game(49.5)));assert.ok(params[1].target<.025);context.currentTime=.4;bed.sync(atmospherePose(game(49.5)));assert.ok(params[1].target>.08);
  bed.stop();assert.equal(bed.snapshot().voices,0);assert.ok(sources.every(s=>s.stopped&&s.disconnected));bed.sync(atmospherePose(game(50.2)));assert.equal(sources.length,4);bed.dispose();assert.equal(bed.snapshot().voices,0);assert.equal(bed.snapshot().bufferBytes,0);
 });
