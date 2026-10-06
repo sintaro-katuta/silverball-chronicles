@@ -1,0 +1,554 @@
+{
+  "scope": "PR #1 moon signature: recognition rhythm, accelerating ratchet and release, normal winning fixture. Fixed admitted winning record for a review demo; live 30fps canvas plus live Web Audio captured in one MediaRecorder, no reach seek or speed change.",
+  "snapshot": {
+    "view": "board",
+    "intro": {
+      "active": false,
+      "phase": "complete",
+      "elapsed": 0.15140000009536742
+    },
+    "w": {
+      "model": "e東京喰種W",
+      "rush": null,
+      "bonus": {
+        "maxPayout": 1500,
+        "rounds": 10,
+        "round": 1,
+        "count": 4,
+        "payout": 60,
+        "open": true,
+        "fromRush": false
+      },
+      "pendingV": false,
+      "electricOpen": false,
+      "payout": 70,
+      "holds": {
+        "tokuzu1": 4,
+        "tokuzu2": 0,
+        "fuzu": 0
+      },
+      "eventCount": 28
+    },
+    "direction": {
+      "direction": "right",
+      "since": 66.11666666666535,
+      "visible": false
+    },
+    "cabinet": {
+      "phase": "payout",
+      "travel": 0,
+      "light": 0.2223212817269789,
+      "rainbow": false,
+      "hue": 0,
+      "sword": {
+        "phase": "rest",
+        "y": 0,
+        "angle": 0
+      },
+      "fixedCarriers": true,
+      "moon": {
+        "phase": "crescent",
+        "color": "none",
+        "rank": 0,
+        "expectation": null,
+        "cueActive": false,
+        "strike": false,
+        "resultEffect": false,
+        "reliabilityAssigned": true
+      }
+    },
+    "session": {
+      "stock": 352,
+      "total": 70,
+      "phase": "playing",
+      "accounting": {
+        "basePrize": 70,
+        "gamePrize": 0,
+        "payout": 70,
+        "spent": 118,
+        "returned": 0,
+        "supply": 0,
+        "debugAdjustment": 0,
+        "extraBalls": 0,
+        "machineNet": -48,
+        "playNet": -48,
+        "balance": -48,
+        "reconciled": true
+      },
+      "jackpots": 1
+    },
+    "spin": {
+      "entryPrelude": null,
+      "lifecycle": true,
+      "mode": "right-closed",
+      "rush": null,
+      "lastRush": null,
+      "round": {
+        "phase": "open",
+        "phaseTime": 2.7916666666688883,
+        "fromRush": false,
+        "round": 1,
+        "count": 4,
+        "limit": 10,
+        "payout": 60,
+        "maxPayout": 1500,
+        "remainingSeconds": 12.208333333333341,
+        "history": [
+          {
+            "phase": "guide",
+            "time": 66.10833333333201,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "opening",
+            "time": 67.30833333333297,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "open",
+            "time": 67.95833333333348,
+            "round": 1,
+            "count": 0,
+            "payout": 0
+          },
+          {
+            "phase": "admission",
+            "time": 68.53333333333394,
+            "round": 1,
+            "count": 1,
+            "ballId": 112,
+            "payout": 15
+          },
+          {
+            "phase": "admission",
+            "time": 69.10000000000106,
+            "round": 1,
+            "count": 2,
+            "ballId": 113,
+            "payout": 30
+          },
+          {
+            "phase": "admission",
+            "time": 69.7333333333349,
+            "round": 1,
+            "count": 3,
+            "ballId": 114,
+            "payout": 45
+          },
+          {
+            "phase": "admission",
+            "time": 70.3166666666687,
+            "round": 1,
+            "count": 4,
+            "ballId": 115,
+            "payout": 60
+          }
+        ]
+      },
+      "win": {
+        "time": 10.441666666671821,
+        "fromRush": false
+      },
+      "reach": null,
+      "time": 70.75000000000237,
+      "holds": 4,
+      "active": false,
+      "draws": 1,
+      "stopTimer": 0,
+      "reels": {
+        "spinning": false,
+        "numbers": [
+          7,
+          7,
+          7
+        ],
+        "stopped": [
+          true,
+          true,
+          true
+        ]
+      },
+      "accepted": 4,
+      "entries": 4,
+      "events": [
+        {
+          "time": 17.47499999999965,
+          "ballId": 24,
+          "accepted": 1,
+          "mode": "normal",
+          "hold": 1,
+          "drawId": 2
+        },
+        {
+          "time": 28.383333333332363,
+          "ballId": 42,
+          "accepted": 1,
+          "mode": "normal",
+          "hold": 2,
+          "drawId": 3
+        },
+        {
+          "time": 43.95833333333148,
+          "ballId": 68,
+          "accepted": 1,
+          "mode": "normal",
+          "hold": 3,
+          "drawId": 4
+        },
+        {
+          "time": 50.233333333331124,
+          "ballId": 76,
+          "accepted": 1,
+          "mode": "normal",
+          "hold": 4,
+          "drawId": 5
+        }
+      ]
+    },
+    "lcd": {
+      "x": 82,
+      "y": 303,
+      "width": 259.5,
+      "height": 202
+    },
+    "gate": {
+      "kind": "fuzu-inlet",
+      "count": 0,
+      "lastPass": null,
+      "lit": false
+    },
+    "leftRoutes": {
+      "roadContact": 14,
+      "nearHeso": 9,
+      "admitted": 4,
+      "nearAdmitted": 4,
+      "deflectedAtHeso": 0,
+      "nearMiss": 5,
+      "earlySpill": 5,
+      "pending": 0,
+      "nearPending": 0,
+      "nearMissOutcomes": {
+        "out": 5
+      },
+      "outcomes": {
+        "out": 105,
+        "normal": 1,
+        "start": 4,
+        "bonus": 4
+      },
+      "tracked": 118,
+      "byPower": {
+        "0.24": {
+          "roadContact": 14,
+          "nearHeso": 9,
+          "admitted": 4,
+          "nearAdmitted": 4,
+          "deflectedAtHeso": 0,
+          "nearMiss": 5,
+          "earlySpill": 5,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {
+            "out": 5
+          },
+          "outcomes": {
+            "out": 105,
+            "normal": 1,
+            "start": 4
+          },
+          "tracked": 111
+        },
+        "0.85": {
+          "roadContact": 0,
+          "nearHeso": 0,
+          "admitted": 0,
+          "nearAdmitted": 0,
+          "deflectedAtHeso": 0,
+          "nearMiss": 0,
+          "earlySpill": 0,
+          "pending": 0,
+          "nearPending": 0,
+          "nearMissOutcomes": {},
+          "outcomes": {
+            "bonus": 4
+          },
+          "tracked": 7
+        }
+      }
+    },
+    "time": 70.75000000000237,
+    "paused": false,
+    "mode": "bonus",
+    "counts": {
+      "fuzu": 0,
+      "normal": 1,
+      "start": 4,
+      "rush": 0,
+      "bonus": 4,
+      "out": 105,
+      "returned": 0
+    },
+    "spawned": 118,
+    "pockets": [
+      {
+        "x": 356,
+        "y": 430,
+        "w": 60,
+        "kind": "bonus",
+        "id": 5,
+        "captureTray": {
+          "left": 333.875,
+          "right": 372.625,
+          "y": 449.5,
+          "radius": 1.4
+        }
+      },
+      {
+        "x": 280.5,
+        "y": 542,
+        "w": 12,
+        "kind": "rush",
+        "id": 6,
+        "geometryScale": 0.65,
+        "referenceSlot": true,
+        "captureTray": {
+          "left": 272.5,
+          "right": 303.5,
+          "y": 548,
+          "radius": 0.65,
+          "role": "right-channel-5-1"
+        }
+      },
+      {
+        "id": 0,
+        "kind": "normal",
+        "x": 102.5,
+        "y": 542.5,
+        "w": 10
+      },
+      {
+        "id": 1,
+        "kind": "normal",
+        "x": 136,
+        "y": 555.5,
+        "w": 10
+      },
+      {
+        "id": 2,
+        "kind": "normal",
+        "x": 148.5,
+        "y": 563,
+        "w": 9.5
+      },
+      {
+        "id": 4,
+        "kind": "start",
+        "x": 208.5,
+        "y": 553,
+        "w": 16
+      },
+      {
+        "id": 8,
+        "kind": "fuzu",
+        "x": 271,
+        "y": 569.5,
+        "w": 14
+      }
+    ],
+    "guide": {
+      "a": {
+        "x": 339,
+        "y": 242.5
+      },
+      "b": {
+        "x": 354.5,
+        "y": 270.5
+      },
+      "r": 0.65,
+      "active": true,
+      "denchuShelf": false,
+      "material": "resin",
+      "role": "right-inner-lower",
+      "restitution": 0.04
+    },
+    "attacker": {
+      "progress": 1,
+      "target": 1,
+      "moving": false
+    },
+    "tulip": {
+      "progress": 0,
+      "target": 0,
+      "moving": false
+    },
+    "routeBalls": [],
+    "inFlight": 4
+  },
+  "audio": {
+    "enabled": true,
+    "state": "running",
+    "voices": 0,
+    "cacheBytes": 11627544,
+    "atmosphere": {
+      "mode": "afterglow",
+      "level": 0.052,
+      "charge": 0,
+      "pitch": 220,
+      "ducked": false,
+      "voices": 2,
+      "bufferBytes": 2304000
+    },
+    "cues": [
+      {
+        "name": "spin",
+        "variant": 0,
+        "time": 4.362666666666667
+      },
+      {
+        "name": "story",
+        "variant": 0,
+        "time": 4.778666666666667
+      },
+      {
+        "name": "story",
+        "variant": 2,
+        "time": 5.253333333333333
+      },
+      {
+        "name": "story",
+        "variant": 1,
+        "time": 5.728
+      },
+      {
+        "name": "stopLeft",
+        "variant": 0,
+        "time": 6.554666666666667
+      },
+      {
+        "name": "reach",
+        "variant": 0,
+        "time": 7.109333333333334
+      },
+      {
+        "name": "character",
+        "variant": 0,
+        "time": 7.237333333333333
+      },
+      {
+        "name": "arrival",
+        "variant": 0,
+        "time": 9.12
+      },
+      {
+        "name": "development",
+        "variant": 0,
+        "time": 10.021333333333333
+      },
+      {
+        "name": "enemy",
+        "variant": 0,
+        "time": 12.122666666666667
+      },
+      {
+        "name": "chanceTitle",
+        "variant": 0,
+        "time": 15.322666666666667
+      },
+      {
+        "name": "pressure",
+        "variant": 0,
+        "time": 17.125333333333334
+      },
+      {
+        "name": "attention",
+        "variant": 0,
+        "time": 24.122666666666667
+      },
+      {
+        "name": "upperSword",
+        "variant": 0,
+        "time": 26.170666666666666
+      },
+      {
+        "name": "moon",
+        "variant": 0,
+        "time": 26.656
+      },
+      {
+        "name": "gather",
+        "variant": 0,
+        "time": 31.162666666666667
+      },
+      {
+        "name": "surge",
+        "variant": 0,
+        "time": 40.165333333333336
+      },
+      {
+        "name": "rally",
+        "variant": 0,
+        "time": 46.16
+      },
+      {
+        "name": "chanceResolve",
+        "variant": 0,
+        "time": 47.76
+      },
+      {
+        "name": "vow",
+        "variant": 0,
+        "time": 50.154666666666664
+      },
+      {
+        "name": "final",
+        "variant": 0,
+        "time": 53.168
+      },
+      {
+        "name": "decisiveHit",
+        "variant": 0,
+        "time": 57.333333333333336
+      },
+      {
+        "name": "win",
+        "variant": 0,
+        "time": 58.83733333333333
+      },
+      {
+        "name": "rightGuide",
+        "variant": 0,
+        "time": 66.97066666666667
+      },
+      {
+        "name": "open",
+        "variant": 0,
+        "time": 68.17066666666666
+      },
+      {
+        "name": "payout",
+        "variant": 0,
+        "time": 69.36
+      },
+      {
+        "name": "payout",
+        "variant": 2,
+        "time": 69.92533333333333
+      },
+      {
+        "name": "payout",
+        "variant": 1,
+        "time": 70.56
+      },
+      {
+        "name": "payout",
+        "variant": 3,
+        "time": 71.14133333333334
+      }
+    ]
+  },
+  "errors": []
+}

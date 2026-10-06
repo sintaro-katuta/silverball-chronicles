@@ -1,0 +1,116 @@
+{
+  "condition": "-50dB threshold, minimum 0.4s; real 54-second winning reach plus admission and guide, one live canvas/audio recorder; fixture win, no seek/speed change",
+  "previous": {
+    "sha256": "66f6d1aa5ad0e36c9772765de617d5ca3227a3c2d3afea29f19f4b0d1e3498cb",
+    "gaps": [
+      {
+        "end": 3.555271,
+        "duration": 3.548604
+      },
+      {
+        "end": 6.314771,
+        "duration": 0.472562
+      },
+      {
+        "end": 8.315604,
+        "duration": 1.257937
+      },
+      {
+        "end": 11.303937,
+        "duration": 1.689146
+      },
+      {
+        "end": 14.512646,
+        "duration": 2.797
+      },
+      {
+        "end": 16.305396,
+        "duration": 1.106562
+      },
+      {
+        "end": 23.313667,
+        "duration": 6.456313
+      },
+      {
+        "end": 25.305729,
+        "duration": 1.356792
+      },
+      {
+        "end": 30.30775,
+        "duration": 3.951167
+      },
+      {
+        "end": 39.305062,
+        "duration": 8.364042
+      },
+      {
+        "end": 45.297417,
+        "duration": 5.320354
+      },
+      {
+        "end": 46.903979,
+        "duration": 1.192292
+      },
+      {
+        "end": 49.303208,
+        "duration": 1.845104
+      },
+      {
+        "end": 52.305292,
+        "duration": 2.449771
+      },
+      {
+        "end": 56.504458,
+        "duration": 3.523146
+      },
+      {
+        "end": 58.011271,
+        "duration": 0.829
+      },
+      {
+        "end": 66.111083,
+        "duration": 6.745042
+      },
+      {
+        "end": 67.306104,
+        "duration": 0.504042
+      },
+      {
+        "end": 68.555375,
+        "duration": 0.697708
+      },
+      {
+        "end": 69.116521,
+        "duration": 0.474771
+      },
+      {
+        "end": 69.755333,
+        "duration": 0.551354
+      },
+      {
+        "end": 70.332458,
+        "duration": 0.495812
+      }
+    ]
+  },
+  "revised": {
+    "sha256": "7a2c71e7250de004b9d1a3d313e22c32cb4a3a62e63c0ff5a417550f9ea85209",
+    "gaps": [
+      {
+        "end": 23.328333,
+        "duration": 0.806312
+      },
+      {
+        "end": 56.523833,
+        "duration": 0.550104
+      }
+    ]
+  },
+  "sources": {
+    "src/pixi/se/presentation-atmosphere.js": "3ebcafbafb7b6899d69b71ae19c3ff872b2543b2d128412e2924bfacac33ffa0",
+    "src/pixi/se/presentation-sound.js": "2e613348904490da2e860ac27c7f9bd82a2a5621c62a2b23441803ee26c9d9e4"
+  },
+  "tests": 16,
+  "browserCases": 8,
+  "physicalListening": "unverified"
+}

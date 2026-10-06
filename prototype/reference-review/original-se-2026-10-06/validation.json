@@ -1,0 +1,19 @@
+{
+  "sources": {
+    "src/app/main.js": "7baf19dc1e741ea70f93f7800e0470313b7d4b04232116609e5f6fc63ba24786",
+    "src/pixi/board-runtime.js": "f49d8e2c4efb3d67427d5f0a6e454c1754b114ba066241328af1a4c2f5119933",
+    "src/pixi/se/original-se.js": "703e4dc9f426902ec219ca85aa985ac6e16ec65eec7ae63fa18a2c42fa0565d6",
+    "src/pixi/se/presentation-cues.js": "3f8f7e46ee58a7ab69098df7e2b7b148104889e0fba9dac725474f526f070fab",
+    "src/pixi/se/presentation-sound.js": "e4d0647326eb3b9de7cdaf8f0d8bd3fa48690ca3ca1547645e1fa712c802c357",
+    "src/pixi/long-reach-timeline.js": "45806478ebd411f341bf3b292d4fc4ea93ff2f89dc8d5fb71d7ad0dfc1b1c5c9"
+  },
+  "unitTests": {
+    "fullSuite": 373,
+    "finalAudioSuite": 11,
+    "note": "Full suite included first 9 audio tests. Final targeted suite adds RUSH reset and PUSH tests."
+  },
+  "build": "production and previews passed",
+  "continuous": "54-second real admitted normal loss, real AudioContext/MediaRecorder, no seeks during reach",
+  "startup": "Final startup gesture unlock with default Chrome autoplay policy; 8 sought presentation boundaries, mute/resume/pause/preview passed",
+  "unverified": "Physical speaker and headphone listening; every route continuously in natural play."
+}

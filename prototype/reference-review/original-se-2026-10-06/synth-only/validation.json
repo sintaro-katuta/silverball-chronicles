@@ -1,0 +1,14 @@
+{
+  "sources": {
+    "src/pixi/se/synth-wave.js": "2fb8c070b7c6e12264b3a6e4fd683cf7820a0750ffba941e1bf21307b8339dc6",
+    "src/pixi/se/signature-sound.js": "5b28f4f56b388783d3b8154291f3c4420d5c516ce76f4c7e657a4659b4ef55e7",
+    "src/pixi/se/original-se.js": "7c68221ca02467fdd04c14b953e1584c9ff0b143bc70eed85c1bcf0043fd2fda",
+    "src/pixi/se/presentation-atmosphere.js": "ba3c74041eb34345809346f8a23fdcf4e94d1411202813f7e7057fa76bad4cfc"
+  },
+  "tests": 21,
+  "browserCases": 8,
+  "builds": "production and previews passed",
+  "comparison": "769e39e hard-metal signature then latest synth-only signature, same peak target .54 and output gain .65",
+  "scope": "All production SE and support tone use periodic synth oscillators. No noise, material grain, scrape or sub percussion. Video seeks to49.5 before recording and then plays release/reveal/guide continuously.",
+  "physicalListening": "unverified"
+}

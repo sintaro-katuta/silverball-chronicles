@@ -1,0 +1,26 @@
+{
+  "sources": {
+    "src/pixi/se/original-se.js": "93295afc0668ceeda3474aa257b065f2f37c16531a00a1e3afa4acc864326649",
+    "src/pixi/se/presentation-atmosphere.js": "789c0369ed55534058c4608983e6388f832f9b9178d5824ce9090e03528459af",
+    "src/pixi/se/presentation-sound.js": "f00c2b28dd4e77a40945c826b9433e8a5d28fd35ed01180ac1011e8575f0f509"
+  },
+  "tests": 18,
+  "browserCases": 8,
+  "builds": "production and previews passed",
+  "videoDuration": 70.72065,
+  "videoSha256": "ddb05e4883119ec2c11114cc06bd4b87e0378caf16687b47015f478600de0817",
+  "silenceCondition": "-50dB, >=0.4sec",
+  "silences": [
+    {
+      "end": 23.359,
+      "duration": 0.822771
+    },
+    {
+      "end": 56.535062,
+      "duration": 0.549458
+    }
+  ],
+  "recordedMeanDb": -31.6,
+  "recordedPeakDb": -5.8,
+  "scope": "Actual admitted forced-win fixture, full 54 second reach without seek or speed change, live canvas + Web Audio recorded together. No hardware speaker or headphone listening."
+}
