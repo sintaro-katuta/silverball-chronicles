@@ -1,0 +1,27 @@
+{
+  "sourceSha256": {
+    "presentation-sound.js": "f00c2b28dd4e77a40945c826b9433e8a5d28fd35ed01180ac1011e8575f0f509",
+    "presentation-cues.js": "3f8f7e46ee58a7ab69098df7e2b7b148104889e0fba9dac725474f526f070fab",
+    "win-zoom-sound.js": "10c44edfa3cff3d2474a0525b0bf3f09eff19083df18363103bc2e886fb1a6b9",
+    "signature-sound.js": "2c0dbae87ae3807fc4645f2dc0a684296ff371457a6fd1ae2e27af3323a5aec5",
+    "original-se.js": "dff82507535c0a195bdbebd1ddfbae4c594512e6efa87da6c79c0418c95860cf",
+    "synth-wave.js": "042b18a27172f7f1c0ccb6fb4d5392ad316056e6a73e3b230ebe9b71e402dd1f",
+    "presentation-atmosphere.js": "ba3c74041eb34345809346f8a23fdcf4e94d1411202813f7e7057fa76bad4cfc"
+  },
+  "soundTests": {
+    "passed": 21,
+    "failed": 0
+  },
+  "browserCases": 8,
+  "build": "passed",
+  "previewBuild": "passed",
+  "productionSynthCueCount": 70,
+  "exactApprovedWinArrangements": 8,
+  "audition": {
+    "representativeCues": 15,
+    "variant": 0,
+    "masterGain": 0.65,
+    "durationSeconds": 24.68
+  },
+  "scope": "8 fixtures at authored boundaries using real AudioContext and MediaRecorder. No new continuous full-length gameplay capture. Physical speaker/headphone listening unverified."
+}
