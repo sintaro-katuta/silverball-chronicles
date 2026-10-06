@@ -1,4 +1,4 @@
-export const SYNTH_TUNING=Object.freeze({signaturePitch:2**(-3/12),effectPitch:2**(-2/12),upperHarmonics:.90});
+export const SYNTH_TUNING=Object.freeze({signaturePitch:2**(-4/12),effectPitch:2**(-3/12),upperHarmonics:.90});
 export const TAU=2*Math.PI;
 export const synthEnvelope=(t,attack,decay)=>t<0?0:(1-Math.exp(-t/attack))*Math.exp(-t/decay);
 // Periodic oscillator harmonics only. No noise, recorded grain, metal modes or

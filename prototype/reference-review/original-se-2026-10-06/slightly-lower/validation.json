@@ -1,0 +1,14 @@
+{
+  "source": "42151749a45ae7fb6fad2380656a23852c00be268d760b4529c9de39f7b9f049",
+  "tests": 21,
+  "browserCases": 8,
+  "build": "production passed",
+  "tuning": {
+    "changeFromPreviousSemitones": -1,
+    "signatureFromInitialSemitones": -4,
+    "ordinaryFromInitialSemitones": -3,
+    "upperHarmonicsFactor": 0.9
+  },
+  "comparison": "ca8ccf5 previous pitch then one-semitone-lower; same peak target .54 and output gain .65. Durations, envelopes and rhythms unchanged.",
+  "scope": "Seek to49.5 before recording, then continuous final release/reveal/guide. Hardware listening unverified."
+}
