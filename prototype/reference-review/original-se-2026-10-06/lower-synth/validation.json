@@ -1,0 +1,17 @@
+{
+  "sources": {
+    "src/pixi/se/synth-wave.js": "042b18a27172f7f1c0ccb6fb4d5392ad316056e6a73e3b230ebe9b71e402dd1f",
+    "src/pixi/se/signature-sound.js": "2c0dbae87ae3807fc4645f2dc0a684296ff371457a6fd1ae2e27af3323a5aec5",
+    "src/pixi/se/original-se.js": "dff82507535c0a195bdbebd1ddfbae4c594512e6efa87da6c79c0418c95860cf"
+  },
+  "tests": 21,
+  "browserCases": 8,
+  "build": "production passed",
+  "tuning": {
+    "signatureSemitones": -3,
+    "ordinarySemitones": -2,
+    "upperHarmonicsFactor": 0.9
+  },
+  "comparison": "5eda7c5 high synth then lowered synth, same peak target .54 and output gain .65. Pitch changed at synthesis, not replay speed.",
+  "scope": "Seek to49.5 before recording; final release, result and guide play continuously. Hardware speaker/headphone listening unverified."
+}

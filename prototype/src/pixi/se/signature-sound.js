@@ -1,10 +1,10 @@
-import {TAU,synthEnvelope as env,synthWave,stereoEcho} from './synth-wave.js';
+import {SYNTH_TUNING,TAU,synthEnvelope as env,synthWave,stereoEcho} from './synth-wave.js';
 // Recognition rhythm retained, timbre now synth-only per the latest request.
 export const MOON_SIGNATURE=Object.freeze({clutchAt:0,ratchetAt:Object.freeze([.074,.124,.168,.204,.233]),releaseAt:.312,tailAt:Object.freeze([.48,.67,.93]),reservedFor:Object.freeze(['win','rushWin'])});
 export function synthesizeSignature({mode='win',variant=0,sampleRate=44100,duration=2.65,level=.54}={}){
  if(!['win','rushWin'].includes(mode)||!Number.isInteger(variant)||variant<0||variant>3)throw new RangeError('Invalid signature');
  const n=Math.ceil(sampleRate*duration),left=new Float32Array(n),right=new Float32Array(n),ratchetPhases=new Float64Array(5);
- let clutchPhase=0,releasePhase=0;const colour=[.62,.82,.49,.72][variant],detune=[1,.997,1.005,.993][variant];
+ let clutchPhase=0,releasePhase=0;const colour=[.62,.82,.49,.72][variant],detune=[1,.997,1.005,.993][variant]*SYNTH_TUNING.signaturePitch;
  for(let i=0;i<n;i++){
   const t=i/sampleRate,clutchFreq=(620+1510*(1-Math.exp(-t/.011))*Math.exp(-t/.058))*detune;
   clutchPhase+=TAU*clutchFreq/sampleRate;

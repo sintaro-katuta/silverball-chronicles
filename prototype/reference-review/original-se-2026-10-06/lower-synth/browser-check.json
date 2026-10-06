@@ -1,0 +1,3401 @@
+{
+  "runs": [
+    {
+      "fixture": {
+        "variant": "pressure",
+        "win": false
+      },
+      "boundaries": [
+        {
+          "at": 0,
+          "name": "reach"
+        },
+        {
+          "at": 2,
+          "name": "arrival"
+        },
+        {
+          "at": 5,
+          "name": "enemy"
+        },
+        {
+          "at": 10,
+          "name": "pressure"
+        },
+        {
+          "at": 16.2,
+          "name": "silence"
+        },
+        {
+          "at": 24,
+          "name": "gather"
+        },
+        {
+          "at": 33,
+          "name": "surge"
+        },
+        {
+          "at": 39,
+          "name": "rally"
+        },
+        {
+          "at": 43,
+          "name": "vow"
+        },
+        {
+          "at": 46,
+          "name": "final"
+        },
+        {
+          "at": 49.65,
+          "name": "silence"
+        },
+        {
+          "at": 50.2,
+          "name": "decisiveHit"
+        },
+        {
+          "at": 51.7,
+          "name": "loss"
+        }
+      ],
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "voices": 2,
+        "cacheBytes": 8778256,
+        "atmosphere": {
+          "mode": "defeat",
+          "level": 0.019,
+          "charge": 0,
+          "pitch": 100,
+          "ducked": true,
+          "voices": 2,
+          "bufferBytes": 2304000
+        },
+        "cues": [
+          {
+            "name": "reach",
+            "variant": 0,
+            "time": 0.9706666666666667
+          },
+          {
+            "name": "arrival",
+            "variant": 0,
+            "time": 1.072
+          },
+          {
+            "name": "enemy",
+            "variant": 0,
+            "time": 1.152
+          },
+          {
+            "name": "pressure",
+            "variant": 0,
+            "time": 1.232
+          },
+          {
+            "name": "gather",
+            "variant": 0,
+            "time": 1.4026666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 0,
+            "time": 1.4826666666666666
+          },
+          {
+            "name": "rally",
+            "variant": 0,
+            "time": 1.568
+          },
+          {
+            "name": "vow",
+            "variant": 0,
+            "time": 1.6586666666666667
+          },
+          {
+            "name": "final",
+            "variant": 0,
+            "time": 1.728
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 0,
+            "time": 1.8933333333333333
+          },
+          {
+            "name": "loss",
+            "variant": 0,
+            "time": 1.984
+          }
+        ]
+      }
+    },
+    {
+      "fixture": {
+        "variant": "initiative",
+        "win": true
+      },
+      "boundaries": [
+        {
+          "at": 0,
+          "name": "reach"
+        },
+        {
+          "at": 2,
+          "name": "arrival"
+        },
+        {
+          "at": 5,
+          "name": "enemy"
+        },
+        {
+          "at": 6.4,
+          "name": "heroHit"
+        },
+        {
+          "at": 8.6,
+          "name": "heroHit"
+        },
+        {
+          "at": 10,
+          "name": "dodge"
+        },
+        {
+          "at": 11.2,
+          "name": "dodge"
+        },
+        {
+          "at": 13,
+          "name": "pressure"
+        },
+        {
+          "at": 14.6,
+          "name": "enemyHit"
+        },
+        {
+          "at": 16.2,
+          "name": "silence"
+        },
+        {
+          "at": 19.6,
+          "name": "heroHit"
+        },
+        {
+          "at": 22.3,
+          "name": "enemyHit"
+        },
+        {
+          "at": 24,
+          "name": "gather"
+        },
+        {
+          "at": 27,
+          "name": "counter"
+        },
+        {
+          "at": 28.3,
+          "name": "enemyHit"
+        },
+        {
+          "at": 30.5,
+          "name": "enemyHit"
+        },
+        {
+          "at": 33,
+          "name": "clash"
+        },
+        {
+          "at": 33.8,
+          "name": "heroHit"
+        },
+        {
+          "at": 36,
+          "name": "surge"
+        },
+        {
+          "at": 36.8,
+          "name": "heroHit"
+        },
+        {
+          "at": 38,
+          "name": "enemyHit"
+        },
+        {
+          "at": 39,
+          "name": "rally"
+        },
+        {
+          "at": 43,
+          "name": "vow"
+        },
+        {
+          "at": 45,
+          "name": "final"
+        },
+        {
+          "at": 46.1,
+          "name": "heroHit"
+        },
+        {
+          "at": 48.1,
+          "name": "heroHit"
+        },
+        {
+          "at": 50.2,
+          "name": "heroHit"
+        },
+        {
+          "at": 51.7,
+          "name": "win"
+        }
+      ],
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "voices": 6,
+        "cacheBytes": 11635224,
+        "atmosphere": {
+          "mode": "afterglow",
+          "level": 0.052,
+          "charge": 0,
+          "pitch": 220,
+          "ducked": true,
+          "voices": 2,
+          "bufferBytes": 2304000
+        },
+        "cues": [
+          {
+            "name": "reach",
+            "variant": 0,
+            "time": 0.9706666666666667
+          },
+          {
+            "name": "arrival",
+            "variant": 0,
+            "time": 1.072
+          },
+          {
+            "name": "enemy",
+            "variant": 0,
+            "time": 1.152
+          },
+          {
+            "name": "pressure",
+            "variant": 0,
+            "time": 1.232
+          },
+          {
+            "name": "gather",
+            "variant": 0,
+            "time": 1.4026666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 0,
+            "time": 1.4826666666666666
+          },
+          {
+            "name": "rally",
+            "variant": 0,
+            "time": 1.568
+          },
+          {
+            "name": "vow",
+            "variant": 0,
+            "time": 1.6586666666666667
+          },
+          {
+            "name": "final",
+            "variant": 0,
+            "time": 1.728
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 0,
+            "time": 1.8933333333333333
+          },
+          {
+            "name": "loss",
+            "variant": 0,
+            "time": 1.984
+          },
+          {
+            "name": "reach",
+            "variant": 2,
+            "time": 2.1173333333333333
+          },
+          {
+            "name": "arrival",
+            "variant": 2,
+            "time": 2.1973333333333334
+          },
+          {
+            "name": "enemy",
+            "variant": 2,
+            "time": 2.2826666666666666
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 2.368
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 2.448
+          },
+          {
+            "name": "dodge",
+            "variant": 0,
+            "time": 2.533333333333333
+          },
+          {
+            "name": "dodge",
+            "variant": 2,
+            "time": 2.6186666666666665
+          },
+          {
+            "name": "pressure",
+            "variant": 2,
+            "time": 2.704
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 2.784
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 2.949333333333333
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 3.034666666666667
+          },
+          {
+            "name": "gather",
+            "variant": 2,
+            "time": 3.12
+          },
+          {
+            "name": "counter",
+            "variant": 0,
+            "time": 3.2
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 3.28
+          },
+          {
+            "name": "enemyHit",
+            "variant": 3,
+            "time": 3.3653333333333335
+          },
+          {
+            "name": "clash",
+            "variant": 0,
+            "time": 3.4506666666666668
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 3.530666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 2,
+            "time": 3.616
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 3.696
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 3.776
+          },
+          {
+            "name": "rally",
+            "variant": 2,
+            "time": 3.8666666666666667
+          },
+          {
+            "name": "vow",
+            "variant": 2,
+            "time": 3.957333333333333
+          },
+          {
+            "name": "final",
+            "variant": 2,
+            "time": 4.032
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 4.112
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 4.192
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 4.277333333333333
+          },
+          {
+            "name": "win",
+            "variant": 0,
+            "time": 4.362666666666667
+          }
+        ]
+      }
+    },
+    {
+      "fixture": {
+        "variant": "exchange",
+        "win": false
+      },
+      "boundaries": [
+        {
+          "at": 0,
+          "name": "reach"
+        },
+        {
+          "at": 2,
+          "name": "arrival"
+        },
+        {
+          "at": 5,
+          "name": "enemy"
+        },
+        {
+          "at": 6.4,
+          "name": "enemyHit"
+        },
+        {
+          "at": 8.6,
+          "name": "heroHit"
+        },
+        {
+          "at": 10,
+          "name": "dodge"
+        },
+        {
+          "at": 11.2,
+          "name": "dodge"
+        },
+        {
+          "at": 13,
+          "name": "pressure"
+        },
+        {
+          "at": 14.6,
+          "name": "enemyHit"
+        },
+        {
+          "at": 16.2,
+          "name": "silence"
+        },
+        {
+          "at": 19.6,
+          "name": "enemyHit"
+        },
+        {
+          "at": 22.3,
+          "name": "heroHit"
+        },
+        {
+          "at": 24,
+          "name": "gather"
+        },
+        {
+          "at": 27,
+          "name": "counter"
+        },
+        {
+          "at": 28.3,
+          "name": "heroHit"
+        },
+        {
+          "at": 30.5,
+          "name": "enemyHit"
+        },
+        {
+          "at": 33,
+          "name": "clash"
+        },
+        {
+          "at": 33.8,
+          "name": "heroHit"
+        },
+        {
+          "at": 36,
+          "name": "surge"
+        },
+        {
+          "at": 36.8,
+          "name": "enemyHit"
+        },
+        {
+          "at": 38,
+          "name": "heroHit"
+        },
+        {
+          "at": 39,
+          "name": "rally"
+        },
+        {
+          "at": 43,
+          "name": "vow"
+        },
+        {
+          "at": 45,
+          "name": "final"
+        },
+        {
+          "at": 46.1,
+          "name": "heroHit"
+        },
+        {
+          "at": 48.1,
+          "name": "heroHit"
+        },
+        {
+          "at": 50.2,
+          "name": "heroHit"
+        },
+        {
+          "at": 51.7,
+          "name": "loss"
+        },
+        {
+          "at": 51.85,
+          "name": "enemyHit"
+        }
+      ],
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "voices": 6,
+        "cacheBytes": 11712024,
+        "atmosphere": {
+          "mode": "defeat",
+          "level": 0.019,
+          "charge": 0,
+          "pitch": 100,
+          "ducked": true,
+          "voices": 2,
+          "bufferBytes": 2304000
+        },
+        "cues": [
+          {
+            "name": "reach",
+            "variant": 0,
+            "time": 0.9706666666666667
+          },
+          {
+            "name": "arrival",
+            "variant": 0,
+            "time": 1.072
+          },
+          {
+            "name": "enemy",
+            "variant": 0,
+            "time": 1.152
+          },
+          {
+            "name": "pressure",
+            "variant": 0,
+            "time": 1.232
+          },
+          {
+            "name": "gather",
+            "variant": 0,
+            "time": 1.4026666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 0,
+            "time": 1.4826666666666666
+          },
+          {
+            "name": "rally",
+            "variant": 0,
+            "time": 1.568
+          },
+          {
+            "name": "vow",
+            "variant": 0,
+            "time": 1.6586666666666667
+          },
+          {
+            "name": "final",
+            "variant": 0,
+            "time": 1.728
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 0,
+            "time": 1.8933333333333333
+          },
+          {
+            "name": "loss",
+            "variant": 0,
+            "time": 1.984
+          },
+          {
+            "name": "reach",
+            "variant": 2,
+            "time": 2.1173333333333333
+          },
+          {
+            "name": "arrival",
+            "variant": 2,
+            "time": 2.1973333333333334
+          },
+          {
+            "name": "enemy",
+            "variant": 2,
+            "time": 2.2826666666666666
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 2.368
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 2.448
+          },
+          {
+            "name": "dodge",
+            "variant": 0,
+            "time": 2.533333333333333
+          },
+          {
+            "name": "dodge",
+            "variant": 2,
+            "time": 2.6186666666666665
+          },
+          {
+            "name": "pressure",
+            "variant": 2,
+            "time": 2.704
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 2.784
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 2.949333333333333
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 3.034666666666667
+          },
+          {
+            "name": "gather",
+            "variant": 2,
+            "time": 3.12
+          },
+          {
+            "name": "counter",
+            "variant": 0,
+            "time": 3.2
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 3.28
+          },
+          {
+            "name": "enemyHit",
+            "variant": 3,
+            "time": 3.3653333333333335
+          },
+          {
+            "name": "clash",
+            "variant": 0,
+            "time": 3.4506666666666668
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 3.530666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 2,
+            "time": 3.616
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 3.696
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 3.776
+          },
+          {
+            "name": "rally",
+            "variant": 2,
+            "time": 3.8666666666666667
+          },
+          {
+            "name": "vow",
+            "variant": 2,
+            "time": 3.957333333333333
+          },
+          {
+            "name": "final",
+            "variant": 2,
+            "time": 4.032
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 4.112
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 4.192
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 4.277333333333333
+          },
+          {
+            "name": "win",
+            "variant": 0,
+            "time": 4.362666666666667
+          },
+          {
+            "name": "reach",
+            "variant": 1,
+            "time": 4.501333333333333
+          },
+          {
+            "name": "arrival",
+            "variant": 1,
+            "time": 4.581333333333333
+          },
+          {
+            "name": "enemy",
+            "variant": 1,
+            "time": 4.666666666666667
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 4.741333333333333
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 4.832
+          },
+          {
+            "name": "dodge",
+            "variant": 1,
+            "time": 4.917333333333334
+          },
+          {
+            "name": "dodge",
+            "variant": 3,
+            "time": 5.002666666666666
+          },
+          {
+            "name": "pressure",
+            "variant": 1,
+            "time": 5.082666666666666
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 5.157333333333334
+          },
+          {
+            "name": "enemyHit",
+            "variant": 3,
+            "time": 5.328
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 5.413333333333333
+          },
+          {
+            "name": "gather",
+            "variant": 1,
+            "time": 5.498666666666667
+          },
+          {
+            "name": "counter",
+            "variant": 2,
+            "time": 5.584
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 5.664
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 5.749333333333333
+          },
+          {
+            "name": "clash",
+            "variant": 2,
+            "time": 5.834666666666666
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 5.9093333333333335
+          },
+          {
+            "name": "surge",
+            "variant": 1,
+            "time": 6
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 6.08
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 6.16
+          },
+          {
+            "name": "rally",
+            "variant": 1,
+            "time": 6.250666666666667
+          },
+          {
+            "name": "vow",
+            "variant": 1,
+            "time": 6.346666666666667
+          },
+          {
+            "name": "final",
+            "variant": 1,
+            "time": 6.416
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 6.490666666666667
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 6.576
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 6.666666666666667
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 6.832
+          }
+        ]
+      }
+    },
+    {
+      "fixture": {
+        "variant": "pressure",
+        "win": true,
+        "ending": "revival"
+      },
+      "boundaries": [
+        {
+          "at": 0,
+          "name": "reach"
+        },
+        {
+          "at": 2,
+          "name": "arrival"
+        },
+        {
+          "at": 5,
+          "name": "enemy"
+        },
+        {
+          "at": 10,
+          "name": "pressure"
+        },
+        {
+          "at": 16.2,
+          "name": "silence"
+        },
+        {
+          "at": 24,
+          "name": "gather"
+        },
+        {
+          "at": 33,
+          "name": "surge"
+        },
+        {
+          "at": 39,
+          "name": "rally"
+        },
+        {
+          "at": 43,
+          "name": "vow"
+        },
+        {
+          "at": 46,
+          "name": "final"
+        },
+        {
+          "at": 49.65,
+          "name": "silence"
+        },
+        {
+          "at": 50.2,
+          "name": "decisiveHit"
+        },
+        {
+          "at": 51.7,
+          "name": "loss"
+        },
+        {
+          "at": 53.3,
+          "name": "silence"
+        },
+        {
+          "at": 54,
+          "name": "revival"
+        },
+        {
+          "at": 55.7,
+          "name": "win"
+        }
+      ],
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "voices": 2,
+        "cacheBytes": 11577616,
+        "atmosphere": {
+          "mode": "afterglow",
+          "level": 0.052,
+          "charge": 0,
+          "pitch": 220,
+          "ducked": true,
+          "voices": 2,
+          "bufferBytes": 2304000
+        },
+        "cues": [
+          {
+            "name": "reach",
+            "variant": 0,
+            "time": 0.9706666666666667
+          },
+          {
+            "name": "arrival",
+            "variant": 0,
+            "time": 1.072
+          },
+          {
+            "name": "enemy",
+            "variant": 0,
+            "time": 1.152
+          },
+          {
+            "name": "pressure",
+            "variant": 0,
+            "time": 1.232
+          },
+          {
+            "name": "gather",
+            "variant": 0,
+            "time": 1.4026666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 0,
+            "time": 1.4826666666666666
+          },
+          {
+            "name": "rally",
+            "variant": 0,
+            "time": 1.568
+          },
+          {
+            "name": "vow",
+            "variant": 0,
+            "time": 1.6586666666666667
+          },
+          {
+            "name": "final",
+            "variant": 0,
+            "time": 1.728
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 0,
+            "time": 1.8933333333333333
+          },
+          {
+            "name": "loss",
+            "variant": 0,
+            "time": 1.984
+          },
+          {
+            "name": "reach",
+            "variant": 2,
+            "time": 2.1173333333333333
+          },
+          {
+            "name": "arrival",
+            "variant": 2,
+            "time": 2.1973333333333334
+          },
+          {
+            "name": "enemy",
+            "variant": 2,
+            "time": 2.2826666666666666
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 2.368
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 2.448
+          },
+          {
+            "name": "dodge",
+            "variant": 0,
+            "time": 2.533333333333333
+          },
+          {
+            "name": "dodge",
+            "variant": 2,
+            "time": 2.6186666666666665
+          },
+          {
+            "name": "pressure",
+            "variant": 2,
+            "time": 2.704
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 2.784
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 2.949333333333333
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 3.034666666666667
+          },
+          {
+            "name": "gather",
+            "variant": 2,
+            "time": 3.12
+          },
+          {
+            "name": "counter",
+            "variant": 0,
+            "time": 3.2
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 3.28
+          },
+          {
+            "name": "enemyHit",
+            "variant": 3,
+            "time": 3.3653333333333335
+          },
+          {
+            "name": "clash",
+            "variant": 0,
+            "time": 3.4506666666666668
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 3.530666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 2,
+            "time": 3.616
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 3.696
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 3.776
+          },
+          {
+            "name": "rally",
+            "variant": 2,
+            "time": 3.8666666666666667
+          },
+          {
+            "name": "vow",
+            "variant": 2,
+            "time": 3.957333333333333
+          },
+          {
+            "name": "final",
+            "variant": 2,
+            "time": 4.032
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 4.112
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 4.192
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 4.277333333333333
+          },
+          {
+            "name": "win",
+            "variant": 0,
+            "time": 4.362666666666667
+          },
+          {
+            "name": "reach",
+            "variant": 1,
+            "time": 4.501333333333333
+          },
+          {
+            "name": "arrival",
+            "variant": 1,
+            "time": 4.581333333333333
+          },
+          {
+            "name": "enemy",
+            "variant": 1,
+            "time": 4.666666666666667
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 4.741333333333333
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 4.832
+          },
+          {
+            "name": "dodge",
+            "variant": 1,
+            "time": 4.917333333333334
+          },
+          {
+            "name": "dodge",
+            "variant": 3,
+            "time": 5.002666666666666
+          },
+          {
+            "name": "pressure",
+            "variant": 1,
+            "time": 5.082666666666666
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 5.157333333333334
+          },
+          {
+            "name": "enemyHit",
+            "variant": 3,
+            "time": 5.328
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 5.413333333333333
+          },
+          {
+            "name": "gather",
+            "variant": 1,
+            "time": 5.498666666666667
+          },
+          {
+            "name": "counter",
+            "variant": 2,
+            "time": 5.584
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 5.664
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 5.749333333333333
+          },
+          {
+            "name": "clash",
+            "variant": 2,
+            "time": 5.834666666666666
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 5.9093333333333335
+          },
+          {
+            "name": "surge",
+            "variant": 1,
+            "time": 6
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 6.08
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 6.16
+          },
+          {
+            "name": "rally",
+            "variant": 1,
+            "time": 6.250666666666667
+          },
+          {
+            "name": "vow",
+            "variant": 1,
+            "time": 6.346666666666667
+          },
+          {
+            "name": "final",
+            "variant": 1,
+            "time": 6.416
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 6.490666666666667
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 6.576
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 6.666666666666667
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 6.832
+          },
+          {
+            "name": "reach",
+            "variant": 3,
+            "time": 6.970666666666666
+          },
+          {
+            "name": "arrival",
+            "variant": 3,
+            "time": 7.050666666666666
+          },
+          {
+            "name": "enemy",
+            "variant": 3,
+            "time": 7.136
+          },
+          {
+            "name": "pressure",
+            "variant": 3,
+            "time": 7.216
+          },
+          {
+            "name": "gather",
+            "variant": 3,
+            "time": 7.386666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 3,
+            "time": 7.466666666666667
+          },
+          {
+            "name": "rally",
+            "variant": 3,
+            "time": 7.552
+          },
+          {
+            "name": "vow",
+            "variant": 3,
+            "time": 7.642666666666667
+          },
+          {
+            "name": "final",
+            "variant": 3,
+            "time": 7.717333333333333
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 2,
+            "time": 7.888
+          },
+          {
+            "name": "loss",
+            "variant": 2,
+            "time": 7.962666666666666
+          },
+          {
+            "name": "revival",
+            "variant": 0,
+            "time": 8.138666666666667
+          },
+          {
+            "name": "win",
+            "variant": 2,
+            "time": 8.277333333333333
+          }
+        ]
+      }
+    },
+    {
+      "fixture": {
+        "variant": "pressure",
+        "win": true,
+        "ending": "flash",
+        "mode": "rush"
+      },
+      "boundaries": [
+        {
+          "at": 0,
+          "name": "reach"
+        },
+        {
+          "at": 2,
+          "name": "arrival"
+        },
+        {
+          "at": 4,
+          "name": "gather"
+        },
+        {
+          "at": 6,
+          "name": "vow"
+        },
+        {
+          "at": 8,
+          "name": "final"
+        },
+        {
+          "at": 8.4,
+          "name": "decisiveHit"
+        },
+        {
+          "at": 9.7,
+          "name": "rushWin"
+        }
+      ],
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "voices": 6,
+        "cacheBytes": 11639064,
+        "atmosphere": {
+          "mode": "afterglow",
+          "level": 0.052,
+          "charge": 0,
+          "pitch": 220,
+          "ducked": true,
+          "voices": 2,
+          "bufferBytes": 2304000
+        },
+        "cues": [
+          {
+            "name": "reach",
+            "variant": 0,
+            "time": 0.9706666666666667
+          },
+          {
+            "name": "arrival",
+            "variant": 0,
+            "time": 1.072
+          },
+          {
+            "name": "enemy",
+            "variant": 0,
+            "time": 1.152
+          },
+          {
+            "name": "pressure",
+            "variant": 0,
+            "time": 1.232
+          },
+          {
+            "name": "gather",
+            "variant": 0,
+            "time": 1.4026666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 0,
+            "time": 1.4826666666666666
+          },
+          {
+            "name": "rally",
+            "variant": 0,
+            "time": 1.568
+          },
+          {
+            "name": "vow",
+            "variant": 0,
+            "time": 1.6586666666666667
+          },
+          {
+            "name": "final",
+            "variant": 0,
+            "time": 1.728
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 0,
+            "time": 1.8933333333333333
+          },
+          {
+            "name": "loss",
+            "variant": 0,
+            "time": 1.984
+          },
+          {
+            "name": "reach",
+            "variant": 2,
+            "time": 2.1173333333333333
+          },
+          {
+            "name": "arrival",
+            "variant": 2,
+            "time": 2.1973333333333334
+          },
+          {
+            "name": "enemy",
+            "variant": 2,
+            "time": 2.2826666666666666
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 2.368
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 2.448
+          },
+          {
+            "name": "dodge",
+            "variant": 0,
+            "time": 2.533333333333333
+          },
+          {
+            "name": "dodge",
+            "variant": 2,
+            "time": 2.6186666666666665
+          },
+          {
+            "name": "pressure",
+            "variant": 2,
+            "time": 2.704
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 2.784
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 2.949333333333333
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 3.034666666666667
+          },
+          {
+            "name": "gather",
+            "variant": 2,
+            "time": 3.12
+          },
+          {
+            "name": "counter",
+            "variant": 0,
+            "time": 3.2
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 3.28
+          },
+          {
+            "name": "enemyHit",
+            "variant": 3,
+            "time": 3.3653333333333335
+          },
+          {
+            "name": "clash",
+            "variant": 0,
+            "time": 3.4506666666666668
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 3.530666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 2,
+            "time": 3.616
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 3.696
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 3.776
+          },
+          {
+            "name": "rally",
+            "variant": 2,
+            "time": 3.8666666666666667
+          },
+          {
+            "name": "vow",
+            "variant": 2,
+            "time": 3.957333333333333
+          },
+          {
+            "name": "final",
+            "variant": 2,
+            "time": 4.032
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 4.112
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 4.192
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 4.277333333333333
+          },
+          {
+            "name": "win",
+            "variant": 0,
+            "time": 4.362666666666667
+          },
+          {
+            "name": "reach",
+            "variant": 1,
+            "time": 4.501333333333333
+          },
+          {
+            "name": "arrival",
+            "variant": 1,
+            "time": 4.581333333333333
+          },
+          {
+            "name": "enemy",
+            "variant": 1,
+            "time": 4.666666666666667
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 4.741333333333333
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 4.832
+          },
+          {
+            "name": "dodge",
+            "variant": 1,
+            "time": 4.917333333333334
+          },
+          {
+            "name": "dodge",
+            "variant": 3,
+            "time": 5.002666666666666
+          },
+          {
+            "name": "pressure",
+            "variant": 1,
+            "time": 5.082666666666666
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 5.157333333333334
+          },
+          {
+            "name": "enemyHit",
+            "variant": 3,
+            "time": 5.328
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 5.413333333333333
+          },
+          {
+            "name": "gather",
+            "variant": 1,
+            "time": 5.498666666666667
+          },
+          {
+            "name": "counter",
+            "variant": 2,
+            "time": 5.584
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 5.664
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 5.749333333333333
+          },
+          {
+            "name": "clash",
+            "variant": 2,
+            "time": 5.834666666666666
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 5.9093333333333335
+          },
+          {
+            "name": "surge",
+            "variant": 1,
+            "time": 6
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 6.08
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 6.16
+          },
+          {
+            "name": "rally",
+            "variant": 1,
+            "time": 6.250666666666667
+          },
+          {
+            "name": "vow",
+            "variant": 1,
+            "time": 6.346666666666667
+          },
+          {
+            "name": "final",
+            "variant": 1,
+            "time": 6.416
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 6.490666666666667
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 6.576
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 6.666666666666667
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 6.832
+          },
+          {
+            "name": "reach",
+            "variant": 3,
+            "time": 6.970666666666666
+          },
+          {
+            "name": "arrival",
+            "variant": 3,
+            "time": 7.050666666666666
+          },
+          {
+            "name": "enemy",
+            "variant": 3,
+            "time": 7.136
+          },
+          {
+            "name": "pressure",
+            "variant": 3,
+            "time": 7.216
+          },
+          {
+            "name": "gather",
+            "variant": 3,
+            "time": 7.386666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 3,
+            "time": 7.466666666666667
+          },
+          {
+            "name": "rally",
+            "variant": 3,
+            "time": 7.552
+          },
+          {
+            "name": "vow",
+            "variant": 3,
+            "time": 7.642666666666667
+          },
+          {
+            "name": "final",
+            "variant": 3,
+            "time": 7.717333333333333
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 2,
+            "time": 7.888
+          },
+          {
+            "name": "loss",
+            "variant": 2,
+            "time": 7.962666666666666
+          },
+          {
+            "name": "revival",
+            "variant": 0,
+            "time": 8.138666666666667
+          },
+          {
+            "name": "win",
+            "variant": 2,
+            "time": 8.277333333333333
+          },
+          {
+            "name": "reach",
+            "variant": 0,
+            "time": 8.352
+          },
+          {
+            "name": "arrival",
+            "variant": 0,
+            "time": 8.432
+          },
+          {
+            "name": "gather",
+            "variant": 0,
+            "time": 8.517333333333333
+          },
+          {
+            "name": "vow",
+            "variant": 0,
+            "time": 8.608
+          },
+          {
+            "name": "final",
+            "variant": 0,
+            "time": 8.682666666666666
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 1,
+            "time": 8.773333333333333
+          },
+          {
+            "name": "rushWin",
+            "variant": 0,
+            "time": 8.842666666666666
+          }
+        ]
+      }
+    },
+    {
+      "fixture": {
+        "route": "basic",
+        "win": false
+      },
+      "boundaries": [
+        {
+          "at": 0,
+          "name": "reach"
+        },
+        {
+          "at": 5.7,
+          "name": "loss"
+        }
+      ],
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "voices": 6,
+        "cacheBytes": 11704344,
+        "atmosphere": {
+          "mode": "idle",
+          "level": 0.027,
+          "charge": 0,
+          "pitch": 135,
+          "ducked": true,
+          "voices": 2,
+          "bufferBytes": 2304000
+        },
+        "cues": [
+          {
+            "name": "reach",
+            "variant": 0,
+            "time": 0.9706666666666667
+          },
+          {
+            "name": "arrival",
+            "variant": 0,
+            "time": 1.072
+          },
+          {
+            "name": "enemy",
+            "variant": 0,
+            "time": 1.152
+          },
+          {
+            "name": "pressure",
+            "variant": 0,
+            "time": 1.232
+          },
+          {
+            "name": "gather",
+            "variant": 0,
+            "time": 1.4026666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 0,
+            "time": 1.4826666666666666
+          },
+          {
+            "name": "rally",
+            "variant": 0,
+            "time": 1.568
+          },
+          {
+            "name": "vow",
+            "variant": 0,
+            "time": 1.6586666666666667
+          },
+          {
+            "name": "final",
+            "variant": 0,
+            "time": 1.728
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 0,
+            "time": 1.8933333333333333
+          },
+          {
+            "name": "loss",
+            "variant": 0,
+            "time": 1.984
+          },
+          {
+            "name": "reach",
+            "variant": 2,
+            "time": 2.1173333333333333
+          },
+          {
+            "name": "arrival",
+            "variant": 2,
+            "time": 2.1973333333333334
+          },
+          {
+            "name": "enemy",
+            "variant": 2,
+            "time": 2.2826666666666666
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 2.368
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 2.448
+          },
+          {
+            "name": "dodge",
+            "variant": 0,
+            "time": 2.533333333333333
+          },
+          {
+            "name": "dodge",
+            "variant": 2,
+            "time": 2.6186666666666665
+          },
+          {
+            "name": "pressure",
+            "variant": 2,
+            "time": 2.704
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 2.784
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 2.949333333333333
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 3.034666666666667
+          },
+          {
+            "name": "gather",
+            "variant": 2,
+            "time": 3.12
+          },
+          {
+            "name": "counter",
+            "variant": 0,
+            "time": 3.2
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 3.28
+          },
+          {
+            "name": "enemyHit",
+            "variant": 3,
+            "time": 3.3653333333333335
+          },
+          {
+            "name": "clash",
+            "variant": 0,
+            "time": 3.4506666666666668
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 3.530666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 2,
+            "time": 3.616
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 3.696
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 3.776
+          },
+          {
+            "name": "rally",
+            "variant": 2,
+            "time": 3.8666666666666667
+          },
+          {
+            "name": "vow",
+            "variant": 2,
+            "time": 3.957333333333333
+          },
+          {
+            "name": "final",
+            "variant": 2,
+            "time": 4.032
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 4.112
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 4.192
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 4.277333333333333
+          },
+          {
+            "name": "win",
+            "variant": 0,
+            "time": 4.362666666666667
+          },
+          {
+            "name": "reach",
+            "variant": 1,
+            "time": 4.501333333333333
+          },
+          {
+            "name": "arrival",
+            "variant": 1,
+            "time": 4.581333333333333
+          },
+          {
+            "name": "enemy",
+            "variant": 1,
+            "time": 4.666666666666667
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 4.741333333333333
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 4.832
+          },
+          {
+            "name": "dodge",
+            "variant": 1,
+            "time": 4.917333333333334
+          },
+          {
+            "name": "dodge",
+            "variant": 3,
+            "time": 5.002666666666666
+          },
+          {
+            "name": "pressure",
+            "variant": 1,
+            "time": 5.082666666666666
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 5.157333333333334
+          },
+          {
+            "name": "enemyHit",
+            "variant": 3,
+            "time": 5.328
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 5.413333333333333
+          },
+          {
+            "name": "gather",
+            "variant": 1,
+            "time": 5.498666666666667
+          },
+          {
+            "name": "counter",
+            "variant": 2,
+            "time": 5.584
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 5.664
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 5.749333333333333
+          },
+          {
+            "name": "clash",
+            "variant": 2,
+            "time": 5.834666666666666
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 5.9093333333333335
+          },
+          {
+            "name": "surge",
+            "variant": 1,
+            "time": 6
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 6.08
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 6.16
+          },
+          {
+            "name": "rally",
+            "variant": 1,
+            "time": 6.250666666666667
+          },
+          {
+            "name": "vow",
+            "variant": 1,
+            "time": 6.346666666666667
+          },
+          {
+            "name": "final",
+            "variant": 1,
+            "time": 6.416
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 6.490666666666667
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 6.576
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 6.666666666666667
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 6.832
+          },
+          {
+            "name": "reach",
+            "variant": 3,
+            "time": 6.970666666666666
+          },
+          {
+            "name": "arrival",
+            "variant": 3,
+            "time": 7.050666666666666
+          },
+          {
+            "name": "enemy",
+            "variant": 3,
+            "time": 7.136
+          },
+          {
+            "name": "pressure",
+            "variant": 3,
+            "time": 7.216
+          },
+          {
+            "name": "gather",
+            "variant": 3,
+            "time": 7.386666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 3,
+            "time": 7.466666666666667
+          },
+          {
+            "name": "rally",
+            "variant": 3,
+            "time": 7.552
+          },
+          {
+            "name": "vow",
+            "variant": 3,
+            "time": 7.642666666666667
+          },
+          {
+            "name": "final",
+            "variant": 3,
+            "time": 7.717333333333333
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 2,
+            "time": 7.888
+          },
+          {
+            "name": "loss",
+            "variant": 2,
+            "time": 7.962666666666666
+          },
+          {
+            "name": "revival",
+            "variant": 0,
+            "time": 8.138666666666667
+          },
+          {
+            "name": "win",
+            "variant": 2,
+            "time": 8.277333333333333
+          },
+          {
+            "name": "reach",
+            "variant": 0,
+            "time": 8.352
+          },
+          {
+            "name": "arrival",
+            "variant": 0,
+            "time": 8.432
+          },
+          {
+            "name": "gather",
+            "variant": 0,
+            "time": 8.517333333333333
+          },
+          {
+            "name": "vow",
+            "variant": 0,
+            "time": 8.608
+          },
+          {
+            "name": "final",
+            "variant": 0,
+            "time": 8.682666666666666
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 1,
+            "time": 8.773333333333333
+          },
+          {
+            "name": "rushWin",
+            "variant": 0,
+            "time": 8.842666666666666
+          },
+          {
+            "name": "reach",
+            "variant": 2,
+            "time": 8.986666666666666
+          }
+        ]
+      }
+    },
+    {
+      "fixture": {
+        "route": "direct",
+        "win": true
+      },
+      "boundaries": [
+        {
+          "at": 0,
+          "name": "spin"
+        },
+        {
+          "at": 2.8,
+          "name": "win"
+        }
+      ],
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "voices": 6,
+        "cacheBytes": 11481616,
+        "atmosphere": {
+          "mode": "idle",
+          "level": 0.027,
+          "charge": 0,
+          "pitch": 135,
+          "ducked": true,
+          "voices": 2,
+          "bufferBytes": 2304000
+        },
+        "cues": [
+          {
+            "name": "reach",
+            "variant": 0,
+            "time": 0.9706666666666667
+          },
+          {
+            "name": "arrival",
+            "variant": 0,
+            "time": 1.072
+          },
+          {
+            "name": "enemy",
+            "variant": 0,
+            "time": 1.152
+          },
+          {
+            "name": "pressure",
+            "variant": 0,
+            "time": 1.232
+          },
+          {
+            "name": "gather",
+            "variant": 0,
+            "time": 1.4026666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 0,
+            "time": 1.4826666666666666
+          },
+          {
+            "name": "rally",
+            "variant": 0,
+            "time": 1.568
+          },
+          {
+            "name": "vow",
+            "variant": 0,
+            "time": 1.6586666666666667
+          },
+          {
+            "name": "final",
+            "variant": 0,
+            "time": 1.728
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 0,
+            "time": 1.8933333333333333
+          },
+          {
+            "name": "loss",
+            "variant": 0,
+            "time": 1.984
+          },
+          {
+            "name": "reach",
+            "variant": 2,
+            "time": 2.1173333333333333
+          },
+          {
+            "name": "arrival",
+            "variant": 2,
+            "time": 2.1973333333333334
+          },
+          {
+            "name": "enemy",
+            "variant": 2,
+            "time": 2.2826666666666666
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 2.368
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 2.448
+          },
+          {
+            "name": "dodge",
+            "variant": 0,
+            "time": 2.533333333333333
+          },
+          {
+            "name": "dodge",
+            "variant": 2,
+            "time": 2.6186666666666665
+          },
+          {
+            "name": "pressure",
+            "variant": 2,
+            "time": 2.704
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 2.784
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 2.949333333333333
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 3.034666666666667
+          },
+          {
+            "name": "gather",
+            "variant": 2,
+            "time": 3.12
+          },
+          {
+            "name": "counter",
+            "variant": 0,
+            "time": 3.2
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 3.28
+          },
+          {
+            "name": "enemyHit",
+            "variant": 3,
+            "time": 3.3653333333333335
+          },
+          {
+            "name": "clash",
+            "variant": 0,
+            "time": 3.4506666666666668
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 3.530666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 2,
+            "time": 3.616
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 3.696
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 3.776
+          },
+          {
+            "name": "rally",
+            "variant": 2,
+            "time": 3.8666666666666667
+          },
+          {
+            "name": "vow",
+            "variant": 2,
+            "time": 3.957333333333333
+          },
+          {
+            "name": "final",
+            "variant": 2,
+            "time": 4.032
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 4.112
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 4.192
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 4.277333333333333
+          },
+          {
+            "name": "win",
+            "variant": 0,
+            "time": 4.362666666666667
+          },
+          {
+            "name": "reach",
+            "variant": 1,
+            "time": 4.501333333333333
+          },
+          {
+            "name": "arrival",
+            "variant": 1,
+            "time": 4.581333333333333
+          },
+          {
+            "name": "enemy",
+            "variant": 1,
+            "time": 4.666666666666667
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 4.741333333333333
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 4.832
+          },
+          {
+            "name": "dodge",
+            "variant": 1,
+            "time": 4.917333333333334
+          },
+          {
+            "name": "dodge",
+            "variant": 3,
+            "time": 5.002666666666666
+          },
+          {
+            "name": "pressure",
+            "variant": 1,
+            "time": 5.082666666666666
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 5.157333333333334
+          },
+          {
+            "name": "enemyHit",
+            "variant": 3,
+            "time": 5.328
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 5.413333333333333
+          },
+          {
+            "name": "gather",
+            "variant": 1,
+            "time": 5.498666666666667
+          },
+          {
+            "name": "counter",
+            "variant": 2,
+            "time": 5.584
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 5.664
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 5.749333333333333
+          },
+          {
+            "name": "clash",
+            "variant": 2,
+            "time": 5.834666666666666
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 5.9093333333333335
+          },
+          {
+            "name": "surge",
+            "variant": 1,
+            "time": 6
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 6.08
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 6.16
+          },
+          {
+            "name": "rally",
+            "variant": 1,
+            "time": 6.250666666666667
+          },
+          {
+            "name": "vow",
+            "variant": 1,
+            "time": 6.346666666666667
+          },
+          {
+            "name": "final",
+            "variant": 1,
+            "time": 6.416
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 6.490666666666667
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 6.576
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 6.666666666666667
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 6.832
+          },
+          {
+            "name": "reach",
+            "variant": 3,
+            "time": 6.970666666666666
+          },
+          {
+            "name": "arrival",
+            "variant": 3,
+            "time": 7.050666666666666
+          },
+          {
+            "name": "enemy",
+            "variant": 3,
+            "time": 7.136
+          },
+          {
+            "name": "pressure",
+            "variant": 3,
+            "time": 7.216
+          },
+          {
+            "name": "gather",
+            "variant": 3,
+            "time": 7.386666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 3,
+            "time": 7.466666666666667
+          },
+          {
+            "name": "rally",
+            "variant": 3,
+            "time": 7.552
+          },
+          {
+            "name": "vow",
+            "variant": 3,
+            "time": 7.642666666666667
+          },
+          {
+            "name": "final",
+            "variant": 3,
+            "time": 7.717333333333333
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 2,
+            "time": 7.888
+          },
+          {
+            "name": "loss",
+            "variant": 2,
+            "time": 7.962666666666666
+          },
+          {
+            "name": "revival",
+            "variant": 0,
+            "time": 8.138666666666667
+          },
+          {
+            "name": "win",
+            "variant": 2,
+            "time": 8.277333333333333
+          },
+          {
+            "name": "reach",
+            "variant": 0,
+            "time": 8.352
+          },
+          {
+            "name": "arrival",
+            "variant": 0,
+            "time": 8.432
+          },
+          {
+            "name": "gather",
+            "variant": 0,
+            "time": 8.517333333333333
+          },
+          {
+            "name": "vow",
+            "variant": 0,
+            "time": 8.608
+          },
+          {
+            "name": "final",
+            "variant": 0,
+            "time": 8.682666666666666
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 1,
+            "time": 8.773333333333333
+          },
+          {
+            "name": "rushWin",
+            "variant": 0,
+            "time": 8.842666666666666
+          },
+          {
+            "name": "reach",
+            "variant": 2,
+            "time": 8.986666666666666
+          },
+          {
+            "name": "win",
+            "variant": 1,
+            "time": 9.365333333333334
+          }
+        ]
+      }
+    },
+    {
+      "fixture": {
+        "variant": "pressure",
+        "win": true,
+        "premium": "moon",
+        "full": true
+      },
+      "boundaries": [
+        {
+          "at": 0,
+          "name": "reach"
+        },
+        {
+          "at": 2,
+          "name": "arrival"
+        },
+        {
+          "at": 5,
+          "name": "enemy"
+        },
+        {
+          "at": 10,
+          "name": "pressure"
+        },
+        {
+          "at": 16.2,
+          "name": "silence"
+        },
+        {
+          "at": 24,
+          "name": "gather"
+        },
+        {
+          "at": 33,
+          "name": "surge"
+        },
+        {
+          "at": 39,
+          "name": "rally"
+        },
+        {
+          "at": 43,
+          "name": "vow"
+        },
+        {
+          "at": 45.5,
+          "name": "fullrotation"
+        },
+        {
+          "at": 46,
+          "name": "final"
+        },
+        {
+          "at": 49.65,
+          "name": "silence"
+        },
+        {
+          "at": 50.2,
+          "name": "decisiveHit"
+        },
+        {
+          "at": 51.7,
+          "name": "win"
+        }
+      ],
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "voices": 2,
+        "cacheBytes": 10851856,
+        "atmosphere": {
+          "mode": "afterglow",
+          "level": 0.052,
+          "charge": 0,
+          "pitch": 220,
+          "ducked": true,
+          "voices": 2,
+          "bufferBytes": 2304000
+        },
+        "cues": [
+          {
+            "name": "reach",
+            "variant": 0,
+            "time": 0.9706666666666667
+          },
+          {
+            "name": "arrival",
+            "variant": 0,
+            "time": 1.072
+          },
+          {
+            "name": "enemy",
+            "variant": 0,
+            "time": 1.152
+          },
+          {
+            "name": "pressure",
+            "variant": 0,
+            "time": 1.232
+          },
+          {
+            "name": "gather",
+            "variant": 0,
+            "time": 1.4026666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 0,
+            "time": 1.4826666666666666
+          },
+          {
+            "name": "rally",
+            "variant": 0,
+            "time": 1.568
+          },
+          {
+            "name": "vow",
+            "variant": 0,
+            "time": 1.6586666666666667
+          },
+          {
+            "name": "final",
+            "variant": 0,
+            "time": 1.728
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 0,
+            "time": 1.8933333333333333
+          },
+          {
+            "name": "loss",
+            "variant": 0,
+            "time": 1.984
+          },
+          {
+            "name": "reach",
+            "variant": 2,
+            "time": 2.1173333333333333
+          },
+          {
+            "name": "arrival",
+            "variant": 2,
+            "time": 2.1973333333333334
+          },
+          {
+            "name": "enemy",
+            "variant": 2,
+            "time": 2.2826666666666666
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 2.368
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 2.448
+          },
+          {
+            "name": "dodge",
+            "variant": 0,
+            "time": 2.533333333333333
+          },
+          {
+            "name": "dodge",
+            "variant": 2,
+            "time": 2.6186666666666665
+          },
+          {
+            "name": "pressure",
+            "variant": 2,
+            "time": 2.704
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 2.784
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 2.949333333333333
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 3.034666666666667
+          },
+          {
+            "name": "gather",
+            "variant": 2,
+            "time": 3.12
+          },
+          {
+            "name": "counter",
+            "variant": 0,
+            "time": 3.2
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 3.28
+          },
+          {
+            "name": "enemyHit",
+            "variant": 3,
+            "time": 3.3653333333333335
+          },
+          {
+            "name": "clash",
+            "variant": 0,
+            "time": 3.4506666666666668
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 3.530666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 2,
+            "time": 3.616
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 3.696
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 3.776
+          },
+          {
+            "name": "rally",
+            "variant": 2,
+            "time": 3.8666666666666667
+          },
+          {
+            "name": "vow",
+            "variant": 2,
+            "time": 3.957333333333333
+          },
+          {
+            "name": "final",
+            "variant": 2,
+            "time": 4.032
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 4.112
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 4.192
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 4.277333333333333
+          },
+          {
+            "name": "win",
+            "variant": 0,
+            "time": 4.362666666666667
+          },
+          {
+            "name": "reach",
+            "variant": 1,
+            "time": 4.501333333333333
+          },
+          {
+            "name": "arrival",
+            "variant": 1,
+            "time": 4.581333333333333
+          },
+          {
+            "name": "enemy",
+            "variant": 1,
+            "time": 4.666666666666667
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 4.741333333333333
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 4.832
+          },
+          {
+            "name": "dodge",
+            "variant": 1,
+            "time": 4.917333333333334
+          },
+          {
+            "name": "dodge",
+            "variant": 3,
+            "time": 5.002666666666666
+          },
+          {
+            "name": "pressure",
+            "variant": 1,
+            "time": 5.082666666666666
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 5.157333333333334
+          },
+          {
+            "name": "enemyHit",
+            "variant": 3,
+            "time": 5.328
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 5.413333333333333
+          },
+          {
+            "name": "gather",
+            "variant": 1,
+            "time": 5.498666666666667
+          },
+          {
+            "name": "counter",
+            "variant": 2,
+            "time": 5.584
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 5.664
+          },
+          {
+            "name": "enemyHit",
+            "variant": 0,
+            "time": 5.749333333333333
+          },
+          {
+            "name": "clash",
+            "variant": 2,
+            "time": 5.834666666666666
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 5.9093333333333335
+          },
+          {
+            "name": "surge",
+            "variant": 1,
+            "time": 6
+          },
+          {
+            "name": "enemyHit",
+            "variant": 2,
+            "time": 6.08
+          },
+          {
+            "name": "heroHit",
+            "variant": 0,
+            "time": 6.16
+          },
+          {
+            "name": "rally",
+            "variant": 1,
+            "time": 6.250666666666667
+          },
+          {
+            "name": "vow",
+            "variant": 1,
+            "time": 6.346666666666667
+          },
+          {
+            "name": "final",
+            "variant": 1,
+            "time": 6.416
+          },
+          {
+            "name": "heroHit",
+            "variant": 2,
+            "time": 6.490666666666667
+          },
+          {
+            "name": "heroHit",
+            "variant": 1,
+            "time": 6.576
+          },
+          {
+            "name": "heroHit",
+            "variant": 3,
+            "time": 6.666666666666667
+          },
+          {
+            "name": "enemyHit",
+            "variant": 1,
+            "time": 6.832
+          },
+          {
+            "name": "reach",
+            "variant": 3,
+            "time": 6.970666666666666
+          },
+          {
+            "name": "arrival",
+            "variant": 3,
+            "time": 7.050666666666666
+          },
+          {
+            "name": "enemy",
+            "variant": 3,
+            "time": 7.136
+          },
+          {
+            "name": "pressure",
+            "variant": 3,
+            "time": 7.216
+          },
+          {
+            "name": "gather",
+            "variant": 3,
+            "time": 7.386666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 3,
+            "time": 7.466666666666667
+          },
+          {
+            "name": "rally",
+            "variant": 3,
+            "time": 7.552
+          },
+          {
+            "name": "vow",
+            "variant": 3,
+            "time": 7.642666666666667
+          },
+          {
+            "name": "final",
+            "variant": 3,
+            "time": 7.717333333333333
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 2,
+            "time": 7.888
+          },
+          {
+            "name": "loss",
+            "variant": 2,
+            "time": 7.962666666666666
+          },
+          {
+            "name": "revival",
+            "variant": 0,
+            "time": 8.138666666666667
+          },
+          {
+            "name": "win",
+            "variant": 2,
+            "time": 8.277333333333333
+          },
+          {
+            "name": "reach",
+            "variant": 0,
+            "time": 8.352
+          },
+          {
+            "name": "arrival",
+            "variant": 0,
+            "time": 8.432
+          },
+          {
+            "name": "gather",
+            "variant": 0,
+            "time": 8.517333333333333
+          },
+          {
+            "name": "vow",
+            "variant": 0,
+            "time": 8.608
+          },
+          {
+            "name": "final",
+            "variant": 0,
+            "time": 8.682666666666666
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 1,
+            "time": 8.773333333333333
+          },
+          {
+            "name": "rushWin",
+            "variant": 0,
+            "time": 8.842666666666666
+          },
+          {
+            "name": "reach",
+            "variant": 2,
+            "time": 8.986666666666666
+          },
+          {
+            "name": "win",
+            "variant": 1,
+            "time": 9.365333333333334
+          },
+          {
+            "name": "reach",
+            "variant": 1,
+            "time": 9.434666666666667
+          },
+          {
+            "name": "arrival",
+            "variant": 2,
+            "time": 9.514666666666667
+          },
+          {
+            "name": "enemy",
+            "variant": 0,
+            "time": 9.6
+          },
+          {
+            "name": "pressure",
+            "variant": 0,
+            "time": 9.685333333333332
+          },
+          {
+            "name": "gather",
+            "variant": 2,
+            "time": 9.850666666666667
+          },
+          {
+            "name": "surge",
+            "variant": 0,
+            "time": 9.936
+          },
+          {
+            "name": "rally",
+            "variant": 0,
+            "time": 10.016
+          },
+          {
+            "name": "vow",
+            "variant": 2,
+            "time": 10.112
+          },
+          {
+            "name": "fullrotation",
+            "variant": 0,
+            "time": 10.202666666666667
+          },
+          {
+            "name": "final",
+            "variant": 2,
+            "time": 10.266666666666667
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 3,
+            "time": 10.437333333333333
+          },
+          {
+            "name": "win",
+            "variant": 3,
+            "time": 10.565333333333333
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "recordingBytes": 164516,
+  "scope": "Real AudioContext/MediaRecorder and production rendering at authored boundaries; optional full continuous admitted normal loss, 8 sought fixtures. Physical speaker listening is unverified."
+}

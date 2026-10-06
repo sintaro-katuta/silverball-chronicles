@@ -1,10 +1,11 @@
+export const SYNTH_TUNING=Object.freeze({signaturePitch:2**(-3/12),effectPitch:2**(-2/12),upperHarmonics:.90});
 export const TAU=2*Math.PI;
 export const synthEnvelope=(t,attack,decay)=>t<0?0:(1-Math.exp(-t/attack))*Math.exp(-t/decay);
 // Periodic oscillator harmonics only. No noise, recorded grain, metal modes or
 // low-frequency percussion. Omit harmonics beyond the rendering Nyquist band.
 export function synthWave(phase,frequency,sampleRate,brightness=.6){
  let value=Math.sin(phase)*.72;
- for(let j=2;j<=5;j++)if(frequency*j<sampleRate*.44)value+=Math.sin(phase*j)*brightness*.38/j;
+ for(let j=2;j<=5;j++)if(frequency*j<sampleRate*.44)value+=Math.sin(phase*j)*brightness*SYNTH_TUNING.upperHarmonics*.38/j;
  return value;
 }
 export function stereoEcho(left,right,sampleRate,level){

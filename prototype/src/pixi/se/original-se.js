@@ -1,5 +1,5 @@
 import {synthesizeSignature} from './signature-sound.js';
-import {TAU,synthEnvelope as envelope,synthWave,stereoEcho} from './synth-wave.js';
+import {SYNTH_TUNING,TAU,synthEnvelope as envelope,synthWave,stereoEcho} from './synth-wave.js';
 // Synth-only timbres. Catalog kind denotes the on-screen event role, not
 // a natural material sound. No noise, impact, scrape or mallet layer.
 const families={
@@ -52,7 +52,7 @@ export function synthesizeSe(name,variant=0,sampleRate=44100){
  const s=SE_CATALOG[name];if(!s||!Number.isInteger(variant)||variant<0||variant>3)throw new RangeError('Invalid SE');
  if(s.kind==='victory')return synthesizeSignature({mode:name,variant,sampleRate,duration:s.duration,level:s.level});
  const n=Math.ceil(s.duration*sampleRate),left=new Float32Array(n),right=new Float32Array(n);
- let phase=0;const detune=[1,.994,1.006,.998][variant],bright=[.62,.82,.49,.72][variant];
+ let phase=0;const detune=[1,.994,1.006,.998][variant]*SYNTH_TUNING.effectPitch,bright=[.62,.82,.49,.72][variant];
  const short=s.kind==='latch',rising=['ignition','wind'].includes(s.kind),descending=s.kind==='withdraw',slash=s.kind==='blade';
  const base=short?s.frequency:s.frequency+180,count=short?1:s.kind==='crystal'?3:s.kind==='mechanical'?3:s.kind==='seal'?2:1;
  const phases=new Float64Array(count);
