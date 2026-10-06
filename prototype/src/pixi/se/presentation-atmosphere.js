@@ -1,3 +1,4 @@
+import {TAU,synthWave} from './synth-wave.js';
 import {reachSchedule} from '../reach-ending.js';
 const clamp=x=>Math.max(0,Math.min(1,x));
 // Result-independent bed until the visual reveal. Its envelope uses display
@@ -30,25 +31,18 @@ export function atmospherePose(game){
 
 export function synthesizeAtmosphere(variant=0,sampleRate=44100,{charge=false}={}){
  const seconds=3,n=Math.round(sampleRate*seconds),left=new Float32Array(n),right=new Float32Array(n);
- let seed=93491+variant*1979,low=0,slow=0,grain=0;
- const frequencies=charge?[183,293,451,719,1123,1709]:[63,147,233];
+ const frequencies=charge?[330,660,1320]:[392,784];
  for(let i=0;i<n;i++){
-  seed=(Math.imul(seed,1664525)+1013904223)>>>0;const noise=seed/2147483648-1;
-  low+=.12*(noise-low);slow+=.012*(noise-slow);grain+=.35*(noise-grain);const t=i/sampleRate;
-  const breath=.72+.12*Math.sin(2*Math.PI*t/seconds)+.08*Math.sin(4*Math.PI*t/seconds+variant);
-  let resonance=0,spread=0;
+  const t=i/sampleRate;let a=0,b=0;
   for(let j=0;j<frequencies.length;j++){
-   const f=frequencies[j]+variant*(j+1)*1.33,w=(charge?.053:.073)/(1+j*.42);
-   const shimmer=.7+.3*Math.sin(2*Math.PI*(1+j*.667)*t+variant);
-   resonance+=Math.sin(2*Math.PI*f*t)*w*shimmer;
-   spread+=Math.sin(2*Math.PI*(f+1.7)*t+.4)*w*shimmer;
+   const f=frequencies[j]*(1+variant*.002),weight=(charge?.17:.19)/(1+j*.7);
+   const motion=.8+.12*Math.sin(TAU*(1+j)*t/seconds+variant);
+   a+=synthWave(TAU*f*t,f,sampleRate,charge?.55:.25)*weight*motion;
+   b+=synthWave(TAU*f*1.003*t+.14,f*1.003,sampleRate,charge?.55:.25)*weight*motion;
   }
-  const friction=charge?((grain-low)*.75+(low-slow)*.38):((low-slow)*.85+slow*.40);
-  left[i]=(friction+resonance)*breath;
-  right[i]=(friction*.89+spread)*breath;
+  left[i]=a;right[i]=b;
  }
- const edge=Math.round(sampleRate*.04);
- for(const data of [left,right])for(let i=0;i<edge;i++){const u=i/edge;data[n-edge+i]=data[n-edge+i]*(1-u)+data[i]*u;}
+ const edge=Math.round(sampleRate*.04);for(const data of [left,right])for(let i=0;i<edge;i++){const u=i/edge;data[n-edge+i]=data[n-edge+i]*(1-u)+data[i]*u;}
  return {left,right,sampleRate};
 }
 
@@ -73,7 +67,7 @@ export function createAtmosphere(context,destination){
    if(noise&&variant!==next.variant){const until=duckUntil,depth=duckDepth;stop();duckUntil=until;duckDepth=depth;}if(!noise)start(next);pose=next;
    const duck=context.currentTime<duckUntil?duckDepth:1;
    target(airGain.gain,next.level*duck,.045);target(toneGain.gain,next.charge*.057*duck,.045);
-   // Opening the texture and tightening its grain replaces the exposed siren.
+   // Open a synth pad progressively; its tone remains periodic and pitched.
    target(tone.playbackRate,.72+.48*next.charge,.07);
    target(toneFilter.frequency,480+next.charge**1.7*3800,.07);
    target(filter.frequency,1000+next.charge*1400,.06);

@@ -265,3 +265,5 @@ docs/
 - [効果音の素材感・溜め・ミックスの仕上げ](prototype/SOUND_FINISH.md)
 
 - [月輪パルス：当たり音の識別リズムと試聴](prototype/SIGNATURE_SOUND.md)
+
+- [最新：シンセ音色への統一](prototype/SYNTH_ONLY_SOUND.md)
