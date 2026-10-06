@@ -18,7 +18,7 @@ export function synthesizeSignature({mode='win',variant=0,sampleRate=44100,durat
   grain[i]=Math.tanh((material*.32+(noise-low)*.16)*3.4)*env(t,.0007,.032);
  }
  // Accent positions stay identifiable; variation changes grain direction,
- // modulation, spatial reflection and the bright answer after the impact.
+ // modulation, spatial reflection and the cutting metal answer after the impact.
  let clutchPhase=0,releasePhase=0,punchLow=0,punchMid=0;
  const ratios=[1,1.17,.91,1.29],carrier=[977,1163,887,1327][variant];
  for(let i=0;i<n;i++){
@@ -51,19 +51,26 @@ export function synthesizeSignature({mode='win',variant=0,sampleRate=44100,durat
    blast=drive*.28+kick+flash;
    for(let j=0;j<6;j++){
     const f=[531,859,1397,2243,3559,5107][j]*(1+variant*.002*(j%2?1:-1));
-    const decay=.48/(1+j*.32),weight=.052/(1+j*.7);
-    answerL+=Math.sin(TAU*f*age)*env(age,.004,decay)*weight;
-    answerR+=Math.sin(TAU*f*1.003*age+.12)*env(age,.004,decay)*weight;
+    const decay=.66/(1+j*.24),weight=.046/(1+j*.62)*(j<2?.68:1);
+    answerL+=Math.sin(TAU*f*age)*env(age,.0012,decay)*weight;
+    answerR+=Math.sin(TAU*f*1.003*age+.12)*env(age,.0012,decay)*weight;
    }
   }
-  // Three irregular answers form the recognisable 'moon turns over' tail.
+  // Three inharmonic, saturated metal answers retain the recognition rhythm.
+  // No soft rounded bell attacks or major-scale mallet tones in this tail.
   // RUSH answers faster, while the initial recognition rhythm stays the same.
   for(const [j,at] of MOON_SIGNATURE.tailAt.entries()){
    const answerAge=t-(mode==='rushWin'?at*.83:at);if(answerAge<0)continue;
-   const f=[1174.66,1567.98,2349.32][j]*(1+variant*.003);
-   const bell=Math.sin(TAU*f*answerAge)+.18*Math.sin(TAU*f*2.719*answerAge);
-   const weight=.066*env(answerAge,.008,.29+j*.035);
-   answerL+=bell*weight*(j%2?.76:1);answerR+=bell*weight*(j%2?1:.76);
+   const f=[1397,2243,3559][j]*(1+variant*.003);
+   let edgeL=Math.sin(TAU*f*answerAge),edgeR=Math.sin(TAU*f*1.0021*answerAge+.14);
+   for(const [ratio,weight] of [[1.641,.63],[2.317,.34]])if(f*ratio<sampleRate*.44){
+    edgeL+=Math.sin(TAU*f*ratio*answerAge)*weight;
+    edgeR+=Math.sin(TAU*f*ratio*1.0013*answerAge+.19)*weight;
+   }
+   const rasp=white*env(answerAge,.0004,.032)*.052;
+   const weight=.078*env(answerAge,.00065,.49+j*.075);
+   answerL+=Math.tanh(edgeL*2.1)*weight*(j%2?.82:1)+rasp;
+   answerR+=Math.tanh(edgeR*2.1)*weight*(j%2?1:.82)+rasp;
   }
   const attack=Math.min(1,t/.0008),end=Math.min(1,(duration-t)/.12);
   left[i]=Math.tanh((clutch+ratchet+blast+answerL)*1.35)*attack*end;
@@ -75,7 +82,7 @@ export function synthesizeSignature({mode='win',variant=0,sampleRate=44100,durat
  let peak=0,dampL=0,dampR=0;
  for(let i=0;i<n;i++){
   let a=0,b=0;for(const [delay,gain] of taps){const l=i-Math.round((delay+variant*.001)*sampleRate),r=i-Math.round((delay+.007)*sampleRate);if(l>=0)a+=dryR[l]*gain;if(r>=0)b+=dryL[r]*gain;}
-  dampL+=.29*(a-dampL);dampR+=.29*(b-dampR);
+  dampL+=.39*(a-dampL);dampR+=.39*(b-dampR);
   const fade=Math.min(1,(n-i)/(sampleRate*.12));left[i]=(left[i]+dampL)*fade;right[i]=(right[i]+dampR)*fade;peak=Math.max(peak,Math.abs(left[i]),Math.abs(right[i]));
  }
  const scale=level/Math.max(peak,.001);for(let i=0;i<n;i++){left[i]*=scale;right[i]*=scale;}
