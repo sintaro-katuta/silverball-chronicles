@@ -1,6 +1,8 @@
+import {presentationReels} from '../presentation/reel-symbols.js';
 import {createReachEndingSelector} from './reach-ending.js';
 import {createReachVariety} from './reach-variety.js';
 import {longReachPose} from './long-reach-timeline.js';
+import {pressDecisionPush,advanceDecisionPresentation,decisionPushPose} from './decision-push.js';
 import {advancePresentationClock} from './presentation-clock.js';
 import {assignMoonCue} from './moon-cue.js';
 import {entryTitleAt,ENTRY_TITLE_SECONDS} from './entry-title-schedule.js';
@@ -58,9 +60,9 @@ export function attachNormalSpin(flow,{reach=false,win=false,roundModel=null,lif
     // Dispatch ordinary legacy reaches too, solely to preserve their existing
     // presentation RNG consumption. They are resolved without showing a reach.
     const dispatch=plan.route!=='ordinary'||result.reach;
-    const reels=plan.route==='ordinary'?[2,4,6]:[7,7,result.win?7:plan.route==='basic'?8:6];
     const selectedPrediction=charge?null:createPredictionPlan({drawId:result.drawId,mode:result.mode,win:result.win,plan});
     const predictionPlan=selectedPrediction&&prior>=1?Object.freeze({...selectedPrediction,holdCue:'none'}):selectedPrediction;
+    const reels=presentationReels(result,plan.route,{fullRotation:predictionPlan?.resultFamily==='fullrotation'});
     game.spinResult=Object.freeze({...result,reach:dispatch,reels:Object.freeze(reels),legacyReach:result.reach,presentationPlan:plan,predictionPlan,moonCue:plan.moonCue,reachVariant:plan.variant});
     game.previewCenterPending=plan.route==='basic'||plan.route==='battle'||plan.route==='flash';return;
    }
@@ -104,7 +106,7 @@ export function attachNormalSpin(flow,{reach=false,win=false,roundModel=null,lif
     if(ready){if(game.entryPrelude){game.entryFromSlash=game.entryPrelude.variant==='slash';const playedTitle=entryTitleAt(game.entryPrelude.variant)!==null;game.entryBackdropReady=playedTitle||game.entryPrelude.variant==='revival';game.entryTitleOffset=playedTitle?ENTRY_TITLE_SECONDS:0;delete game.entryPrelude;game.entryGuideAt=game.time;game.stopTimer=4.2;}delete game.previewWinAt;delete game.previewRushWin;playingRush=!!game.rush;roundModel.setMode(playingRush?'rush':'normal');afterBonusAt=null;}
 
    }
-  }else if(game.presentation?.basicReach){advancePresentationClock(game,dt);game.presentation.time+=dt;if(game.presentation.time>=reachSeconds(game.presentation,!!game.rush)){const won=game.presentation.win,normal=!game.rush;game.lastReachWasLong=!!game.presentation.longReach;game.presentation=null;game.resolveDraw(won,game.reelOutcome);if(!won&&normal)game.stopTimer=Math.max(game.stopTimer,DEVELOPMENT.lossHold);if(won&&game.jackpot){game.previewWinAt=game.time;game.previewRushWin=!!game.jackpot?.fromRush;if(game.previewRushWin&&roundModel)roundModel.setMode('right-closed');if(lifecycle)rounds=attachBonusRounds(roundModel,game);}}}
+  }else if(game.presentation?.basicReach){advancePresentationClock(game,dt);advanceDecisionPresentation(game.presentation,dt);if(game.presentation.time>=reachSeconds(game.presentation,!!game.rush)){const won=game.presentation.win,normal=!game.rush;game.lastReachWasLong=!!game.presentation.longReach;game.presentation=null;game.resolveDraw(won,game.reelOutcome);if(!won&&normal)game.stopTimer=Math.max(game.stopTimer,DEVELOPMENT.lossHold);if(won&&game.jackpot){game.previewWinAt=game.time;game.previewRushWin=!!game.jackpot?.fromRush;if(game.previewRushWin&&roundModel)roundModel.setMode('right-closed');if(lifecycle)rounds=attachBonusRounds(roundModel,game);}}}
   else {
    const end=rushEndPose(game.time,game.lastRush?.endedAt,!!game.rush||!!game.jackpot);
    if(end.visible){advancePresentationClock(game,dt);game.stopTimer=Math.max(0,RUSH_END_SECONDS-end.age+1.8);}
@@ -122,5 +124,5 @@ export function attachNormalSpin(flow,{reach=false,win=false,roundModel=null,lif
   game.retireBallIds?.(flow.physics.balls,flow.physics.nextId);
  };
 
- return {game,events,get rounds(){return rounds;},snapshot:()=>({entryPrelude:game.entryPrelude?{...game.entryPrelude}:null,lifecycle,mode:roundModel?.getMode(),rush:game.rush?{...game.rush}:null,lastRush:game.lastRush?{...game.lastRush}:null,round:rounds?.snapshot(),win:game.previewWinAt!==undefined?{time:game.time-game.previewWinAt,fromRush:!!game.previewRushWin}:null,reach:game.presentation?.basicReach?{time:game.presentation.time,duration:reachSeconds(game.presentation,!!game.rush),route:game.presentation.displayRoute,premium:game.presentation.premium,developed:!!game.presentation.developed,longReach:!!game.presentation.longReach,variant:game.presentation.reachVariant,ending:game.presentation.reachEnding,stage:game.presentation.longReach?longReachPose(game.presentation.time,{variant:game.presentation.reachVariant,ending:game.presentation.reachEnding,win:game.presentation.win}).cut:game.presentation.time<.45?'reach':developmentPose(game.presentation,!!game.rush).visible?developmentPose(game.presentation,!!game.rush).stage:'decision',win:game.presentation.win}:null,time:game.time,holds:game.holdCount,active:game.spinActive,draws:game.draws,stopTimer:game.stopTimer,reels:reviewReelState(game),accepted:acceptedCount,entries:entryCount,events:events.slice(-100)})};
+ return {game,events,pressDecision:()=>pressDecisionPush(game,{paused:flow.paused}),get rounds(){return rounds;},snapshot:()=>({push:decisionPushPose(game,{paused:flow.paused}),entryPrelude:game.entryPrelude?{...game.entryPrelude}:null,lifecycle,mode:roundModel?.getMode(),rush:game.rush?{...game.rush}:null,lastRush:game.lastRush?{...game.lastRush}:null,round:rounds?.snapshot(),win:game.previewWinAt!==undefined?{time:game.time-game.previewWinAt,fromRush:!!game.previewRushWin}:null,reach:game.presentation?.basicReach?{time:game.presentation.time,duration:reachSeconds(game.presentation,!!game.rush),route:game.presentation.displayRoute,premium:game.presentation.premium,developed:!!game.presentation.developed,longReach:!!game.presentation.longReach,variant:game.presentation.reachVariant,ending:game.presentation.reachEnding,stage:game.presentation.longReach?longReachPose(game.presentation.time,{variant:game.presentation.reachVariant,ending:game.presentation.reachEnding,win:game.presentation.win}).cut:game.presentation.time<.45?'reach':developmentPose(game.presentation,!!game.rush).visible?developmentPose(game.presentation,!!game.rush).stage:'decision',win:game.presentation.win}:null,time:game.time,holds:game.holdCount,active:game.spinActive,draws:game.draws,stopTimer:game.stopTimer,reels:reviewReelState(game),accepted:acceptedCount,entries:entryCount,events:events.slice(-100)})};
 }

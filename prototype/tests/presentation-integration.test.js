@@ -29,7 +29,7 @@ test('short, direct, battle, revival, flash and premiums retain FIFO, result, pa
   assert.equal(g.previewWinAt,undefined);
   if(route==='basic'||route==='direct'){assert.equal(g.presentation.moonCue,null);assert.equal(mechanismTime(g),-1);assert.ok(reachSeconds(g.presentation,mode==='rush')<=7);}
   f.stepToDraw();assert.equal(g.lastDraw,win);assert.equal(f.calls(),rolls);assert.equal(g.w.queues[mode==='rush'?'fuzu':'tokuzu1'][0],next);
-  if(route==='basic'&&!win)assert.deepEqual(g.stoppedReels,[7,7,8]);
+  if(route==='basic'&&!win){const n=g.stoppedReels[0];assert.deepEqual(g.stoppedReels,[n,n,n%9+1]);}
   assert.equal(g.accounting.reconciled,true);
   if(mode==='rush'){assert.equal(g.w.electricOpen,win);assert.equal(g.jackpot,null);}
  }

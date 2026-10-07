@@ -1,0 +1,10 @@
+.decision-push-host{position:relative}
+.decision-push-button{position:absolute;z-index:4;transform:translate(-50%,-50%);min-height:48px;padding:3px 2px 5px;border:3px solid #ffe9a7;border-radius:50% / 35%;color:#fff3c9;background:linear-gradient(#9b5426,#521628 48%,#8e311c);box-shadow:0 4px 0 #432319,0 0 0 2px #9a713a,0 0 16px rgb(255 172 54 / var(--push-light,.7)),inset 0 2px 0 #fff0b0;text-shadow:2px 2px 0 #2c0a17;line-height:1.15;touch-action:manipulation}
+.decision-push-button[hidden]{display:none}
+.decision-push-button:hover{background:linear-gradient(#b06e36,#6b1d28 48%,#ae4320)}
+.decision-push-button span{display:block;font-weight:bold}
+.decision-push-button small{display:block;font-size:11px;font-weight:normal;white-space:nowrap;color:#ffedbf;text-shadow:1px 1px 0 #321020}
+.decision-push-button:active{transform:translate(-50%,calc(-50% + 3px));box-shadow:0 1px 0 #432319,0 0 14px #e7a742,inset 0 2px 0 #8d5128}
+.decision-push-button:focus-visible{outline:3px solid #c8f3ff;outline-offset:4px}
+.decision-push-button:disabled{opacity:.65}
+.decision-push-button.reduced{box-shadow:0 4px 0 #432319,0 0 0 2px #9a713a,inset 0 2px 0 #fff0b0}

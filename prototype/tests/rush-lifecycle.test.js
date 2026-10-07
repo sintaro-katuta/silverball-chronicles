@@ -2,9 +2,14 @@ import test from 'node:test';import assert from 'node:assert/strict';
 import {createBoardFlow} from '../src/pixi/board-flow.js';import {attachNormalSpin} from '../src/pixi/normal-spin-flow.js';
 test('actual bonus admissions lead to 100 entry-driven rush draws then automatic normal return',()=>{
  const m=createBoardFlow({lcd:true,normalPower:.24}),s=attachNormalSpin(m.flow,{reach:true,win:true,roundModel:m,lifecycle:true});m.setMode('normal');m.flow.start();let sawRush=false;
+ // The diagnostic event list retains only the latest 100 admissions. Count
+ // accepted real-entry calls over the whole lifecycle, including rejected
+ // admissions and normal entries that can evict earlier RUSH records.
+ let acceptedRush=0;const enqueue=s.game.enqueueDraw.bind(s.game);
+ s.game.enqueueDraw=(count,source,mode,origin)=>{const accepted=enqueue(count,source,mode,origin);if(source==='rush'&&mode==='rush')acceptedRush+=accepted;return accepted;};
  for(let i=0;i<600*120;i++){m.flow.step(1/120);if(s.game.rush&&!s.game.jackpot&&s.game.previewWinAt===undefined){sawRush=true;assert.equal(m.getMode(),'rush');}if(s.game.lastRush&&!s.game.rush&&m.getMode()==='normal')break;}
- assert.equal(sawRush,true);assert.equal(s.game.lastRush?.consumed,100);assert.equal(m.getMode(),'normal');assert.equal(m.tulip.state().target,0);assert.equal(s.game.lastBonus.payout,m.flow.counts.bonus*15);assert.equal(s.game.lastBonus.payout,900);assert.equal(s.events.filter(e=>e.mode==='rush'&&e.accepted).length,100);assert.equal(s.game.previewWinAt,undefined);
- console.log(JSON.stringify({time:s.game.time,bonus:m.flow.counts.bonus,rushEntries:m.flow.counts.rush,draws:s.game.lastRush.consumed}));
+ assert.equal(sawRush,true);assert.equal(s.game.lastRush?.consumed,100);assert.equal(m.getMode(),'normal');assert.equal(m.tulip.state().target,0);assert.equal(s.game.lastBonus.payout,m.flow.counts.bonus*15);assert.equal(s.game.lastBonus.payout,900);assert.equal(acceptedRush,100);assert.ok(s.events.length<=100);assert.equal(s.game.previewWinAt,undefined);
+ console.log(JSON.stringify({time:s.game.time,bonus:m.flow.counts.bonus,rushEntries:m.flow.counts.rush,draws:s.game.lastRush.consumed,acceptedRush,retainedRush:s.events.filter(e=>e.mode==='rush'&&e.accepted).length}));
 });
 test('non-RUSH bonus returns to normal only after the door closes',()=>{
  const m=createBoardFlow({lcd:true}),s=attachNormalSpin(m.flow,{reach:true,win:true,roundModel:m,lifecycle:true});s.game.pendingGrade=4;s.game.startJackpot();s.game.jackpot.entryEligible=false;s.game.previewWinAt=0;

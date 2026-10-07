@@ -1,0 +1,72 @@
+{
+  "name": "Sprint and release PR verification",
+  "on": {
+    "pull_request": {
+      "types": [
+        "opened",
+        "synchronize",
+        "reopened",
+        "ready_for_review"
+      ],
+      "branches": [
+        "release/**",
+        "main"
+      ]
+    }
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "concurrency": {
+    "group": "pr-${{ github.event.pull_request.number }}",
+    "cancel-in-progress": true
+  },
+  "jobs": {
+    "verify": {
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 20,
+      "if": "(startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main')",
+      "env": {
+        "PLAYWRIGHT_BROWSER": "chromium"
+      },
+      "steps": [
+        {
+          "uses": "actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "with": {
+            "persist-credentials": false
+          }
+        },
+        {
+          "uses": "actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "with": {
+            "node-version": "24.21.0",
+            "cache": "npm",
+            "cache-dependency-path": "prototype/package-lock.json"
+          }
+        },
+        {
+          "run": "npm --prefix prototype ci"
+        },
+        {
+          "run": "node prototype/node_modules/@playwright/test/cli.js install --with-deps chromium"
+        },
+        {
+          "run": "node prototype/tools/release-cd.js check-pr"
+        },
+        {
+          "run": "npm run release:prepare"
+        },
+        {
+          "uses": "actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+          "if": "always()",
+          "with": {
+            "name": "pr-local-release-${{ github.run_id }}",
+            "path": "prototype/.cache/release/",
+            "include-hidden-files": true,
+            "retention-days": 14
+          }
+        }
+      ]
+    }
+  }
+}

@@ -13,33 +13,34 @@ export function specialReelStrip(position){
  const value=position-1,index=Math.floor(value),fraction=value-index;
  return Array.from({length:3},(_,j)=>({digit:((index-j+1)%9+9)%9+1,y:(j-1+fraction)*50}));
 }
-export function specialRoutePose({route='basic',mode='normal',win=false,time=0,reducedEffects=false,premium=null,premiumAt=28}={}){
+export function specialRoutePose({route='basic',mode='normal',win=false,time=0,reducedEffects=false,premium=null,premiumAt=28,symbol=7}={}){
  if(!['basic','direct','battle'].includes(route))throw new RangeError('Unsupported special route');
  if(!['normal','rush'].includes(mode))throw new RangeError('Unsupported presentation mode');
  if(![null,'moon','sword'].includes(premium))throw new RangeError('Unsupported premium');
  if(!Number.isFinite(time)||!Number.isFinite(premiumAt))throw new RangeError('Finite presentation time required');
  if(route==='direct'&&!win)throw new RangeError('Direct route requires an existing winning record');
+ if(!Number.isInteger(symbol)||symbol<1||symbol>9)throw new RangeError('Symbol must be 1–9');
  const timing=route==='battle'?null:SPECIAL_ROUTE_TIMINGS[mode][route];
  const age=timing?time-timing.decisionAt:-1,revealed=!!timing&&age>=0;
  // Identical pre-decision motion for a basic win/loss. Outcome is not encoded in
  // speed, near-miss position, banner or colour before the common reveal boundary.
  const reelProgress=timing?clamp(time/timing.decisionAt):0;
- const positions=[7,7,7],stopTimes=[0,0,0];
+ const positions=[symbol,symbol,symbol],stopTimes=[0,0,0];
  if(timing){
   for(let i=0;i<3;i++){
    const stop=route==='basic'&&i!==1?0:timing.decisionAt-(route==='direct'?(2-i)*.13:0);
    stopTimes[i]=stop;
-   if(time<stop){const remaining=stop-time;positions[i]=7-remaining*1.8-4.2*Math.max(0,remaining-.6);}
+   if(time<stop){const remaining=stop-time;positions[i]=symbol-remaining*1.8-4.2*Math.max(0,remaining-.6);}
   }
  }
- // Continue the same strip through 7 to the adjacent 8. Hermite interpolation
- // preserves the incoming 1.8-digit/s velocity and brakes to zero at 8, rather
- // than swapping the centred 7 texture for a centred 8 at the result boundary.
+ // Continue through the target to its successor (including 9→1). Hermite interpolation
+ // preserves the incoming 1.8-digit/s velocity and brakes to zero, rather
+ // than replacing a centred texture at the result boundary.
  const passing=route==='basic'&&revealed&&!win&&age<BASIC_LOSS_PASS_SECONDS;
  if(route==='basic'&&revealed&&!win){
   const u=clamp(age/BASIC_LOSS_PASS_SECONDS),m=1.8*BASIC_LOSS_PASS_SECONDS;
   const progress=(-2*u**3+3*u**2)+(u**3-2*u**2+u)*m;
-  positions[1]=7+progress;
+  positions[1]=symbol+progress;
  }
  const landingAge=age-(route==='basic'&&!win?BASIC_LOSS_PASS_SECONDS:0);
  const premiumAge=time-premiumAt,premiumEnabled=route==='battle'&&win&&premium!==null;
@@ -53,7 +54,7 @@ export function specialRoutePose({route='basic',mode='normal',win=false,time=0,r
   finished:timing?time>=timing.seconds:premiumEnabled&&premiumAge>=3.4,
   phase:route==='battle'?(formed?'premium-confirmed':premiumVisible?'premium-forming':'inactive'):revealed?(win?'win':'loss'):route==='basic'&&time<1.6?'reach':'pursuit',
   revealed,result:revealed?(win?'win':'loss'):null,
-  digits:revealed?[7,win?7:8,7]:[7,7,7],positions,
+  digits:revealed?[symbol,win?symbol:symbol%9+1,symbol]:[symbol,symbol,symbol],positions,
   stopped:timing?stopTimes.map((stop,i)=>revealed?!(i===1&&passing):time>=stop):[false,false,false],passing,
   banner:route==='basic'&&time>=0&&time<1.6,
   bannerAlpha:Math.min(1,clamp((1.6-time)/.25)),
