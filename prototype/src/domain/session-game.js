@@ -78,7 +78,7 @@ export class SessionGame extends Game {
   this.wRecord=record;super.startSpin({...record,mode,source:kind,origin:{x:210,y:430},buildStyle:'balanced',baseWin,grade:10});
  }
  resolveDraw(win,reels=null){
-  this.spinActive=false;this.spinResult=null;this.stoppedReels=win?[7,7,7]:(reels??this.missReels());this.stopTimer=win?0:.2;this.lastDraw=win;
+  this.spinActive=false;this.spinResult=null;this.stoppedReels=win?(reels??[7,7,7]):(reels??this.missReels());this.stopTimer=win?0:.2;this.lastDraw=win;
   if(!this.wRecord)return;const result=this.w.resolveDraw(this.wRecord.kind);this.wRecord=null;this.emit('draw',{win,...result});
   if(result?.outcome==='electric-open'){
    this.wBatch=result.guaranteed&&this.wBatch?{...this.wBatch,maxPayout:this.wBatch.maxPayout+3000}:{maxPayout:3000,payout:0};this.w.openElectric();this.electricTime=0;this.electricCount=0;

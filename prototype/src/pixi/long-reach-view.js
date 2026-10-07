@@ -1,5 +1,5 @@
+import {presentationSurface,smoothTexture} from './presentation-quality.js';
 import {Container,Graphics,Sprite,Texture,Rectangle,MeshPlane} from 'pixi.js';
-import {pixelSurface} from './pixel-primitives.js';
 import {longReachPose,REACH_LABELS,actorFrameLayout} from './long-reach-timeline.js';
 // Wind follows the trailing cloth, with head/face and the right sword arm fixed.
 export function clothVertex(x,y,t,wind=1){
@@ -27,7 +27,7 @@ export function createLongReachView(atlas,landscape,{motionAtlas=null}={}){
  const motes=[];for(let i=0;i<32;i++){const g=new Graphics().circle(0,0,i%4===0?.7:.35).fill(i%4===0?0xe9e3c3:0x79b5d8);world.addChild(g);motes.push(g);}
  const dim=new Graphics().rect(0,0,210,140).fill(0x020714);root.addChild(dim);
  const titles={};for(const label of REACH_LABELS){
-  const t=Texture.from(pixelSurface(210,26,c=>{c.textAlign='center';c.textBaseline='middle';c.font=(label==='上に注目'?'20':'15')+'px "DotGothic16"';c.lineWidth=4;c.strokeStyle='#061020';c.strokeText(label,105,13);c.fillStyle='#e4edf5';c.fillText(label,105,13);}));t.source.scaleMode='nearest';textures.push(t);const sprite=new Sprite(t);root.addChild(sprite);titles[label]=sprite;
+  const t=Texture.from(presentationSurface(210,26,c=>{c.textAlign='center';c.textBaseline='middle';c.font=(label==='上に注目'?'20':'15')+'px "DotGothic16"';c.lineWidth=4;c.strokeStyle='#061020';c.strokeText(label,105,13);c.fillStyle='#e4edf5';c.fillText(label,105,13);}));smoothTexture(t);textures.push(t);const sprite=new Sprite(t);sprite.width=210;sprite.height=26;root.addChild(sprite);titles[label]=sprite;
  }
  const arrow=new Graphics().poly([0,-8,-7,0,-2,0,-2,8,2,8,2,0,7,0]).fill(0xe4d39e);arrow.position.set(105,43);root.addChild(arrow);
  root.visible=false;

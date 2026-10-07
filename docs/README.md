@@ -4,10 +4,28 @@
 
 ## 主な入口
 
+- [PM要件と改善バックログ](agile/BACKLOG.md)
+- [スプリント計画・担当キュー](agile/SPRINTS.md)
+- [PM受け入れ記録](agile/PM_REVIEW.md)
+- [スクラム運用](agile/SCRUM.md)
+- [Sprint 1 PRの要件・差分・CIレビュー](agile/S1_PR_REVIEW.md)
+- [既存baselineとSprint 1の変更manifest](agile/S1_CHANGE_MANIFEST.md)
+- [Sprint 1の変更説明とR01への引継ぎ](agile/S1_RELEASE_SUMMARY.md)
+- [検証済みreleaseを公開へ引き継ぐ仕組み（#10）](agile/RELEASE_MECHANISM.md)
+- [Sprint集約PRと3スプリント単位のリリースチェックリスト](agile/RELEASE_CHECKLIST.md)
+- [mainマージ起点のCI/CDと有効化手順（#11）](agile/RELEASE_CD.md)
 - [ゲーム仕様書](pachinko.md)：冒頭の優先関係と最新追記を確認してください。
 - [試作の起動方法と実装範囲](prototype/README.md)
 - [月影機関のアーキテクチャとディレクトリ構成](prototype/ARCHITECTURE.md)
+- [Cloudflare公開用ビルド・検証・更新手順](prototype/CLOUDFLARE_DEPLOYMENT.md)
+- [独自ドメイン接続とDNSの引き継ぎ](prototype/CUSTOM_DOMAIN.md)
+- [台の準備時間のリファクタリングと実測](prototype/STARTUP_REFACTOR.md)
+- [演出の画質・連続動作リファクタリングと検証](prototype/PRESENTATION_REFACTOR.md)
 - [PixiJSの接続範囲と検証](prototype/PIXI_SESSION_INTEGRATION.md)
+- [公開版の遊技フィードバック対応と検証](prototype/PLAYER_FEEDBACK_2026-10-07.md)
+- [ヘソ入賞頻度の再調整と検証](prototype/HESO_ADJUSTMENT_2026-10-06.md)
+- [全体・盤面表示の外周形状修正と検証](prototype/BOARD_SHAPE_2026-10-06.md)
+- [1〜9のリーチ・大当り図柄への拡張と検証](prototype/REEL_SYMBOLS_2026-10-06.md)
 - [採用済みのデザイン方針](prototype/DESIGN.md)
 - [PlayCanvas移行記録](prototype/PLAYCANVAS_MIGRATION.md)
 - [パチンコ初心者講座の概要と全体図](transcripts/パチンコ概要_IRvp0ammDbg.md)
@@ -31,7 +49,27 @@ docs/
 
 画像・動画・実行用HTML・検証ログ・測定CSV・コードのバックアップは、実装や生成処理と一緒に既存の場所へ残しています。`AGENTS.md`、スキルの定義、第三者パッケージのREADME・ライセンス、アプリが参照する設定ファイルも所定の場所にあります。レビューの日付や過去の検証結果は、文書の移動で最新になったものではありません。
 
+PRには必要source/設定/文書だけを含め、privateな `prototype/reference-review/` の画像・動画・実録音、`tmp/`、生成cache/distを含めない。文書中のローカル証拠リンクは公開資産やGitHub CI成功を示すものではなく、実CIのrun/artifactを別途対応付ける。
+
 ## 全資料の索引
+
+### アジャイル運用と品質
+
+- [agile/BACKLOG.md](agile/BACKLOG.md)：GitHub Issues正本のバックログの鏡。
+- [agile/SPRINTS.md](agile/SPRINTS.md)：ユーザー確認済みの対象と担当キュー。
+- [agile/PM_REVIEW.md](agile/PM_REVIEW.md)：要件別のPM受入判定。
+- [agile/SCRUM.md](agile/SCRUM.md)：役割、DoR/DoD、WIP、開始確認。
+- [agile/BASELINE.md](agile/BASELINE.md)：開始時の既存変更・資料・環境。
+- [agile/ENGINEERING_BASELINE.md](agile/ENGINEERING_BASELINE.md)：現行コードでの試験結果と欠陥。
+- [agile/DESIGN_REVIEW.md](agile/DESIGN_REVIEW.md)：デザイン要件とレビュー。
+- [agile/UI_ACCEPTANCE_MATRIX.md](agile/UI_ACCEPTANCE_MATRIX.md)：状態/入力/表示の検証行列。
+- [agile/RELEASE_MECHANISM.md](agile/RELEASE_MECHANISM.md)：#10の実行入口・候補識別・公開引き継ぎ。
+- [agile/RELEASE_CHECKLIST.md](agile/RELEASE_CHECKLIST.md)：Sprint集約PRと3スプリント単位のリリース判定。
+- [agile/RELEASE_CD.md](agile/RELEASE_CD.md)：#11のCI/CD条件、有効化、Secrets、ノート/復旧。
+- [agile/RELEASE_NOTES_TEMPLATE.md](agile/RELEASE_NOTES_TEMPLATE.md)：利用者向けノートと公開成否の表記。
+- [agile/S1_PR_REVIEW.md](agile/S1_PR_REVIEW.md)：要求/対象manifest/実CI判定と担当キュー。
+- [agile/S1_CHANGE_MANIFEST.md](agile/S1_CHANGE_MANIFEST.md)：既存baseline・S1追加・除外の具体的分類。
+- [agile/S1_RELEASE_SUMMARY.md](agile/S1_RELEASE_SUMMARY.md)：S1の説明、R01ノートへの受入事実の引継ぎ。
 
 ### ゲーム仕様
 
@@ -259,6 +297,10 @@ docs/
 - [専用5映像の制作と編集](prototype/long-reach/STORY_PRESENTATIONS.md)：決意・回想・門の防衛・追跡・救出の素材と、通常/RUSHのカット構成。
 
 - [決意の一閃：溜めから一撃へ](prototype/long-reach/RESOLVE_SINGLE_STRIKE.md)：反復斬撃を廃止し、一撃の加速・接触保持・振り抜きへ集中。
+
+- [決着PUSHと赤金・虹色の光](prototype/long-reach/DECISION_PUSH.md)：実操作・時間切れ・当落固定・復活の秘匿、本編録画と検証範囲。
+
+- [2026-10-07 受け皿・右打ち案内・PC拡大](prototype/RECEIVING_TRAY_2026-10-07.md)
 
 - [オリジナル効果音・割当と試聴](prototype/ORIGINAL_SE.md)
 

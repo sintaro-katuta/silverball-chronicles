@@ -37,3 +37,16 @@ export function buildCloudLayer(scene,plate){
  }
  return {render,sky};
 }
+
+// Display path: retain the authored plate's detail and move at fractional pixels.
+// The fixed silhouette and moon mask never move with the sky.
+export function buildSmoothCloudLayer(plate,resolution=3){
+ const w=W*resolution,h=H*resolution;
+ const mask=pixelSurface(w,h,c=>{
+  c.fillStyle='#fff';for(let y=0;y<83*resolution;y++)for(let x=0;x<w;x++)
+   if(y/resolution<skyCeiling(x/resolution)&&!insideMoon(x/resolution,y/resolution))c.fillRect(x,y,1,1);
+ });
+ const strip=pixelSurface(w*2,h,c=>{c.imageSmoothingEnabled=true;c.imageSmoothingQuality='high';c.drawImage(plate.source.resource,0,0,w,h);c.save();c.translate(w*2,0);c.scale(-1,1);c.drawImage(plate.source.resource,0,0,w,h);c.restore();});
+ const canvas=pixelSurface(w,h,()=>{}),ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=true;
+ return {render(time){const offset=(Math.max(0,time)/1.5*resolution)%(w*2);ctx.globalCompositeOperation='source-over';ctx.clearRect(0,0,w,h);ctx.drawImage(strip,offset,0);ctx.drawImage(strip,offset-w*2,0);ctx.globalCompositeOperation='destination-in';ctx.drawImage(mask,0,0);return canvas;}};
+}

@@ -76,7 +76,9 @@ test('build direction overrides are restricted to practice presentation demos', 
 // Regression baseline updated for the user-approved 2026-09-30 RUSH rules:
 // 66% over 100 spins and 500/1500/3000 conditional payouts. Individual
 // probability, payout and admission invariants are checked in rush-prize.test.js.
-// This trace also covers non-presentation events, RNG consumption and stops.
+// This trace covers non-presentation events and RNG consumption. Cosmetic
+// digits are excluded for the approved 1–9 symbol change; baseline was checked
+// against the original Game implementation before updating this hash.
 export function ruleTrace(GameClass = Game) {
  let seed = 9127, calls = 0;
  const rng = () => {calls++; seed = (Math.imul(seed, 1664525) + 1013904223) >>> 0; return seed / 4294967296;};
@@ -88,7 +90,7 @@ export function ruleTrace(GameClass = Game) {
   const kind = g.jackpot ? 'bonus' : g.rush ? 'rush' : i % 3 ? 'start' : 'normal';
   g.hit(ball(140 + i % 20), kind, kind === 'rush' ? 8 : 4);
   g.tick(.5);
-  trace.push({calls, stock: g.stock, total: g.total, draws: g.draws, reels: g.stoppedReels,
+  trace.push({calls, stock: g.stock, total: g.total, draws: g.draws,
    normal: g.normalHolds.map(d => [d.id, d.source, d.winRoll, d.gradeRoll]),
    rush: g.rush && {...g.rush}, bonus: g.jackpot && {...g.jackpot},
    events: g.events.filter(e => e.type !== 'drawQueued')});
@@ -97,5 +99,5 @@ export function ruleTrace(GameClass = Game) {
  return createHash('sha256').update(JSON.stringify(trace)).digest('hex');
 }
 test('presentation provenance preserves the approved lottery/payout/RUSH regression trace', () => {
- assert.equal(ruleTrace(), '373eb73d0a373978efeadbf27f46484107baa2b7e0c23a3be201052a0067364a');
+ assert.equal(ruleTrace(), '718f2a36d4a045ad89352b1c81276f49b421e505d0ce639f882cc8f4c1bd1cec');
 });

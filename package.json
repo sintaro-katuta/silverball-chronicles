@@ -7,6 +7,13 @@
     "build:previews": "npm --prefix prototype run build:previews",
     "test": "npm --prefix prototype test",
     "test:browser": "npm --prefix prototype run test:browser",
-    "test:previews": "npm --prefix prototype run test:previews"
+    "test:previews": "npm --prefix prototype run test:previews",
+    "build:release": "npm --prefix prototype run build:release",
+    "deploy": "npm run release:publish",
+    "release:prepare": "node prototype/tools/release-workflow.js prepare",
+    "release:verify": "node prototype/tools/release-workflow.js verify",
+    "release:publish": "node prototype/tools/release-workflow.js publish",
+    "ci:check-pr": "node prototype/tools/release-cd.js check-pr",
+    "release:cd": "node prototype/tools/release-cd.js execute"
   }
 }

@@ -1,7 +1,8 @@
+import {presentationSurface,LCD_ART_RESOLUTION,smoothTexture} from './presentation-quality.js';
 import {Sprite,Texture} from 'pixi.js';
 import {pixelSurface} from './pixel-primitives.js';
-import {buildCloudLayer,cloudOffsetAt} from './cloud-idle.js';
-import {buildHairTipFrames,hairTipFrameAt} from './hair-tip-idle.js';
+import {buildSmoothCloudLayer} from './cloud-idle.js';
+import {buildHairTipFrames} from './hair-tip-idle.js';
 
 const WIDTH=210,HEIGHT=140;
 export const WATER_FRAMES=48,WATER_FPS=8;
@@ -32,13 +33,35 @@ export function buildWaterFrames(scene){
  }));
  return {base,frames};
 }
+// Runtime keeps the high-resolution original. Water is resampled only inside
+// its authored boundary; faces, the shore and the blade remain registered.
 export function createWaterIdle(scene,cloudSky=null,hairAtlas=null,hairUnderlay=null){
- const {frames}=buildWaterFrames(scene);
- const canvas=pixelSurface(WIDTH,HEIGHT,()=>{}),ctx=canvas.getContext('2d');
- const texture=Texture.from(canvas);texture.source.scaleMode='nearest';
- const clouds=cloudSky?buildCloudLayer(scene,cloudSky):null;
+ const resolution=LCD_ART_RESOLUTION,w=WIDTH*resolution,h=HEIGHT*resolution;
+ const base=presentationSurface(WIDTH,HEIGHT,c=>c.drawImage(scene.source.resource,0,0,WIDTH,HEIGHT));
+ const canvas=pixelSurface(w,h,()=>{}),ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
+ const texture=smoothTexture(Texture.from(canvas));
+ const clouds=cloudSky?buildSmoothCloudLayer(cloudSky,resolution):null;
  const hair=hairAtlas?buildHairTipFrames(scene,hairAtlas,hairUnderlay):null;
- const sprite=new Sprite(texture);let last='';
- function render(time){const n=waterFrameAt(time),h=hairTipFrameAt(time),key=`${n}:${clouds?cloudOffsetAt(time):0}:${h}`;if(key===last)return;last=key;ctx.drawImage(frames[n],0,0);if(clouds)ctx.drawImage(clouds.render(time),0,0);if(hair)ctx.drawImage(hair.frames[h],0,0);texture.source.update();}
+ const hairLayer=hair?pixelSurface(WIDTH,HEIGHT,()=>{}):null;
+ const sprite=new Sprite(texture);let lastTime=-1;
+ function render(time){
+  if(time===lastTime)return;lastTime=time;ctx.drawImage(base,0,0);
+  for(let y=88*resolution;y<138*resolution;y++){
+   const logicalY=y/resolution,left=Math.ceil((logicalY<=105?96:106+(logicalY-105)*2.2)*resolution);
+   const phase=Math.floor((logicalY-88)/2)*.83;
+   const dx=(Math.sin(Math.max(0,time)/6*Math.PI*2+phase)-Math.sin(phase))*.5*resolution;
+   const start=left+resolution,width=208*resolution-start-resolution;
+   if(width>0)ctx.drawImage(base,start+dx,y,width,1,start,y,width,1);
+  }
+  if(clouds)ctx.drawImage(clouds.render(time),0,0);
+  if(hair){
+   const phase=Math.max(0,time)*4,n=Math.floor(phase)%hair.frames.length,next=(n+1)%hair.frames.length,u=phase%1;
+   const c=hairLayer.getContext('2d');c.clearRect(0,0,WIDTH,HEIGHT);c.globalCompositeOperation='source-over';c.globalAlpha=1-u;c.drawImage(hair.frames[n],0,0);
+   // Interpolate only edited tip pixels. The original face and roots are untouched.
+   c.globalCompositeOperation='lighter';c.globalAlpha=u;c.drawImage(hair.frames[next],0,0);c.globalAlpha=1;c.globalCompositeOperation='source-over';
+   ctx.drawImage(hairLayer,0,0,w,h);
+  }
+  texture.source.update();
+ }
  render(0);return {sprite,texture,render};
 }

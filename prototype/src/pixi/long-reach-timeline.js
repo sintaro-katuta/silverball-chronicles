@@ -124,9 +124,9 @@ export function weaponPose(actor){
  const grip={x:mix(previous.grip.x,current.grip.x,u),y:mix(previous.grip.y,current.grip.y,u)},tip={x:mix(previous.tip.x,current.tip.x,u),y:mix(previous.tip.y,current.tip.y,u)};
  return {grip,tip,x:(grip.x+tip.x)/2,y:(grip.y+tip.y)/2,angle:Math.atan2(tip.y-grip.y,tip.x-grip.x)};
 }
-function actorSequence(age,keys){
+function actorSequence(age,keys,transition=.035){
  let i=0;while(i+1<keys.length&&age>=keys[i+1][0])i++;
- const frame=keys[i][1],blendFrame=i?keys[i-1][1]:frame,frameBlend=i?smooth((age-keys[i][0])/.035):1;
+ const frame=keys[i][1],blendFrame=i?keys[i-1][1]:frame,frameBlend=i?smooth((age-keys[i][0])/transition):1;
  return {frame,blendFrame,frameBlend};
 }
 function segmentContact(a,b){
@@ -186,7 +186,7 @@ export function longReachPose(t,{reducedEffects=false,variant='pressure',ending=
   hero.y=112;hero.rotation=0;enemy.x=144-16*smooth((t-5)/8)+9*heroResponse;
   enemy.y=111;enemy.rotation=.12*heroResponse;
   if(!active){
-   Object.assign(hero,motionFrames?actorSequence(t,[[0,0],[15,1],[46,6]]):{frame:t>=15?1:0});
+   Object.assign(hero,motionFrames?actorSequence(t,[[0,0],[15,1],[46,6]],.16):{frame:t>=15?1:0});
    Object.assign(enemy,{frame:3,blendFrame:3,frameBlend:1});
   }else if(motionFrames){
    Object.assign(hero,actorSequence(active.age,[[-1,6],[-.07,2],[.14,7]]));
@@ -200,8 +200,8 @@ export function longReachPose(t,{reducedEffects=false,variant='pressure',ending=
  if(cut.id==='enemy'&&t<6)camera=script.intro==='hero'?{x:hero.x+2,y:60,scale:1.75}:script.intro==='wide'?{x:105,y:70,scale:1.12}:{x:150,y:52,scale:1.75};
  if(cut.id==='dodge')camera={x:100,y:77,scale:1.08};
  if(cut.id==='gather')camera={x:hero.x,y:63,scale:1.25};
- if(cut.id==='rally')camera=script.portrait==='both'?{x:105,y:70,scale:1.15}:{x:hero.x+2,y:60,scale:2.35};
- if(cut.id==='vow')camera={x:hero.x+8,y:36,scale:1.8};
+ if(cut.id==='rally')camera=script.portrait==='both'?{x:105,y:70,scale:1.15}:{x:hero.x+2,y:60,scale:2.35+.08*smooth(u)};
+ if(cut.id==='vow')camera={x:hero.x+8,y:36,scale:1.8+.06*smooth(u)};
  if(cut.id==='final')camera={x:112,y:70,scale:1.08};
  if(resolve){
   if(cut.id==='gather')camera={x:hero.x+7,y:52,scale:1.45+.1*smooth(u)};

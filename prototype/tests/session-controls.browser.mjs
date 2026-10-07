@@ -1,6 +1,7 @@
+import {browserLaunchOptions} from './browser-launch.js';
 import {chromium} from '@playwright/test';
 import assert from 'node:assert/strict';
-const browser=await chromium.launch({channel:'chrome',headless:true}),errors=[];
+const browser=await chromium.launch(browserLaunchOptions()),errors=[];
 try{
  const p=await browser.newPage({viewport:{width:390,height:844}});p.on('pageerror',e=>errors.push(e.message));
  await p.goto(process.env.REVIEW_URL??'http://127.0.0.1:5173');await p.locator('[data-kind=main]').first().click();
