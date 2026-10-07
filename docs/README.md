@@ -309,3 +309,5 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [月輪パルス：当たり音の識別リズムと試聴](prototype/SIGNATURE_SOUND.md)
 
 - [最新：シンセ音色への統一](prototype/SYNTH_ONLY_SOUND.md)
+
+- [S2：5台の入賞・排出・会計測定](agile/S2_QA_REVIEW.md)：条件別の新実測と、実効配置/供給停止の制限。
