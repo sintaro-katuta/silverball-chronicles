@@ -316,3 +316,5 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [S2：性能計測と採用基準](agile/S2_PERFORMANCE_REVIEW.md)：PC全24窓の受入と実機未検証。
 - [S2：現行静止画の視認性](agile/S2_VISUAL_ACCEPTANCE.md)：新28画像の条件別レビュー。
 - [S2：音素材と実聴取評価](agile/S2_SOUND_EVALUATION.md)：取得済み11素材と未聴取の評価表。
+
+- [S2：PR #14のCI待機修正](agile/S2_CI_REVIEW.md)：元失敗・有限待機・診断・新CI確認を分離。

@@ -24,7 +24,7 @@
   "jobs": {
     "verify": {
       "runs-on": "ubuntu-24.04",
-      "timeout-minutes": 20,
+      "timeout-minutes": 30,
       "if": "(startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main')",
       "env": {
         "PLAYWRIGHT_BROWSER": "chromium"
