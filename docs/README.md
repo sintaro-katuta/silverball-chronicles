@@ -311,3 +311,8 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [最新：シンセ音色への統一](prototype/SYNTH_ONLY_SOUND.md)
 
 - [S2：5台の入賞・排出・会計測定](agile/S2_QA_REVIEW.md)：条件別の新実測と、実効配置/供給停止の制限。
+
+- [S2：承認済み実行計画](agile/S2_PLAN.md)：対象#5/#6/#7、担当・ACと終了条件。
+- [S2：性能計測と採用基準](agile/S2_PERFORMANCE_REVIEW.md)：PC全24窓の受入と実機未検証。
+- [S2：現行静止画の視認性](agile/S2_VISUAL_ACCEPTANCE.md)：新28画像の条件別レビュー。
+- [S2：音素材と実聴取評価](agile/S2_SOUND_EVALUATION.md)：取得済み11素材と未聴取の評価表。
