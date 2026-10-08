@@ -27,12 +27,12 @@ try{
  }
  const page=await browser.newPage({viewport:{width:390,height:844}}),errors=[];currentPage=page;page.on('pageerror',e=>errors.push(e.message));
  for(const scenario of (process.env.UI_ONLY?[]:['battle','bonus','rush'])){
- stage=`experience ${scenario}`;
+ stage=`experience ${scenario}`;clockTrace=[];
  await page.goto(process.env.REVIEW_URL??'http://127.0.0.1:5173');await page.locator('[data-kind=main]').first().click();await page.locator(`[data-experience=${scenario}]`).click();await page.locator('#intro-skip').click();
  await page.waitForFunction(()=>document.querySelector('#dock-guidance').textContent.includes('演出体験中'));await assertDraws(page);
  if(scenario==='battle'){
- stage='experience battle: PUSH visible';clockTrace=[];const waitStarted=Date.now();
- const observe=async()=>{const value=await page.evaluate(()=>{const s=__session.snapshot();return {gameTime:s.time,reach:s.spin.reach,paused:s.paused,phase:s.session.phase,pushHidden:document.querySelector('.decision-push-button').hidden,visibility:document.visibilityState};});clockTrace.push({elapsedMs:Date.now()-waitStarted,...value});};
+ stage='experience battle: PUSH visible';clockTrace=[];const trace=clockTrace,waitStarted=Date.now();
+ const observe=async()=>{const value=await page.evaluate(()=>{const s=__session.snapshot();return {gameTime:s.time,reach:s.spin.reach,paused:s.paused,phase:s.session.phase,pushHidden:document.querySelector('.decision-push-button').hidden,visibility:document.visibilityState};});trace.push({elapsedMs:Date.now()-waitStarted,...value});};
  await observe();const clockTimer=setInterval(()=>observe().catch(()=>{}),10000);
  // Allow variable headless execution speed without changing the game clock.
  // Keep every semantic assertion and a finite wall deadline.
@@ -46,7 +46,16 @@ try{
  assert.equal(await page.locator('#power-control').isVisible(),false);assert.equal(await page.locator('#power-label').isVisible(),false);
  await page.screenshot({path:`${out}/battle-launch-guidance.png`});await page.locator('#feed-toggle').click();
  await page.waitForFunction(()=>__session.snapshot().w.bonus?.payout>0,null,{timeout:50000});
- }else if(scenario==='bonus')await page.waitForFunction(()=>__session.snapshot().w.bonus?.payout>0,null,{timeout:50000});
+ }else if(scenario==='bonus'){
+ stage='experience bonus: dedicated payout';const trace=clockTrace,waitStarted=Date.now();
+ const observe=async()=>{const value=await page.evaluate(()=>{const s=__session.snapshot();return {gameTime:s.time,round:s.spin.round,bonus:s.w.bonus,mode:s.mode,bonusAdmissions:s.counts.bonus,feeding:s.feeding,paused:s.paused,phase:s.session.phase,visibility:document.visibilityState};});trace.push({elapsedMs:Date.now()-waitStarted,...value});};
+ await observe();const clockTimer=setInterval(()=>observe().catch(()=>{}),10000);
+ // A software renderer may still be in the legal 5.8s celebration at 50s wall time.
+ // Preserve real bonus admission/payout, with a finite wall deadline and diagnostics.
+ try{await page.waitForFunction(()=>__session.snapshot().w.bonus?.payout>0,null,{timeout:150000});await observe();}
+ finally{clearInterval(clockTimer);}
+ await writeFile(`${out}/bonus-clock.json`,JSON.stringify(clockTrace,null,2));
+ }
  else {assert.ok(await page.evaluate(()=>__session.snapshot().w.rush));await page.waitForTimeout(6000);}
  await assertDraws(page);assert.ok(await page.evaluate(()=>__session.snapshot().spin.draws>0));const evidence=await page.evaluate(()=>__session.snapshot());if(scenario==='battle'||scenario==='bonus'){assert.ok(evidence.w.bonus.payout>0);assert.ok(evidence.counts.bonus>0);}await writeFile(`${out}/experience-${scenario}.json`,JSON.stringify(evidence,null,2));await page.screenshot({path:`${out}/experience-${scenario}.png`});await page.locator('#quick-pause').click();await page.locator('#leave').click();await page.locator('#playMachine').click();await page.locator('#intro-skip').click();
  assert.equal(await page.evaluate(()=>__session.snapshot().session.total),0);assert.equal(await page.evaluate(()=>__session.snapshot().spin.draws),0);await assertDraws(page);assert.ok(!(await page.locator('#dock-guidance').innerText()).includes('演出体験中'));console.log(`Experience passed ${scenario}`);
