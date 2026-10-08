@@ -2,15 +2,15 @@
 
 ## 最新PR/受入状態
 
-Draft PR #16作成・添付済み、head `3b502a08cc63fa9a14c481aee5cac82b0462c6d3`、CI37738355830進行中。代表pressure feather改修はcommit済み、代表2幅はPM/Designer合格。#9全尺網羅・#15全経路/操作・新CI/候補の受入は未完了。main PR/本番未実施。
+Draft PR #16作成・添付済み。#9は全場面の離散観察・要求整理scopeでPM受入、集約待ち。#15はAC1/2/3/5受入、AC4（補修後Linux CI/候補）待ち。初回bonus50秒とCI2 postPUSH15秒の失敗を保持し、有限段階待機を補修済み。実head/run/source/資産はS3_CI_REVIEWとGitHubの実結果を参照する。main PR/本番未実施。
 
 ## 現在：S3 Active（2026-10-08開始）
 
 ユーザー「お願いします」で#8/#9/#15の一括開始を承認。local sprint/S03はrelease集約c989ee8起点。固定deadlineは設けず、対象AC・検証・PM受入・集約PRの完了で終了する。Designerの#9 baseline全尺撮影→PM内部設計判定→Lead #15実装/直接test→Designer2幅前後/連続→SM証拠/AC照合→PM受入→集約を同S3内で進め、範囲内の工程ごとに再承認しない。
 
-SM主担当#8受入台帳/既存証拠、独立Readyは検証/公開後確認/復旧条件の対応整理。Leadは設計待ち中#8検証準備、Designerは#9 baselineと#15案。撮影quiet中はruntime編集・CPU負荷testを混ぜず、Designer baseline完了/対象SHAと撮影終了の通知後にLeadへhandoff。改修後撮影前も同じquiet合意を行う。Gitと外部Issue更新はPM担当、原dirty sourceを保持する。
+開始時分担はSMが#8受入台帳/既存証拠、Leadが#8検証準備、Designerが#9 baseline/#15案。現在はLeadが新CI/候補、SMが証拠/AC対応、PMが受入/集約を担当し、Designerの観察・改修後画面提出は完了。撮影quiet中はruntime編集・CPU負荷testを混ぜず、Designer baseline完了/対象SHAと撮影終了の通知後にLeadへhandoff。改修後撮影前も同じquiet合意を行う。Gitと外部Issue更新はPM担当、原dirty sourceを保持する。
 
-#9/#15/#8は未受入。#7の人間聴取残と#11の本番CD/Secrets/実公開未検証を受入成果へ含めない。#13は除外。3Sprintの件数合わせでS2/S3残件を完了扱いにせず、必要な持越し/対象変更は合意する。本番CD有効化・公開は別ゲート。下のS3開始待ちは履歴。
+#9は観察scope受入、#15はAC4待ち、#8は新候補/集約/Release PR待ち。#7の人間聴取残と#11の本番CD/Secrets/実公開未検証を受入成果へ含めない。#13は除外。3Sprintの件数合わせでS2/S3残件を完了扱いにせず、必要な持越し/対象変更は合意する。本番CD有効化・公開は別ゲート。下のS3開始待ちは履歴。
 
 開始前履歴：対象/AC提示、開始確認待ちだった。現在は上記Active。固定日数・終了予定日は設けない。PBI正本はGitHub Issues。
 

@@ -1,6 +1,6 @@
 # S3 #15/PR16検証引継ぎ
 
-2026-10-08、head `3b502a08cc63fa9a14c481aee5cac82b0462c6d3`。PR16はDraft、初回run `37738355830`/job `113182992617` はfailure。修正helperはcommit `2a26e61507a2ee038d2353fc6495a2627b81728c` に保存済み・未push、新CIは未実行。これはローカル受入証拠とCI監視の途中記録で、全AC/候補完成/公開の判定ではない。
+2026-10-08。PR16はDraft。実Linuxの初回head3b502a08/run37738355830と2回目head832ab1e2/run37745135499はfailureで、verified候補はない。最新段階helperはcommit `b3845663165a7321a4a9edf6ffeb84942c26d700` に保存済み、新Linux CIは未実行。本書はローカル証拠と実CI失敗履歴の引継ぎで、全AC/候補完成/公開の判定ではない。
 
 ## ローカルの確認済み範囲
 
@@ -48,3 +48,26 @@ battleのPUSHは実壁216.596秒でreach46.7417秒に到達し300秒枠内。失
 CD25分との差は初回jobから3分20秒であり、同prepare後の実送信/freshVersion/公開SHA/再度の公開browser/Release添付は入っていない。失敗runの所要を本番成功の予算としない。新CI終端を取得後に段階所要を更新し、有効化前の有限予算をPMが別レビューする。
 
 次Ready：Designerの#9直接shortcut確認・finaldocsをPMがまとめてpush→新CI一度。Leadは新head/mergeRef、461全unit/build/browserと新候補507入力SHA、全asset集合/size/hash、artifact/run/cleanを照合する。新CI/候補は未確認、旧成功部分や局所成功を新head全合格へ転記しない。
+
+
+## 実Linux2回目：head832ab1e2/run37745135499の失敗
+
+実head `832ab1e227a6e87a37c115feb15f9d6a1ad16d43`、source507入力/SHA `678f899aaa7114af87e8a1cd1a70f8edb458578df8b52d38a788dfd8f0821b39`。job `113204710490` は07:42:51〜08:03:03UTC（20分12秒）、prepare07:43:46〜08:03:01（19分15秒）。30分job timeoutではない。461unit全成功/0fail/442.826秒、build/release両幅/controls/UI両幅成功後、PUSHを押した後の `session.jackpots>0` 15秒待機でtimeout（feedback:43）。前回修正のdirectbonus150秒段階へはまだ進んでいない。
+
+段階所要はbuild:release開始〜built出力約13.8秒（Vite本体304msと区別）、release browser両幅約47.9秒、controls初段約22.1秒。成功マーカー間はUI390約97.5秒、UI1440約273.8秒、UI1440成功からbattle失敗診断まで約251.9秒。後者にgoto/撮影/操作等を含む。PUSH可視は実壁226.762秒/reach46.6917秒で300秒枠内。純GPU時間や完全所要上限に読み替えない。
+
+失敗後の診断snapshotはjackpots=1/bonus生成済、告知後winTime .06667秒、roundcelebration/openfalse/count0/payout0、stock400/feedingfalse/pausedfalse/収支整合。15秒deadline直後の診断に合法当りが成立していることは、境界付近の待機不足/race案の根拠となるが、deadline時点の正確なstateや根本原因の確定を意味しない。製品当落・時計・物理を変更しない。
+
+artifact `11536585805` は2685bytes、zipSHA `a4a7f86448a883ade7482d098ef53147284aa54ca02505cb000f3b9d379665ac`。failureJSONのみ、manifestはない。原workspace私有 `prototype/reference-review/s3-2026-10-08/linux-ci-37745135499/` にrun/head/artifact/index、生log、zip、診断を保全（Git非同梱）。初回失敗と別directory、どちらも成功候補へ置き換えない。
+
+## 最新段階helper b384566：局所成功、Linux未成功
+
+変更はfeedback.browser.mjs 1ファイル。PM内部採用の有限枠：postPUSH当り60秒、右打ちguidance（既文字列includes）とpower-caption（既文字列完全一致）のANDを同一90秒段階、battle実bonus専用payout150秒。directbonus150秒/PUSH300秒/PRjob30分を維持。各段階trace reset・配列捕捉・10秒currentPhase/round/win/mode/bonusAdmissions/payout/feeding/paused観測・finallyclearを共通helperにまとめ、元predicate/専用countとpayout/通常復帰assertを保持。製品runtime/抽選/FIFO/機構/物理/賞球は変更していない。
+
+Node24.21.0/managedChromium153の局所DEMO_ONLY battle/bonus/rush・通常復帰assert全成功、構文/diffcheck成功。実段階trace：award3.220秒→celebration、guidanceAND7.043秒→opening、battle実入賞1/payout15まで1.798秒→open、directbonus14.298秒/実入賞1/payout15→open。各traceのwaitStageは単一、先頭elapsed32〜33msで他段階の履歴混入なし。既存固定after初期inventoryに対する301hash終端一致（局所実行開始時の専用guardは別記録なし）。ownedChrome/Vite終了済み。私有 `prototype/reference-review/s3-2026-10-08/ci-helper-phases/` にindex/log/phase-clock/経験結果を保全、Git非同梱。ローカル成功をLinuxの失敗再現や新CI成功にしない。
+
+最新507入力source SHAは `3bc394860db78c354fe55f98d40454842a7b6b830666d83af077896e3b9c6ea5`、視覚runtime c6a4c779…c8a1は不変。helper SHA `d070cf530d3c5ce4e0ee63fe7b3021bd2d055b99342e8495109ff995eb47f030`。旧head832/source678と最新helper入力を同candidateにしない。後続文書commitを同treeと誤認せず、CI実head/mergeRefとsource入力一致の範囲を分ける。
+
+最大postPUSHは60+90+150=300秒、PUSH可視300秒と合わせた段階wait参考は600秒。初期ロード/撮影/入力/他ケース/unit等は別で、これをjob全体や本番CDの完全所要保証にはしない。実CI2のjob20分12秒からCD25分余白は4分48秒、しかもbonus/rush/候補完成未到達。prepare後に公開browser等をもう一度走らせるCD25分の問題は有効化前レビューに残す。今回はPR30分/CD25分の設定を変更していない。
+
+次Ready：PMがfinaldocsをまとめてcommit/push→CI3一度。Leadは新Linux終端・candidate・507sourceSHA3bc394…・全asset集合/size/hash・実mergeRef/tree・Node/browser/artifactを照合する。追加local全testは不要、新Linux成功/verified候補はまだ未確認。

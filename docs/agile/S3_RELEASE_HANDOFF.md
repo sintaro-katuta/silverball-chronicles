@@ -40,3 +40,12 @@ deploy後失敗は未公開失敗と区別し、Leadがcheckpoint・fresh配信�
 初回実Linuxはhead3b502a08/run37738355830、461unit/build/release/controls/UI/battle成功後にbonus専用payout待機50秒で失敗。verified manifestはない。helper1file修正commit2a26e61は局所Node24の3経路/通常復帰成功、bonus14.371秒/実入賞1/payout15。Linux待機不足は未再現で、旧失敗は私有 `prototype/reference-review/s3-2026-10-08/linux-ci-37738355830/` に保全しGit非同梱。
 
 最新sourceFingerprintは507入力/SHA `678f899aaa7114af87e8a1cd1a70f8edb458578df8b52d38a788dfd8f0821b39`、視覚runtimeはc6a4c779…c8a1不変。finaldocsと修正をまとめた新CIを一度実行し、候補freeze/全asset/source対応を新実結果で確認する。段階所要・50秒時点未取得・Node環境・CD25分予算の制約は [S3_CI_REVIEW](S3_CI_REVIEW.md) を参照。新候補/全AC/本番CDは未受入。
+
+
+## CI3前の更新（最新helper b384566）
+
+実Linux2回目head832ab1e2/run37745135499は461unit/build/release/controls/UI成功後、postPUSH当り待機15秒で失敗。job20分12秒/prepare19分15秒、失敗後診断は当り成立/告知.06667秒で、境界待機不足の根拠と原因完全確定を分ける。verified候補なし、原私有linux-ci-37745135499へ別保全済み。
+
+最新helperはaward60秒→guidance+captionAND90秒→battle実入賞payout150秒（postPUSH最大300秒参考）。directbonus150/PUSH300/PR30分/CD25分/製品clockを維持。Node24局所3経路＋復帰/phase traceは成功、最新507source SHA `3bc394860db78c354fe55f98d40454842a7b6b830666d83af077896e3b9c6ea5`、視覚c6不変。実Linux成功は未確認。PM docscommit/push後CI3の新候補と全source/assets対応を確認する。
+
+CD25分には失敗job実績から4分48秒しか残らず、未到達のbonus/rush/候補完成や再度の公開browser/実送信/Release処理も別途必要。段階上限を足して完全保証とせず、実CI3の所要で有効化前予算を再レビュー。根拠・履歴・局所条件は [S3_CI_REVIEW](S3_CI_REVIEW.md) を参照。追加local全test/production設定/公開は行わない。

@@ -1,5 +1,13 @@
 # S3受入manifest台帳
 
+## 最新CI2失敗：AC4 pending継続
+
+SM独立API/原linux-ci-37745135499のlog/artifactを照合。run37745135499/head832ab1eはFAILURE、job20分12秒/prepare19分15秒、30分超ではない。461unit成功/失敗0（442.826秒）、build/release/controls/UI2幅成功後、battlePUSHはwall226.762秒/reach46.6917秒で300秒内到達。直後jackpots>0待機15秒がfeedback.browser:43でtimeout/exit1となり、directbonus150秒経路は未到達。
+
+最終診断はjackpots1、winTime0.06667秒、celebration/open=false/count0/payout0、会計reconciled=true、playing/notpaused/visible。診断採取時には当たり成立していても、待機期限内にassertが成功したとは読替えない。clockTraceはPUSH待機の記録。artifact11536585805にfailureJSONを保全、candidate.json無し。前失敗と別run/headとして保持する。
+
+次の有限補修案award60秒/guide+captionAND90秒/battlebonus150秒、PUSH300/directbonus150/job30維持は局所検証と新CI待ち。実装範囲外のclock/抽選/賞球変更を行わず、補修案を成功へ換算しない。#15AC4/#8candidateCI受入はpending、#9観察scope等の既存判定は分けて維持する。
+
 ## 最新PM AC判定：#9合格/集約待ち、#15 AC4待ち
 
 PMはDesigner最終doc、直接96PNG・内容同定42補助とbefore28/after12/ops2、SM独立metadataを根拠に#9 AC1〜4を観察要求scopeで合格（集約待ちReview）と判定。連続動画全尺鑑賞/音/実機へ判定を拡張しない。#15 AC1/2/3/5は合格、AC4は新CI37745135499/head832ab1e227a6e87a37c115feb15f9d6a1ad16d43未終端でpending。
