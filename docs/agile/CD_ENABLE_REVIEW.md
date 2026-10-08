@@ -41,9 +41,11 @@ production環境の実存在、Secretキー登録、repository var／保護ル�
 
 ## 25分予算と実CIの差
 
-現CD jobは**25分**、PR CIは**30分**。新Linux PR CI run `37692427739` は15分34秒、458test／build／全browser成功。CD25分との差は**9分26秒**だが、CDは同prepareに加えてWrangler送信、fresh deployment／公開資産照合、release／controls／feedbackの**公開browser smokeをもう一度**、notes／Release／添付／artifact処理を行う。
+最新のS3失敗run37738355830はjob21分40秒、prepare20分37秒。461unit成功/失敗0で456.509秒、build/release/controls/両幅UI/battle成功後、bonus専用払出待ち50秒timeoutでexit1。rush未到達の途中所要であり、完全prepare成功の所要とは扱わない。CD25分との差を単純計算してもjob側3分20秒/prepare側4分23秒しかなく、未完bonus/rush/終了操作に加えてdeploy・fresh API/公開資産照合・公開browser smoke・notes/Release/添付を要するため、25分内に収まると認定できない。
 
-同runのbrowser区間は約6分。これを参考にすると余白は約3分半となるが、本番の送信／ネットワーク／API／公開smokeは未実測。旧失敗runのjob19分07秒なら25分との差は5分53秒で、同じ公開smokeの参考時間さえ余裕に収まるとは言えない。PUSH待機は最大300秒の有限枠を持つ。単一の成功CIからCD25分で十分と認定しない。
+前成功run37692427739の15分34秒/458testと約6分browserは履歴参考で、最新失敗をその成功時間へ換算しない。新runのbattlePUSHは216.596秒で300秒内に成功しており、旧180秒内に到達したと読み替えない。Leadのbonus待機150秒最小修正は局所観測待ちで、採用値や成功実績を本レビューから推定しない。
+
+現設定はPR30分/CD25分を維持。有効化前に修正後の完全prepareと段階別予算/有限上限を根拠付きでレビューする。新timeout値を独断固定せず、今回workflow/settings/権限は変更していない。実CD成功・ネットワーク/API所要・公開smokeは未検証。
 
 有効化前の次Readyは、S3対象／接続操作の承認後に段階別予算と有限上限を確定し、必要workflow差分をreviewすること。今回は時間予算変更／CD実行をしていない。実公開後に25分で切れた場合は、checkpointのdeployed状態をfresh確認し、同版の復旧を完了するまで次版をmergeしない。
 

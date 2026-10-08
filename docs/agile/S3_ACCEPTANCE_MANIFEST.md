@@ -1,5 +1,43 @@
 # S3受入manifest台帳
 
+## 操作の最新受付判定：pressedAt直接証拠
+
+両幅PUSHの受付はクリック実行/画像ringだけで判定しない。recordのclick後presentation.pushInput.pressedAtは390=`47.033333333331306`、1440=`46.83333333333132`で、既存受付窓46.5<=t<49.9の内側。直前はpushInputなし・visible/enabled・playing/notpaused、同id/drawId/win=falseを保持。click後49.92は成功受付時のreleaseAtで、期限49.9を越えた受付とは扱わない。既存pressDecisionPushはenabled時だけpushInputを作りreleaseAtへ進め、自然advanceは新規pushInputを作らないことをread-only照合した。
+
+操作toolはクリック戻り値/insideWindowの専用assertを持たないため、保存pressedAtとsource対応による独立判定である。固定snapshot301の現実ファイルSHA一致と、操作実行専用initial/end inventory guard無しを別記する。自然当落全経路/賞球・画像品質・新CI成功とは分離する。
+
+次Readyは新short26のactual cut metadataと新CI run/head/artifactの独立照合。未到着の新証拠を合格にせず、S4原候補文書をS3へコピーしない。
+
+## #15操作metadataの独立照合
+
+原after-operationsの2幅summary/recordと実行tool SHAが一致、errors0。実DOM切替lcd→whole→board→lcdのsnapshot view一致、pause holdはwall約803ms/782msでpresentationとgame時刻が完全停止、resume後の演出時刻増加を確認した。PUSHは390演出46.85秒/1440演出46.6667秒でvisible/enabled、実click後49.92秒へ既存受付動作で進みhidden/disabled、最終presentation=null。全fixtureは通常pressure外れを保持した。手動seek/freezeや自然抽選/賞球の検証とは称さない。
+
+固定after301ファイルの実SHAは保存snapshotと全件一致。ただし操作summary自体に開始/終端inventory guard欄はなく、固定snapshotの出所と現ファイル照合を根拠として分ける。各画像はsnapshot後の時計進行を含み、画像品質/重なりはDesigner/PM判定。音disabled/聴感未検証。操作metadataの成立を失敗Linux CIのAC4合格へ換算しない。
+
+新CI失敗log/artifactは原linux-ci-37738355830の保存indexへ対応付け可能。461成功・bonus50秒timeout・候補未発行と直前battle216.596秒traceを別に保持する。次Readyは修正headのCI/候補照合と全after目視判定のAC対応。
+
+## 最新CI失敗：#15 AC4未合格
+
+SMがrun37738355830のjob APIと失敗log/artifactを独立照合。head3b502a08、job06:34:31〜06:56:11 UTC（21分40秒）、prepare06:35:30〜06:56:07（20分37秒）。30分job上限超ではない。461unit成功/失敗0（456.509秒）、build/release両幅/controls/UI両幅/battle経路は成功。feedback.browser.mjs:49 bonus専用payout>0待機50秒がtimeout/exit1、#15 AC4全体は未合格。
+
+失敗stateはChrome153/SwiftShader、visible/paused=false/playing、gameTime11.95秒、roundcelebration、w.bonus.open=false/count0/payout0、専用counts.bonus0。clockTrace23件は直前battleの観測でありbonus50秒の連続traceではない。battleはwall216.596秒/reach46.7417秒でPUSH可視となり300秒内に成功したが、旧180秒内成功とは称さない。bonus段階の最終stateだけで根本原因を確定しない。
+
+artifactのfailure JSONは保存、candidate.jsonは存在せず成功候補未発行。新CI成功/全経路操作受入までDraftと残件を維持。代表feather視覚判定とbefore/after metadata取得は別証拠として保持する。元失敗を単なるretryで隠さず、実装範囲外の時計/賞球変更は行わない。
+
+## #9/#15観察とACの対応（代表判定を限定）
+
+原 `docs/agile/S3_DESIGN_REVIEW.md` をIssue #9の4ACと#15の5ACへ照合した。最新fixed beforeとafter-prototype/featherを分けた観察記録で、原画の欠字修正ではなく主役分離の改善とする根拠を保持する。
+
+| AC | 現在の対応証拠/判定可能範囲 | 残る不足 |
+|---|---|---|
+| #9 AC1/2 | SMはbefore14経路×2幅28recordのfixture/尺/終端/tool世代/固定301sourceを独立照合、欠落0。Designerは代表pressure外れの原PNGと離散連続列を実見し、主役/入り/抜けを記録。失敗起動/fsallow/中断130は分離 | 全28動画の取得は全28の実目視/場面別観察の代替ではない。通常/RUSH勝外復活の全尺観察提出と音未検証の明示を継続 |
+| #9 AC3/4・#15 AC1 | pressure24〜33の最小camera寄り/背景限定減光、既存素材再利用、24/33で追加量0、54/58/12維持を設計へ対応。矩形段差差戻し→6strip featherを同S3内で再判定 | 最新全尺の競合cut観察との最終対応/PM #9受入は未了 |
+| #15 AC2 | 新feather390/1440原PNG25.3/29.5と50frame列ずつ。PM/Designer代表pressure外れ判定は字幕の抜け/顔眼手刃/原画/下端のなじみ改善、重要crop/保留dockへの新重複なし。SMはmetadata/source対応を照合 | 代表2幅の24〜33だけ。全経路/全表示/操作を合格へ拡張しない |
+| #15 AC3 | 代表の24cut後の入り、32.8までの追加量戻り、33既存cutへの抜けを離散列で観察。SM pose境界比較は別のpure関数証拠 | 全afterの通常pressure勝/外/復活・RUSH pressure勝/外・flash非改変の連続確認、共有描画へ影響する他variantの確認は新metadata/Designer判定待ち |
+| #15 AC4/5 | 2製品source/2直接testのcommit3b502a0、関連19成功、37584 pose比較で既存field境界保持。Draft PR16/新CIを追跡 | 実PUSH/停止復帰/保存当落FIFO賞球の機能検証と新build/CI/PM各AC判定は未受入。実機/聴感/性能未確認 |
+
+次after監査は到着した新recordだけについて、期待case×2幅/fixture/結果/54-58-12/実演出時刻/世代source/tool/正常終端/失敗除外を検査する。代表を全体へ換算せず、既存pure pose比較を再実行しない。視覚判定はDesigner/PM、PR/CI artifactは別のrun/head/候補照合を行う。
+
 ## Draft PR/CI現在
 
 Draft PR #16 https://github.com/sintaro-katuta/silverball-chronicles/pull/16 作成・添付済み。head `3b502a08cc63fa9a14c481aee5cac82b0462c6d3`、CI run37738355830進行中。#8/#9/#15受入未完了、Draft維持、main PR・本番未実施。新runの結果/検証ref/source/assetsは未受領、到着後に独立照合する。下のPR未受領は作成前履歴。

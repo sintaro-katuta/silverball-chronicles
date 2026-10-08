@@ -25,6 +25,18 @@ deploy後失敗は未公開失敗と区別し、Leadがcheckpoint・fresh配信�
 
 #7は録音準備と人間聴感の受入を分ける。人間聴取未受入を新候補/Releaseで完了扱いせず、PMが既知制限または受入残件として明示する。#11はPR CI/ローカルガードと本番接続を分け、Secrets登録・productionGate変更・実deploy/GitHub Releaseは今回行わない。外部settingsの現在値も本書では未確認。
 
-PR CI枠30分、本番CD枠25分。S2最新CI15分34秒からの余白9分26秒に、送信/fresh API/公開SHA/再度の公開browser（参考約6分）/Release添付が追加される。実公開の所要は未測定、25分で足りると認定しない。有効化前に段階予算/有限上限と必要workflow修正をPMレビューする。新S3 CI実績を得た時に見直し、PUSH最大300秒の有限待機・失敗diagnostic/元errorを維持する。
+最新のS3失敗run37738355830はjob21分40秒、prepare20分37秒。461unit成功/失敗0で456.509秒、build/release/controls/両幅UI/battle成功後、bonus専用払出待ち50秒timeoutでexit1。rush未到達の途中所要であり、完全prepare成功の所要とは扱わない。CD25分との差を単純計算してもjob側3分20秒/prepare側4分23秒しかなく、未完bonus/rush/終了操作に加えてdeploy・fresh API/公開資産照合・公開browser smoke・notes/Release/添付を要するため、25分内に収まると認定できない。
+
+前成功run37692427739の15分34秒/458testと約6分browserは履歴参考で、最新失敗をその成功時間へ換算しない。新runのbattlePUSHは216.596秒で300秒内に成功しており、旧180秒内に到達したと読み替えない。Leadのbonus待機150秒最小修正は局所観測待ちで、採用値や成功実績を本レビューから推定しない。
+
+現設定はPR30分/CD25分を維持。有効化前に修正後の完全prepareと段階別予算/有限上限を根拠付きでレビューする。新timeout値を独断固定せず、今回workflow/settings/権限は変更していない。実CD成功・ネットワーク/API所要・公開smokeは未検証。
+
 
 次Ready：代表改修commit済みの新CI結果と候補を照合し、Designer全経路/操作/連続レビューとPM受入へ進む。#8は残件/検証/公開条件を整理し、新CI成功だけで#9/#15全受入としない。Git/送信はPM、原文書の持込みもPM担当。
+
+
+## 2026-10-08 更新：#8候補未完成・再CI待ち
+
+初回実Linuxはhead3b502a08/run37738355830、461unit/build/release/controls/UI/battle成功後にbonus専用payout待機50秒で失敗。verified manifestはない。helper1file修正commit2a26e61は局所Node24の3経路/通常復帰成功、bonus14.371秒/実入賞1/payout15。Linux待機不足は未再現で、旧失敗は私有 `prototype/reference-review/s3-2026-10-08/linux-ci-37738355830/` に保全しGit非同梱。
+
+最新sourceFingerprintは507入力/SHA `678f899aaa7114af87e8a1cd1a70f8edb458578df8b52d38a788dfd8f0821b39`、視覚runtimeはc6a4c779…c8a1不変。finaldocsと修正をまとめた新CIを一度実行し、候補freeze/全asset/source対応を新実結果で確認する。段階所要・50秒時点未取得・Node環境・CD25分予算の制約は [S3_CI_REVIEW](S3_CI_REVIEW.md) を参照。新候補/全AC/本番CDは未受入。
