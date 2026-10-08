@@ -320,6 +320,7 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [S2：PR #14のCI待機修正](agile/S2_CI_REVIEW.md)：元失敗・有限待機・診断・新CI確認を分離。
 
 - [S3：承認済み計画](agile/S3_PLAN.md)：#8/#9/#15の対象、担当、見た目改修と受入条件。
+- [S3：画面・構図レビュー](agile/S3_DESIGN_REVIEW.md)：最新観察、試作差戻し、前後画面とAC別判定。
 
 - [S1：実Linux CI受入](agile/S1_CI_REVIEW.md)：S1の検証refと実集約証拠。
 - [S3：受入manifest台帳](agile/S3_ACCEPTANCE_MANIFEST.md)：受入証拠・SHA・未受入を対応。

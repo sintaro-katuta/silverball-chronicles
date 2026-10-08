@@ -1,5 +1,21 @@
 # S3受入manifest台帳
 
+## 最新PM AC判定：#9合格/集約待ち、#15 AC4待ち
+
+PMはDesigner最終doc、直接96PNG・内容同定42補助とbefore28/after12/ops2、SM独立metadataを根拠に#9 AC1〜4を観察要求scopeで合格（集約待ちReview）と判定。連続動画全尺鑑賞/音/実機へ判定を拡張しない。#15 AC1/2/3/5は合格、AC4は新CI37745135499/head832ab1e227a6e87a37c115feb15f9d6a1ad16d43未終端でpending。
+
+SMの追加remaining metadata28unique/44PNGはsurge10/dodge16/clash16/vow2、全前後cut時刻/actualstage/sourcecut/fixture/viewport/toolSHA一致・errors0、専用initial/final固定301guardと実hash一致。2context同時自然clockであり性能評価ではない。
+
+#8の新candidate/source/assets/CI受入・S3実merge・main Release PR・残件処理は未完。#7未聴取/#11本番gate/#13除外、本番未公開を保持。下の#9全場面pending/代表限定・#15全ACpendingは各時点の過去判定で、最新AC欄を優先する。旧CI失敗は保存、新CIartifact到着時に完全head/ref/source/assetsを独立照合する。sourceInputsを変更せず、設計doc取込み/commit/GitはPM担当。
+
+## short26終端guardと新CI進行
+
+SMが新残4recordのみ追加監査し、非flash13経路×2幅26unique/52PNGの直接silence・attention記録を終端summaryで確認。PNG前後timeはcut.at<=t<end、actualSnapshotStage/sourcePoseCut/snapshot stageが全一致、fixture/viewport/toolcopy SHA一致、errors0。logALL_DONEshort26/Chromeclosedを確認。実画像の観察はDesigner/PMの別判定。
+
+before/snapshot-guard-final.json（16:27 JST）は固定c989 src/public301が初期SHA5737…と最終一致、SM現実ファイル再hashも不一致0。after-finalの終端guardも固定feather301/c6a4…と全実hash一致。shortbatch専用開始guardは未採取で、旧midguardをshort前後へ改称しない。初期固定snapshot→最終hash一致の限定証拠で、tools/config/dependencyは別管理。
+
+#9の追加dodge/clash直接metadataは取得待ちで、不足cutの実見判定はDesigner。新CI37745135499/head832ab1e227a6e87a37c115feb15f9d6a1ad16d43は進行中、source678f899…/507入力はPM報告値。最新artifact到着後に完全SHA/source/assetsを独立監査し、旧fail37738355830を保持する。未完CIを合格にせず、S4原候補をS3へ入れない。
+
 ## 操作の最新受付判定：pressedAt直接証拠
 
 両幅PUSHの受付はクリック実行/画像ringだけで判定しない。recordのclick後presentation.pushInput.pressedAtは390=`47.033333333331306`、1440=`46.83333333333132`で、既存受付窓46.5<=t<49.9の内側。直前はpushInputなし・visible/enabled・playing/notpaused、同id/drawId/win=falseを保持。click後49.92は成功受付時のreleaseAtで、期限49.9を越えた受付とは扱わない。既存pressDecisionPushはenabled時だけpushInputを作りreleaseAtへ進め、自然advanceは新規pushInputを作らないことをread-only照合した。
