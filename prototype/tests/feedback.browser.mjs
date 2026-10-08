@@ -6,9 +6,10 @@ import {fileURLToPath} from 'node:url';
 const out=fileURLToPath(new URL(process.env.FEEDBACK_OUTPUT??'../reference-review/player-feedback-2026-10-07/',import.meta.url));await mkdir(out,{recursive:true});
 async function assertDraws(page){const actual=await page.evaluate(()=>({text:document.querySelector('#draws').textContent,count:__session.snapshot().spin.draws}));assert.equal(actual.text,`${Math.floor(actual.count).toLocaleString('ja-JP')}回`);assert.equal(await page.locator('#draws').locator('..').locator('dt').innerText(),'消化回数（通常＋RUSH）');}
 const browser=await chromium.launch(browserLaunchOptions());
+let currentPage=null,stage='startup',clockTrace=[];
 try{
  for(const viewport of (process.env.DEMO_ONLY?[]:[{width:390,height:844},{width:1440,height:900}])){
- const page=await browser.newPage({viewport}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const page=await browser.newPage({viewport}),errors=[];currentPage=page;stage=`UI ${viewport.width}x${viewport.height}`;page.on('pageerror',e=>errors.push(e.message));
  await page.goto(process.env.REVIEW_URL??'http://127.0.0.1:5173');await page.locator('[data-kind=main]').first().click();
  assert.equal(await page.locator('[data-experience]').count(),3);await page.locator('#playMachine').click();await page.locator('#intro-skip').click();
  for(const view of ['whole','board','lcd']){await page.locator(`[data-view=${view}]`).click();await page.waitForTimeout(300);
@@ -24,13 +25,22 @@ try{
  await page.locator('#quick-pause').click();const resolved=await page.evaluate(()=>__session.snapshot().spin.draws);await page.locator('#leave').click();assert.equal(await page.locator('[role=dialog] dt').filter({hasText:'消化回数 / 大当り'}).locator('..').locator('dd').innerText(),`${resolved.toLocaleString('ja-JP')}回 / 0`);await page.screenshot({path:`${out}/${viewport.width}-result.png`});await page.locator('#floor').click();
  assert.deepEqual(errors,[]);console.log(`UI passed ${viewport.width}x${viewport.height}`);await page.close();
  }
- const page=await browser.newPage({viewport:{width:390,height:844}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ const page=await browser.newPage({viewport:{width:390,height:844}}),errors=[];currentPage=page;page.on('pageerror',e=>errors.push(e.message));
  for(const scenario of (process.env.UI_ONLY?[]:['battle','bonus','rush'])){
+ stage=`experience ${scenario}`;
  await page.goto(process.env.REVIEW_URL??'http://127.0.0.1:5173');await page.locator('[data-kind=main]').first().click();await page.locator(`[data-experience=${scenario}]`).click();await page.locator('#intro-skip').click();
  await page.waitForFunction(()=>document.querySelector('#dock-guidance').textContent.includes('演出体験中'));await assertDraws(page);
  if(scenario==='battle'){
- await page.locator('.decision-push-button').waitFor({state:'visible',timeout:180000});await page.screenshot({path:`${out}/battle-push.png`});await page.locator('.decision-push-button').click();
- await page.waitForFunction(()=>__session.snapshot().session.jackpots>0,null,{timeout:15000});
+ stage='experience battle: PUSH visible';clockTrace=[];const waitStarted=Date.now();
+ const observe=async()=>{const value=await page.evaluate(()=>{const s=__session.snapshot();return {gameTime:s.time,reach:s.spin.reach,paused:s.paused,phase:s.session.phase,pushHidden:document.querySelector('.decision-push-button').hidden,visibility:document.visibilityState};});clockTrace.push({elapsedMs:Date.now()-waitStarted,...value});};
+ await observe();const clockTimer=setInterval(()=>observe().catch(()=>{}),10000);
+ // Allow variable headless execution speed without changing the game clock.
+ // Keep every semantic assertion and a finite wall deadline.
+ try{await page.locator('.decision-push-button').waitFor({state:'visible',timeout:300000});await observe();}
+ finally{clearInterval(clockTimer);}
+ await writeFile(`${out}/battle-clock.json`,JSON.stringify(clockTrace,null,2));
+ stage='experience battle: PUSH press';await page.screenshot({path:`${out}/battle-push.png`});await page.locator('.decision-push-button').click();
+ stage='experience battle: right-play guidance and payout';await page.waitForFunction(()=>__session.snapshot().session.jackpots>0,null,{timeout:15000});
  await page.waitForFunction(()=>document.querySelector('#dock-guidance').textContent.includes('発射開始を押して右打ち'));
  await page.waitForFunction(()=>document.querySelector('#power-caption').textContent==='右打ち・自動調整中');
  assert.equal(await page.locator('#power-control').isVisible(),false);assert.equal(await page.locator('#power-label').isVisible(),false);
@@ -42,4 +52,10 @@ try{
  assert.equal(await page.evaluate(()=>__session.snapshot().session.total),0);assert.equal(await page.evaluate(()=>__session.snapshot().spin.draws),0);await assertDraws(page);assert.ok(!(await page.locator('#dock-guidance').innerText()).includes('演出体験中'));console.log(`Experience passed ${scenario}`);
  }
  assert.deepEqual(errors,[]);
+}catch(error){
+ // prepare removes incomplete candidates; keep failed diagnostics outside
+ // that candidate and outside public assets. No manifest is issued here.
+ const failureOut=fileURLToPath(new URL('../.cache/release/failures/feedback/',import.meta.url));
+ try{await mkdir(failureOut,{recursive:true});const state=await currentPage?.evaluate(()=>{const c=document.querySelector('#canvas canvas'),gl=c?.getContext('webgl2')??c?.getContext('webgl'),ext=gl?.getExtension('WEBGL_debug_renderer_info');return {snapshot:window.__session?.snapshot?.()??null,visibility:document.visibilityState,renderer:gl?.getParameter(ext?ext.UNMASKED_RENDERER_WEBGL:gl.RENDERER)??null};}).catch(e=>({unavailable:String(e)}));const filename=`${Date.now()}.json`;await writeFile(`${failureOut}/${filename}`,JSON.stringify({stage,error:String(error),browser:browser.version(),clockTrace,state},null,2));console.error('Feedback failure diagnostic:',JSON.stringify({stage,browser:browser.version(),renderer:state?.renderer,visibility:state?.visibility,paused:state?.snapshot?.paused,gameTime:state?.snapshot?.time,reach:state?.snapshot?.spin?.reach,phase:state?.snapshot?.session?.phase,clockTrace,file:`prototype/.cache/release/failures/feedback/${filename}`}));}catch(diagnosticError){console.error('Feedback diagnostic unavailable:',String(diagnosticError));}
+ throw error;
 }finally{await browser.close();}
