@@ -1,5 +1,15 @@
 # S3受入manifest台帳
 
+## 最新受入：#15全AC合格・集約待ち
+
+PMはCI3 run37749380053/head3741844cca6648bfc61fd2020def2422e14f03e6、Mac対象visualとLinux UI13画像scopeから#15 AC4を合格とし全AC受入（Review・集約待ち）。#9観察scope合格は維持、#8候補の技術準備は受入。実S03 merge/main向けPR/3Sprint残件処理は未完。
+
+候補83282ef4-aeb1-4512-a833-272e33b0454fはverified/clean、Linux実検証ref ddf0571976aef987649457cdf4dd8e0ae7e0b6a3、head/ref tree1d04bb0b9dbed4983a29f464dbdc0ef116e9a8dd一致。source3bc394860db78c354fe55f98d40454842a7b6b830666d83af077896e3b9c6ea5/507入力、45公開資産14,902,315Bを独立照合済み。実manifestのissueNumbers=[]を保持し、#8/#9/#15対応は本台帳/PR/PM判定で記録する。
+
+2旧CI失敗を保持。成功GL backend未保存、Linuxの中盤前後比較未実施はMac対象visualの代替にしない。Linux UI13画像確認はそのscopeに限る。#7人間聴取未受入/#11本番Gate/実機等未検証・本番未公開を維持。次ReadyはPMの実集約判断/残件合意とmainPR条件整理、未完を件数で完了扱いしない。
+
+旧AC4 pending/CI3進行中は過去判定。上記の最新受入を優先する。
+
 ## 最新CI2失敗：AC4 pending継続
 
 SM独立API/原linux-ci-37745135499のlog/artifactを照合。run37745135499/head832ab1eはFAILURE、job20分12秒/prepare19分15秒、30分超ではない。461unit成功/失敗0（442.826秒）、build/release/controls/UI2幅成功後、battlePUSHはwall226.762秒/reach46.6917秒で300秒内到達。直後jackpots>0待機15秒がfeedback.browser:43でtimeout/exit1となり、directbonus150秒経路は未到達。

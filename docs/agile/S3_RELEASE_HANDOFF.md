@@ -49,3 +49,14 @@ deploy後失敗は未公開失敗と区別し、Leadがcheckpoint・fresh配信�
 最新helperはaward60秒→guidance+captionAND90秒→battle実入賞payout150秒（postPUSH最大300秒参考）。directbonus150/PUSH300/PR30分/CD25分/製品clockを維持。Node24局所3経路＋復帰/phase traceは成功、最新507source SHA `3bc394860db78c354fe55f98d40454842a7b6b830666d83af077896e3b9c6ea5`、視覚c6不変。実Linux成功は未確認。PM docscommit/push後CI3の新候補と全source/assets対応を確認する。
 
 CD25分には失敗job実績から4分48秒しか残らず、未到達のbonus/rush/候補完成や再度の公開browser/実送信/Release処理も別途必要。段階上限を足して完全保証とせず、実CI3の所要で有効化前予算を再レビュー。根拠・履歴・局所条件は [S3_CI_REVIEW](S3_CI_REVIEW.md) を参照。追加local全test/production設定/公開は行わない。
+
+
+## 最新：CI3検証済み候補・最終docs head CI待ち
+
+CI3 run37749380053/head `3741844cca6648bfc61fd2020def2422e14f03e6` はSUCCESS、461unit/build/全browser成功。candidate `83282ef4-aeb1-4512-a833-272e33b0454f`、clean検証ref `ddf0571976aef987649457cdf4dd8e0ae7e0b6a3`、head/ref tree `1d04bb0b9dbed4983a29f464dbdc0ef116e9a8dd` 一致。507source SHA `3bc394860db78c354fe55f98d40454842a7b6b830666d83af077896e3b9c6ea5` と現在全entry、45asset/14,902,315Bの全集合/size/hashが独立照合済み。artifact11538705752/zipSHAec604ebb…b732を原私有linux-ci-37749380053へ保全、Git非同梱。PMは#15全AC受入・集約待ち判定。
+
+candidate.issueNumbers=[]は実値のまま保持し、受入Issue対応は台帳/3Sprint構造化summaryへ別記。後docs headへCI3head/ref/treeを付け替えない。製品/CIhelperは変更せず、最終docsをPMがまとめてcommit/Ready/pushした後、同source最終headの実CIを1回対応付ける。
+
+Node24.21/npm11.19/管理Chromium153/Linux。成功runのGL backendは未保存、過去SwiftShaderを代入しない。新Linux13PNGは読取/重複破綻なし、中盤gatherのLinux再比較は画像未取得。全動画鑑賞/実機/聴感、本番接続は未検証のまま。旧2failと診断を保持する。
+
+実job23分21秒/prepare22分07秒、browser区間約14分05秒。CD25分は余白1分39秒（prepareだけでも2分53秒）に実送信/freshVersion/公開SHA/再度の公開browser/Release処理を追加するため、**有効化前の予算レビューgateは未解除**。現workflow設定を勝手に延長せず、本番CD/Secrets/productionGate/公開許可と合わせてPMが具体的に判断する。詳細と旧失敗履歴は [S3_CI_REVIEW](S3_CI_REVIEW.md)。

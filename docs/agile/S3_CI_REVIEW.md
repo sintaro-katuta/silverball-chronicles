@@ -1,6 +1,6 @@
 # S3 #15/PR16検証引継ぎ
 
-2026-10-08。PR16はDraft。実Linuxの初回head3b502a08/run37738355830と2回目head832ab1e2/run37745135499はfailureで、verified候補はない。最新段階helperはcommit `b3845663165a7321a4a9edf6ffeb84942c26d700` に保存済み、新Linux CIは未実行。本書はローカル証拠と実CI失敗履歴の引継ぎで、全AC/候補完成/公開の判定ではない。
+2026-10-08。最新CI3 head `3741844cca6648bfc61fd2020def2422e14f03e6` / run `37749380053` はSUCCESS、候補の全source/assets独立照合も成功。PMは#15全AC受入・Sprint集約待ちと判定した。旧2実Linux失敗は下の履歴に保持。以下の成功実値はCI3の実head/refに属し、後続docs headへ付け替えない。本番公開/実機/聴感/未保存のGL backendを受入へ拡張しない。
 
 ## ローカルの確認済み範囲
 
@@ -71,3 +71,28 @@ Node24.21.0/managedChromium153の局所DEMO_ONLY battle/bonus/rush・通常復�
 最大postPUSHは60+90+150=300秒、PUSH可視300秒と合わせた段階wait参考は600秒。初期ロード/撮影/入力/他ケース/unit等は別で、これをjob全体や本番CDの完全所要保証にはしない。実CI2のjob20分12秒からCD25分余白は4分48秒、しかもbonus/rush/候補完成未到達。prepare後に公開browser等をもう一度走らせるCD25分の問題は有効化前レビューに残す。今回はPR30分/CD25分の設定を変更していない。
 
 次Ready：PMがfinaldocsをまとめてcommit/push→CI3一度。Leadは新Linux終端・candidate・507sourceSHA3bc394…・全asset集合/size/hash・実mergeRef/tree・Node/browser/artifactを照合する。追加local全testは不要、新Linux成功/verified候補はまだ未確認。
+
+
+## 最新：CI3成功・PM受入（後続docs headとは別記録）
+
+| 対応 | CI3の実値 |
+|---|---|
+| PR/run/job | PR16 / run37749380053 / job113218572140、SUCCESS |
+| 実head | `3741844cca6648bfc61fd2020def2422e14f03e6` |
+| 検証merge-ref / clean | `ddf0571976aef987649457cdf4dd8e0ae7e0b6a3`、dirty=false/status空 |
+| headと検証refのtree | 両方 `1d04bb0b9dbed4983a29f464dbdc0ef116e9a8dd`、GitHub commit APIで一致確認 |
+| source | 507入力 / SHA `3bc394860db78c354fe55f98d40454842a7b6b830666d83af077896e3b9c6ea5`。manifest入力一覧のcanonical digest・現在の507entryとの完全一致を独立確認 |
+| 候補 | `83282ef4-aeb1-4512-a833-272e33b0454f`、status verified |
+| 資産 | 45ファイル / 14,902,315 bytes、全集合/path/size/SHA一致、非symlink、Worker/config SHAとsourceの対応も確認 |
+| artifact | ID11538705752 / 20,591,180 bytes、zipSHA `ec604ebb67be838abddcac603a5c294cc2cbe6c2a59b5e2636cb57bfb0abb732` |
+| 実環境 | Linux / Node24.21.0 / npm11.19.0 / 管理Chromium153.0.8010.12、Vite8.3.0 / Wrangler4.147.0 / Playwright1.63.0 |
+
+461unit全成功/0fail/462.533秒、release build、release390/1440（25画像・pause/resume・HTTP/ブラウザ例外なし）、controls/UI両幅、battle/bonus/rush体験と通常復帰assertすべて成功。成功stage traceはPUSH225.288秒、award15.146秒、guidance+captionAND30.697秒、battle実入賞/payout7.514秒、directbonus64.655秒。battle/bonusとも実bonus入賞1・専用payout15が記録され、各waitStage配列の混入なし。旧15/default30/50秒の上限を上回る実到達所要が新CIで観測された。ただし1成功をflakeゼロ/すべてのhostで同所要の保証にしない。
+
+正確なGL renderer/backendは成功runで保存していない。過去失敗のSwiftShaderを新successの観測値として代入しない。新Linux feedback13PNGはDesignerが実見し、glyph/折返し/操作重なりの破綻なし。gather25.3/29.5代表や連続列は新Linux画像にないため、中盤のLinux再比較は未実施。#15中盤の視覚受入は既存固定after c6の新静止/連続列と操作証拠、機能ACはCI3/source3bcのscopeを組み合わせてPMが判定。全動画鑑賞/実機/聴感は別未検証。
+
+原workspace私有 `prototype/reference-review/s3-2026-10-08/linux-ci-37749380053/` にindex、完全log/run/artifact metadata、zip、全candidate/feedback、head/ref API、独立検査scriptを保全（Git非同梱）。`artifact/candidate.json` のissueNumbersは **[]** のまま。PR CI入口がIssue引数を渡していない事実として保持し、metadataを後付け改竄しない。#8/#9/#15受入・3Sprint/PBIの対応はPM/SMのSprint台帳/構造化要約へ別記し、このmanifestだけに全受入Issueが自動内包されたとは扱わない。
+
+job08:22:17〜08:45:38UTC＝23分21秒、prepare08:23:23〜08:45:30＝22分07秒。browser入口08:31:21〜最後の体験成功08:45:26は約14分05秒（遷移/操作/撮影/終了を含む）。CD25分との差はjobから1分39秒、prepareだけから2分53秒。追加の実送信/fresh配信確認/再度の公開browser/Release添付を含まず、現25分で足りると認定できない。有効化前の有限予算gateは必須のまま、本書で設定変更していない。
+
+次ReadyはPMの最終docs commit/Ready移行/pushと同sourceの最終head CI1回。後続headはdocsでtreeが変わるのでCI3の実head/ref/tree/候補を付け替えず、source3bc一致の限定対応を記録する。新最終headの実CI/result/artifactをもう一度対応付ける。製品/CIhelper変更・local全testの反復・本番CD/Secrets/公開は行わない。
