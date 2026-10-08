@@ -7,9 +7,26 @@ export function clothVertex(x,y,t,wind=1){
  const weight=Math.max(0,1-x/240)*Math.max(0,Math.min(1,(y-130)/100))*Math.max(0,Math.min(1,(360-y)/70));
  return {x:x+Math.sin(t*2.2-y*.012)*5*weight*wind,y:y+Math.sin(t*1.6-y*.014)*2*weight*wind};
 }
+// This layer belongs to world, after the landscape and before actors.
+// Inverse camera transform keeps its bounds behind the screen-space caption.
+export const CAPTION_BACKDROP_BANDS=Object.freeze([
+ {y:0,height:24,alpha:1},
+ ...Array.from({length:6},(_,i)=>({y:24+i,height:1,alpha:(5-i)/6}))
+].map(Object.freeze));
+export function createCaptionBackdrop(world){
+ const layer=new Graphics();
+ for(const band of CAPTION_BACKDROP_BANDS)layer.rect(0,band.y,210,band.height).fill({color:0x020714,alpha:band.alpha});
+ layer.alpha=0;layer.visible=false;world.addChild(layer);return layer;
+}
+export function updateCaptionBackdrop(layer,camera,alpha=0){
+ layer.position.set(camera.x-105/camera.scale,camera.y-70/camera.scale);
+ layer.scale.set(1/camera.scale);layer.alpha=Math.max(0,Math.min(1,alpha));
+ layer.visible=layer.alpha>0;
+}
 export function createLongReachView(atlas,landscape,{motionAtlas=null}={}){
  const root=new Container(),world=new Container(),textures=[],frames=[];root.addChild(world);
  const back=new Sprite(landscape);back.anchor.set(.5);back.width=238;back.height=159;world.addChild(back);
+ const captionBackdrop=createCaptionBackdrop(world);
  const cellW=atlas.width/3,cellH=atlas.height/2;
  for(let i=0;i<6;i++)frames.push(new Texture({source:atlas.source,frame:new Rectangle(i%3*cellW,Math.floor(i/3)*cellH,cellW,cellH)}));
  if(motionAtlas){
@@ -46,6 +63,7 @@ export function createLongReachView(atlas,landscape,{motionAtlas=null}={}){
  return {root,textures,frames,render(t,options={}){
   const p=longReachPose(t,{...options,motionFrames:!!motionAtlas});root.visible=p.visible;if(!p.visible)return p;
   world.pivot.set(p.camera.x,p.camera.y);world.position.set(105,70);world.scale.set(p.camera.scale);
+  updateCaptionBackdrop(captionBackdrop,p.camera,p.captionBackdropAlpha);
   back.position.set(105+p.backdrop.x*.3,70+p.backdrop.y*.2);back.scale.set(238/landscape.width*p.backdrop.scale,159/landscape.height*p.backdrop.scale);
   updateActor(hero,p.hero,t,p.wind);updateActor(enemy,p.enemy,t,0);
   charge.position.set(p.chargePosition.x,p.chargePosition.y);charge.visible=p.charge>0;charge.alpha=p.charge*.6;charge.rotation=(p.resolve?Math.min(t,49.05)*.18:t*.4);charge.scale.set(p.resolve?p.chargeScale:.8+.1*Math.sin(t));

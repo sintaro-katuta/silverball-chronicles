@@ -318,3 +318,14 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [S2：音素材と実聴取評価](agile/S2_SOUND_EVALUATION.md)：取得済み11素材と未聴取の評価表。
 
 - [S2：PR #14のCI待機修正](agile/S2_CI_REVIEW.md)：元失敗・有限待機・診断・新CI確認を分離。
+
+- [S3：承認済み計画](agile/S3_PLAN.md)：#8/#9/#15の対象、担当、見た目改修と受入条件。
+- [S3：画面・構図レビュー](agile/S3_DESIGN_REVIEW.md)：最新観察、試作差戻し、前後画面とAC別判定。
+
+- [S1：実Linux CI受入](agile/S1_CI_REVIEW.md)：S1の検証refと実集約証拠。
+- [S3：受入manifest台帳](agile/S3_ACCEPTANCE_MANIFEST.md)：受入証拠・SHA・未受入を対応。
+- [S3：CI検証と補修](agile/S3_CI_REVIEW.md)：初回失敗、局所確認、再CI待ちを分離。
+- [S3：リリース引継ぎ](agile/S3_RELEASE_HANDOFF.md)：候補凍結・検証・公開/復旧と残件。
+- [S3：リリースノート草稿](agile/S3_RELEASE_NOTES_DRAFT.md)：受入済み改善・検証中の見た目・公開前残件。
+
+- [CD有効化前の確認](agile/CD_ENABLE_REVIEW.md)：対象・キー名・起点と未確認の接続/時間予算。
