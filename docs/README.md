@@ -318,3 +318,5 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [S2：音素材と実聴取評価](agile/S2_SOUND_EVALUATION.md)：取得済み11素材と未聴取の評価表。
 
 - [S2：PR #14のCI待機修正](agile/S2_CI_REVIEW.md)：元失敗・有限待機・診断・新CI確認を分離。
+
+- [S3：承認済み計画](agile/S3_PLAN.md)：#8/#9/#15の対象、担当、見た目改修と受入条件。
