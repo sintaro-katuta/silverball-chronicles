@@ -1,5 +1,27 @@
 # S3受入manifest台帳
 
+## Draft PR/CI現在
+
+Draft PR #16 https://github.com/sintaro-katuta/silverball-chronicles/pull/16 作成・添付済み。head `3b502a08cc63fa9a14c481aee5cac82b0462c6d3`、CI run37738355830進行中。#8/#9/#15受入未完了、Draft維持、main PR・本番未実施。新runの結果/検証ref/source/assetsは未受領、到着後に独立照合する。下のPR未受領は作成前履歴。
+
+## feather代表2幅の確認とPR/CI引継ぎ
+
+PM/Designerの代表2幅判定は合格、SMはafter-prototype-featherの固定301入力を実ファイルSHAで独立照合し不一致0、inventory SHA c6a4c77990448c5d42ea2b1621f6de46ee69da5e599dc47f3e98329f2ad4c8a1を確認。beforeからの変更はtimeline/viewの2sourceのみ。capturetool/pose-oracletoolとbefore/after timeline SHAが記録と一致した。
+
+SM独立pure pose比較は37,584組合せ・261時点・対象1,376で成功。pressure非flashの24<t<33以外は旧pose fields同一、captionBackdropAlpha=0。対象内もcamera以外の旧fieldを保持した。これは描画補間関数の境界照合で、全製品/視覚/当落経路の受入ではない。
+
+両幅normal-pressure-lossは同fixture/viewport、50frame targetsずつ。390の最大target遅れ約50ms、1440約25ms、25.3/29.5の成熟時刻をmetadataから確認。元矩形prototypeはRework履歴として残し、feather世代へ書き換えない。全経路/操作/全尺動画の目視・回帰CI・candidateは未検証/pending。
+
+PMの4コード/test commitとDraft PR #16作成は完了し、新CI/全経路受入を追跡する。受入記録はPR番号/base/head、CI run/実merge-ref、458等の実test件数/失敗、候補ID/source/資産全SHA、画面世代/条件、PM各AC判定、実集約commit/treeを到着後に埋める。PR情報は上記の通り受領済み。CI新結果は未受領で、旧S2成功を新head合格へ流用しない。Git/push/commitはPM担当、既存dirty文書を保護する。
+
+## #15 Rework：背景下端の段差（途中判定）
+
+PM実見で旧prototypeのcamera/原画主役保持は候補、背景0〜30の単矩形下端が月/雲を水平に切るためAC2をRework。Leadは24〜30の下端6strip alpha .833→0の静的geometryへ改修し、global上限.22/envelope/camera量/captionを維持。関連19test成功は再撮影前の局所証拠で、視覚合格ではない。
+
+SM独立照合：固定before inventory301のSHA5737d7c…f2be3と旧after-prototypeの301入力SHA3ca617a…b5c39dを別保持。before→旧afterとbefore→現作業版のruntime/public差はlong-reach-timeline.js/long-reach-view.jsの2sourceだけ、新規/欠落なし。2幅のnormal-pressure-lossはfixture/viewport/自然clock同条件。23.8/25.3/29.5/33.2秒の実presentation時刻は近接するが最大25ms程度の差があり、完全同時snapshotと称さない。
+
+当時after-featherは予定世代だった。現在は上のfeather代表2幅確認を優先し、再撮影/sourceguard照合は実施済み。元失敗と中断を成功へ混ぜず、#9全尺網羅・#15PM/Designer再after判定・全回帰CI/候補はpending。直接test以外へscopeを広げない。
+
 #8の対応台帳。S3は2026-10-08に#8/#9/#15開始承認済み、sprint/S03の起点はrelease集約 `c989ee8ba5427fd1cc03ac29b2037c008e5b9206`。本書は受入と未受入を分ける台帳であり、ビルド候補candidate.jsonの代替ではない。S3の新candidate/最新CI/実集約は未発行・未実施。固定deadlineなし。PMがAC判定とGit/外部更新を所有する。
 
 ## 台帳の記録単位
@@ -30,9 +52,15 @@
 | S3 #8 | 台帳/検証/公開復旧の準備中、未受入 | S3成果file/SHA追加、必要test/build/CI、未完了処理合意、Sprint集約PR/添付 |
 | #13 | S3対象外、未承認 | 要求比較だけ。配置変更/追加測定へ進まない |
 
-## quietと提出順
+## quietと固定before/afterの提出順
 
-Designer baseline撮影中はruntime編集/CPU負荷testをしない。撮影終了と対象SHA/条件のhandoff→PM内部設計判定→Lead #15実装。改修後もLead編集終了と対象SHAを宣言し、Designer前後/連続のquiet枠へ渡す。SMは#8台帳/証拠読取を並行し、提出後AC照合→PM受入へ渡す。工程ごとのユーザー再承認は不要だが、承認範囲を越える制作・仕様変更は別確認。
+Designerのbeforeはc989集約snapshotのsrc/public301入力を固定したimmutable比較元。全28条件のうち8完了時点でafter優先へ切り替え、途中caseはfailed/interruptedとして隔離した。固定beforeのため#15runtime実装は同時進行できるが、重いbrowser/全testは短いquiet枠で調整する。元撮影のSIGABRT/fsallow失敗・中断exit130を成功経路へ混ぜない。
+
+PMはbefore390/25.3秒と1440/29.5秒の実見から範囲内の設計を内部承認。Leadのcamera/envelope/背景限定層と直接18test成功はprototype途中成果で、全S3受入・全CI合格ではない。Chrome終了確認→Leadのafter2幅prototype撮影→Designer/PM目視のgateを維持する。
+
+SM次Readyは同variant/結果/演出秒/viewport/設定のbefore-after対応、metadataのwallとpresentation時刻、固定before/source guard、after source/描画系field変更境界を独立照合する。画像の主役/字幕/連続体験の判定はDesigner/PM。撮影段階で不足caseを保持し、before全28/after全28・自然遊技・実機・音の合格へ拡張しない。
+
+原dirty sourceを使わず、固定beforeと作業中afterのSHAを別記する。SMは#8台帳/証拠読取を並行し、提出後AC照合→PM受入へ渡す。新candidate/全CIはまだ未実行、GitはPM所有。承認範囲内の工程ごとのユーザー再承認は不要だが、対象拡大は別確認。
 
 ## 検証・公開・復旧の対応
 
