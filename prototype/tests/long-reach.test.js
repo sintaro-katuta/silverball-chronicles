@@ -144,3 +144,24 @@ test('authored exchanges accelerate in 180ms, recover quickly and change framing
  assert.ok(impact.impact.alpha>0);assert.equal(reduced.impact.alpha,0);assert.ok(reduced.sparks.every(q=>q.alpha===0));
  assert.deepEqual(impact.hero,reduced.hero);assert.equal(impact.cut,reduced.cut);
 });
+
+
+test('pressure gather adds smooth bounded focus without extending captions or leaking the result',async()=>{
+ const {gatherFocus}=await import('../src/pixi/long-reach-timeline.js');
+ for(const t of [0,23.99,24,33,33.01,54])assert.equal(gatherFocus(t),0);
+ for(const t of [24.8,25.3,29.5,32.2])assert.equal(gatherFocus(t),1);
+ for(const edge of [24,24.8,32.2,33]){
+  const a=gatherFocus(edge-1e-5),b=gatherFocus(edge+1e-5);
+  assert.ok(Math.abs(a-b)<1e-7,'only the additional correction is smooth at its envelope boundaries');
+ }
+ for(const t of [24,24.4,25.3,29.5,32.6,33]){
+  for(const ending of ['standard','revival']){
+   const lose=longReachPose(t,{ending,win:false,motionFrames:true}),win=longReachPose(t,{ending,win:true,motionFrames:true});
+   assert.deepEqual(lose,win);assert.equal(lose.captionBackdropAlpha,.22*gatherFocus(t));
+   assert.ok(lose.captionBackdropAlpha>=0&&lose.captionBackdropAlpha<=.22);
+   if(t<33)assert.equal(lose.label,'この刃に、集え');
+  }
+  for(const variant of ['initiative','exchange'])assert.equal(longReachPose(t,{variant}).captionBackdropAlpha,0);
+  assert.equal(longReachPose(t,{ending:'flash'}).captionBackdropAlpha,0);
+ }
+});

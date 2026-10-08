@@ -16,3 +16,36 @@ test('resolve posture has an intermediate exposure while the decisive impact ret
  assert.equal(a1.impact.alpha,a2.impact.alpha);assert.equal(a1.hero.x,a2.hero.x);
  assert.ok(longReachPose(44).camera.scale<longReachPose(45).camera.scale);
 });
+
+
+test('caption backdrop stays behind actors in LCD coordinates and defaults to hidden',async()=>{
+ const {Container}=await import('pixi.js');
+ const {createCaptionBackdrop,updateCaptionBackdrop}=await import('../src/pixi/long-reach-view.js');
+ const world=new Container(),landscape=new Container(),actor=new Container();
+ world.addChild(landscape);const layer=createCaptionBackdrop(world);world.addChild(actor);
+ assert.deepEqual(world.children,[landscape,layer,actor]);assert.equal(layer.visible,false);assert.equal(layer.alpha,0);
+ for(const camera of [{x:105,y:70,scale:1},{x:64,y:52,scale:1.55},{x:112,y:70,scale:2.35}]){
+  world.pivot.set(camera.x,camera.y);world.position.set(105,70);world.scale.set(camera.scale);
+  updateCaptionBackdrop(layer,camera,.2);
+  const top=layer.toGlobal({x:0,y:0}),bottom=layer.toGlobal({x:210,y:30});
+  assert.ok(Math.abs(top.x)<1e-6&&Math.abs(top.y)<1e-6);
+  assert.ok(Math.abs(bottom.x-210)<1e-6&&Math.abs(bottom.y-30)<1e-6);
+  assert.equal(layer.alpha,.2);
+  updateCaptionBackdrop(layer,camera);assert.equal(layer.visible,false);assert.equal(layer.alpha,0);
+ }
+ world.destroy({children:true});assert.equal(layer.destroyed,true);assert.equal(actor.destroyed,true);
+});
+
+
+test('caption backdrop feathers only the last six LCD pixels down to transparency',async()=>{
+ const {CAPTION_BACKDROP_BANDS:bands}=await import('../src/pixi/long-reach-view.js');
+ assert.deepEqual(bands[0],{y:0,height:24,alpha:1});
+ let edge=0,previous=1;
+ for(const band of bands){
+  assert.equal(band.y,edge);edge+=band.height;
+  assert.ok(band.alpha>=0&&band.alpha<=previous);
+  if(band.y>=24)assert.ok(band.alpha<previous);
+  previous=band.alpha;
+ }
+ assert.equal(edge,30);assert.equal(previous,0);
+});

@@ -151,6 +151,10 @@ function alignGuard(hero,enemy,active){
  return segmentContact(weaponPose(hero),weaponPose(enemy));
 }
 const response=p=>p&&!p.event.dodge?(p.event.decisive?smooth((p.age-.12)/.08)*(1-out((p.age-.28)/.9)):p.age>=.02?smooth((p.age-.02)/.07)*(1-out((p.age-.12)/.48)):0):0;
+// Additional focus only: existing cinematic cut transitions remain authored cuts.
+export function gatherFocus(t,{variant='pressure',ending='standard'}={}){
+ return variant==='pressure'&&ending!=='flash'?smooth((t-24)/.8)*smooth((33-t)/.8):0;
+}
 export function longReachPose(t,{reducedEffects=false,variant='pressure',ending='standard',win,motionFrames=false,upperCueActive=true,contactSample=false}={}){
  const schedule=reachSchedule({reachEnding:ending});
  const script=REACH_SCRIPTS[variant]??REACH_SCRIPTS.pressure;
@@ -208,6 +212,8 @@ export function longReachPose(t,{reducedEffects=false,variant='pressure',ending=
   if(cut.id==='surge')camera={x:105,y:70,scale:1.08};
   if(cut.id==='final')camera=t<49.65?{x:hero.x+8,y:48,scale:1.6}:{x:105,y:70,scale:1.08};
  }
+ const focus=gatherFocus(t,{variant,ending});
+ camera.x-=2*focus;camera.y-=focus;camera.scale+=.06*focus;
  const kick=impact&&!reducedEffects?(impact.event.side==='hero'?-1:1)*impact.impact*(resolve?2.6:1.8)*impact.event.weight:0;
  camera.x=Math.max(-14+105/camera.scale,Math.min(224-105/camera.scale,camera.x));
  camera.x+=kick;
@@ -223,7 +229,7 @@ export function longReachPose(t,{reducedEffects=false,variant='pressure',ending=
   impact:{x:impact?.event.x??105,y:impact?.event.y??70,alpha:reducedEffects?0:(impact?.impact??0)*.65,scale:1+(1-(impact?.impact??1))*1.6},
   charge:resolve?resolveCharge:charge,chargePosition:{x:hero.x-16,y:hero.y-77},dim:resolve?(upper?0:.10*resolveCharge+.14*resolveQuiet):cut.id==='rally'?.12:0,
   resolve,resolveQuiet,chargeScale:resolve?.7+resolveCharge*.65:1,
-  captionAlpha:Math.min(1,out(u*5),smooth((1-u)*4)),handoff:upperAttentionPose(t,reducedEffects,ending).alpha,arrowY:upperAttentionPose(t,reducedEffects,ending).y,
+  captionBackdropAlpha:.22*focus,captionAlpha:Math.min(1,out(u*5),smooth((1-u)*4)),handoff:upperAttentionPose(t,reducedEffects,ending).alpha,arrowY:upperAttentionPose(t,reducedEffects,ending).y,
   wind:reducedEffects?0:resolve?(1+resolveCharge*.65)*(1-resolveQuiet):1,atmosphere:reducedEffects?.08:resolveQuiet>0?.18*(1-resolveQuiet):.18,cutShade:t>=2&&t<schedule.decisionAt&&!(t>=schedule.attentionAt&&t<schedule.upperEnd)?(1-out((t-cut.at)/.14))*.35:0,
  };
  if(defeat&&ending!=='flash'&&t>=51.7&&t<(ending==='revival'?55.7:54)){
