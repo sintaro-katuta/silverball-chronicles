@@ -1,5 +1,5 @@
+import {presentationSurface,smoothTexture} from './presentation-quality.js';
 import {Container,Graphics,Sprite,Texture} from 'pixi.js';
-import {pixelSurface} from './pixel-primitives.js';
 import {predictionPose,PREDICTION_LABELS} from './prediction-plan.js';
 import {createStoryPredictionView} from './story-prediction-view.js';
 import {storyPredictionWindow} from './story-prediction-window.js';
@@ -16,8 +16,8 @@ export function createPredictionView({character=null,landscape=null,storySheets=
  let portrait=null;
  if(character){
   const resource=character.source.resource;
-  const texture=Texture.from(pixelSurface(210,140,c=>c.drawImage(resource,0,0,resource.width,resource.height,0,0,210,140)));
-  texture.source.scaleMode='nearest';textures.push(texture);portrait=new Sprite(texture);scene.addChild(portrait);
+  const texture=Texture.from(presentationSurface(210,140,c=>c.drawImage(resource,0,0,resource.width,resource.height,0,0,210,140)));
+  smoothTexture(texture);textures.push(texture);portrait=new Sprite(texture);portrait.width=210;portrait.height=140;scene.addChild(portrait);
  }
  const veil=new Graphics().rect(0,96,210,44).fill({color:0x020817,alpha:.76});scene.addChild(veil);
  const story=storySheets?createStoryPredictionView({sheets:storySheets}):null;
@@ -29,11 +29,11 @@ export function createPredictionView({character=null,landscape=null,storySheets=
  const edge=new Graphics();root.addChild(edge);
  function label(text){
   if(labels.has(text))return labels.get(text);
-  const t=Texture.from(pixelSurface(180,32,c=>{
+  const t=Texture.from(presentationSurface(180,32,c=>{
    c.textAlign='center';c.textBaseline='middle';let size=22;
    do{c.font=`${size}px "DotGothic16"`;if(c.measureText(text).width<=156)break;size--;}while(size>12);
    c.lineJoin='round';c.lineWidth=4;c.strokeStyle='#041027';c.strokeText(text,90,16);c.fillStyle='#ffffff';c.fillText(text,90,16);
-  }));t.source.scaleMode='nearest';textures.push(t);const s=new Sprite(t);s.position.set(15,94);s.visible=false;textLayer.addChild(s);labels.set(text,s);return s;
+  }));smoothTexture(t);textures.push(t);const s=new Sprite(t);s.width=180;s.height=32;s.position.set(15,94);s.visible=false;textLayer.addChild(s);labels.set(text,s);return s;
  }
  // Owned textures are exposed separately; board-runtime captures its texture
  // list at construction. Dynamically cached labels are released by dispose.

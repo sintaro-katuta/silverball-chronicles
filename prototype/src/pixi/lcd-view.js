@@ -7,7 +7,7 @@ export function createLcdView(sceneTexture,cloudSky=null,hairAtlas=null,hairUnde
  const root=new Container();root.position.set(LCD_LAYOUT.x,LCD_LAYOUT.y);
  const viewport=new Container(),mask=new Graphics().poly(LCD_OPENING.flatMap(([x,y])=>[x-LCD_LAYOUT.x,y-LCD_LAYOUT.y])).fill(0xffffff);root.addChild(viewport,mask);viewport.mask=mask;
  const idle=createWaterIdle(sceneTexture,cloudSky,hairAtlas,hairUnderlay),art=idle?.sprite??new Sprite(sceneTexture);
- const fit=LCD_LAYOUT.height/140;art.width=210*fit;art.height=LCD_LAYOUT.height;art.x=(LCD_LAYOUT.width-art.width)/2;viewport.addChild(art);
+ const fit=LCD_LAYOUT.height/140;art.width=210*fit;art.height=LCD_LAYOUT.height;art.x=(LCD_LAYOUT.width-art.width)/2;viewport.addChild(art);const artBox={x:art.x,width:art.width,height:art.height};
  const rush=rushScene?new Sprite(rushScene):null;if(rush){rush.width=210*fit;rush.height=LCD_LAYOUT.height;rush.x=art.x;rush.visible=false;viewport.addChild(rush);}
  // Preserve the original art/text aspect ratio. The screen expands around the central show area.
  const surround=new Graphics().rect(0,0,LCD_LAYOUT.width,LCD_LAYOUT.height).fill(0x020514);surround.visible=false;viewport.addChild(surround);
@@ -24,5 +24,7 @@ export function createLcdView(sceneTexture,cloudSky=null,hairAtlas=null,hairUnde
   for(const [x,y]of [outer[0],outer[1],outer[7],outer.at(-1)]){d.diamond(x,y,7,'#d4c18c');d.diamond(x,y,4,'#366f9d');}
 
  }));texture.source.scaleMode='nearest';const frame=new Sprite(texture);frame.scale.set(1/3);frame.position.set(-8,-18);root.addChild(frame);
- return {root,content,texture,idleTexture:idle?.texture,render(time,game){idle?.render(time);surround.visible=!!game?.entryPrelude||game?.phase==='jackpot'||game?.phase==='win';if(rush)rush.visible=!!game?.rush||!!game?.previewRushWin;}};
+ return {root,content,texture,idleTexture:idle?.texture,render(time,game){const idleActive=!game?.spinActive&&!game?.presentation&&!game?.jackpot&&!game?.entryPrelude&&!game?.rush;
+ const calm=idleActive&&!game?.reducedEffects;idle?.render(game?.reducedEffects?0:time*1.4);
+ const breath=calm?1.008+.003*Math.sin(time*.65):1;art.width=artBox.width*breath;art.height=artBox.height*breath;art.x=artBox.x-(art.width-artBox.width)/2;art.y=-(art.height-artBox.height)/2;surround.visible=!!game?.entryPrelude||game?.phase==='jackpot'||game?.phase==='win';if(rush)rush.visible=!!game?.rush||!!game?.previewRushWin;}};
 }

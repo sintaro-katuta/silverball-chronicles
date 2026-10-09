@@ -25,10 +25,10 @@ export function createHoldView(){
    // The corner brackets identify the draw in progress without relying on colour.
    const activeMark=new Graphics().moveTo(-6,-2).lineTo(-6,-6).lineTo(-2,-6)
     .moveTo(2,-6).lineTo(6,-6).lineTo(6,-2).stroke({color:0xf7e6ad,width:1,pixelLine:true});
-   const omen=new Graphics();
-   const token=new Container();token.addChild(orb,omen,activeMark);
-   g={root:token,orb,omen,activeMark};root.addChild(token);orbs.set(s.id,g);
-  }g.root.position.set(Math.round(s.x),Math.round(s.y));g.orb.tint=s.active?0xffffff:0xc7e2ff;g.activeMark.visible=s.active;
+   const arrival=new Graphics().circle(0,0,7).stroke({color:0xd4f3ff,width:1});const omen=new Graphics();
+   const token=new Container();token.addChild(arrival,orb,omen,activeMark);
+   g={root:token,orb,omen,activeMark,arrival};root.addChild(token);orbs.set(s.id,g);
+  }g.root.position.set(Math.round(s.x),Math.round(s.y));g.orb.tint=s.active?0xffffff:0xc7e2ff;g.activeMark.visible=s.active;g.arrival.alpha=Math.max(0,1-s.arrivalAge/.6);g.arrival.scale.set(game.reducedEffects?1:1+Math.min(.6,s.arrivalAge)*.6);
    const cue=s.active?(game.presentation?.predictionPlan??game.spinResult?.predictionPlan)?.holdCue??'none':queuedHoldPrediction(game.acceptedDraws.find(d=>d.id===s.id),game);
    if(g.cue!==cue){g.cue=cue;g.omen.clear();
     if(cue!=='none'){

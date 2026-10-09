@@ -22,6 +22,25 @@ test('normal and RUSH idle differ; unresolved records are never read',()=>{
  const game={phase:'playing',w:{}};
  for(const property of ['queues','active'])Object.defineProperty(game.w,property,{get(){throw new Error('unannounced lottery accessed');}});
  Object.defineProperty(game,'spinResult',{get(){throw new Error('win accessed');}});
- assert.deepEqual(sessionStatus(game),{label:'左打ちでスタート',remaining:null});
+ assert.deepEqual(sessionStatus(game),{label:'左打ち中・始動口への入賞待ち',remaining:null});
  game.rush={remaining:130};assert.deepEqual(sessionStatus(game),{label:'RUSH',remaining:130});
 });
+
+test('normal idle guidance follows launch, pause and empty-stock state',()=>{
+ const g={phase:'playing',stock:400,w:{}};
+ assert.equal(sessionStatus(g,{feeding:false}).label,'発射停止中・再開できます');
+ assert.equal(sessionStatus(g,{paused:true}).label,'一時停止中');
+ g.stock=0;assert.equal(sessionStatus(g).label,'玉切れ・残り玉を確認中');
+ g.stopTimer=.2;assert.equal(sessionStatus(g).label,'図柄停止・次の変動待ち');
+});
+
+ test('stopped launch prompts right launch only after publicly announced acquisition',()=>{
+  const game={phase:'playing',w:{},presentation:{win:true}};
+  assert.equal(sessionStatus(game,{feeding:false}).label,'リーチ演出中・結果待ち');
+  game.jackpot={charge:false};
+  assert.equal(sessionStatus(game,{feeding:false}).label,'発射開始を押して右打ち');
+  assert.equal(sessionStatus(game,{feeding:true}).label,'大当り・獲得中');
+  assert.equal(sessionStatus(game,{feeding:false,paused:true}).label,'一時停止中');
+  game.jackpot=null;game.w.pendingV=true;
+  assert.equal(sessionStatus(game,{feeding:false}).label,'発射開始を押して右打ち');
+ });

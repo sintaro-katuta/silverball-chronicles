@@ -1,0 +1,90 @@
+{
+  "name": "Merged release production CD",
+  "on": {
+    "pull_request": {
+      "types": [
+        "closed"
+      ],
+      "branches": [
+        "main"
+      ]
+    }
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "concurrency": {
+    "group": "production-cloudflare",
+    "cancel-in-progress": false
+  },
+  "jobs": {
+    "release": {
+      "if": "vars.ENABLE_PRODUCTION_CD == 'true' && github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main' && startsWith(github.event.pull_request.head.ref, 'release/') && github.event.pull_request.head.repo.full_name == github.repository",
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 25,
+      "environment": "production",
+      "permissions": {
+        "contents": "write",
+        "actions": "read"
+      },
+      "env": {
+        "PLAYWRIGHT_BROWSER": "chromium"
+      },
+      "steps": [
+        {
+          "uses": "actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "with": {
+            "ref": "${{ github.event.pull_request.merge_commit_sha }}",
+            "persist-credentials": false
+          }
+        },
+        {
+          "uses": "actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "with": {
+            "node-version": "24.21.0",
+            "cache": "npm",
+            "cache-dependency-path": "prototype/package-lock.json"
+          }
+        },
+        {
+          "run": "npm --prefix prototype ci"
+        },
+        {
+          "run": "node prototype/node_modules/@playwright/test/cli.js install --with-deps chromium"
+        },
+        {
+          "name": "Verify, deploy frozen candidate, smoke and publish release",
+          "run": "node prototype/tools/release-cd.js execute",
+          "env": {
+            "ENABLE_PRODUCTION_CD": "${{ vars.ENABLE_PRODUCTION_CD }}",
+            "GH_TOKEN": "${{ github.token }}",
+            "CLOUDFLARE_API_TOKEN": "${{ secrets.CLOUDFLARE_API_TOKEN }}",
+            "CLOUDFLARE_ACCOUNT_ID": "${{ secrets.CLOUDFLARE_ACCOUNT_ID }}"
+          }
+        },
+        {
+          "uses": "actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+          "if": "always()",
+          "with": {
+            "name": "cd-checkpoint-${{ github.run_id }}",
+            "path": "prototype/.cache/release/cd-state.json",
+            "include-hidden-files": true,
+            "overwrite": true,
+            "if-no-files-found": "ignore",
+            "retention-days": 30
+          }
+        },
+        {
+          "uses": "actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+          "if": "always()",
+          "with": {
+            "name": "cd-evidence-${{ github.run_id }}-${{ github.run_attempt }}",
+            "path": "prototype/.cache/release/",
+            "include-hidden-files": true,
+            "retention-days": 30
+          }
+        }
+      ]
+    }
+  }
+}
