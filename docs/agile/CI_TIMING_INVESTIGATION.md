@@ -1,6 +1,6 @@
 # CI時間調査（2026-10-09、実装前）
 
-正本PBIは [#19](https://github.com/sintaro-katuta/silverball-chronicles/issues/19)。改善実装はS4開始確認待ち、採用判断と効果確認に必要な範囲で実CIを測定する。
+正本PBIは [#19](https://github.com/sintaro-katuta/silverball-chronicles/issues/19)。本章は実装前の調査記録。S4はその後ユーザー承認で開始済み。採用判断と効果確認に必要な範囲で実CIを測定する。
 
 読み取り調査のみ。基準はrelease/0.1.0実マージ7ec4c6ad（受入S3 c814a575とtree f315e58d…同一）と実GitHub Linux CI。原dirty製品コードや設定の編集、新計測/テスト/Secrets/公開は行っていない。ユーザーの「10分くらい」は現状時間への質問で、時間目標ではない。原因を調査し、有効そうな改善があれば実施、妥当な改善がなければ現状維持とする。
 
@@ -47,3 +47,7 @@ PR18 job 00:09:18〜00:24:54 UTC、prepare00:10:06〜00:24:49。npm ci13秒、Ch
 PR18成功だけならCD25分の差は9分24秒（prepareだけ10分17秒）、旧S3成功だと2分02秒（prepareだけ2分57秒）。CDはprepare後に実deploy/freshVersion・traffic/API/全HTTP SHA、さらに同3browser公開smokeとnotes/Release/添付がある。PR18のbrowser合計約8分20秒をもう一度行う概算でも余白は小さく、旧S3では25分に収まらない。ネットワーク/公開側browserは未実測なので完全所要保証不可。
 
 #11の時間予算と公開接続は現releaseのgateであり、S4へ繰延べて公開可とはしない。CI短縮の採用とは別にCDの有限予算/段階別上限・smoke・失敗再run/checkpointをレビューする。本調査でworkflow延長/公開設定/Secrets変更はしていない。
+
+## 追加の原因根拠
+
+board-runtimeのrAF経過dtはball-flow.stepへ渡る。physics/ball-flow.jsはMath.min(.05,dt)だけを蓄積するため、描画間隔が50msを超える環境では演出時計が壁時計より遅く進む。過去S3の演出49.45秒到達に壁時計228.3秒というtraceと整合する。成功runの実rAF/backendは未記録なのでGPUを断定しない。物理保護の上限は変更せず、今回の2系統化は独立検証の逐次待ちを減らす対象で、ブラウザ自体の遅さを解消したとは扱わない。
