@@ -1,5 +1,12 @@
 # スクラム運用
 
+## スプリントレビューの対象（2026-10-09 ユーザー確認）
+
+スプリントレビューの対象は、Sprintブランチから集約releaseブランチへ向けたPR。PR冒頭の変更説明MP4、対象Issueの箇条書き、差分、受入条件別の検証結果・未確認事項を使ってレビューする。詳細資料はPRから参照する補助証拠とする。
+
+`CURRENT.md` はPM・担当者の内部管理メモであり、ユーザーへのレビュー提出物の代わりにしない。レビュー依頼は対象PRのリンクを提示する。PR未作成の場合は未作成と明示し、内部メモをレビュー対象として案内しない。
+
+
 ## 現在フェーズ：分離worktree統合中
 
 PMが最新 `origin/main` の `38b06d2`（既存効果音PR #1）から managed worktree `/Users/sintaro.katuta/.codex/worktrees/sprint-s01/silverball-chronicles` を作成し、local `sprint/S01` と `release/0.1.0` を準備した。原workspaceの全変更は保持し、必要source/docだけを3-way移送している。remoteの採用済みSEと、localの受け皿/図柄/ロード/演出/Agileを両方保持する。隔離版のCIは未実施で、原workspaceの候補成功を統合後SHAの成功へ流用しない。
