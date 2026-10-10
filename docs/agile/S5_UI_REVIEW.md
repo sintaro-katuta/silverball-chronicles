@@ -23,3 +23,9 @@
 ## 動画と残作業
 
 7文草稿は `docs/agile/s5-video/script.md`。CLIでJSONとclean Markdown、pending review stateを作成した。発話承認待ちのため、音声合成・dependent Remotion scene・renderは未実施。承認後、差分・拒否・保存再現・実計測を示す動画素材へつなぐ。測定表や図解を実プレイ映像の証拠と取り違えない。
+
+### 固定後の実装レビュー修正
+
+`4f2d8cc`：計測開始ごとにworkerを新規作成する。各trialで新しいsimulation moduleを読み込み、前後のraw SHA検証と古いworkerのmodule cacheを混同しない。
+
+`5057d9a`：配置変更・再計測・計測エラーで旧結果・条件・流路・時刻表示を消す。初期workerは再生app初期化後に作成する。実フレームの銀玉textureも本編と同じ物理半径に対応する表示倍率へ合わせる。今回の短UI証拠は07fe335に対応しており、この2修正の実動作は新固定PM browserの証拠で判定する。
