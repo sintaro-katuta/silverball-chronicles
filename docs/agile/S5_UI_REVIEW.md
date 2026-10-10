@@ -33,3 +33,11 @@
 ### キャンセル操作の追加検証
 
 `ui-fresh-worker/`に別世代の短検証を保存。両幅で実DOMの計測開始→編集へ戻る→基準復元を操作し、worker停止、result null、条件欄/再生選択肢空、時刻「未計測」をassertした。exit0・owned Chrome終了、UI/backend7ファイルの始終SHA一致。これは計測開始後のキャンセルと旧表示消去の確認であり、12条件が正常完走する証拠にはしない。
+
+### 完走比較の実表・画像レビュー
+
+PMの新固定browser `prototype/.cache/release/pin-layout-tool-attempt02/` はpin1→grid:12:77に統一。baseline ef5ec8…、candidate a86304…、constraint a572ec…を実JSONで照合した。12runが条件一致・計数/会計整合、simulation source59161a…は前後一致。1440-comparisonと390-editedを実見し、条件・表・流路と全面・差分の読み取りを確認した。これはPM実browserの証拠であり、旧HMR失敗や短UIとは世代を分ける。
+
+UIの表「入賞」は発射＋排出待ちの合計、無入賞区間は発射中の実観測窓。finite位相.175の入賞21と発射観測窓の入賞20を混同しない。表「排出」は処理済み総数だったため、PM指示で`c306788`にて「処理済み（入賞含む）」へ改称。保存frameのfloat誤差には1e-8秒だけ許容し、指定12秒が保存11秒へ落ちるのを修正した。CPU生ログは不変、この表示修正の短確認はPM担当。
+
+raw操作録画は `prototype/reference-review/s5-2026-10-10/ui-video/` に保全。実DOMで基準→pin1移動→未定義地点拒否→保存→復元→同SHA再読込を実施。末尾の比較画面は未計測状態であり、完走結果を録ったとは扱わない。相対出力でclone rootのreference-reviewへ保存した原本を保持し、同bytesコピーと対応表copy-provenanceをprototype側へ保存。新台詞・dependent scene・合成・renderは未実施。
