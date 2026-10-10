@@ -2,9 +2,9 @@
 
 ## 最新追補：配置変更後のリアルタイム試射（2026-10-10）
 
-ユーザー「釘を変えた後玉…リアルタイムでみたい」を#22の明示追加依頼としてS5/PR24へ反映する。新Sprint・新子Issueではない。旧版PR24/head8d67c344・CI38035255194の成功は旧版の実値として保持し、ライブ追加後のsource・全回帰・画面/動画は未検証。正本Issue追補とPR更新はPM担当。#23網羅探索・本編への配置採用・#11補修は含めない。
+ユーザー「釘を変えた後玉…リアルタイムでみたい」を#22の明示追加依頼としてS5/PR24へ反映する。新Sprint・新子Issueではない。旧版PR24/head8d67c344・CI38035255194の成功は旧版の実値として保持し、ライブ追加後は以下の提出世代ごとに判定する。最終GitHub CIと動画の掲載は準備中。正本Issue追補とPR更新はPM担当。#23網羅探索・本編への配置採用・#11補修は含めない。
 
-|追補AC|次の必要検証（全項目未判定）|
+|追補AC|追補の受け入れ基準|
 |---|---|
 |L1 配置/時計|固定dtで物理更新し、編集後の同じ配置データを描画と衝突へ渡す。rAF/実wallと物理stepの関係・欠測を記録し、高速バッチ再生をリアルタイム操作と呼ばない|
 |L2 発射停止|fire/stopの実操作、stop後も既存残球が自然流動し、入賞/排出/残球と発射数を計数。停止で球消去しない|
@@ -14,6 +14,31 @@
 |L6 両幅/説明|390/1440の実live操作・例外/表示と同条件before/after動画を判定。前の比較動画は追補操作の証明へ転用しない|
 
 Leadはcontroller/直接unitと固定dt・計数・lifecycle、DesignerはUI/html/css接続・両幅live実見/前後動画を担当。SMはcontroller/UI証拠とsource/AC対応、PMは最終判定・Git/正本更新。描画/動画quietと重い回帰は担当間で調整する。次Readyはcontroller直接test→UI接続/両幅操作→新source全回帰・実CI→追補動画/PRレビュー。旧AC1〜6合格を新追補まで拡張しない。終了は追補を含む必要検証・PM受入・ユーザーのPRマージ。
+
+
+### 追補のローカル提出（final-guard世代の履歴）
+
+実装 `719eaea`、ライブ操作/raceのCI接続 `ceaea0c`。追加controllerの直接5テストが成功。同じ既存factory/釘データ・固定dtへ一致し、停止後の残球流動・pause/resume・reset・無効入力保持・最大6step/落としたwall時間・非有限/逆行timestamp・dispose世代を確認。
+
+Designerの `live-ui-final-guard/record.json` は1440×900/390×844各19events、errors0、5関連入力の始終SHAとQA script SHAが現bytesへ一致。SM/PMが全snapshotの計数整合、停止後の流動、pause時の凍結、import/reset/restore、遅い旧import/saveが最新操作へ上書きしないこと、busy中の発射拒否、synthetic pagehide後のasync無害化を照合。PMが両幅画像を実見し、390幅で操作・盤面・6計数、1440幅で操作・盤面・主計数が見えることを確認。PM自身も変更後配置で発射開始、発射停止時64発/残球8→その後64発/残球0の自然排出と休止を確認した（合意したreset以外で球消去なし）。
+
+当時のsource529入力 SHA `a9c041c0050fc764e07720087e631a3e894ece501906b1d0c3d1405dda34f570`。UI局所5SHAを全依存のガードとは呼ばず、全source/候補/資産の照合は新CIで行う。本編domain/physics/pixi/presentation/publicは追加前head8d67と変更なし。
+
+L1〜L4は上記ローカル範囲で合格。L5はhiddenイベントの注入分岐・controller休止テストに合格、実際の背景タブ/最小化では自動テスト環境でdocument.hiddenを取得できず未検証（失敗記録は保持、製品不具合とは認定しない）。L6の両幅ライブ表示はローカル合格、前後MP4/新実CIは準備中。追加前CI38035255194・旧64秒動画を、追加後の検証結果へ付け替えない。
+
+### 描画・比較開始の追補検証（最新提出待ち）
+
+停止/比較中も毎rAFで盤面を描く不要な処理を止めた。`live-ui-lifecycle/record.json` は1440×900/390×844各22events、errors0、5関連入力の始終SHA・現bytesとQA script SHAをSM/PMが照合。休止時のlive状態と描画/DOM更新数が不変。遅い比較開始の後に編集/復元/pagehideが起きても、新worker作成/計測dispatchが0であることを注入fixtureで確認した（12計算の証明とは分ける）。
+
+`live-full-lifecycle/` はNode24.21/Chromium153で12条件比較・両幅編集/保存/復元・live22events各幅が正常終了。比較JSONの全runsで計数・有限玉会計整合、残球0、試射source164のSHA `da1e2c01de863fd23d7524d7ad5793cb0e9afd12f675dee6d231d88a0f3d9bd6` 不変。通常ヘソは基準27/19/28→候補29/30/25、有限玉26/21/26→26/29/24で追加前と同値。旧2回の600秒タイムアウト記録は残す。新正常回帰は同時動画処理なしで行ったため、改善を描画削減だけの因果とは断定しない。
+
+この完走後、独立レビューで比較開始例外時のrunning/button復旧漏れを発見し、catchの復旧とテスト終端への開始失敗追加を局所修正した。上記正常完走をこの後のsource全検証へ付け替えず、最終例外fixture・新動画・新GitHub CIで確認する。PMの実画面では編集後発射、停止時29発/残球9→29発/残球0、休止を確認した。
+
+### 最終catch世代のローカル判定
+
+UI/QA補修 `6c33d57`、比較診断 `59929a3`。`live-ui-lifecycle-catch/record.json` は両幅24events/errors0、5入力始終・現bytes一致をSM/PMが独立照合。44live snapshotの計数・残球・配置Hashも整合。比較開始のpostMessage同期例外を1回だけ注入し、running=false、開始ボタン再有効、export無効、旧結果null/行0、ライブ手動再開が有効へ復旧することを確認した。fixtureは通常比較を計算しない範囲。休止中/比較中の不要描画0、遅い比較開始の編集/pagehideキャンセル、既存保存/読込raceも維持。全source529入力の現SHA `2752a8741c8ccb67fce3cfcdb8e0c3169bf478feed128aaf5e09d7a9b6281998` は、最終GitHub CIの候補/source照合へ使用する。
+
+L1〜L4は直接5testと最新両幅ライブ操作範囲でローカル合格。L5は注入分岐合格・実背景未検証。L6は両幅画面合格、最終MP4/新実CIの判定待ち。現PRは更新中であり、旧CI成功を最終catch世代の成功へ移さない。
 
 ## 追補前のローカルPM判定（履歴）
 
