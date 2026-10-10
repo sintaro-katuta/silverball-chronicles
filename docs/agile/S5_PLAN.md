@@ -1,5 +1,7 @@
 # Sprint 5 実行計画（Active）
 
+2026-10-10最新：実装とローカル検証を完了。500単体テスト、全既存ブラウザ、新ツールの両幅操作とV2保存互換・12条件比較は成功。PR動画の7文台本承認後にMP4・非Draft PR・実CIへ進む。現在の判定は[S5_ACCEPTANCE](S5_ACCEPTANCE.md)の先頭を優先し、下記の未検証/補修中は当時の工程記録として扱う。
+
 2026-10-10。対象/AC提示後のユーザー「はい」で#22開始承認済み。固定deadlineは設けない。正本は[Issue #22](https://github.com/sintaro-katuta/silverball-chronicles/issues/22)。S4 PR #20は同日マージ済み。
 
 ## 目的と対象
