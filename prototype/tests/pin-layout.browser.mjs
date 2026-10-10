@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
-import {spawn} from 'node:child_process';
+import {spawn,execFile} from 'node:child_process';
+import {promisify} from 'node:util';
 import {createServer} from 'node:net';
 import {mkdir,writeFile,readFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
@@ -68,5 +69,7 @@ try{
   page.removeAllListeners('dialog');page.on('dialog',d=>d.accept());await page.close();
  }
  await writeFile(join(evidence,'browser-verification.json'),JSON.stringify({createdAt:new Date().toISOString(),node:process.version,browser:browser.version(),results,scope:'Real local tool UI, both widths; full 12-condition comparison on desktop; no production deployment'},null,2)+'\n');
+ const live=await promisify(execFile)(process.execPath,[join(root,'tools/pin-layout-live-review.mjs')],{env:{...process.env,REVIEW_URL:url,FEEDBACK_OUTPUT:join(evidence,'live'),REVIEW_HEADED:'0'},timeout:180000,maxBuffer:2*1024*1024});
+ process.stdout.write(live.stdout);process.stderr.write(live.stderr);
  console.log('Pin layout tool passed: both widths, edit, invalid import, save/load/restore, full comparison and recorded flow.');
 }finally{if(browser)await browser.close();server.kill('SIGTERM');await writeFile(join(evidence,'server.log'),serverOutput);}
