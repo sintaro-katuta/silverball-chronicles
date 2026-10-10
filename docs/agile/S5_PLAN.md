@@ -1,5 +1,22 @@
 # Sprint 5 実行計画（Active）
 
+## 最新追補：配置変更後のリアルタイム試射（2026-10-10）
+
+ユーザー「釘を変えた後玉…リアルタイムでみたい」を#22の明示追加依頼としてS5/PR24へ反映する。新Sprint・新子Issueではない。旧版PR24/head8d67c344・CI38035255194の成功は旧版の実値として保持し、ライブ追加後のsource・全回帰・画面/動画は未検証。正本Issue追補とPR更新はPM担当。#23網羅探索・本編への配置採用・#11補修は含めない。
+
+|追補AC|次の必要検証（全項目未判定）|
+|---|---|
+|L1 配置/時計|固定dtで物理更新し、編集後の同じ配置データを描画と衝突へ渡す。rAF/実wallと物理stepの関係・欠測を記録し、高速バッチ再生をリアルタイム操作と呼ばない|
+|L2 発射停止|fire/stopの実操作、stop後も既存残球が自然流動し、入賞/排出/残球と発射数を計数。停止で球消去しない|
+|L3 pause/resume|pauseで物理/時計/新発射を凍結、resumeで続行。停止と休止を区別|
+|L4 reset/配置変更|resetで球と計数を0へ。編集/import/基準復元でも旧ball/数をclearし、旧配置の結果を新配置へ混ぜない。UI表示とcontrollerを照合|
+|L5 hidden|hiddenで自動pause、visible復帰だけで自動再開せず手動resumeが必要。自然時計が裏で進まないことを検証|
+|L6 両幅/説明|390/1440の実live操作・例外/表示と同条件before/after動画を判定。前の比較動画は追補操作の証明へ転用しない|
+
+Leadはcontroller/直接unitと固定dt・計数・lifecycle、DesignerはUI/html/css接続・両幅live実見/前後動画を担当。SMはcontroller/UI証拠とsource/AC対応、PMは最終判定・Git/正本更新。描画/動画quietと重い回帰は担当間で調整する。次Readyはcontroller直接test→UI接続/両幅操作→新source全回帰・実CI→追補動画/PRレビュー。旧AC1〜6合格を新追補まで拡張しない。終了は追補を含む必要検証・PM受入・ユーザーのPRマージ。
+
+## 追補前の進行記録（履歴）
+
 2026-10-10最新：実装とローカル検証を完了。500単体テスト、全既存ブラウザ、新ツールの両幅操作とV2保存互換・12条件比較は成功。PR動画の7文台本承認後にMP4・非Draft PR・実CIへ進む。現在の判定は[S5_ACCEPTANCE](S5_ACCEPTANCE.md)の先頭を優先し、下記の未検証/補修中は当時の工程記録として扱う。
 
 2026-10-10。対象/AC提示後のユーザー「はい」で#22開始承認済み。固定deadlineは設けない。正本は[Issue #22](https://github.com/sintaro-katuta/silverball-chronicles/issues/22)。S4 PR #20は同日マージ済み。
