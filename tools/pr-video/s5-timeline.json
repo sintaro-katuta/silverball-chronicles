@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "fps": 30.0,
+  "engine_url": "http://127.0.0.1:50021",
+  "clips": [
+    {
+      "id": "intro",
+      "voice": "host",
+      "speaker": 3,
+      "text": "釘配置を、決められた地点で編集して比較する、開発用のローカルツールを作りました。",
+      "audio_file": "audio/intro.wav",
+      "start_seconds": 0.0,
+      "duration_seconds": 7.392,
+      "end_seconds": 7.392,
+      "start_frame": 0,
+      "duration_frames": 222,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "intro"
+      }
+    },
+    {
+      "id": "attributes",
+      "voice": "host",
+      "speaker": 3,
+      "text": "現行の百一本を基準に、釘の番号や役割、半径と反発を保ったまま、移動先を選びます。",
+      "audio_file": "audio/attributes.wav",
+      "start_seconds": 7.592,
+      "duration_seconds": 9.12,
+      "end_seconds": 16.712,
+      "start_frame": 228,
+      "duration_frames": 274,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "attributes"
+      }
+    },
+    {
+      "id": "constraints",
+      "voice": "host",
+      "speaker": 3,
+      "text": "液晶や固定部材、重複する地点など、配置できない場所は理由を表示して変更を止めます。",
+      "audio_file": "audio/constraints.wav",
+      "start_seconds": 16.912,
+      "duration_seconds": 7.904,
+      "end_seconds": 24.816,
+      "start_frame": 507,
+      "duration_frames": 238,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "constraints"
+      }
+    },
+    {
+      "id": "persistence",
+      "voice": "host",
+      "speaker": 3,
+      "text": "配置案は保存して読み戻せます。基準との差分と配置の識別情報を確認できます。",
+      "audio_file": "audio/persistence.wav",
+      "start_seconds": 25.016,
+      "duration_seconds": 7.242667,
+      "end_seconds": 32.258667,
+      "start_frame": 750,
+      "duration_frames": 218,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "persistence"
+      }
+    },
+    {
+      "id": "comparison",
+      "voice": "host",
+      "speaker": 3,
+      "text": "基準と候補は、配置以外の条件をそろえて試射します。流路と入賞、入らない区間、排出後の残球を比べます。",
+      "audio_file": "audio/comparison.wav",
+      "start_seconds": 32.458667,
+      "duration_seconds": 10.165333,
+      "end_seconds": 42.624,
+      "start_frame": 974,
+      "duration_frames": 305,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "comparison"
+      }
+    },
+    {
+      "id": "limitations",
+      "voice": "host",
+      "speaker": 3,
+      "text": "良くなった点だけでなく、悪くなった点や未確認の条件も記録します。実機の再現や最適な配置を保証するものではありません。",
+      "audio_file": "audio/limitations.wav",
+      "start_seconds": 42.824,
+      "duration_seconds": 10.592,
+      "end_seconds": 53.416,
+      "start_frame": 1285,
+      "duration_frames": 318,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "limitations"
+      }
+    },
+    {
+      "id": "decision",
+      "voice": "host",
+      "speaker": 3,
+      "text": "本編の釘配置は変えていません。ツールで比較した結果を見て、採用する配置を別に判断します。",
+      "audio_file": "audio/decision.wav",
+      "start_seconds": 53.616,
+      "duration_seconds": 8.192,
+      "end_seconds": 61.808,
+      "start_frame": 1608,
+      "duration_frames": 246,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "decision"
+      }
+    }
+  ],
+  "total_duration_seconds": 62.008,
+  "total_duration_frames": 1861
+}
