@@ -1,0 +1,60 @@
+{
+  "fps": 30,
+  "defaults": {
+    "speaker": 3,
+    "speed": 1.08,
+    "pitch": 0,
+    "intonation": 1,
+    "volume": 1,
+    "gap_after": 0.2
+  },
+  "voices": {
+    "host": {
+      "speaker": 3
+    }
+  },
+  "lines": [
+    {
+      "id": "intro",
+      "voice": "host",
+      "text": "スプリント4では、RUSHの短い演出、台の説明、CIの待ち時間を見直しました。",
+      "scene": "intro"
+    },
+    {
+      "id": "compare",
+      "voice": "host",
+      "text": "左が変更前、右が変更後です。同じ場面を同じ条件で比べています。",
+      "scene": "compare"
+    },
+    {
+      "id": "focus",
+      "voice": "host",
+      "text": "顔と握り、刀を少し上へ寄せ、保留との間に余白を作りました。場面の前後では、元の構図へ戻ります。",
+      "scene": "focus"
+    },
+    {
+      "id": "layout",
+      "voice": "host",
+      "text": "台の釘配置は変えず、五台で共通の配置であることを、仕様と説明にそろえました。",
+      "scene": "layout"
+    },
+    {
+      "id": "timing",
+      "voice": "host",
+      "text": "CIの時間を工程別に測り、遅くなる原因を調べました。",
+      "scene": "timing"
+    },
+    {
+      "id": "decision",
+      "voice": "host",
+      "text": "検証を減らさずに改善できるか、効果と運用コストを比較して採否を判断します。",
+      "scene": "decision"
+    },
+    {
+      "id": "policy",
+      "voice": "host",
+      "text": "妥当な改善がなければ、現状を維持します。時間目標を達成するための変更は行いません。",
+      "scene": "policy"
+    }
+  ]
+}

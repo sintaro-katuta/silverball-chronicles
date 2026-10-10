@@ -22,7 +22,48 @@
     "cancel-in-progress": true
   },
   "jobs": {
-    "verify": {
+    "unit": {
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 30,
+      "if": "(startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main')",
+      "steps": [
+        {
+          "uses": "actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "with": {
+            "persist-credentials": false
+          }
+        },
+        {
+          "uses": "actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "with": {
+            "node-version": "24.21.0",
+            "cache": "npm",
+            "cache-dependency-path": "prototype/package-lock.json"
+          }
+        },
+        {
+          "run": "npm --prefix prototype ci"
+        },
+        {
+          "run": "node prototype/tools/release-cd.js check-pr"
+        },
+        {
+          "name": "All unit tests and immutable source evidence",
+          "run": "node prototype/tools/ci-release.js unit"
+        },
+        {
+          "uses": "actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+          "if": "always()",
+          "with": {
+            "name": "pr-unit-${{ github.run_id }}",
+            "path": "prototype/.cache/release/ci-unit.json\nprototype/.cache/release/timings/unit.json",
+            "include-hidden-files": true,
+            "retention-days": 14
+          }
+        }
+      ]
+    },
+    "browser": {
       "runs-on": "ubuntu-24.04",
       "timeout-minutes": 30,
       "if": "(startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main')",
@@ -54,7 +95,69 @@
           "run": "node prototype/tools/release-cd.js check-pr"
         },
         {
-          "run": "npm run release:prepare"
+          "name": "Build once and verify every browser condition",
+          "run": "node prototype/tools/ci-release.js browser"
+        },
+        {
+          "uses": "actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+          "if": "always()",
+          "with": {
+            "name": "pr-browser-${{ github.run_id }}",
+            "path": "prototype/.cache/release/",
+            "include-hidden-files": true,
+            "retention-days": 14
+          }
+        }
+      ]
+    },
+    "verify": {
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 5,
+      "needs": [
+        "unit",
+        "browser"
+      ],
+      "if": "always() && ((startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main'))",
+      "steps": [
+        {
+          "name": "Reject failed, cancelled, skipped or missing required jobs",
+          "env": {
+            "UNIT_RESULT": "${{ needs.unit.result }}",
+            "BROWSER_RESULT": "${{ needs.browser.result }}"
+          },
+          "run": "node -e \"if(process.env.UNIT_RESULT!=='success'||process.env.BROWSER_RESULT!=='success')process.exit(1)\""
+        },
+        {
+          "uses": "actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "with": {
+            "persist-credentials": false
+          }
+        },
+        {
+          "uses": "actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "with": {
+            "node-version": "24.21.0",
+            "cache": "npm",
+            "cache-dependency-path": "prototype/package-lock.json"
+          }
+        },
+        {
+          "uses": "actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0",
+          "with": {
+            "name": "pr-browser-${{ github.run_id }}",
+            "path": "prototype/.cache/release/"
+          }
+        },
+        {
+          "uses": "actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0",
+          "with": {
+            "name": "pr-unit-${{ github.run_id }}",
+            "path": "prototype/.cache/release/"
+          }
+        },
+        {
+          "name": "Join all evidence and freeze verified candidate",
+          "run": "node prototype/tools/ci-release.js aggregate"
         },
         {
           "uses": "actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",

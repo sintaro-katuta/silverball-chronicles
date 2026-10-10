@@ -152,6 +152,10 @@ function alignGuard(hero,enemy,active){
 }
 const response=p=>p&&!p.event.dodge?(p.event.decisive?smooth((p.age-.12)/.08)*(1-out((p.age-.28)/.9)):p.age>=.02?smooth((p.age-.02)/.07)*(1-out((p.age-.12)/.48)):0):0;
 // Additional focus only: existing cinematic cut transitions remain authored cuts.
+export function flashVowFocus(t,{ending='standard'}={}){
+ return ending==='flash'?smooth((t-6)/.25)*smooth((8-t)/.25):0;
+}
+
 export function gatherFocus(t,{variant='pressure',ending='standard'}={}){
  return variant==='pressure'&&ending!=='flash'?smooth((t-24)/.8)*smooth((33-t)/.8):0;
 }
@@ -214,6 +218,8 @@ export function longReachPose(t,{reducedEffects=false,variant='pressure',ending=
  }
  const focus=gatherFocus(t,{variant,ending});
  camera.x-=2*focus;camera.y-=focus;camera.scale+=.06*focus;
+ // Only the short flash vow: lift the actors away from the existing hold strip.
+ camera.y+=4*flashVowFocus(t,{ending});
  const kick=impact&&!reducedEffects?(impact.event.side==='hero'?-1:1)*impact.impact*(resolve?2.6:1.8)*impact.event.weight:0;
  camera.x=Math.max(-14+105/camera.scale,Math.min(224-105/camera.scale,camera.x));
  camera.x+=kick;

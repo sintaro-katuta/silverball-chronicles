@@ -165,3 +165,12 @@ test('pressure gather adds smooth bounded focus without extending captions or le
   assert.equal(longReachPose(t,{ending:'flash'}).captionBackdropAlpha,0);
  }
 });
+
+test('short flash vow focus enters and exits smoothly without affecting other endings',async()=>{
+ const {flashVowFocus}=await import('../src/pixi/long-reach-timeline.js');
+ for(const t of [0,5.8,6,8,8.2,12,43,45])assert.equal(flashVowFocus(t,{ending:'flash'}),0);
+ for(const t of [6.25,7,7.75]){assert.equal(flashVowFocus(t,{ending:'flash'}),1);assert.equal(longReachPose(t,{ending:'flash'}).camera.y,40);}
+ for(const ending of ['standard','revival'])for(const t of [6.1,7,7.9,43])assert.equal(flashVowFocus(t,{ending}),0);
+ for(const edge of [6,6.25,7.75,8])assert.ok(Math.abs(flashVowFocus(edge-1e-5,{ending:'flash'})-flashVowFocus(edge+1e-5,{ending:'flash'}))<.0001);
+ assert.equal(reachSeconds({longReach:true,reachEnding:'flash'}),12);
+});
