@@ -1,9 +1,9 @@
 from pathlib import Path
-import json,hashlib,subprocess
-r=Path(__file__).resolve().parents[2];o=r/'prototype/reference-review/s5-video-2026-10-10';c=Path('/private/tmp/silverball-s05-20261010');t=json.loads((o/'timeline.json').read_text())
+import json,hashlib,subprocess,os
+r=Path(__file__).resolve().parents[2];o=Path(os.environ.get('S5_VIDEO_OUTPUT_DIR',str(r/'prototype/reference-review/s5-video-2026-10-10'))).resolve();script=Path(os.environ.get('S5_APPROVED_SCRIPT_DIR',str(r/'docs/agile/s5-video'))).resolve();t=json.loads((o/'timeline.json').read_text())
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-a=json.loads((c/'docs/agile/s5-video/.script.md.yukkuri-review.json').read_text());assert a['status']=='APPROVED' and a['script_sha256']==sha(c/'docs/agile/s5-video/script.json') and a['script_markdown_sha256']==sha(c/'docs/agile/s5-video/script.md')
-s=json.loads((c/'docs/agile/s5-video/script.json').read_text());assert [(x['id'],x['text']) for x in s['lines']]==[(x['id'],x['text']) for x in t['clips']]
+a=json.loads((script/'.script.md.yukkuri-review.json').read_text());assert a['status']=='APPROVED' and a['script_sha256']==sha(script/'script.json') and a['script_markdown_sha256']==sha(script/'script.md')
+s=json.loads((script/'script.json').read_text());assert [(x['id'],x['text']) for x in s['lines']]==[(x['id'],x['text']) for x in t['clips']]
 assert all(x['speaker']==3 for x in t['clips'])
 audios=[]
 for x in t['clips']:

@@ -8,7 +8,7 @@
 
 出力は原workspace prototype/reference-review/s5-video-2026-10-10/review.mp4。64.085333秒、1921f/30fps、H2641920×1080/AAC48kHz、2,371,572B。SHA・承認・音声・素材・構成ソースはSOURCE_PROVENANCE.json。MP4/WAV/private rawはGitに含めない。
 
-7章previewと実MP4の8抽出画像を実見し、字形・字幕・表の脚注・creditが読め、重複しないことを確認した。Designerは全尺実再生・聴感を確認していない。PMのnative再生終端確認は別記録とし、ゲーム音#7の聴感へ拡張しない。PRへの送信・アップロードはPM担当。
+7章previewと実MP4の8抽出画像を実見し、字形・字幕・表の脚注・creditが読め、重複しないことを確認した。Designerは全尺実再生・聴感を確認していない。PMがnativeで開始→36.668→64.085333秒の自然終端を連続再生し、ended=true・paused=true・muted=false・再生エラー無しと開始/表/終端の実画面を確認した。音声聴感はPM/Designerとも未検証で、ゲーム音#7の聴感へ拡張しない。PRへの送信・アップロードはPM担当。
 
 ## 再制作
 
@@ -19,3 +19,9 @@
 - `python3 tools/pr-video/s5-verify.py`：承認fingerprint、7台詞/voice3、WAV同一性、MP4形式・容量・抽出・原録画SHAの検査。
 
 新発話や読み上げ設定の変更は、台本の新承認後に行う。
+
+### 可搬なパス指定
+
+verifyの承認資料は既定でrepo内docs/agile/s5-video、出力はrepo内prototype/reference-review/s5-video-2026-10-10を使う。制作cloneの絶対パスをsourceへ埋め込まない。別配置ではS5_APPROVED_SCRIPT_DIRとS5_VIDEO_OUTPUT_DIRを指定する。preview用CLIはS5_REMOTION_CLI、ブラウザはREMOTION_BROWSER_EXECUTABLEで既存依存を指定できる。
+
+今回は制作cloneをcwdに、S5_VIDEO_OUTPUT_DIRだけ原workspaceの保持済み出力へ指定して直接verifyを実行しexit0。MP4 SHA0db3f5f…e1dfa、7承認文・7音声・原操作SHAは不変。

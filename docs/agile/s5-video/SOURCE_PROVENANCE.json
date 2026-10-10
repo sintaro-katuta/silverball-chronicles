@@ -90,8 +90,20 @@
   "renderExitCode": 0,
   "typecheck": "exit0 with skipLibCheck (dependency typings excluded)",
   "visualReview": "7 preview PNG and 8 final MP4 stills viewed, readable/no overlaps",
-  "nativePlayback": "pending PM",
-  "hearing": "not evaluated by Designer",
+  "nativePlayback": {
+    "reviewer": "PM",
+    "continuousPlayback": true,
+    "observedMiddle": 36.668,
+    "ended": true,
+    "paused": true,
+    "currentTime": 64.085333,
+    "muted": false,
+    "error": null,
+    "errorScope": "PM reported error unset; no playback error observed",
+    "visualScope": "start, comparison table, natural ending viewed",
+    "hearing": "未検証"
+  },
+  "hearing": "PM/Designerとも音声聴感は未検証。ゲーム音issue7とは別",
   "upload": "PM owner, not performed by Designer",
   "compositionSources": [
     {
@@ -108,11 +120,23 @@
     },
     {
       "path": "tools/pr-video/s5-build.py",
-      "sha256": "15b2455b71095784a4069413fc284495e8d28e656e9fc503b806fd7506eac81c"
+      "sha256": "9a73c3757eabe8ded2ae0ef397a837fecc2cd46b61d350905cf4af54e79c9b41"
     },
     {
       "path": "tools/pr-video/s5-verify.py",
-      "sha256": "ebd535da492a6d0bf0b2e339cda979e99b3e7742c8dec7ef91eb2c15b6a1f924"
+      "sha256": "321818a427e4ffb8c56279114f1da2671f4b9a2239c3ec1eb6576223d4708a4c"
     }
-  ]
+  ],
+  "portableVerification": {
+    "defaultApprovedScriptDirectory": "repository docs/agile/s5-video",
+    "defaultOutputDirectory": "repository prototype/reference-review/s5-video-2026-10-10",
+    "overrideEnv": [
+      "S5_APPROVED_SCRIPT_DIR",
+      "S5_VIDEO_OUTPUT_DIR",
+      "S5_REMOTION_CLI",
+      "REMOTION_BROWSER_EXECUTABLE"
+    ],
+    "directVerificationExitCode": 0,
+    "movieUnchangedSHA": "0db3f5f0089915cf96f47b0739308a7bd0108ab9ccea4bad229e577099de1dfa"
+  }
 }
