@@ -99,6 +99,10 @@
           "run": "node prototype/tools/ci-release.js browser"
         },
         {
+          "name": "Verify local pin layout tool and full comparison",
+          "run": "node prototype/tests/pin-layout.browser.mjs"
+        },
+        {
           "uses": "actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
           "if": "always()",
           "with": {

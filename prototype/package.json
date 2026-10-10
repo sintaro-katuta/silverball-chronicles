@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
+    "dev:pins": "node tools/pin-layout-inputs.mjs --out dev/pin-layout-inputs.json && vite --host 127.0.0.1 --port 5250 --strictPort",
+    "test:pins": "node tests/pin-layout.browser.mjs",
+    "compare:pins": "node tools/pin-layout-compare.mjs",
     "build": "vite build",
     "preview": "vite preview --host 0.0.0.0",
     "test": "node --test tests/*.test.js",

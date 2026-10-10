@@ -1,0 +1,227 @@
+{
+  "movie": {
+    "path": "prototype/reference-review/s5-video-2026-10-10/live-addendum-lifecycle/review.mp4",
+    "sha256": "aeec54fca42309ae1a38f2386a46c217e733002e83a54c9d8fa106c4825957b8",
+    "bytes": 3906569,
+    "durationSeconds": 95.085333,
+    "frames": 2851,
+    "fps": 30,
+    "codec": [
+      "h264",
+      "aac"
+    ]
+  },
+  "scriptApproval": {
+    "version": 1,
+    "status": "APPROVED",
+    "approved_by": "user",
+    "approved_at": "2026-10-10T16:17:29+09:00",
+    "script_sha256": "a226630ebc8e229f128ab7a3bb70c0546d31524098b3b9d37e0ce15ac067e599",
+    "script_markdown_sha256": "01346e2480e2979853b441d2977bb717cd44390dcb47a3babe040fcf18172c81",
+    "line_ids": [
+      "intro",
+      "attributes",
+      "constraints",
+      "persistence",
+      "comparison",
+      "limitations",
+      "decision"
+    ]
+  },
+  "referenceMovie": {
+    "path": "prototype/reference-review/s5-video-2026-10-10/review.mp4",
+    "sha256": "0db3f5f0089915cf96f47b0739308a7bd0108ab9ccea4bad229e577099de1dfa",
+    "bytes": 2371572,
+    "durationSeconds": 64.085333,
+    "frames": 1921,
+    "fps": 30
+  },
+  "referenceByteIdentityVerified": true,
+  "aacPacketIdentity": {
+    "reference": "b751e8b38c80fa85bf4f2553efe0b62e3749c8edf35333cce9543563244d952b",
+    "final": "b751e8b38c80fa85bf4f2553efe0b62e3749c8edf35333cce9543563244d952b",
+    "verified": true
+  },
+  "voice7": [
+    {
+      "id": "intro",
+      "sha256": "a9c4bbbafcdb78d92376b155ba7aa9a1dae8a477aeea64f78f9851fb79622adf",
+      "frame": 0,
+      "durationFrames": 222,
+      "speaker": 3,
+      "newMovieStartFrame": 930,
+      "identityVerified": true
+    },
+    {
+      "id": "attributes",
+      "sha256": "f957c77680c41a8fc792ac24502b66fb6e418191b5054bc6de69cef15053e4c6",
+      "frame": 228,
+      "durationFrames": 274,
+      "speaker": 3,
+      "newMovieStartFrame": 1158,
+      "identityVerified": true
+    },
+    {
+      "id": "constraints",
+      "sha256": "a971e17380f6d9032153f4b7754bd06b03f454c1e229537b574d62527a1e7e80",
+      "frame": 507,
+      "durationFrames": 238,
+      "speaker": 3,
+      "newMovieStartFrame": 1437,
+      "identityVerified": true
+    },
+    {
+      "id": "persistence",
+      "sha256": "f744e8862e05a30f493bed97e8f283e07e263ce0ec3304c9126ff7260b321326",
+      "frame": 750,
+      "durationFrames": 218,
+      "speaker": 3,
+      "newMovieStartFrame": 1680,
+      "identityVerified": true
+    },
+    {
+      "id": "comparison",
+      "sha256": "eb32000ef31584d55487bded1196278b82313ea22953a2a25c52b9272f9224a0",
+      "frame": 974,
+      "durationFrames": 305,
+      "speaker": 3,
+      "newMovieStartFrame": 1904,
+      "identityVerified": true
+    },
+    {
+      "id": "limitations",
+      "sha256": "64b2dfc76f56ecc021fe997ae9320c4531d31f0bbb0e1197ea7d63d0485f42cc",
+      "frame": 1285,
+      "durationFrames": 318,
+      "speaker": 3,
+      "newMovieStartFrame": 2215,
+      "identityVerified": true
+    },
+    {
+      "id": "decision",
+      "sha256": "0da1406fd3341a85ce9d6f86313f9b87ad9b0fb2462ece84b0be0640eee37a7c",
+      "frame": 1608,
+      "durationFrames": 246,
+      "speaker": 3,
+      "newMovieStartFrame": 2538,
+      "identityVerified": true
+    }
+  ],
+  "newSpeechGenerated": false,
+  "productSourcePMReported": "2752a8741c8ccb67fce3cfcdb8e0c3169bf478feed128aaf5e09d7a9b6281998",
+  "productHeadPMReported": "b793c45",
+  "captureSubset": {
+    "paths": {
+      "prototype/dev/pin-layout.html": "3588d8a6970f2df959cc79309263af5101ffdb1d1b6011117faa3181ac2ece83",
+      "prototype/src/dev/pin-layout-ui.js": "deee1f46d8422becaecb0888501c7ac466649de0ce3b4a4610dccc31b2a1466b",
+      "prototype/src/dev/pin-layout-ui.css": "8cea82e9058a1a152cba86b8d807de1c63dcf317ef79c956ba666d1e96751dde",
+      "prototype/src/dev/pin-layout-live.js": "2f0803df87919af90b98b35d9afee572f14ace100169f3e690d12100f826ecf9",
+      "prototype/src/dev/pin-layout-model.js": "186e2fd554d9d33a0443e399601e5793a22346593157a81536fe6484c881a43d"
+    },
+    "unchanged": true,
+    "scope": "Five UI/controller/model/HTML files only, not a full simulation-input guard"
+  },
+  "segments": [
+    {
+      "fromFrame": 0,
+      "toFrame": 90,
+      "scope": "Historical actual slider UI, static baseline12s; not continuous gameplay"
+    },
+    {
+      "fromFrame": 90,
+      "toFrame": 750,
+      "scope": "New1440 real live operations; WebM0.8s+22s, wall-time unscaled"
+    },
+    {
+      "fromFrame": 750,
+      "toFrame": 930,
+      "scope": "New390 independent live operation; WebM2s+6s, not synchronized physics comparison"
+    },
+    {
+      "fromFrame": 930,
+      "toFrame": 2851,
+      "scope": "Previously approved64s explanation; prior raw table retains its generation"
+    }
+  ],
+  "edit": "Raw25fps to30fps frame duplication, no optical-flow interpolation; Remotion prefix0..929 (31s), prior reference1921f with76px opaque annotation; FFmpeg2851f concat and original AAC packets offset31s without reencoding; previous live-addendum generation early-rename failure retained separately; this generation completes930f prefix before assembly",
+  "referenceComparison": {
+    "path": "prototype/reference-review/s5-2026-10-10/final-local-3c136dd/pin-layout-tool-final-v2/browser-comparison.json",
+    "sha256": "aa1c970669ab14461455a7f1660d6787ca3547a9e8ca6f1ea868c46259247225",
+    "sourceSHA": "da1e2c01de863fd23d7524d7ad5793cb0e9afd12f675dee6d231d88a0f3d9bd6",
+    "definitionSHA": "ed0d47ae50ac9573ac94614da0306f6d125eb707f9d1d7b9a855c16c53ae29e1",
+    "geometrySHA": "e420f9fe2aeecd44c8c7f9f9fbb05f1c0ad613ca0043a6d8e497496f894f97d8"
+  },
+  "sourceFiles": [
+    {
+      "path": "tools/pr-video/s5-live-index.tsx",
+      "sha256": "5cfedce61221e7598ef5c4257ad83594e4ed52d01f0c7b5fa851462a68677631"
+    },
+    {
+      "path": "tools/pr-video/s5-live-build.py",
+      "sha256": "b8d8daacfbbc5b6d9edd57fabeb83eddeec63f37e427b84fab9a05c4c476b4ae"
+    },
+    {
+      "path": "tools/pr-video/s5-live-finish.py",
+      "sha256": "a356de08538581729fc1aaa8ba9a85f8fa41218f1f7e18a377fd0c5167c4bd49"
+    },
+    {
+      "path": "tools/pr-video/s5-live-verify.py",
+      "sha256": "1deb9b4dbeadf4733fc415be37826933ab8391a9f71df4baf6d83620a5bd5231"
+    }
+  ],
+  "hearing": "Unverified by Designer; game audio issue7 is separate",
+  "realDeviceFPS": "Unverified",
+  "nativePlayback": {
+    "verifiedBy": "PM",
+    "url": "http://127.0.0.1:5262/",
+    "durationSeconds": 95.085333,
+    "currentTimeAtEnd": 95.085333,
+    "ended": true,
+    "muted": false,
+    "error": null,
+    "scope": "Natural playback from zero to end in Brave, visual confirmation; human hearing unverified"
+  },
+  "upload": "PM owner; not performed by Designer",
+  "renderPrefixExitCode": 0,
+  "assemblyExitCode": 0,
+  "directVerificationExitCode": 0,
+  "typecheck": "exit0, skipLibCheck excludes dependency typings",
+  "visualReview": "Final PC8s/mobile28s/reference51s extracted from actual MP4 and viewed; controls/board/counters/caption/opaque generation band readable. Full continuous playback is PM pending",
+  "localReviewServer": {
+    "url": "http://127.0.0.1:5262/",
+    "pid": 11718,
+    "expiresJST": "2026-10-11T00:43:29+09:00",
+    "reachability": "HTTP200/content-length3906569"
+  },
+  "documentation": {
+    "paths": [
+      "docs/agile/s5-video/LIVE_ADDENDUM.md",
+      "docs/agile/s5-video/LIVE_ADDENDUM_PROVENANCE.json"
+    ],
+    "markdownSHA": "3b0778177b2eb70c697ebaabc290516b3042e460eea6ac9167301c0eea6c124b",
+    "note": "Provenance self SHA omitted to avoid cyclic hash"
+  },
+  "previousGenerations": [
+    {
+      "movieSHA": "c84a2c95039f5f689bff324203dee43cf6c179956e2476225a5720f49a607592",
+      "head": "ceaea0c",
+      "path": "prototype/reference-review/s5-video-2026-10-10/live-addendum/",
+      "scope": "Historical raw/source5 and recovered prior95s movie retained; early-rename full render failure belongs to that generation only"
+    },
+    {
+      "rawPath": "prototype/reference-review/s5-2026-10-10/live-video-lifecycle/",
+      "qaPath": "prototype/reference-review/s5-2026-10-10/live-ui-lifecycle/",
+      "scope": "Intermediate lifecycle22events before final synchronous comparison catch"
+    }
+  ],
+  "finalQA": {
+    "path": "prototype/reference-review/s5-2026-10-10/live-ui-lifecycle-catch/record.json",
+    "eventsPerWidth": 24,
+    "sourceSubsetUnchanged": true,
+    "pageErrors": 0,
+    "hiddenScope": "Injected branch test; actual background tab unverified",
+    "synchronousPostScope": "One deliberate postMessage throw; no offline comparison computed"
+  },
+  "finalRawPath": "prototype/reference-review/s5-2026-10-10/live-video-lifecycle-catch/",
+  "newRenameFailure": false
+}

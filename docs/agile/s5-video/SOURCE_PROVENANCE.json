@@ -1,0 +1,142 @@
+{
+  "movie": {
+    "path": "prototype/reference-review/s5-video-2026-10-10/review.mp4",
+    "sha256": "0db3f5f0089915cf96f47b0739308a7bd0108ab9ccea4bad229e577099de1dfa",
+    "bytes": 2371572,
+    "durationSeconds": 64.085333,
+    "frames": 1921,
+    "fps": 30
+  },
+  "approvedScriptSHA": "a226630ebc8e229f128ab7a3bb70c0546d31524098b3b9d37e0ce15ac067e599",
+  "approvedMarkdownSHA": "01346e2480e2979853b441d2977bb717cd44390dcb47a3babe040fcf18172c81",
+  "speaker": 3,
+  "credit": "VOICEVOX:ずんだもん（ノーマル）",
+  "timelineSHA": "0e8b00f08ca55faa5db4672859f96b878cee4f1414f2e12bfcceb3fb434913a9",
+  "audioClips": [
+    {
+      "id": "intro",
+      "sha256": "a9c4bbbafcdb78d92376b155ba7aa9a1dae8a477aeea64f78f9851fb79622adf",
+      "frame": 0,
+      "durationFrames": 222,
+      "speaker": 3
+    },
+    {
+      "id": "attributes",
+      "sha256": "f957c77680c41a8fc792ac24502b66fb6e418191b5054bc6de69cef15053e4c6",
+      "frame": 228,
+      "durationFrames": 274,
+      "speaker": 3
+    },
+    {
+      "id": "constraints",
+      "sha256": "a971e17380f6d9032153f4b7754bd06b03f454c1e229537b574d62527a1e7e80",
+      "frame": 507,
+      "durationFrames": 238,
+      "speaker": 3
+    },
+    {
+      "id": "persistence",
+      "sha256": "f744e8862e05a30f493bed97e8f283e07e263ce0ec3304c9126ff7260b321326",
+      "frame": 750,
+      "durationFrames": 218,
+      "speaker": 3
+    },
+    {
+      "id": "comparison",
+      "sha256": "eb32000ef31584d55487bded1196278b82313ea22953a2a25c52b9272f9224a0",
+      "frame": 974,
+      "durationFrames": 305,
+      "speaker": 3
+    },
+    {
+      "id": "limitations",
+      "sha256": "64b2dfc76f56ecc021fe997ae9320c4531d31f0bbb0e1197ea7d63d0485f42cc",
+      "frame": 1285,
+      "durationFrames": 318,
+      "speaker": 3
+    },
+    {
+      "id": "decision",
+      "sha256": "0da1406fd3341a85ce9d6f86313f9b87ad9b0fb2462ece84b0be0640eee37a7c",
+      "frame": 1608,
+      "durationFrames": 246,
+      "speaker": 3
+    }
+  ],
+  "formatVersion": 2,
+  "activeOperation": {
+    "path": "prototype/reference-review/s5-video-2026-10-10/ui-v2-dom/",
+    "videoSHA": "9c029fe6d21c4ffb2caa49228d604568cc41db343cf9d1d43063eabfa6f8a8d6",
+    "recordSHA": "1b043fda030e08d1c70eea79675c5430e5b98d0df05cef6e3a63fe563295b850",
+    "pointerRejection": [
+      [
+        "actual-pointer-fixed-region-rejected",
+        3782,
+        "固定部材 unit の内部です。 未定義または禁止された地点。所属群の許可地点を選んでください。"
+      ]
+    ],
+    "sourceUnchanged": true
+  },
+  "finalComparison": {
+    "path": "prototype/reference-review/s5-2026-10-10/final-local-3c136dd/pin-layout-tool-final-v2/browser-comparison.json",
+    "sha256": "aa1c970669ab14461455a7f1660d6787ca3547a9e8ca6f1ea868c46259247225",
+    "sourceSHA": "da1e2c01de863fd23d7524d7ad5793cb0e9afd12f675dee6d231d88a0f3d9bd6",
+    "definitionSHA": "ed0d47ae50ac9573ac94614da0306f6d125eb707f9d1d7b9a855c16c53ae29e1",
+    "geometrySHA": "e420f9fe2aeecd44c8c7f9f9fbb05f1c0ad613ca0043a6d8e497496f894f97d8"
+  },
+  "v1MediaUsed": false,
+  "newSearchFeatureIncluded": false,
+  "scope": "手動ツールの実DOM/pointer操作＋図表。1秒記録は静止の離散図。自然play全フレーム・本編採用・探索成果と称しない",
+  "renderExitCode": 0,
+  "typecheck": "exit0 with skipLibCheck (dependency typings excluded)",
+  "visualReview": "7 preview PNG and 8 final MP4 stills viewed, readable/no overlaps",
+  "nativePlayback": {
+    "reviewer": "PM",
+    "continuousPlayback": true,
+    "observedMiddle": 36.668,
+    "ended": true,
+    "paused": true,
+    "currentTime": 64.085333,
+    "muted": false,
+    "error": null,
+    "errorScope": "PM reported error unset; no playback error observed",
+    "visualScope": "start, comparison table, natural ending viewed",
+    "hearing": "未検証"
+  },
+  "hearing": "PM/Designerとも音声聴感は未検証。ゲーム音issue7とは別",
+  "upload": "PM owner, not performed by Designer",
+  "compositionSources": [
+    {
+      "path": "tools/pr-video/s5-index.tsx",
+      "sha256": "a837ed3da8c3d291612442ef90a8970ce0f163e889d712b8ffdfc33c77311b99"
+    },
+    {
+      "path": "tools/pr-video/s5-timeline.json",
+      "sha256": "0e8b00f08ca55faa5db4672859f96b878cee4f1414f2e12bfcceb3fb434913a9"
+    },
+    {
+      "path": "tools/pr-video/s5-data.json",
+      "sha256": "9fd2d48571d55b150853460b6fda07a4949ff6694071eaedb741c231b83abbf5"
+    },
+    {
+      "path": "tools/pr-video/s5-build.py",
+      "sha256": "9a73c3757eabe8ded2ae0ef397a837fecc2cd46b61d350905cf4af54e79c9b41"
+    },
+    {
+      "path": "tools/pr-video/s5-verify.py",
+      "sha256": "321818a427e4ffb8c56279114f1da2671f4b9a2239c3ec1eb6576223d4708a4c"
+    }
+  ],
+  "portableVerification": {
+    "defaultApprovedScriptDirectory": "repository docs/agile/s5-video",
+    "defaultOutputDirectory": "repository prototype/reference-review/s5-video-2026-10-10",
+    "overrideEnv": [
+      "S5_APPROVED_SCRIPT_DIR",
+      "S5_VIDEO_OUTPUT_DIR",
+      "S5_REMOTION_CLI",
+      "REMOTION_BROWSER_EXECUTABLE"
+    ],
+    "directVerificationExitCode": 0,
+    "movieUnchangedSHA": "0db3f5f0089915cf96f47b0739308a7bd0108ab9ccea4bad229e577099de1dfa"
+  }
+}

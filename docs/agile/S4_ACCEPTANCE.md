@@ -1,5 +1,18 @@
 # S4受入台帳
 
+## 最新PM判定：受入・集約完了（2026-10-10）
+
+ユーザーが[PR #20](https://github.com/sintaro-katuta/silverball-chronicles/pull/20)を `release/0.2.0` へマージ。実マージ `1b0c889fe26e959f7a9b4864e35ee36b9bb49573` のtreeは `3ef03b9d49deff7d06ec73b9127164b6a71f444b` で、受入済みCI対象head/merge-refと一致する。
+
+- 実CI [37876851107](https://github.com/sintaro-katuta/silverball-chronicles/actions/runs/37876851107) のunit/browser/verifyは全成功。488件/111単体testfiles、45資産14,902,484Bの全集合/size/SHAとsource511入力を独立照合済み。source SHA `3f5a5dbdde05e57223a2d98e8f96fe773292e1fae6e86022267b6e7d2d235682`。
+- #17は両幅の6〜8秒構図・入り抜け・関連回帰、#13は5台の固定配置と説明・台対応・非変更、#19は検証保持・実並列実行・費用/効果からの採用判断が合格。
+- #19はcritical path7分16秒、runner合計12分04秒。unit/browserの4分50秒重複を確認し、独立工程の直列待ちを解消する最小構成を採用。PR18との時間差はrunner/入力差も含み、全差分を並列化だけの効果へ換算しない。artifact総ZIPは約2倍で、保存コストの留意点も記録。
+- 承認済み7文・ずんだもんnormalのRemotion動画はPR冒頭へ掲載済み。音の実聴取・スマホ実機・CD checkpoint再開は別の残件でありS4合格へ代用しない。
+
+証拠は原workspace `prototype/reference-review/s4-2026-10-09/pr20-ci/index.json` と生artifact/log。S4は合意対象の検証・PM受入・ユーザー集約マージで終了した。本編公開はS6まで集約したrelease→mainの段階で行う。
+
+以下の局所受入・実CI待ち・動画待ちはPR作成時点までの履歴。現在の判定には上記を優先する。
+
 S4 #17/#13A/#19は開始承認済み。隔離sprint/S04の継承元はrelease `7ec4c6ad733b47174463b5e1967c224487111db8`。本書の最新AC表を現在状態とし、過去の取得/待機は証拠資料へ分離する。Git/Issue・最終受入はPM担当、固定期限なし。原dirtyworkspaceは実装/検証へ使わない。
 
 ## 最新AC表
