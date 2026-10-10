@@ -1,6 +1,6 @@
 # S5 #22 設計・検証と受入記録
 
-2026-10-10。#22開始承認済み。[実行計画](S5_PLAN.md)の6ACに対応する。現在は設計/実装進行、全AC未判定。進行表はユーザーのPRレビューを代替しない。
+2026-10-10。#22開始承認済み。[実行計画](S5_PLAN.md)の6ACに対応する。現在はbrowser/CLI attempt02成功提出済み。エンジン間保存schema補修と新操作検証・実CI・動画が残り、全ACの最終判定は未完了。進行表はユーザーのPRレビューを代替しない。
 
 ## 接続契約と担当
 
@@ -26,7 +26,7 @@ Leadはschema・拒否・保存/復元・自然試射/会計・直接tests、Des
 5. 生ログ/集計・sourceguard・終了codeを保全する。guard不一致、計数不整合、未取得条件は失敗/未検証のまま原因と修正対象を記録し、前成功へ換算しない。
 6. 必要全回帰/今回build/browserとUI/比較動画を対応させ、SMが不足を報告、PMがAC別判定。目的別commit、短いIssue bulletの非Draft Sprint PRでレビューする。PR作成だけで集約完了としない。
 
-コマンド・artifact名・比較条件の最終値はLead提出時に追記する。まだ実行成功を示すコマンド/ログはない。private素材/logは用途別保存しPRへ同梱せず、run/HEAD/候補/日時/生ログの対応を記録する。過去qa05ログ・図解だけで今回の試射成功としない。
+コマンド・artifact名・比較条件の最終値はLead提出時に追記する。attempt02の実成功証拠は末尾で世代別に記録する。private素材/logは用途別保存しPRへ同梱せず、run/HEAD/候補/日時/生ログの対応を記録する。過去qa05ログ・図解だけで今回の試射成功としない。
 
 ## 手待ちを避けるReady
 
@@ -36,8 +36,44 @@ Leadはschema・拒否・保存/復元・自然試射/会計・直接tests、Des
 
 終了は合意AC・必要検証・PM受入・Sprint集約PRのユーザーマージ。本編への候補採用、実機同等性、自動探索、公開は本Sprintの成功から拡張しない。
 
-## 実API draftへの接続メモ（未完成・未検証）
+## 現APIと採用制約（2026-10-10）
 
-2026-10-10読取時の `prototype/src/dev/pin-layout-model.js` は `getPinLayoutModel`/`createBaselineLayout`/`validateLayout`/`validateMove`/`applyMove`/`resolvePins`/`diffLayout`/`serializeLayout`/`parseLayout`/`layoutHash`/`constraintHash` を公開。UIは同じmodelの群・地点・固定部材を使い、保存JSONのplacementsはpinId/siteIdで対応する。baselineHashはdraftでは基準pinsのcanonical JSON文字列、実効配置SHAはlayoutHashで算出するため、baselineHashを暗号学的SHAと表記しない。最終APIはLead完成通知後に照合する。
+Lead初稿ではgetPinLayoutModel/createBaselineLayout/validateLayout/validateMove/applyMove/resolvePins/diffLayout/serializeLayout/parseLayout/layoutHash/constraintHashに加えexportLayout/importLayoutを公開。内部layoutはschemaVersion/constraintVersion/baselineIdentity/placements(pinId,siteId)。baselineIdentityはcanonical JSON文字列でSHAではない。保存envelopeの初稿はlayout＋metadataで3SHAを厳密照合したが、現在は下記formatVersion2のstable定義/engine形状分離へ補修中。古いbaselineHash名の初稿は履歴で、現保存形式に使わない。
 
-PM採用はpitch4/原点[22,180]/heso2固定。制約版draftはestimated-board-grid-v1。Leadの次提出は群別site population・基準valid・拒否負例と実属性保持。Designerは地点選択と拒否理由・保存再現の接続を準備できる。他群境界とminimumPinDistance/fixedClearanceは提出/判定前なので合格へ付け替えない。比較測定API・起動/試射の実コマンドは完成通知待ち、新測定結果はまだない。ナレーション承認はpending、動画完成/掲載は未検証。
+PM採用はpitch4/原点[22,180]、矩形群、heso2固定、最低中心距離4・固定clearance2。既存基準を丸めず保持し、中心距離検査は移動釘を含む組に適用する。左道/左上/左下/ヘソ/右一般/右道の本数26/10/55/2/3/5、閉じ受け皿polygon追加後の格子地点数376/117/708/0/53/27、baseline101/validはLead提出値。ここではschema読取と提出を受領した段階で、全操作・測定を合格にしない。
+
+## ローカル運用手順（実行は担当の新証拠で判定）
+
+リポジトリrootから `npm --prefix prototype run dev:pins`。これは先にdev/pin-layout-inputs.jsonを生成し、Viteを127.0.0.1:5250 strictPortで起動する。入口は `http://127.0.0.1:5250/dev/pin-layout.html`。通常Viteだけで起動してmanifest生成を省かない。port競合時は既存serverを無断終了せず担当を確認する。
+
+1. 基準101本・固定部材/禁止領域・群を確認し、pinと許可siteを選択して移動する。拒否理由と旧有効配置の保持を確認。
+2. JSON保存→読込でbaseline/layout/安定constraintの3SHAと同配置を再現し、engineGeometrySHAの相違は警告と現在エンジンでの再検査へ対応させ、基準復元で差分0へ戻す。保存JSONはローカルツール配置だけで、本編/月影5台への適用・公開操作を含まない。
+3. 比較modeで基準/候補を同条件試射し、条件/配置SHA/codeSHA・全生events/計数・欠測を確認。結果JSONを保存し、再生は保存済み生比較結果から行う。配置変更後の旧結果を採用しない。
+4. browser受入は `npm --prefix prototype run test:pins`。CLI比較は `npm --prefix prototype run compare:pins -- --out <local-evidence-dir> --layout <saved-layout.json>`。--moveによる候補入力も実CLIで受理されるが、受入では実候補JSON/移動IDを固定する。実行済み成功を示すコマンドではなく、最終helper/条件/ログは担当提出後に追記する。
+
+manifest/codeSHAの対象は実際に利用する全シミュレーション依存へ照合し、UI/画像除外が比較scopeとして妥当かを説明する。動的風車状態は実行後に変わるため固定部材hashへ混ぜず、不変構造と動的状態を分けて検証する。修正前はpresentation入力不足と動的windmill混入が判明したため初測定を未受入として保存、修正後の新測定は別世代へ保全する。
+
+## 最新証拠と差戻し（世代を分ける）
+
+- CLI attempt01は全12rawを保存したexit1。風車の実行後angle/omegaをfixedHashへ混ぜ6pairsで不一致、受入には不使用。入賞/計数rawを破棄・成功化しない。
+- CLI attempt02はexit0、source164入力SHA `59161a5092194b6d22334690e81f81e7e5109f33b308b48f4e6a5cbb6faf5b21` 前後一致、git5057d9a/dirtyを保持。12runsの計数/有限会計が整合、全残球0、6pairs固定部材hash一致、comparable/fullWindow=trueとLead提出。有限位相.35基準の実physics293.6667秒と候補300秒を分け、要求300秒へのpaddingを実観測へ付け替えない。自然賞球/stock終了差により発射数475対474も保持する。
+- browser attempt02は同source59161a/164入力前後一致、12runs計数/会計、両幅編集・保存/読込・復元/errors0をPM確認。CLIとbrowserは環境別結果で、通常発射校正のみ。右群が可動でも右打ち性能/RUSH自然成績を合格にしない。
+- Node固定形状SHA19eaa…とChromea572…はsin/cosの14端点で最大5.684e-14差があり、browser保存をCLI importすると拒否をPM再現。旧測定/保存SHAは保持。CLI入賞[22,28,27]→[21,22,28]とChrome[27,19,28]は環境別、差の原因を14端点だけに断定しない。
+
+原証拠は `prototype/reference-review/s5-2026-10-10/pin-layout-comparison-attempt02/` と `browser-attempt02/`（原workspaceのローカル保存証拠、PRへ同梱しない）。SMはCLI provenanceの実schema/git/sourceを読取確認し、browser全結果はPM確認を受領。現在の新コードの測定と誤認しない。
+
+### portable V2補修：局所受入・全回帰進行
+
+現コードはformatVersion2で `{formatVersion,layout,metadata}` を保存する。metadataはbaselineSHA/layoutSHA/安定constraintSHA＋exact engineGeometrySHA。constraintDefinitionはsource定義/変換/rail生成条件/固定ルールを保持し、生成端点bytesをstable定義hashと区別する。inspectImportはstable3SHAと配置validを厳密検査し、engine形状のみ相違なら記録値/現在値とwarningを返す。旧envelopeを無言で受理したり、物理同等性を保証したりしない。生成点・物理・measurement moduleの変更はこの補修範囲に含めない。
+
+UI c306の時刻選択float epsilon補修、処理済み入賞を含む再生注記を受領。07fe335短UI、5057旧表/流路完全clear、HMR中断、attempt02、schema補修後の短geometrywarning操作は別世代。V2新短操作の両幅import/警告/保存/復元・旧format/invalid拒否・errors0・source始終一致をDesignerが提出。12秒frameと新source全回帰はPM新browser終端待ち。
+
+旧全497unit成功＋新target12はPM提出。sourceguard欠落/duplicate/alteredのbrowser負例は `source-guards-before-identity-fix.json` を初稿として保持し、現在helper対応は別照合する。新schema全測定/実CI・動画・PRは未受入。7文ナレーション承認pending、PR動画は必須で未制作/未掲載。次ReadyはPM final unit/release browser/tool browserの新終端とcandidate joinの独立照合、現sourceの実CIと承認後動画の対応照合。
+
+## portable V2提出と最終ローカル検証の現在地
+
+backend `acb8363`、PM scripts/CI/新toolbrowser `d979058`、UI `ba4dfc`、Designer資料 `9bacab8`を受領。12target pass、実Chrome154.0.8037.98保存→Node24読込成功。安定definitionSHA `ed0d47…ae29e1`共通、exact geometryはChrome `e420f9…f97d8`とNode `cf1fb3…6a78a`を別々に保持して警告する。実候補/基準の再検査は保持し、エンジン成績同一を保証しない。
+
+原 `portable-definition-v2/{roundtrip,node,browser,physical-equivalence}.json` とtarget-tests.logで補修を提出。measurement module旧bytes完全一致、旧model fixed/sites/12rawpinsの一致を補助証明とし、古い12rawのHEAD/sourceは改変しない。新UI証拠はclone `ui-import-v2/` と `ui-video-v2/`、両幅format2保存/復元、geometrywarning、旧format/invalid拒否、errors0/source前後一致。動画素材取得はPR説明動画完成・掲載を意味しない。
+
+PM final3job（unit/release browser/new tool browser）が進行中。全500unit/本編全browser/新toolbrowser・最終候補join・実Linux CIはまだ未確認。承認待ち7文ナレーションは合成のみ留保し、PR/movieは未作成。4文書commit後はcandidate join終端までGit/文書を凍結し、監査は読取のみ。レビュー対象はSprint PRで、内部進行資料を代替にしない。
