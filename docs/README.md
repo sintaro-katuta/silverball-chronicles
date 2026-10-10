@@ -4,6 +4,10 @@
 
 ## 主な入口
 
+- [Sprint 5実行計画](agile/S5_PLAN.md)
+- [Sprint 5設計・検証/受入](agile/S5_ACCEPTANCE.md)
+- [釘配置ツール要求](agile/PIN_LAYOUT_TOOL_PROPOSAL.md)
+
 - [Sprint 4実行計画](agile/S4_PLAN.md)
 - [Sprint 4受入台帳](agile/S4_ACCEPTANCE.md)
 - [CI工程の計測・原因調査](agile/CI_TIMING_INVESTIGATION.md)
