@@ -45,3 +45,11 @@ raw操作録画は `prototype/reference-review/s5-2026-10-10/ui-video/` に保�
 ## 保存形式補修に伴う証拠の世代
 
 旧ui/、ui-fresh-worker/、ui-video/とPM browser attempt02は、旧保存形式の実行履歴として保持する。跨環境でexact geometry SHAが変わる問題の補修後の保存互換性を、旧JSON成功だけで合格としない。新UIはformatVersion2と安定制約定義SHA、exact engine geometry SHAを区別し、geometry差だけなら警告付き読み込み、現在の制約不正・基準/配置/定義不一致なら拒否する。新短操作と録画は別v2フォルダへ取得する。7文台本は不変、音声承認待ちは継続する。
+
+### 新形式の短QA・新raw素材
+
+UI目的コミット `4ba4dfc`。Leadのbackend v2固定後、`ui-import-v2/`に別証拠を取得した。Chrome154、390/1440の実保存formatVersion2→復元→同SHA再読込を確認。実Node24生成のpin1→grid:12:77 exportを読み込み、制約定義SHA ed0d47…は共通、Chrome geometry e420f9…／Node geometry cf1fb3…の差だけを黄色警告として表示する。synthetic geometry差を実跨環境結果へ転用しない。旧形式・未定義地点を含む配置は拒否し、元の候補SHA a86304…を保持する。両幅errors0・始終source一致・exit0・owned Chrome終了。両幅warning PNGを実見し、警告と制約/geometry/本編未採用の識別欄が読めることを確認した。
+
+`ui-video-v2/`は旧動画を上書きしない新format2の操作録画。基準・移動・未定義地点拒否・保存・復元・同SHA再読込・実Node geometry警告を実操作で記録した。WebM SHA `14a61663c693ae6f04f39ebbec313b904fb57cb94aeea39036cc0f7aaae071ad`、source始終一致、errors0・exit0・owned Chrome終了。実動画1/4.5/11.5秒の抽出PNGを実見し、基準・拒否・geometry警告を確認。全尺動画鑑賞とは区別する。末尾の比較画面は未計測、物理12条件再試射はしていない。
+
+指定12秒のframe表示は、PMの新default browserで最終確認する。新UIを旧完走結果の画像へ付け替えず、表示修正と旧生ログ不変の系譜を保持する。7文台本とpending reviewを変更せず、音声合成・Remotion scene・renderは未実施。
