@@ -57,7 +57,16 @@ try{
   assert.equal(await page.locator('#notice').getAttribute('data-error'),'true');
   if(viewport.width===1440){
    await page.locator('#mode-compare').click();await page.locator('#run-comparison').click();
-   await page.waitForFunction(()=>!window.__pinLayoutUI.snapshot().running&&window.__pinLayoutUI.snapshot().result,undefined,{timeout:600000});
+   const interval=setInterval(()=>void page.locator('#compare-status').innerText().then(status=>console.log('Comparison status:',status)).catch(()=>{}),30000);
+   try{
+    await page.waitForFunction(()=>{const state=window.__pinLayoutUI.snapshot(),status=document.getElementById('compare-status').textContent;return !state.running&&(state.result||/比較開始に失敗|比較失敗|計測workerエラー|旧候補/.test(status));},undefined,{timeout:600000});
+    if(!(await snapshot()).result)throw new Error(await page.locator('#compare-status').innerText());
+   }catch(error){
+    const status=await page.locator('#compare-status').innerText();const state=await snapshot();
+    await writeFile(join(evidence,'comparison-failure.json'),JSON.stringify({error:error.message,status,progress:state.progress,running:state.running,errors,createdAt:new Date().toISOString()},null,2)+'\n');
+    await page.screenshot({path:join(evidence,'comparison-failure.png'),fullPage:true});
+    throw error;
+   }finally{clearInterval(interval);}
    const result=(await snapshot()).result;assert.equal(result.fullWindow,true);assert.equal(result.comparable,true);assert.equal(result.sourceEvidence.unchanged,true);assert.match(result.codeSHA,/^[a-f0-9]{64}$/);assert.equal(result.baseline.runs.length,6);assert.equal(result.candidate.runs.length,6);
    for(const group of [result.baseline,result.candidate])for(const run of group.runs){assert.equal(run.physical.reconciled,true);assert.equal(run.physical.uniqueOutcomeIds,true);assert.equal(run.physical.countsMatchOutcomes,true);if(run.ledger){assert.equal(run.ledger.check.reconciled,true);assert.equal(run.ledger.check.spentMatchesShots,true);}}
    assert.equal(await page.locator('#compare-rows tr').count(),12);
