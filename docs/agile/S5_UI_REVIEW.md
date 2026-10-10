@@ -41,3 +41,7 @@ PMの新固定browser `prototype/.cache/release/pin-layout-tool-attempt02/` はp
 UIの表「入賞」は発射＋排出待ちの合計、無入賞区間は発射中の実観測窓。finite位相.175の入賞21と発射観測窓の入賞20を混同しない。表「排出」は処理済み総数だったため、PM指示で`c306788`にて「処理済み（入賞含む）」へ改称。保存frameのfloat誤差には1e-8秒だけ許容し、指定12秒が保存11秒へ落ちるのを修正した。CPU生ログは不変、この表示修正の短確認はPM担当。
 
 raw操作録画は `prototype/reference-review/s5-2026-10-10/ui-video/` に保全。実DOMで基準→pin1移動→未定義地点拒否→保存→復元→同SHA再読込を実施。末尾の比較画面は未計測状態であり、完走結果を録ったとは扱わない。相対出力でclone rootのreference-reviewへ保存した原本を保持し、同bytesコピーと対応表copy-provenanceをprototype側へ保存。新台詞・dependent scene・合成・renderは未実施。
+
+## 保存形式補修に伴う証拠の世代
+
+旧ui/、ui-fresh-worker/、ui-video/とPM browser attempt02は、旧保存形式の実行履歴として保持する。跨環境でexact geometry SHAが変わる問題の補修後の保存互換性を、旧JSON成功だけで合格としない。新UIはformatVersion2と安定制約定義SHA、exact engine geometry SHAを区別し、geometry差だけなら警告付き読み込み、現在の制約不正・基準/配置/定義不一致なら拒否する。新短操作と録画は別v2フォルダへ取得する。7文台本は不変、音声承認待ちは継続する。
