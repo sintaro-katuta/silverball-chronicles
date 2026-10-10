@@ -29,3 +29,7 @@
 `4f2d8cc`：計測開始ごとにworkerを新規作成する。各trialで新しいsimulation moduleを読み込み、前後のraw SHA検証と古いworkerのmodule cacheを混同しない。
 
 `5057d9a`：配置変更・再計測・計測エラーで旧結果・条件・流路・時刻表示を消す。初期workerは再生app初期化後に作成する。実フレームの銀玉textureも本編と同じ物理半径に対応する表示倍率へ合わせる。今回の短UI証拠は07fe335に対応しており、この2修正の実動作は新固定PM browserの証拠で判定する。
+
+### キャンセル操作の追加検証
+
+`ui-fresh-worker/`に別世代の短検証を保存。両幅で実DOMの計測開始→編集へ戻る→基準復元を操作し、worker停止、result null、条件欄/再生選択肢空、時刻「未計測」をassertした。exit0・owned Chrome終了、UI/backend7ファイルの始終SHA一致。これは計測開始後のキャンセルと旧表示消去の確認であり、12条件が正常完走する証拠にはしない。
