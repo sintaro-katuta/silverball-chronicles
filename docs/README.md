@@ -4,6 +4,8 @@
 
 ## 主な入口
 
+- [パチンコ制作フロー](agile/PRODUCTION_FLOW.md)：企画・試作・演出同期・品質確認・受入の工程と成果物。
+
 - [PM要件と改善バックログ](agile/BACKLOG.md)
 - [スプリント計画・担当キュー](agile/SPRINTS.md)
 - [PM受け入れ記録](agile/PM_REVIEW.md)

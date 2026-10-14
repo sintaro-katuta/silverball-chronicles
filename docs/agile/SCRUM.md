@@ -1,5 +1,9 @@
 # スクラム運用
 
+## 制作工程（2026-10-15更新）
+
+対象と受入条件を合意した後は、[パチンコ制作フロー](PRODUCTION_FLOW.md)に従って企画・デザイン試作・構造試作・統合試作・品質確認・受入を進める。代表一本を通しで確認してから展開する。工程の出口は担当者の成果物確認とし、範囲内の修正・検証で工程ごとのユーザー再承認を要求しない。スプリント開始、音声台本の人間承認、本番公開の既存条件は維持する。対象の進行・集約方法は[スプリント計画](SPRINTS.md)に従う。
+
 ## 現在フェーズ：分離worktree統合中
 
 PMが最新 `origin/main` の `38b06d2`（既存効果音PR #1）から managed worktree `/Users/sintaro.katuta/.codex/worktrees/sprint-s01/silverball-chronicles` を作成し、local `sprint/S01` と `release/0.1.0` を準備した。原workspaceの全変更は保持し、必要source/docだけを3-way移送している。remoteの採用済みSEと、localの受け皿/図柄/ロード/演出/Agileを両方保持する。隔離版のCIは未実施で、原workspaceの候補成功を統合後SHAの成功へ流用しない。
