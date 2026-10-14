@@ -1,6 +1,6 @@
 import {pixelSurface,painter} from './pixel-primitives.js';
-import {traceBoardSilhouette} from './board-silhouette.js';
-export function createCabinetDecor(){return pixelSurface(1260,1680,c=>{
+import {traceBoardSilhouette,traceReferenceSilhouette,referenceDecorMask} from './board-silhouette.js';
+export function createCabinetDecor({referenceRails=false,railShape=null}={}){return pixelSurface(1260,1680,c=>{
  const d=painter(c);
  c.save();c.scale(3,3);c.translate(0,-130);
  c.beginPath();traceBoardSilhouette(c);
@@ -14,10 +14,20 @@ export function createCabinetDecor(){return pixelSurface(1260,1680,c=>{
  // Moulded blue-steel trim and gold inlays follow the rounded exterior.
  // This is rear decoration: it adds no contact surface to the ball routes.
  c.save();c.scale(3,3);c.translate(0,-130);
- c.translate(208,389);c.scale(.975,.978);c.translate(-208,-389);
- for(const [width,color] of [[8,'#071321'],[6,'#829aaa'],[4.5,'#254b72'],[1,'#d6bd7b']]){
-  c.beginPath();traceBoardSilhouette(c);c.lineWidth=width;c.strokeStyle=color;c.stroke();
- }
+ const drawInset=()=>{
+  c.save();c.translate(208,389);c.scale(.975,.978);c.translate(-208,-389);
+  for(const [width,color]of[[8,'#071321'],[6,'#829aaa'],[4.5,'#254b72'],[1,'#d6bd7b']]){
+   c.beginPath();traceBoardSilhouette(c);c.lineWidth=width;c.strokeStyle=color;c.stroke();
+  }c.restore();
+ };
+ if(referenceRails&&railShape){
+  const r=referenceDecorMask();
+  // Existing moulding outside scope retains its original drawing.
+  c.save();c.beginPath();c.rect(-100,-100,800,900);c.rect(r.x,r.y,r.width,r.height);c.clip('evenodd');drawInset();c.restore();
+  // Local frame is allowed only outside the actual outer rail exterior edge.
+  c.save();c.beginPath();c.rect(r.x,r.y,r.width,r.height);c.clip();
+  c.beginPath();c.rect(-100,-100,800,900);traceReferenceSilhouette(c,railShape);c.clip('evenodd');drawInset();c.restore();
+ }else drawInset();
  c.restore();
  // Small metallic crests are deliberately separate from pins and pockets.
  c.save();c.scale(3,3);c.translate(0,-130);
@@ -27,7 +37,7 @@ export function createCabinetDecor(){return pixelSurface(1260,1680,c=>{
   diamond(4,7,'#071321');diamond(3,6,'#c9ad68');diamond(1.8,4,'#326a96');diamond(.6,2,'#d7ecf4');
   c.restore();
  };
- crest(208,185,Math.PI/2);crest(28,388);crest(388,388);
+ crest(208,185,Math.PI/2);if(!referenceRails)crest(28,388);crest(388,388);
  crest(104,575,-.9);crest(312,576,.9);crest(208,592,Math.PI/2);
  // Crescent engraving at the foot of the bezel.
  for(const x of [185,231]){

@@ -1,0 +1,60 @@
+{
+  "fps": 30,
+  "defaults": {
+    "speaker": 3,
+    "speed": 1,
+    "pitch": 0,
+    "intonation": 1,
+    "volume": 1,
+    "gap_after": 0.2
+  },
+  "voices": {
+    "host": {
+      "speaker": 3
+    }
+  },
+  "lines": [
+    {
+      "id": "intro",
+      "voice": "host",
+      "text": "釘配置を、決められた地点で編集して比較する、開発用のローカルツールを作りました。",
+      "scene": "intro"
+    },
+    {
+      "id": "attributes",
+      "voice": "host",
+      "text": "現行の百一本を基準に、釘の番号や役割、半径と反発を保ったまま、移動先を選びます。",
+      "scene": "attributes"
+    },
+    {
+      "id": "constraints",
+      "voice": "host",
+      "text": "液晶や固定部材、重複する地点など、配置できない場所は理由を表示して変更を止めます。",
+      "scene": "constraints"
+    },
+    {
+      "id": "persistence",
+      "voice": "host",
+      "text": "配置案は保存して読み戻せます。基準との差分と配置の識別情報を確認できます。",
+      "scene": "persistence"
+    },
+    {
+      "id": "comparison",
+      "voice": "host",
+      "text": "基準と候補は、配置以外の条件をそろえて試射します。流路と入賞、入らない区間、排出後の残球を比べます。",
+      "scene": "comparison"
+    },
+    {
+      "id": "limitations",
+      "voice": "host",
+      "text": "良くなった点だけでなく、悪くなった点や未確認の条件も記録します。実機の再現や最適な配置を保証するものではありません。",
+      "scene": "limitations"
+    },
+    {
+      "id": "decision",
+      "voice": "host",
+      "text": "本編の釘配置は変えていません。ツールで比較した結果を見て、採用する配置を別に判断します。",
+      "scene": "decision"
+    }
+  ]
+}

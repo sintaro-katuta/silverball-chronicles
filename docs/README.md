@@ -1,8 +1,14 @@
 # プロジェクト資料
 
+- [Sprint 5のレビュー済み集約](agile/S5_REVIEWED_INTEGRATION_2026-10-14.md)
+
 仕様書、設計・移行資料、参考機種の調査、レビュー文書、動画の文字起こしをこのディレクトリにまとめています。元のプロジェクト階層を保ち、文書から実装や検証素材へリンクしています。
 
 ## 主な入口
+
+- [Sprint 5実行計画](agile/S5_PLAN.md)
+- [Sprint 5設計・検証/受入](agile/S5_ACCEPTANCE.md)：ローカル起動・manifest生成・portable V2配置JSON保存/復元・geometry警告・比較手順と未検証の対応。
+- [釘配置ツール要求](agile/PIN_LAYOUT_TOOL_PROPOSAL.md)
 
 - [Sprint 4実行計画](agile/S4_PLAN.md)
 - [Sprint 4受入台帳](agile/S4_ACCEPTANCE.md)

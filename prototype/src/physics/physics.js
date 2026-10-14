@@ -1,3 +1,4 @@
+import {collideSolidPolygon} from './solid-polygon-contact.js';
 import {pocketCrossing} from './pocket-sensor.js';
 // All positions are board-space pixels. Motion uses a single gravity/contact solver.
 export const BALL_RADIUS=4.6;
@@ -65,6 +66,34 @@ export function collideSegment(b,a,c,restitution=.57,surfaceVelocity={x:0,y:0},r
  const v=(b.vx-surfaceVelocity.x)*nx+(b.vy-surfaceVelocity.y)*ny;
  if(v>=0)return 0;b.vx-=(1+restitution)*v*nx;b.vy-=(1+restitution)*v*ny;return -v;
 }
+// Clipping a continuing model rail does not create a physical round end cap.
+// Only its original side surface outside the adopted picture interval remains.
+export function collideRailSegment(b,c){
+ if(c.excludeCapA||c.excludeCapB||c.excludedSurfaceYRange){
+  const dx=c.b.x-c.a.x,dy=c.b.y-c.a.y,len2=dx*dx+dy*dy;
+  const raw=((b.x-c.a.x)*dx+(b.y-c.a.y)*dy)/(len2||1);
+  if((c.excludeCapA&&raw<=0)||(c.excludeCapB&&raw>=1))return 0;
+  const u=Math.max(0,Math.min(1,raw)),px=c.a.x+u*dx,py=c.a.y+u*dy;
+  const ox=b.x-px,oy=b.y-py,d=Math.hypot(ox,oy);
+  const surfaceY=py+(d>1e-9?oy/d:dx/(Math.sqrt(len2)||1))*c.r;
+  const range=c.excludedSurfaceYRange;
+  if(range&&surfaceY>=range.min&&surfaceY<=range.max)return 0;
+ }
+ return collideSegment(b,c.a,c.b,c.restitution,undefined,c.r);
+}
+// Passive ideal check valve: finite capsule, accessible from the launch/back
+// plane, solid from the playfield/front plane. Hinged inertia is not modelled.
+export function collideNonReturnValve(b,c){
+ if(!b.leftLaunchPlane)return 0;
+ const dx=c.b.x-c.a.x,dy=c.b.y-c.a.y,len2=dx*dx+dy*dy,u=Math.max(0,Math.min(1,((b.x-c.a.x)*dx+(b.y-c.a.y)*dy)/(len2||1))),px=c.a.x+u*dx,py=c.a.y+u*dy,ox=b.x-px,oy=b.y-py,d=Math.hypot(ox,oy),reach=b.r+c.r;
+ if(d>=reach)return 0;
+ let nx=d>1e-9?ox/d:c.normal.x,ny=d>1e-9?oy/d:c.normal.y;
+ // After pair separation a front ball may overlap the rear half of the
+ // capsule. Resolve that penetration onto its accessible (front) face.
+ const side=nx*c.normal.x+ny*c.normal.y;if(side<0){nx-=2*side*c.normal.x;ny-=2*side*c.normal.y;}
+ b.x=px+nx*reach;b.y=py+ny*reach;
+ const v=b.vx*nx+b.vy*ny;if(v>=0)return 0;b.vx-=(1+c.restitution)*v*nx;b.vy-=(1+c.restitution)*v*ny;return -v;
+}
 function collidePin(b,p){
  const dx=b.x-p.x,dy=b.y-p.y,min=b.r+p.r;if(Math.abs(dx)>=min||Math.abs(dy)>=min)return false;const d=Math.hypot(dx,dy);
  if(d>=min)return false;
@@ -102,7 +131,7 @@ export class Physics {
  // so their downward motion must not trigger a false launch hold.
  canLaunch(){
  const {origin,outerWallX,innerWallX}=this.launcher;
- return !this.balls.some(b=>!b.dead&&(Math.hypot(b.x-origin.x,b.y-origin.y)<b.r+(this.ballRadius??BALL_RADIUS)+2||
+ return !this.balls.some(b=>!b.dead&&!(this.launchRailProfile==='reference-exit'&&this.separateLaunchPlane&&b.leftLaunchPlane)&&(Math.hypot(b.x-origin.x,b.y-origin.y)<b.r+(this.ballRadius??BALL_RADIUS)+2||
   (b.y>200&&b.y<680&&b.x>outerWallX&&b.x<innerWallX&&b.vy>=0)));
  }
  spawn(data,power=.56,angle=0){
@@ -134,10 +163,15 @@ export class Physics {
   }
  }
  }
+ resolveValveContact(b,c,predict=false){
+ const x=b.x,y=b.y,impulse=collideNonReturnValve(b,c);
+ if(!predict&&(x!==b.x||y!==b.y)&&this.nonReturnValve){this.nonReturnValve.reverseContacts++;this.nonReturnValve.lastReverse={time:this.time,ballId:b.id,x:b.x,y:b.y,impulse};}
+ return impulse;
+ }
  advanceBall(b,dt,{predict=false,game=null}={}){
- const previous={x:b.x,y:b.y};if(this.separateLaunchPlane&&b.launchExitCrossed&&!b.leftLaunchPlane){const e=this.launchExit,d=(b.x-e.a.x)*e.normal.x+(b.y-e.a.y)*e.normal.y;if(d>=b.r+e.railRadius)b.leftLaunchPlane=true;}b.vy+=GRAVITY*dt;b.x+=b.vx*dt;b.y+=b.vy*dt;
- for(const c of this.colliders){if(c.active===false||(c.playfieldOnly&&this.separateLaunchPlane&&!b.leftLaunchPlane))continue;const impulse=collideSegment(b,c.a,c.b,c.restitution,undefined,c.r);if(impulse&&!predict){b.contactCount++;b.lastContact=c.role;}}
- for(const c of [this.gate,this.rightChucker.scoop,this.rightChucker.cover]){if(c.active===false)continue;const impulse=collideSegment(b,c.a,c.b,c.restitution,undefined,c.r);if(impulse&&!predict){b.contactCount++;b.lastContact=c.role;}}
+ const previous={x:b.x,y:b.y};if(this.separateLaunchPlane&&b.launchExitCrossed&&!b.leftLaunchPlane){const e=this.launchExit,d=(b.x-e.a.x)*e.normal.x+(b.y-e.a.y)*e.normal.y;const v=this.nonReturnValve,valveClear=!v||b.nonReturnValveCrossed&&((b.x-v.a.x)*v.normal.x+(b.y-v.a.y)*v.normal.y)>=b.r+v.radius;if(d>=b.r+e.railRadius&&valveClear)b.leftLaunchPlane=true;}b.vy+=GRAVITY*dt;b.x+=b.vx*dt;b.y+=b.vy*dt;
+ for(const c of this.colliders){if(c.active===false||(c.playfieldOnly&&this.separateLaunchPlane&&!b.leftLaunchPlane))continue;const impulse=c.nonReturnValve?this.resolveValveContact(b,c,predict):c.shape==='solid-polygon'?collideSolidPolygon(b,c):collideRailSegment(b,c);if(impulse&&!predict){b.contactCount++;b.lastContact=c.role;}}
+ for(const c of [this.gate,this.rightChucker.scoop,this.rightChucker.cover]){if(c.active===false)continue;const impulse=collideRailSegment(b,c);if(impulse&&!predict){b.contactCount++;b.lastContact=c.role;}}
  this.resolvePins(b,{predict,game});
  for(const m of this.mechanisms){
   if(Math.hypot(b.x-m.x,b.y-m.y)>m.radius+b.r+2)continue;
@@ -147,12 +181,19 @@ export class Physics {
    if(impulse&&!predict){this.recordRole(b,'windmill');const torque=(b.x-m.x)*(oldVy-b.vy)-(b.y-m.y)*(oldVx-b.vx);m.omega=Math.max(-7,Math.min(7,m.omega+torque*.0005));m.lastHit=game?.time;game?.emit?.('mechanism',{kind:m.kind});}
   }
  }
+ if(this.nonReturnValve&&!b.leftLaunchPlane){
+  const v=this.nonReturnValve,signed=q=>(q.x-v.a.x)*v.normal.x+(q.y-v.a.y)*v.normal.y,d0=signed(previous),d1=signed(b);
+  if(d0<=0&&d1>0){const t=-d0/(d1-d0),x=previous.x+(b.x-previous.x)*t,y=previous.y+(b.y-previous.y)*t,dx=v.b.x-v.a.x,dy=v.b.y-v.a.y,u=((x-v.a.x)*dx+(y-v.a.y)*dy)/(dx*dx+dy*dy);
+   if(u>=0&&u<=1){b.nonReturnValveCrossed=true;if(!predict){v.forwardPasses++;v.lastForward={time:this.time,ballId:b.id,x,y};}}
+  }else if(d1<0)b.nonReturnValveCrossed=false;
+ }
  if(this.separateLaunchPlane&&this.launchExit&&!b.leftLaunchPlane){
   const e=this.launchExit,n=e.normal,signed=q=>(q.x-e.a.x)*n.x+(q.y-e.a.y)*n.y,d0=signed(previous),d1=signed(b);
   if(d0<=0&&d1>0){const t=-d0/(d1-d0),x=previous.x+(b.x-previous.x)*t,y=previous.y+(b.y-previous.y)*t,u=((x-e.a.x)*(e.b.x-e.a.x)+(y-e.a.y)*(e.b.y-e.a.y))/(e.width*e.width);
    if(u>=0&&u<=1)b.launchExitCrossed=true;
   }else if(d1<0)b.launchExitCrossed=false;
  }
+
  return previous;
  }
  predictArrival(ball,game=null){
@@ -204,21 +245,21 @@ export class Physics {
    }
    if(!b.dead&&b.y>675){const returned=Math.abs(b.x-this.returnOutlet.x)<=this.returnOutlet.w/2;if(returned){if(!b.extra){game.addStock?.(1,'returned');game.emit?.('return');}}else game.lose(b);this.recordOutcome(b,returned?'returned':'out');this.metrics[returned?'returned':'out']++;b.dead=true;}
   }
-  for(let i=0;i<this.balls.length;i++)for(let j=i+1;j<this.balls.length;j++)if(!this.balls[i].dead&&!this.balls[j].dead&&pairContact(this.balls[i],this.balls[j])){this.metrics.ballContacts++;this.balls[i].prediction=null;this.balls[j].prediction=null;}
+  for(let i=0;i<this.balls.length;i++)for(let j=i+1;j<this.balls.length;j++)if(!this.balls[i].dead&&!this.balls[j].dead&&!(this.launchRailProfile==='reference-exit'&&this.separateLaunchPlane&&!!this.balls[i].leftLaunchPlane!==!!this.balls[j].leftLaunchPlane)&&pairContact(this.balls[i],this.balls[j])){this.metrics.ballContacts++;this.balls[i].prediction=null;this.balls[j].prediction=null;}
   // Resolve static surfaces after dense-stream separation as well: otherwise
   // neighbouring balls can push one another through a thin guide into its body.
   if(this.separateLaunchPlane)for(const b of this.balls)if(!b.dead)for(let pass=0;pass<10;pass++){
    const x=b.x,y=b.y;this.resolvePins(b,{game});
    for(const c of this.colliders){
-    if(c.active===false||(!b.leftLaunchPlane&&!c.role.startsWith('launch-')))continue;
-    collideSegment(b,c.a,c.b,c.restitution,undefined,c.r);
+    if(c.active===false||((c.nonReturnValve||c.playfieldOnly)&&!b.leftLaunchPlane)||(!b.leftLaunchPlane&&!c.role.startsWith('launch-')))continue;
+    if(c.nonReturnValve)this.resolveValveContact(b,c);else if(c.shape==='solid-polygon')collideSolidPolygon(b,c);else collideRailSegment(b,c);
    }
    if(Math.hypot(b.x-x,b.y-y)<1e-9)break;
   }
   // Ball-pair separation can push a crowded barrel ball back into a wall.
   // Resolve those same physical surfaces again before the next integration step.
   for(const b of this.balls)if(!b.dead&&b.y>155&&b.x<45&&!(this.separateLaunchPlane&&b.leftLaunchPlane))for(const c of this.colliders){
-   if(c.role.startsWith('launch-')&&c.role!=='launch-kicker')collideSegment(b,c.a,c.b,c.restitution,undefined,c.r);
+   if(c.role.startsWith('launch-')&&c.role!=='launch-kicker'&&!c.playfieldOnly){if(c.shape==='solid-polygon')collideSolidPolygon(b,c);else if(c.nonReturnValve)this.resolveValveContact(b,c);else collideRailSegment(b,c);}
   }
   if(game.phase&&game.phase!=='playing')break;
  }
