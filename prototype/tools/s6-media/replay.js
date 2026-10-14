@@ -1,0 +1,21 @@
+import {mountBoard} from '../../src/pixi/board-runtime.js';
+const canvas=document.querySelector('#output'),ctx=canvas.getContext('2d');let boards=[],input;
+const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
+window.s6Review={canvas,async load(data){
+ if(!Array.isArray(data.cases)||(data.cases.length<1||data.cases.length>2))throw Error('Exactly two fresh S6 cases required');
+ if(data.cases.some(c=>!c.sourceSHA||!c.rawSHA||!c.flowOptions||c.run.replayFrames.length!==3601))throw Error('Missing fresh provenance/config/3601 actual frames');
+ const [a,b]=data.cases;if(b)for(let i=0;i<3601;i++){if(Math.abs(a.run.replayFrames[i].time-b.run.replayFrames[i].time)>1e-7)throw Error('Different trial times');}
+ input=data;const geometry=[];
+ for(const c of data.cases){const host=document.createElement('section');host.className='board';host.innerHTML='<div id="canvas"></div>';document.querySelector('.boards').append(host);let model;
+ const api=await mountBoard(host,{production:true,trialReplay:true,flowOptions:c.flowOptions,reviewHook:({model:m})=>model=m});api.setView('board');api.setSound(false);
+ const p=model.flow.physics;if(!equal(p.pins,c.run.pins))throw Error('Actual pin geometry differs from input');
+ boards.push({api,c});geometry.push({id:c.id,pins:p.pins,colliders:p.colliders,ballRadius:p.ballRadius,displayBallDiameter:p.displayBallDiameter,sourceSHA:c.sourceSHA,rawSHA:c.rawSHA});}
+ this.paint(0);return geometry;
+ },paint(index,{crop=null,note='同じ試射時刻の実座標を再生／本編への採用判定は別'}={}){
+ if(!input||!Number.isInteger(index)||index<0||index>1800)throw Error('Expected output index0..1800 at30fps');
+ ctx.fillStyle='#071421';ctx.fillRect(0,0,1280,1080);ctx.fillStyle='#fff';ctx.font='bold 32px sans-serif';ctx.fillText('左上の狙いを保ち、少数の釘だけを比較',30,48);ctx.font='20px sans-serif';ctx.fillText(note,30,85);
+ for(let i=0;i<boards.length;i++){const {api,c}=boards[i],f=c.run.replayFrames[index*2];api.applyTrialFrame(f);const x=24+i*632;ctx.fillStyle='#fff';ctx.font='bold 26px sans-serif';ctx.fillText(c.label,x,132);ctx.font='21px sans-serif';ctx.fillText(`試射 ${f.time.toFixed(2)}秒／開始条件 ${input.phase}`,x,169);const ca=api.canvas;
+ if(crop){const sx=ca.width/396,sy=ca.height/436;ctx.drawImage(ca,crop.x*sx,crop.y*sy,crop.w*sx,crop.h*sy,x,195,600,738);}else ctx.drawImage(ca,x,195,600,660.606);
+ ctx.font='22px sans-serif';ctx.fillStyle='#d4e8f3';ctx.fillText(`発射 ${f.spawned}／ヘソ ${f.counts.start}／返却 ${f.counts.returned}／残球 ${f.balls.length}`,x,978);}
+ ctx.fillStyle='#b4d0df';ctx.font='20px sans-serif';ctx.fillText('半径・移動量はシミュレーション単位。実寸mmは未校正。自然なばらつきは許容。',30,1045);
+ },still(frameIndex){const {api,c}=boards[0],f=c.run.replayFrames[frameIndex];api.applyTrialFrame(f);const ca=api.canvas,rx=ca.width/396,ry=ca.height/436;ctx.fillStyle='#071421';ctx.fillRect(0,0,1280,1080);ctx.fillStyle='#fff';ctx.font='bold 31px sans-serif';ctx.fillText('S6 新基準：左上狙い・未採用0.14の実験対照',28,45);ctx.font='20px sans-serif';ctx.fillText(`実試射 ${f.time.toFixed(3)}秒／元101釘・壁とレール・半径1.8・重力反発は保持`,28,84);ctx.drawImage(ca,28,130,594,654);const crops=[{x:25,y:60,w:90,h:125,label:'左上の狙い',dx:650,dy:165,dw:245,dh:340},{x:50,y:312,w:50,h:42,label:'候補対象：釘2',dx:930,dy:165,dw:310,dh:260},{x:180,y:360,w:50,h:36,label:'候補対象：釘91・92',dx:850,dy:590,dw:360,dh:260}];for(const q of crops){ctx.fillStyle='#fff';ctx.font='23px sans-serif';ctx.fillText(q.label,q.dx,q.dy-16);ctx.drawImage(ca,q.x*rx,q.y*ry,q.w*rx,q.h*ry,q.dx,q.dy,q.dw,q.dh);for(const pin of c.run.pins.filter(p=>[2,91,92].includes(p.id))){const x=pin.x-12,y=pin.y-166;if(x>=q.x&&x<q.x+q.w&&y>=q.y&&y<q.y+q.h){const px=q.dx+(x-q.x)/q.w*q.dw,py=q.dy+(y-q.y)/q.h*q.dh;ctx.strokeStyle='#ffde75';ctx.lineWidth=2;ctx.beginPath();ctx.arc(px,py,10,0,Math.PI*2);ctx.stroke();ctx.fillStyle='#fff';ctx.font='19px sans-serif';ctx.fillText(String(pin.id),px+12,py-10);}}}ctx.fillStyle='#d4e8f3';ctx.font='25px sans-serif';ctx.fillText(`同時刻：発射${f.spawned}／ヘソ${f.counts.start}／一般${f.counts.normal}／排出${f.counts.out}／返却${f.counts.returned}／残球${f.balls.length}`,28,920);ctx.font='22px sans-serif';ctx.fillText('黄色の囲みは候補対象の位置注釈。釘はまだ動かしていません。',28,969);ctx.fillText('これは実記録の静止確認です。全200球の分布・終端結果は別JSON。実寸mm未校正。',28,1012);return {time:f.time,counts:f.counts,spawned:f.spawned,inFlight:f.balls.length};},dispose(){for(const b of boards)b.api.dispose();boards=[];}};
