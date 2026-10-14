@@ -340,3 +340,7 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [S3：リリースノート草稿](agile/S3_RELEASE_NOTES_DRAFT.md)：受入済み改善・検証中の見た目・公開前残件。
 
 - [CD有効化前の確認](agile/CD_ENABLE_REVIEW.md)：対象・キー名・起点と未確認の接続/時間予算。
+
+- [S6：承認済み実行計画](agile/S6_PLAN.md)：#29の条件整理と#23の固定2案比較。
+- [盤面条件と採用状態](agile/BOARD_CONDITIONS.md)：本編・内部比較・不採用・公開確認範囲を区別します。
+- [S6：受入記録](agile/S6_ACCEPTANCE.md)：新しい観測・画面・動画・CIの判定を記録します。
