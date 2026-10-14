@@ -63,3 +63,15 @@ export const LOWER_RIGHT_SOURCE=[
 
 // Polygonal resin boss beside the electric starter; it is not a fourth nail.
 export const ELECTRIC_DEFLECTOR_SOURCE=[[614,840],[623,836],[631,842],[629,849],[622,858],[616,851],[614,840]];
+
+// Attempt06 local source-image transcription. Approximate pixel observations,
+// not measured machine dimensions or a verified function/depth of the black/white part.
+export const LAUNCH_EXIT_CONTACT_SOURCE=[[110,385],[114,375],[118,365],[123,350],[128,340],[134,330],[141,319],[150,318],[160,303],[168,288]];
+// Approximate visible right edge of the grey band, separately from inferred contact centre.
+export const LAUNCH_EXIT_RAIL_EDGE_SOURCE=[[110,390],[114,380],[118,370],[122,360],[126,350],[132,340],[137,330]];
+export const LAUNCH_EXIT_VISIBLE_SOURCE=[[156,270],[157,280],[161,280],[168,288],[160,303],[150,318],[141,319]];
+export const LAUNCH_EXIT_WHITE_MARK_SOURCE={x:161,y:287};
+
+// User-identified non-return component; visible stem-to-shoulder trace is an
+// assumed closed contact face, distinct from the observational exit plane.
+export const LAUNCH_VALVE_CONTACT_SOURCE=[[168,288],[156,270]];

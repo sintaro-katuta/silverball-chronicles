@@ -1,5 +1,10 @@
 import {createSilverBallTexture,SILVER_BALL_SIZE} from './silver-ball.js';
 const BALL_SCALE=19/SILVER_BALL_SIZE;
+// Trial-only nominal sprite frame matches the requested contact diameter.
+// The component container is authored at two pixels per board unit (scale .5).
+const ballScale=physics=>physics.displayBallDiameter!==undefined
+ ?physics.displayBallDiameter*2/SILVER_BALL_SIZE
+ :BALL_SCALE*(physics.displayBallScale??1);
 import {MOUTH,panelPose,ATTACKER_SCALE} from './attacker-panel.js';
 import {Container,Sprite,Texture} from 'pixi.js';
 
@@ -115,9 +120,9 @@ export class AttackerView {
  render(){const open=this.physics.gate.open;this.gates.open.visible=false;this.gates.closed.visible=false;
   const canvas=this.movingGate.texture.source.resource,c=canvas.getContext('2d');c.clearRect(0,0,256,320);
   c.save();this.paintGate(painter(c),open,{a:this.point(this.physics.gate.panel?.freeA??this.physics.gate.a),b:this.point(this.physics.gate.panel?.freeB??this.physics.gate.b)});c.restore();this.movingGate.visible=true;this.movingGate.texture.source.update();const alive=new Set();
-  for(const b of this.physics.balls){alive.add(b.id);let s=this.balls.get(b.id);if(!s){s=new Sprite(this.ballTexture);s.anchor.set(.5);s.scale.set(BALL_SCALE*(this.physics.displayBallScale??1));this.root.addChild(s);this.balls.set(b.id,s);}const pt=this.point(b);s.position.set(pt.x,pt.y);s.visible=pt.x>=-10&&pt.x<=266&&pt.y>=-10&&pt.y<=330;}
+  for(const b of this.physics.balls){alive.add(b.id);let s=this.balls.get(b.id);if(!s){s=new Sprite(this.ballTexture);s.anchor.set(.5);s.scale.set(ballScale(this.physics));this.root.addChild(s);this.balls.set(b.id,s);}const pt=this.point(b);s.position.set(pt.x,pt.y);s.visible=pt.x>=-10&&pt.x<=266&&pt.y>=-10&&pt.y<=330;}
   const receipts=this.physics.attackerReceipts??[],seen=new Set();
-  for(const receipt of receipts){const t=(this.physics.time-receipt.time)/.22;if(t<0||t>=1)continue;seen.add(receipt.id);let s=this.intakeSprites.get(receipt.id);if(!s){s=new Sprite(this.ballTexture);s.anchor.set(.5);s.scale.set(BALL_SCALE*(this.physics.displayBallScale??1));this.root.addChild(s);this.intakeSprites.set(receipt.id,s);}const q=this.point({x:receipt.x,y:receipt.y+(this.physics.gate.panel.hingeA.y-5-receipt.y)*t});s.position.set(q.x,q.y);s.scale.set(BALL_SCALE*(this.physics.displayBallScale??1)*(1-.35*t));s.alpha=1-t*t;}
+  for(const receipt of receipts){const t=(this.physics.time-receipt.time)/.22;if(t<0||t>=1)continue;seen.add(receipt.id);let s=this.intakeSprites.get(receipt.id);if(!s){s=new Sprite(this.ballTexture);s.anchor.set(.5);s.scale.set(ballScale(this.physics));this.root.addChild(s);this.intakeSprites.set(receipt.id,s);}const q=this.point({x:receipt.x,y:receipt.y+(this.physics.gate.panel.hingeA.y-5-receipt.y)*t});s.position.set(q.x,q.y);s.scale.set(ballScale(this.physics)*(1-.35*t));s.alpha=1-t*t;}
   for(const [id,s]of this.intakeSprites)if(!seen.has(id)){s.destroy();this.intakeSprites.delete(id);}
   for(const[id,s]of this.balls)if(!alive.has(id)){s.destroy();this.balls.delete(id);}
  }
