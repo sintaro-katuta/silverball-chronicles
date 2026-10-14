@@ -1,0 +1,334 @@
+{
+  "scope": "S6 finite internal mechanical comparison. Not product adoption or real-machine probability.",
+  "measuredAt": "2026-10-15",
+  "baseGitCommit": "c7aadca2dce1c40f699be8d030eb6ebb67da6dc4",
+  "measurementGitCommit": "48abce4",
+  "machineSourceSHA256": "ede02e712dbf3b4a735a3e367016914ee39848fe3fa37ac039589dc2ec0b6e36",
+  "sourceInventoryFiles": 173,
+  "environment": {
+    "node": "26.11.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "conditions": {
+    "normalPower": 0.14,
+    "hesoMouthWidth": 12,
+    "ballRadius": 1.8,
+    "pins": 101,
+    "launchRailProfile": "reference-exit",
+    "leftAdmissionGuides": false,
+    "fireInterval": 0.6,
+    "step": 0.008333333333333333,
+    "short": {
+      "fireSeconds": 120,
+      "drainSeconds": 45,
+      "phases": [
+        0
+      ]
+    },
+    "long": {
+      "fireSeconds": 300,
+      "drainSeconds": 45,
+      "phases": [
+        0.175,
+        0.35,
+        0.525
+      ]
+    }
+  },
+  "rows": [
+    {
+      "stage": "short",
+      "path": "short-baseline/baseline-phase-0.json",
+      "rawSHA256": "c1c0fa31bac4fa723b6f87c3add5dd3783c7a11ccab843b65b2f0d03c24499c9",
+      "id": "baseline",
+      "phase": 0,
+      "moves": [],
+      "shots": 200,
+      "counts": {
+        "fuzu": 0,
+        "normal": 2,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 198,
+        "returned": 0
+      },
+      "remaining": 0,
+      "stalled": 0,
+      "maxNoHesoSeconds": 119.99999999980643,
+      "lcd": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      }
+    },
+    {
+      "stage": "short",
+      "path": "short-candidates/road-pin2-phase-0.json",
+      "rawSHA256": "5839d34ebaa5d0f814e7d51c57292f2dfcf2c6f12b5260622f3af997454d6d98",
+      "id": "road-pin2",
+      "phase": 0,
+      "moves": [
+        {
+          "pinId": 2,
+          "dx": 0,
+          "dy": 0.25
+        }
+      ],
+      "shots": 200,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 2,
+        "rush": 0,
+        "bonus": 0,
+        "out": 198,
+        "returned": 0
+      },
+      "remaining": 0,
+      "stalled": 0,
+      "maxNoHesoSeconds": 62.87619047612669,
+      "lcd": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      }
+    },
+    {
+      "stage": "short",
+      "path": "short-candidates/heso-pair-phase-0.json",
+      "rawSHA256": "c53a4616055646ddbfc66fcf5b28508633978c11af59ce4d18e899eba6c78777",
+      "id": "heso-pair",
+      "phase": 0,
+      "moves": [
+        {
+          "pinId": 91,
+          "dx": -0.25,
+          "dy": 0
+        },
+        {
+          "pinId": 92,
+          "dx": 0.25,
+          "dy": 0
+        }
+      ],
+      "shots": 200,
+      "counts": {
+        "fuzu": 0,
+        "normal": 2,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 198,
+        "returned": 0
+      },
+      "remaining": 0,
+      "stalled": 0,
+      "maxNoHesoSeconds": 119.99999999980643,
+      "lcd": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      }
+    },
+    {
+      "stage": "long",
+      "path": "long/baseline-phase-0.175.json",
+      "rawSHA256": "fb2d77674a861917d75f2aa317f76c0ee5f6ae4a07f50780ead39da365236903",
+      "id": "baseline",
+      "phase": 0.175,
+      "moves": [],
+      "shots": 500,
+      "counts": {
+        "fuzu": 0,
+        "normal": 10,
+        "start": 13,
+        "rush": 0,
+        "bonus": 0,
+        "out": 476,
+        "returned": 1
+      },
+      "remaining": 0,
+      "stalled": 0,
+      "maxNoHesoSeconds": 84.58452380941063,
+      "lcd": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      }
+    },
+    {
+      "stage": "long",
+      "path": "long/baseline-phase-0.35.json",
+      "rawSHA256": "332965711f40a63675de48e6c6dd6cb1a82601875bf186e85dc4d504d8515581",
+      "id": "baseline",
+      "phase": 0.35,
+      "moves": [],
+      "shots": 500,
+      "counts": {
+        "fuzu": 0,
+        "normal": 5,
+        "start": 5,
+        "rush": 0,
+        "bonus": 0,
+        "out": 488,
+        "returned": 2
+      },
+      "remaining": 0,
+      "stalled": 0,
+      "maxNoHesoSeconds": 130.65044642860445,
+      "lcd": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      }
+    },
+    {
+      "stage": "long",
+      "path": "long/baseline-phase-0.525.json",
+      "rawSHA256": "a46433a232ef15a7cb44b6db6f567520e22579dcea708fffa173322eec5e3241",
+      "id": "baseline",
+      "phase": 0.525,
+      "moves": [],
+      "shots": 500,
+      "counts": {
+        "fuzu": 0,
+        "normal": 11,
+        "start": 8,
+        "rush": 0,
+        "bonus": 0,
+        "out": 480,
+        "returned": 1
+      },
+      "remaining": 0,
+      "stalled": 0,
+      "maxNoHesoSeconds": 80.92023809528159,
+      "lcd": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      }
+    },
+    {
+      "stage": "long",
+      "path": "long/road-pin2-phase-0.175.json",
+      "rawSHA256": "6d32a21c0109d041809ddb82f73bd747346212310d364e936fda94ff8b57ab5f",
+      "id": "road-pin2",
+      "phase": 0.175,
+      "moves": [
+        {
+          "pinId": 2,
+          "dx": 0,
+          "dy": 0.25
+        }
+      ],
+      "shots": 500,
+      "counts": {
+        "fuzu": 0,
+        "normal": 8,
+        "start": 13,
+        "rush": 0,
+        "bonus": 0,
+        "out": 478,
+        "returned": 1
+      },
+      "remaining": 0,
+      "stalled": 0,
+      "maxNoHesoSeconds": 84.58452380941063,
+      "lcd": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      }
+    },
+    {
+      "stage": "long",
+      "path": "long/road-pin2-phase-0.35.json",
+      "rawSHA256": "f9bbe5c85375be343aca96dc226e14cddb3884041e1015f73d9bd71b77e5f31c",
+      "id": "road-pin2",
+      "phase": 0.35,
+      "moves": [
+        {
+          "pinId": 2,
+          "dx": 0,
+          "dy": 0.25
+        }
+      ],
+      "shots": 500,
+      "counts": {
+        "fuzu": 0,
+        "normal": 8,
+        "start": 7,
+        "rush": 0,
+        "bonus": 0,
+        "out": 483,
+        "returned": 2
+      },
+      "remaining": 0,
+      "stalled": 0,
+      "maxNoHesoSeconds": 73.20238095223795,
+      "lcd": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      }
+    },
+    {
+      "stage": "long",
+      "path": "long/road-pin2-phase-0.525.json",
+      "rawSHA256": "efef2684010e1f289c2e6b34323336b35aad7a03ba4cbb0f385df2325f32ffbe",
+      "id": "road-pin2",
+      "phase": 0.525,
+      "moves": [
+        {
+          "pinId": 2,
+          "dx": 0,
+          "dy": 0.25
+        }
+      ],
+      "shots": 500,
+      "counts": {
+        "fuzu": 0,
+        "normal": 8,
+        "start": 9,
+        "rush": 0,
+        "bonus": 0,
+        "out": 482,
+        "returned": 1
+      },
+      "remaining": 0,
+      "stalled": 0,
+      "maxNoHesoSeconds": 104.06547619046721,
+      "lcd": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      }
+    }
+  ],
+  "independentAudit": "PASS: source173, original101 attributes, fixed shapes, count events, gaps and per-phase aim independently reconciled.",
+  "pmDecision": "Comparison accepted; road-pin2 retained as a reproducible internal improvement candidate. One phase maximum no-heso gap worsened and returned4/general26to24 retained. Product application outside S6 scope; no adoption or deployment.",
+  "video": "script approval and final media pending",
+  "ci": "not yet accepted",
+  "localUnit": {
+    "tests": 547,
+    "pass": 547,
+    "fail": 0,
+    "skipped": 0,
+    "sourceSHA256": "b161b7128e247638a3ae1fcaec444ca7d079cba5d3dd23d686c4e60d249081c5",
+    "sourceInventoryFiles": 547,
+    "node": "26.11.0",
+    "elapsedWallMs": 171821,
+    "scope": "S6 working tree, including the four media helpers; PR CI remains separate."
+  }
+}

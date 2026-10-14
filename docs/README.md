@@ -344,3 +344,4 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [S6：承認済み実行計画](agile/S6_PLAN.md)：#29の条件整理と#23の固定2案比較。
 - [盤面条件と採用状態](agile/BOARD_CONDITIONS.md)：本編・内部比較・不採用・公開確認範囲を区別します。
 - [S6：受入記録](agile/S6_ACCEPTANCE.md)：新しい観測・画面・動画・CIの判定を記録します。
+- [S6：釘2案の比較結果](agile/S6_RESULTS.md)：全9試射の結果、悪化した条件、内部候補と本編採用の区別、再確認手順。
