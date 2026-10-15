@@ -32,7 +32,10 @@ try {
    await page.locator('#playMachine').click();
    await page.locator('#intro-skip').click();
    await page.locator('#controls-toggle').click();
-   assert.equal(Number(await page.locator('#power-control').inputValue()), 0.20);
+   assert.equal(Number(await page.locator('#power-control').inputValue()), 0.18);
+   assert.equal(await page.locator('#power-label').innerText(), '0.18');
+   assert.deepEqual(await page.locator('#power-control').evaluate(el => [el.min, el.max, el.step]), ['0.18', '0.30', '0.01']);
+   await page.waitForFunction(() => (__session.snapshot()?.leftRoutes?.byPower?.['0.18']?.tracked ?? 0) > 0);
    assert.equal(await page.evaluate(() => window.__session.snapshot().pockets.find(p => p.kind === 'start').w), 20);
    await page.locator('#menu').click();
    assert.equal(await page.evaluate(() => window.__session.snapshot().paused), true);
