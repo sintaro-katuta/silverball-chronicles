@@ -1,8 +1,19 @@
 # プロジェクト資料
 
+- [Sprint 5のレビュー済み集約](agile/S5_REVIEWED_INTEGRATION_2026-10-14.md)
+
 仕様書、設計・移行資料、参考機種の調査、レビュー文書、動画の文字起こしをこのディレクトリにまとめています。元のプロジェクト階層を保ち、文書から実装や検証素材へリンクしています。
 
 ## 主な入口
+
+- [Sprint 5実行計画](agile/S5_PLAN.md)
+- [Sprint 5設計・検証/受入](agile/S5_ACCEPTANCE.md)：ローカル起動・manifest生成・portable V2配置JSON保存/復元・geometry警告・比較手順と未検証の対応。
+- [釘配置ツール要求](agile/PIN_LAYOUT_TOOL_PROPOSAL.md)
+
+- [Sprint 4実行計画](agile/S4_PLAN.md)
+- [Sprint 4受入台帳](agile/S4_ACCEPTANCE.md)
+- [CI工程の計測・原因調査](agile/CI_TIMING_INVESTIGATION.md)
+- [PR説明動画の運用](agile/PR_VIDEO_GUIDE.md)
 
 - [パチンコ制作フロー](agile/PRODUCTION_FLOW.md)：企画・試作・演出同期・品質確認・受入の工程と成果物。
 
@@ -331,3 +342,12 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [S3：リリースノート草稿](agile/S3_RELEASE_NOTES_DRAFT.md)：受入済み改善・検証中の見た目・公開前残件。
 
 - [CD有効化前の確認](agile/CD_ENABLE_REVIEW.md)：対象・キー名・起点と未確認の接続/時間予算。
+
+- [S6：承認済み実行計画](agile/S6_PLAN.md)：#29の条件整理と#23の固定2案比較。
+- [盤面条件と採用状態](agile/BOARD_CONDITIONS.md)：本編・内部比較・不採用・公開確認範囲を区別します。
+- [S6：受入記録](agile/S6_ACCEPTANCE.md)：新しい観測・画面・動画・CIの判定を記録します。
+- [S6：釘2案の比較結果](agile/S6_RESULTS.md)：全9試射の結果、悪化した条件、内部候補と本編採用の区別、再確認手順。
+
+- [釘の参照記事と現在配置の対応](agile/PIN_REFERENCE_NOTE_2026-10-15.md)：6画像の読み方、釘の部位と番号、次の比較に使う仮説。
+- [S6追加：参照記事からの3案比較](agile/S6_REFERENCE_ADJUSTMENT_PLAN.md)：同スプリント追加承認、2対照と3案・経路観測・選別と終了規則。
+- [S6追加3案の結果](agile/S6_REFERENCE_RESULTS.md)：記事由来の寄り・道末端・ジャンプ相当の実装と全5試射、新3案不採用と理由。

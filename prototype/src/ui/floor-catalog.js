@@ -6,7 +6,7 @@ export const FLOOR_ONE = [
     pegSeed: 101 + i,
     model: '月影機関',
     kind: 'main',
-    note: '遊技試作あり・個体ごとに釘配置を調整'
+    note: '月影機関の1〜5番台は、釘配置が共通です。'
   })),
   { id: 'dummy-06', name: '月影の境界', unit: 6, model: 'ダミー機種', kind: 'dummy', note: '仮機種' },
   { id: 'dummy-07', name: '星渡りの旅人', unit: 7, model: 'ダミー機種', kind: 'dummy', note: '仮機種' },

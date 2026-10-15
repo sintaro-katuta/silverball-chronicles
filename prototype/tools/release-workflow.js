@@ -58,26 +58,38 @@ export async function startPreview(root,{env=process.env}={}){
  try{const deadline=Date.now()+30000;while(Date.now()<deadline){if(launchError)throw launchError;if(child.exitCode!==null||child.signalCode!==null)throw new Error('Release preview exited before readiness');try{const response=await fetch(url,{signal:AbortSignal.timeout(1000)});if(response.ok)return {url,close};}catch{}await new Promise(accept=>setTimeout(accept,100));}throw new Error('Release preview readiness timeout');}
  catch(error){await close();throw error;}
 }
-function assertManifest(manifest){
- if(manifest?.schema!==1||manifest.status!=='verified'||manifest.target!==targetName||! /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(manifest.candidateId??'')||!Array.isArray(manifest.assets)||!manifest.assets.length||!/^([a-f0-9]{64})$/.test(manifest.source?.sha256??'')||!/^([a-f0-9]{64})$/.test(manifest.configSha256??''))throw new Error('Invalid release candidate manifest');
+function assertManifest(manifest,expectedStatus='verified'){
+ if(manifest?.schema!==1||manifest.status!==expectedStatus||manifest.target!==targetName||! /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/.test(manifest.candidateId??'')||!Array.isArray(manifest.assets)||!manifest.assets.length||!/^([a-f0-9]{64})$/.test(manifest.source?.sha256??'')||!/^([a-f0-9]{64})$/.test(manifest.configSha256??''))throw new Error('Invalid release candidate manifest');
  const paths=new Set();for(const file of manifest.assets){if(typeof file.path!=='string'||file.path.startsWith('/')||file.path.includes('\\')||file.path.split('/').some(part=>!part||part==='.'||part==='..')||paths.has(file.path)||!Number.isSafeInteger(file.size)||file.size<0||!/^[a-f0-9]{64}$/.test(file.sha256))throw new Error('Invalid release asset record');paths.add(file.path);}
  if(!paths.has('index.html'))throw new Error('Release candidate has no index.html');
 }
-export async function verifyCandidate(root){
+export async function verifyCandidate(root,{expectedStatus='verified'}={}){
+ if(!['verified','browser-verified'].includes(expectedStatus))throw new Error('Invalid candidate validation status');
  let manifest;try{manifest=JSON.parse(await readFile(candidatePath(root),'utf8'));}catch(error){throw new Error(`Release candidate unavailable: ${error.message}`);}
- assertManifest(manifest);
+ assertManifest(manifest,expectedStatus);
  const assets=await inventory(candidateAssets(root,manifest.candidateId));if(JSON.stringify(assets)!==JSON.stringify(manifest.assets))throw new Error('Release assets changed: file set, size or SHA256 mismatch');
  const source=await sourceFingerprint(root);if(source.sha256!==manifest.source.sha256)throw new Error('Release source inputs changed since verification');
  const target=await readTarget(root);if(target.sha256!==manifest.configSha256||JSON.stringify(target)!==JSON.stringify(manifest.targetConfiguration))throw new Error('Release target configuration changed');
  return manifest;
 }
-export async function prepareRelease(root,{run=runCommand,preview=startPreview,now=()=>new Date().toISOString(),issues=[]}={}){
- const path=candidatePath(root);await mkdir(dirname(path),{recursive:true});await rm(path,{force:true});const candidateId=randomUUID(),assetsDir=candidateAssets(root,candidateId);let server,temp;const checkOutputs=[];
+// Wall-clock phase evidence is private, excluded from source/asset inventories.
+export async function phaseRecorder(root,{clock=()=>performance.now(),now=()=>new Date().toISOString(),kind='prepare'}={}){
+ if(!['prepare','unit'].includes(kind))throw new Error('Invalid timing kind');
+ const path=join(root,`prototype/.cache/release/timings/${kind}.json`);await mkdir(dirname(path),{recursive:true});
+ const evidence={schema:1,startedAt:now(),node:process.version,runId:process.env.GITHUB_RUN_ID??null,runAttempt:process.env.GITHUB_RUN_ATTEMPT??null,phases:[]};
+ const save=async()=>{const temp=`${path}.tmp`;await writeFile(temp,JSON.stringify(evidence,null,2)+'\n');await rename(temp,path);};await save();
+ return async(label,operation)=>{const start=clock(),record={label,startedAt:now(),status:'running'};evidence.phases.push(record);await save();console.log(`Release phase start: ${label}`);
+  let operationError;try{const result=await operation();record.status='success';return result;}catch(error){operationError=error;record.status='failure';throw error;}
+  finally{record.elapsedWallMs=Math.max(0,clock()-start);record.completedAt=now();try{await save();}catch(error){if(!operationError)throw error;console.error(`Phase evidence write failed after ${label}: ${error.message}`);}console.log(`Release phase end: ${label} ${record.status} ${record.elapsedWallMs.toFixed(1)}ms`);}
+ };
+}
+export async function prepareRelease(root,{run=runCommand,preview=startPreview,now=()=>new Date().toISOString(),issues=[],checksMode='all'}={}){
+ const path=candidatePath(root);await mkdir(dirname(path),{recursive:true});await rm(path,{force:true});const candidateId=randomUUID(),assetsDir=candidateAssets(root,candidateId);let server,temp;const checkOutputs=[];const phase=await phaseRecorder(root,{now});if(!['all','browser'].includes(checksMode))throw new Error('Invalid check mode');
  try{const before=await sourceFingerprint(root),target=await readTarget(root),checks=[];
-  for(const script of ['test','build:release']){console.log(`Release check: ${script}`);checkOutputs.push(await run('npm',['run',script],{cwd:root}));checks.push(script);}
-  const built=await inventory(outputPath(root));server=await preview(root);
-  for(const args of [['--prefix','prototype','run','test:release'],['run','test:browser']]){checkOutputs.push(await run('npm',args,{cwd:root,env:{...process.env,REVIEW_URL:server.url}}));checks.push(args.join(' '));}
-  checkOutputs.push(await run(process.execPath,['prototype/tests/feedback.browser.mjs'],{cwd:root,env:{...process.env,REVIEW_URL:server.url,FEEDBACK_OUTPUT:join(dirname(assetsDir),'feedback/')+ '/'}}));checks.push('feedback.browser.mjs');
+  for(const script of (checksMode==='all'?['test','build:release']:['build:release'])){console.log(`Release check: ${script}`);checkOutputs.push(await phase(script,()=>run('npm',['run',script],{cwd:root})));checks.push(script);}
+  const built=await inventory(outputPath(root));server=await phase('preview readiness',()=>preview(root));
+  for(const args of [['--prefix','prototype','run','test:release'],['run','test:browser']]){checkOutputs.push(await phase(args.join(' '),()=>run('npm',args,{cwd:root,env:{...process.env,REVIEW_URL:server.url}})));checks.push(args.join(' '));}
+  checkOutputs.push(await phase('feedback.browser.mjs',()=>run(process.execPath,['prototype/tests/feedback.browser.mjs'],{cwd:root,env:{...process.env,REVIEW_URL:server.url,FEEDBACK_OUTPUT:join(dirname(assetsDir),'feedback/')+ '/'}})));checks.push('feedback.browser.mjs');
   const assets=await inventory(outputPath(root));if(JSON.stringify(assets)!==JSON.stringify(built))throw new Error('Release assets changed during browser verification');
   const source=await sourceFingerprint(root);if(source.sha256!==before.sha256)throw new Error('Release source inputs changed during preparation');
   const commit=(await run('git',['rev-parse','HEAD'],{cwd:root})).trim(),dirtyStatus=await run('git',['status','--porcelain=v1'],{cwd:root});
@@ -85,9 +97,9 @@ export async function prepareRelease(root,{run=runCommand,preview=startPreview,n
   await writeFile(join(dirname(assetsDir),'checks.log'),checkOutputs.join('\n'));
   const npmVersion=(await run('npm',['--version'],{cwd:root})).trim(),versions={};for(const name of ['vite','wrangler','@playwright/test']){try{versions[name]=JSON.parse(await readFile(join(root,'prototype/node_modules',name,'package.json'),'utf8')).version;}catch{versions[name]=null;}}
   const browserVersion=checkOutputs.join('\n').match(/Chrome: ([^\r\n]+)/)?.[1]??null;
-  const manifest={schema:1,status:'verified',candidateId,issueNumbers:issues,logPath:`prototype/.cache/release/candidates/${candidateId}/checks.log`,createdAt:now(),target:targetName,targetConfiguration:target,git:{commit,dirty:!!dirtyStatus.trim(),status:dirtyStatus.trimEnd()},source,configSha256:target.sha256,conditions:{node:process.version,npm:npmVersion,chrome:browserVersion,packages:versions,platform:process.platform,url:server.url,viewports:['390x844','1440x900'],checks,notes:'Local Chrome emulation; physical devices and audio listening unverified'},assets};
+  const manifest={schema:1,status:checksMode==='all'?'verified':'browser-verified',candidateId,issueNumbers:issues,logPath:`prototype/.cache/release/candidates/${candidateId}/checks.log`,createdAt:now(),target:targetName,targetConfiguration:target,git:{commit,dirty:!!dirtyStatus.trim(),status:dirtyStatus.trimEnd()},source,configSha256:target.sha256,conditions:{node:process.version,npm:npmVersion,chrome:browserVersion,packages:versions,platform:process.platform,url:server.url,viewports:['390x844','1440x900'],checks,notes:'Local Chrome emulation; physical devices and audio listening unverified'},assets};
   await server.close();server=null;temp=`${path}.${randomUUID()}.tmp`;await writeFile(temp,JSON.stringify(manifest,null,2)+'\n');await rename(temp,path);temp=null;
-  console.log(`Verified local release candidate: ${path}`);return manifest;
+  if(manifest.status==='verified')console.log(`Verified local release candidate: ${path}`);else console.log(`Browser-verified candidate pending unit aggregation: ${path}`);return manifest;
  }catch(error){await rm(path,{force:true});await rm(dirname(assetsDir),{recursive:true,force:true});throw error;}finally{if(server)await server.close();if(temp)await rm(temp,{force:true});}
 }
 export async function publishRelease(root,{confirmTarget,run=runCommand}={}){

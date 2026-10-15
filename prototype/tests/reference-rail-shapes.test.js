@@ -1,0 +1,15 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {getReferenceRailShape,REFERENCE_RAIL_VISIBLE_SOURCE,sampleMonotoneEdge} from '../src/pixi/reference-rail-shapes.js';import {sourcePoint} from '../src/pixi/source-layout.js';import {createBoardFlow} from '../src/pixi/board-flow.js';
+const near=(a,b)=>assert.ok(Math.abs(a-b)<1e-9,`${a} != ${b}`);
+test('shared visible polygons preserve measured source knots and no sampled edge exceeds .5 source pixels',()=>{
+ const shape=getReferenceRailShape();for(const c of shape.components){assert.equal(c.worldPoints.length,c.sourcePoints.length);for(let i=0;i<c.sourcePoints.length;i++){const p=c.sourcePoints[i],q=c.sourcePoints[(i+1)%c.sourcePoints.length],w=sourcePoint(p);assert.ok(Math.hypot(q[0]-p[0],q[1]-p[1])<=.500000001,c.id);near(c.worldPoints[i].x,w[0]);near(c.worldPoints[i].y,w[1]);}
+  if(c.kind==='edge-band')for(const side of ['Left','Right']){const originals=c[side==='Left'?'leftSource':'rightSource'];for(const [x,y]of originals){const p=c['sampled'+side+'Source'].find(p=>Math.abs(p[1]-y)<1e-9);assert.ok(p,c.id);near(p[0],x);}}
+ }
+ const outer=shape.components.find(c=>c.id==='outer-thin-band'),gray=shape.components.find(c=>c.id==='inner-gray-band');for(const [y,l,r]of [[330,128.5,136.5],[340,123.5,131.5],[350,118.5,126.5],[550,73.5,79.5],[560,73.5,80.5]]){near(gray.sampledLeftSource.find(p=>p[1]===y)[0],l);near(gray.sampledRightSource.find(p=>p[1]===y)[0],r);}assert.deepEqual(shape.outerPassageSideWorld,outer.rightWorld);assert.deepEqual(shape.maskExteriorSource.slice(0,outer.sampledLeftSource.length),outer.sampledLeftSource);assert.equal(REFERENCE_RAIL_VISIBLE_SOURCE.joins.oldInnerIndex11,'rejected; no forced ellipse return, no fabricated bulge');
+});
+test('shape-preserving interpolation stays between each pair of source x knots',()=>{
+ const input=[[0,0],[4,5],[1,10],[1,15]],samples=sampleMonotoneEdge(input);for(const p of samples){const i=Math.min(input.length-2,input.findIndex((q,i)=>i<input.length-1&&p[1]<=input[i+1][1]));assert.ok(p[0]>=Math.min(input[i][0],input[i+1][0])-1e-9&&p[0]<=Math.max(input[i][0],input[i+1][0])+1e-9);}
+});
+test('adopted contact solids use exact visible vertices, lower uncertain components are not converted to walls',()=>{
+ const p=createBoardFlow({lcd:true,launchRailProfile:'reference-exit',leftAdmissionGuides:false,ballRadius:1.8,hesoMouthWidth:12}).flow.physics,shape=getReferenceRailShape(),solids=p.colliders.filter(c=>c.shape==='solid-polygon');assert.equal(solids.length,5);for(const c of solids){assert.deepEqual(c.solid.points,shape.components.find(s=>s.id===c.sourceComponentId).worldPoints);if(c.contactYRange)assert.equal(c.contactYRange.max,sourcePoint([0,430])[1]);else assert.equal(c.playfieldOnly,true);assert.equal(c.restitution,.05);}assert.equal(p.referenceRailVisual,true);assert.equal(p.launchRailReference.retainedLegacyInnerThroughIndex,null);assert.ok(!solids.some(c=>['parallel-thin-line','black-valve-stem','white-mark'].includes(c.sourceComponentId)));
+});

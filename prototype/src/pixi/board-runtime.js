@@ -14,12 +14,13 @@ import {createBonusRoundView} from './bonus-round-view.js';
 import {attachNormalSpin} from './normal-spin-flow.js';
 import {createNormalSpinView} from './normal-spin-view.js';
 import {createDecisionPushOverlay} from './decision-push-overlay.js';
-import {FUZU_START_SOURCE,sourcePoint} from './source-layout.js';
+import {FUZU_START_SOURCE,sourcePoint,sourcePath} from './source-layout.js';
 import {Application,Container,Sprite,Texture,Rectangle,Graphics} from 'pixi.js';
 import {createCabinetLightView} from './cabinet-light-view.js';
 import {createCabinetDecor} from './cabinet-decor.js';
 import {createBoardTrim} from './board-trim.js';
-import {traceBoardSilhouette} from './board-silhouette.js';
+import {traceBoardSilhouette,traceReferenceSilhouette,referenceDecorMask} from './board-silhouette.js';
+import {referenceVisibleRails} from './reference-rail-shapes.js';
 import {PLAYFIELD_APERTURE,OUTER_ARC,LAUNCH_RAIL_CORE_WIDTH} from './board-rails.js';
 import {LCD_BEVEL_Y,LCD_OPENING} from './lcd-layout.js';
 import {createLcdView,LCD_LAYOUT} from './lcd-view.js';
@@ -36,7 +37,7 @@ import {createIntroCamera,createViewCameras,FRAME_PLACEMENT} from './intro-camer
 import '@fontsource/dotgothic16/japanese-400.css';
 import '@fontsource/dotgothic16/latin-400.css';
 
-export async function mountBoard(host,{production=false,sound=null,sessionGame=null,unit=null,onUpdate=()=>{},reviewHook=null,onLoadProgress=()=>{},isCancelled=()=>false,intro=false,onIntroState=()=>{},launchInterval=.6}={}){
+export async function mountBoard(host,{production=false,sound=null,sessionGame=null,unit=null,onUpdate=()=>{},reviewHook=null,onLoadProgress=()=>{},isCancelled=()=>false,intro=false,onIntroState=()=>{},launchInterval=.6,flowOptions={},trialReplay=false}={}){
 const settings=production?{lcd:'true',spin:'true',reach:'true',rounds:'true',lifecycle:'true',se:'true'}:document.body.dataset;
 const lcdEnabled=settings.lcd==='true',spinEnabled=settings.spin==='true';
 const [art]=await Promise.all([
@@ -58,10 +59,11 @@ const presentationSound=spinEnabled&&settings.se==='true'?(sound??createPresenta
 const unlockSound=()=>{void presentationSound?.unlock();};if(presentationSound)for(const event of ['pointerdown','keydown'])document.addEventListener(event,unlockSound);
 const owned=c=>{const t=Texture.from(c);t.source.scaleMode='nearest';textures.push(t);return t;};
 function setMode(next){mode=next;model.setMode(next);}
-function reset(){presentationSound?.reset();spinView?.dispose();if(scene){attackerView.dispose();tulipView.dispose();scene.destroy({children:true});for(const t of textures)t.destroy(true);for(const t of frames)t.destroy(false);}textures=[];frames=[];balls=new Map();ballTrails=new Map();ghosts=new Map();receipts=[];wheels=[];model=createBoardFlow({lcd:lcdEnabled,launchInterval,pegSeed:unit?.pegSeed??0,fire:sessionGame?()=>sessionGame.fire():null});const {flow}=model;spinModel=spinEnabled?attachNormalSpin(flow,{sessionGame,presentationPatterns:!!sessionGame,reach:settings.reach==='true',win:settings.win==='true',roundModel:settings.rounds==='true'?model:null,lifecycle:settings.lifecycle==='true',rushWin:settings.rushWin==='true'}):null;spinView=null;bonusView=null;directionView=null;eclipseMechanism=null;preludeView=null;rushDirectionGuide=createRushDirectionGuide();
- scene=new Container();scene.position.set(production?-12:0,production?-166:-130);app.stage.addChild(scene);if(lcdEnabled){const shell=new Sprite(owned(createCabinetDecor()));shell.scale.set(1/3);shell.y=130;scene.addChild(shell);}content=new Container();scene.addChild(content);
+function reset(){presentationSound?.reset();spinView?.dispose();if(scene){attackerView.dispose();tulipView.dispose();scene.destroy({children:true});for(const t of textures)t.destroy(true);for(const t of frames)t.destroy(false);}textures=[];frames=[];balls=new Map();ballTrails=new Map();ghosts=new Map();receipts=[];wheels=[];model=createBoardFlow({...flowOptions,lcd:lcdEnabled,launchInterval,pegSeed:unit?.pegSeed??0,fire:sessionGame?()=>sessionGame.fire():null});const {flow}=model;spinModel=spinEnabled?attachNormalSpin(flow,{sessionGame,presentationPatterns:!!sessionGame,reach:settings.reach==='true',win:settings.win==='true',roundModel:settings.rounds==='true'?model:null,lifecycle:settings.lifecycle==='true',rushWin:settings.rushWin==='true'}):null;spinView=null;bonusView=null;directionView=null;eclipseMechanism=null;preludeView=null;rushDirectionGuide=createRushDirectionGuide();
+ const railVisual=flow.physics.referenceRailVisual?flow.physics.railVisibleShape:flowOptions.referenceRailVisual?referenceVisibleRails():null;
+ scene=new Container();scene.position.set(production?-12:0,production?-166:-130);app.stage.addChild(scene);if(lcdEnabled){const shell=new Sprite(owned(createCabinetDecor({referenceRails:!!railVisual,railShape:railVisual})));shell.scale.set(1/3);shell.y=130;scene.addChild(shell);}content=new Container();scene.addChild(content);
  const aperture=lcdEnabled?PLAYFIELD_APERTURE.flat():[78,157,395,157,395,680,45,680,45,210];
- const mask=lcdEnabled?traceBoardSilhouette(new Graphics()).fill(0xffffff):new Graphics().poly(aperture).fill(0xffffff);scene.addChild(mask);content.mask=mask;
+ const mask=lcdEnabled?(railVisual?traceReferenceSilhouette(new Graphics(),railVisual):traceBoardSilhouette(new Graphics())).fill(0xffffff):new Graphics().poly(aperture).fill(0xffffff);scene.addChild(mask);content.mask=mask;
  // A shared visible rail channel; the actual launch mechanism stays behind the bottom frame.
  // The right resin rim is the visible boundary; the clipping mask is not a second wall.
  const edge=lcdEnabled?traceBoardSilhouette(new Graphics()).stroke({color:0x08111d,width:7,join:'round'}):new Graphics().poly(aperture).stroke({color:0x70552f,width:3});
@@ -75,9 +77,34 @@ function reset(){presentationSound?.reset();spinView?.dispose();if(scene){attack
   edgeFront.stroke({color:0x70552f,width:LAUNCH_RAIL_CORE_WIDTH,cap:'round',join:'round'});
  }else edgeFront.poly(aperture).stroke({color:0x70552f,width:3});
  scene.addChild(edgeFront);
+ if(railVisual){
+  // Remove overlapping cabinet/support art only in measured local scope.
+  const exteriorFrame=new Graphics();
+  // Existing blue/gold moulding is cosmetic and placed outside the accepted
+  // exterior rail edge; clipping below prevents it altering passage width.
+  const decorativePath=railVisual.maskExteriorWorld.map(p=>({x:p.x-1.75,y:p.y}));
+  for(const [color,width]of[[0x08111d,7],[0x536b7d,4],[0xb49b61,1.4]]){
+   exteriorFrame.moveTo(decorativePath[0].x,decorativePath[0].y);
+   for(const p of decorativePath.slice(1))exteriorFrame.lineTo(p.x,p.y);
+   exteriorFrame.stroke({color,width,cap:'round',join:'round'});
+  }
+  scene.addChildAt(exteriorFrame,scene.getChildIndex(content));
+  for(const graphic of [edge,edgeFront,exteriorFrame]){
+   const r=referenceDecorMask(),clip=new Graphics().rect(-100,-100,800,900).fill(0xffffff);
+   traceReferenceSilhouette(clip,railVisual).cut();
+   // Preserve decoration outside measured scope; inside scope only exterior
+   // of exact visible outer boundary remains. No added contact or rail width.
+   clip.rect(-100,-100,800,r.y+100).fill(0xffffff)
+    .rect(-100,r.y+r.height,800,800-r.y-r.height).fill(0xffffff)
+    .rect(-100,r.y,r.x+100,r.height).fill(0xffffff)
+    .rect(r.x+r.width,r.y,700-r.x-r.width,r.height).fill(0xffffff);
+   scene.addChild(clip);graphic.mask=clip;
+  }
+ }
+
  ballTexture=createSilverBallTexture();pinTexture=createPinTexture({highlight:lcdEnabled});textures.push(ballTexture,pinTexture);
  let lcdRoot;
- if(lcdTexture){const lcd=createLcdView(lcdTexture,cloudSky,hairAtlas,hairUnderlay,rushScene);lcdAnimation=lcd;lcdRoot=lcd.content;content.addChild(lcd.root);textures.push(lcd.texture);if(lcd.idleTexture)textures.push(lcd.idleTexture);if(spinEnabled){spinView=createNormalSpinView(rushScene,reachAtlas,reachLandscape,reachMotionAtlas,hairUnderlay,storySheets);lcd.content.addChild(spinView.root);textures.push(...spinView.textures);frames.push(...spinView.frames);if(spinModel.rounds){bonusView=createBonusRoundView();lcd.content.addChild(bonusView.root);textures.push(bonusView.texture);preludeView=createRushPreludeView(entrySheets,rushScene);lcd.content.addChild(preludeView.root);textures.push(...preludeView.textures);}}}
+ if(lcdTexture){const lcd=createLcdView(lcdTexture,cloudSky,hairAtlas,hairUnderlay,rushScene,{lowerApron:flow.physics.colliders.some(c=>c.role==='lcd-boundary-20')});lcdAnimation=lcd;lcdRoot=lcd.content;content.addChild(lcd.root);textures.push(lcd.texture);if(lcd.idleTexture)textures.push(lcd.idleTexture);if(spinEnabled){spinView=createNormalSpinView(rushScene,reachAtlas,reachLandscape,reachMotionAtlas,hairUnderlay,storySheets);lcd.content.addChild(spinView.root);textures.push(...spinView.textures);frames.push(...spinView.frames);if(spinModel.rounds){bonusView=createBonusRoundView();lcd.content.addChild(bonusView.root);textures.push(bonusView.texture);preludeView=createRushPreludeView(entrySheets,rushScene);lcd.content.addChild(preludeView.root);textures.push(...preludeView.textures);}}}
  if(lcdEnabled){const trim=new Sprite(owned(createBoardTrim(flow.physics)));trim.scale.set(1/3);trim.y=130;content.addChild(trim);}
  if(lcdEnabled){directionView=createDirectionCutin();lcdRoot.addChild(directionView.root);textures.push(...directionView.textures);}
  const launchRailBack=new Graphics(),launchRailFront=new Graphics(),launchBallsLayer=new Container(),rearLayer=new Container(),insideLayer=new Container(),frontLayer=new Container(),mechanisms=new Container(),ballsLayer=new Container();content.addChild(launchRailBack,launchBallsLayer,launchRailFront,rearLayer,insideLayer,frontLayer,mechanisms,ballsLayer);content.launchBallsLayer=launchBallsLayer;content.ballsLayer=ballsLayer;content.insideLayer=insideLayer;
@@ -87,11 +114,37 @@ function reset(){presentationSound?.reset();spinView?.dispose();if(scene){attack
  const back=owned(pixelSurface(1260,1680,c=>{const d=painter(c);d.rect(ox-8,oy-7,ow+16,55,'#152134');d.rect(ox-5,oy-4,ow+10,49,'#52687b');d.rect(ox,oy,ow,35,'#02050c');d.rect(ox+5,oy+5,ow-10,27,'#080e19');d.rect(ox+9,oy+10,ow-18,20,'#02050c');}));const bs=new Sprite(back);bs.scale.set(1/3);bs.y=130;rearLayer.addChild(bs);
  const front=owned(pixelSurface(1260,1680,c=>{const d=painter(c);d.rect(ox-8,oy+25,ow+16,18,'#17263b');d.rect(ox-8,oy+25,ow+16,5,'#9fb6ca');d.rect(ox-4,oy+30,ow+8,5,'#456079');for(const x of [ox-7,ox+ow+2]){d.rect(x,oy-5,5,30,'#9fb6ca');d.rect(x+2,oy,3,25,'#355675');}}));const fs=new Sprite(front);fs.scale.set(1/3);fs.y=130;frontLayer.addChild(fs);
  const railArt=owned(pixelSurface(1260,1680,c=>{const d=painter(c),pt=p=>({x:Math.round(p.x*3),y:Math.round((p.y-130)*3)});if(lcdEnabled)paintRightResinRoute(d,pt);for(const s of flow.physics.colliders.filter(s=>!s.role.startsWith('right-channel-')&&(!lcdEnabled||s.role!=='right-inner-lower')).filter(s=>s.role==='lcd-feed'||s.role.startsWith('right-')||s.role==='out-left'||s.role==='out-right'))paintResinGuide(d,pt(s.a),pt(s.b),{mountSide:s.role.includes('outer')?-1:undefined,depth:lcdEnabled&&s.role.startsWith('right-')?18:0});if(lcdEnabled)for(const s of flow.physics.colliders.filter(s=>s.role==='left-inlet-guide')){const a=pt(s.a),b=pt(s.b);d.line(a.x,a.y,b.x,b.y,'#17263b',6);d.line(a.x,a.y,b.x,b.y,'#7893ac',3);d.line(a.x-1,a.y,b.x-1,b.y,'#dcecf5',1);}}));const rails=new Sprite(railArt);rails.scale.set(1/3);rails.y=130;rearLayer.addChild(rails);
- if(lcdEnabled)for(const c of flow.physics.colliders.filter(c=>c.role.startsWith('launch-'))){
-  launchRailBack.moveTo(c.a.x,c.a.y).lineTo(c.b.x,c.b.y).stroke({color:0x17263b,width:10/3});
+ const localRailPoints=flow.physics.launchRailProfile==='reference-exit'?sourcePath(flow.physics.launchRailReference?.contactSource??[]):[];
+ // Ideal one-way trial contact is not a measured always-closed visible rail.
+ if(lcdEnabled)for(const c of flow.physics.colliders.filter(c=>c.role.startsWith('launch-')&&!c.nonReturnValve)){
+  if(c.shape==='solid-polygon')continue;
+  if(railVisual&&c.role.startsWith('launch-')&&Math.min(c.a.x,c.b.x)<90&&Math.max(c.a.y,c.b.y)>=242.5&&Math.min(c.a.y,c.b.y)<=430)continue;
+  const localExitSegment=c.role==='launch-inner-arc'&&localRailPoints.some(([x,y])=>[c.a,c.b].some(p=>Math.abs(p.x-x)<1e-9&&Math.abs(p.y-y)<1e-9));
+  launchRailBack.moveTo(c.a.x,c.a.y).lineTo(c.b.x,c.b.y).stroke({color:0x17263b,width:localExitSegment?LAUNCH_RAIL_CORE_WIDTH+.6:10/3});
   launchRailBack.moveTo(c.a.x,c.a.y).lineTo(c.b.x,c.b.y).stroke({color:0x7893ac,width:2});
   launchRailFront.moveTo(c.a.x,c.a.y).lineTo(c.b.x,c.b.y).stroke({color:0x7893ac,width:LAUNCH_RAIL_CORE_WIDTH,cap:'round',join:'round'});
   launchRailFront.moveTo(c.a.x,c.a.y).lineTo(c.b.x,c.b.y).stroke({color:0xdcecf5,width:.4,cap:'round',join:'round'});
+ }
+ // Static source-diagram marks, not a new contact surface or ball emitter.
+ // The meaning of the white circle and the component's depth are unconfirmed.
+ if(lcdEnabled&&!railVisual&&flow.physics.launchRailProfile==='reference-exit'&&flow.physics.launchRailReference){
+  const ref=flow.physics.launchRailReference,shape=new Graphics();
+  // Only the unknown static visible outline is rounded; collider centers stay unchanged.
+  const pt=(x,y)=>sourcePoint([x,y]);
+  shape.moveTo(...pt(156,270)).lineTo(...pt(157,280))
+   .bezierCurveTo(...pt(162,280),...pt(169,283),...pt(168,289))
+   .bezierCurveTo(...pt(166,299),...pt(157,317),...pt(151,320))
+   .bezierCurveTo(...pt(146,323),...pt(138,322),...pt(141,313));
+  shape.stroke({color:0x8297ac,width:.5,cap:'round',join:'round'});
+  shape.moveTo(...pt(155,283))
+   .bezierCurveTo(...pt(159,281),...pt(165,283),...pt(164,289))
+   .lineTo(...pt(157,303))
+   .bezierCurveTo(...pt(155,308),...pt(151,310),...pt(147,307))
+   .bezierCurveTo(...pt(144,305),...pt(146,301),...pt(149,294))
+   .closePath().fill(0x101b29).stroke({color:0x62798e,width:.25,join:'round'});
+  const [x,y]=sourcePoint([ref.whiteMarkSource.x,ref.whiteMarkSource.y]);
+  shape.circle(x,y,2.05).fill(0x526b80).circle(x,y,1.65).fill(0xdde6ec);
+  rearLayer.addChild(shape);
  }
  if(lcdEnabled){const p=flow.physics.pockets.find(p=>p.kind==='start');
   // The calibrated opening width is shared with the sensor and rim, not a measured W dimension.
@@ -99,8 +152,15 @@ function reset(){presentationSound?.reset();spinView?.dispose();if(scene){attack
   const lip=new Graphics().rect(p.x-p.w/2,p.y+1,p.w,1).fill(0xf1cf79).rect(p.x-p.w/2+1,p.y+2,p.w-2,1).fill(0x78562e);frontLayer.addChild(lip);
  }
  for(const p of flow.physics.pins){if(lcdEnabled&&p.role==='heso'){const backing=new Graphics().rect(p.x-3,p.y-3,6,6).fill(0x101b29);rearLayer.addChild(backing);}const s=new Sprite(pinTexture);s.anchor.set(.5);s.scale.set((lcdEnabled?.52:1)/3);s.position.set(p.x,p.y);rearLayer.addChild(s);}
+ if(lcdEnabled&&railVisual){
+  const colors={'outer-thin-band':0x56616a,'inner-gray-band':0x8b9298,'parallel-thin-line':0x5e6a76,'upper-rim-left':0x98a0a8,'upper-rim-right':0x98a0a8,'black-valve-stem':0x101b29,'black-valve-body':0x101b29};
+  const visible=new Graphics();for(const c of railVisual.components){
+   if(c.kind==='circle'){visible.circle(c.worldCenter.x,c.worldCenter.y,c.outerRadius).fill(0x63717c).circle(c.worldCenter.x,c.worldCenter.y,c.innerRadius).fill(0xdde6ec);}
+   else if(c.worldPolygon)visible.poly(c.worldPolygon.flatMap(p=>[p.x,p.y])).fill(colors[c.id]??0x88939f);
+  }rearLayer.addChild(visible);
+ }
  for(const m of flow.physics.mechanisms){const c=pixelSurface(116,116,()=>{}),t=owned(c),s=new Sprite(t);s.anchor.set(.5);s.scale.set(1/3);s.position.set(m.x,m.y);mechanisms.addChild(s);wheels.push({m,c,t});}
- if(lcdEnabled)for(const shape of hesoTrayShapes(flow.physics.pockets.find(p=>p.kind==='start'))){
+ if(lcdEnabled&&flow.physics.colliders.some(c=>c.role==='heso-guide'))for(const shape of hesoTrayShapes(flow.physics.pockets.find(p=>p.kind==='start'))){
   // Recessed mount sits behind the ball plane; the raised tray is contact geometry.
   const outer=shape[0],mouth=flow.physics.pockets.find(p=>p.kind==='start'),side=Math.sign(outer.x-mouth.x);
   const mount=new Graphics().poly([outer.x,outer.y,outer.x+side*4,outer.y+6,outer.x+side*4,510,outer.x-side*8,515]).fill(0x1c3044);
@@ -145,7 +205,7 @@ function reset(){presentationSound?.reset();spinView?.dispose();if(scene){attack
  if(settings.payoutReview==='true'&&spinModel&&!spinModel.game.isWMachine){const amount=Number(new URLSearchParams(location.search).get('amount'));const normal=new URLSearchParams(location.search).get('mode')==='normal';if(normal&&amount===900||!normal&&[500,1500,3000].includes(amount)){const g=spinModel.game;if(normal)g.pendingGrade=6;else{g.startRush();g.pendingPayout=amount;}g.startJackpot();g.previewWinAt=g.time;g.previewRushWin=!normal;setMode('right-closed');}}
  if(settings.rushEndReview==='true'&&spinModel&&!spinModel.game.isWMachine){const g=spinModel.game;g.startRush();g.rush.remaining=3;g.rush.consumed=97;g.rush.total=2500;g.rush.chain=2;g.enqueueDraw(3,'rush','rush');g.enqueueDraw(1,'start','normal');setMode('rush');}
  if(settings.entryReview==='true'&&spinModel&&!spinModel.game.isWMachine){const g=spinModel.game;g.reviewEntryVariant=new URLSearchParams(location.search).get('variant')||'moon';g.pendingGrade=6;g.startJackpot();g.jackpot.round=6;g.jackpot.count=9;g.jackpot.payout=885;g.award(885);g.previewWinAt=-6;g.previewRushWin=false;setMode('right-closed');}
- flow.start();demo=!spinEnabled;previous=performance.now();}
+ flow.start();demo=!spinEnabled&&!trialReplay;previous=performance.now();}
 function paintWheel({m,c,t}){const ctx=c.getContext('2d');ctx.clearRect(0,0,116,116);const d=painter(ctx),r=m.radius*3;for(let i=0;i<4;i++){const a=m.angle+i*Math.PI/2,cs=Math.cos(a),sn=Math.sin(a),at=(u,v)=>[58+cs*u-sn*v,58+sn*u+cs*v],shape=(pts,color)=>d.poly(pts.map(([u,v])=>at(u,v)),color);shape([[0,-4],[r-4,-4],[r,0],[r-4,4],[0,4]],'#80591e');shape([[5,-3],[r-4,-3],[r-1,0],[r-4,3],[5,3]],'#f5d783');shape([[18,-1],[r-7,-1],[r-4,0],[r-7,2],[18,2]],'#276dd3');d.line(...at(8,-2),...at(r-6,-2),'#fff1bd',2);}d.diamond(58,58,8,'#80591e');d.diamond(58,58,6,'#f5d783');d.diamond(58,58,3,'#96bad1');d.rect(56,55,3,3,'#f3f8ff');t.source.update();}
 function render(){const {flow}=model;receipts=receipts.filter(r=>flow.physics.time-r.time<.7);admissionFeedback?.render(flow.physics.time,spinModel?.game.reducedEffects);if(production&&!introCamera?.snapshot().active){const q=attentionCamera(spinModel?.game.presentation),a=viewCameras[selectedView],b=viewCameras.board;applyIntroPose({x:a.x+(b.x-a.x)*q,y:a.y+(b.y-a.y)*q,scale:a.scale+(b.scale-a.scale)*q,frameAlpha:a.frameAlpha*(1-q)});}decisionOverlay.update();cabinetLights?.render(spinModel?.game??flow.game);if(eclipseMechanism)eclipseMechanism.render(spinModel.game,spinModel.game.entryPrelude?.variant==='mechanism'?spinModel.game.time-spinModel.game.entryPrelude.startedAt-2.4:undefined);lcdAnimation?.render(flow.game.time,spinModel?.game);if(directionView){const guide=rushDirectionGuide.update(spinModel?.game??{});if(guide)directionView.announce(guide.direction,flow.game.time,guide.delay);const winGuide=spinModel&&!spinModel.rounds&&spinModel.game.previewWinAt!==undefined&&spinModel.game.time-spinModel.game.previewWinAt>=5.8;directionView.render(winGuide||model.getMode()!=='normal'?'right':'left',flow.game.time,spinModel&&rushEndPose(spinModel.game.time,spinModel.game.lastRush?.endedAt,!!spinModel.game.rush||!!spinModel.game.jackpot).visible?RUSH_END_SECONDS:spinModel?.game.entryGuideAt!==undefined&&flow.game.time-spinModel.game.entryGuideAt<.1?2.4-(spinModel.game.entryTitleOffset||0):0);}if(spinView){spinView.render(spinModel.game,!spinModel.game.entryPrelude&&!!bonusView&&spinModel.game.previewWinAt!==undefined&&spinModel.rounds.snapshot().phase!=='celebration'&&(spinModel.rounds.snapshot().phase!=='guide'||spinModel.rounds.snapshot().fromRush));presentationSound?.sync(spinModel.game,{paused:flow.paused,rounds:spinModel.rounds?.snapshot(),pushAvailable:typeof spinModel.pressDecision==='function'});if(bonusView){const r=spinModel.rounds.snapshot();bonusView.render(r);if(settings.lifecycle==='true'&&spinModel.game.previewWinAt===undefined){bonusView.root.visible=false;mode=model.getMode();}else if(!['celebration','guide'].includes(r.phase)){mode='bonus';}}el('spin-state').textContent=spinModel.game.previewWinAt!==undefined?(spinModel.game.time-spinModel.game.previewWinAt<5.8?'大当り':'右打ち案内'):spinModel.game.presentation?.basicReach?'リーチ・中央図柄待ち':spinModel.game.spinActive?'図柄変動中':spinModel.game.stopTimer>0?'ハズレ停止':'入賞待ち';if(bonusView&&spinModel.rounds.snapshot().phase!=='celebration'){const r=spinModel.rounds.snapshot();el('spin-state').textContent=`ラウンド ${r.round}：${r.count}/${r.limit}玉・払出 ${r.payout}玉`;}el('spin-holds').textContent=spinModel.game.holdCount;el('spin-draws').textContent=spinModel.game.draws;}attackerView.render();tulipView.render();for(const w of wheels)paintWheel(w);const alive=new Set();for(const b of flow.physics.balls){alive.add(b.id);let s=balls.get(b.id);if(!s){s=new Sprite(ballTexture);s.tint=0xffffff;s.anchor.set(.5);s.scale.set((flow.physics.displayBallScale??1)/3);const trail=new Graphics().rect(-.45,0,.9,1).fill({color:0xd7edff,alpha:.5});content.ballsLayer.addChild(trail,s);ballTrails.set(b.id,trail);balls.set(b.id,s);}const ballLayer=lcdEnabled&&flow.physics.separateLaunchPlane&&!b.leftLaunchPlane?content.launchBallsLayer:content.ballsLayer;if(s.parent!==ballLayer)ballLayer.addChild(s);const visual=b.onRightSurface?projectRightRoute(b):b;s.position.set(visual.x,visual.y);const trail=ballTrails.get(b.id);if(trail.parent!==ballLayer)ballLayer.addChildAt(trail,0);trail.position.set(visual.x,visual.y);trail.rotation=Math.atan2(b.vy,b.vx)+Math.PI/2;trail.scale.y=Math.min(7,Math.hypot(b.vx,b.vy)*.018);trail.visible=!spinModel?.game.reducedEffects&&trail.scale.y>2;s.visible=lcdEnabled||b.x>40&&b.y>145;}
  for(const [id,s]of balls)if(!alive.has(id)){s.destroy();ballTrails.get(id)?.destroy();ballTrails.delete(id);balls.delete(id);}const seen=new Set();for(const r of receipts){const out=r.kind==='out',t=(flow.physics.time-r.time)/(out?.18:.26);if(t<0||t>=1)continue;seen.add(r.id);let s=ghosts.get(r.id);if(!s){s=new Sprite(ballTexture);s.tint=0xffffff;s.anchor.set(.5);content.insideLayer.addChild(s);ghosts.set(r.id,s);}s.position.set(out?r.x:r.x+(r.targetX-r.x)*.3*t,out?r.y+12*t:r.targetY+3*t);s.scale.set((flow.physics.displayBallScale??1)*(1-(out?.3:.7)*t)/3);s.alpha=1-t*t;}for(const [id,s]of ghosts)if(!seen.has(id)){s.destroy();ghosts.delete(id);}
@@ -160,6 +220,18 @@ let selectedView='board';const viewCameras=createViewCameras(LCD_LAYOUT);
 const introCamera=production&&intro?createIntroCamera({lcd:LCD_LAYOUT,reducedMotion:matchMedia('(prefers-reduced-motion: reduce)').matches,onState:onIntroState}):null;
 function applyIntroPose(pose){scene.scale.set(pose.scale);scene.position.set(pose.x,pose.y);if(frameView){const f=FRAME_PLACEMENT;frameView.scale.set(f.scale*pose.scale);frameView.position.set(f.x*pose.scale+pose.x,f.y*pose.scale+pose.y);frameView.alpha=pose.frameAlpha;frameView.visible=pose.frameAlpha>0;}}
 if(production)applyIntroPose(introCamera?.pose()??viewCameras.board);
-reviewHook?.({game:spinModel?.game,model});const stop=startFrameLoop(now=>{const dt=(now-previous)/1000;previous=now;if(document.hidden)return;const {flow}=model;if(demo){const phaseLength=lcdEnabled?24:12,next=flow.game.time<phaseLength?'normal':flow.game.time<phaseLength*2?'rush':flow.game.time<phaseLength*3?'bonus':'normal';if(next!==mode)setMode(next);if(flow.game.time>=phaseLength*3)flow.stop();}if(sessionGame?.phase==='result'){flow.pause(true);}if(introCamera?.snapshot().active){if(!flow.paused&&sessionGame?.phase!=='result'){const pose=introCamera.step(dt);applyIntroPose(introCamera.snapshot().active?pose:viewCameras[selectedView]);}}else flow.step(dt);render();onUpdate(api.snapshot());});const onVisibility=()=>{if(document.hidden){model.flow.pause(true);presentationSound?.stop();}};document.addEventListener('visibilitychange',onVisibility);let disposed=false;
-const api={setView(view){if(disposed||!production||!Object.hasOwn(viewCameras,view))return false;selectedView=view;if(!introCamera?.snapshot().active)applyIntroPose(viewCameras[view]);render();return true;},skipIntro(){if(disposed)return;selectedView='board';if(introCamera)introCamera.skip();if(production)applyIntroPose(viewCameras.board);render();onUpdate(api.snapshot());},audioStream:()=>presentationSound?.captureStream(),setSound:value=>presentationSound?.setEnabled(value),audio:()=>presentationSound?.snapshot(),pause:value=>{model.flow.pause(value);if(value)presentationSound?.stop();},feed:value=>value?model.flow.start():model.flow.stop(),power:value=>model.setNormalPower(value),canvas:app.canvas,dispose(){if(disposed)return;disposed=true;stop();qualityObserver?.disconnect();document.removeEventListener('visibilitychange',onVisibility);for(const event of ['pointerdown','keydown'])document.removeEventListener(event,unlockSound);presentationSound?.dispose();decisionOverlay.destroy();spinView?.dispose();attackerView.dispose();tulipView.dispose();app.destroy(true,{children:true});for(const t of textures)t.destroy(true);for(const t of frames)t.destroy(false);},snapshot:()=>({view:selectedView,intro:introCamera?.snapshot()??{active:false,phase:'complete'},w:sessionGame?.w?{model:sessionGame.w.snapshotModel??'e東京喰種W',rush:sessionGame.w.rush?{...sessionGame.w.rush}:null,bonus:sessionGame.w.bonus?{...sessionGame.w.bonus}:null,pendingV:!!sessionGame.w.pendingV,electricOpen:sessionGame.w.electricOpen,payout:sessionGame.w.payout,holds:Object.fromEntries(Object.entries(sessionGame.w.queues).map(([k,v])=>[k,v.length])),eventCount:sessionGame.w.events.length}:null,direction:directionView?.snapshot(),cabinet: cabinetLights?.snapshot(),session:sessionGame?{stock:sessionGame.stock,total:sessionGame.total,phase:sessionGame.phase,accounting:sessionGame.accounting,jackpots:sessionGame.jackpots}:null,spin:spinModel?.snapshot(),lcd:lcdEnabled?LCD_LAYOUT:null,gate:model.gate?.snapshot(),leftRoutes:model.leftMetrics?.snapshot(),time:model.flow.game.time,feeding:model.flow.continuous,paused:model.flow.paused,mode,counts:{...model.flow.counts},spawned:model.flow.physics.metrics.spawned,pockets:structuredClone(model.flow.physics.pockets),guide:structuredClone(model.flow.physics.colliders.find(c=>c.role==='right-inner-lower')),attacker:model.attacker.state(),tulip:model.tulip.state(),routeBalls:model.flow.physics.balls.filter(b=>b.onRightSurface).map(b=>({id:b.id,x:b.x,y:b.y,depth:b.routeDepth,visual:projectRightRoute(b)})),inFlight:model.flow.physics.balls.length})};render();return api;
+reviewHook?.({game:spinModel?.game,model});const stop=trialReplay?()=>{}:startFrameLoop(now=>{const dt=(now-previous)/1000;previous=now;if(document.hidden)return;const {flow}=model;if(demo){const phaseLength=lcdEnabled?24:12,next=flow.game.time<phaseLength?'normal':flow.game.time<phaseLength*2?'rush':flow.game.time<phaseLength*3?'bonus':'normal';if(next!==mode)setMode(next);if(flow.game.time>=phaseLength*3)flow.stop();}if(sessionGame?.phase==='result'){flow.pause(true);}if(introCamera?.snapshot().active){if(!flow.paused&&sessionGame?.phase!=='result'){const pose=introCamera.step(dt);applyIntroPose(introCamera.snapshot().active?pose:viewCameras[selectedView]);}}else flow.step(dt);render();onUpdate(api.snapshot());});const onVisibility=()=>{if(document.hidden){model.flow.pause(true);presentationSound?.stop();}};document.addEventListener('visibilitychange',onVisibility);let disposed=false;
+const api={applyTrialFrame(frame){
+ if(!trialReplay||disposed)throw new Error('Trial replay is not active');
+ if(!Number.isFinite(frame.time)||!Array.isArray(frame.balls))throw new Error('Invalid trial frame');
+ const {flow}=model;flow.game.time=frame.time;flow.physics.time=frame.time;
+ flow.physics.balls=frame.balls.map(b=>({...b,vx:b.vx??0,vy:b.vy??0}));
+ if(frame.nonReturnValve){
+  if(!flow.physics.nonReturnValve)throw new Error('Valve replay requires matching trial geometry');
+  Object.assign(flow.physics.nonReturnValve,structuredClone(frame.nonReturnValve));
+ }
+ Object.assign(flow.counts,frame.counts??{});flow.physics.metrics.spawned=frame.spawned??frame.shots??0;
+ for(let i=0;i<flow.physics.mechanisms.length;i++){const m=frame.mechanisms?.[i];if(m)Object.assign(flow.physics.mechanisms[i],m);}
+ render();return api.snapshot();
+ },setView(view){if(disposed||!production||!Object.hasOwn(viewCameras,view))return false;selectedView=view;if(!introCamera?.snapshot().active)applyIntroPose(viewCameras[view]);render();return true;},skipIntro(){if(disposed)return;selectedView='board';if(introCamera)introCamera.skip();if(production)applyIntroPose(viewCameras.board);render();onUpdate(api.snapshot());},audioStream:()=>presentationSound?.captureStream(),setSound:value=>presentationSound?.setEnabled(value),audio:()=>presentationSound?.snapshot(),pause:value=>{model.flow.pause(value);if(value)presentationSound?.stop();},feed:value=>value?model.flow.start():model.flow.stop(),power:value=>model.setNormalPower(value),canvas:app.canvas,dispose(){if(disposed)return;disposed=true;stop();qualityObserver?.disconnect();document.removeEventListener('visibilitychange',onVisibility);for(const event of ['pointerdown','keydown'])document.removeEventListener(event,unlockSound);presentationSound?.dispose();decisionOverlay.destroy();spinView?.dispose();attackerView.dispose();tulipView.dispose();app.destroy(true,{children:true});for(const t of textures)t.destroy(true);for(const t of frames)t.destroy(false);},snapshot:()=>({view:selectedView,intro:introCamera?.snapshot()??{active:false,phase:'complete'},w:sessionGame?.w?{model:sessionGame.w.snapshotModel??'e東京喰種W',rush:sessionGame.w.rush?{...sessionGame.w.rush}:null,bonus:sessionGame.w.bonus?{...sessionGame.w.bonus}:null,pendingV:!!sessionGame.w.pendingV,electricOpen:sessionGame.w.electricOpen,payout:sessionGame.w.payout,holds:Object.fromEntries(Object.entries(sessionGame.w.queues).map(([k,v])=>[k,v.length])),eventCount:sessionGame.w.events.length}:null,direction:directionView?.snapshot(),cabinet: cabinetLights?.snapshot(),session:sessionGame?{stock:sessionGame.stock,total:sessionGame.total,phase:sessionGame.phase,accounting:sessionGame.accounting,jackpots:sessionGame.jackpots}:null,spin:spinModel?.snapshot(),lcd:lcdEnabled?LCD_LAYOUT:null,gate:model.gate?.snapshot(),leftRoutes:model.leftMetrics?.snapshot(),time:model.flow.game.time,nonReturnValve:model.flow.physics.nonReturnValve?structuredClone(model.flow.physics.nonReturnValve):null,feeding:model.flow.continuous,paused:model.flow.paused,mode,counts:{...model.flow.counts},spawned:model.flow.physics.metrics.spawned,pockets:structuredClone(model.flow.physics.pockets),guide:structuredClone(model.flow.physics.colliders.find(c=>c.role==='right-inner-lower')),attacker:model.attacker.state(),tulip:model.tulip.state(),routeBalls:model.flow.physics.balls.filter(b=>b.onRightSurface).map(b=>({id:b.id,x:b.x,y:b.y,depth:b.routeDepth,visual:projectRightRoute(b)})),inFlight:model.flow.physics.balls.length})};render();return api;
 }

@@ -1,0 +1,544 @@
+{
+  "timeline": {
+    "version": 1,
+    "fps": 30.0,
+    "engine_url": "http://127.0.0.1:50021",
+    "clips": [
+      {
+        "id": "purpose",
+        "voice": "host",
+        "speaker": 3,
+        "text": "いただいた資料をもとに、風車左上、道釘の末端、ジャンプ釘に相当する位置を、このスプリントで調整して試射しました。",
+        "audio_file": "purpose.wav",
+        "start_seconds": 0.0,
+        "duration_seconds": 10.005333,
+        "end_seconds": 10.005333,
+        "start_frame": 0,
+        "duration_frames": 301,
+        "gap_after_seconds": 0.2,
+        "metadata": {
+          "delivery": "落ち着いた説明。新案の失敗と観測の限界も省かず伝える。",
+          "scene": "purpose"
+        }
+      },
+      {
+        "id": "moves",
+        "voice": "host",
+        "speaker": 3,
+        "text": "元の百一本と左上の狙いを保ち、指定した向きへゼロ点二五ずつ動かす三つの案を、別々に試しました。移動量は内部の座標です。",
+        "audio_file": "moves.wav",
+        "start_seconds": 10.205333,
+        "duration_seconds": 11.168,
+        "end_seconds": 21.373333,
+        "start_frame": 306,
+        "duration_frames": 336,
+        "gap_after_seconds": 0.2,
+        "metadata": {
+          "delivery": "落ち着いた説明。新案の失敗と観測の限界も省かず伝える。",
+          "scene": "moves"
+        }
+      },
+      {
+        "id": "fixed",
+        "voice": "host",
+        "speaker": 3,
+        "text": "玉の大きさ、発射、口、壁、風車、重力と反発は同じにしました。写真の釘の曲げや傾きを再現したものではありません。",
+        "audio_file": "fixed.wav",
+        "start_seconds": 21.573333,
+        "duration_seconds": 11.754667,
+        "end_seconds": 33.328,
+        "start_frame": 647,
+        "duration_frames": 353,
+        "gap_after_seconds": 0.2,
+        "metadata": {
+          "delivery": "落ち着いた説明。新案の失敗と観測の限界も省かず伝える。",
+          "scene": "fixed"
+        }
+      },
+      {
+        "id": "short",
+        "voice": "host",
+        "speaker": 3,
+        "text": "二百発ずつ試すと、元配置のヘソ入賞はゼロ、前の道釘案は二回、新しい三案はいずれもゼロでした。",
+        "audio_file": "short.wav",
+        "start_seconds": 33.528,
+        "duration_seconds": 8.746667,
+        "end_seconds": 42.274667,
+        "start_frame": 1006,
+        "duration_frames": 263,
+        "gap_after_seconds": 0.2,
+        "metadata": {
+          "delivery": "落ち着いた説明。新案の失敗と観測の限界も省かず伝える。",
+          "scene": "short"
+        }
+      },
+      {
+        "id": "decision",
+        "voice": "host",
+        "speaker": 3,
+        "text": "新しい案に改善が見られなかったため、今回は採用せず、長い追加比較も行っていません。",
+        "audio_file": "decision.wav",
+        "start_seconds": 42.474667,
+        "duration_seconds": 7.189333,
+        "end_seconds": 49.664,
+        "start_frame": 1274,
+        "duration_frames": 216,
+        "gap_after_seconds": 0.2,
+        "metadata": {
+          "delivery": "落ち着いた説明。新案の失敗と観測の限界も省かず伝える。",
+          "scene": "decision"
+        }
+      },
+      {
+        "id": "route",
+        "voice": "host",
+        "speaker": 3,
+        "text": "風車付近では、左側を通った百五十一から百五十三球が、すべて排出されていました。これは観測用の座標区分で、原因を確定したものではありません。",
+        "audio_file": "route.wav",
+        "start_seconds": 49.864,
+        "duration_seconds": 13.12,
+        "end_seconds": 62.984,
+        "start_frame": 1496,
+        "duration_frames": 394,
+        "gap_after_seconds": 0.2,
+        "metadata": {
+          "delivery": "落ち着いた説明。新案の失敗と観測の限界も省かず伝える。",
+          "scene": "route"
+        }
+      },
+      {
+        "id": "safety",
+        "voice": "host",
+        "speaker": 3,
+        "text": "逆戻り、残球、滞留、液晶への侵入は、五条件ともありませんでした。試射は排出完了まで記録し、入賞の前後も同じ時刻で比べます。",
+        "audio_file": "safety.wav",
+        "start_seconds": 63.184,
+        "duration_seconds": 12.48,
+        "end_seconds": 75.664,
+        "start_frame": 1896,
+        "duration_frames": 375,
+        "gap_after_seconds": 0.2,
+        "metadata": {
+          "delivery": "落ち着いた説明。新案の失敗と観測の限界も省かず伝える。",
+          "scene": "safety"
+        }
+      },
+      {
+        "id": "scope",
+        "voice": "host",
+        "speaker": 3,
+        "text": "先行の長い比較では、それぞれ千五百発で、元配置二十六回、前の道釘案二十九回でした。新しい三案の結果とは分けて残し、本編の設定は維持します。",
+        "audio_file": "scope.wav",
+        "start_seconds": 75.864,
+        "duration_seconds": 13.557333,
+        "end_seconds": 89.421333,
+        "start_frame": 2276,
+        "duration_frames": 407,
+        "gap_after_seconds": 0.2,
+        "metadata": {
+          "delivery": "落ち着いた説明。新案の失敗と観測の限界も省かず伝える。",
+          "scene": "scope"
+        }
+      }
+    ],
+    "total_duration_seconds": 89.621333,
+    "total_duration_frames": 2689
+  },
+  "short": [
+    {
+      "id": "original",
+      "label": "元配置",
+      "shots": 200,
+      "heso": 0,
+      "normal": 2,
+      "out": 198,
+      "returned": 0,
+      "remaining": 0,
+      "left": 151,
+      "leftOut": 151
+    },
+    {
+      "id": "prior-road-pin2",
+      "label": "先行道釘2",
+      "shots": 200,
+      "heso": 2,
+      "normal": 0,
+      "out": 198,
+      "returned": 0,
+      "remaining": 0,
+      "left": 153,
+      "leftOut": 153
+    },
+    {
+      "id": "yori58",
+      "label": "新・寄り58",
+      "shots": 200,
+      "heso": 0,
+      "normal": 0,
+      "out": 200,
+      "returned": 0,
+      "remaining": 0,
+      "left": 153,
+      "leftOut": 153
+    },
+    {
+      "id": "road26",
+      "label": "新・道末端26",
+      "shots": 200,
+      "heso": 0,
+      "normal": 2,
+      "out": 198,
+      "returned": 0,
+      "remaining": 0,
+      "left": 151,
+      "leftOut": 151
+    },
+    {
+      "id": "jump90",
+      "label": "新・ジャンプ90",
+      "shots": 200,
+      "heso": 0,
+      "normal": 2,
+      "out": 198,
+      "returned": 0,
+      "remaining": 0,
+      "left": 151,
+      "leftOut": 151
+    }
+  ],
+  "long": {
+    "scope": "S6 finite internal mechanical comparison. Not product adoption or real-machine probability.",
+    "measuredAt": "2026-10-15",
+    "baseGitCommit": "c7aadca2dce1c40f699be8d030eb6ebb67da6dc4",
+    "measurementGitCommit": "48abce4",
+    "machineSourceSHA256": "ede02e712dbf3b4a735a3e367016914ee39848fe3fa37ac039589dc2ec0b6e36",
+    "sourceInventoryFiles": 173,
+    "environment": {
+      "node": "26.11.0",
+      "platform": "darwin",
+      "arch": "arm64"
+    },
+    "conditions": {
+      "normalPower": 0.14,
+      "hesoMouthWidth": 12,
+      "ballRadius": 1.8,
+      "pins": 101,
+      "launchRailProfile": "reference-exit",
+      "leftAdmissionGuides": false,
+      "fireInterval": 0.6,
+      "step": 0.008333333333333333,
+      "short": {
+        "fireSeconds": 120,
+        "drainSeconds": 45,
+        "phases": [
+          0
+        ]
+      },
+      "long": {
+        "fireSeconds": 300,
+        "drainSeconds": 45,
+        "phases": [
+          0.175,
+          0.35,
+          0.525
+        ]
+      }
+    },
+    "rows": [
+      {
+        "stage": "short",
+        "path": "short-baseline/baseline-phase-0.json",
+        "rawSHA256": "c1c0fa31bac4fa723b6f87c3add5dd3783c7a11ccab843b65b2f0d03c24499c9",
+        "id": "baseline",
+        "phase": 0,
+        "moves": [],
+        "shots": 200,
+        "counts": {
+          "fuzu": 0,
+          "normal": 2,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 198,
+          "returned": 0
+        },
+        "remaining": 0,
+        "stalled": 0,
+        "maxNoHesoSeconds": 119.99999999980643,
+        "lcd": {
+          "centreBallIds": 0,
+          "boundaryOnlyBallIds": 0,
+          "frontCentreBallIds": 0,
+          "frontBoundaryOnlyBallIds": 0
+        }
+      },
+      {
+        "stage": "short",
+        "path": "short-candidates/road-pin2-phase-0.json",
+        "rawSHA256": "5839d34ebaa5d0f814e7d51c57292f2dfcf2c6f12b5260622f3af997454d6d98",
+        "id": "road-pin2",
+        "phase": 0,
+        "moves": [
+          {
+            "pinId": 2,
+            "dx": 0,
+            "dy": 0.25
+          }
+        ],
+        "shots": 200,
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 2,
+          "rush": 0,
+          "bonus": 0,
+          "out": 198,
+          "returned": 0
+        },
+        "remaining": 0,
+        "stalled": 0,
+        "maxNoHesoSeconds": 62.87619047612669,
+        "lcd": {
+          "centreBallIds": 0,
+          "boundaryOnlyBallIds": 0,
+          "frontCentreBallIds": 0,
+          "frontBoundaryOnlyBallIds": 0
+        }
+      },
+      {
+        "stage": "short",
+        "path": "short-candidates/heso-pair-phase-0.json",
+        "rawSHA256": "c53a4616055646ddbfc66fcf5b28508633978c11af59ce4d18e899eba6c78777",
+        "id": "heso-pair",
+        "phase": 0,
+        "moves": [
+          {
+            "pinId": 91,
+            "dx": -0.25,
+            "dy": 0
+          },
+          {
+            "pinId": 92,
+            "dx": 0.25,
+            "dy": 0
+          }
+        ],
+        "shots": 200,
+        "counts": {
+          "fuzu": 0,
+          "normal": 2,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 198,
+          "returned": 0
+        },
+        "remaining": 0,
+        "stalled": 0,
+        "maxNoHesoSeconds": 119.99999999980643,
+        "lcd": {
+          "centreBallIds": 0,
+          "boundaryOnlyBallIds": 0,
+          "frontCentreBallIds": 0,
+          "frontBoundaryOnlyBallIds": 0
+        }
+      },
+      {
+        "stage": "long",
+        "path": "long/baseline-phase-0.175.json",
+        "rawSHA256": "fb2d77674a861917d75f2aa317f76c0ee5f6ae4a07f50780ead39da365236903",
+        "id": "baseline",
+        "phase": 0.175,
+        "moves": [],
+        "shots": 500,
+        "counts": {
+          "fuzu": 0,
+          "normal": 10,
+          "start": 13,
+          "rush": 0,
+          "bonus": 0,
+          "out": 476,
+          "returned": 1
+        },
+        "remaining": 0,
+        "stalled": 0,
+        "maxNoHesoSeconds": 84.58452380941063,
+        "lcd": {
+          "centreBallIds": 0,
+          "boundaryOnlyBallIds": 0,
+          "frontCentreBallIds": 0,
+          "frontBoundaryOnlyBallIds": 0
+        }
+      },
+      {
+        "stage": "long",
+        "path": "long/baseline-phase-0.35.json",
+        "rawSHA256": "332965711f40a63675de48e6c6dd6cb1a82601875bf186e85dc4d504d8515581",
+        "id": "baseline",
+        "phase": 0.35,
+        "moves": [],
+        "shots": 500,
+        "counts": {
+          "fuzu": 0,
+          "normal": 5,
+          "start": 5,
+          "rush": 0,
+          "bonus": 0,
+          "out": 488,
+          "returned": 2
+        },
+        "remaining": 0,
+        "stalled": 0,
+        "maxNoHesoSeconds": 130.65044642860445,
+        "lcd": {
+          "centreBallIds": 0,
+          "boundaryOnlyBallIds": 0,
+          "frontCentreBallIds": 0,
+          "frontBoundaryOnlyBallIds": 0
+        }
+      },
+      {
+        "stage": "long",
+        "path": "long/baseline-phase-0.525.json",
+        "rawSHA256": "a46433a232ef15a7cb44b6db6f567520e22579dcea708fffa173322eec5e3241",
+        "id": "baseline",
+        "phase": 0.525,
+        "moves": [],
+        "shots": 500,
+        "counts": {
+          "fuzu": 0,
+          "normal": 11,
+          "start": 8,
+          "rush": 0,
+          "bonus": 0,
+          "out": 480,
+          "returned": 1
+        },
+        "remaining": 0,
+        "stalled": 0,
+        "maxNoHesoSeconds": 80.92023809528159,
+        "lcd": {
+          "centreBallIds": 0,
+          "boundaryOnlyBallIds": 0,
+          "frontCentreBallIds": 0,
+          "frontBoundaryOnlyBallIds": 0
+        }
+      },
+      {
+        "stage": "long",
+        "path": "long/road-pin2-phase-0.175.json",
+        "rawSHA256": "6d32a21c0109d041809ddb82f73bd747346212310d364e936fda94ff8b57ab5f",
+        "id": "road-pin2",
+        "phase": 0.175,
+        "moves": [
+          {
+            "pinId": 2,
+            "dx": 0,
+            "dy": 0.25
+          }
+        ],
+        "shots": 500,
+        "counts": {
+          "fuzu": 0,
+          "normal": 8,
+          "start": 13,
+          "rush": 0,
+          "bonus": 0,
+          "out": 478,
+          "returned": 1
+        },
+        "remaining": 0,
+        "stalled": 0,
+        "maxNoHesoSeconds": 84.58452380941063,
+        "lcd": {
+          "centreBallIds": 0,
+          "boundaryOnlyBallIds": 0,
+          "frontCentreBallIds": 0,
+          "frontBoundaryOnlyBallIds": 0
+        }
+      },
+      {
+        "stage": "long",
+        "path": "long/road-pin2-phase-0.35.json",
+        "rawSHA256": "f9bbe5c85375be343aca96dc226e14cddb3884041e1015f73d9bd71b77e5f31c",
+        "id": "road-pin2",
+        "phase": 0.35,
+        "moves": [
+          {
+            "pinId": 2,
+            "dx": 0,
+            "dy": 0.25
+          }
+        ],
+        "shots": 500,
+        "counts": {
+          "fuzu": 0,
+          "normal": 8,
+          "start": 7,
+          "rush": 0,
+          "bonus": 0,
+          "out": 483,
+          "returned": 2
+        },
+        "remaining": 0,
+        "stalled": 0,
+        "maxNoHesoSeconds": 73.20238095223795,
+        "lcd": {
+          "centreBallIds": 0,
+          "boundaryOnlyBallIds": 0,
+          "frontCentreBallIds": 0,
+          "frontBoundaryOnlyBallIds": 0
+        }
+      },
+      {
+        "stage": "long",
+        "path": "long/road-pin2-phase-0.525.json",
+        "rawSHA256": "efef2684010e1f289c2e6b34323336b35aad7a03ba4cbb0f385df2325f32ffbe",
+        "id": "road-pin2",
+        "phase": 0.525,
+        "moves": [
+          {
+            "pinId": 2,
+            "dx": 0,
+            "dy": 0.25
+          }
+        ],
+        "shots": 500,
+        "counts": {
+          "fuzu": 0,
+          "normal": 8,
+          "start": 9,
+          "rush": 0,
+          "bonus": 0,
+          "out": 482,
+          "returned": 1
+        },
+        "remaining": 0,
+        "stalled": 0,
+        "maxNoHesoSeconds": 104.06547619046721,
+        "lcd": {
+          "centreBallIds": 0,
+          "boundaryOnlyBallIds": 0,
+          "frontCentreBallIds": 0,
+          "frontBoundaryOnlyBallIds": 0
+        }
+      }
+    ],
+    "independentAudit": "PASS: source173, original101 attributes, fixed shapes, count events, gaps and per-phase aim independently reconciled.",
+    "pmDecision": "Comparison accepted; road-pin2 retained as a reproducible internal improvement candidate. One phase maximum no-heso gap worsened and returned4/general26to24 retained. Product application outside S6 scope; no adoption or deployment.",
+    "video": "script approval and final media pending",
+    "ci": "not yet accepted",
+    "localUnit": {
+      "tests": 547,
+      "pass": 547,
+      "fail": 0,
+      "skipped": 0,
+      "sourceSHA256": "b161b7128e247638a3ae1fcaec444ca7d079cba5d3dd23d686c4e60d249081c5",
+      "sourceInventoryFiles": 547,
+      "node": "26.11.0",
+      "elapsedWallMs": 171821,
+      "scope": "S6 working tree, including the four media helpers; PR CI remains separate."
+    }
+  },
+  "sceneSource": "new5 short full165s30Hz; initial long6 distinct generation; not product adoption"
+}

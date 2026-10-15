@@ -1,0 +1,152 @@
+{
+  "release": "0.2.0",
+  "scope": "S4–S6 approved-video reuse plus silent overview/closing cards; no new spoken content or synthesis",
+  "output": {
+    "sha256": "4a5db24a3d8476cca109b43d973ed8cadc84ca5aa5ae588dd68155c47f26f818",
+    "bytes": 9736455
+  },
+  "media": {
+    "videoCodec": "H264",
+    "audioCodec": "AAC",
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "frames": 6162,
+    "duration": 205.4
+  },
+  "segments": [
+    {
+      "id": "intro",
+      "start": 0,
+      "duration": 8
+    },
+    {
+      "id": "s4",
+      "start": 8,
+      "duration": 52.7
+    },
+    {
+      "id": "s5",
+      "start": 60.7,
+      "duration": 43
+    },
+    {
+      "id": "s6",
+      "start": 103.7,
+      "duration": 89.7
+    },
+    {
+      "id": "end",
+      "start": 193.4,
+      "duration": 12
+    }
+  ],
+  "s5Replacement": "Original0..8s replaced by new silent chapter card; original8..43s retained. Old95s tool reference omitted.",
+  "audio": {
+    "sourceIds": [
+      "s4",
+      "s6"
+    ],
+    "unchanged": "Complete spoken text, paragraph order, rate and source audio ranges retained. AAC re-encoded; no bitwise waveform identity claim.",
+    "lastFrameHolds": [
+      {
+        "id": "s4",
+        "originalVideoFrames": 1579,
+        "outputFrames": 1581,
+        "lastFrameHoldAdded": 2
+      },
+      {
+        "id": "s6",
+        "originalVideoFrames": 2689,
+        "outputFrames": 2691,
+        "lastFrameHoldAdded": 2
+      }
+    ],
+    "newSynthesis": false,
+    "credit": "VOICEVOX:ずんだもん"
+  },
+  "inputs": [
+    {
+      "id": "s4",
+      "name": "review.mp4",
+      "sha256": "3290e3f29948479de8e160563e34c47a61ddb61047291e1be87d71b7876cbd5d",
+      "bytes": 5606669,
+      "useStart": 0,
+      "useEnd": null
+    },
+    {
+      "id": "s5",
+      "name": "review.mp4",
+      "sha256": "71d83a28c27a657e1bdeb06a06c5c9ca35a91f1bcf8d984c957085d422cba29e",
+      "bytes": 5175838,
+      "useStart": 8,
+      "useEnd": 43
+    },
+    {
+      "id": "s6",
+      "name": "s6-reference-review.mp4",
+      "sha256": "2551a68bb8ec4e25fef8ae54db0c14202de130d8228f96cf7ce1d7b9961d7975",
+      "bytes": 7519928,
+      "useStart": 0,
+      "useEnd": null
+    }
+  ],
+  "mediaSources": [
+    {
+      "file": "release020-index.tsx",
+      "sha256": "c2407f8fbfa23446e648bdfc22f77760f3a0acbceed0700cc081fe87a384bd1f"
+    },
+    {
+      "file": "release020-assemble.py",
+      "sha256": "6272a16d48de82c7b79c9494b8e12d18cb12688c28e961b66f35c82c7a5e072e"
+    },
+    {
+      "file": "pr24-reviewed-index.tsx",
+      "sha256": "652ac3d22a1cb3c0209b47415085c140657eb223bc6b63c575623983f4446b9b"
+    },
+    {
+      "file": "s6-index.tsx",
+      "sha256": "2659fe87ef72bcf16cf91763d55076161530ef540fdbf5fd24df59547fb8c049"
+    },
+    {
+      "file": "s6-data.json",
+      "sha256": "d662f7ba317738da2ceabaceda792fc2c39f23812ff0aa918533ed3dde02747c"
+    },
+    {
+      "file": "s6-capture.mjs",
+      "sha256": "9e263f306f7a52e53ea6b2a705b231b702b01cf7152431c7b4d628087a0ed1f8"
+    },
+    {
+      "file": "s6-verify.py",
+      "sha256": "0b42dbe81cfd22e73672fe95323ea929d63b63d9e4fb3b1adcb78da96c053fef"
+    },
+    {
+      "file": "script.json",
+      "sha256": "335659166c7f728fc3c8382cba49402d57139a4039f9cc4d8e1c5ed8d468b989"
+    },
+    {
+      "file": "script.json",
+      "sha256": "a226630ebc8e229f128ab7a3bb70c0546d31524098b3b9d37e0ce15ac067e599"
+    },
+    {
+      "file": "script.json",
+      "sha256": "5f90689129e0d508809b85e58d8f471446cbeafe86fa34bea1b0667a1fb6a0a5"
+    }
+  ],
+  "checks": {
+    "inputsSHAUnchangedBeforeAfter": true,
+    "mediaSourceFilesFinalSHAUnchanged": true,
+    "fullDecodeExitCode": 0,
+    "fullDecodeWarningErrorBytes": 0,
+    "decodedFramesReviewed": [
+      "s5-exit@74",
+      "s6-old-long@182",
+      "end@200"
+    ],
+    "silentCardsPMReviewed": true,
+    "nativePlayback": "Pending at this public production snapshot; final acceptance belongs in PR/Issue record",
+    "humanListening": "unverified"
+  },
+  "checkpointScope": "PM accepted100 related tests and independent review: PR-head/merge-version separate checks, local checkpoint resume and mixed-version refusal. Real production incident recovery/rollback unverified.",
+  "productSourceChangedByMediaWork": false
+}

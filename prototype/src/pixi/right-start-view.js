@@ -1,5 +1,10 @@
 import {createSilverBallTexture,SILVER_BALL_SIZE} from './silver-ball.js';
 const BALL_SCALE=19/SILVER_BALL_SIZE;
+// Trial-only nominal sprite frame matches the requested contact diameter.
+// The component container is authored at two pixels per board unit (scale .5).
+const ballScale=physics=>physics.displayBallDiameter!==undefined
+ ?physics.displayBallDiameter*2/SILVER_BALL_SIZE
+ :BALL_SCALE*(physics.displayBallScale??1);
 import {Container,Sprite,Texture,Rectangle,MeshSimple} from 'pixi.js';
 import {pixelSurface,painter} from './pixel-primitives.js';
 export class RightStartView{
@@ -28,8 +33,8 @@ export class RightStartView{
   for(const name of ['scoop','cover']){const a=this.point(mech[name].a),b=this.point(mech[name].b);this.pose[name]={a,b};const dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy),nx=-dy/len*5,ny=dx/len*5;
    this.wings[name].vertices.set([b.x-nx,b.y-ny,b.x+nx,b.y+ny,a.x-dx*.12+nx,a.y-dy*.12+ny,a.x-dx*.12-nx,a.y-dy*.12-ny]);}
   this.housingPose={x:this.base.x,y:this.base.y,width:this.base.width,height:this.base.height};
-  const alive=new Set();for(const ball of this.physics.balls){alive.add(ball.id);let s=this.balls.get(ball.id);if(!s){s=new Sprite(this.ballTexture);s.anchor.set(.5);s.scale.set(BALL_SCALE*(this.physics.displayBallScale??1));this.root.addChild(s);this.balls.set(ball.id,s);}const q=this.point(ball);s.position.set(q.x,q.y);s.visible=q.x>-10&&q.x<266&&q.y>-10&&q.y<330;}
-  const seen=new Set();for(const receipt of this.physics.rightStartReceipts??[]){const t=(this.physics.time-receipt.time)/.22;if(t<0||t>=1)continue;seen.add(receipt.id);let s=this.intakeSprites.get(receipt.id);if(!s){s=new Sprite(this.ballTexture);s.anchor.set(.5);s.scale.set(BALL_SCALE*(this.physics.displayBallScale??1));this.root.addChild(s);this.intakeSprites.set(receipt.id,s);}const q=this.point({x:receipt.x+(this.pocket.x-receipt.x)*t,y:this.pocket.referenceSlot?receipt.y+(this.pocket.y-receipt.y)*t:receipt.y+3*t});s.position.set(q.x,q.y);s.scale.set(BALL_SCALE*(this.physics.displayBallScale??1)*(1-.8*t));s.alpha=1-t*t;}
+  const alive=new Set();for(const ball of this.physics.balls){alive.add(ball.id);let s=this.balls.get(ball.id);if(!s){s=new Sprite(this.ballTexture);s.anchor.set(.5);s.scale.set(ballScale(this.physics));this.root.addChild(s);this.balls.set(ball.id,s);}const q=this.point(ball);s.position.set(q.x,q.y);s.visible=q.x>-10&&q.x<266&&q.y>-10&&q.y<330;}
+  const seen=new Set();for(const receipt of this.physics.rightStartReceipts??[]){const t=(this.physics.time-receipt.time)/.22;if(t<0||t>=1)continue;seen.add(receipt.id);let s=this.intakeSprites.get(receipt.id);if(!s){s=new Sprite(this.ballTexture);s.anchor.set(.5);s.scale.set(ballScale(this.physics));this.root.addChild(s);this.intakeSprites.set(receipt.id,s);}const q=this.point({x:receipt.x+(this.pocket.x-receipt.x)*t,y:this.pocket.referenceSlot?receipt.y+(this.pocket.y-receipt.y)*t:receipt.y+3*t});s.position.set(q.x,q.y);s.scale.set(ballScale(this.physics)*(1-.8*t));s.alpha=1-t*t;}
   for(const [id,s]of this.intakeSprites)if(!seen.has(id)){s.destroy();this.intakeSprites.delete(id);}
   for(const [id,s]of this.balls)if(!alive.has(id)){s.destroy();this.balls.delete(id);}
  }

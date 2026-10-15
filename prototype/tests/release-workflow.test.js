@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {mkdtemp,mkdir,writeFile,readFile,rm,symlink} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
-import {prepareRelease,verifyCandidate,publishRelease,candidatePath,candidateAssets,targetName,parseCommand} from '../tools/release-workflow.js';
+import {prepareRelease,verifyCandidate,publishRelease,candidatePath,candidateAssets,targetName,parseCommand,phaseRecorder} from '../tools/release-workflow.js';
 async function fixture(t){const root=await mkdtemp(join(tmpdir(),'silverball-release-'));t.after(()=>rm(root,{recursive:true,force:true}));
  await mkdir(join(root,'.github/workflows'),{recursive:true});await writeFile(join(root,'.github/workflows/ci.yml'),'{}');
  for(const dir of ['src','public','tests','tools','dist-release'])await mkdir(join(root,'prototype',dir),{recursive:true});
@@ -63,4 +63,24 @@ test('prepare rejects an unexpected actual Worker before running checks',async t
 });
 test('publish command failure is propagated without a success result',async t=>{
  const f=await fixture(t);await prepareRelease(f.root,{run:f.run,preview:f.preview});let success=false;await assert.rejects(publishRelease(f.root,{confirmTarget:targetName,run:async()=>{throw new Error('deploy rejected');}}).then(()=>{success=true;}),/deploy rejected/);assert.equal(success,false);
+});
+
+test('phase evidence measures wall time, preserves failures and stays outside candidate inputs',async t=>{
+ const f=await fixture(t);let ticks=0;const phase=await phaseRecorder(f.root,{clock:()=>ticks,now:()=> '2026-10-09T00:00:00Z'});
+ await phase('unit',async()=>{ticks=75;return 'passed';});
+ const failure=new Error('original failure');await assert.rejects(phase('browser',async()=>{ticks=130;throw failure;}),error=>error===failure);
+ const e=JSON.parse(await readFile(join(f.root,'prototype/.cache/release/timings/prepare.json'),'utf8'));
+ assert.deepEqual(e.phases.map(p=>[p.label,p.status,p.elapsedWallMs]),[['unit','success',75],['browser','failure',55]]);
+ assert.ok(e.phases.every(p=>p.completedAt));
+ const m=await prepareRelease(f.root,{run:f.run,preview:f.preview});assert.ok(!m.source.files.some(f=>f.path.includes('/timings/')));assert.ok(!m.assets.some(f=>f.path.includes('timings')));
+});
+
+test('failed phase keeps original failure if private timing evidence cannot be saved',async t=>{
+ const f=await fixture(t),phase=await phaseRecorder(f.root),original=new Error('operation failed');
+ await assert.rejects(phase('browser',async()=>{await rm(join(f.root,'prototype/.cache/release/timings'),{recursive:true});throw original;}),error=>error===original);
+});
+test('browser-only preparation cannot be published before unit aggregation',async t=>{
+ const f=await fixture(t),m=await prepareRelease(f.root,{run:f.run,preview:f.preview,checksMode:'browser'});assert.equal(m.status,'browser-verified');assert.ok(!m.conditions.checks.includes('test'));
+ await assert.rejects(verifyCandidate(f.root),/Invalid release candidate/);await assert.rejects(publishRelease(f.root,{confirmTarget:targetName,run:f.run}),/Invalid release candidate/);
+ await verifyCandidate(f.root,{expectedStatus:'browser-verified'});
 });

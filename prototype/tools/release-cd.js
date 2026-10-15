@@ -102,14 +102,25 @@ export async function publishGitHubRelease(api,context,notes,candidate,record,{r
  const published=await api(`${prefix}/releases/${release.id}`,{method:'PATCH',body:{draft:false,make_latest:'true'}});if(published.draft!==false)throw new Error('GitHub did not confirm Release publication');return published.html_url;
 }
 async function saveJSON(path,value){await mkdir(dirname(path),{recursive:true});const tmp=path+'.tmp';await writeFile(tmp,JSON.stringify(value,null,2)+'\n');await rename(tmp,path);}
-async function restoreCheckpoint(api,repo,runId,sha){
+export async function restoreCheckpoint(api,repo,runId,context,{event,eventName='pull_request',root=projectRoot,run=runCommand,read=readFile}={}){
  if(!/^\d+$/.test(runId??''))throw new Error('CD requires a GitHub run ID');
  const artifacts=await api(`/repos/${repo}/actions/runs/${runId}/artifacts`),name=`cd-checkpoint-${runId}`;
- const artifact=artifacts.artifacts?.find(a=>a.name===name&&!a.expired);if(!artifact)return null;
- if(artifact.workflow_run?.head_sha!==sha)throw new Error('Checkpoint artifact belongs to another merge commit');
- const dest=join(projectRoot,'prototype/.cache/release/restored-checkpoint');await mkdir(dest,{recursive:true});
- await runCommand('gh',['run','download',runId,'--repo',repo,'--name',name,'--dir',dest]);
- return JSON.parse(await readFile(join(dest,'cd-state.json'),'utf8'));
+ const matches=artifacts.artifacts?.filter(a=>a.name===name&&!a.expired)??[];if(!matches.length)return null;if(matches.length!==1)throw new Error('Ambiguous checkpoint artifacts');const artifact=matches[0];
+ const pr=event?.pull_request,repoId=event?.repository?.id,headRepoId=pr?.head?.repo?.id;
+ if(eventName!=='pull_request'||event?.action!=='closed'||pr?.merged!==true||pr.base?.ref!=='main'||event.repository?.full_name!==repo||pr.head?.repo?.full_name!==repo||!Number.isSafeInteger(repoId)||repoId<=0||headRepoId!==repoId||!shaPattern.test(pr.head?.sha??'')||!Number.isSafeInteger(pr.number)||pr.number<=0||context.repository!==repo||context.sha!==pr.merge_commit_sha||!shaPattern.test(context.sha??'')||!versionPattern.test(context.version??'')||pr.head.ref!=='release/'+context.version)throw new Error('Checkpoint requires the current merged release PR context');
+ const execution=await api(`/repos/${repo}/actions/runs/${runId}`),origin=artifact.workflow_run;
+ // pull_request run/artifact head_sha identifies the PR head, not the checked-out
+ // merge commit. Closed-PR runs may have an empty pull_requests array.
+ if(String(execution.id)!==runId||execution.event!==eventName||execution.path!=='.github/workflows/release-cd.yml'||execution.repository?.full_name!==repo||execution.repository?.id!==repoId||execution.head_repository?.full_name!==repo||execution.head_repository?.id!==headRepoId||execution.head_sha!==pr.head.sha||execution.head_branch!==pr.head.ref)throw new Error('Checkpoint run does not match this release PR execution');
+ if(String(origin?.id)!==runId||origin.repository_id!==repoId||origin.head_repository_id!==headRepoId||origin.head_sha!==pr.head.sha||origin.head_branch!==pr.head.ref)throw new Error('Checkpoint artifact does not match this release PR execution');
+ if(execution.pull_requests?.length&&!execution.pull_requests.some(p=>p.number===pr.number&&p.head?.sha===pr.head.sha))throw new Error('Checkpoint run belongs to another PR');
+ const dest=join(root,'prototype/.cache/release/restored-checkpoint');await mkdir(dest,{recursive:true});
+ await run('gh',['run','download',runId,'--repo',repo,'--name',name,'--dir',dest]);
+ const checkpoint=JSON.parse(await read(join(dest,'cd-state.json'),'utf8'));
+ // Content still targets the merge SHA; executeCD separately revalidates the
+ // fresh candidate source/assets and current public deployment before smoke.
+ if(checkpoint.repository!==repo||checkpoint.sha!==context.sha||checkpoint.version!==context.version||checkpoint.worker!==targetName)throw new Error('Checkpoint content does not match the merge release');
+ return checkpoint;
 }
 function publicEnv(env){const clean={...env};for(const key of ['CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID','GH_TOKEN','GITHUB_TOKEN'])delete clean[key];return clean;}
 export async function mainCLI(action,env=process.env){
@@ -128,7 +139,7 @@ export async function mainCLI(action,env=process.env){
  const latestRelease=await api(`/repos/${repository}/releases/latest`,{optional404:true});
  const context=validateCD({enabled:env.ENABLE_PRODUCTION_CD,event,eventName:env.GITHUB_EVENT_NAME,repository,checkoutSHA,packageVersion,mainSHA,tagSHA,release,latestRelease});
  if(context.alreadyReleased){const result={status:'already-released',version:context.version,sha:context.sha};await saveJSON(join(projectRoot,'prototype/.cache/release/cd-outcome.json'),result);console.log(`CD outcome: ${result.status} ${result.version} ${result.sha}`);return result;}
- let checkpoint=await restoreCheckpoint(api,repository,env.GITHUB_RUN_ID,context.sha);
+ let checkpoint=await restoreCheckpoint(api,repository,env.GITHUB_RUN_ID,context,{event,eventName:env.GITHUB_EVENT_NAME});
  if(release?.draft){const record=JSON.parse(release.body.match(/<!-- silverball-release:(.*?) -->/)[1]);checkpoint=checkpoint??record;}
  const getDeploymentResponse=async()=>{const response=await fetch(`https://api.cloudflare.com/client/v4/accounts/${encodeURIComponent(env.CLOUDFLARE_ACCOUNT_ID)}/workers/scripts/${targetName}/deployments`,{headers:{authorization:`Bearer ${env.CLOUDFLARE_API_TOKEN}`},signal:AbortSignal.timeout(30000)});if(!response.ok)throw new Error(`Cloudflare deployment check failed (${response.status})`);return response.json();};
  const clean=publicEnv(env),cleanRun=(command,args,options)=>runCommand(command,args,{...options,env:publicEnv(options?.env??clean)});
