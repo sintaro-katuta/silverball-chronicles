@@ -473,9 +473,6 @@
     "Prior .14 overall product-adoption rejection remains."
   ],
   "pending": [
-    "new CI",
-    "revised narration human approval",
-    "completed video and playback acceptance",
     "PR review and merge"
   ],
   "localEvidenceRoot": "prototype/reference-review/s6-20261015/reference-informed/",
@@ -511,5 +508,28 @@
     ],
     "scope": "Same-scale/time overall and local stills; upper-left aim, frame/rail and specified tiny moves; actual admission frame62.900 original0/prior1. Not full-video playback acceptance.",
     "localEvidence": "reference-informed/media-qa-final/"
+  },
+  "narrationApproval": {
+    "status": "APPROVED",
+    "approvedBy": "user",
+    "date": "2026-10-15",
+    "scriptSHA256": "5f90689129e0d508809b85e58d8f471446cbeafe86fa34bea1b0667a1fb6a0a5"
+  },
+  "ci": {
+    "head": "ef356d5e65331af9b8b4ba5341ff4c893d3ee83d",
+    "runId": 38660943852,
+    "url": "https://github.com/sintaro-katuta/silverball-chronicles/actions/runs/38660943852",
+    "jobs": {
+      "unit": "success",
+      "browser": "success",
+      "verify": "success"
+    },
+    "scope": "verified implementation head before approval/video-only follow-up commits"
+  },
+  "video": {
+    "url": "https://github.com/user-attachments/assets/a74218d2-3784-4572-b9cf-65ebbb5b3500",
+    "sha256": "2551a68bb8ec4e25fef8ae54db0c14202de130d8228f96cf7ce1d7b9961d7975",
+    "status": "PM accepted and published to PR beginning",
+    "productionRecord": "s6-video/PRODUCTION.json"
   }
 }
