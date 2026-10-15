@@ -1,0 +1,25 @@
+{
+  "render": {
+    "startUTC": "2026-10-15T16:49:46.260716+00:00",
+    "headAtStart": "296d81377b08c6ba5babe85f6e821b7dddbd0962",
+    "command": "node /Users/sintaro.katuta/dev/remotion/node_modules/@remotion/cli/remotion-cli.js render tools/pr-video/s7-index.tsx S7Review prototype/reference-review/s7-20261015/pr-video/s7-review.mp4 --public-dir=prototype/reference-review/s7-20261015/pr-video/public --codec=h264 --crf=24 --audio-codec=aac --concurrency=2 --browser-executable=\"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome\"",
+    "log": "render.log",
+    "PMPreviewReview": "7 scenes + continuous flow switch and last-frame hold accepted",
+    "endUTC": "2026-10-15T16:52:47.458237+00:00",
+    "elapsedSeconds": 181.197521,
+    "exitCode": 0,
+    "headAtEnd": "2a7b319c2e2eeeafd29f7bd9ae4a2fab7483e3e0",
+    "inputBytesUnchanged": true,
+    "headChangeReason": "PM purpose commit during render; media inputs unchanged",
+    "output": {
+      "path": "/private/tmp/silverball-s6-20261015/prototype/reference-review/s7-20261015/pr-video/s7-review.mp4",
+      "sha256": "6b17b3d5c291967605d4ee871d829986fb6a5b76d6ba41b2222b7a6365a0cd7e",
+      "bytes": 8008465
+    },
+    "logSHA": "8f158f13ea25af7c99996499aa9008ac3c1d414e2e61e76cdb90d7248e2d1ff6"
+  },
+  "renderLogExact": true,
+  "finalMovieExact": true,
+  "note": "HEAD changed through PM commit during render; all 22 render inputs remain exact. This is a media byte attestation, not unchanged repository HEAD.",
+  "verifierSHA": "7acc43d2a086e4155168f454a5c8157b2b4e4ebfc66e88c65c6679e0e39b0550"
+}

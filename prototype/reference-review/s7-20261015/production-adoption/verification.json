@@ -1,0 +1,79 @@
+{
+  "node": "v26.11.0",
+  "tests": 6,
+  "pass": 6,
+  "fail": 0,
+  "durationMs": 7351.20975,
+  "scope": "Actual default/control flow, manual selection/right-mode roundtrip plus smoke diagnostic helper unit; browser and new diagnostic fixtures not run yet",
+  "changedFiles": [
+    "prototype/src/app/main.js",
+    "prototype/tests/release.browser.mjs",
+    "prototype/tests/smoke-diagnostics.browser.mjs",
+    "prototype/tests/session-controls.browser.mjs",
+    "prototype/tests/feedback.browser.mjs",
+    "prototype/tests/board-flow.test.js"
+  ],
+  "sources": [
+    {
+      "path": "prototype/src/app/main.js",
+      "bytes": 18177,
+      "sha256": "42103f7cc5e93406e36e2fea12500b9f524722adc4f622542b5e9ba681e2bcee"
+    },
+    {
+      "path": "prototype/tests/release.browser.mjs",
+      "bytes": 3317,
+      "sha256": "d5b57f8460ce25b6cf92afc9d0b6b3c4291e639691a6b875415bccd85c5bc1e1"
+    },
+    {
+      "path": "prototype/tests/smoke-diagnostics.browser.mjs",
+      "bytes": 4631,
+      "sha256": "4a780e355ef695499945d7b1c06b088d422f65af34ba28c05ed641cc7f34d22c"
+    },
+    {
+      "path": "prototype/tests/session-controls.browser.mjs",
+      "bytes": 2183,
+      "sha256": "2347fad240f4517d75e0e246c3750e167a27a3e52a3bad9053e2f14525c27f00"
+    },
+    {
+      "path": "prototype/tests/feedback.browser.mjs",
+      "bytes": 10679,
+      "sha256": "86652889d88e3828ca70af9c184c41465f8f4db256a860f61ce6ee37705b10c5"
+    },
+    {
+      "path": "prototype/tests/board-flow.test.js",
+      "bytes": 2197,
+      "sha256": "f9feb9ed535ff23609e26963a6bfe02611e3e0d248f5390b87426f3173aecaf5"
+    },
+    {
+      "path": "prototype/src/pixi/board-flow.js",
+      "unchangedFromHEAD": true,
+      "sha256": "3f118a222a3b88b495541727494b9ef5b5dfb622d7ea78723de2cb374cd36012"
+    },
+    {
+      "path": "prototype/src/physics/physics.js",
+      "unchangedFromHEAD": true,
+      "sha256": "47c10630947065d6c992726d71d1fd693769d80b904affabf3e939d7bb8d929b"
+    },
+    {
+      "path": "prototype/src/pixi/board-runtime.js",
+      "unchangedFromHEAD": true,
+      "sha256": "70238e4db7f8457c1f76bf221846381cb4b6cb4f5dde4e5ae300b6a11629f3b2"
+    },
+    {
+      "path": "prototype/src/dev/s7-launch-observation.js",
+      "unchangedFromHEAD": true,
+      "sha256": "91fe042281527b37ada04bab86b8b1c9896d1a0b98879396ec5a79d50771f826"
+    },
+    {
+      "path": "prototype/tools/s7-launch-comparison.mjs",
+      "unchangedFromHEAD": true,
+      "sha256": "a9864ddf5fe885d00faa78d0b2fc51ec0d2b2ce2a7f16859944701dcecc66f6f"
+    },
+    {
+      "path": "prototype/tests/s7-launch-observation.test.js",
+      "unchangedFromHEAD": true,
+      "sha256": "ff6d6809e0a8f6a04153e1a2fa99a4ece373e18a99d65a6b1e0b16c525e9be15"
+    }
+  ],
+  "oldMeasurementIdentity": "Original frozen measurements/source hashes unchanged; product application is a new source generation"
+}

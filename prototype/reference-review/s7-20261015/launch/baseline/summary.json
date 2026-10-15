@@ -1,0 +1,69 @@
+{
+  "rows": [
+    {
+      "file": "baseline-phase-0.json.gz",
+      "id": "baseline",
+      "phase": 0,
+      "shots": 199,
+      "start": 7,
+      "normal": 5,
+      "returned": 0,
+      "out": 187,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 38.32738095230018,
+      "countsValid": true,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "firstTurnRegions": {
+        "A": 0,
+        "B": 199
+      },
+      "firstContactRegions": {
+        "A": 16,
+        "B": 0
+      },
+      "firstPinIds": {
+        "30": 10,
+        "31": 6,
+        "32": 1,
+        "33": 104,
+        "34": 1,
+        "35": 1,
+        "39": 48,
+        "41": 1,
+        "48": 26,
+        "49": 1
+      },
+      "unobservedFirstTurn": 0,
+      "unobservedFirstPinContact": 0,
+      "terminalReached": 14,
+      "firstDescendingZones": {
+        "left": 142,
+        "envelope": 28,
+        "right": 29,
+        "unobserved": 0
+      },
+      "wallMilliseconds": 13483.555583
+    }
+  ],
+  "rawManifest": [
+    {
+      "file": "baseline-phase-0.json.gz",
+      "compressedSHA": "042a2a937d5874de1020dc041fde65369c70ce66c39770f2da4ec342b9b5ab1c",
+      "compressedBytes": 1527606,
+      "expandedSHA": "561970fb23a9477da31268073837f154d97e956963edb51dfe0d0f7b0dd2ec45",
+      "expandedBytes": 8562257,
+      "sourceSHA": "c4cf43405254dc4c5b114fa39a6df8447ef14c5f35c201680b22a3782c3b5891",
+      "configSHA": "9868eb51d6f03de3fdbb488a5282ff057c704685db3631d59eb769b2a41242dd",
+      "layoutSHA": "ef5ec8b503bc0d46ffd35a48b87c1f9d092891ed756a4f8375cb197f24c6e994",
+      "replayFPS": 30,
+      "frames": 4951
+    }
+  ],
+  "decision": "No automatic adoption or progression; PM evaluates fixed aim/ranking and safety. Mechanical admissions are not lottery/session payout performance."
+}

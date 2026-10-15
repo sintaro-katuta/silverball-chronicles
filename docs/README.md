@@ -1,5 +1,11 @@
 # プロジェクト資料
 
+- [Sprint 7比較結果](agile/S7_RESULTS.md)：全条件、不利な結果と限定採用。
+- [Sprint 7計画](agile/S7_PLAN.md)：左打ちの発射比較と公開後確認の診断。
+- [Sprint 7の失敗診断](agile/S7_DIAGNOSTICS.md)：保存内容、検証と調査手順。
+- [Sprint 7受入台帳](agile/S7_ACCEPTANCE.md)：条件別の証拠・判定・残件。
+- [Sprint 7の位置図と映像設計](agile/S7_VISUAL_DESIGN.md)。
+
 - [Sprint 5のレビュー済み集約](agile/S5_REVIEWED_INTEGRATION_2026-10-14.md)
 
 仕様書、設計・移行資料、参考機種の調査、レビュー文書、動画の文字起こしをこのディレクトリにまとめています。元のプロジェクト階層を保ち、文書から実装や検証素材へリンクしています。

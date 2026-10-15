@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "fps": 30.0,
+  "engine_url": "http://127.0.0.1:50021",
+  "clips": [
+    {
+      "id": "purpose",
+      "voice": "host",
+      "speaker": 3,
+      "text": "今回は左上の狙いを保ち、発射の強さだけを比べました。釘の本数や球、壁、レール、入口と受け皿は変えていません。",
+      "audio_file": "purpose.wav",
+      "start_seconds": 0.0,
+      "duration_seconds": 10.773333,
+      "end_seconds": 10.773333,
+      "start_frame": 0,
+      "duration_frames": 324,
+      "gap_after_seconds": 0.3,
+      "metadata": {
+        "delivery": "落ち着いた自然な説明。結果の小差と制限を誇張せず、比較表を読む余白を残す。",
+        "scene": "purpose"
+      }
+    },
+    {
+      "id": "aim",
+      "voice": "host",
+      "speaker": 3,
+      "text": "写真の赤はブッコミ、緑は強め打ちです。元の強さ0.20と三つの候補を比べ、狙いを下と左へ寄せる0.18を選びました。",
+      "audio_file": "aim.wav",
+      "start_seconds": 11.073333,
+      "duration_seconds": 11.104,
+      "end_seconds": 22.177333,
+      "start_frame": 332,
+      "duration_frames": 334,
+      "gap_after_seconds": 0.3,
+      "metadata": {
+        "delivery": "落ち着いた自然な説明。結果の小差と制限を誇張せず、比較表を読む余白を残す。",
+        "scene": "aim"
+      }
+    },
+    {
+      "id": "flight",
+      "voice": "host",
+      "speaker": 3,
+      "text": "同じ時刻の実記録で、最初の反転と実際の釘接触を分けて見ます。自由な飛行の頂点を確かめられない玉は、不明として残します。",
+      "audio_file": "flight.wav",
+      "start_seconds": 22.477333,
+      "duration_seconds": 10.741333,
+      "end_seconds": 33.218667,
+      "start_frame": 674,
+      "duration_frames": 323,
+      "gap_after_seconds": 0.3,
+      "metadata": {
+        "delivery": "落ち着いた自然な説明。結果の小差と制限を誇張せず、比較表を読む余白を残す。",
+        "scene": "flight"
+      }
+    },
+    {
+      "id": "flow",
+      "voice": "host",
+      "speaker": 3,
+      "text": "同じ試射の玉を、発射から下流の入賞やアウトまで追います。内側を通ったことだけで、入賞した原因とは決めつけません。",
+      "audio_file": "flow.wav",
+      "start_seconds": 33.518667,
+      "duration_seconds": 9.450667,
+      "end_seconds": 42.969333,
+      "start_frame": 1006,
+      "duration_frames": 284,
+      "gap_after_seconds": 0.3,
+      "metadata": {
+        "delivery": "落ち着いた自然な説明。結果の小差と制限を誇張せず、比較表を読む余白を残す。",
+        "scene": "flow"
+      }
+    },
+    {
+      "id": "result",
+      "voice": "host",
+      "speaker": 3,
+      "text": "選別に使わなかった三条件の長い確認では、ヘソ入賞率の合算はほぼ同じで、二条件では低下し、一般入賞も減りました。0.18は狙い位置を合わせる目的で採用し、入賞の改善は保証しません。",
+      "audio_file": "result.wav",
+      "start_seconds": 43.269333,
+      "duration_seconds": 17.450667,
+      "end_seconds": 60.72,
+      "start_frame": 1298,
+      "duration_frames": 524,
+      "gap_after_seconds": 0.3,
+      "metadata": {
+        "delivery": "落ち着いた自然な説明。結果の小差と制限を誇張せず、比較表を読む余白を残す。",
+        "scene": "result"
+      }
+    },
+    {
+      "id": "diagnostics",
+      "voice": "host",
+      "speaker": 3,
+      "text": "公開後の確認が失敗した時は、通信や画面、エラーの記録を残します。保存できなくても最初の失敗理由を保ち、制御した失敗、保存不能、通常成功の三経路を確認しました。",
+      "audio_file": "diagnostics.wav",
+      "start_seconds": 61.02,
+      "duration_seconds": 15.626667,
+      "end_seconds": 76.646667,
+      "start_frame": 1831,
+      "duration_frames": 469,
+      "gap_after_seconds": 0.3,
+      "metadata": {
+        "delivery": "落ち着いた自然な説明。結果の小差と制限を誇張せず、比較表を読む余白を残す。",
+        "scene": "diagnostics"
+      }
+    },
+    {
+      "id": "limits",
+      "voice": "host",
+      "speaker": 3,
+      "text": "変更後の操作と右打ち、停止と再開の確認結果も示します。実機の寸法校正と、以前の公開後確認が失敗した原因は残る課題です。今回、本番は更新しません。",
+      "audio_file": "limits.wav",
+      "start_seconds": 76.946667,
+      "duration_seconds": 14.730667,
+      "end_seconds": 91.677333,
+      "start_frame": 2308,
+      "duration_frames": 442,
+      "gap_after_seconds": 0.3,
+      "metadata": {
+        "delivery": "落ち着いた自然な説明。結果の小差と制限を誇張せず、比較表を読む余白を残す。",
+        "scene": "limits"
+      }
+    }
+  ],
+  "total_duration_seconds": 91.977333,
+  "total_duration_frames": 2760
+}

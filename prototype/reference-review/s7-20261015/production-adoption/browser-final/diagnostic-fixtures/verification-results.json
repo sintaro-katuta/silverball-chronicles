@@ -1,0 +1,26 @@
+{
+  "scope": "Actual release.browser.mjs with implemented diagnostics; loopback synthetic fixtures only; no actual game regression or deployment",
+  "sourceUnchanged": true,
+  "sourceSHA": "d5b57f8460ce25b6cf92afc9d0b6b3c4291e639691a6b875415bccd85c5bc1e1",
+  "diagnosticsSHA": "4cc0e8b8a42c2debadbb942d9d5f75c2b5386d5bd078ac3ed2ab5d4dc0f17fb0",
+  "results": [
+    {
+      "mode": "controlled-failure",
+      "exitCode": 1,
+      "elapsedMs": 31990,
+      "assertions": "Original locator timeout retained; navigation200, finalURL, consoleerror, HTTP404, title/body recorded"
+    },
+    {
+      "mode": "unwritable-output",
+      "exitCode": 1,
+      "elapsedMs": 31052,
+      "assertions": "Original locator timeout retained; navigation200, finalURL, consoleerror, HTTP404, title/body recorded; unwritable output did not replace original error"
+    },
+    {
+      "mode": "normal-success",
+      "exitCode": 0,
+      "elapsedMs": 1489,
+      "assertions": "Both widths and all original success assertions; no diagnostic stderr/output"
+    }
+  ]
+}
