@@ -1,0 +1,171 @@
+{
+  "movie": {
+    "path": "prototype/reference-review/s6-20261015/reference-informed/video/s6-reference-review.mp4",
+    "sha256": "2551a68bb8ec4e25fef8ae54db0c14202de130d8228f96cf7ce1d7b9961d7975",
+    "bytes": 7519928,
+    "codec": "H264/AAC",
+    "fps": "30/1",
+    "frames": 2689,
+    "videoSeconds": "89.633333",
+    "containerSeconds": "89.685333",
+    "under10MB": true
+  },
+  "machineSourceSHA": "2a93d5ea70dcb68b5301adf79d7131017e2ec6a45cda0b403540c27b09646390",
+  "machineInputs": 176,
+  "captureSourceUnchanged": true,
+  "mediaAssets": {
+    "before": "97d9ab23970f992ea7266989567e461420f1de639944a839fee85d5be370a3e5",
+    "after": "97d9ab23970f992ea7266989567e461420f1de639944a839fee85d5be370a3e5",
+    "unchanged": true,
+    "count": 392
+  },
+  "mediaInventory": "media-source-inventory.json",
+  "frameTimeReceipt": "frame-time-receipt.json",
+  "voice": {
+    "approvalStatus": "APPROVED",
+    "textsExact": true,
+    "all8WAVUnchanged": true,
+    "timelineFrames": 2689,
+    "credit": "VOICEVOX:ずんだもん",
+    "humanHearing": "not evaluated by Designer"
+  },
+  "fullDecode": {
+    "exitCode": 0,
+    "errorLogBytes": 0
+  },
+  "visualQA": {
+    "previewPM": "accepted whole/local/short/oldlong",
+    "actualMP4Extractions": [
+      "export-whole.png",
+      "export-local.png",
+      "export-short-table.png",
+      "export-admission.png",
+      "export-old-long.png"
+    ],
+    "actualExtractedReview": "Designer viewed all five actualMP4 extractions: full/local/screen table/admission time63.133 counter0vs1/oldlong deterioration visible; no clipping"
+  },
+  "nativePlayback": {
+    "status": "complete",
+    "reviewer": "PM",
+    "surface": "Brave/Chrome native video",
+    "currentTime": 89.685333,
+    "duration": 89.685333,
+    "playbackRate": 1,
+    "ended": true,
+    "readyState": 4,
+    "error": null,
+    "seeks": 0,
+    "observedFrames": 2689,
+    "playAtMs": 4578.5,
+    "finishMs": 94337,
+    "wallSeconds": 89.7585,
+    "muted": false,
+    "volume": 1,
+    "method": "one native play-button click, continuous playback, no seeking",
+    "humanHearing": "unverified; native playback is not human auditory acceptance"
+  },
+  "scope": "New3 rejected/no newlong. PriorID2 retained internally. Product defaults unchanged. Actual excerpts1x, same trial time/scale; repeated/held/static endpoints labelled.",
+  "attachment": {
+    "url": "https://github.com/user-attachments/assets/a74218d2-3784-4572-b9cf-65ebbb5b3500",
+    "pr": "https://github.com/sintaro-katuta/silverball-chronicles/pull/30",
+    "playerStarted": true,
+    "observed": {
+      "currentTime": 0.308433,
+      "duration": 89.685333,
+      "paused": false,
+      "playbackRate": 1,
+      "readyState": 4,
+      "error": null
+    },
+    "scope": "PR beginning player access and native playback started. Local full natural playback above is separate."
+  },
+  "implementationHead": "ef356d5e65331af9b8b4ba5341ff4c893d3ee83d",
+  "scriptApproval": {
+    "version": 1,
+    "status": "APPROVED",
+    "approved_by": "user",
+    "approved_at": "2026-10-15T09:57:11+09:00",
+    "script_sha256": "5f90689129e0d508809b85e58d8f471446cbeafe86fa34bea1b0667a1fb6a0a5",
+    "script_markdown_sha256": "77f4bae2f3460f506261885df13af9d34646b5eefb7a0d60ea594424aa82d70d",
+    "line_ids": [
+      "purpose",
+      "moves",
+      "fixed",
+      "short",
+      "decision",
+      "route",
+      "safety",
+      "scope"
+    ]
+  },
+  "mediaSourceInventory": {
+    "scope": "Media sources separate from176 mechanical inputs; executed capture unchanged; final composition/verification saved separately.",
+    "files": [
+      {
+        "path": "tools/pr-video/s6-capture.mjs",
+        "sha256": "9e263f306f7a52e53ea6b2a705b231b702b01cf7152431c7b4d628087a0ed1f8"
+      },
+      {
+        "path": "tools/pr-video/s6-data.json",
+        "sha256": "d662f7ba317738da2ceabaceda792fc2c39f23812ff0aa918533ed3dde02747c"
+      },
+      {
+        "path": "tools/pr-video/s6-index.tsx",
+        "sha256": "2659fe87ef72bcf16cf91763d55076161530ef540fdbf5fd24df59547fb8c049"
+      },
+      {
+        "path": "tools/pr-video/s6-verify.py",
+        "sha256": "0b42dbe81cfd22e73672fe95323ea929d63b63d9e4fb3b1adcb78da96c053fef"
+      },
+      {
+        "path": "prototype/tools/s6-reference-media/trial-input.mjs",
+        "sha256": "39940fe782b4b4247761a19b8acab355f95a65995b0648e4e92cca799d3057e2"
+      },
+      {
+        "path": "prototype/tools/s6-reference-media/capture.mjs",
+        "sha256": "5812a28ad4e5c20a4a4c1b73ad2704b24803c2bd839f3f027affec40096638ba"
+      },
+      {
+        "path": "prototype/tools/s6-reference-media/replay.js",
+        "sha256": "0918ee88c9d8afb0872e2272e4df36dbb399e6cdfee7b7a897c0bd174e13aefd"
+      },
+      {
+        "path": "prototype/tools/s6-reference-media/replay.html",
+        "sha256": "ec89a46a6be891493cd25ca11de511313923d3817630d814dfd49d30989863a5"
+      }
+    ]
+  },
+  "ci": {
+    "runId": 38660943852,
+    "url": "https://github.com/sintaro-katuta/silverball-chronicles/actions/runs/38660943852",
+    "head": "ef356d5e65331af9b8b4ba5341ff4c893d3ee83d",
+    "unit": "SUCCESS",
+    "browser": "SUCCESS",
+    "verify": "SUCCESS",
+    "scope": "Implementation verification; later approval/media/document commits share the same product source fingerprint."
+  },
+  "productSourceSHA256": "94e23b34b69762914bf82f406adf128ce510a70871175d660966d2b0ff96466b",
+  "independentAudit": {
+    "reviewer": "Scrum master",
+    "status": "accepted",
+    "frameTimeAndCountsPairs": 2160,
+    "voiceAndSourceHashes": "exact",
+    "scope": "Read/probe audit; decode reused Designer receipt"
+  },
+  "pmVisualAcceptance": {
+    "status": "accepted",
+    "actualMP4Images": [
+      "export-local.png",
+      "export-admission.png",
+      "export-old-long.png"
+    ],
+    "details": "Same-time/scale local comparison, actual admission original0/prior1, old long deterioration and separate results visible. Designer reviewed all five extracted images."
+  },
+  "localEvidenceHashes": {
+    "capture.json": "15c71a6a0f55bf0d80abac1dcea4e5ab9e30464d5c3cdbfb7c79d02dfa9a3fd4",
+    "frame-time-receipt.json": "bd1c713358cc1c43b1c3be5f4dd7d326d559793561ccbec319e9bd45b9b2ab33",
+    "voice-input-proof.json": "62d53010a83293c044577d29c47ae596c563a3b40df0e0a221ee1081b2672514",
+    "media-source-inventory.json": "c5fc9e1abb73142c087b57392901a5c2b0efd72d7d4c4fd97d4de45a602c307a",
+    "audio-audit.json": "b8ea7ebfd1beeec067c20f892417d948583aab403aee341ea93c02888c24ae22"
+  }
+}
