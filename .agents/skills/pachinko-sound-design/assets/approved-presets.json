@@ -1,0 +1,661 @@
+{
+  "version": 1,
+  "target_lufs": -18.0,
+  "true_peak_ceiling_dbfs": -2.0,
+  "preview_gap_s": 0.7,
+  "cues": [
+    {
+      "id": "moon-drop",
+      "title": "月震・落下と震動",
+      "role": "役物落下・強い告知",
+      "duration_s": 4.5,
+      "seed": 741903,
+      "events": [
+        {
+          "kind": "impact",
+          "at_s": 0,
+          "duration_s": 0.65,
+          "gain": 0.75
+        },
+        {
+          "kind": "body",
+          "at_s": 0,
+          "duration_s": 3.75,
+          "gain": 0.51,
+          "pitch_hz": [
+            [
+              0,
+              1380
+            ],
+            [
+              0.08,
+              530
+            ],
+            [
+              0.26,
+              155
+            ],
+            [
+              0.67,
+              178
+            ],
+            [
+              0.78,
+              294
+            ],
+            [
+              1.04,
+              294
+            ],
+            [
+              1.24,
+              587
+            ],
+            [
+              1.55,
+              587
+            ],
+            [
+              1.8,
+              831
+            ],
+            [
+              3.75,
+              831
+            ]
+          ],
+          "fm_index": 2.55,
+          "flutter": 0.95,
+          "decay_s": 2.7
+        },
+        {
+          "kind": "rumble",
+          "at_s": 0.04,
+          "duration_s": 1.4,
+          "gain": 0.34,
+          "hz": 63
+        },
+        {
+          "kind": "impact",
+          "at_s": 0.78,
+          "duration_s": 0.28,
+          "gain": 0.19,
+          "weight": 0.5
+        },
+        {
+          "kind": "ring",
+          "at_s": 0.78,
+          "duration_s": 2.2,
+          "gain": 0.24,
+          "hz": 294
+        },
+        {
+          "kind": "impact",
+          "at_s": 1.24,
+          "duration_s": 0.28,
+          "gain": 0.19,
+          "weight": 0.5
+        },
+        {
+          "kind": "ring",
+          "at_s": 1.24,
+          "duration_s": 2.2,
+          "gain": 0.24,
+          "hz": 587
+        },
+        {
+          "kind": "impact",
+          "at_s": 1.8,
+          "duration_s": 0.28,
+          "gain": 0.19,
+          "weight": 0.5
+        },
+        {
+          "kind": "ring",
+          "at_s": 1.8,
+          "duration_s": 2.2,
+          "gain": 0.24,
+          "hz": 831
+        }
+      ]
+    },
+    {
+      "id": "steel-verdict",
+      "title": "鋼閃・連打と決着",
+      "role": "図柄確定・決着",
+      "duration_s": 3.5,
+      "seed": 741903,
+      "events": [
+        {
+          "kind": "impact",
+          "at_s": 0,
+          "duration_s": 0.32,
+          "gain": 0.37
+        },
+        {
+          "kind": "body",
+          "at_s": 0,
+          "duration_s": 0.11,
+          "gain": 0.46,
+          "pitch_hz": [
+            [
+              0,
+              197.64000000000001
+            ],
+            [
+              0.026,
+              183
+            ],
+            [
+              0.11,
+              183
+            ]
+          ],
+          "fm_index": 2.3,
+          "flutter": 0.34,
+          "decay_s": 0.17600000000000002
+        },
+        {
+          "kind": "impact",
+          "at_s": 0.155,
+          "duration_s": 0.32,
+          "gain": 0.37
+        },
+        {
+          "kind": "body",
+          "at_s": 0.155,
+          "duration_s": 0.11,
+          "gain": 0.46,
+          "pitch_hz": [
+            [
+              0,
+              197.64000000000001
+            ],
+            [
+              0.026,
+              183
+            ],
+            [
+              0.11,
+              183
+            ]
+          ],
+          "fm_index": 2.3,
+          "flutter": 0.34,
+          "decay_s": 0.17600000000000002
+        },
+        {
+          "kind": "impact",
+          "at_s": 0.31,
+          "duration_s": 0.32,
+          "gain": 0.37
+        },
+        {
+          "kind": "body",
+          "at_s": 0.31,
+          "duration_s": 0.4,
+          "gain": 0.46,
+          "pitch_hz": [
+            [
+              0,
+              263.52000000000004
+            ],
+            [
+              0.026,
+              244
+            ],
+            [
+              0.4,
+              244
+            ]
+          ],
+          "fm_index": 2.3,
+          "flutter": 0.34,
+          "decay_s": 0.6400000000000001
+        },
+        {
+          "kind": "ring",
+          "at_s": 0.31,
+          "duration_s": 0.7,
+          "gain": 0.31,
+          "hz": 612.4399999999999
+        },
+        {
+          "kind": "impact",
+          "at_s": 0.85,
+          "duration_s": 0.32,
+          "gain": 0.37
+        },
+        {
+          "kind": "body",
+          "at_s": 0.85,
+          "duration_s": 0.11,
+          "gain": 0.46,
+          "pitch_hz": [
+            [
+              0,
+              221.4
+            ],
+            [
+              0.026,
+              205
+            ],
+            [
+              0.11,
+              205
+            ]
+          ],
+          "fm_index": 2.3,
+          "flutter": 0.34,
+          "decay_s": 0.17600000000000002
+        },
+        {
+          "kind": "impact",
+          "at_s": 1.005,
+          "duration_s": 0.32,
+          "gain": 0.37
+        },
+        {
+          "kind": "body",
+          "at_s": 1.005,
+          "duration_s": 0.11,
+          "gain": 0.46,
+          "pitch_hz": [
+            [
+              0,
+              221.4
+            ],
+            [
+              0.026,
+              205
+            ],
+            [
+              0.11,
+              205
+            ]
+          ],
+          "fm_index": 2.3,
+          "flutter": 0.34,
+          "decay_s": 0.17600000000000002
+        },
+        {
+          "kind": "impact",
+          "at_s": 1.16,
+          "duration_s": 0.32,
+          "gain": 0.37
+        },
+        {
+          "kind": "body",
+          "at_s": 1.16,
+          "duration_s": 0.4,
+          "gain": 0.46,
+          "pitch_hz": [
+            [
+              0,
+              294.84000000000003
+            ],
+            [
+              0.026,
+              273
+            ],
+            [
+              0.4,
+              273
+            ]
+          ],
+          "fm_index": 2.3,
+          "flutter": 0.34,
+          "decay_s": 0.6400000000000001
+        },
+        {
+          "kind": "ring",
+          "at_s": 1.16,
+          "duration_s": 0.7,
+          "gain": 0.31,
+          "hz": 685.2299999999999
+        },
+        {
+          "kind": "impact",
+          "at_s": 1.79,
+          "duration_s": 0.78,
+          "gain": 0.78
+        },
+        {
+          "kind": "body",
+          "at_s": 1.79,
+          "duration_s": 1.32,
+          "gain": 0.55,
+          "pitch_hz": [
+            [
+              0,
+              395.28000000000003
+            ],
+            [
+              0.026,
+              366
+            ],
+            [
+              1.32,
+              366
+            ]
+          ],
+          "fm_index": 1.8,
+          "flutter": 0.34,
+          "decay_s": null
+        },
+        {
+          "kind": "ring",
+          "at_s": 1.79,
+          "duration_s": 1.62,
+          "gain": 0.31,
+          "hz": 918.66
+        },
+        {
+          "kind": "rumble",
+          "at_s": 1.79,
+          "duration_s": 1.13,
+          "gain": 0.2,
+          "hz": 61
+        }
+      ]
+    },
+    {
+      "id": "golden-gate",
+      "title": "金月・BONUS開放",
+      "role": "BONUS・RUSH突入",
+      "duration_s": 5.2,
+      "seed": 741903,
+      "events": [
+        {
+          "kind": "impact",
+          "at_s": 0,
+          "duration_s": 0.85,
+          "gain": 0.74
+        },
+        {
+          "kind": "ring",
+          "at_s": 0,
+          "duration_s": 1.28,
+          "gain": 0.4,
+          "hz": 431
+        },
+        {
+          "kind": "impact",
+          "at_s": 0.24,
+          "duration_s": 0.26,
+          "gain": 0.34,
+          "weight": 0.55
+        },
+        {
+          "kind": "body",
+          "at_s": 0.24,
+          "duration_s": 0.14,
+          "gain": 0.42,
+          "pitch_hz": [
+            [
+              0,
+              186.83270000000002
+            ],
+            [
+              0.024,
+              174.61
+            ],
+            [
+              0.14,
+              174.61
+            ]
+          ],
+          "fm_index": 1.4
+        },
+        {
+          "kind": "impact",
+          "at_s": 0.41,
+          "duration_s": 0.26,
+          "gain": 0.34,
+          "weight": 0.55
+        },
+        {
+          "kind": "body",
+          "at_s": 0.41,
+          "duration_s": 0.14,
+          "gain": 0.42,
+          "pitch_hz": [
+            [
+              0,
+              249.39560000000003
+            ],
+            [
+              0.024,
+              233.08
+            ],
+            [
+              0.14,
+              233.08
+            ]
+          ],
+          "fm_index": 1.4
+        },
+        {
+          "kind": "impact",
+          "at_s": 0.58,
+          "duration_s": 0.26,
+          "gain": 0.34,
+          "weight": 0.55
+        },
+        {
+          "kind": "body",
+          "at_s": 0.58,
+          "duration_s": 0.27,
+          "gain": 0.42,
+          "pitch_hz": [
+            [
+              0,
+              373.6761
+            ],
+            [
+              0.024,
+              349.23
+            ],
+            [
+              0.27,
+              349.23
+            ]
+          ],
+          "fm_index": 1.4
+        },
+        {
+          "kind": "impact",
+          "at_s": 0.85,
+          "duration_s": 0.26,
+          "gain": 0.34,
+          "weight": 0.55
+        },
+        {
+          "kind": "body",
+          "at_s": 0.85,
+          "duration_s": 0.15,
+          "gain": 0.42,
+          "pitch_hz": [
+            [
+              0,
+              222.18550000000002
+            ],
+            [
+              0.024,
+              207.65
+            ],
+            [
+              0.15,
+              207.65
+            ]
+          ],
+          "fm_index": 1.4
+        },
+        {
+          "kind": "impact",
+          "at_s": 1.02,
+          "duration_s": 0.26,
+          "gain": 0.34,
+          "weight": 0.55
+        },
+        {
+          "kind": "body",
+          "at_s": 1.02,
+          "duration_s": 0.15,
+          "gain": 0.42,
+          "pitch_hz": [
+            [
+              0,
+              296.5826
+            ],
+            [
+              0.024,
+              277.18
+            ],
+            [
+              0.15,
+              277.18
+            ]
+          ],
+          "fm_index": 1.4
+        },
+        {
+          "kind": "impact",
+          "at_s": 1.19,
+          "duration_s": 0.26,
+          "gain": 0.34,
+          "weight": 0.55
+        },
+        {
+          "kind": "body",
+          "at_s": 1.19,
+          "duration_s": 0.31,
+          "gain": 0.42,
+          "pitch_hz": [
+            [
+              0,
+              444.37100000000004
+            ],
+            [
+              0.024,
+              415.3
+            ],
+            [
+              0.31,
+              415.3
+            ]
+          ],
+          "fm_index": 1.4
+        },
+        {
+          "kind": "body",
+          "at_s": 1.63,
+          "duration_s": 2.98,
+          "gain": 0.38,
+          "pitch_hz": [
+            [
+              0,
+              233.08
+            ],
+            [
+              0.08,
+              233.08
+            ],
+            [
+              2.98,
+              233.08
+            ]
+          ],
+          "fm_index": 0.72,
+          "decay_s": 1.65
+        },
+        {
+          "kind": "body",
+          "at_s": 1.63,
+          "duration_s": 2.98,
+          "gain": 0.26,
+          "pitch_hz": [
+            [
+              0,
+              349.23
+            ],
+            [
+              0.08,
+              349.23
+            ],
+            [
+              2.98,
+              349.23
+            ]
+          ],
+          "fm_index": 0.72,
+          "decay_s": 1.65
+        },
+        {
+          "kind": "body",
+          "at_s": 1.63,
+          "duration_s": 2.98,
+          "gain": 0.18,
+          "pitch_hz": [
+            [
+              0,
+              466.16
+            ],
+            [
+              0.08,
+              466.16
+            ],
+            [
+              2.98,
+              466.16
+            ]
+          ],
+          "fm_index": 0.72,
+          "decay_s": 1.65
+        },
+        {
+          "kind": "body",
+          "at_s": 1.63,
+          "duration_s": 2.98,
+          "gain": 0.13,
+          "pitch_hz": [
+            [
+              0,
+              698.46
+            ],
+            [
+              0.08,
+              698.46
+            ],
+            [
+              2.98,
+              698.46
+            ]
+          ],
+          "fm_index": 0.72,
+          "decay_s": 1.65
+        },
+        {
+          "kind": "impact",
+          "at_s": 1.63,
+          "duration_s": 0.85,
+          "gain": 0.91
+        },
+        {
+          "kind": "rumble",
+          "at_s": 1.63,
+          "duration_s": 1.45,
+          "gain": 0.24,
+          "hz": 58.27
+        },
+        {
+          "kind": "ring",
+          "at_s": 1.63,
+          "duration_s": 3.25,
+          "gain": 0.44,
+          "hz": 932.32
+        }
+      ]
+    }
+  ]
+}
