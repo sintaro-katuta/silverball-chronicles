@@ -1,0 +1,10 @@
+<!doctype html><meta charset="utf-8"><title>S7 音声付き比較動画</title>
+<style>body{margin:16px;background:#071421;color:#eef6fc;font:18px sans-serif}h1{font-size:24px}button{font:inherit;padding:10px}video{display:block;max-height:76vh;max-width:100%;margin:12px 0}output{display:block;font:14px monospace;overflow-wrap:anywhere}</style>
+<h1>S7：発射設定の比較と公開後確認の診断</h1><p>承認済み台本・VOICEVOX:ずんだもん。狙い位置合わせの限定採用。入賞改善の保証ではありません。</p>
+<button id="start">92秒を音声付き・等速で確認</button><video id="movie" src="s7-review.mp4" controls playsinline preload="metadata"></video><output id="receipt">未再生</output>
+<script>
+const v=document.querySelector('video'),o=document.querySelector('output');const r={file:'s7-review.mp4',startedAt:null,endedAt:null,ended:false,seeks:0,rateChanges:0,error:null,audioMuted:false,volume:1};
+function report(){o.textContent=JSON.stringify({...r,currentTime:v.currentTime,duration:v.duration,playbackRate:v.playbackRate,paused:v.paused,muted:v.muted,volume:v.volume,readyState:v.readyState,videoWidth:v.videoWidth,videoHeight:v.videoHeight});}
+document.querySelector('button').onclick=async()=>{if(r.startedAt)return;r.startedAt=new Date().toISOString();v.playbackRate=1;v.muted=false;v.volume=1;try{await v.play();}catch(e){r.error=String(e);}report();};
+v.ontimeupdate=report;v.onloadedmetadata=report;v.onseeking=()=>{r.seeks++;report();};v.onratechange=()=>{r.rateChanges++;report();};v.onerror=()=>{r.error=v.error?.message??'media error';report();};v.onended=()=>{r.ended=true;r.endedAt=new Date().toISOString();report();};
+</script>

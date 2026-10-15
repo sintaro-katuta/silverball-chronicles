@@ -1,6 +1,6 @@
 # S7 発射設定の比較と採否
 
-2026-10-16時点。対象は[#31](https://github.com/sintaro-katuta/silverball-chronicles/issues/31)。**全比較と独立監査を終え、PMは0.18を狙い位置合わせの目的で限定採用しました。本編のローカル変更と両画面幅の回帰検証は完了し、最新差分のLinux CIと動画は確認待ちです。本番は0.20のままです。**
+2026-10-16時点。対象は[#31](https://github.com/sintaro-katuta/silverball-chronicles/issues/31)。**全比較と独立監査を終え、PMは0.18を狙い位置合わせの目的で限定採用しました。本編のローカル変更と両画面幅の回帰検証は完了し、PR HEAD 296d813のLinux CIは全3ジョブ成功し、台本はユーザー/CLI承認済み・7WAV生成済みで、7場面previewをPMが確認しました。最終説明MP4は全decode・7場面実見・ローカル自然終端をPMが受入れ、PR33冒頭へ掲載済みです。最終commitの最新CI・ユーザーPRレビュー/集約は未完了です。本番は0.20のままです。**
 
 ## 固定条件と実行した版
 
@@ -46,7 +46,7 @@
 
 試射版d61と比較SHAは変えません。採用後のappソースを旧試射SHAへ付け替えず、物理・形状・渡す設定の対応を別に示し、新しい本編の実発射・操作・右切替・停止再開で確認します。録画は旧試射ソースを保全した別コピーから同じ実30Hz記録を再生し、補間や物理再計算を行いません。
 
-[長い確認へ進むPM判断](../../prototype/reference-review/s7-20261015/launch/selection-decision.json)、[全長比較](../../prototype/reference-review/s7-20261015/launch/long/summary.json)、[S7受入台帳](S7_ACCEPTANCE.md)。変更後の本編回帰は完了し、新CI、動画・PRレビューは未完了です。新しい本番公開は対象外です。
+[長い確認へ進むPM判断](../../prototype/reference-review/s7-20261015/launch/selection-decision.json)、[全長比較](../../prototype/reference-review/s7-20261015/launch/long/summary.json)、[S7受入台帳](S7_ACCEPTANCE.md)。変更後の本編回帰は完了し、PR HEAD 296d813の新CIは成功し、動画は提出・再生確認済み、ユーザーPRレビューと集約は未完了です。新しい本番公開は対象外です。
 
 ## 採用後の本編確認
 
@@ -59,3 +59,9 @@
 試射の再実行は、凍結版`d61ee3065458e6dfe023c7c2f4b4a81f48d53a18`とその計画を別の作業場所へ取り出して行います。`prototype/tools/s7-launch-comparison.mjs`を使い、保存済み各`run-plan.json`の`command`と`pm-plan.executed.md`の条件を確認します。保存済み結果を上書きせず、別の出力先で比較してください。採用後のコードへ旧試射のSHAを付け直すことはしません。
 
 採用後の本編は`prototype/`で`npm ci`、`npm run build`の後、既存のrelease・session-controls・feedbackの各ブラウザ検証を行います。正確な実行引数は[実行したrunner](../../prototype/reference-review/s7-20261015/production-adoption/browser-final/runner.executed.mjs)に記録しています。公開先へ接続せず、所有するローカルpreviewに対して実行してください。
+
+## PR反映後のCI
+
+[run38761334212](https://github.com/sintaro-katuta/silverball-chronicles/actions/runs/38761334212)はPR HEAD `296d813`、CIの仮マージ版`8e84f2d`に対して全3ジョブ成功しました。単体590件、両画面幅の本編確認・操作・演出、既存の釘比較と結果集約を通過しました。565入力のSHA/bytesと結合候補45資産は手元とも一致しました。[独立CI確認](S7_CI_REVIEW.md)。今後の動画・文書コミット後は最新PR checksで再確認します。
+
+処理別の時間ではビルド14.00秒、本編の公開確認51.15秒、操作24.33秒、演出・画面のfeedback回帰744.14秒でした。長い区間は分かりましたが、前回との差の原因までは未確定です。成功させるための待機時間延長や確認項目の削減は行っていません。
