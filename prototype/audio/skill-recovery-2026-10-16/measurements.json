@@ -1,0 +1,50 @@
+{
+  "cue": "moon-release",
+  "duration_s": 6.0,
+  "sample_rate": 48000,
+  "channels": 2,
+  "original_recordings_loaded": 0,
+  "common_preset_count": 1,
+  "synth_voice_count": 2,
+  "global_gain_db": -10.34,
+  "loudness": {
+    "integrated_lufs": -19.99,
+    "true_peak_dbfs": -11.68,
+    "lra_lu": 0.8
+  },
+  "features": {
+    "peak": 0.25898215383546186,
+    "rms": 0.0646010583023892,
+    "mono_rms": 0.0646010583023892,
+    "mono_loss_db": 0.0,
+    "crest_db": 12.06060411314105,
+    "max_400ms_rms_dbfs": -21.915524756234923,
+    "spectral_centroid_hz": 1028.0911572022737,
+    "band_energy_fraction": {
+      "20-250Hz": 5.575905772771389e-05,
+      "250-2000Hz": 0.911327690450978,
+      "2000-8000Hz": 0.08710804864470713,
+      "8000-20000Hz": 0.001508501846587184
+    },
+    "active_end_60db_s": 5.92,
+    "stereo_correlation": 1.0,
+    "clipped_samples": 0,
+    "first_sample_peak": 0.0,
+    "last_sample_peak": 0.0
+  },
+  "design_sha256": "280318604d0cb1f06ecac2b6b5cbcbaa6826120721a418d44232f60e6c13b2c7",
+  "source_sha256": "da23c153f495984f284c77988a5239b7cadb01e986b7459091193bc2d8e6b479",
+  "engine_sha256": "53188945e024f442044fec50c2388f0846b986a4a2b434a06e180b79d04bee77",
+  "wav_sha256": "4d873b3468ce37244badef9b3dd22c6a0765ec4b163e553a5b03b3e7b352207c",
+  "environment": {
+    "python": "3.14.7",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "acceptance": {
+    "numeric": "passed",
+    "browser": "pending",
+    "subjective": "pending user listening",
+    "game": "not integrated"
+  }
+}
