@@ -1,0 +1,550 @@
+{
+  "scope": "Silent evidence clips, not approved narration/final PR video. Decode and actual frame review; not natural native playback or performance test.",
+  "clips": [
+    {
+      "id": "short-whole",
+      "sha256": "a865c30631d0ec7577b885a6fd3c8e1f17d0477529ade93d6fb6b308221169a5",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "nb_frames": "180"
+          }
+        ],
+        "format": {
+          "duration": "6.000000",
+          "size": "812606"
+        }
+      },
+      "fullDecodeExit": 0,
+      "warningsErrors": "",
+      "allSelectedFramesAdjacent": true,
+      "first": {
+        "outputFrame": 0,
+        "requestedTime": 3,
+        "sides": [
+          {
+            "index": 90,
+            "actualTime": 2.9999999999999747,
+            "frameSHA": "c524be38802627117ed70c531dddbcedc44eed63eadf99d8e145ede7a7fe9b8b",
+            "spawned": 5,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 0,
+              "rush": 0,
+              "bonus": 0,
+              "out": 0,
+              "returned": 0
+            },
+            "inFlight": 5
+          },
+          {
+            "index": 90,
+            "actualTime": 2.999999999999976,
+            "frameSHA": "c444d461f8e3c4bf2e5f94218ec671688c1b561238eb4e8fa0cb67bf3e01e91d",
+            "spawned": 5,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 0,
+              "rush": 0,
+              "bonus": 0,
+              "out": 0,
+              "returned": 0
+            },
+            "inFlight": 5
+          }
+        ]
+      },
+      "last": {
+        "outputFrame": 179,
+        "requestedTime": 8.966666666666667,
+        "sides": [
+          {
+            "index": 269,
+            "actualTime": 8.966666666668022,
+            "frameSHA": "0672fc4259ed6d7e563f480b432b7d761be0df063335bb257850641d2e74d62b",
+            "spawned": 15,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 0,
+              "rush": 0,
+              "bonus": 0,
+              "out": 6,
+              "returned": 0
+            },
+            "inFlight": 9
+          },
+          {
+            "index": 269,
+            "actualTime": 8.966666666668175,
+            "frameSHA": "1e6b9ff2b64a562c842d535776ba4be0f22a7a6b6852e22ff051faecf165e88a",
+            "spawned": 15,
+            "counts": {
+              "fuzu": 0,
+              "normal": 1,
+              "start": 1,
+              "rush": 0,
+              "bonus": 0,
+              "out": 6,
+              "returned": 0
+            },
+            "inFlight": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "short-upper",
+      "sha256": "85cb7cba2c6375fd47e9f0d59184aa553f241b53f1f66485e0f030d169119ebd",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "nb_frames": "180"
+          }
+        ],
+        "format": {
+          "duration": "6.000000",
+          "size": "496887"
+        }
+      },
+      "fullDecodeExit": 0,
+      "warningsErrors": "",
+      "allSelectedFramesAdjacent": true,
+      "first": {
+        "outputFrame": 0,
+        "requestedTime": 3,
+        "sides": [
+          {
+            "index": 90,
+            "actualTime": 2.9999999999999747,
+            "frameSHA": "c524be38802627117ed70c531dddbcedc44eed63eadf99d8e145ede7a7fe9b8b",
+            "spawned": 5,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 0,
+              "rush": 0,
+              "bonus": 0,
+              "out": 0,
+              "returned": 0
+            },
+            "inFlight": 5
+          },
+          {
+            "index": 90,
+            "actualTime": 2.999999999999976,
+            "frameSHA": "c444d461f8e3c4bf2e5f94218ec671688c1b561238eb4e8fa0cb67bf3e01e91d",
+            "spawned": 5,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 0,
+              "rush": 0,
+              "bonus": 0,
+              "out": 0,
+              "returned": 0
+            },
+            "inFlight": 5
+          }
+        ]
+      },
+      "last": {
+        "outputFrame": 179,
+        "requestedTime": 8.966666666666667,
+        "sides": [
+          {
+            "index": 269,
+            "actualTime": 8.966666666668022,
+            "frameSHA": "0672fc4259ed6d7e563f480b432b7d761be0df063335bb257850641d2e74d62b",
+            "spawned": 15,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 0,
+              "rush": 0,
+              "bonus": 0,
+              "out": 6,
+              "returned": 0
+            },
+            "inFlight": 9
+          },
+          {
+            "index": 269,
+            "actualTime": 8.966666666668175,
+            "frameSHA": "1e6b9ff2b64a562c842d535776ba4be0f22a7a6b6852e22ff051faecf165e88a",
+            "spawned": 15,
+            "counts": {
+              "fuzu": 0,
+              "normal": 1,
+              "start": 1,
+              "rush": 0,
+              "bonus": 0,
+              "out": 6,
+              "returned": 0
+            },
+            "inFlight": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "long-whole",
+      "sha256": "0696e92b9b4e9e2862eea2c9be62e969681adb1f546ee80860d2a7cf2ad9b5d1",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "nb_frames": "240"
+          }
+        ],
+        "format": {
+          "duration": "8.000000",
+          "size": "779374"
+        }
+      },
+      "fullDecodeExit": 0,
+      "warningsErrors": "",
+      "allSelectedFramesAdjacent": true,
+      "first": {
+        "outputFrame": 0,
+        "requestedTime": 8.5,
+        "sides": [
+          {
+            "index": 255,
+            "actualTime": 8.500000000001315,
+            "frameSHA": "686dfdf02d673fd94a3135ccbe992daf4abbe3d668c8a65cb9482f6bd002e1ed",
+            "spawned": 14,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 0,
+              "rush": 0,
+              "bonus": 0,
+              "out": 8,
+              "returned": 0
+            },
+            "inFlight": 6
+          },
+          {
+            "index": 255,
+            "actualTime": 8.500000000001371,
+            "frameSHA": "093f1de48ce8860a544df09699713d0667d07e433b7c69962a159042aaed96b6",
+            "spawned": 14,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 0,
+              "rush": 0,
+              "bonus": 0,
+              "out": 7,
+              "returned": 0
+            },
+            "inFlight": 7
+          }
+        ]
+      },
+      "last": {
+        "outputFrame": 239,
+        "requestedTime": 16.46666666666667,
+        "sides": [
+          {
+            "index": 494,
+            "actualTime": 16.466666666671568,
+            "frameSHA": "d996ea88d71a959ed38e5a5b89d36111b7b52c3baf68a16a497afad1f79fdb5c",
+            "spawned": 28,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 1,
+              "rush": 0,
+              "bonus": 0,
+              "out": 19,
+              "returned": 0
+            },
+            "inFlight": 8
+          },
+          {
+            "index": 494,
+            "actualTime": 16.466666666671554,
+            "frameSHA": "e0b81b7521f965a78cbeda1dff36a88d3dc468d49ee2bd9ff88d1ee625e67bd2",
+            "spawned": 27,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 1,
+              "rush": 0,
+              "bonus": 0,
+              "out": 21,
+              "returned": 0
+            },
+            "inFlight": 5
+          }
+        ]
+      }
+    },
+    {
+      "id": "long-upper",
+      "sha256": "e642dc528f0da80c23f629ad4518002854e4b0e37c75c6f19771eb18ee68d4ce",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "nb_frames": "180"
+          }
+        ],
+        "format": {
+          "duration": "6.000000",
+          "size": "604724"
+        }
+      },
+      "fullDecodeExit": 0,
+      "warningsErrors": "",
+      "allSelectedFramesAdjacent": true,
+      "first": {
+        "outputFrame": 0,
+        "requestedTime": 8.5,
+        "sides": [
+          {
+            "index": 255,
+            "actualTime": 8.500000000001315,
+            "frameSHA": "686dfdf02d673fd94a3135ccbe992daf4abbe3d668c8a65cb9482f6bd002e1ed",
+            "spawned": 14,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 0,
+              "rush": 0,
+              "bonus": 0,
+              "out": 8,
+              "returned": 0
+            },
+            "inFlight": 6
+          },
+          {
+            "index": 255,
+            "actualTime": 8.500000000001371,
+            "frameSHA": "093f1de48ce8860a544df09699713d0667d07e433b7c69962a159042aaed96b6",
+            "spawned": 14,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 0,
+              "rush": 0,
+              "bonus": 0,
+              "out": 7,
+              "returned": 0
+            },
+            "inFlight": 7
+          }
+        ]
+      },
+      "last": {
+        "outputFrame": 179,
+        "requestedTime": 14.466666666666667,
+        "sides": [
+          {
+            "index": 434,
+            "actualTime": 14.466666666670868,
+            "frameSHA": "92e31c625fa7b147db9009a6eb53bf83fd13657b30a9be4871dd4677459e724b",
+            "spawned": 24,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 1,
+              "rush": 0,
+              "bonus": 0,
+              "out": 16,
+              "returned": 0
+            },
+            "inFlight": 7
+          },
+          {
+            "index": 434,
+            "actualTime": 14.466666666670868,
+            "frameSHA": "f5d73c056a4e72ed04f5c048a7da2e81546ac8446123b09b67d5a92be9a0c100",
+            "spawned": 24,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 0,
+              "rush": 0,
+              "bonus": 0,
+              "out": 18,
+              "returned": 0
+            },
+            "inFlight": 6
+          }
+        ]
+      }
+    },
+    {
+      "id": "long-downstream",
+      "sha256": "9875b50bafc2ebf2db39aaf8413f6e15d6149f8d35abea215b9c0fa1358e5578",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "nb_frames": "150"
+          }
+        ],
+        "format": {
+          "duration": "5.000000",
+          "size": "553821"
+        }
+      },
+      "fullDecodeExit": 0,
+      "warningsErrors": "",
+      "allSelectedFramesAdjacent": true,
+      "first": {
+        "outputFrame": 0,
+        "requestedTime": 11.5,
+        "sides": [
+          {
+            "index": 345,
+            "actualTime": 11.500000000002764,
+            "frameSHA": "e3215fde2f8f6d7c118b0276b28cfe6a316fd8410b770ae865f00b538e8f71a4",
+            "spawned": 19,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 0,
+              "rush": 0,
+              "bonus": 0,
+              "out": 10,
+              "returned": 0
+            },
+            "inFlight": 9
+          },
+          {
+            "index": 345,
+            "actualTime": 11.500000000002792,
+            "frameSHA": "d0af650542c0193ac70b0af07d01b140174eef150812e37586cb55da29713ae4",
+            "spawned": 19,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 0,
+              "rush": 0,
+              "bonus": 0,
+              "out": 14,
+              "returned": 0
+            },
+            "inFlight": 5
+          }
+        ]
+      },
+      "last": {
+        "outputFrame": 149,
+        "requestedTime": 16.46666666666667,
+        "sides": [
+          {
+            "index": 494,
+            "actualTime": 16.466666666671568,
+            "frameSHA": "d996ea88d71a959ed38e5a5b89d36111b7b52c3baf68a16a497afad1f79fdb5c",
+            "spawned": 28,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 1,
+              "rush": 0,
+              "bonus": 0,
+              "out": 19,
+              "returned": 0
+            },
+            "inFlight": 8
+          },
+          {
+            "index": 494,
+            "actualTime": 16.466666666671554,
+            "frameSHA": "e0b81b7521f965a78cbeda1dff36a88d3dc468d49ee2bd9ff88d1ee625e67bd2",
+            "spawned": 27,
+            "counts": {
+              "fuzu": 0,
+              "normal": 0,
+              "start": 1,
+              "rush": 0,
+              "bonus": 0,
+              "out": 21,
+              "returned": 0
+            },
+            "inFlight": 5
+          }
+        ]
+      }
+    }
+  ],
+  "sourceSHA": "c4cf43405254dc4c5b114fa39a6df8447ef14c5f35c201680b22a3782c3b5891",
+  "fullDecodeAllZero": true,
+  "firstFailure": "short/ holds network font allow-list setup failure; no successful clip relabelled",
+  "ChromeClosed": true,
+  "ownedViteStopped": true,
+  "decodedMotion": [
+    {
+      "id": "short-whole",
+      "decodedFrames": 180,
+      "consecutiveDuplicateFrames": 0
+    },
+    {
+      "id": "short-upper",
+      "decodedFrames": 180,
+      "consecutiveDuplicateFrames": 0
+    },
+    {
+      "id": "long-whole",
+      "decodedFrames": 240,
+      "consecutiveDuplicateFrames": 0
+    },
+    {
+      "id": "long-upper",
+      "decodedFrames": 180,
+      "consecutiveDuplicateFrames": 0
+    },
+    {
+      "id": "long-downstream",
+      "decodedFrames": 150,
+      "consecutiveDuplicateFrames": 0
+    }
+  ],
+  "actualDecodedFrameReview": [
+    "long-whole midpoint",
+    "long-upper midpoint",
+    "baseline admission before/after",
+    "candidate admission before/after",
+    "345s endpoint"
+  ],
+  "labelPolicy": "Evidence source is historical d61 trial.0.18 limited adoption is reflected in capture override. Final composition must state local0.18 applied/testing/pre-publication; clip phrase all-condition declines must be clarified as TWO conditions with heso rate decline plus general admission decline."
+}

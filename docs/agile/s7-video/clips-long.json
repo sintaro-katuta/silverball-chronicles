@@ -1,0 +1,101 @@
+{
+  "selectionStatus": "0.18は初期の位置合わせ目的で限定採用。全条件の低下・一般入賞減も結果表で開示。",
+  "labels": [
+    "長比較0.20・開始0.175秒",
+    "長比較0.18・開始0.175秒"
+  ],
+  "clips": [
+    {
+      "id": "long-whole",
+      "start": 8.5,
+      "seconds": 8,
+      "view": "whole",
+      "ballIds": [
+        15,
+        20
+      ]
+    },
+    {
+      "id": "long-upper",
+      "start": 8.5,
+      "seconds": 6,
+      "view": "upper-left",
+      "ballIds": [
+        15,
+        20
+      ]
+    },
+    {
+      "id": "long-downstream",
+      "start": 11.5,
+      "seconds": 5,
+      "view": "downstream",
+      "ballIds": [
+        15,
+        20
+      ]
+    }
+  ],
+  "stills": [
+    {
+      "id": "long-fire-stop-300",
+      "time": 300,
+      "view": "whole"
+    },
+    {
+      "id": "long-drain-end-345",
+      "time": 345,
+      "view": "whole"
+    }
+  ],
+  "events": {
+    "baseline": {
+      "ballId": 15,
+      "shot": 8.516666666667987,
+      "startAdmission": 13.489583333337066
+    },
+    "candidate": {
+      "ballId": 20,
+      "shot": 11.57500000000282,
+      "startAdmission": 15.986458333338147
+    }
+  },
+  "note": "Same absolute physical time/phase, separate ball IDs per case. Whole8.5..16.5 covers both shots through actual admissions. Upper/downstream are explicitly overlapping excerpts of these same records. Other2phases remain in results table.",
+  "editorialCorrection": {
+    "status": "required-before-final-video; not yet applied",
+    "originalSelectionStatus": "0.18は初期の位置合わせ目的で限定採用。全条件の低下・一般入賞減も結果表で開示。",
+    "reason": "全条件の低下は不正確です。ヘソ率は3条件中2条件で低下し、一般入賞は合算41から33へ減少しました。",
+    "replacementText": "ヘソ率は2条件で低下・一般41→33／本編設定0.18・公開前",
+    "canvasSize": [
+      1280,
+      1080
+    ],
+    "replaceOnlyRect": {
+      "x": 24,
+      "y": 90,
+      "width": 1232,
+      "height": 32
+    },
+    "background": "#071421",
+    "textOrigin": {
+      "x": 28,
+      "baselineY": 111
+    },
+    "font": "21px sans-serif",
+    "preserve": "原クリップとそのSHA、selectionStatusは変更しません。最終編集の説明帯訂正として記録し、時刻行(y187)・盤面(y212以降)・計数を覆いません。",
+    "originalClips": [
+      {
+        "id": "long-whole",
+        "sha256": "0696e92b9b4e9e2862eea2c9be62e969681adb1f546ee80860d2a7cf2ad9b5d1"
+      },
+      {
+        "id": "long-upper",
+        "sha256": "e642dc528f0da80c23f629ad4518002854e4b0e37c75c6f19771eb18ee68d4ce"
+      },
+      {
+        "id": "long-downstream",
+        "sha256": "9875b50bafc2ebf2db39aaf8413f6e15d6149f8d35abea215b9c0fa1358e5578"
+      }
+    ]
+  }
+}
