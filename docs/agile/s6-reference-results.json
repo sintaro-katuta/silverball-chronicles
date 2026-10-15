@@ -472,9 +472,7 @@
     "Stage-specific postprocessing does not replace absent integration paths or confer real-world calibration.",
     "Prior .14 overall product-adoption rejection remains."
   ],
-  "pending": [
-    "PR review and merge"
-  ],
+  "pending": [],
   "localEvidenceRoot": "prototype/reference-review/s6-20261015/reference-informed/",
   "localRegression": {
     "status": "unit-verified",
@@ -531,5 +529,19 @@
     "sha256": "2551a68bb8ec4e25fef8ae54db0c14202de130d8228f96cf7ce1d7b9961d7975",
     "status": "PM accepted and published to PR beginning",
     "productionRecord": "s6-video/PRODUCTION.json"
+  },
+  "integration": {
+    "pr": 30,
+    "status": "merged",
+    "sha": "b612cf79a52112c0e1b944491b293ca82f4b3aa9",
+    "base": "release/0.2.0",
+    "latestPRCI": {
+      "head": "f0d56092cd45a2156cc2a5b98ff06a170dd4ab3a",
+      "run": 38665719507,
+      "unit": "success",
+      "browser": "success",
+      "verify": "success"
+    },
+    "scope": "S6 comparison delivered. Overall Issue23 and product adoption remain distinct."
   }
 }
