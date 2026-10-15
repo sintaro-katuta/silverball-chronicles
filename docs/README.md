@@ -347,3 +347,4 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [S6：釘2案の比較結果](agile/S6_RESULTS.md)：全9試射の結果、悪化した条件、内部候補と本編採用の区別、再確認手順。
 
 - [釘の参照記事と現在配置の対応](agile/PIN_REFERENCE_NOTE_2026-10-15.md)：6画像の読み方、釘の部位と番号、次の比較に使う仮説。
+- [S6追加：参照記事からの3案比較](agile/S6_REFERENCE_ADJUSTMENT_PLAN.md)：同スプリント追加承認、2対照と3案・経路観測・選別と終了規則。
