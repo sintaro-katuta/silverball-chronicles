@@ -1,0 +1,53 @@
+{
+  "fps": 30,
+  "defaults": {
+    "speaker": 3,
+    "speed": 1.08,
+    "pitch": 0,
+    "intonation": 1,
+    "volume": 1,
+    "gap_after": 0.25
+  },
+  "voices": {
+    "host": {
+      "speaker": 3
+    }
+  },
+  "lines": [
+    {
+      "id": "sound-skill-01",
+      "voice": "host",
+      "text": "参照できなくなっていた効果音制作スキルを復旧し、リリース0.3.0へ取り込む準備をしました。",
+      "delivery": "落ち着いた説明。検証済みと未検証を明確に伝える。",
+      "scene": "problem"
+    },
+    {
+      "id": "sound-skill-02",
+      "voice": "host",
+      "text": "音の打点、音程、音色、余韻を設定として残し、同じ条件の試聴と解析で調整できます。",
+      "delivery": "落ち着いた説明。検証済みと未検証を明確に伝える。",
+      "scene": "workflow"
+    },
+    {
+      "id": "sound-skill-03",
+      "voice": "host",
+      "text": "外部スキルを参考に、質感、空間、長さの指定と、制作方法を選ぶ手順を追加しました。",
+      "delivery": "落ち着いた説明。検証済みと未検証を明確に伝える。",
+      "scene": "import"
+    },
+    {
+      "id": "sound-skill-04",
+      "voice": "host",
+      "text": "検証では以前確定した6秒の音を再生成し、元のWAVとファイルのハッシュが一致しました。無音区間の音程を、欠測のまま残すことも確認しました。",
+      "delivery": "落ち着いた説明。検証済みと未検証を明確に伝える。",
+      "scene": "validation"
+    },
+    {
+      "id": "sound-skill-05",
+      "voice": "host",
+      "text": "今回の変更は制作スキルと検証資料です。ゲーム本編の音や公開版は変更していません。聴感やゲーム内での採用は、別の確認として残しています。",
+      "delivery": "落ち着いた説明。検証済みと未検証を明確に伝える。",
+      "scene": "scope"
+    }
+  ]
+}
