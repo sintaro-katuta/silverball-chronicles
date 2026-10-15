@@ -1,0 +1,483 @@
+✔ join promotes only complete same-commit/source/asset coverage (1.706958ms)
+✔ join refuses missing-unit (0.170542ms)
+✔ join refuses missing-browser (0.063625ms)
+✔ join refuses unit-failed (0.057625ms)
+✔ join refuses different-commit (0.0775ms)
+✔ join refuses source-changed (0.053084ms)
+✔ join refuses one-test-only (0.068916ms)
+✔ join refuses missing-test-file (0.05825ms)
+✔ join refuses missing-check (0.485ms)
+✔ join refuses asset-added (0.148291ms)
+✔ join refuses asset-duplicate (0.077458ms)
+✔ join refuses asset-modified (0.0595ms)
+✔ unit output cannot report successful skipped, failed, cancelled or absent tests (0.274292ms)
+✔ required verify always runs and refuses non-success dependencies before joining (3.757ms)
+Release phase start: test
+Release phase end: test success 0.7ms
+✔ unit stage executes the complete test-file inventory and attests successful counts (35.345708ms)
+Release phase start: test
+Release phase end: test failure 0.4ms
+✔ unit stage preserves failed timing but never issues a success receipt (8.071083ms)
+Release phase start: test
+Release phase end: test success 0.9ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.2ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.3ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.5ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.7ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-ci-6dET3O/prototype/.cache/release/candidate.json
+Verified aggregated candidate: 70a53c5a-6c38-4c6f-ae2b-cb8a06e4c446
+✔ aggregate validates real private candidate bytes before atomic promotion (30.349959ms)
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.3ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.7ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.7ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 1.3ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-ci-XmZ6gj/prototype/.cache/release/candidate.json
+✔ aggregate invalidates candidate on missing-unit (47.150708ms)
+Release phase start: test
+Release phase end: test success 0.2ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.3ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.4ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.4ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-ci-Sb1iLr/prototype/.cache/release/candidate.json
+✔ aggregate invalidates candidate on traversal (17.73825ms)
+Release phase start: test
+Release phase end: test success 0.3ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.3ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.2ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.5ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.4ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.2ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-ci-dzNsfZ/prototype/.cache/release/candidate.json
+✔ aggregate invalidates candidate on duplicate-asset (19.742666ms)
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.6ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 1.5ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.9ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.4ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-ci-eL3FEy/prototype/.cache/release/candidate.json
+✔ aggregate invalidates candidate on invalid-candidate-id (19.811417ms)
+Release phase start: test
+Release phase end: test success 0.3ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 4.3ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.4ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.4ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.6ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-ci-sLYFm6/prototype/.cache/release/candidate.json
+✔ aggregate invalidates candidate on changed-asset (23.952583ms)
+Release phase start: test
+Release phase end: test success 0.2ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.5ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.3ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.7ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.4ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.4ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-ci-5HMZ4L/prototype/.cache/release/candidate.json
+✔ aggregate invalidates candidate on different-source (20.724ms)
+✔ release optimizes only gameplay art, preserves dimensions/alpha/originals and lossless pixel art (15131.641542ms)
+✔ Cloudflare size guard accepts the exact limit and rejects oversized assets (0.791667ms)
+✔ managed Chromium avoids local Chrome dependency without broad legacy changes (0.6835ms)
+✔ PR paths and structured three-Sprint summary are required (0.394834ms)
+✔ CD refuses disabled before operations (0.136167ms)
+✔ CD refuses push before operations (0.041875ms)
+✔ CD refuses not-merged before operations (0.040083ms)
+✔ CD refuses wrong-base before operations (0.070625ms)
+✔ CD refuses fork before operations (0.052708ms)
+✔ CD refuses wrong-repo before operations (0.045625ms)
+✔ CD refuses wrong-head before operations (0.050917ms)
+✔ CD refuses wrong-package before operations (0.078ms)
+✔ CD refuses wrong-checkout before operations (0.06225ms)
+✔ CD refuses stale-main before operations (0.051333ms)
+✔ CD refuses wrong-tag before operations (0.029083ms)
+✔ CD refuses newer-release before operations (0.030125ms)
+✔ normal CD publishes only after deployment, fresh public validation and smoke (0.920792ms)
+✔ CD prepare failure is not a successful Release (0.125167ms)
+✔ CD deploy failure is not a successful Release (0.217083ms)
+✔ CD verifyPublic failure is not a successful Release (0.077666ms)
+✔ CD smoke failure is not a successful Release (0.076792ms)
+✔ CD createRelease failure is not a successful Release (0.093542ms)
+✔ a moved main or dirty candidate cannot publish (0.372208ms)
+✔ same version/SHA successful rerun is a no-op; draft retry still checks public deployment (0.527375ms)
+✔ smoke failed checkpoint resumes without redeploy, and altered checkpoint cannot resume (0.292125ms)
+✔ fresh traffic must be exactly the recorded Worker Version at 100% (0.073417ms)
+✔ public SHA verification excludes only provider config and detects same-size bytes (0.439875ms)
+✔ notes show three accepted Sprints and limits, and never call deployed-only state successful (9.64875ms)
+✔ attachment failure leaves a draft; retry can complete attachments before publication (0.911958ms)
+✔ workflow documents have pinned actions, no PR credentials, gated merge SHA and serial CD (0.978625ms)
+✔ historical successful rerun does not redeploy when main advanced (0.167583ms)
+✔ failed deploy retains fresh rollback snapshot and only retries unchanged prior traffic (0.179416ms)
+✔ PR-head artifact restores a smoke failure for the merge SHA and retries public checks without redeploy (2.371666ms)
+✔ checkpoint refuses mixed run-id (0.888291ms)
+✔ checkpoint refuses mixed run-repo (0.948291ms)
+✔ checkpoint refuses mixed run-repo-id (0.311417ms)
+✔ checkpoint refuses mixed run-head-repo (1.478041ms)
+✔ checkpoint refuses mixed run-event (0.955666ms)
+✔ checkpoint refuses mixed run-workflow (0.320083ms)
+✔ checkpoint refuses mixed run-head (0.584417ms)
+✔ checkpoint refuses mixed run-branch (0.586083ms)
+✔ checkpoint refuses mixed run-pr (0.98375ms)
+✔ checkpoint refuses mixed artifact-run (0.666125ms)
+✔ checkpoint refuses mixed artifact-repo (0.923167ms)
+✔ checkpoint refuses mixed artifact-head-repo (0.502667ms)
+✔ checkpoint refuses mixed artifact-head (0.3765ms)
+✔ checkpoint refuses mixed artifact-branch (0.717292ms)
+✔ checkpoint refuses mixed context-event (0.632459ms)
+✔ checkpoint refuses mixed context-head (0.595333ms)
+✔ checkpoint refuses mixed body-merge (2.105625ms)
+✔ checkpoint refuses mixed body-repository (2.223583ms)
+✔ checkpoint refuses mixed body-version (2.349334ms)
+✔ checkpoint refuses mixed body-worker (1.83125ms)
+✔ checkpoint absence does not download; ambiguous artifacts, failed download and invalid JSON stop restoration (3.054ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.7ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.5ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.7ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.5ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.8ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-guEwh8/prototype/.cache/release/candidate.json
+✔ prepare runs checks, cleans its own preview and issues only a non-public verified manifest (59.5905ms)
+Release check: test
+Release phase start: test
+Release phase end: test failure 0.4ms
+✔ prepare test failure invalidates old candidate and cleans preview (10.129ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.3ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release failure 1.0ms
+✔ prepare build failure invalidates old candidate and cleans preview (9.754583ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.2ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.5ms
+Release phase start: preview readiness
+Release phase end: preview readiness failure 0.3ms
+✔ prepare preview failure invalidates old candidate and cleans preview (10.8165ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 1.9ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.5ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.6ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release failure 2.4ms
+✔ prepare browser failure invalidates old candidate and cleans preview (39.323209ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.3ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.3ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.3ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.4ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.4ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.3ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-luI4em/prototype/.cache/release/candidate.json
+✔ publish refuses modified before calling deploy (16.102667ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.2ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.3ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.2ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.5ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.3ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.6ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-Ab98dj/prototype/.cache/release/candidate.json
+✔ publish refuses added before calling deploy (17.02325ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.3ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.3ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.3ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.5ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.5ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-erA2NQ/prototype/.cache/release/candidate.json
+✔ publish refuses removed before calling deploy (18.968625ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.3ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.5ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 1.1ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.3ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.3ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-vsMti3/prototype/.cache/release/candidate.json
+✔ publish refuses source before calling deploy (22.748709ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.7ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.2ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.5ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.4ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.6ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-E4x7BN/prototype/.cache/release/candidate.json
+✔ publish refuses symlink before calling deploy (17.482875ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.6ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.3ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.4ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.6ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-sXUjdT/prototype/.cache/release/candidate.json
+✔ publish refuses traversal before calling deploy (18.347ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.2ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.2ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.2ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.4ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.3ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.2ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-GhTjwT/prototype/.cache/release/candidate.json
+✔ publish refuses missing-manifest before calling deploy (12.185542ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.2ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.6ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.3ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.3ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.3ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-CRahbz/prototype/.cache/release/candidate.json
+✔ publish without target confirmation and failed verification never deploy (12.753833ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.3ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.2ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.2ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.6ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.5ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+✔ prepare refuses source changed during browser verification (11.582625ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.3ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.2ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.4ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.3ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.4ms
+✔ prepare refuses assets changed during browser verification (10.441875ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.5ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.2ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.6ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.3ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.3ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-cbINKs/prototype/.cache/release/candidate.json
+✔ documentation changes do not invalidate runtime/build input fingerprint (14.320375ms)
+✔ CLI requires an explicit confirm flag and rejects unknown/missing arguments (0.439125ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.5ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.3ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.6ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.3ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-vB6GDt/prototype/.cache/release/candidate.json
+✔ frozen candidate survives later dist builds; source and config still guard publish (25.98975ms)
+✔ prepare rejects an unexpected actual Worker before running checks (8.350708ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.3ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.2ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.2ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.4ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.3ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-6fj9Eq/prototype/.cache/release/candidate.json
+✔ publish command failure is propagated without a success result (220.945791ms)
+Release phase start: unit
+Release phase end: unit success 75.0ms
+Release phase start: browser
+Release phase end: browser failure 55.0ms
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.2ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.2ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.3ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.2ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.3ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-gOoqRV/prototype/.cache/release/candidate.json
+✔ phase evidence measures wall time, preserves failures and stays outside candidate inputs (14.552292ms)
+Release phase start: browser
+Phase evidence write failed after browser: ENOENT: no such file or directory, open '/var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-TUg3e4/prototype/.cache/release/timings/prepare.json.tmp'
+Release phase end: browser failure 0.4ms
+✔ failed phase keeps original failure if private timing evidence cannot be saved (4.127042ms)
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.2ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.2ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.2ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.2ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.2ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-9stPtg/prototype/.cache/release/candidate.json
+✔ browser-only preparation cannot be published before unit aggregation (9.123541ms)
+✔ failure evidence keeps navigation, errors and independent document/HTML/screenshot captures (6.408334ms)
+✔ unavailable output and closed page remain diagnostic failures, not replacement errors (2.247209ms)
+✔ cleanup retains the original error object, while cleanup-only failure remains a failure (0.76025ms)
+ℹ tests 103
+ℹ suites 0
+ℹ pass 103
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15286.613125

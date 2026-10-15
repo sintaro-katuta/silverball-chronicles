@@ -1,0 +1,67 @@
+{
+  "headAtStart": "34604b3ba0de7ba38bb115c65820edd8e9f9e557",
+  "headAtEnd": "34604b3ba0de7ba38bb115c65820edd8e9f9e557",
+  "sourceSHA": "11e057f99324032ff7f0686be28b0341a8bfe206085eb43cdccc61cdf47226b0",
+  "sourceInputs": 565,
+  "sourceUnchanged": true,
+  "node": "v26.11.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "browser": "Chrome155.0.8059.40 channel chrome; diagnostics managed Chromium153.0.8010.12",
+  "build": "success",
+  "assetCount": 45,
+  "assetDigest": "edf5875b36b28f9da65ca53113cf2db177c29d110b321ac96cf5b98d323fa9ed",
+  "phases": [
+    {
+      "name": "release-both-widths",
+      "startedAt": "2026-10-15T15:21:51.499Z",
+      "status": "success",
+      "signal": null,
+      "exitCode": 0,
+      "elapsedMs": 16558,
+      "finishedAt": "2026-10-15T15:22:08.062Z"
+    },
+    {
+      "name": "controls-390",
+      "startedAt": "2026-10-15T15:22:08.063Z",
+      "status": "success",
+      "signal": null,
+      "exitCode": 0,
+      "elapsedMs": 9510,
+      "finishedAt": "2026-10-15T15:22:17.575Z"
+    },
+    {
+      "name": "controls-1440",
+      "startedAt": "2026-10-15T15:22:17.576Z",
+      "status": "success",
+      "signal": null,
+      "exitCode": 0,
+      "elapsedMs": 11613,
+      "finishedAt": "2026-10-15T15:22:29.190Z"
+    },
+    {
+      "name": "diagnostic-three-paths",
+      "startedAt": "2026-10-15T15:22:29.191Z",
+      "status": "success",
+      "signal": null,
+      "exitCode": 0,
+      "elapsedMs": 65033,
+      "finishedAt": "2026-10-15T15:23:34.224Z"
+    },
+    {
+      "name": "feedback-full",
+      "startedAt": "2026-10-15T15:23:34.225Z",
+      "status": "success",
+      "signal": null,
+      "exitCode": 0,
+      "elapsedMs": 127910,
+      "finishedAt": "2026-10-15T15:25:42.138Z"
+    }
+  ],
+  "ownedPreview": {
+    "url": "http://127.0.0.1:5319",
+    "pid": 88501,
+    "terminated": true
+  },
+  "scope": "New adopted production app option0.18; local release/controls390+1440, implemented diagnostics3paths, fullfeedback including actual right0.85 and new normal-session0.18. Old S7 trial data not rewritten; Linux CI/real device/audio acceptance separate."
+}

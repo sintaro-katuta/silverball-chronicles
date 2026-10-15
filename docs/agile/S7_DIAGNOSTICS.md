@@ -29,3 +29,9 @@
 ## 残件
 
 初回の公開後失敗の原因確定、別障害からの実復旧、実ロールバックは未確認です。今回の診断追加だけで#11全体を閉じません。
+
+## 本編採用後の再確認
+
+2026-10-16、初期発射0.18を反映した`34604b3`でも、変更後の公開確認コードをそのまま使い、制御失敗・保存不能・通常成功の3経路を再確認しました（全体65.03秒、fixture runner終了コード0）。制御失敗・保存不能の子プロセスは期待通り元エラーで失敗し、通常成功は390/1440両幅で成功、正常時の診断出力はありません。fixture全体の成功を、失敗ページを正常と判定した意味では使いません。
+
+[3経路の新しい結果](../../prototype/reference-review/s7-20261015/production-adoption/browser-final/diagnostic-fixtures/verification-results.json)、[対象ソースと現ゲーム回帰](../../prototype/reference-review/s7-20261015/production-adoption/browser-final/verification.json)。本番/CDを再実行した証拠ではありません。
