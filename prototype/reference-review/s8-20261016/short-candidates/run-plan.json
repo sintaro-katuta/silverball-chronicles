@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "power": 0.18,
+  "kind": "mechanical",
+  "mode": "normal",
+  "replayFPS": 30,
+  "short": {
+    "phases": [
+      0
+    ],
+    "seconds": 120,
+    "drain": 45
+  },
+  "long": {
+    "phases": [
+      0.175,
+      0.35,
+      0.525
+    ],
+    "seconds": 300,
+    "drain": 45
+  },
+  "aimRegions": {
+    "A": {
+      "xMin": 175,
+      "xMax": 235,
+      "yMin": 245,
+      "yMax": 315
+    },
+    "B": {
+      "xMin": 220,
+      "xMax": 290,
+      "yMin": 185,
+      "yMax": 265
+    }
+  },
+  "selection": "Fresh S7 production-board control; valid counts/fixed inputs, all-layer/front LCD centre/boundary zero, residual/stall zero, returned/actual-shot ratio no worse, PM aim review. Strict start/actual-shot increase; highest ratio, fewer moved pins, less total displacement, declared order ID2/ID90/ID91+92. Long uses phases not used for this short selection: aggregate strict increase and every phase start/return ratios no worse. General admission and maximum-gap deterioration hold adoption pending PM; never automatic adoption.",
+  "scope": "Original101 and attributes; original positions as displacement origin, <=1 logical unit. Legacy rails/mouth20/tray/default radius and sprite scale; power0.18/cadence/physics unchanged. No S6 result reuse or 3D pin-tilt claim.",
+  "stage": "candidates",
+  "configs": [
+    {
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "id": "road-pin2",
+      "label": "道入口ID2を下へ0.25",
+      "moves": [
+        {
+          "pinId": 2,
+          "dx": 0,
+          "dy": 0.25
+        }
+      ]
+    },
+    {
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "id": "heso-pair",
+      "label": "ヘソ91/92を外へ各0.25",
+      "moves": [
+        {
+          "pinId": 91,
+          "dx": -0.25,
+          "dy": 0
+        },
+        {
+          "pinId": 92,
+          "dx": 0.25,
+          "dy": 0
+        }
+      ]
+    }
+  ],
+  "inspection": [
+    {
+      "id": "baseline",
+      "config": {
+        "leftAdmissionGuides": true,
+        "hesoMouthWidth": 20,
+        "launchRailProfile": "legacy",
+        "normalPower": 0.18,
+        "id": "baseline",
+        "label": "S7本編0.18・元101釘",
+        "moves": []
+      },
+      "valid": true,
+      "clearances": []
+    },
+    {
+      "id": "road-pin2",
+      "config": {
+        "leftAdmissionGuides": true,
+        "hesoMouthWidth": 20,
+        "launchRailProfile": "legacy",
+        "normalPower": 0.18,
+        "id": "road-pin2",
+        "label": "道入口ID2を下へ0.25",
+        "moves": [
+          {
+            "pinId": 2,
+            "dx": 0,
+            "dy": 0.25
+          }
+        ]
+      },
+      "valid": true,
+      "clearances": [
+        {
+          "movingPinId": 2,
+          "pinId": 3,
+          "centreDistance": 4.138236339311712,
+          "freeGap": 3.7382363393117117,
+          "note": "Static centre/axis clearance only; not guaranteed dynamic ball passage."
+        }
+      ]
+    },
+    {
+      "id": "jump-pin90",
+      "config": {
+        "leftAdmissionGuides": true,
+        "hesoMouthWidth": 20,
+        "launchRailProfile": "legacy",
+        "normalPower": 0.18,
+        "id": "jump-pin90",
+        "label": "ジャンプ相当ID90を上へ0.25",
+        "moves": [
+          {
+            "pinId": 90,
+            "dx": 0,
+            "dy": -0.25
+          }
+        ]
+      },
+      "valid": false,
+      "skipReason": "Pin 90: fixed polygon heso-tray-0"
+    },
+    {
+      "id": "heso-pair",
+      "config": {
+        "leftAdmissionGuides": true,
+        "hesoMouthWidth": 20,
+        "launchRailProfile": "legacy",
+        "normalPower": 0.18,
+        "id": "heso-pair",
+        "label": "ヘソ91/92を外へ各0.25",
+        "moves": [
+          {
+            "pinId": 91,
+            "dx": -0.25,
+            "dy": 0
+          },
+          {
+            "pinId": 92,
+            "dx": 0.25,
+            "dy": 0
+          }
+        ]
+      },
+      "valid": true,
+      "clearances": [
+        {
+          "movingPinId": 91,
+          "pinId": 92,
+          "centreDistance": 10.5,
+          "freeGap": 10.100000000000001,
+          "note": "Static centre/axis clearance only; not guaranteed dynamic ball passage."
+        },
+        {
+          "movingPinId": 92,
+          "pinId": 91,
+          "centreDistance": 10.5,
+          "freeGap": 10.100000000000001,
+          "note": "Static centre/axis clearance only; not guaranteed dynamic ball passage."
+        }
+      ]
+    }
+  ],
+  "window": {
+    "phases": [
+      0
+    ],
+    "seconds": 120,
+    "drain": 45
+  },
+  "pmPlanSHA": "f2c132104ba51d75f120c774ce7756e7b9ecfca3c3ec910fc65ded6f72dc9995",
+  "aimReviewedIds": [
+    "baseline"
+  ],
+  "command": [
+    "/opt/homebrew/Cellar/node/26.11.0/bin/node",
+    "/private/tmp/silverball-s8-20261016/prototype/tools/s8-pin-comparison.mjs",
+    "--stage",
+    "candidates",
+    "--plan",
+    "docs/agile/S8_PLAN.md",
+    "--expected-source",
+    "9ecdb18e997a4b81397f3bc9f5bfffced9eb42ef986b7eec3e4db91c3ca8042c",
+    "--baseline-dir",
+    "prototype/reference-review/s8-20261016/short-baseline",
+    "--aim-reviewed",
+    "baseline",
+    "--out",
+    "prototype/reference-review/s8-20261016/short-candidates"
+  ],
+  "sourceGeneration": "Fresh S8 production0.18/legacy/mouth20/tray; no historical outcomes reused."
+}
