@@ -345,3 +345,5 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [盤面条件と採用状態](agile/BOARD_CONDITIONS.md)：本編・内部比較・不採用・公開確認範囲を区別します。
 - [S6：受入記録](agile/S6_ACCEPTANCE.md)：新しい観測・画面・動画・CIの判定を記録します。
 - [S6：釘2案の比較結果](agile/S6_RESULTS.md)：全9試射の結果、悪化した条件、内部候補と本編採用の区別、再確認手順。
+
+- [釘の参照記事と現在配置の対応](agile/PIN_REFERENCE_NOTE_2026-10-15.md)：6画像の読み方、釘の部位と番号、次の比較に使う仮説。
