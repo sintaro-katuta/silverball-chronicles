@@ -348,3 +348,4 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 
 - [釘の参照記事と現在配置の対応](agile/PIN_REFERENCE_NOTE_2026-10-15.md)：6画像の読み方、釘の部位と番号、次の比較に使う仮説。
 - [S6追加：参照記事からの3案比較](agile/S6_REFERENCE_ADJUSTMENT_PLAN.md)：同スプリント追加承認、2対照と3案・経路観測・選別と終了規則。
+- [S6追加3案の結果](agile/S6_REFERENCE_RESULTS.md)：記事由来の寄り・道末端・ジャンプ相当の実装と全5試射、新3案不採用と理由。

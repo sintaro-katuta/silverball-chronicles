@@ -1,0 +1,515 @@
+{
+  "scope": "S6 reference-informed new short five only. No product adoption or probability guarantee. Prior S6 nine rows are distinct and unchanged.",
+  "measuredAt": "2026-10-15",
+  "environment": {
+    "node": "v26.11.0",
+    "platform": "darwin",
+    "arch": "arm64"
+  },
+  "sourceSHA256": "2a93d5ea70dcb68b5301adf79d7131017e2ec6a45cda0b403540c27b09646390",
+  "sourceInputCount": 176,
+  "sourceUnchanged": true,
+  "measurementSuccess": true,
+  "conditions": {
+    "power": 0.14,
+    "radius": 1.8,
+    "mouthWidth": 12,
+    "launchRailProfile": "reference-exit",
+    "addedHesoTray": false,
+    "pins": 101,
+    "phase": 0,
+    "fireSeconds": 120,
+    "drainSeconds": 45,
+    "gravity": 690,
+    "launchInterval": 0.6,
+    "step": 0.008333333333333333
+  },
+  "geometricGate": {
+    "y": 713,
+    "xMin": 72,
+    "xMax": 220,
+    "leftEnd": 136,
+    "rightStart": 176
+  },
+  "terminalRectangle": {
+    "xMin": 355,
+    "xMax": 400,
+    "yMin": 824,
+    "yMax": 870
+  },
+  "routeSampling": "Actual front-layer integration/post-step observer; linear crossing interpolation. All substep coordinates are not separately archived; 30Hz replay is not an exact reconstruction of substep observations.",
+  "rows": [
+    {
+      "id": "original",
+      "moves": [],
+      "phase": 0,
+      "shots": 200,
+      "counts": {
+        "fuzu": 0,
+        "normal": 2,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 198,
+        "returned": 0
+      },
+      "remaining": 0,
+      "stalled": 0,
+      "lcd": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      },
+      "maxNoHesoSeconds": 119.99999999980643,
+      "firstDescending": {
+        "left": {
+          "balls": 151,
+          "outcomes": {
+            "out": 151
+          }
+        },
+        "envelope": {
+          "balls": 17,
+          "outcomes": {
+            "out": 17
+          }
+        },
+        "right": {
+          "balls": 32,
+          "outcomes": {
+            "out": 30,
+            "normal": 2
+          }
+        },
+        "unobserved": {
+          "balls": 0,
+          "outcomes": {}
+        }
+      },
+      "allGatePasses": {
+        "descending:left": 152,
+        "descending:right": 37,
+        "ascending:right": 9,
+        "descending:envelope": 17,
+        "ascending:left": 1
+      },
+      "terminalFirstEntryBalls": 15,
+      "terminalActualOutcomes": {
+        "out": 15
+      },
+      "hesoWithoutTerminalEntryBallIds": [],
+      "replayFPS": 30,
+      "replayFrames": 4951,
+      "replayStart": 0,
+      "replayEnd": 165.00000000013043,
+      "raw": {
+        "file": "original-phase-0.json.gz",
+        "compressedSHA": "72def96caf43d1fae55c29b328fd2d9cf57f5bf6278fab83794852eec04a1a68",
+        "compressedBytes": 1793045,
+        "expandedSHA": "108c009178c0b3878737d977d2bbd795f340374c87815ade4f6a579d7a1de808",
+        "expandedBytes": 13413016,
+        "sourceSHA": "2a93d5ea70dcb68b5301adf79d7131017e2ec6a45cda0b403540c27b09646390",
+        "configSHA": "5781a1c724a64bc5afc732c5b5f013be4b6cfb5671e60926ddcacf39971d9859",
+        "layoutSHA": "ef5ec8b503bc0d46ffd35a48b87c1f9d092891ed756a4f8375cb197f24c6e994",
+        "replayFPS": 30,
+        "frames": 4951
+      }
+    },
+    {
+      "id": "prior-road-pin2",
+      "moves": [
+        {
+          "pinId": 2,
+          "dx": 0,
+          "dy": 0.25
+        }
+      ],
+      "phase": 0,
+      "shots": 200,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 2,
+        "rush": 0,
+        "bonus": 0,
+        "out": 198,
+        "returned": 0
+      },
+      "remaining": 0,
+      "stalled": 0,
+      "lcd": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      },
+      "maxNoHesoSeconds": 62.87619047612669,
+      "firstDescending": {
+        "left": {
+          "balls": 153,
+          "outcomes": {
+            "out": 153
+          }
+        },
+        "envelope": {
+          "balls": 19,
+          "outcomes": {
+            "out": 19
+          }
+        },
+        "right": {
+          "balls": 28,
+          "outcomes": {
+            "out": 26,
+            "start": 2
+          }
+        },
+        "unobserved": {
+          "balls": 0,
+          "outcomes": {}
+        }
+      },
+      "allGatePasses": {
+        "descending:left": 154,
+        "descending:right": 32,
+        "ascending:right": 5,
+        "descending:envelope": 19,
+        "ascending:envelope": 1
+      },
+      "terminalFirstEntryBalls": 15,
+      "terminalActualOutcomes": {
+        "out": 15
+      },
+      "hesoWithoutTerminalEntryBallIds": [
+        101,
+        118
+      ],
+      "replayFPS": 30,
+      "replayFrames": 4951,
+      "replayStart": 0,
+      "replayEnd": 165.00000000013043,
+      "raw": {
+        "file": "prior-road-pin2-phase-0.json.gz",
+        "compressedSHA": "a7df1da408205fdcd87c8b980979ba0ac4d7ede5374ae73d1dc6fb96673fd44a",
+        "compressedBytes": 1802780,
+        "expandedSHA": "658af8400b18bf8dec269bb186766ce1c5d96aa6374bb1acceb767fdb07deb5e",
+        "expandedBytes": 13442852,
+        "sourceSHA": "2a93d5ea70dcb68b5301adf79d7131017e2ec6a45cda0b403540c27b09646390",
+        "configSHA": "333df047f5bc453537d5f19132d7af2ef372d01940378ed6be4ed351cbc21ba8",
+        "layoutSHA": "4cacf9e74961aa29f4088bd04aa287b0326481e28e57192504b744897ccfa180",
+        "replayFPS": 30,
+        "frames": 4951
+      }
+    },
+    {
+      "id": "yori58",
+      "moves": [
+        {
+          "pinId": 58,
+          "dx": 0.25,
+          "dy": 0
+        }
+      ],
+      "phase": 0,
+      "shots": 200,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 200,
+        "returned": 0
+      },
+      "remaining": 0,
+      "stalled": 0,
+      "lcd": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      },
+      "maxNoHesoSeconds": 119.99999999980643,
+      "firstDescending": {
+        "left": {
+          "balls": 153,
+          "outcomes": {
+            "out": 153
+          }
+        },
+        "envelope": {
+          "balls": 18,
+          "outcomes": {
+            "out": 18
+          }
+        },
+        "right": {
+          "balls": 29,
+          "outcomes": {
+            "out": 29
+          }
+        },
+        "unobserved": {
+          "balls": 0,
+          "outcomes": {}
+        }
+      },
+      "allGatePasses": {
+        "descending:left": 154,
+        "descending:right": 31,
+        "ascending:right": 6,
+        "descending:envelope": 19,
+        "ascending:left": 1
+      },
+      "terminalFirstEntryBalls": 14,
+      "terminalActualOutcomes": {
+        "out": 14
+      },
+      "hesoWithoutTerminalEntryBallIds": [],
+      "replayFPS": 30,
+      "replayFrames": 4951,
+      "replayStart": 0,
+      "replayEnd": 165.00000000013043,
+      "raw": {
+        "file": "yori58-phase-0.json.gz",
+        "compressedSHA": "9cbf6db93cac84513a3c8141ea22827412462bd7451187d58ce9d3ca54e80642",
+        "compressedBytes": 1797664,
+        "expandedSHA": "54593f9e816f7ee510490c88962682b91acc1956c9068c8ffae17d90614979c9",
+        "expandedBytes": 13433313,
+        "sourceSHA": "2a93d5ea70dcb68b5301adf79d7131017e2ec6a45cda0b403540c27b09646390",
+        "configSHA": "530cb24e310f3a3a9c2fca195c3b36ee4964567e1e521f28801bfc54976caa41",
+        "layoutSHA": "2a510b97d3335268d62a619db1482c4d4ed8ddae35b00347f97ee34327d1bb5b",
+        "replayFPS": 30,
+        "frames": 4951
+      }
+    },
+    {
+      "id": "road26",
+      "moves": [
+        {
+          "pinId": 26,
+          "dx": 0.25,
+          "dy": -0.25
+        }
+      ],
+      "phase": 0,
+      "shots": 200,
+      "counts": {
+        "fuzu": 0,
+        "normal": 2,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 198,
+        "returned": 0
+      },
+      "remaining": 0,
+      "stalled": 0,
+      "lcd": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      },
+      "maxNoHesoSeconds": 119.99999999980643,
+      "firstDescending": {
+        "left": {
+          "balls": 151,
+          "outcomes": {
+            "out": 151
+          }
+        },
+        "envelope": {
+          "balls": 17,
+          "outcomes": {
+            "out": 17
+          }
+        },
+        "right": {
+          "balls": 32,
+          "outcomes": {
+            "out": 30,
+            "normal": 2
+          }
+        },
+        "unobserved": {
+          "balls": 0,
+          "outcomes": {}
+        }
+      },
+      "allGatePasses": {
+        "descending:left": 152,
+        "descending:right": 37,
+        "ascending:right": 9,
+        "descending:envelope": 17,
+        "ascending:left": 1
+      },
+      "terminalFirstEntryBalls": 15,
+      "terminalActualOutcomes": {
+        "out": 15
+      },
+      "hesoWithoutTerminalEntryBallIds": [],
+      "replayFPS": 30,
+      "replayFrames": 4951,
+      "replayStart": 0,
+      "replayEnd": 165.00000000013043,
+      "raw": {
+        "file": "road26-phase-0.json.gz",
+        "compressedSHA": "98d9a6009697adab738148451baef239a4178e97da697fc1b956e9d0cc16dca9",
+        "compressedBytes": 1793277,
+        "expandedSHA": "2f7219bce4d08bc342ab55bbcb246f54c2cb1bdc583243a286417df5bceaa719",
+        "expandedBytes": 13414121,
+        "sourceSHA": "2a93d5ea70dcb68b5301adf79d7131017e2ec6a45cda0b403540c27b09646390",
+        "configSHA": "9922a44506706bf0fc3b1a63c18c04443fe688c1ea50f9b412c7953abbe2e148",
+        "layoutSHA": "e32e74e1f25603c4c73eb2b46a799c2660e51c65c383f1da3403b1a9abb367b5",
+        "replayFPS": 30,
+        "frames": 4951
+      }
+    },
+    {
+      "id": "jump90",
+      "moves": [
+        {
+          "pinId": 90,
+          "dx": 0,
+          "dy": -0.25
+        }
+      ],
+      "phase": 0,
+      "shots": 200,
+      "counts": {
+        "fuzu": 0,
+        "normal": 2,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 198,
+        "returned": 0
+      },
+      "remaining": 0,
+      "stalled": 0,
+      "lcd": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      },
+      "maxNoHesoSeconds": 119.99999999980643,
+      "firstDescending": {
+        "left": {
+          "balls": 151,
+          "outcomes": {
+            "out": 151
+          }
+        },
+        "envelope": {
+          "balls": 17,
+          "outcomes": {
+            "out": 17
+          }
+        },
+        "right": {
+          "balls": 32,
+          "outcomes": {
+            "out": 30,
+            "normal": 2
+          }
+        },
+        "unobserved": {
+          "balls": 0,
+          "outcomes": {}
+        }
+      },
+      "allGatePasses": {
+        "descending:left": 152,
+        "descending:right": 37,
+        "ascending:right": 9,
+        "descending:envelope": 17,
+        "ascending:left": 1
+      },
+      "terminalFirstEntryBalls": 15,
+      "terminalActualOutcomes": {
+        "out": 15
+      },
+      "hesoWithoutTerminalEntryBallIds": [],
+      "replayFPS": 30,
+      "replayFrames": 4951,
+      "replayStart": 0,
+      "replayEnd": 165.00000000013043,
+      "raw": {
+        "file": "jump90-phase-0.json.gz",
+        "compressedSHA": "6e799036b849b32a349c1c9864167daeef2ca601b012913129aa74c93c8ef98b",
+        "compressedBytes": 1795919,
+        "expandedSHA": "fcda4021823c8f6193d4413b0ae71479a0319743fb9ffffc1dfb9c1eb4bbb143",
+        "expandedBytes": 13430548,
+        "sourceSHA": "2a93d5ea70dcb68b5301adf79d7131017e2ec6a45cda0b403540c27b09646390",
+        "configSHA": "ea0882305c10cd56e9708ea902d446fa70d9332151526d7dc719d0a7b4316a67",
+        "layoutSHA": "c53d1e96ceab9eb5824cabb272d1c045f7ebc6ebcd394feada3d83312abc5677",
+        "replayFPS": 30,
+        "frames": 4951
+      }
+    }
+  ],
+  "independentAudit": {
+    "compressedAndExpandedBytesSHA": "PASS",
+    "source176CurrentFrozenStartEnd": "PASS",
+    "all24755FramesTimeConservationAndEventBoundary": "PASS",
+    "original101AttributesAndSpecifiedMoves": "PASS",
+    "allFixedExact": "PASS",
+    "allShotOutcomeIdsAndGeometricRecords": "PASS",
+    "oldNineRawHashesUnchanged": "PASS"
+  },
+  "selection": {
+    "selected": null,
+    "reason": "All three new candidates start0/200; do not strictly beat original0/200 and prior-road-pin2 2/200.",
+    "newLongPerformed": false
+  },
+  "pmDecision": "Additional adjustment/comparison delivered and accepted. New three rejected; no new long; prior-road-pin2 retained as internal improvement candidate. Product defaults unchanged, Issue23 Open.",
+  "limits": [
+    "Left/envelope/right classify geometry, not good/bad or confirmed causes.",
+    "Terminal-entry balls 15/15/14/15/15 all ended out; prior-road-pin2 two heso balls have no rectangle entry, so non-entry does not mean failure to reach the physical road end.",
+    "Stage-specific postprocessing does not replace absent integration paths or confer real-world calibration.",
+    "Prior .14 overall product-adoption rejection remains."
+  ],
+  "pending": [
+    "new CI",
+    "revised narration human approval",
+    "completed video and playback acceptance",
+    "PR review and merge"
+  ],
+  "localEvidenceRoot": "prototype/reference-review/s6-20261015/reference-informed/",
+  "localRegression": {
+    "status": "unit-verified",
+    "tests": {
+      "tests": 556,
+      "pass": 556,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0
+    },
+    "elapsedWallMs": 169862,
+    "sourceSHA256": "94e23b34b69762914bf82f406adf128ce510a70871175d660966d2b0ff96466b",
+    "sourceInputCount": 554,
+    "node": "v26.11.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "sourceUnchanged": true,
+    "scope": "Local worktree regression including final media counter layout. Does not substitute for new PR CI."
+  },
+  "visualStillReview": {
+    "reviewer": "PM",
+    "date": "2026-10-15",
+    "status": "accepted",
+    "aimReviewedIds": [
+      "original",
+      "prior-road-pin2",
+      "yori58",
+      "road26",
+      "jump90"
+    ],
+    "scope": "Same-scale/time overall and local stills; upper-left aim, frame/rail and specified tiny moves; actual admission frame62.900 original0/prior1. Not full-video playback acceptance.",
+    "localEvidence": "reference-informed/media-qa-final/"
+  }
+}
