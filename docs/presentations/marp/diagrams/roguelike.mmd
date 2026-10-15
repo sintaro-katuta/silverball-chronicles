@@ -1,0 +1,11 @@
+flowchart LR
+    A["敵を倒す"] --> B["経験値を拾う"]
+    B --> C["レベルアップ<br/>武器や強化を選ぶ"]
+    C -->|強くなって戦う| A
+    C --> D["倒されるなどして<br/>プレイ終了"]
+    D --> E["集めたコインで<br/>永続強化"]
+    E -->|次の挑戦へ| A
+    classDef step fill:#edf2fc,stroke:#2455b8,stroke-width:2px,color:#202731
+    classDef next fill:#fff5dc,stroke:#a36b13,stroke-width:2px,color:#202731
+    class A,B,C step
+    class D,E next

@@ -1,0 +1,18 @@
+{
+  "name": "marp-workspace",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/render-genres.mjs && marp slides.md -o index.html && node scripts/copy-assets.mjs",
+    "dev": "marp slides.md --watch --preview -o dist/slides.html",
+    "pdf": "marp slides.md --allow-local-files --pdf -o dist/slides.pdf",
+    "diagram": "node scripts/render-diagrams.mjs",
+    "predev": "node scripts/render-genres.mjs && node scripts/copy-assets.mjs",
+    "genres": "node scripts/render-genres.mjs",
+    "diagram:pachinko": "node scripts/render-diagrams.mjs pachinko",
+    "diagram:soshina": "mmdc -i diagrams/soshina-overview.mmd -o assets/soshina-overview.png -c diagrams/mermaid.json -p diagrams/puppeteer.json -b transparent --size 6000 -s 1 && node scripts/copy-assets.mjs"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "4.5.1",
+    "@mermaid-js/mermaid-cli": "^12.0.0"
+  }
+}
