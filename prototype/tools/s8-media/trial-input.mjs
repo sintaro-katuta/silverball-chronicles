@@ -41,7 +41,7 @@ export function validateS8Trial(run){
  if(c.launchRailProfile!=='legacy'||c.leftAdmissionGuides!==true||c.hesoMouthWidth!==20||f.launchRailProfile!=='legacy'||f.leftAdmissionGuides!==true||f.hesoMouthWidth!==20)fail('S8 legacy/mouth20/tray fixed');
  if(Object.hasOwn(f,'ballRadius')||Object.hasOwn(c,'ballRadius'))fail('S8 default display requires omitted radius override');
  if(run.conditions.ballRadius!==1.8||run.conditions.power!==.18||c.normalPower!==.18||f.normalPower!==.18||run.conditions.updateSeconds!==1/120||run.conditions.launchInterval!==.6||run.conditions.gravity!==690)fail('S8 fixed launch/radius/physics changed');
- if(run.configSHA!==sha256(JSON.stringify(c))||run.layoutSHA!==sha256(JSON.stringify(run.pins)))fail('S8 raw config/layout identity mismatch');
+ if(run.configSHA!==sha256(canonical(c))||run.layoutSHA!==sha256(canonical(run.pins)))fail('S8 raw config/layout identity mismatch');
  if(canonical(f.pinPositions)!==canonical(run.pins.map(({id,x,y})=>({id,x,y}))))fail('S8 flow positions differ from actual recorded pins');
  const display=run.display;
  if(!display||display.ballRadius!==1.8||display.displayBallDiameter!==null||display.textureExtent!==28||display.spriteScaleDivisor!==3||!Number.isFinite(display.displayBallScale)||!Number.isFinite(display.spriteBoundingDiameter)||Math.abs(display.spriteBoundingDiameter-28*display.displayBallScale/3)>1e-12)fail('S8 actual default radius/display required');
