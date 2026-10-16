@@ -399,3 +399,7 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [上流の独立照合](agile/S8_APPROACH_AUDIT.md)
 - [風車右の3条件結果](agile/S8_WHEEL_RIGHT_PHASE_RESULTS.md)
 - [大きい球の右滞留原因](agile/S8_RIGHT_LARGER_BALL_DIAGNOSIS.md)
+
+- [風車へ当たる前の診断計画](agile/S8_FEED_DIAGNOSIS_PLAN.md)
+- [上流の詳細診断結果](agile/S8_FEED_DIAGNOSIS_RESULTS.md)
+- [風車を経路へ近づける比較計画](agile/S8_FEED_SHIFT_PLAN.md)
