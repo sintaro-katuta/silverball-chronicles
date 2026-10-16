@@ -108,3 +108,21 @@ test('road-tail synthetic stop250/validation preserve full fixed geometry and re
  const bad=structuredClone(r);bad.pinsAtEnd.find(p=>p.id===22).x+=.25;assert.throws(()=>validateAdmissionResult(bad),/layout changed/);
  assert.throws(()=>measureAdmissionCase(c,{mode:'rush'}),/phase/);
 });
+
+
+test('approach48 manifest declares only isolated left/right0.5 and preserves strict original101 attributes',()=>{
+ const approach=JSON.parse(readFileSync(new URL('../tools/s8-approach-cases.json',import.meta.url))).cases;
+ assert.deepEqual(approach.map(c=>c.id),['legacy-control','three-base','three-approach48-left050','three-approach48-right050']);assert.deepEqual(approach.slice(0,2),cases.slice(0,2));
+ const original=createBoardFlow({lcd:true}).flow.physics.pins;
+ for(const c of approach.slice(2)){
+  const checked=inspectAdmissionCase(c);assert.equal(checked.valid,true,checked.skipReason);assert.equal(checked.resolutionOptions.pinSpacingProfile,'strict-centre4-v1');assert.equal(checked.pinSpacingInspection,null);
+  for(const pin of checked.layout.pins){const old=original.find(p=>p.id===pin.id);assert.deepEqual(pin,{...old,x:old.x+(pin.id===48?c.moves[0].dx:0)});}
+  for(const bad of [{...c,ballRadius:2},{...c,windmillOffset:{dx:.25,dy:0}},{...c,moves:[{...c.moves[0],dx:c.moves[0].dx/2}]},{...c,moves:[{...c.moves[0],dy:.25}]},{...c,moves:[...c.moves,{pinId:2,dx:.25,dy:0}]},{...c,pinSpacingProfile:'road-support-2-3-v1'},{...c,normalPower:.2}])assert.equal(inspectAdmissionCase(bad).valid,false);
+ }
+});
+test('approach48 synthetic exact250 retains fixed model and rejects undeclared end changes',()=>{
+ const approach=JSON.parse(readFileSync(new URL('../tools/s8-approach-cases.json',import.meta.url))).cases.slice(2);
+ for(const c of approach){const r=synthetic(()=>measureAdmissionCase(c));assert.equal(validateAdmissionResult(r),true);assert.equal(r.physical.shots,250);assert.equal(r.end.remaining,0);assert.equal(r.display.ballRadius,1.8);assert.equal(Object.hasOwn(r,'validationProfile'),false);
+  const bad=structuredClone(r);bad.pinsAtEnd.find(p=>p.id===47).x+=.25;assert.throws(()=>validateAdmissionResult(bad),/layout changed/);assert.throws(()=>measureAdmissionCase(c,{mode:'rush'}),/phase/);
+ }
+});
