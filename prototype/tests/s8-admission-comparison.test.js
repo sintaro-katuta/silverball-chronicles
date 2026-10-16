@@ -126,3 +126,19 @@ test('approach48 synthetic exact250 retains fixed model and rejects undeclared e
   const bad=structuredClone(r);bad.pinsAtEnd.find(p=>p.id===47).x+=.25;assert.throws(()=>validateAdmissionResult(bad),/layout changed/);assert.throws(()=>measureAdmissionCase(c,{mode:'rush'}),/phase/);
  }
 });
+
+
+test('upper-feed manifest permits exactly46-right/48-up/48-down0.5 with original101 and centre64',()=>{
+ const upper=JSON.parse(readFileSync(new URL('../tools/s8-upper-feed-cases.json',import.meta.url))).cases;
+ assert.deepEqual(upper.map(c=>c.id),['legacy-control','three-base','three-upper46-right050','three-upper48-up050','three-upper48-down050']);assert.deepEqual(upper.slice(0,2),cases.slice(0,2));
+ const original=createBoardFlow({lcd:true}).flow.physics.pins;
+ for(const c of upper.slice(2)){const i=inspectAdmissionCase(c);assert.equal(i.valid,true,i.skipReason);assert.deepEqual(i.resolutionOptions,{pinSpacingProfile:'strict-centre4-v1'});assert.equal(Object.hasOwn(i.layout.flowOptions,'windmillOffsetProfile'),false);assert.deepEqual(i.windmillInspection.actualContactGeometry.centre,{x:64,y:476.5});
+  for(const pin of i.layout.pins){const old=original.find(p=>p.id===pin.id),move=c.moves[0];assert.deepEqual(pin,{...old,x:old.x+(pin.id===move.pinId?move.dx:0),y:old.y+(pin.id===move.pinId?move.dy:0)});}
+  for(const patch of[{ballRadius:2},{windmillOffset:{dx:-.25,dy:0}},{windmillOffset:{dx:-1.75,dy:0}},{moves:[{...c.moves[0],dx:c.moves[0].dx/2,dy:c.moves[0].dy/2}]},{moves:[...c.moves,{pinId:90,dx:0,dy:-.25}]},{normalPower:.2},{leftAdmissionGuides:true},{windmillOffsetProfile:'feed-left175-v1'}])assert.equal(inspectAdmissionCase({...c,...patch}).valid,false);
+ }
+ const moved=inspectAdmissionCase(upper[2]).layout.pins.find(p=>p.id===46);assert.equal(moved.x,38.25);assert.equal(moved.y,428.25);
+});
+test('upper-feed synthetic250 preserves strict counts, phases and fixed geometry; altered terminal pin is rejected',()=>{
+ const upper=JSON.parse(readFileSync(new URL('../tools/s8-upper-feed-cases.json',import.meta.url))).cases.slice(2);
+ for(const c of upper){const r=synthetic(()=>measureAdmissionCase(c));assert.equal(validateAdmissionResult(r),true);assert.equal(r.physical.shots,250);assert.equal(r.end.remaining,0);assert.equal(r.display.ballRadius,1.8);for(const f of[...r.replayFrames,...Object.values(r.replayEndpoints)])assert.equal(f.mechanisms[0].x,64);const bad=structuredClone(r);bad.pinsAtEnd.find(p=>p.id===45).x+=.25;assert.throws(()=>validateAdmissionResult(bad),/layout changed/);assert.throws(()=>measureAdmissionCase(c,{mode:'rush'}),/phase/);}
+});
