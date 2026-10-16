@@ -72,3 +72,13 @@ test('lateral manifest has only fresh controls and isolated90-right/91-left; pre
   for(const mixed of [{...c,ballRadius:2},{...c,moves:[...c.moves,{pinId:2,dx:0,dy:.25}]},{...c,moves:[{...c.moves[0],dy:-.25}]}])assert.equal(inspectAdmissionCase(mixed).valid,false);
  }
 });
+
+test('upstream declarations keep original controls, isolated offsets and actual replay centres; road2+0.5 stays rejected',()=>{
+ const upstream=JSON.parse(readFileSync(new URL('../tools/s8-admission-upstream-cases.json',import.meta.url))).cases;assert.deepEqual(upstream.slice(0,2),cases.slice(0,2));assert.equal(upstream.length,8);
+ for(const c of upstream.slice(2)){const inspected=inspectAdmissionCase(c);if(c.id==='three-road2-right050'){assert.equal(inspected.valid,false);assert.match(inspected.skipReason,/Pins 2\/3.*below 4/);assert.throws(()=>measureAdmissionCase(c),/below 4/);continue;}
+  assert.equal(inspected.valid,true);const expected={x:64+c.windmillOffset.dx,y:476.5+c.windmillOffset.dy};assert.deepEqual(inspected.windmillInspection.actualContactGeometry.centre,expected);assert.deepEqual(inspected.layout.flowOptions.windmillOffset,c.windmillOffset);assert.ok(inspected.windmillInspection.conservativeLegacyEnvelopeGuard.margins.every(m=>m.gap>0));
+  const r=synthetic(()=>measureAdmissionCase(c));assert.equal(validateAdmissionResult(r),true);for(const f of [...r.replayFrames,...Object.values(r.replayEndpoints)]){assert.equal(f.mechanisms[0].x,expected.x);assert.equal(f.mechanisms[0].y,expected.y);}
+  const corrupt=structuredClone(r);corrupt.replayFrames[1].mechanisms[0].x+=.01;assert.throws(()=>validateAdmissionResult(corrupt),/mechanism/);
+  const mixed={...c,moves:[{pinId:90,dx:0,dy:-.25}]};assert.equal(inspectAdmissionCase(mixed).valid,false);assert.equal(inspectAdmissionCase({...c,ballRadius:2}).valid,false);
+ }
+});

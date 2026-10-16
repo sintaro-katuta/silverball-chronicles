@@ -1,5 +1,5 @@
 import {windmillContactGeometry} from '../domain/windmill-shape.js';
-// Declared finite comparisons only; each frozen manifest identifies its four settings. Pin and ball hypotheses never combined. No product adoption.
+// Declared finite comparisons only; each frozen manifest identifies its settings. Pin and ball hypotheses never combined. No product adoption.
 import {inspectWindmillOffset} from '../pixi/windmill-offset.js';
 import {createBoardFlow} from '../pixi/board-flow.js';
 import {resolvePinAdjustment} from './pin-adjustment.js';
@@ -16,13 +16,19 @@ export function inspectAdmissionCase(config){
    'pin90-up025':{profile:'photo-three-vane',moves:[{pinId:90,dx:0,dy:-.25}]},
    'pin90-right025':{profile:'photo-three-vane',moves:[{pinId:90,dx:.25,dy:0}]},
    'pin91-left025':{profile:'photo-three-vane',moves:[{pinId:91,dx:-.25,dy:0}]},
+   'three-wheel-left025':{profile:'photo-three-vane',moves:[],offset:{dx:-.25,dy:0}},
+   'three-wheel-right025':{profile:'photo-three-vane',moves:[],offset:{dx:.25,dy:0}},
+   'three-wheel-up025':{profile:'photo-three-vane',moves:[],offset:{dx:0,dy:-.25}},
+   'three-wheel-down025':{profile:'photo-three-vane',moves:[],offset:{dx:0,dy:.25}},
+   'three-road2-right025':{profile:'photo-three-vane',moves:[{pinId:2,dx:.25,dy:0}]},
+   'three-road2-right050':{profile:'photo-three-vane',moves:[{pinId:2,dx:.5,dy:0}]},
    'ball-r20':{profile:'photo-three-vane',moves:[],ballRadius:2}
   },d=declarations[config?.id];
-  if(!d||config.normalPower!==.18||config.launchRailProfile!=='legacy'||config.hesoMouthWidth!==20||config.leftAdmissionGuides!==false||config.windmillShapeProfile!==d.profile||!equal(config.moves,d.moves)||!equal(config.windmillOffset,{dx:0,dy:0})||Object.hasOwn(config,'ballRadius')!==Object.hasOwn(d,'ballRadius')||config.ballRadius!==d.ballRadius)throw new Error('Unapproved admission case or mixed variable');
+  if(!d||config.normalPower!==.18||config.launchRailProfile!=='legacy'||config.hesoMouthWidth!==20||config.leftAdmissionGuides!==false||config.windmillShapeProfile!==d.profile||!equal(config.moves,d.moves)||!equal(config.windmillOffset,d.offset??{dx:0,dy:0})||Object.hasOwn(config,'ballRadius')!==Object.hasOwn(d,'ballRadius')||config.ballRadius!==d.ballRadius)throw new Error('Unapproved admission case or mixed variable');
   const resolved=resolvePinAdjustment(config),base=createBoardFlow({lcd:true}).flow.physics.pins;
   if(resolved.pins.length!==101)throw new Error('Original101 required');
   for(const pin of resolved.pins){const old=base.find(p=>p.id===pin.id),{x,y,...attrs}=pin,{x:ox,y:oy,...original}=old??{};const move=d.moves.find(m=>m.pinId===pin.id);if(!old||!equal(attrs,original)||x!==ox+(move?.dx??0)||y!==oy+(move?.dy??0))throw new Error('Original pin attributes/displacement changed');}
-  const allowed=[[0,0]];if(!allowed.some(([dx,dy])=>config.windmillOffset.dx===dx&&config.windmillOffset.dy===dy))throw new Error('Undeclared windmill displacement');return {valid:true,config,layout:resolved,windmillInspection:{conservativeLegacyEnvelopeGuard:inspectWindmillOffset(createBoardFlow({lcd:true,leftAdmissionGuides:false}).flow.physics,config.windmillOffset),actualSweptOuterRadius:config.windmillShapeProfile==='photo-three-vane'?Math.hypot(9.5,.35):11.3,actualContactGeometry:windmillContactGeometry(createBoardFlow({lcd:true,leftAdmissionGuides:false,windmillShapeProfile:config.windmillShapeProfile}).flow.physics.mechanisms[0])}};
+  return {valid:true,config,layout:resolved,windmillInspection:{conservativeLegacyEnvelopeGuard:inspectWindmillOffset(createBoardFlow({lcd:true,leftAdmissionGuides:false}).flow.physics,config.windmillOffset),actualSweptOuterRadius:config.windmillShapeProfile==='photo-three-vane'?Math.hypot(9.5,.35):11.3,actualContactGeometry:windmillContactGeometry(createBoardFlow({lcd:true,leftAdmissionGuides:false,windmillOffset:config.windmillOffset,windmillShapeProfile:config.windmillShapeProfile}).flow.physics.mechanisms[0])}};
  }catch(error){return {valid:false,config,skipReason:error.message};}
 }
 function addObservations(result,rows){
