@@ -1,0 +1,22 @@
+{
+  "commit": "ac17624cf1c2195a01a9b0e865c57923ef73c98e",
+  "sourceSHA": "3f41130b73751bd21c035a1b69b5ee5ba93bf65151b19c0ead66a17e54c40ad8",
+  "planSHA": "a8c38245675b67f34ec0758665c82d4a7b3797e5a14fd417816cac6ff3e3299a",
+  "caseManifestSHA": "3d63daaa4d9004fe5103011cb17637a14a517d7147c8219914530e227fb71e9c",
+  "uniqueInputs": 190,
+  "preflightCases": [
+    "legacy-control",
+    "three-base",
+    "pin90-right025",
+    "pin91-left025"
+  ],
+  "preflightAllSuccess": true,
+  "measurementStarted": false,
+  "node": "v26.11.0",
+  "directTests": {
+    "passed": 9,
+    "log": "focused-final.log"
+  },
+  "compatibility": "compatibility-proof.json",
+  "scope": "No physical/measurement/render changes. Only declared new lateral moves; historical raw unchanged, fresh trial remains PM-owned."
+}
