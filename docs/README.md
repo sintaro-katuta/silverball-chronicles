@@ -371,3 +371,9 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - 実250発の全結果：[第1組](agile/S8_250_RESULTS.md)・[第2組](agile/S8_250_BATCH2_RESULTS.md)・[第3組](agile/S8_250_BATCH3_RESULTS.md)・[第4組](agile/S8_250_BATCH4_RESULTS.md)・[第5組](agile/S8_250_BATCH5_RESULTS.md)。現時点は目標未達・本編未変更。
 
 - [盤面図の読み直し：釘・風車・道・ヘソの関係](agile/S8_BOARD_RELATION_REVIEW.md)：通常間隔と切れ目、玉径との比、追加皿との重なり、配置意図の仮説を整理。
+
+- [S8・風車4方向の実250発比較と採否](agile/S8_WINDMILL_RESULTS.md)
+- [S8・風車と道の流れの観測](agile/S8_WINDMILL_OBSERVATION.md)
+- [S8・風車比較の独立照合](agile/S8_WINDMILL_AUDIT.md)
+- [S8・風車の表示と接触位置の照合](agile/S8_WINDMILL_VISUAL.md)
+- [S8・今回の結果を説明する台本（承認待ち）](agile/s8-windmill-video/script.md)

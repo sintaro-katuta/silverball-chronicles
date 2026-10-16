@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "baseline",
+      "label": "変更前・風車の元位置",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0
+      }
+    },
+    {
+      "id": "wheel-left025",
+      "label": "風車だけ左0.25",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [],
+      "windmillOffset": {
+        "dx": -0.25,
+        "dy": 0
+      }
+    },
+    {
+      "id": "wheel-right025",
+      "label": "風車だけ右0.25",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [],
+      "windmillOffset": {
+        "dx": 0.25,
+        "dy": 0
+      }
+    },
+    {
+      "id": "wheel-up025",
+      "label": "風車だけ上0.25",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": -0.25
+      }
+    },
+    {
+      "id": "wheel-down025",
+      "label": "風車だけ下0.25",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0.25
+      }
+    }
+  ]
+}
