@@ -1,0 +1,131 @@
+{
+  "scope": "Read-only independent audit of one unchanged250 diagnostic; no new trial",
+  "head": "7a6d23f5db95da3bff7cffcd057e3bba7ec2c5e5",
+  "sourceSHA": "c66cae8459e0f1e22e517cf6aabe977b5baa420d30b9def77f8f9489343de555",
+  "currentInputCount": 200,
+  "allInputBytesExact": true,
+  "historicalMeasurementJSONExact": true,
+  "excludedMeasurementMetadata": [
+    "sourceSHA",
+    "planSHA",
+    "caseManifestSHA"
+  ],
+  "historicalHead": "1cfe792fe2a141a60d71f5b3b073eace09771d05",
+  "historicalSourceSHA": "9384bcdeecdef26504f25a35ca431d645163ecc4a5f92148d109e66c5d247c42",
+  "shots": 250,
+  "outcomes": {
+    "out": 237,
+    "start": 9,
+    "normal": 4
+  },
+  "safetyAllZero": true,
+  "trace": {
+    "schema": "s8-feed-diagnosis-v1",
+    "file": "trace.jsonl.gz",
+    "compressedSHA": "29ece348be6bb3cee253152d3f2118d51371057e1e5510514edd6050b50d4f03",
+    "compressedBytes": 15900834,
+    "expandedSHA": "8da98daf1f5908ce7c1b97819708c92734eabb98ec6005c505cf054f1bc042b9",
+    "expandedBytes": 136143675,
+    "records": 275805,
+    "sourceSHA": "c66cae8459e0f1e22e517cf6aabe977b5baa420d30b9def77f8f9489343de555",
+    "timeOrigin": "Physics actual time; phase0. Sequence preserves observed solver order; motion timeStart/timeEnd is separate from gameTime. No predicted samples.",
+    "independentlyChecked": true,
+    "seqSourceOrderAndSubstepsMonotone": true,
+    "savedTypes": {
+      "motion": 268621,
+      "contact": 5931,
+      "envelope-cross": 753,
+      "outcome": 250,
+      "endpoint": 250
+    }
+  },
+  "counts": {
+    "shots": 250,
+    "successfulWindmill": 70,
+    "noSuccessfulWindmill": 180,
+    "positionOnlyWindmill": 10,
+    "changedWindmill": 70,
+    "noChangedWindmill": 180,
+    "velocityChangingWindmill": 70,
+    "frontChangedWindmill": 70,
+    "frontSuccessfulWindmill": 70,
+    "backOrTransitionWindmill": 0
+  },
+  "cohorts": {
+    "successful": {
+      "balls": 70,
+      "outcomes": {
+        "out": 61,
+        "start": 6,
+        "normal": 3
+      }
+    },
+    "noSuccessful": {
+      "balls": 180,
+      "outcomes": {
+        "out": 176,
+        "start": 3,
+        "normal": 1
+      }
+    },
+    "positionOnlyAny": {
+      "balls": 10,
+      "outcomes": {
+        "out": 9,
+        "normal": 1
+      }
+    },
+    "positionOnlyWithoutSuccess": {
+      "balls": 0,
+      "outcomes": {}
+    },
+    "noChanged": {
+      "balls": 180,
+      "outcomes": {
+        "out": 176,
+        "start": 3,
+        "normal": 1
+      }
+    }
+  },
+  "all250ContactListsAndPrecedingReflectionExact": true,
+  "all250TraceAndRawEndpointsExact": true,
+  "limits": [
+    "Position-only unique balls can overlap successful reflection balls; not disjoint cohorts.",
+    "Envelope entry is geometry, not a solid wheel collision.",
+    "Point minima include omitted substep snapshots; filtered saved trace alone cannot reconstruct all point minima.",
+    "Motion segments are actual integration only, not solver-correction interpolation.",
+    "Observation completion is not admission improvement; target60/750 remains unmet."
+  ],
+  "newTrialOrSourceGitVideoChangesByAuditor": false,
+  "nonChanged180MotionEnvelopeCohorts": {
+    "currentEnvelope": {
+      "balls": 8,
+      "outcomes": {
+        "out": 8
+      }
+    },
+    "legacyOnlyEnvelope": {
+      "balls": 157,
+      "outcomes": {
+        "out": 157
+      }
+    },
+    "neitherEnvelope": {
+      "balls": 15,
+      "outcomes": {
+        "out": 11,
+        "start": 3,
+        "normal": 1
+      }
+    }
+  },
+  "all250MotionEnvelopeFirstRecomputedFromSavedRealMotion": true,
+  "legacyOnly157PointMinimumSideFromSummary": {
+    "counts": {
+      "left": 154,
+      "right": 3
+    },
+    "scope": "Summary winning actual point state readback; omitted substep snapshots are not fully reconstructable from filtered trace."
+  }
+}

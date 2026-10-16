@@ -1,0 +1,73 @@
+{
+  "shotLimit": 250,
+  "maxFiringSeconds": 300,
+  "drain": 45,
+  "replayFPS": 30,
+  "power": 0.18,
+  "phases": [
+    0,
+    0.175,
+    0.35,
+    0.525
+  ],
+  "target": {
+    "threeConditionsShots": 750,
+    "minimumTotalStart": 60,
+    "meanStartPer250": 20
+  },
+  "scope": "Single unchanged250 diagnostic; trace not a configuration change or performance improvement.",
+  "config": {
+    "id": "three-base",
+    "label": "3枚羽根の新基準",
+    "leftAdmissionGuides": false,
+    "hesoMouthWidth": 20,
+    "launchRailProfile": "legacy",
+    "normalPower": 0.18,
+    "moves": [],
+    "windmillOffset": {
+      "dx": 0,
+      "dy": 0
+    },
+    "windmillShapeProfile": "photo-three-vane"
+  },
+  "phase": 0,
+  "diagnosis": {
+    "schema": "s8-feed-diagnosis-v1",
+    "centre": {
+      "x": 64,
+      "y": 476.5
+    },
+    "rotorRadius": 9.506445182085677,
+    "legacyRadius": 11.3,
+    "roi": {
+      "minX": 20,
+      "maxX": 100,
+      "minY": 390,
+      "maxY": 500
+    },
+    "gate": {
+      "sourceY": 713,
+      "leftBelow": 136,
+      "rightAbove": 176
+    },
+    "phase": 0
+  },
+  "command": [
+    "/opt/homebrew/Cellar/node/26.11.0/bin/node",
+    "/private/tmp/silverball-s8-20261016/prototype/tools/s8-feed-diagnosis.mjs",
+    "--stage",
+    "run",
+    "--phase",
+    "0",
+    "--plan",
+    "docs/agile/S8_FEED_DIAGNOSIS_PLAN.md",
+    "--manifest",
+    "prototype/tools/s8-approach-cases.json",
+    "--oracle",
+    "prototype/reference-review/s8-20261016/approach/phase0/three-base/result.json.gz",
+    "--expected-source",
+    "c66cae8459e0f1e22e517cf6aabe977b5baa420d30b9def77f8f9489343de555",
+    "--out",
+    "prototype/reference-review/s8-20261016/feed-diagnosis/baseline-phase0"
+  ]
+}
