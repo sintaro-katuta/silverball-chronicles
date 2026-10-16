@@ -13,7 +13,8 @@ export function classifyLCDContact(b){
 }
 export const COMPARISON_CONDITIONS=Object.freeze({phases:[0,.175,.35,.525],kinds:['mechanical','finite-stock-fixed-loss'],seconds:300,drain:45,power:.20,launchInterval:.6,updateSeconds:1/120,mouthWidth:20,gravity:GRAVITY,guide:'current-factory-tray',initialStock:400,finiteLottery:'constant .9 fixed-loss calibration'});
 export function gapSummary(times,seconds){const inside=times.filter(t=>t>=0&&t<=seconds).sort((a,b)=>a-b);let previous=0,maxGap=0;for(const t of inside){maxGap=Math.max(maxGap,t-previous);previous=t;}return {entries:inside.length,maxGap:Math.max(maxGap,seconds-previous),first:inside[0]??null,last:inside.at(-1)??null,windowSeconds:seconds};}
-export function measurePinAdjustment(config,{phase=0,kind='mechanical',seconds=300,drain=45,replaySeconds=0,replayFPS=60,mode='normal',normalPower=config.normalPower??.20,shotLimit=undefined,onProgress=()=>{}}={}){
+export function measurePinAdjustment(config,{phase=0,kind='mechanical',seconds=300,drain=45,replaySeconds=0,replayFPS=60,mode='normal',normalPower=config.normalPower??.20,shotLimit=undefined,recordFinalState=false,onProgress=()=>{}}={}){
+ if(typeof recordFinalState!=='boolean')throw new Error('Invalid final-state recording option');
  if(shotLimit!==undefined&&(!Number.isSafeInteger(shotLimit)||shotLimit<=0))throw new Error('Invalid actual shot limit');
  if(![30,60].includes(replayFPS))throw new Error('Unsupported replay FPS');
  if(config.normalPower!==undefined&&normalPower!==config.normalPower)throw new Error('Normal power override disagrees with trial configuration');
@@ -54,7 +55,7 @@ export function measurePinAdjustment(config,{phase=0,kind='mechanical',seconds=3
  const frame=()=>frames.push({time:p.time-start,balls:p.balls.map(b=>({id:b.id,x:b.x,y:b.y,r:b.r})),counts:{...flow.counts}});
  frame();flow.start();const total=Math.round((seconds+drain)*120);let n=0;
  for(let i=0;i<Math.round(seconds*120);i++){step();n++;if(replaySeconds>0&&n%(120/replayFPS)===0&&n<=replaySeconds*120)replayFrames.push(replayFrame());if(n%120===0){frame();onProgress({phase,kind,completedSeconds:n/120,totalSeconds:total/120,stage:'firing'});}if(shotLimit!==undefined&&p.metrics.spawned>=shotLimit)break;}
- flow.stop();const stopStep=n,stopReplay=shotLimit!==undefined&&replaySeconds>0?replayFrame():null;const atStop={time:p.time-start,remaining:p.balls.length,counts:{...flow.counts},stock:game?.stock??null};
+ flow.stop();const stopStep=n,stopReplay=(shotLimit!==undefined||recordFinalState)&&replaySeconds>0?replayFrame():null;const atStop={time:p.time-start,remaining:p.balls.length,counts:{...flow.counts},stock:game?.stock??null};
  for(let i=0;i<Math.round(drain*120);i++){step();n++;if(replaySeconds>0&&n%(120/replayFPS)===0&&n<=replaySeconds*120)replayFrames.push(replayFrame());if(n%120===0){frame();onProgress({phase,kind,completedSeconds:n/120,totalSeconds:total/120,stage:'drain'});}}
  frame();const end={time:p.time-start,remaining:p.balls.length,counts:{...flow.counts},stock:game?.stock??null},shots=p.metrics.spawned,outcomes=events.filter(e=>e.type==='outcome');
  const ids=outcomes.map(e=>e.ballId),shotIds=new Set(events.filter(e=>e.type==='shot').map(e=>e.ballId));
@@ -70,6 +71,8 @@ export function measurePinAdjustment(config,{phase=0,kind='mechanical',seconds=3
  if(shotLimit!==undefined){
   Object.assign(result.conditions,{shotLimit,requestedMaxFiringSeconds:seconds,actualFiringSeconds:stopStep/120,actualDrainSeconds:(n-stopStep)/120});
   Object.assign(result.observation,{firingMode:'actual-shot-limit',requestedShotLimit:shotLimit,shotLimitReached:shots===shotLimit,firingPaddingSeconds:0,requestedWindowGapIncludingPadding:gapSummary(starts,observed),maxFiringSeconds:seconds});
+ }
+ if(shotLimit!==undefined||recordFinalState){
   result.fixedAtEnd=structuredClone({gravity:GRAVITY,ballRadius:p.ballRadius,colliders:p.colliders,pockets:p.pockets,mechanisms:p.mechanisms,outlet:p.outlet,launchExit:p.launchExit,launchSpeedOffset:p.launchSpeedOffset,gate:p.gate,rightChucker:p.rightChucker,returnOutlet:p.returnOutlet,separateLaunchPlane:p.separateLaunchPlane});
   result.pinsAtEnd=structuredClone(p.pins);
   result.replayEndpoints={stop:stopReplay,end:replaySeconds>0?replayFrame():null};

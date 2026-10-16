@@ -31,7 +31,7 @@ export function createBoardFlow({lcd=false,normalPower=.20,launchInterval=.6,rig
   }
   flow.physics.pins=next;
  }
- if(ballRadius!==null){if(!lcd||![1.4,1.6,1.7,1.8,1.85,1.9,2.2,3,4.09].includes(ballRadius))throw new Error('Unsupported internal trial ball radius');flow.physics.ballRadius=ballRadius;flow.physics.displayBallScale=6*ballRadius/28;flow.physics.displayBallDiameter=2*ballRadius;}
+ if(ballRadius!==null){if(!lcd||![1.4,1.6,1.7,1.8,1.85,1.9,2.0,2.2,3,4.09].includes(ballRadius))throw new Error('Unsupported internal trial ball radius');flow.physics.ballRadius=ballRadius;flow.physics.displayBallScale=6*ballRadius/28;flow.physics.displayBallDiameter=2*ballRadius;}
  if(windmillOffset!==null){if(!lcd)throw new Error('Windmill trial requires LCD board');applyWindmillOffset(flow.physics,windmillOffset);}
  if(!['legacy-capsules','photo-three-vane'].includes(windmillShapeProfile)||!lcd&&windmillShapeProfile!=='legacy-capsules')throw new Error('Invalid windmill shape profile');
  if(windmillShapeProfile==='photo-three-vane'){flow.physics.mechanisms[0].shapeProfile=windmillShapeProfile;flow.physics.mechanisms[0].shapeVersion=WINDMILL_VISIBLE_SHAPE_VERSION;}
