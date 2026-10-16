@@ -390,3 +390,12 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - S8継続：[釘と球径の結果](agile/S8_ADMISSION_CONTINUED_RESULTS.md)・[左右方向の結果](agile/S8_ADMISSION_LATERAL_RESULTS.md)・[上流の比較計画](agile/S8_ADMISSION_UPSTREAM_PLAN.md)
 
 - S8最新：[組合せの全結果](agile/S8_ADMISSION_COMBINED_RESULTS.md)・[監査](agile/S8_ADMISSION_COMBINED_AUDIT.md)・[計画](agile/S8_ADMISSION_COMBINED_PLAN.md)
+
+- [道末端の比較計画](agile/S8_ROAD_TAIL_PLAN.md)
+- [道末端の結果](agile/S8_ROAD_TAIL_RESULTS.md)
+- [道末端の独立照合](agile/S8_ROAD_TAIL_AUDIT.md)
+- [上流の比較計画](agile/S8_APPROACH_PLAN.md)
+- [上流の結果と風車左右の分岐](agile/S8_APPROACH_RESULTS.md)
+- [上流の独立照合](agile/S8_APPROACH_AUDIT.md)
+- [風車右の3条件結果](agile/S8_WHEEL_RIGHT_PHASE_RESULTS.md)
+- [大きい球の右滞留原因](agile/S8_RIGHT_LARGER_BALL_DIAGNOSIS.md)
