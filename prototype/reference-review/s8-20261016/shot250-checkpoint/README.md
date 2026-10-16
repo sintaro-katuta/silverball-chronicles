@@ -1,0 +1,9 @@
+# S8 実250発比較の途中記録
+
+目標60/750は未達。本編採用はありません。各設定は単発で実行し、終端の実試射/ヘソ数をチャットへ都度報告しました。詳細はdocs/agile/S8_250_PLAN.mdと各組のRESULTS/AUDITを参照。
+
+summary.csvは失敗を含む全実行の分母と終点の小表、receipts.json.gzは各runのprovenance、実行計画、原raw両SHA、summaryまたはfailureを損失なくまとめたJSONです。manifest.jsonで圧縮/展開SHAとbytesを検証できます。Python gzip.decompressでJSONへ展開できます。
+
+完全なevent/replay原rawは各directoryに共有ローカル保存してあり、この小さなチェックポイントへは同梱していません。原raw同梱・外部での独立再計算済みとは説明しません。生データを新sourceへ付け替えず、先行の検証失敗1件と実15発で詰まった1件もsuccess=falseのまま保持します。
+
+既存CI成功は旧d3facc2、現在の実250発実装のCIとは区別します。ユーザー承認済み目標・比較継続中、説明動画は新台本が必要です。
