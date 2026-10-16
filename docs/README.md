@@ -386,3 +386,7 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [S8：写真の3枚羽根の試作と250発の結果](agile/S8_WHEEL_SHAPE_RESULTS.md)：ガイドなし13→9、形状試作と入賞改善の判定を区別。
 
 - [S8：3枚羽根を維持した入賞改善の継続比較](agile/S8_ADMISSION_CONTINUED_PLAN.md)
+
+- S8継続：[釘と球径の結果](agile/S8_ADMISSION_CONTINUED_RESULTS.md)・[左右方向の結果](agile/S8_ADMISSION_LATERAL_RESULTS.md)・[上流の比較計画](agile/S8_ADMISSION_UPSTREAM_PLAN.md)
+
+- S8最新：[組合せの全結果](agile/S8_ADMISSION_COMBINED_RESULTS.md)・[監査](agile/S8_ADMISSION_COMBINED_AUDIT.md)・[計画](agile/S8_ADMISSION_COMBINED_PLAN.md)
