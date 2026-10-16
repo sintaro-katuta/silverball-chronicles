@@ -1,0 +1,314 @@
+{
+  "ballId": 1,
+  "firstPinContacts": [
+    {
+      "seq": 8491,
+      "timeStart": 2.1178571428571296,
+      "timeEnd": 2.1190476190476057,
+      "gameTime": 2.124999999999995,
+      "type": "contact",
+      "time": 2.1190476190476057,
+      "stage": "advance-pins",
+      "part": {
+        "kind": "pin",
+        "id": 48,
+        "role": "prize",
+        "x": 56.5,
+        "y": 425.75,
+        "r": 0.2,
+        "restitution": 0.46
+      },
+      "before": {
+        "id": 1,
+        "x": 55.66869682739479,
+        "y": 424.093572816132,
+        "vx": -11.870937462363514,
+        "vy": 486.01175163924927,
+        "r": 1.8,
+        "front": true,
+        "dead": false
+      },
+      "after": {
+        "id": 1,
+        "x": 55.602906528321505,
+        "y": 423.9624812439944,
+        "vx": -292.8483368887279,
+        "vy": -73.85451352102757,
+        "r": 1.8,
+        "front": true,
+        "dead": false
+      },
+      "peerBefore": null,
+      "peerAfter": null,
+      "solverResult": true,
+      "velocityChanged": true,
+      "positionChanged": true,
+      "substepIndex": 1854
+    },
+    {
+      "seq": 8618,
+      "timeStart": 2.1428571428571295,
+      "timeEnd": 2.1440476190476057,
+      "gameTime": 2.149999999999995,
+      "type": "contact",
+      "time": 2.1440476190476057,
+      "stage": "advance-pins",
+      "part": {
+        "kind": "pin",
+        "id": 47,
+        "role": "prize",
+        "x": 47.25,
+        "y": 420.75,
+        "r": 0.2,
+        "restitution": 0.46
+      },
+      "before": {
+        "id": 1,
+        "x": 48.28169810610333,
+        "y": 422.34201126311154,
+        "vx": -292.8483368887279,
+        "vy": -56.60451352102761,
+        "r": 1.8,
+        "front": true,
+        "dead": false
+      },
+      "after": {
+        "id": 1,
+        "x": 48.337671348176265,
+        "y": 422.4283834598674,
+        "vx": -128.67817010266387,
+        "vy": 196.72613916133628,
+        "r": 1.8,
+        "front": true,
+        "dead": false
+      },
+      "peerBefore": null,
+      "peerAfter": null,
+      "solverResult": true,
+      "velocityChanged": true,
+      "positionChanged": true,
+      "substepIndex": 1875
+    }
+  ],
+  "firstUpperOutLeft": {
+    "seq": 9124,
+    "timeStart": 2.242857142857129,
+    "timeEnd": 2.2440476190476053,
+    "gameTime": 2.2499999999999947,
+    "type": "contact",
+    "time": 2.2440476190476053,
+    "stage": "advance",
+    "part": {
+      "kind": "wall",
+      "a": {
+        "x": 32,
+        "y": 444
+      },
+      "b": {
+        "x": 60.5,
+        "y": 505
+      },
+      "r": 0.7,
+      "material": "rail",
+      "role": "out-left",
+      "restitution": 0.05
+    },
+    "before": {
+      "id": 1,
+      "x": 35.46985433790989,
+      "y": 445.5920688045725,
+      "vx": -128.67817010266387,
+      "vy": 265.72613916133696,
+      "r": 1.8,
+      "front": true,
+      "dead": false
+    },
+    "after": {
+      "id": 1,
+      "x": 35.497256151660125,
+      "y": 445.5792663178203,
+      "vx": 89.2262433045382,
+      "vy": 163.9183394546916,
+      "r": 1.8,
+      "front": true,
+      "dead": false
+    },
+    "peerBefore": null,
+    "peerAfter": null,
+    "solverResult": 229.0613033501454,
+    "velocityChanged": true,
+    "positionChanged": true,
+    "substepIndex": 1959
+  },
+  "lastUpperOutLeft": {
+    "seq": 10841,
+    "timeStart": 2.4874999999999807,
+    "timeEnd": 2.4885416666666473,
+    "gameTime": 2.4916666666666605,
+    "type": "contact",
+    "time": 2.4885416666666473,
+    "stage": "advance",
+    "part": {
+      "kind": "wall",
+      "a": {
+        "x": 32,
+        "y": 444
+      },
+      "b": {
+        "x": 60.5,
+        "y": 505
+      },
+      "r": 0.7,
+      "material": "rail",
+      "role": "out-left",
+      "restitution": 0.05
+    },
+    "before": {
+      "id": 1,
+      "x": 62.7210506568808,
+      "y": 503.8484518132257,
+      "vx": 143.28406923407496,
+      "vy": 307.3627070824626,
+      "r": 1.8,
+      "front": true,
+      "dead": false
+    },
+    "after": {
+      "id": 1,
+      "x": 62.721324109665495,
+      "y": 503.84832405249847,
+      "vx": 143.55970964106658,
+      "vy": 307.23392426935993,
+      "r": 1.8,
+      "front": true,
+      "dead": false
+    },
+    "peerBefore": null,
+    "peerAfter": null,
+    "solverResult": 0.2897534285525296,
+    "velocityChanged": true,
+    "positionChanged": true,
+    "substepIndex": 2175
+  },
+  "nearestWindmillContactEvent": {
+    "seq": 10149,
+    "timeStart": 2.4104166666666518,
+    "timeEnd": 2.4114583333333184,
+    "gameTime": 2.4166666666666607,
+    "type": "contact",
+    "time": 2.4114583333333184,
+    "stage": "advance",
+    "part": {
+      "kind": "wall",
+      "a": {
+        "x": 32,
+        "y": 444
+      },
+      "b": {
+        "x": 60.5,
+        "y": 505
+      },
+      "r": 0.7,
+      "material": "rail",
+      "role": "out-left",
+      "restitution": 0.05
+    },
+    "before": {
+      "id": 1,
+      "x": 52.43152725077641,
+      "y": 481.8252613650725,
+      "vx": 122.88667911660991,
+      "vy": 263.7051352520977,
+      "r": 1.8,
+      "front": true,
+      "dead": false
+    },
+    "after": {
+      "id": 1,
+      "x": 52.431800703561095,
+      "y": 481.82513360434524,
+      "vx": 123.16231952360766,
+      "vy": 263.5763524389922,
+      "r": 1.8,
+      "front": true,
+      "dead": false
+    },
+    "peerBefore": null,
+    "peerAfter": null,
+    "solverResult": 0.28975342855898134,
+    "velocityChanged": true,
+    "positionChanged": true,
+    "substepIndex": 2101
+  },
+  "lastChangedContact": {
+    "seq": 15610,
+    "timeStart": 3.098958333333302,
+    "timeEnd": 3.0999999999999686,
+    "gameTime": 3.0999999999999917,
+    "type": "contact",
+    "time": 3.0999999999999686,
+    "stage": "advance",
+    "part": {
+      "kind": "wall",
+      "a": {
+        "x": 129,
+        "y": 583
+      },
+      "b": {
+        "x": 261,
+        "y": 590
+      },
+      "r": 0.7,
+      "material": "rail",
+      "role": "out-left",
+      "restitution": 0.05
+    },
+    "before": {
+      "id": 1,
+      "x": 260.9746842839288,
+      "y": 587.4958577471913,
+      "vx": 377.3287814428601,
+      "vy": 20.69438343148686,
+      "r": 1.8,
+      "front": true,
+      "dead": false
+    },
+    "after": {
+      "id": 1,
+      "x": 260.9747219909148,
+      "y": 587.4951467011693,
+      "vx": 377.36679008476426,
+      "vy": 19.977649041293322,
+      "r": 1.8,
+      "front": true,
+      "dead": false
+    },
+    "peerBefore": null,
+    "peerAfter": null,
+    "solverResult": 0.6835633214728851,
+    "velocityChanged": true,
+    "positionChanged": true,
+    "substepIndex": 2709
+  },
+  "outcome": {
+    "seq": 19023,
+    "timeStart": 3.5738095238094876,
+    "timeEnd": 3.5749999999999638,
+    "gameTime": 3.57499999999999,
+    "type": "outcome",
+    "time": 3.5749999999999638,
+    "outcome": "out",
+    "ball": {
+      "id": 1,
+      "x": 440.223947281182,
+      "y": 675.0172494898313,
+      "vx": 377.36679008476426,
+      "vy": 347.72764904129326,
+      "r": 1.8,
+      "front": true,
+      "dead": false
+    },
+    "substepIndex": 3115
+  },
+  "scope": "Existing trace prefix through actual ball1 outcome, no new run; first pin entries are actual complete contact calls in this trace."
+}

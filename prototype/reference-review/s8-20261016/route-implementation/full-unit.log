@@ -1,0 +1,1031 @@
+
+> tsukikage-pachinko@0.3.0 test
+> node --test tests/*.test.js
+
+✔ all source imports resolve after directory changes (15.490208ms)
+✔ gameplay and physics dependency graphs remain independent of browser renderers (1.656667ms)
+✔ lower hinge is fixed, panel reverses without jumps and pauses (5.715583ms)
+✔ open tray physically receives balls; closed panel lets them reach slope (1102.41825ms)
+✔ housing and open tray stay inside right guide (27.73775ms)
+✔ left guide moves left and tray is centred between guides with edge clearance (0.567166ms)
+✔ recessed opening captures side entry but rejects paths outside the visible hole (0.398541ms)
+✔ normal to RUSH and back follows the game clock without changing on pause (0.768209ms)
+✔ interrupted transition reverses continuously and reset removes old progress (0.145833ms)
+✔ second review draw reaches, retains left/middle, holds queue, misses and resumes (42.30225ms)
+✔ win review reveals stored winning second draw, holds queue through announcement (40.063708ms)
+✔ build branches retain their cause across contact, opening and final attack (1.085959ms)
+✔ all live build branches keep result art and victory state hidden until judgment (0.35875ms)
+✔ style direction preserves every scene, beat interval, course rate and pause time (13.547833ms)
+✔ loss and revival dialogue never claims an early breakthrough (0.130833ms)
+✔ prefetch and mount start all art in parallel and share in-flight/cache requests (1.1825ms)
+✔ failed requests can retry without refetching successful art (5.210792ms)
+✔ parts previews load only assets for their selected features (0.258125ms)
+✔ combined components admit in their own phases and keep accepted locations (2997.165334ms)
+✔ combined closed chutes release launched balls after drain (6052.935041ms)
+✔ production option starts at0.18, manual normal power survives right play, and mechanical default stays0.20 (525.624125ms)
+✔ one 10R bonus retains its starting multiplier through real stage clears and round changes (2.163917ms)
+✔ ordinary entries stay at base prizes while the ongoing bonus stays fixed (0.326333ms)
+✔ the next bonus in the same RUSH captures the current multiplier afresh (0.161084ms)
+✔ course, permanent upgrades and bonus skills still apply alongside the captured stage multiplier (0.09275ms)
+✔ ordinary prizes keep upgrades and ball skills without stage or course amplification (1.459ms)
+{"bonus":11,"round":2,"payout":165,"close":12.633333333333256,"gap":13.133333333333228,"next":13.783333333333191}
+✔ real right shots fill 10, pay 150, close completely and open next round (2535.338834ms)
+✔ empty round closes on 15-second open limit with no payout (36.29625ms)
+✔ high-rate arrivals never count above 10 in one round or award twice (64823.46025ms)
+✔ payout denominator uses awarded rounds and remains after timeout completion (300.784125ms)
+✔ cabinet lighting follows reach, win, payout, rush and returns to rest (2.252958ms)
+✔ sword makes one clockwise turn about a fixed hilt and stops in its original pose (0.394167ms)
+✔ full blade orbit stays inside the board view and reaches the moved moon (0.309541ms)
+✔ centre pending and returned miss use the stored outcome (28.242125ms)
+✔ centre pending and returned win use the stored outcome (25.966458ms)
+✔ linked zoom holds sixfold for one second then returns without pulsing (0.173083ms)
+✔ complete character drawings advance together and loop (3.973417ms)
+✔ no long frozen cels are introduced (0.125375ms)
+✔ join promotes only complete same-commit/source/asset coverage (0.970291ms)
+✔ join refuses missing-unit (0.169834ms)
+✔ join refuses missing-browser (0.0695ms)
+✔ join refuses unit-failed (0.058708ms)
+✔ join refuses different-commit (0.078333ms)
+✔ join refuses source-changed (0.057833ms)
+✔ join refuses one-test-only (0.063791ms)
+✔ join refuses missing-test-file (0.062ms)
+✔ join refuses missing-check (0.068375ms)
+✔ join refuses asset-added (0.107041ms)
+✔ join refuses asset-duplicate (0.065292ms)
+✔ join refuses asset-modified (0.052708ms)
+✔ unit output cannot report successful skipped, failed, cancelled or absent tests (0.232625ms)
+✔ required verify always runs and refuses non-success dependencies before joining (3.299ms)
+Release phase start: test
+Release phase end: test success 2.9ms
+✔ unit stage executes the complete test-file inventory and attests successful counts (98.050875ms)
+Release phase start: test
+Release phase end: test failure 0.7ms
+✔ unit stage preserves failed timing but never issues a success receipt (19.773208ms)
+Release phase start: test
+Release phase end: test success 0.6ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 1.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.8ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.8ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.9ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-ci-DfaOC3/prototype/.cache/release/candidate.json
+Verified aggregated candidate: d72aafaa-5ff4-499d-accc-4c089b23ef98
+✔ aggregate validates real private candidate bytes before atomic promotion (54.423208ms)
+Release phase start: test
+Release phase end: test success 0.7ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 1.9ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.5ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.6ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.8ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-ci-KsUH59/prototype/.cache/release/candidate.json
+✔ aggregate invalidates candidate on missing-unit (41.537625ms)
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.7ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.3ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.3ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.2ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.3ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-ci-ZXDoKF/prototype/.cache/release/candidate.json
+✔ aggregate invalidates candidate on traversal (45.404375ms)
+Release phase start: test
+Release phase end: test success 0.3ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.2ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.2ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.3ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.2ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.3ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-ci-KkkXNB/prototype/.cache/release/candidate.json
+✔ aggregate invalidates candidate on duplicate-asset (18.716125ms)
+Release phase start: test
+Release phase end: test success 0.2ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.2ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.2ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.8ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.3ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.2ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-ci-vxidW8/prototype/.cache/release/candidate.json
+✔ aggregate invalidates candidate on invalid-candidate-id (17.602666ms)
+Release phase start: test
+Release phase end: test success 0.2ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.2ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.4ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.3ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.3ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-ci-7BzKgc/prototype/.cache/release/candidate.json
+✔ aggregate invalidates candidate on changed-asset (15.139125ms)
+Release phase start: test
+Release phase end: test success 0.3ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.2ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.2ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.3ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.2ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.3ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-ci-5Ojst3/prototype/.cache/release/candidate.json
+✔ aggregate invalidates candidate on different-source (16.156708ms)
+✔ winning draw resolves only after reach, and pause freezes the timeline (2.511333ms)
+✔ losing reach stays a loss, keeps subsequent draws queued, and survives stage selection (1.224125ms)
+✔ practice reach cannot overwrite an existing draw or jackpot (0.235083ms)
+✔ each windmill responds to ball contact with angular momentum (2.591375ms)
+✔ lower LCD housing has a physical surface matching the visible apron (1.760083ms)
+✔ compact lower assembly drains and accounts for all balls at increased firing rate (47715.340208ms)
+✔ 4R challenge is fixed at bonus start and pays 600 on either success or failure (2.487291ms)
+✔ 6R and 10R initial wins enter RUSH, retain fixed grade and reveal only already selected rounds (0.930125ms)
+✔ challenge, bonus and RUSH clocks freeze through pause and stage choice (2.005917ms)
+✔ RUSH consumes exactly 100 accepted spins and retains normal holds until return (3.119791ms)
+✔ a winning final RUSH spin resolves its presentation before resetting, without extra residual draws (0.918667ms)
+✔ RUSH draws target 66% within 100 and 30/50/20 payouts, never normal rescue or wind, with 1-ball start prize (0.64925ms)
+✔ RUSH retained holds survive bonus/reset without rerolling or consuming spins during payout (0.458125ms)
+✔ full base payouts remain 600/900/1500, and a RUSH chain total includes its entry bonus once (1.129375ms)
+✔ campaign completion during bonus or RUSH finishes immediately and cannot start another RUSH (0.824ms)
+✔ normal entries made during RUSH retain normal odds and wait without consuming right-side budget (0.454084ms)
+✔ button eligibility, countdown and warm light disclose no saved outcome (1.991625ms)
+✔ press is one-shot and preserves the release, contact hold and follow-through before reveal (2.073417ms)
+✔ timeout advances normally, rainbow starts only at confirmation and revival stays hidden (0.251208ms)
+✔ live flow press/timeout preserve admitted outcomes, FIFO, RNG, pause and physical clock (446.949167ms)
+{
+  phase: 'closing',
+  passes: 166,
+  draws: 9,
+  wins: 6,
+  openings: 6,
+  holds: 5,
+  remaining: 0.008333333333332969,
+  accepted: 19,
+  resolved: 14,
+  ordinaryHolds: 4,
+  activeDraw: null,
+  prize: 84,
+  jackpot: false,
+  rush: true
+}
+✔ through passage opens only after a separate winning draw and opening expires (0.845792ms)
+✔ ordinary holds are bounded independently of start holds (0.1545ms)
+✔ real launched balls pass through, start draws and pay prizes; pause freezes both (1829.365917ms)
+✔ development is separate from win-only ornament, and RUSH timing stays unchanged (0.508458ms)
+✔ developed losing reach preserves stored results and RNG calls, freezes during pause, retains readable stop (54.426875ms)
+✔ presentation admission trace stays bounded while lifetime counters retain rejected entries (1.659917ms)
+✔ direction guidance enters from opposite sides, holds centrally and clears (0.852083ms)
+✔ direction reflects model changes and its clock freezes when paused (3.874ms)
+✔ endless ignores every permanent upgrade and never mutates the original profile (2.104667ms)
+✔ endless continues when all skills are maxed; zero balls still ends the run (0.873542ms)
+✔ each in-scene title retains all four landings and its entire shine (0.988583ms)
+✔ approved castle, slash and revival timing stays unchanged (0.0775ms)
+✔ all 50 scene/pattern combinations resolve once to their chosen draw result (1.846667ms)
+✔ revival visibly passes silence before a late comeback and pause freezes it (0.137042ms)
+✔ balance graph tracks current stock minus initial stock and freezes on pause (9.438292ms)
+✔ tap/diagonal gestures do not page; axes are distinct (0.334708ms)
+✔ 20 cabinets have five bounded pages; changing floors retains the page (0.339709ms)
+course 1: 12 physical entries / 100 balls
+course 2: 8 physical entries / 100 balls
+course 3: 15 physical entries / 100 balls
+✔ overshoot remains in stock and next stage measures a new net increase (0.707708ms)
+✔ 3 second failure timer pauses and resets when stock recovers (0.229458ms)
+✔ skills offered without duplicates and never at level 5 (0.77175ms)
+✔ jackpot carries round, count and time across skill choice (0.233542ms)
+✔ 10 counts or timeout closes each round and final round ends jackpot (0.159833ms)
+✔ zero payout earns zero and ordinary failure keeps earned rewards (0.071583ms)
+✔ supply adds stock only and course clears without final skill (0.086167ms)
+✔ fractional payout upgrades accrue without losing value to rounding (0.454083ms)
+✔ a large payout cannot skip the next stage without a new net gain (0.081583ms)
+✔ normal firing on all three boards produces pocket entries and drains every ball (1590.300792ms)
+✔ LCD has no invisible collision shelf or side wall (13.796791ms)
+✔ pins on the LCD physically deflect balls (0.5455ms)
+✔ calibrated default natural shots admit and complete W normal spins with exact accounting (26033.41125ms)
+✔ real mouth crossings capture lateral entries but do not capture outside the visible rims (15.53725ms)
+✔ same-size queue replacement still moves consumed identity and lands new entry (0.742375ms)
+✔ full queue, immediate entry, mode switches and resets reconcile without ghost holds (0.079125ms)
+✔ one active spin plus five holds; overflow still pays the start award (3.270959ms)
+✔ misses stop on nonmatching varied digits instead of resetting to 371 (2.023208ms)
+✔ holds survive reach, jackpot, and stage choice, with no hidden overflow (0.43725ms)
+✔ pocket approach balls drain without the age timeout across all three boards (1189.811541ms)
+✔ reach stop digits persist after the reach ends (0.207333ms)
+✔ persistent views reuse introduction poses and preserve adopted board pose (1.592833ms)
+✔ introduction visits whole, board, LCD and returns exactly to adopted play view (1.618959ms)
+✔ skip and reduced motion restore adopted camera with no residual outer frame (0.108042ms)
+✔ LCD camera contains every corner with padding and clamps long frame gaps (0.097917ms)
+✔ a naturally launched ball leaves through the actual rail mouth before changing plane (65.291ms)
+✔ natural 0.2/0.6 stream cannot cross launch rails and drains (3851.9505ms)
+✔ natural 0.24/0.05 stream cannot cross launch rails and drains (37426.099708ms)
+✔ legacy geometry retains original arcs; reference visible bands replace estimated upper centerlines (5.385458ms)
+✔ reference geometry leaves all original101 pins and physical launch/material settings unchanged, unknown static mark has no invented force; only user-described finite valve adds contact (50.747542ms)
+✔ naturally launched single balls cross the inferred opening before front-plane transfer in all three modes (706.505ms)
+✔ reference local rail clears all original pin shafts, including existing legacy overlap at36 (33.728583ms)
+✔ reference-exit excludes cross-plane pair only, preserves original same-plane impulse and legacy behavior (76.866667ms)
+✔ retained clipped rail has no invented end cap; continuous outside side and legacy cap remain (22.352625ms)
+✔ reference launch hold ignores front playfield overlap but retains actual rear barrel obstruction and legacy rule (24.007416ms)
+✔ existing visible U strips and body contact front balls only, while launch back and white opening remain traversable (20.61675ms)
+✔ launcher holds new shots for an occupied muzzle or a returning ball (8.200875ms)
+✔ single-file launcher drains after sustained maximum-rate and weak-shot firing (25481.156667ms)
+✔ stage 6 normal firing keeps its full cadence without an upper-exit pileup (42000.607166ms)
+✔ source layout preserves aspect ratio and every stepped LCD opening corner (0.741833ms)
+✔ lower left lane stays open while the centre of the source screen is protected (0.2425ms)
+✔ normal: balls stay outside LCD, follow side lanes and drain (16687.261417ms)
+✔ rush: balls stay outside LCD, follow side lanes and drain (4918.233375ms)
+✔ bonus: balls stay outside LCD, follow side lanes and drain (5582.896583ms)
+✔ normal HESO mouth admits a real ball independently of natural cohort frequency (5.991292ms)
+✔ both modes launch at one origin no faster than 0.6 seconds (4568.044166ms)
+✔ manual power changes only future normal shots (320.996208ms)
+✔ all active and five queued hold glyphs, travel and plate fit the stepped opening (3.683417ms)
+✔ normal and rush settled reels fit near aperture centroid, clear hold band and rush header (12.457084ms)
+✔ left road has no bridging collision segments and an actual pin rebounds a falling ball (29.110125ms)
+✔ right road stays five separate pins without an invisible supporting wall (21.522917ms)
+{"shots":34,"guideContact":27,"downstream":34}
+✔ reference inlet guides share their visible coordinates and feed falling left shots downstream (3353.311208ms)
+✔ a front-plane ball rebounds from the visible inner launch rail instead of passing through (140.631375ms)
+✔ all three left ordinary receivers admit a physical ball through their visible mouth (27.982042ms)
+✔ near arrivals reconcile and cohorts retain launch power after switching (7502.091167ms)
+✔ new intermediate poses keep blade crossings and particle origin stable in all three stories (17.04875ms)
+✔ guard alignment never teleports the actors at contact or recovery (263.338458ms)
+✔ new kneeling and rise poses preserve indistinguishable defeat before 54 seconds (1.67625ms)
+✔ new no-cue records omit upper action and arrows while LCD attacks continue (0.416ms)
+✔ ordinary loss and revival share the complete defeat and silence until the reveal (1.862458ms)
+✔ blade light follows atlas weapon landmarks and recoil starts after contact (1.178125ms)
+✔ normal and RUSH use 54s with a separate 5s upper window and late win-only mechanism (0.690625ms)
+✔ moon reveal uses the same stored phase/colour only in the upper window (0.293625ms)
+✔ long reach preserves accepted outcomes, FIFO, pause and physical mechanics without extra lottery calls (211.860959ms)
+✔ authored exchanges accelerate in 180ms, recover quickly and change framing instead of stretching playback (0.450208ms)
+✔ pressure gather adds smooth bounded focus without extending captions or leaking the result (0.632417ms)
+✔ short flash vow focus enters and exits smoothly without affecting other endings (0.149417ms)
+✔ accepted holds retain their draw and grade despite later RNG, odds and weight changes (2.3015ms)
+✔ hold overflow pays start prizes without consuming draw RNG or creating hidden draws (0.661167ms)
+✔ queued losing samples receive pity only on consumption and reset after jackpot (0.424167ms)
+✔ accounting reconciles prizes, fractional game modifiers, consumption, returns and supply (1.157292ms)
+✔ machine definitions expose RUSH draws and separate reliability from jackpot share (0.29ms)
+✔ debug edits update runtime specifications and stock accounting without rerolling accepted holds (0.274458ms)
+✔ wind boost is fixed at entry while queued pity remains a consumption rule (0.204459ms)
+✔ practice shortcut cannot discard an accepted active draw (0.189875ms)
+✔ game clock runs once per browser frame, cancels pending/stale callbacks and can restart (1.422958ms)
+✔ leaving a game from inside a frame cannot schedule another update (0.149375ms)
+✔ all five unit pin layouts and mechanism endpoints preserve board/display alignment (2.233167ms)
+✔ migration baseline locks per-unit contacts and closed/open mechanism geometry (5.694333ms)
+✔ moon expectations preserve all 12 user values and numerical strength (0.889917ms)
+✔ Bayes reliability of each cue equals its target without changing normal or rush odds (0.240041ms)
+✔ selection has a non-cue branch, skips non-reaches and does not use an RNG callback (0.188792ms)
+✔ cue is retained through reach, strike retains its color without pre-result reliability and idle has no active cue (0.179083ms)
+✔ W draw result and lottery RNG call count are identical with moon presentation attached (5.514583ms)
+✔ all twelve moon cues keep their first phase and color through the result and reset on the next draw (0.468375ms)
+✔ moon motion before resolve never reads hidden win (5.221958ms)
+✔ judgment closes; win opens; miss darkens and clears; normal resets (0.288208ms)
+✔ reactor can only expose announced rounds, independent of hidden award (0.166ms)
+✔ same paused clock produces identical mechanism pose (0.098792ms)
+✔ FIFO keeps the entry and build snapshot after skills change, through the reach (2.632375ms)
+✔ normal and RUSH entry provenance stay separated and rejected holds emit nothing (0.723959ms)
+✔ double/back retain their real entry, opening/debug do not invent physical entries (0.87775ms)
+✔ immediate entries emit the same draw identity; snapshots sanitize missing inputs (0.271709ms)
+✔ build direction overrides are restricted to practice presentation demos (0.166083ms)
+✔ presentation provenance preserves the approved lottery/payout/RUSH regression trace (10.605834ms)
+✔ only a previously visible hold emits a consume trace, including the first spin (0.998292ms)
+✔ demo does not inherit a stale active draw, and result clears frozen trails (0.679084ms)
+✔ trace age freezes with game time and a new game clears all prior identities (0.130958ms)
+✔ finite valve passes back-plane launch unchanged and reverses front contact using existing restitution (52.479792ms)
+✔ finite endcaps do not stop outside balls and diagonal endpoint contact has local normal (39.475875ms)
+✔ unchanged speed-dependent substeps prevent fast reverse penetration through diagonal finite mouth (44.773375ms)
+✔ same-plane pair separation touching valve resolves on front rather than rear face (25.998125ms)
+✔ natural forward ball clears both observation plane and actual diagonal valve before front transfer (274.854125ms)
+{"entries":13,"draws":13,"maxHolds":2}
+✔ physical admissions start spins, pause freezes and all accepted holds drain (17432.559416ms)
+✔ active draw is separate from five holds, full holds do not add a draw (340.591208ms)
+✔ every original PCM arrangement is finite, bounded, non-silent and unique (2433.456333ms)
+✔ four-variant rotation never repeats a neighbor or consumes gameplay RNG (1.133667ms)
+✔ all stories, endings, prediction families and short routes reference authored sounds (1.55075ms)
+✔ revival shares ordinary defeat before comeback and confirmation waits for reveal (1.53575ms)
+✔ single-strike story emits one blade impact and has a silent release gap (0.208333ms)
+✔ frame repetition, mute, pause and seeking do not replay consumed events (0.669083ms)
+✔ reach confirmation is not replayed when the post-win zoom starts (0.186125ms)
+✔ RUSH revival entry remains quiet until its authored awakening (0.158917ms)
+✔ audio voices and buffer memory remain bounded; pause, mute and disposal release sources (2481.584125ms)
+✔ actual RUSH replenishment has a separate cue and reset cannot replay holds (3.573875ms)
+✔ PUSH prompt and actual press are separate once-only cues with no early confirmation (0.203709ms)
+✔ small cues cannot cut a confirmation when all six effect voices are occupied (192.392ms)
+✔ important synth sounds retain priority and stereo tails (59.184916ms)
+✔ part flow uses original launcher, fixed gates and actual physical crossing counts (1063.429958ms)
+✔ pause freezes physics and stop cancels pending launches without erasing live balls (0.270292ms)
+✔ fuzu sensor counts only captured admissions, never upper passage or other prizes (0.862791ms)
+✔ captured fuzu ball pays one without becoming a tokuzu draw in legacy adapter (0.91875ms)
+✔ fuzu observation preserves right-closed flow at 0.6s (6114.301334ms)
+✔ fuzu observation preserves rush flow at 0.6s (5132.908708ms)
+✔ fuzu observation preserves bonus flow at 0.6s (5495.923791ms)
+✔ fuzu observation preserves right-closed flow at 0.05s (115506.226208ms)
+✔ fuzu observation preserves rush flow at 0.05s (75902.676958ms)
+✔ fuzu observation preserves bonus flow at 0.05s (37864.7265ms)
+✔ lower fuzu opening captures a real ball exactly once and reaches the session award (8.50225ms)
+✔ conditional payout boundaries are 30% / 50% / 20%, independent of win probability (6.053709ms)
+✔ invalid inputs do not silently award a different prize (0.373917ms)
+✔ nearest-rank p95 and strict slow-frame boundaries are descriptive (0.578791ms)
+✔ state attribution uses the latest sparse marker, preserving PUSH-only subset (0.128166ms)
+✔ source reproduction keeps all diagram walls and inlet contacts, only added tray removed (5.461417ms)
+✔ source-inferred mouth12 shares sensor aperture and both rim positions, not heso pin gap (1.420625ms)
+✔ position override refuses malformed IDs, contact attribute overrides and duplicates (2.397458ms)
+✔ both reproduction cases preserve all 101 original pin coordinates and attributes (94.272709ms)
+✔ invalid adjustment is rejected without changing baseline (9.007958ms)
+✔ short reproduction trial reconciles outcomes and its replay follows actual fixed physics time (310.529167ms)
+✔ LCD observer distinguishes centre entry from radius-only overlap without changing ball (0.166875ms)
+✔ launch backing-plane balls are excluded from front LCD intrusion while raw overlaps remain available (0.071833ms)
+✔ micro movement is cumulative from original centres and diagonal norm cannot exceed one (1872.676666ms)
+✔ explicit trial radius1.8 matches sprite frame and keeps every original pin while product default stays unchanged (6.211042ms)
+✔ sphere diagnostic observers preserve fixed-radius mechanics and count actual solver subdivisions (464.158833ms)
+✔ normal launch power trial changes initial launch only; right power and default retained (1026.151375ms)
+✔ explicit rejected-strength comparison flows to trial only without changing product default (410.608167ms)
+✔ dense-ball separation resolves the existing pin shaft before the frame is displayed (4.664ms)
+✔ adaptive integration stops a fast front-plane ball at a pin instead of crossing its center (1.852ms)
+✔ rear launch balls remain on their separate plane even when passing a front pin (0.968708ms)
+✔ a ball between staggered ordinary receivers clears their visible front edges (96.604333ms)
+✔ natural left power .25 drains after the ordinary receiver rim correction (9955.15825ms)
+✔ live uses the same factory pins and fixed steps as the established mechanical solver (249.997958ms)
+✔ stop leaves existing balls progressing without new shots, pause freezes and resume discards wall gap (58.955959ms)
+✔ bounded late frame exposes dropped wall time, with no unlimited catch-up (15.338375ms)
+✔ reset swaps validated layout/hash and clears time/count/balls, invalid reset preserves old trial (107.170459ms)
+✔ concurrent reset takes only the latest layout and dispose prevents late resets and advancement (72.350792ms)
+✔ baseline factory measurement matches established qa05 raw events/counts/accounting (8161.438ms)
+✔ paired comparison preserves fixed shapes/conditions and exposes short-window scope (2361.849083ms)
+✔ invalid candidates/unsupported conditions fail before trial and failure is not skipped (44.165ms)
+✔ moving windmill execution state cannot mutate initial fixed-condition snapshot (2137.407208ms)
+✔ exact baseline101 contacts match production and all six groups have intended population (106.158917ms)
+✔ move preserves stable role/r/restitution and only requested coordinate changes (29.778ms)
+✔ all edited groups have at least one legal move and fixed heso rejects move (20.580417ms)
+✔ rejects unknown/outside/fixed polygon sites, foreign baseline, duplicate/count and arbitrary attributes (29.737208ms)
+✔ moved pin proximity is checked against unchanged original pins (4.058208ms)
+✔ saved export verifies true SHA, reorders canonical placements, and rejects tampering (196.385083ms)
+✔ declared rail/transform inputs reproduce installed production geometry (1.184417ms)
+✔ foreign exact engine geometry warns while rule/layout mismatch and old schema reject (145.865042ms)
+✔ life nail clearances physically change admission for independent incoming balls (170.352917ms)
+✔ normal launches reach the start through the role-based board without lifetime cleanup (4720.436541ms)
+✔ flow diagnostics retain role-to-pocket and role-to-out evidence with bounded route signatures (1738.504833ms)
+✔ ceiling counts consumed draws, guarantees at boundary, resets on jackpot, not stage (1.527292ms)
+✔ ordinary pockets and overflow holds do not advance pity; pause freezes it (0.405208ms)
+✔ grade weighting selects 4R/6R/10R; edited game never rewards (0.179959ms)
+✔ attacker demonstration keeps real launch physics and scores only during open interval (977.62625ms)
+✔ all course models retain the live physical layout and required mechanism nodes (18.152459ms)
+✔ baked glyphs cover every cinematic label and remain individually addressable (10.999416ms)
+✔ entrance uses crossing position, rejecting a ball that enters sideways below the mouth (0.8235ms)
+✔ a diagonal ball through the mouth is accepted even if its next position is outside (0.646417ms)
+✔ sensor excludes upward, sideways, already-below and too-large balls (0.144458ms)
+✔ entrance clearance accounts for ball radius and includes a tangent passage (1.124125ms)
+✔ prediction attachment preserves admitted records, resolved outcomes and gameplay RNG consumption (236.487167ms)
+✔ queued holds remain FIFO and their cue agrees with the eventual active draw (68.878625ms)
+✔ queued cues agree on winning records, while charge and guaranteed followups remain excluded (1.810375ms)
+✔ all supported routes transfer the same prediction plan without permitting a false confirmed outcome (44.179ms)
+✔ standard, revival and flash clocks retain duration and upper windows through prediction overlays (158.013834ms)
+✔ pause freezes prediction and physics clocks; active choreography does not extend electric deadlines (30.733833ms)
+✔ charge bypasses prediction and symbol reach even under an explicit review override (4.109083ms)
+✔ prediction selection is frozen, deterministic and cannot mutate saved plans (1.898084ms)
+✔ all routes remain available and prediction generation preserves calibrated decisions (45.702875ms)
+✔ high-tier cues can occur on losses while winning battles can have quiet holds (43.733167ms)
+✔ revival and premium remain hidden until existing late reveal logic (0.800291ms)
+✔ basic preludes work on either saved outcome and staged text labels can all be preloaded (12.17725ms)
+✔ queue omen agrees with active selection without requiring battle anti-repeat state (17.49425ms)
+✔ pose boundaries select one readable layer and sampling is independent of frame rate (0.215333ms)
+✔ invalid admission data fails instead of inventing an outcome (0.427083ms)
+✔ battle and gather remain audible; pitch and energy rise throughout the long single-strike hold (1.588333ms)
+✔ win, loss and revival share the bed before their reveal; ordinary defeat is preserved (3.062042ms)
+✔ the final release stays silent, while ordinary play and post-win guide have a quiet bed (0.174833ms)
+✔ atmosphere PCM has no dropouts and remains within its support-layer budget (90.344667ms)
+✔ only two bed sources exist; silence mutes them and pause/dispose stops and disconnects (40.548ms)
+✔ presentation advances announced mechanical deadlines without consuming a queued draw (1.919042ms)
+✔ pause stops both presentation time and mechanical expiry (0.322833ms)
+✔ conditional masses conserve lottery and every adopted reliability exactly (1.164542ms)
+✔ display-only selection is idempotent, never emits a guarantee on losses, and preserves input (25.733583ms)
+✔ domain-separated channels reproduce route, premium, revival and all 12 moon targets statistically (1447.116042ms)
+✔ invalid and mathematically unsupported configurations fail explicitly (0.548708ms)
+✔ anti-repeat kernels preserve stationary masses and achieve the feasible self-transition lower bound (0.387458ms)
+✔ excluding the charge population requires the conditioned normal symbol prior, not a hit reroll (0.137375ms)
+✔ stateful decisions are cached, outcomes immutable, modes independent and retired IDs rejected (1.159583ms)
+✔ stateful stratified selections retain calibrated routes and reduce battle repeats on both outcome lanes (3905.026916ms)
+✔ short, direct, battle, revival, flash and premiums retain FIFO, result, pause and physical acquisition (461.370459ms)
+✔ display reclassification preserves legacy RNG consumption on wins and both losing-reach transitions (15891.403167ms)
+✔ charge bypasses symbol presentation; guaranteed fuzu excludes ordinary moon reliability (13.696ms)
+✔ sampling follows CSS size and DPR without changing logical coordinates or exceeding the pixel budget (0.809084ms)
+✔ resolve posture has an intermediate exposure while the decisive impact retains its authored hold (2.326458ms)
+✔ caption backdrop stays behind actors in LCD coordinates and defaults to hidden (256.52475ms)
+✔ caption backdrop feathers only the last six LCD pixels down to transparency (0.198625ms)
+✔ no-entry window and censored first/last gaps retain their exact meaning (1.29275ms)
+✔ drain admissions cannot shorten the firing-window gap (0.33875ms)
+✔ accounting distinguishes prizes, returns and spent shots and exposes mismatches (0.128708ms)
+✔ result-stop censoring separates real physics span from padded requested window (0.275666ms)
+✔ special endings are limited to winning records and appropriate mode, with no consecutive specials (0.666125ms)
+✔ revival stages defeat, silence, rising moonlight and final strike before delayed winning mechanism (1.266625ms)
+✔ 12s flash has one quick attack and a full stored five-second upper cue, without new cue selection (0.454875ms)
+✔ both endings preserve accepted results, pause, queued records and paid-ball accounting (193.416708ms)
+✔ reach announces before battle, holding matching left and middle digits through the battle (1.840792ms)
+✔ red has higher conditional win expectation on every course without changing draw odds (0.19425ms)
+✔ both colors can win and lose; overrides are practice only and pause freezes the announcement (0.8285ms)
+✔ each mode visits every story per bag, never repeats consecutively, and reuses a draw (3.551042ms)
+✔ RUSH history does not influence normal story choice (0.237375ms)
+✔ stories differ in attacking side and framing but retain timing and upper guidance (2.581916ms)
+✔ selected story survives presentation and pause without drawing extra lottery randomness (249.577ms)
+✔ strip wraps to identical repeated digits with a buffer above and below (1.688834ms)
+✔ fractional frame movement scrolls the existing strip without recreating symbols (2.166709ms)
+✔ left then middle then right land on their model results and stopped columns do not drift (0.525584ms)
+✔ reach locks matching left/middle while only the right strip continues, and disposal removes all columns (0.445542ms)
+✔ all courses stop left, then middle, then right, with time between each stop (2.727ms)
+✔ reach begins only after left and middle have stopped matching, with right unresolved (0.612875ms)
+✔ all digits can win or lose; seven has greater relative expectation, with stable cosmetic selection (40.868875ms)
+✔ normal/RUSH basic and direct routes land each digit, with continuous losing 9→1 wrap (2.904042ms)
+✔ all nine survive real admitted normal/RUSH short, battle, revival, flash and bonus handoff (2240.8285ms)
+✔ fullrotation keeps the special 777 result (0.169541ms)
+✔ shared visible polygons preserve measured source knots and no sampled edge exceeds .5 source pixels (20.692083ms)
+✔ shape-preserving interpolation stays between each pair of source x knots (0.263ms)
+✔ adopted contact solids use exact visible vertices, lower uncertain components are not converted to walls (61.58875ms)
+✔ release optimizes only gameplay art, preserves dimensions/alpha/originals and lossless pixel art (20379.721084ms)
+✔ Cloudflare size guard accepts the exact limit and rejects oversized assets (1.339292ms)
+✔ managed Chromium avoids local Chrome dependency without broad legacy changes (2.318584ms)
+✔ PR paths and structured three-Sprint summary are required (0.745208ms)
+✔ CD refuses disabled before operations (0.344834ms)
+✔ CD refuses push before operations (0.090666ms)
+✔ CD refuses not-merged before operations (0.092417ms)
+✔ CD refuses wrong-base before operations (0.064209ms)
+✔ CD refuses fork before operations (0.063459ms)
+✔ CD refuses wrong-repo before operations (0.067125ms)
+✔ CD refuses wrong-head before operations (0.089292ms)
+✔ CD refuses wrong-package before operations (0.13775ms)
+✔ CD refuses wrong-checkout before operations (0.107375ms)
+✔ CD refuses stale-main before operations (0.094167ms)
+✔ CD refuses wrong-tag before operations (0.054459ms)
+✔ CD refuses newer-release before operations (0.053ms)
+✔ normal CD publishes only after deployment, fresh public validation and smoke (1.569333ms)
+✔ CD prepare failure is not a successful Release (0.328417ms)
+✔ CD deploy failure is not a successful Release (0.204958ms)
+✔ CD verifyPublic failure is not a successful Release (0.244125ms)
+✔ CD smoke failure is not a successful Release (0.201333ms)
+✔ CD createRelease failure is not a successful Release (0.218584ms)
+✔ a moved main or dirty candidate cannot publish (0.25425ms)
+✔ same version/SHA successful rerun is a no-op; draft retry still checks public deployment (0.738625ms)
+✔ smoke failed checkpoint resumes without redeploy, and altered checkpoint cannot resume (0.638584ms)
+✔ fresh traffic must be exactly the recorded Worker Version at 100% (0.171083ms)
+✔ public SHA verification excludes only provider config and detects same-size bytes (0.598041ms)
+✔ notes show three accepted Sprints and limits, and never call deployed-only state successful (13.731125ms)
+✔ attachment failure leaves a draft; retry can complete attachments before publication (1.342791ms)
+✔ workflow documents have pinned actions, no PR credentials, gated merge SHA and serial CD (1.36ms)
+✔ historical successful rerun does not redeploy when main advanced (0.344958ms)
+✔ failed deploy retains fresh rollback snapshot and only retries unchanged prior traffic (0.298959ms)
+✔ PR-head artifact restores a smoke failure for the merge SHA and retries public checks without redeploy (4.225959ms)
+✔ checkpoint refuses mixed run-id (1.140125ms)
+✔ checkpoint refuses mixed run-repo (0.909375ms)
+✔ checkpoint refuses mixed run-repo-id (0.885292ms)
+✔ checkpoint refuses mixed run-head-repo (0.720333ms)
+✔ checkpoint refuses mixed run-event (0.726709ms)
+✔ checkpoint refuses mixed run-workflow (0.765084ms)
+✔ checkpoint refuses mixed run-head (0.835792ms)
+✔ checkpoint refuses mixed run-branch (0.724625ms)
+✔ checkpoint refuses mixed run-pr (0.74925ms)
+✔ checkpoint refuses mixed artifact-run (1.244875ms)
+✔ checkpoint refuses mixed artifact-repo (0.591583ms)
+✔ checkpoint refuses mixed artifact-head-repo (0.648083ms)
+✔ checkpoint refuses mixed artifact-head (0.737542ms)
+✔ checkpoint refuses mixed artifact-branch (0.630334ms)
+✔ checkpoint refuses mixed context-event (0.566959ms)
+✔ checkpoint refuses mixed context-head (0.614417ms)
+✔ checkpoint refuses mixed body-merge (1.969958ms)
+✔ checkpoint refuses mixed body-repository (2.139792ms)
+✔ checkpoint refuses mixed body-version (2.0435ms)
+✔ checkpoint refuses mixed body-worker (1.984541ms)
+✔ checkpoint absence does not download; ambiguous artifacts, failed download and invalid JSON stop restoration (3.291875ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.6ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.8ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.7ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.8ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.9ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.7ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-5coMBO/prototype/.cache/release/candidate.json
+✔ prepare runs checks, cleans its own preview and issues only a non-public verified manifest (61.728166ms)
+Release check: test
+Release phase start: test
+Release phase end: test failure 0.7ms
+✔ prepare test failure invalidates old candidate and cleans preview (18.3755ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.7ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release failure 0.4ms
+✔ prepare build failure invalidates old candidate and cleans preview (15.793208ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.7ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.5ms
+Release phase start: preview readiness
+Release phase end: preview readiness failure 0.6ms
+✔ prepare preview failure invalidates old candidate and cleans preview (15.621208ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.5ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.2ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.5ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release failure 0.7ms
+✔ prepare browser failure invalidates old candidate and cleans preview (18.620375ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.5ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.5ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.5ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-4lAnus/prototype/.cache/release/candidate.json
+✔ publish refuses modified before calling deploy (18.385334ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.6ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.6ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-uv5IeX/prototype/.cache/release/candidate.json
+✔ publish refuses added before calling deploy (19.170958ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.6ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.5ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-rMUTWb/prototype/.cache/release/candidate.json
+✔ publish refuses removed before calling deploy (17.279833ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.5ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.5ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-WdpoIk/prototype/.cache/release/candidate.json
+✔ publish refuses source before calling deploy (19.43675ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.5ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.5ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-ucwFql/prototype/.cache/release/candidate.json
+✔ publish refuses symlink before calling deploy (18.493083ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.5ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.6ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.5ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.6ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-l2U7f8/prototype/.cache/release/candidate.json
+✔ publish refuses traversal before calling deploy (19.488292ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.5ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.5ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-EE4iiv/prototype/.cache/release/candidate.json
+✔ publish refuses missing-manifest before calling deploy (18.480375ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.6ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.6ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.6ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-100WrS/prototype/.cache/release/candidate.json
+✔ publish without target confirmation and failed verification never deploy (17.856791ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.5ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.6ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.6ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.6ms
+✔ prepare refuses source changed during browser verification (17.398708ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.6ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.7ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+✔ prepare refuses assets changed during browser verification (14.720833ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.3ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.5ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.5ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-pORnpg/prototype/.cache/release/candidate.json
+✔ documentation changes do not invalidate runtime/build input fingerprint (18.6015ms)
+✔ CLI requires an explicit confirm flag and rejects unknown/missing arguments (0.498417ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.3ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.6ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.5ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-pUvV8M/prototype/.cache/release/candidate.json
+✔ frozen candidate survives later dist builds; source and config still guard publish (23.073417ms)
+✔ prepare rejects an unexpected actual Worker before running checks (7.794ms)
+Release check: test
+Release phase start: test
+Release phase end: test success 0.4ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.4ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.5ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.5ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.6ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-eJ4413/prototype/.cache/release/candidate.json
+✔ publish command failure is propagated without a success result (20.661ms)
+Release phase start: unit
+Release phase end: unit success 75.0ms
+Release phase start: browser
+Release phase end: browser failure 55.0ms
+Release check: test
+Release phase start: test
+Release phase end: test success 0.6ms
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.5ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.4ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.3ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.6ms
+Verified local release candidate: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-Jb1eaA/prototype/.cache/release/candidate.json
+✔ phase evidence measures wall time, preserves failures and stays outside candidate inputs (28.533625ms)
+Release phase start: browser
+Phase evidence write failed after browser: ENOENT: no such file or directory, open '/var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-qO1aVi/prototype/.cache/release/timings/prepare.json.tmp'
+Release phase end: browser failure 1.0ms
+✔ failed phase keeps original failure if private timing evidence cannot be saved (9.187417ms)
+Release check: build:release
+Release phase start: build:release
+Release phase end: build:release success 0.7ms
+Release phase start: preview readiness
+Release phase end: preview readiness success 0.4ms
+Release phase start: --prefix prototype run test:release
+Release phase end: --prefix prototype run test:release success 0.5ms
+Release phase start: run test:browser
+Release phase end: run test:browser success 0.6ms
+Release phase start: feedback.browser.mjs
+Release phase end: feedback.browser.mjs success 0.5ms
+Browser-verified candidate pending unit aggregation: /var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/silverball-release-GxKm4C/prototype/.cache/release/candidate.json
+✔ browser-only preparation cannot be published before unit aggregation (22.734167ms)
+✔ resolve never swings before its only release and builds charge in distinct shots (76.635708ms)
+✔ one release holds contact briefly and follows through without returning for more taps (1.673583ms)
+✔ resolve effects can be reduced without changing the strike or revealing revival early (1.529875ms)
+✔ fake normal return changes only display reels and ends at the blackout (1.142292ms)
+✔ revival silence stops a visible near miss without leaking or mutating the winning draw (5.060542ms)
+✔ launch strength changes only initial velocity, then gravity integrates in free space (4.126125ms)
+✔ the same upper geometry sends ordinary shots left and stronger shots right through actual contacts (56.009375ms)
+✔ weak shots physically return through the launcher instead of teleporting to the left (15.260333ms)
+✔ right arrivals drop under gravity between real guides without pins or locked x coordinates (17.76275ms)
+✔ closed physical gate diverts right shots to the outlet without awarding or hiding old balls (167.679208ms)
+✔ automatic shooting predicts physical arrivals and clears ten rounds without inter-round loss (1344.4005ms)
+✔ ball contacts separate overlapping balls and exchange momentum (0.305083ms)
+✔ adaptive collision steps prevent a fast ball from tunnelling through a thin guide (0.332666ms)
+✔ attacker door uses the configured count limit and never opens in round gaps (0.110458ms)
+✔ a weak paid shot returns to stock through the return outlet without an OUT loss (20.794667ms)
+✔ queued salute and twin balls can share the physical launcher without paid-ball loss (516.854375ms)
+✔ left launcher origin, muzzle, initial velocity and guide opening share one physical definition (6.1345ms)
+✔ both door poses reconstruct live contact endpoints rather than a horizontal closed door (1.381542ms)
+✔ native mouths stay at physical openings and backing stays behind balls (0.286791ms)
+✔ decorative bearings follow moving physical pivots across open and close (0.889875ms)
+✔ closed shutter infill starts at the live slope and stays behind the ball plane (0.686083ms)
+✔ traced right channel guides physical balls and drains at 0.6s (1962.065584ms)
+✔ traced right channel guides physical balls and drains at 0.05s (31402.926667ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.2 (3343.728833ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.24 (2899.414125ms)
+✔ lower resin rim leaves normal pocket discharge clear at power 0.28 (3113.533667ms)
+✔ source-diagram route renders balls at their physical positions without the former depth offset (1.782542ms)
+✔ right route advances real balls and pause freezes their physical/display coordinates (1000.46ms)
+✔ right-start admits only when open and reverses continuously (893.167334ms)
+✔ closed tulip leaves a bypass and releases all launched balls (2089.907666ms)
+✔ RUSH entry reannounces right after the bonus and its title, once (0.726334ms)
+✔ starting directly in RUSH announces right after the title (0.080542ms)
+✔ only an actual completed RUSH shows an ending, then clears for left guidance (1.209834ms)
+✔ last miss holds before result; light fades before total appears (0.176291ms)
+✔ four separate downward arrivals precede the single shine (0.711ms)
+✔ entry plays once, pauses with the clock, exits and resets cleanly (1.213083ms)
+✔ result split hands off directly to landed letters and the rainbow sweep (0.274333ms)
+{"time":191.24166666665707,"bonus":60,"rushEntries":100,"draws":100,"acceptedRush":100,"retainedRush":100}
+{"time":255.21666666659888,"payout":3000,"bonus":260,"held":5}
+✔ actual bonus admissions lead to 100 entry-driven rush draws then automatic normal return (30547.372459ms)
+✔ non-RUSH bonus returns to normal only after the door closes (90.45125ms)
+✔ RUSH win pays from real attacker entries and resumes at 100 with remaining holds (25895.044625ms)
+✔ ending holds normal draws through result and pauses on the shared clock (5.061875ms)
+✔ normal holds during RUSH do not close the electric chucker (0.354208ms)
+✔ electric chucker opens only during RUSH and its physical scoop catches falling right shots (25.313042ms)
+✔ physical port and predictor switch RUSH to attacker and back without changing the launch (30.441625ms)
+✔ a full RUSH hold pool stops automatic firing while open-port entry still awards its prize (8.013708ms)
+✔ automatic RUSH shooting reserves remaining draws and consumes ten spins with no surplus paid shots (59.282417ms)
+✔ RUSH assist counts the actual active draw and predicted arrivals against both hold and spin limits (17.206542ms)
+✔ dense right-play streams keep reservations even when a temporary prediction says OUT (0.599542ms)
+✔ six preludes reveal existing entry only, without RNG or payout changes (0.8735ms)
+✔ loss and repeat RUSH bonuses cannot trigger initial entry preludes (0.134583ms)
+✔ 100 independent spins give 66% aggregate; normal odds and payouts are unchanged (1.983292ms)
+✔ each selected payout is earned exactly by admissions and retained independently of later RNG (2.76225ms)
+✔ missing admissions do not get an automatic payout top-up (0.268417ms)
+✔ RUSH hit darkens, bursts once, settles and sweeps a digit-shaped shine (0.959334ms)
+✔ S6 contains only approved separate moves under the experimental aim control; product defaults unchanged (333.213208ms)
+✔ screening uses real-shot ratios and excludes unsafe, unreviewed, unchanged and failed-count cases (0.459ms)
+✔ equal start ratios choose fewer moved pins, never combine candidates (0.071458ms)
+✔ integration observations preserve every physical frame, outcome and fixed shape; restore methods after errors (1686.458959ms)
+✔ LCD overlap makes the fresh baseline unsafe even if a candidate has the same or fewer overlaps (0.285625ms)
+✔ reference hypotheses and two controls remain separate original-relative legal configurations (280.854542ms)
+✔ gate finite bounds, direction and repeated touching never turn passes into unique-ball counts (0.723583ms)
+✔ terminal detection catches a full segment crossing, retains first entry and records genuine re-entry (0.188333ms)
+✔ route observer leaves all coordinates, outcomes, replay and fixed structure identical (7156.398208ms)
+✔ existing replay defaults remain60Hz and30Hz records full time as an exact subsequence (1145.50975ms)
+✔ new candidate must strictly beat both controls, keep returns safe and await aim review (0.59025ms)
+✔ gzip raw records both compressed and expanded SHA with exact roundtrip (6.222458ms)
+✔ long decision needs all nine rows and improvement over both controls; phase/general/gap deterioration disclosed (1.038334ms)
+✔ observer throws restore step, advance and pin methods; unobserved routes preserve returned/remaining labels (0.25775ms)
+✔ S7 baseline keeps actual production factory pins, geometry and default sprite scale; settings only change power (8.972792ms)
+✔ observer ON/OFF keeps every replay coordinate, event, count and fixed physical input identical (3035.515667ms)
+✔ exact pin observer reports the actual collision, not another geometrically nearby pin; prediction ignored (0.574542ms)
+✔ observation failure restores prototype methods and temporary pin iteration (0.7265ms)
+✔ aim classes use actual radius and keep overlap separate; missing events are explicit (0.209709ms)
+✔ staged runner refuses measurement without frozen source, fresh baseline review or explicit long selection (0.373917ms)
+✔ A-only candidate can qualify without B samples when a stronger control establishes the B relation (6.598417ms)
+✔ unsafe counts, LCD, returns or changed physical inputs cannot become a launch selection (9.840167ms)
+✔ short real observation OFF/ON retains all JSON/events/replay and ordered substep/motion/contact trace (807.109458ms)
+✔ observer copies cannot mutate balls or actual geometry and throw always restores hook (97.898125ms)
+✔ actual pin correction with false impulse and successful reflection are distinct, original pin ID retained (0.218125ms)
+✔ actual pair contacts contain both IDs and both correction snapshots, outcomes expose real terminal state (0.58225ms)
+✔ finite road gap centre crossings distinguish direction, ordinary/large gap and radius clearance (0.350708ms)
+✔ synthetic250 control retains every old measurement field and captures all actual outcome IDs (125.242833ms)
+✔ gap motion/correction attribution keeps plane and pair summary uses the actual other ID (0.730042ms)
+✔ runner allows only explicit single unchanged baseline phase0 and full oracle compares every physical field (1.048791ms)
+✔ solid polygon contact uses full solid bounds even when compatibility a/b span only another edge (0.530875ms)
+✔ saved gzip/JSON OFF oracle matches traced in-memory ON JSON exactly, including explicit configuration fields (82.860208ms)
+✔ S8 defines only three independent original-origin moves with production0.18 and original display (107.743792ms)
+✔ preflight preserves an invalid candidate as skipped, never substitutes another move (3.980208ms)
+✔ reused actual-contact observer ON/OFF is non-acting for baseline and a changed layout (3137.155334ms)
+✔ observer error restores inherited Physics methods and rejects undeclared or mismatched settings (78.847667ms)
+✔ short screening requires strict admission ratio and safe fresh baseline, and holds pending PM aim review (129.674834ms)
+✔ short tie prefers the valid one-pin case over the pair and preserves declared candidate order (32.04175ms)
+✔ long requires all paired phases, aggregate strict gain and every phase no worse; general/gap deterioration holds (257.78025ms)
+✔ CLI requires frozen source, baseline review and explicit screened long winner before any run (0.349542ms)
+✔ raw loader rejects corruption/missing rows and requires successful same-source stages (50.994333ms)
+✔ time mode omitted/undefined shotLimit remains byte-for-byte compatible with no new endpoint fields (528.28125ms)
+✔ count stopping preserves real physical events and45second drain without a next shot; non-grid endpoints separate (260.657625ms)
+✔ same stop-limit run with observer ON/OFF retains every coordinate,event,count and fixed input (399.874208ms)
+✔ exact250 is tested with a declared synthetic drain, not a long physical selection trial (416.966417ms)
+✔ safety cap saves a full failed result, actual shots and drain; it never fabricates missing shots (78.324083ms)
+✔ frozen-manifest cases preserve original101, cumulative constraint and fixed production conditions (5.748959ms)
+✔ runner never starts a case without explicit single-phase/stage and frozen source (0.199917ms)
+✔ default and explicit null factory are exactly equal; offset moves only original mechanism centre at construction (18.731958ms)
+✔ bounded finite offset and material interference fail atomically, without a ball-clearance requirement (3.667667ms)
+✔ windmill arm material radius is the solver contact1.3, not the layout metadata0.8 (0.683666ms)
+✔ only declared windmill cases, no pin moves or changes to fixed production conditions; old pin-only explicitly rejects even zero/null offsets (83.055084ms)
+✔ short physical observer ON/OFF keeps full events, positions, counts, fixed inputs; unspecified old time output has no offset key (321.228459ms)
+✔ synthetic250 control validates declared geometry at both factory and normalized end, rejects changed centres/attributes/gates/pins (939.565125ms)
+✔ runner retains explicit one-case/phase and frozen source requirement, no automatic batch (23.196375ms)
+✔ real launches debit stock and ordinary admissions pay once and queue once (1391.212042ms)
+✔ session uses supplied production draw RNG, not review loss RNG (1.109ms)
+✔ pause freezes both clocks and stop-fire drains existing balls (435.384125ms)
+✔ unsettled progression is not silently restored and in-flight last balls are preserved (0.418292ms)
+✔ status follows announced mechanics through RUSH without leaking a pending win (0.85275ms)
+✔ LCD acquisition guidance uses announced openings and stops at actual bonus (0.095708ms)
+✔ normal and RUSH idle differ; unresolved records are never read (0.682583ms)
+✔ normal idle guidance follows launch, pause and empty-stock state (0.178167ms)
+✔ stopped launch prompts right launch only after publicly announced acquisition (0.142666ms)
+✔ manual and automatic shooting use the same power/angle parameters (0.759625ms)
+✔ normal right-fire warning follows observed balls instead of a power threshold (0.139416ms)
+✔ jackpot assist shows closed round waiting without normal warning (0.514584ms)
+✔ RUSH auto maintains right shooting and waits for accepted spins without normal warning (0.1175ms)
+✔ extreme rates work in normal/manual play while assisted right play spaces shots (0.083ms)
+✔ a shared recognition rhythm keeps distinct sound arrangements for all four variants (465.146875ms)
+✔ the signature is used by win/RUSH win only, never ordinary contacts or losing reaches (0.605875ms)
+✔ the catalog uses the dedicated signature rather than a generic victory chord (96.993583ms)
+✔ failure evidence keeps navigation, errors and independent document/HTML/screenshot captures (7.31975ms)
+✔ unavailable output and closed page remain diagnostic failures, not replacement errors (1.730875ms)
+✔ cleanup retains the original error object, while cleanup-only failure remains a failure (0.384167ms)
+✔ solid vertices retain exact visible outline; malformed or self-crossing bands are refused (2.498625ms)
+✔ both sides and end faces use actual band boundary, not a centreline radius (0.638125ms)
+✔ finite corners follow radial circle contact and outside bands leave state unchanged (0.19025ms)
+✔ inside and boundary penetration is resolved to nearest exterior without adding speed (0.196042ms)
+✔ concave empty region is traversable while nearby visible inner corner has contact (0.149042ms)
+✔ small synthetic travel substeps keep a fast circle outside band; solver coefficients stay .05 (0.168833ms)
+✔ bounded repeated contacts resolve a concave two-face overlap without extra force (0.144291ms)
+✔ partial adopted surface range does not turn uncertain lower band into a wall (0.120917ms)
+✔ basic win/loss share every visible property until decision (6.611417ms)
+✔ common landing reveals stored result, including replay seeks (0.299042ms)
+✔ losing 7 passes continuously before 8 lands, with no texture replacement (0.624542ms)
+✔ strip advances 1 through 9 then 1 downwards, including negative/zero coordinates (0.307334ms)
+✔ normal/RUSH basic/direct move in the same increasing direction until each stop (4.031208ms)
+✔ direct requires an already winning record and stays short (0.421583ms)
+✔ premium overlay needs winning battle record; forming is not confirmed (0.165ms)
+✔ reduced effects preserve timing/results and remove shake/particles (0.153542ms)
+✔ spending prevents a clear even when cumulative prizes exceed the required gain (1.517416ms)
+✔ stage targets, border, prize multiplier and firing speed rise together (0.603666ms)
+✔ upgraded initial stock and stage supplies cannot satisfy the new stage automatically (0.671416ms)
+✔ only bonus prizes scale with course and stage while accounting stays intact (1.069041ms)
+✔ below-border grace resets only on recovery to the border, pauses, and expires at three seconds (0.524084ms)
+✔ skill selection freezes the clock and the next stage begins above its new border (0.196583ms)
+✔ last-push skill uses the safety margin above the current border (0.318875ms)
+✔ live ticket milestones pay only the difference and cashout never pays them twice (0.203958ms)
+✔ turning on debug keeps previous confirmed tickets but prevents additional rewards (0.671625ms)
+✔ growth remains finite in late endless stages and firing is capped (0.165084ms)
+✔ story stays on one timeline across entrance/title split and original end (1.330584ms)
+✔ RUSH stories use the existing two-second window, short cues fall back (0.21025ms)
+✔ plain reels and missing films preserve existing fallback; basic windows fit (0.153875ms)
+✔ dedicated entrance choice cannot distinguish ordinary defeat from revival (10.984084ms)
+✔ all five films carry unique causal events and complete six shots (2.645833ms)
+✔ family mapping never infers or changes an outcome (0.359292ms)
+✔ brief windows use edited two/three-shot versions; normal entrance has five events (5.970709ms)
+✔ reduced effects preserve shots/timing; replay seeks remain deterministic (0.638416ms)
+✔ short edits leave reading time for the final shot instead of rushing it (24.41275ms)
+✔ any paid prize earns at least one ticket without clearing a stage (2.170458ms)
+✔ tickets preserve stage bonuses and upgrade rounding with an exact breakdown (0.772666ms)
+✔ zero prizes, supply and returns never earn tickets; cashing out preserves earnings (0.151709ms)
+✔ practice, endless and debug runs cannot grant progression (0.344167ms)
+✔ finished rewards can be claimed exactly once and use the played course (0.168375ms)
+✔ normal symbol and charge are separate outcomes; entry waits for explicit policy (2.015416ms)
+✔ 130 misses consume fuzu draws, not electric admissions; no separate end roll (0.609417ms)
+✔ success at draw 130 keeps electric opportunity; V required and 3000 is two bonuses (1.624459ms)
+✔ physical capture counted once, closed inlets reject, timeout never fills missing balls (0.18725ms)
+✔ tokuzu1 holds are four and full holds do not suppress inlet prize (0.158292ms)
+✔ unknown fuzu storage does not invent capacity; no old pity or boosted prize (0.482916ms)
+✔ special symbol draws never run simultaneously; tokuzu2 has next-start priority (0.134958ms)
+✔ an arrival between resolve and next-start never overtakes queued records (0.154875ms)
+✔ W continuation uses independent fuzu draws, not a separate termination lottery (1.007667ms)
+✔ announced awards preserve separate 10R bonuses and per-entry accounting (0.245291ms)
+✔ unknown timings stay explicit and published reference data is immutable (0.114917ms)
+✔ existing RUSH misses keep admission odds, cue and FIFO through guaranteed transition (98.909833ms)
+✔ guaranteed admission stays winning after a later normal RUSH reset (23.711667ms)
+✔ electric opening expires on game time while the first V bonus is celebrating (14.269333ms)
+✔ presentation clock expires V opportunity without inventing payout or another draw (0.499583ms)
+✔ normal model matches public symbol and charge odds with conditional entry separate (1.37675ms)
+✔ consumed W diagnostics are bounded without losing payout or replaying events (74.542666ms)
+✔ pruning consumed history never drops unconsumed events or resets sequence (0.274083ms)
+✔ live older balls constrain retirement, and stale V callbacks cannot grant another bonus (0.380208ms)
+✔ 300 charge never masquerades as a triple-seven symbol hit (1.181541ms)
+✔ production W bridge accepts physical fuzu/electric/V/attacker crossings and counts 3000 (229.218208ms)
+✔ natural right launches traverse fuzu, two electric admissions, two V entries and 3000 (29345.472875ms)
+✔ dense arrivals cannot be consumed beyond the ten-count closing boundary (159.244084ms)
+✔ control pause freezes an active reach even when flow itself has not been paused (17.053542ms)
+✔ retirement is idempotent and rejects late capture and subsequent ticks (0.493958ms)
+✔ new play starts independently, including physical IDs and old profile upgrades (0.340959ms)
+✔ production SessionGame uses W control and actual prizes, no stage/gold multipliers (4.673083ms)
+✔ RUSH hit needs actual electric and V admissions before 1500 x 2 (2.307833ms)
+✔ charge is distinct from aligned symbols, fourth branch does not enter RUSH (1.989542ms)
+✔ 6000 plus alpha uses further fuzu and captured electric/V balls; no grant at reset (2.083ms)
+✔ electric followup result is fixed at admission, not rolled after payout (1.080791ms)
+✔ production RUSH expires only after 130 resolved fuzu misses (20.943917ms)
+✔ ornament covers and retracts during winning reach, before center stop, never after win (0.727208ms)
+ℹ tests 623
+ℹ suites 0
+ℹ pass 623
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 257534.951125

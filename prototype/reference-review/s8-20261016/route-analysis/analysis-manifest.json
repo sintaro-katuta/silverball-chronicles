@@ -1,0 +1,56 @@
+{
+  "sourceSHA": "e5e6b5d4e04b43f5f82a1cd20b56828588e332a9f5ac6a0aa96ba2a4060355e0",
+  "observedCommit": "dabdd358b77367e35366e4af5fa039bb69b2f1db",
+  "currentCommit": "dabdd358b77367e35366e4af5fa039bb69b2f1db",
+  "sourceStillMatches": true,
+  "newTrials": 0,
+  "traceManifest": {
+    "schema": "s8-passive-flow-trace-v1",
+    "file": "trace.jsonl.gz",
+    "compressedSHA": "32c11ddf2c1bc7e3d77dd70d5630c9c6655e43674bb2bbee7282cefba74ac0ae",
+    "compressedBytes": 79815949,
+    "expandedSHA": "ece0c872cc805d01990a5fa8b118307d432129614d259417f958573502633041",
+    "expandedBytes": 1061241065,
+    "records": 1666878,
+    "sourceSHA": "e5e6b5d4e04b43f5f82a1cd20b56828588e332a9f5ac6a0aa96ba2a4060355e0",
+    "timeOrigin": "Physics time; phase0. timeStart/timeEnd are substep or motion intervals, contact/correction order is seq, gameTime is separate.",
+    "radiusAndPlane": "All points carry actual r and leftLaunchPlane as front; read fixed.separateLaunchPlane. No visual-plane inference."
+  },
+  "files": [
+    {
+      "name": "analyze.py",
+      "bytes": 15549,
+      "sha256": "d74a5bafb608892797aa683b43cef19d53960c10c1d7188637cf3d7dd0c4f982"
+    },
+    {
+      "name": "finalize.py",
+      "bytes": 4216,
+      "sha256": "3d9f83c5cc21d4a5d6462c427d2c7b9f2bb802991f95734f6dd4c1c5d38cecaf"
+    },
+    {
+      "name": "summary.json",
+      "bytes": 68574,
+      "sha256": "f881c52c50ea8efb21190108db66cb16a454da681bcc49e45f599517cf40acf4"
+    },
+    {
+      "name": "all250.csv",
+      "bytes": 60053,
+      "sha256": "6ea4fb8e78ae4c145c5253ce686ac95a40a06b5db3565debcfec16fb3ec5a191"
+    },
+    {
+      "name": "all250.json",
+      "bytes": 1032185,
+      "sha256": "fe8f2006eee272b8fe7fd91e5e385cd6c5601f514dd2e0353bb5dca87fee5dd4"
+    },
+    {
+      "name": "representatives.json",
+      "bytes": 711,
+      "sha256": "0b3ed2a596509ee013cf614de2e201f699d00fc1e208a80f448363bff78cf63b"
+    },
+    {
+      "name": "ball1-path.json",
+      "bytes": 7148,
+      "sha256": "3f7e74be4248684cefa7f9a2f0fb339a706f0f5642db460369d58aa2b89d9113"
+    }
+  ]
+}

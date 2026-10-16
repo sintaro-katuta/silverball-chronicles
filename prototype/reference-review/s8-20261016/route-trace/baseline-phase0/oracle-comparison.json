@@ -1,0 +1,11 @@
+{
+  "allExistingMeasurementFieldsExact": true,
+  "newBodySHA": "cb10238bbcb374bf84f7c69b761b9d2589463590027efd295b5acec58fa1c007",
+  "historicalBodySHA": "cb10238bbcb374bf84f7c69b761b9d2589463590027efd295b5acec58fa1c007",
+  "excludedFields": [
+    "sourceSHA",
+    "planSHA",
+    "caseManifestSHA"
+  ],
+  "scope": "All other existing JSON fields including physical/events/replay, conditions, pins, fixed, mechanism state and observations; old provenance is retained, not reassigned."
+}

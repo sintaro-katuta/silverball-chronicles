@@ -1,0 +1,61 @@
+{
+  "scope": "Media validation/capture receipts, not full trace; full trace preserved locally with trace-manifest SHA",
+  "records": 10,
+  "file": "receipts.json.gz",
+  "compressedBytes": 720045,
+  "compressedSHA": "2f7357b8bf7618205655018f657850c6b077440ee646f955f7d87aa93fb6aafc",
+  "expandedBytes": 4989983,
+  "expandedSHA": "249f12d453e9f5188afcc6753266cf572df7372f0caa185fa35f9157ca557efc",
+  "sources": [
+    {
+      "path": "prototype/reference-review/s8-20261016/route-media-validation-v2/verification.json",
+      "sha256": "07d58495299dada68d68137f4f43a2d8a5318809ec9d114ff668dedb92b34bbf",
+      "bytes": 216988
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/route-media-cache-reuse-v2/verification.json",
+      "sha256": "8ad514c0f05f4721fb0e511dd6c49986d7499c89e45dced45f2b0515016d0eac",
+      "bytes": 216979
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/route-media-wire-validation/verification.json",
+      "sha256": "47997868c64379bedf53072c1d4d7a13bde073ef0f6ae833903cd860cf049177",
+      "bytes": 217508
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/route-visual-preflight-attempt03/verification.json",
+      "sha256": "9dcf006783467e509152ee971056311d3de629977be6a359b62d6719d547b7d5",
+      "bytes": 316821
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/route-clips/ball-1/verification.json",
+      "sha256": "58836719dc99d4f864ad51c3c982987db2199f05579942dd2589165b9716d590",
+      "bytes": 1017499
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/route-clips/ball-34/verification.json",
+      "sha256": "4e12f0d580e4d11cb93a9dc774e91442195c05865595d2f9446d845b9dd94c35",
+      "bytes": 2462887
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/route-clips/ball-12/verification.json",
+      "sha256": "58874b34a5fd19766c97ccab604baff107937a1e268cbacd6d87a2304985b944",
+      "bytes": 2149768
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/route-clips/ball-7/verification.json",
+      "sha256": "a24128f5fa1180aba83bbe95e5efb75824d6764c68ae59b7b6ec42006c810418",
+      "bytes": 958305
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/route-clips/ball-2/verification.json",
+      "sha256": "022180cfd897d6fa23b7e34299ffe1bdbccd20465d900f29b2efadd765cd1586",
+      "bytes": 889257
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/route-clips/ball1-wheel-close/verification.json",
+      "sha256": "e97f4dc6994a16ea9ed274effe80fed26534ff9ffb0b26526d90c2b81e2b45a8",
+      "bytes": 684541
+    }
+  ]
+}
