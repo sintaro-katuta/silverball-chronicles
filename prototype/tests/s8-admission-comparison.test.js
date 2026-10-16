@@ -90,3 +90,21 @@ test('combined manifest permits only declared road2+wheel right/up, without weak
  }
  for(const c of combined.slice(2,5)){const disguised={...c,moves:[{pinId:2,dx:.25,dy:0}],windmillOffset:{dx:.25,dy:0}};assert.equal(inspectAdmissionCase(disguised).valid,false);}
 });
+
+
+test('road-tail case moves only23..26 right0.25 under strict guards, keeping their relative geometry',()=>{
+ const tail=JSON.parse(readFileSync(new URL('../tools/s8-road-tail-cases.json',import.meta.url))).cases;
+ assert.deepEqual(tail.map(c=>c.id),['legacy-control','three-base','three-road-tail-right025']);assert.deepEqual(tail.slice(0,2),cases.slice(0,2));
+ const c=tail[2],checked=inspectAdmissionCase(c);assert.equal(checked.valid,true,checked.skipReason);assert.equal(checked.resolutionOptions.pinSpacingProfile,'strict-centre4-v1');assert.equal(checked.pinSpacingInspection,null);
+ const original=createBoardFlow({lcd:true}).flow.physics.pins;
+ for(const pin of checked.layout.pins){const old=original.find(p=>p.id===pin.id);assert.deepEqual(pin,{...old,x:old.x+(pin.id>=23&&pin.id<=26?.25:0)});}
+ for(let i=23;i<=26;i++)for(let j=i+1;j<=26;j++){const a=checked.layout.pins.find(p=>p.id===i),b=checked.layout.pins.find(p=>p.id===j),oa=original.find(p=>p.id===i),ob=original.find(p=>p.id===j);assert.equal(a.x-b.x,oa.x-ob.x);assert.equal(a.y-b.y,oa.y-ob.y);}
+ assert.equal(checked.layout.pins.find(p=>p.id===90).x-checked.layout.pins.find(p=>p.id===26).x,11.25);
+ for(const bad of [{...c,ballRadius:2},{...c,windmillOffset:{dx:0,dy:-.25}},{...c,moves:c.moves.slice(1)},{...c,moves:c.moves.map(m=>({...m,dy:-.25}))},{...c,moves:[...c.moves,{pinId:90,dx:0,dy:-.25}]},{...c,pinSpacingProfile:'road-support-2-3-v1'},{...c,normalPower:.2}])assert.equal(inspectAdmissionCase(bad).valid,false);
+});
+test('road-tail synthetic stop250/validation preserve full fixed geometry and reject a displaced undeclared pin',()=>{
+ const c=JSON.parse(readFileSync(new URL('../tools/s8-road-tail-cases.json',import.meta.url))).cases[2],r=synthetic(()=>measureAdmissionCase(c));
+ assert.equal(validateAdmissionResult(r),true);assert.equal(r.physical.shots,250);assert.equal(r.end.remaining,0);assert.equal(r.display.ballRadius,1.8);assert.equal(Object.hasOwn(r,'validationProfile'),false);
+ const bad=structuredClone(r);bad.pinsAtEnd.find(p=>p.id===22).x+=.25;assert.throws(()=>validateAdmissionResult(bad),/layout changed/);
+ assert.throws(()=>measureAdmissionCase(c,{mode:'rush'}),/phase/);
+});
