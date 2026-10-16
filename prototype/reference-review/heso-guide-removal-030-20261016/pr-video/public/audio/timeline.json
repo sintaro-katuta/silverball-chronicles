@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "fps": 30.0,
+  "engine_url": "http://127.0.0.1:50021",
+  "clips": [
+    {
+      "id": "heso-01",
+      "voice": null,
+      "speaker": 3,
+      "text": "今回は、ヘソの周りにある、左右のガイドを取り除きました。",
+      "audio_file": "heso-01.wav",
+      "start_seconds": 0.0,
+      "duration_seconds": 4.949333,
+      "end_seconds": 4.949333,
+      "start_frame": 0,
+      "duration_frames": 149,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "intro",
+        "delivery": "落ち着いて、変更点と確認結果を簡潔に説明する。"
+      }
+    },
+    {
+      "id": "heso-02",
+      "voice": null,
+      "speaker": 3,
+      "text": "変更前は、ヘソの左右に受け皿があり、液晶の下から取付板が伸びていました。",
+      "audio_file": "heso-02.wav",
+      "start_seconds": 5.149333,
+      "duration_seconds": 6.549333,
+      "end_seconds": 11.698667,
+      "start_frame": 154,
+      "duration_frames": 197,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "before",
+        "delivery": "落ち着いて、変更点と確認結果を簡潔に説明する。"
+      }
+    },
+    {
+      "id": "heso-03",
+      "voice": null,
+      "speaker": 3,
+      "text": "変更後は、この受け皿と取付板を外し、ヘソの周囲をすっきりさせています。",
+      "audio_file": "heso-03.wav",
+      "start_seconds": 11.898667,
+      "duration_seconds": 6.069333,
+      "end_seconds": 17.968,
+      "start_frame": 357,
+      "duration_frames": 183,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "after",
+        "delivery": "落ち着いて、変更点と確認結果を簡潔に説明する。"
+      }
+    },
+    {
+      "id": "heso-04",
+      "voice": null,
+      "speaker": 3,
+      "text": "見た目と一緒に、ガイドに玉が当たる判定も取り除きました。見えないガイドは残していません。",
+      "audio_file": "heso-04.wav",
+      "start_seconds": 18.168,
+      "duration_seconds": 6.901333,
+      "end_seconds": 25.069333,
+      "start_frame": 545,
+      "duration_frames": 208,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "contact",
+        "delivery": "落ち着いて、変更点と確認結果を簡潔に説明する。"
+      }
+    },
+    {
+      "id": "heso-05",
+      "voice": null,
+      "speaker": 3,
+      "text": "バージョン、ゼロ点サン点ゼロで採用済みの発射強度や、ヘソの口幅、釘の配置はそのままです。抽選や賞球も変えていません。",
+      "audio_file": "heso-05.wav",
+      "start_seconds": 25.269333,
+      "duration_seconds": 10.538667,
+      "end_seconds": 35.808,
+      "start_frame": 758,
+      "duration_frames": 317,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "scope",
+        "delivery": "落ち着いて、変更点と確認結果を簡潔に説明する。"
+      }
+    },
+    {
+      "id": "heso-06",
+      "voice": null,
+      "speaker": 3,
+      "text": "自然に飛ばした玉がヘソへ入り、抽選や玉数の計算が正しく進むことを確認しました。関連する十七件のテストと、ビルドも通っています。",
+      "audio_file": "heso-06.wav",
+      "start_seconds": 36.008,
+      "duration_seconds": 11.317333,
+      "end_seconds": 47.325333,
+      "start_frame": 1080,
+      "duration_frames": 340,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "checks",
+        "delivery": "落ち着いて、変更点と確認結果を簡潔に説明する。"
+      }
+    },
+    {
+      "id": "heso-07",
+      "voice": null,
+      "speaker": 3,
+      "text": "パソコンとスマートフォン幅の画面で、ガイドが消えていることと、発射の停止、再開、一時停止からの復帰を確認しました。",
+      "audio_file": "heso-07.wav",
+      "start_seconds": 47.525333,
+      "duration_seconds": 10.005333,
+      "end_seconds": 57.530667,
+      "start_frame": 1426,
+      "duration_frames": 301,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "browser",
+        "delivery": "落ち着いて、変更点と確認結果を簡潔に説明する。"
+      }
+    },
+    {
+      "id": "heso-08",
+      "voice": null,
+      "speaker": 3,
+      "text": "ガイドがなくなることで、玉の流れは変わります。長時間の入賞率とスマートフォン実機での確認は、まだ行っていません。",
+      "audio_file": "heso-08.wav",
+      "start_seconds": 57.730667,
+      "duration_seconds": 9.002667,
+      "end_seconds": 66.733333,
+      "start_frame": 1732,
+      "duration_frames": 271,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "limits",
+        "delivery": "落ち着いて、変更点と確認結果を簡潔に説明する。"
+      }
+    },
+    {
+      "id": "heso-09",
+      "voice": null,
+      "speaker": 3,
+      "text": "この変更は、ゼロ点サン点ゼロ向けのプルリクエストにまとめています。公開版への反映は、まだ行っていません。",
+      "audio_file": "heso-09.wav",
+      "start_seconds": 66.933333,
+      "duration_seconds": 8.469333,
+      "end_seconds": 75.402667,
+      "start_frame": 2008,
+      "duration_frames": 255,
+      "gap_after_seconds": 0.2,
+      "metadata": {
+        "scene": "status",
+        "delivery": "落ち着いて、変更点と確認結果を簡潔に説明する。"
+      }
+    }
+  ],
+  "total_duration_seconds": 75.602667,
+  "total_duration_frames": 2269
+}
