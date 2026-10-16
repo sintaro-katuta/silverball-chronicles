@@ -1,3 +1,4 @@
+import {applyWindmillOffset} from './windmill-offset.js';
 import {installHesoGuides} from './heso-guide.js';
 import {installRightResinRoute,attachRightRouteDepth} from './right-resin-route.js';
 import {attachPassGate} from './pass-gate.js';
@@ -10,7 +11,7 @@ import {attachAttackerMotion} from './attacker-motion.js';
 export const LEFT_ADMISSION_GUIDE_ROLES=Object.freeze(['heso-guide']);
 export const LCD_LOWER_APRON_ROLES=Object.freeze(['lcd-boundary-16','lcd-boundary-17','lcd-boundary-18','lcd-boundary-19','lcd-boundary-20']);
 // Combined mechanical review only. Individual approved previews remain unchanged.
-export function createBoardFlow({lcd=false,normalPower=.20,launchInterval=.6,rightPower=.85,passGate=true,fire=null,pegSeed=0,leftAdmissionGuides=true,hesoMouthWidth=HESO_MOUTH_WIDTH,pinPositions=null,ballRadius=null,launchRailProfile='legacy'}={}){
+export function createBoardFlow({lcd=false,normalPower=.20,launchInterval=.6,rightPower=.85,passGate=true,fire=null,pegSeed=0,leftAdmissionGuides=true,hesoMouthWidth=HESO_MOUTH_WIDTH,pinPositions=null,ballRadius=null,launchRailProfile='legacy',windmillOffset=null}={}){
  if(!['legacy','reference-exit'].includes(launchRailProfile)||!lcd&&launchRailProfile!=='legacy')throw new Error('Unsupported launch rail profile for this board');
  const options={fire,pegSeed,launchPower:.5,launchInterval:lcd?launchInterval:.1},flow=createPartFlow('normal',options);
  const tulip=attachRightStartMotion(flow),attacker=attachAttackerMotion(flow);
@@ -30,6 +31,7 @@ export function createBoardFlow({lcd=false,normalPower=.20,launchInterval=.6,rig
   flow.physics.pins=next;
  }
  if(ballRadius!==null){if(!lcd||![1.4,1.6,1.7,1.8,1.85,1.9,2.2,3,4.09].includes(ballRadius))throw new Error('Unsupported internal trial ball radius');flow.physics.ballRadius=ballRadius;flow.physics.displayBallScale=6*ballRadius/28;flow.physics.displayBallDiameter=2*ballRadius;}
+ if(windmillOffset!==null){if(!lcd)throw new Error('Windmill trial requires LCD board');applyWindmillOffset(flow.physics,windmillOffset);}
  let currentMode='normal';
  const setMode=mode=>{currentMode=mode;options.launchPower=mode==='normal'?(lcd?normalPower:.5):(lcd?rightPower:1);flow.game.rush=mode==='rush'?{}:null;attacker.request(mode==='bonus');tulip.request(mode==='rush');};
  const leftMetrics=lcd?attachLeftRouteMetrics(flow):null;

@@ -8,7 +8,7 @@ export const S8_SHOT_CONDITIONS=Object.freeze({shotLimit:250,maxFiringSeconds:30
 const equal=(a,b)=>JSON.stringify(a)===JSON.stringify(b);
 export function inspectShotCase(config){
  try{
-  if(!config||config.normalPower!==.18||config.launchRailProfile!=='legacy'||config.hesoMouthWidth!==20||config.leftAdmissionGuides!==true||Object.hasOwn(config,'ballRadius'))throw new Error('S8 shot case must retain production0.18/legacy/mouth20/tray/default ball and display');
+  if(!config||config.normalPower!==.18||config.launchRailProfile!=='legacy'||config.hesoMouthWidth!==20||config.leftAdmissionGuides!==true||Object.hasOwn(config,'ballRadius')||Object.hasOwn(config,'windmillOffset'))throw new Error('S8 shot case must retain production0.18/legacy/mouth20/tray/default ball and display');
   const resolved=resolvePinAdjustment(config),base=createBoardFlow({lcd:true}).flow.physics.pins;
   if(resolved.pins.length!==101)throw new Error('Original101 required');
   for(const pin of resolved.pins){const old=base.find(p=>p.id===pin.id),{x,y,...attrs}=pin,{x:ox,y:oy,...original}=old??{};if(!old||!equal(attrs,original)||Math.hypot(x-ox,y-oy)>1+1e-12)throw new Error('Original pin attributes/displacement changed');}
