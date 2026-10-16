@@ -365,3 +365,7 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [S8：比較結果と採否](agile/S8_RESULTS.md)：各196発の全結果、不実行1案、長比較なし・現配置維持。
 - [S8：受入記録](agile/S8_ACCEPTANCE.md)：条件別の証拠と未確認事項。
 - [S8：実プレイ比較の設計](agile/S8_VISUAL_DESIGN.md)：同時刻・同倍率の実軌跡と媒体の検証範囲。
+
+- [S8：実250発の目標と都度報告](agile/S8_250_PLAN.md)：3条件750発で60ヘソ以上を目指す承認済み条件。
+- [S8：実250発の独立照合](agile/S8_250_AUDIT.md)：各組の全計数・固定条件・失敗と採否。
+- 実250発の全結果：[第1組](agile/S8_250_RESULTS.md)・[第2組](agile/S8_250_BATCH2_RESULTS.md)・[第3組](agile/S8_250_BATCH3_RESULTS.md)・[第4組](agile/S8_250_BATCH4_RESULTS.md)・[第5組](agile/S8_250_BATCH5_RESULTS.md)。現時点は目標未達・本編未変更。
