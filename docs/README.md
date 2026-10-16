@@ -384,3 +384,5 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [S8：風車の表示と接触形状を揃える計画](agile/S8_WHEEL_SHAPE_PLAN.md)：ガイドなしで基準を取り直し、共通形状1案を同条件比較。
 
 - [S8：写真の3枚羽根の試作と250発の結果](agile/S8_WHEEL_SHAPE_RESULTS.md)：ガイドなし13→9、形状試作と入賞改善の判定を区別。
+
+- [S8：3枚羽根を維持した入賞改善の継続比較](agile/S8_ADMISSION_CONTINUED_PLAN.md)
