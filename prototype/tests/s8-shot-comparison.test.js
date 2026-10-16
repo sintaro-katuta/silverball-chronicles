@@ -1,5 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import {createBoardFlow} from '../src/pixi/board-flow.js';
 import {Physics} from '../src/physics/physics.js';
 import {measurePinAdjustment} from '../src/dev/pin-adjustment-measurement.js';
 import {withS7Observation} from '../src/dev/s7-launch-observation.js';
@@ -11,7 +12,7 @@ function withSyntheticDrain(operation){
  // Control-flow fixture only: actual factory spawn/cadence/IDs/counts are kept,
  // while every spawned ball is deterministically drained without running contacts.
  Physics.prototype.canLaunch=()=>true;
- Physics.prototype.step=function(dt,game){this.time+=dt;for(const b of this.balls){this.recordOutcome(b,'out');game.lose(b);}this.balls=[];};
+ Physics.prototype.step=function(dt,game){this.time+=dt;this.updateGate(game);for(const b of this.balls){this.recordOutcome(b,'out');game.lose(b);}this.balls=[];};
  try{return operation();}finally{Physics.prototype.step=step;Physics.prototype.canLaunch=canLaunch;}
 }
 test('time mode omitted/undefined shotLimit remains byte-for-byte compatible with no new endpoint fields',()=>{
@@ -31,6 +32,10 @@ test('same stop-limit run with observer ON/OFF retains every coordinate,event,co
 test('exact250 is tested with a declared synthetic drain, not a long physical selection trial',()=>{
  const r=withSyntheticDrain(()=>measureS8ShotCase(baseline()));assert.equal(r.physical.shots,250);assert.equal(r.physical.outcomes,250);assert.equal(r.end.counts.out,250);assert.equal(r.end.remaining,0);assert.equal(r.observation.shotLimitReached,true);assert.equal(validateShotResult(r),true);assert.equal(summarizeShotResult(r).shots,250);assert.equal(summarizeShotResult(r).start,0);
  const shots=r.events.filter(e=>e.type==='shot');assert.equal(shots.at(-1).ballId,250);assert.ok(Math.abs(r.atStop.time-shots.at(-1).time-1/120)<1e-8);assert.equal(r.replayEndpoints.end.spawned,250);assert.equal(r.replaySampling.endStep-r.replaySampling.stopStep,5400);
+ const oracle=createBoardFlow({lcd:true});oracle.setMode('normal');const initial=structuredClone({gate:oracle.flow.physics.gate,rightChucker:oracle.flow.physics.rightChucker});oracle.flow.step(0);assert.deepEqual(oracle.flow.physics.gate,initial.gate);oracle.flow.step(1/120);assert.notDeepEqual(oracle.flow.physics.gate,initial.gate);assert.notDeepEqual(oracle.flow.physics.rightChucker,initial.rightChucker);
+ assert.deepEqual(r.fixed.gate,initial.gate);assert.deepEqual(r.fixed.rightChucker,initial.rightChucker);assert.deepEqual(r.fixedAtEnd.gate,oracle.flow.physics.gate);assert.deepEqual(r.fixedAtEnd.rightChucker,oracle.flow.physics.rightChucker);
+ for(const key of ['gate','rightChucker'])for(const at of ['fixed','fixedAtEnd']){const altered=structuredClone(r),part=key==='gate'?altered[at][key]:altered[at][key].scoop;part.a.x+=.01;assert.throws(()=>validateShotResult(altered),/fixed input changed/);const typed=structuredClone(r),item=key==='gate'?typed[at][key]:typed[at][key].scoop;item.role='unexpected-type';assert.throws(()=>validateShotResult(typed),/fixed input changed/);}
+ const phaseResult=withSyntheticDrain(()=>measureS8ShotCase(baseline(),{phase:.175}));assert.equal(validateShotResult(phaseResult),true);assert.deepEqual(phaseResult.fixed.gate,initial.gate);assert.deepEqual(phaseResult.fixedAtEnd.gate,oracle.flow.physics.gate);
  const malformed=structuredClone(r);malformed.conditions.power=.2;assert.throws(()=>validateShotResult(malformed),/conditions/);
  const truncated=structuredClone(r);truncated.replayFrames.pop();assert.throws(()=>validateShotResult(truncated),/replay/);
 });

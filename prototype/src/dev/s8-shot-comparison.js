@@ -33,8 +33,12 @@ const stationaryMechanisms=ms=>ms.map(({angle,omega,lastHit,...geometry})=>geome
 export function validateShotResult(r,{requireLimit=true}={}){
  const inspected=inspectShotCase(r.config);if(!inspected.valid)throw new Error(inspected.skipReason);
  const model=createBoardFlow({lcd:true}),p=model.flow.physics;model.setMode('normal');
+ // The measurement snapshots fixed inputs BEFORE phase warm-up. LCD gate/
+ // chucker geometry is normalized by the existing first physics update.
+ const initial=structuredClone(Object.fromEntries(fixedKeys.map(k=>[k,k==='gravity'?690:p[k]])));
+ for(let i=0;i<Math.round(r.phase*120)+1;i++)model.flow.step(1/120);
  if(!equal(r.pins,inspected.layout.pins)||!equal(r.pinsAtEnd,r.pins))throw new Error('Shot trial pin layout changed');
- for(const k of fixedKeys){const expected=k==='gravity'?690:p[k];if(!equal(r.fixed[k],expected)||!equal(r.fixedAtEnd[k],r.fixed[k]))throw new Error(`Shot trial fixed input changed: ${k}`);}
+ for(const k of fixedKeys){const terminal=k==='gravity'?690:p[k];if(!equal(r.fixed[k],initial[k]))throw new Error(`Shot trial initial fixed input changed: ${k}`);if(!equal(r.fixedAtEnd[k],terminal))throw new Error(`Shot trial normalized terminal fixed input changed: ${k}`);}
  if(!equal(r.fixed.mechanisms,p.mechanisms)||!equal(stationaryMechanisms(r.fixed.mechanisms),stationaryMechanisms(r.fixedAtEnd.mechanisms)))throw new Error('Stationary mechanism geometry changed');
  if(r.display.ballRadius!==1.8||r.display.displayBallScale!==p.displayBallScale||r.display.displayBallDiameter!==(p.displayBallDiameter??null))throw new Error('Ball/display changed');
  const c=r.conditions;if(c.shotLimit!==250||c.power!==.18||c.gravity!==690||c.updateSeconds!==1/120||c.launchInterval!==.6||c.mouthWidth!==20||c.mode!=='normal'||r.kind!=='mechanical'||c.phase!==r.phase||c.requestedMaxFiringSeconds!==300||c.drain!==45||c.actualDrainSeconds!==45)throw new Error('Shot trial conditions changed');
