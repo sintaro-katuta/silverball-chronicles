@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "legacy",
+      "label": "変更前・ガイドなし・旧風車接触",
+      "leftAdmissionGuides": false,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0
+      },
+      "windmillShapeProfile": "legacy-capsules"
+    },
+    {
+      "id": "shared",
+      "label": "修正案・ガイドなし・可視共通輪郭",
+      "leftAdmissionGuides": false,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0
+      },
+      "windmillShapeProfile": "visible-polygons"
+    }
+  ]
+}
