@@ -2,7 +2,7 @@ import {windmillContactGeometry} from '../domain/windmill-shape.js';
 // Declared finite comparisons only; each frozen manifest identifies its settings. Pin and ball hypotheses never combined. No product adoption.
 import {inspectWindmillOffset} from '../pixi/windmill-offset.js';
 import {createBoardFlow} from '../pixi/board-flow.js';
-import {resolvePinAdjustment} from './pin-adjustment.js';
+import {resolvePinAdjustment,preparePinAdjustment,PIN_SPACING_STRICT,ROAD_SUPPORT_PAIR23} from './pin-adjustment.js';
 import {measurePinAdjustment} from './pin-adjustment-measurement.js';
 import {withS7Observation,summarizeS7} from './s7-launch-observation.js';
 import {REFERENCE_PLAN} from './s6-reference-pin-comparison.js';
@@ -24,15 +24,17 @@ export function inspectAdmissionCase(config){
    'three-road2-right050':{profile:'photo-three-vane',moves:[{pinId:2,dx:.5,dy:0}]},
    'three-combo-right025':{profile:'photo-three-vane',moves:[{pinId:2,dx:.25,dy:0}],offset:{dx:.25,dy:0}},
    'three-combo-up025':{profile:'photo-three-vane',moves:[{pinId:2,dx:.25,dy:0}],offset:{dx:0,dy:-.25}},
+   'three-road2-support050':{profile:'photo-three-vane',moves:[{pinId:2,dx:.5,dy:0}],pinSpacingProfile:ROAD_SUPPORT_PAIR23},
    'ball-r20':{profile:'photo-three-vane',moves:[],ballRadius:2}
   },d=declarations[config?.id];
   if(!d||config.normalPower!==.18||config.launchRailProfile!=='legacy'||config.hesoMouthWidth!==20||config.leftAdmissionGuides!==false||config.windmillShapeProfile!==d.profile||!equal(config.moves,d.moves)||!equal(config.windmillOffset,d.offset??{dx:0,dy:0})||Object.hasOwn(config,'ballRadius')!==Object.hasOwn(d,'ballRadius')||config.ballRadius!==d.ballRadius)throw new Error('Unapproved admission case or mixed variable');
-  const resolved=resolvePinAdjustment(config),base=createBoardFlow({lcd:true}).flow.physics.pins;
+  const resolutionOptions={pinSpacingProfile:d.pinSpacingProfile??PIN_SPACING_STRICT},resolved=resolvePinAdjustment(config,resolutionOptions),base=createBoardFlow({lcd:true}).flow.physics.pins;
   if(resolved.pins.length!==101)throw new Error('Original101 required');
   for(const pin of resolved.pins){const old=base.find(p=>p.id===pin.id),{x,y,...attrs}=pin,{x:ox,y:oy,...original}=old??{};const move=d.moves.find(m=>m.pinId===pin.id);if(!old||!equal(attrs,original)||x!==ox+(move?.dx??0)||y!==oy+(move?.dy??0))throw new Error('Original pin attributes/displacement changed');}
-  return {valid:true,config,layout:resolved,windmillInspection:{conservativeLegacyEnvelopeGuard:inspectWindmillOffset(createBoardFlow({lcd:true,leftAdmissionGuides:false}).flow.physics,config.windmillOffset),actualSweptOuterRadius:config.windmillShapeProfile==='photo-three-vane'?Math.hypot(9.5,.35):11.3,actualContactGeometry:windmillContactGeometry(createBoardFlow({lcd:true,leftAdmissionGuides:false,windmillOffset:config.windmillOffset,windmillShapeProfile:config.windmillShapeProfile}).flow.physics.mechanisms[0])}};
+  return {valid:true,config,resolutionOptions,pinSpacingInspection:resolved.pinSpacingInspection??null,layout:resolved,windmillInspection:{conservativeLegacyEnvelopeGuard:inspectWindmillOffset(createBoardFlow({lcd:true,leftAdmissionGuides:false}).flow.physics,config.windmillOffset),actualSweptOuterRadius:config.windmillShapeProfile==='photo-three-vane'?Math.hypot(9.5,.35):11.3,actualContactGeometry:windmillContactGeometry(createBoardFlow({lcd:true,leftAdmissionGuides:false,windmillOffset:config.windmillOffset,windmillShapeProfile:config.windmillShapeProfile}).flow.physics.mechanisms[0])}};
  }catch(error){return {valid:false,config,skipReason:error.message};}
 }
+export async function prepareAdmissionCase(config){const inspected=inspectAdmissionCase(config);if(!inspected.valid)throw new Error(inspected.skipReason);return preparePinAdjustment(config,inspected.resolutionOptions);}
 function addObservations(result,rows){
  const outcomes=new Map(result.events.filter(e=>e.type==='outcome').map(e=>[e.ballId,e.kind]));
  result.s8ShotObservation={scope:'Reused non-acting S7 actual-contact observer; first turn is separate from certified free apex. Global pair count is not an individual pair attribution. Route geometry is not proof of admission causality.',gate:REFERENCE_PLAN.gate,terminal:REFERENCE_PLAN.terminal,rows:result.events.filter(e=>e.type==='shot').map(e=>{const r=rows.get(e.ballId);return r?{...r,route:{gatePasses:r.route.gatePasses,firstDescending:r.route.firstDescending,terminalEntries:r.route.terminalEntries,terminalFirstEntry:r.route.terminalFirstEntry},outcome:outcomes.get(e.ballId)??'remaining'}:{ballId:e.ballId,firstTurningPoint:null,firstPinContact:null,route:null,outcome:outcomes.get(e.ballId)??'remaining'};})};return result;
@@ -41,9 +43,9 @@ export function measureAdmissionCase(config,{phase=0,mode='normal',onProgress=()
  const inspected=inspectAdmissionCase(config);if(!inspected.valid)throw new Error(inspected.skipReason);
  if(!ADMISSION_CONDITIONS.phases.includes(phase)||!['normal','rush','bonus'].includes(mode)||mode!=='normal'&&(phase!==0||!['three-base','ball-r20'].includes(config.id)))throw new Error('Unsupported fixed phase');
  const options={phase,kind:'mechanical',mode,seconds:mode==='normal'?300:30,drain:45,...(mode==='normal'?{shotLimit:250}:{recordFinalState:true}),replaySeconds:mode==='normal'?345:75,replayFPS:30,onProgress};
- if(!observer)return measurePinAdjustment(config,options);
+ if(!observer)return measurePinAdjustment(config,options,inspected.resolutionOptions);
  let error;
- const {result,rows}=withS7Observation(()=>{try{return measurePinAdjustment(config,options);}catch(e){if(!e.result)throw e;error=e;return e.result;}},{phase});
+ const {result,rows}=withS7Observation(()=>{try{return measurePinAdjustment(config,options,inspected.resolutionOptions);}catch(e){if(!e.result)throw e;error=e;return e.result;}},{phase});
  addObservations(result,rows);if(error)throw error;return result;
 }
 const fixedKeys=['gravity','ballRadius','colliders','pockets','outlet','launchExit','launchSpeedOffset','gate','rightChucker','returnOutlet','separateLaunchPlane'];
@@ -52,6 +54,7 @@ export function validateAdmissionResult(r,{requireLimit=true}={}){
  if(!Number.isFinite(r.end?.time)||r.end.time<=0||r.end.time>345+1e-7||!Number.isFinite(r.atStop?.time))throw new Error('Invalid bounded endpoint times');
  if(!ADMISSION_CONDITIONS.phases.includes(r.phase))throw new Error('Unapproved wheel shape phase');
  const inspected=inspectAdmissionCase(r.config);if(!inspected.valid)throw new Error(inspected.skipReason);
+ const support=inspected.resolutionOptions.pinSpacingProfile!==PIN_SPACING_STRICT;if(Object.hasOwn(r,'validationProfile')!==support||Object.hasOwn(r.conditions,'pinSpacingProfile')!==support||support&&(r.validationProfile!==ROAD_SUPPORT_PAIR23||r.conditions.pinSpacingProfile!==ROAD_SUPPORT_PAIR23))throw new Error('Declared spacing validation profile mismatch');
  const mode=r.conditions.mode,right=mode!=='normal';if(!['normal','rush','bonus'].includes(mode)||right&&(r.phase!==0||!['three-base','ball-r20'].includes(r.config.id)))throw new Error('Unapproved right safety condition');
  const model=createBoardFlow({lcd:true,...inspected.layout.flowOptions}),p=model.flow.physics;model.setMode(mode);
  // The measurement snapshots fixed inputs BEFORE phase warm-up. LCD gate/
