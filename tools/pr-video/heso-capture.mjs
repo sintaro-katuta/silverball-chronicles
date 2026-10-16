@@ -1,0 +1,11 @@
+import {chromium} from '../../prototype/node_modules/playwright/index.mjs';import fs from 'node:fs/promises';import {spawnSync} from 'node:child_process';
+const out=process.env.HESO_VIDEO_PUBLIC;if(!out)throw Error('Set HESO_VIDEO_PUBLIC to an absolute output directory');const records=[];
+for(const [id,url] of [['before',process.env.HESO_BEFORE_URL??'http://127.0.0.1:5176'],['after',process.env.HESO_AFTER_URL??'http://127.0.0.1:5175']]){
+ const dir=`/tmp/heso-${id}-frames`;await fs.mkdir(dir,{recursive:true});const browser=await chromium.launch({channel:'chrome',headless:true});const page=await browser.newPage({viewport:{width:1280,height:960},deviceScaleFactor:1});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(url);await page.locator('[data-kind=main]').first().click();await page.locator('#playMachine').click();await page.locator('#intro-skip').waitFor({state:'visible'});await page.clock.install();await page.clock.pauseAt(new Date(Date.now()+1000));await page.locator('#intro-skip').click();
+ const start=await page.evaluate(()=>__session.snapshot());const samples=[];
+ for(let i=0;i<180;i++){await page.clock.runFor(1000/30);samples.push(await page.evaluate(()=>({time:__session.snapshot().time,counts:__session.snapshot().counts})));await page.screenshot({path:`${dir}/${String(i).padStart(4,'0')}.png`});}
+ const end=await page.evaluate(()=>__session.snapshot());await fs.copyFile(`${dir}/0000.png`,`${out}/${id}-first.png`);await fs.copyFile(`${dir}/0179.png`,`${out}/${id}-last.png`);await browser.close();
+ const r=spawnSync('/opt/homebrew/bin/ffmpeg',['-y','-v','error','-framerate','30','-i',`${dir}/%04d.png`,'-c:v','libx264','-crf','24','-pix_fmt','yuv420p','-movflags','+faststart',`${out}/${id}.mp4`],{encoding:'utf8'});if(r.status)throw Error(r.stderr);records.push({id,url,frames:180,startTime:start.time,endTime:end.time,samples,errors});console.log('Captured',id,start.time,end.time);if(errors.length)throw Error(errors.join('\n'));
+}
+await fs.writeFile(out+'/capture.json',JSON.stringify({base:'9317e61324b274be9b74025643f26cd7bdaf3308',candidate:'94e98b4f81f3706a0fe3a1c37e5afcac56ac120c',viewport:[1280,960],fps:30,method:'actual production browser frames, Playwright clock runFor 1/30s each frame, original mechanics, no admission injection',records},null,2));
