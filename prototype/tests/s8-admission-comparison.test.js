@@ -65,3 +65,10 @@ test('saved right gate verifies source/HEAD/plan/manifest and both gzip hashes; 
   const planPath=join(dir,'plan.md'),manifestPath=join(dir,'cases.json');await writeFile(planPath,plan);await writeFile(manifestPath,manifest);const frozen=await admissionInputs(planPath,manifestPath),out=join(dir,'blocked-B');await assert.rejects(runAdmissionCase(['--stage','run','--out',out,'--plan',planPath,'--manifest',manifestPath,'--case','ball-r20','--phase','0','--mode','normal','--expected-source',frozen.sha256]),/right safety proof/);const p=JSON.parse(await readFile(join(out,'provenance.json')));assert.equal(p.measurementStarted,false);assert.equal(p.success,false);assert.equal(JSON.parse(await readFile(join(out,'failure.json'))).actualShots,null);
  }finally{await rm(dir,{recursive:true,force:true});}
 });
+
+test('lateral manifest has only fresh controls and isolated90-right/91-left; previous four-case manifest stays unchanged',()=>{
+ const lateral=JSON.parse(readFileSync(new URL('../tools/s8-admission-lateral-cases.json',import.meta.url))).cases;assert.deepEqual(lateral.map(c=>c.id),['legacy-control','three-base','pin90-right025','pin91-left025']);assert.deepEqual(lateral.slice(0,2),cases.slice(0,2));assert.deepEqual(cases.map(c=>c.id),['legacy-control','three-base','pin90-up025','ball-r20']);
+ for(const c of lateral.slice(2)){const inspected=inspectAdmissionCase(c);assert.equal(inspected.valid,true);assert.equal(inspected.layout.pins.length,101);const r=synthetic(()=>measureAdmissionCase(c));assert.equal(validateAdmissionResult(r),true);assert.equal(r.physical.shots,250);assert.equal(r.display.ballRadius,1.8);const bad=structuredClone(r);bad.pinsAtEnd.find(p=>p.id===c.moves[0].pinId).x+=.01;assert.throws(()=>validateAdmissionResult(bad));
+  for(const mixed of [{...c,ballRadius:2},{...c,moves:[...c.moves,{pinId:2,dx:0,dy:.25}]},{...c,moves:[{...c.moves[0],dy:-.25}]}])assert.equal(inspectAdmissionCase(mixed).valid,false);
+ }
+});

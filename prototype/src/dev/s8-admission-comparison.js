@@ -1,5 +1,5 @@
 import {windmillContactGeometry} from '../domain/windmill-shape.js';
-// Declared four-case comparison only. Pin and ball hypotheses never combined. No product adoption.
+// Declared finite comparisons only; each frozen manifest identifies its four settings. Pin and ball hypotheses never combined. No product adoption.
 import {inspectWindmillOffset} from '../pixi/windmill-offset.js';
 import {createBoardFlow} from '../pixi/board-flow.js';
 import {resolvePinAdjustment} from './pin-adjustment.js';
@@ -14,6 +14,8 @@ export function inspectAdmissionCase(config){
    'legacy-control':{profile:'legacy-capsules',moves:[]},
    'three-base':{profile:'photo-three-vane',moves:[]},
    'pin90-up025':{profile:'photo-three-vane',moves:[{pinId:90,dx:0,dy:-.25}]},
+   'pin90-right025':{profile:'photo-three-vane',moves:[{pinId:90,dx:.25,dy:0}]},
+   'pin91-left025':{profile:'photo-three-vane',moves:[{pinId:91,dx:-.25,dy:0}]},
    'ball-r20':{profile:'photo-three-vane',moves:[],ballRadius:2}
   },d=declarations[config?.id];
   if(!d||config.normalPower!==.18||config.launchRailProfile!=='legacy'||config.hesoMouthWidth!==20||config.leftAdmissionGuides!==false||config.windmillShapeProfile!==d.profile||!equal(config.moves,d.moves)||!equal(config.windmillOffset,{dx:0,dy:0})||Object.hasOwn(config,'ballRadius')!==Object.hasOwn(d,'ballRadius')||config.ballRadius!==d.ballRadius)throw new Error('Unapproved admission case or mixed variable');
