@@ -22,6 +22,8 @@ export function inspectAdmissionCase(config){
    'three-wheel-down025':{profile:'photo-three-vane',moves:[],offset:{dx:0,dy:.25}},
    'three-road2-right025':{profile:'photo-three-vane',moves:[{pinId:2,dx:.25,dy:0}]},
    'three-road2-right050':{profile:'photo-three-vane',moves:[{pinId:2,dx:.5,dy:0}]},
+   'three-combo-right025':{profile:'photo-three-vane',moves:[{pinId:2,dx:.25,dy:0}],offset:{dx:.25,dy:0}},
+   'three-combo-up025':{profile:'photo-three-vane',moves:[{pinId:2,dx:.25,dy:0}],offset:{dx:0,dy:-.25}},
    'ball-r20':{profile:'photo-three-vane',moves:[],ballRadius:2}
   },d=declarations[config?.id];
   if(!d||config.normalPower!==.18||config.launchRailProfile!=='legacy'||config.hesoMouthWidth!==20||config.leftAdmissionGuides!==false||config.windmillShapeProfile!==d.profile||!equal(config.moves,d.moves)||!equal(config.windmillOffset,d.offset??{dx:0,dy:0})||Object.hasOwn(config,'ballRadius')!==Object.hasOwn(d,'ballRadius')||config.ballRadius!==d.ballRadius)throw new Error('Unapproved admission case or mixed variable');

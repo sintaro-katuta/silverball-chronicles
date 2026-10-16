@@ -82,3 +82,11 @@ test('upstream declarations keep original controls, isolated offsets and actual 
   const mixed={...c,moves:[{pinId:90,dx:0,dy:-.25}]};assert.equal(inspectAdmissionCase(mixed).valid,false);assert.equal(inspectAdmissionCase({...c,ballRadius:2}).valid,false);
  }
 });
+
+test('combined manifest permits only declared road2+wheel right/up, without weakening historical single-variable cases',()=>{
+ const combined=JSON.parse(readFileSync(new URL('../tools/s8-admission-combined-cases.json',import.meta.url))).cases,upstream=JSON.parse(readFileSync(new URL('../tools/s8-admission-upstream-cases.json',import.meta.url))).cases;assert.deepEqual(combined.map(c=>c.id),['legacy-control','three-base','three-wheel-right025','three-wheel-up025','three-road2-right025','three-combo-right025','three-combo-up025']);for(const c of combined.slice(0,5))assert.deepEqual(c,upstream.find(u=>u.id===c.id));
+ for(const c of combined.slice(5)){const inspected=inspectAdmissionCase(c);assert.equal(inspected.valid,true);const original=createBoardFlow({lcd:true}).flow.physics.pins;for(const p of inspected.layout.pins){const old=original.find(q=>q.id===p.id);assert.deepEqual(p,{...old,x:old.x+(p.id===2?.25:0)});}assert.deepEqual(inspected.windmillInspection.actualContactGeometry.centre,{x:64+c.windmillOffset.dx,y:476.5+c.windmillOffset.dy});const r=synthetic(()=>measureAdmissionCase(c));assert.equal(validateAdmissionResult(r),true);assert.equal(r.physical.shots,250);assert.equal(r.display.ballRadius,1.8);
+  for(const invalid of [{...c,ballRadius:2},{...c,windmillOffset:{dx:.25,dy:-.25}},{...c,moves:[...c.moves,{pinId:90,dx:0,dy:-.25}]},{...c,moves:[{pinId:2,dx:.5,dy:0}]}])assert.equal(inspectAdmissionCase(invalid).valid,false);
+ }
+ for(const c of combined.slice(2,5)){const disguised={...c,moves:[{pinId:2,dx:.25,dy:0}],windmillOffset:{dx:.25,dy:0}};assert.equal(inspectAdmissionCase(disguised).valid,false);}
+});
