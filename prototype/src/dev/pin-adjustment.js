@@ -8,7 +8,7 @@ const distanceToSegment=(x,y,a,b)=>{const dx=b.x-a.x,dy=b.y-a.y,t=Math.max(0,Mat
 function inside(x,y,points){let hit=false;for(let i=0,j=points.length-1;i<points.length;j=i++){const a=points[i],b=points[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])hit=!hit;}return hit;}
 export function resolvePinAdjustment(config){
  if(!config||Object.keys(config).some(k=>!['id','label','leftAdmissionGuides','hesoMouthWidth','moves','ballRadius','launchRailProfile','normalPower','windmillOffset','windmillShapeProfile'].includes(k))||typeof config.id!=='string'||typeof config.label!=='string'||typeof config.leftAdmissionGuides!=='boolean'||!Array.isArray(config.moves))throw new Error('Invalid adjustment configuration');
- if(config.windmillShapeProfile!==undefined&&!['legacy-capsules','visible-polygons'].includes(config.windmillShapeProfile))throw new Error('Invalid configured windmill shape');
+ if(config.windmillShapeProfile!==undefined&&!['legacy-capsules','photo-three-vane'].includes(config.windmillShapeProfile))throw new Error('Invalid configured windmill shape');
  if(config.normalPower!==undefined&&(!Number.isFinite(config.normalPower)||config.normalPower<0||config.normalPower>1))throw new Error('Invalid configured normal power');
  const model=createBoardFlow({lcd:true,leftAdmissionGuides:config.leftAdmissionGuides,hesoMouthWidth:config.hesoMouthWidth??20,ballRadius:config.ballRadius??null,launchRailProfile:config.launchRailProfile??'legacy',windmillOffset:config.windmillOffset??null,windmillShapeProfile:config.windmillShapeProfile??'legacy-capsules'}),p=model.flow.physics,pins=structuredClone(p.pins),seen=new Set();
  for(const move of config.moves){

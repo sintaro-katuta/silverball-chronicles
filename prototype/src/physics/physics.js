@@ -177,7 +177,7 @@ export class Physics {
  this.resolvePins(b,{predict,game,traceStage:'advance-pins'});
  for(const m of this.mechanisms){
   if(Math.hypot(b.x-m.x,b.y-m.y)>m.radius+b.r+2)continue;
-  if(m.shapeProfile==='visible-polygons'){resolveVisibleWindmill(this,b,m,{predict,game});continue;}
+  if(m.shapeProfile==='photo-three-vane'){resolveVisibleWindmill(this,b,m,{predict,game});continue;}
   for(let arm=0;arm<4;arm++){
    const theta=m.angle+arm*Math.PI/2,end={x:m.x+Math.cos(theta)*m.radius,y:m.y+Math.sin(theta)*m.radius};
    const oldVx=b.vx,oldVy=b.vy,impulse=activePhysicsTrace&&!predict?traceSolverContact(this,b,{kind:'windmill-arm',index:arm,armIndex:arm,angle:theta,omega:m.omega,a:{x:m.x,y:m.y},b:end,r:1.3,restitution:.3,surfaceVelocity:{x:-(b.y-m.y)*m.omega,y:(b.x-m.x)*m.omega}},'advance',()=>collideSegment(b,m,end,.3,{x:-(b.y-m.y)*m.omega,y:(b.x-m.x)*m.omega},1.3)):collideSegment(b,m,end,.3,{x:-(b.y-m.y)*m.omega,y:(b.x-m.x)*m.omega},1.3);
