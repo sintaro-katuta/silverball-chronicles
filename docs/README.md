@@ -380,3 +380,5 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 
 - [S8：元配置250発の観測結果と動画](agile/S8_ROUTE_RESULTS.md)：道へ届くまでの流れと、次の修正案1つ。改善は未達・提案は未実装。
 - [S8：精細観測の記録](agile/S8_ROUTE_OBSERVATION.md)・[原図と写真の照合](agile/S8_ROUTE_REFERENCE_REVIEW.md)・[数値の独立照合](agile/S8_ROUTE_AUDIT.md)。
+
+- [S8：風車の表示と接触形状を揃える計画](agile/S8_WHEEL_SHAPE_PLAN.md)：ガイドなしで基準を取り直し、共通形状1案を同条件比較。
