@@ -403,3 +403,5 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [風車へ当たる前の診断計画](agile/S8_FEED_DIAGNOSIS_PLAN.md)
 - [上流の詳細診断結果](agile/S8_FEED_DIAGNOSIS_RESULTS.md)
 - [風車を経路へ近づける比較計画](agile/S8_FEED_SHIFT_PLAN.md)
+
+- [風車を通過経路へ近づけた比較結果](agile/S8_FEED_SHIFT_RESULTS.md)
