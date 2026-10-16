@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "legacy-control",
+      "label": "旧形状参照・皿なし",
+      "leftAdmissionGuides": false,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0
+      },
+      "windmillShapeProfile": "legacy-capsules"
+    },
+    {
+      "id": "three-base",
+      "label": "3枚羽根の新基準",
+      "leftAdmissionGuides": false,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0
+      },
+      "windmillShapeProfile": "photo-three-vane"
+    },
+    {
+      "id": "pin90-up025",
+      "label": "独立A・釘90だけ上0.25",
+      "leftAdmissionGuides": false,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 90,
+          "dx": 0,
+          "dy": -0.25
+        }
+      ],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0
+      },
+      "windmillShapeProfile": "photo-three-vane"
+    },
+    {
+      "id": "ball-r20",
+      "label": "独立B・図上球半径2.0",
+      "leftAdmissionGuides": false,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0
+      },
+      "windmillShapeProfile": "photo-three-vane",
+      "ballRadius": 2
+    }
+  ]
+}
