@@ -1,3 +1,4 @@
+import {activePhysicsTrace,traceSolverContact,traceSubstep,traceOutcome,tracePoint,traceMotion,traceMayContact} from './passive-trace.js';
 import {collideSolidPolygon} from './solid-polygon-contact.js';
 import {pocketCrossing} from './pocket-sensor.js';
 // All positions are board-space pixels. Motion uses a single gravity/contact solver.
@@ -149,15 +150,15 @@ export class Physics {
   if(!b.contactRoles.includes(role)&&b.contactRoles.length<7){b.contactRoles.push(role);stats.balls++;}
  }
  recordOutcome(b,outcome){
-  if(b.recordedOutcome)return;b.recordedOutcome=outcome;
+  if(b.recordedOutcome)return;if(activePhysicsTrace)traceOutcome(this,b,outcome);b.recordedOutcome=outcome;
   for(const role of b.contactRoles??[])if(this.roleFlow[role])this.roleFlow[role][outcome]++;
   let key=`${b.observedSide??'unclassified'}:${(b.contactRoles??[]).join('>')||'no-pin'}`;
   if(!this.routeFlow[key]&&Object.keys(this.routeFlow).length>=64)key='other';
   this.routeFlow[key]??={start:0,normal:0,bonus:0,rush:0,fuzu:0,out:0,returned:0};this.routeFlow[key][outcome]++;
  }
  // Shared collision solver is also used to forecast arrivals; prediction never changes motion.
- resolvePins(b,{predict=false,game=null}={}){
- for(const p of this.pins)if(!(this.separateLaunchPlane&&!b.leftLaunchPlane)&&collidePin(b,p)){
+ resolvePins(b,{predict=false,game=null,traceStage='resolve-pins'}={}){
+ for(const p of this.pins)if(!(this.separateLaunchPlane&&!b.leftLaunchPlane)&&(activePhysicsTrace&&!predict&&traceMayContact(b,p)?traceSolverContact(this,b,{kind:'pin',...p},traceStage,()=>collidePin(b,p)):collidePin(b,p))){
   if(!predict){b.hits++;b.contactCount++;b.lastContact=p.role;this.recordRole(b,p.role);
    if(p.role==='jump'&&!b.extra&&!b.split&&game?.rng()<game.value('split')/100){b.split=true;this.additions.push({...b,id:this.nextId++,x:b.x+b.r*2.05,extra:true,vx:-b.vx,contactRoles:[],recordedOutcome:null});}
   }
@@ -169,15 +170,15 @@ export class Physics {
  return impulse;
  }
  advanceBall(b,dt,{predict=false,game=null}={}){
- const previous={x:b.x,y:b.y};if(this.separateLaunchPlane&&b.launchExitCrossed&&!b.leftLaunchPlane){const e=this.launchExit,d=(b.x-e.a.x)*e.normal.x+(b.y-e.a.y)*e.normal.y;const v=this.nonReturnValve,valveClear=!v||b.nonReturnValveCrossed&&((b.x-v.a.x)*v.normal.x+(b.y-v.a.y)*v.normal.y)>=b.r+v.radius;if(d>=b.r+e.railRadius&&valveClear)b.leftLaunchPlane=true;}b.vy+=GRAVITY*dt;b.x+=b.vx*dt;b.y+=b.vy*dt;
- for(const c of this.colliders){if(c.active===false||(c.playfieldOnly&&this.separateLaunchPlane&&!b.leftLaunchPlane))continue;const impulse=c.nonReturnValve?this.resolveValveContact(b,c,predict):c.shape==='solid-polygon'?collideSolidPolygon(b,c):collideRailSegment(b,c);if(impulse&&!predict){b.contactCount++;b.lastContact=c.role;}}
- for(const c of [this.gate,this.rightChucker.scoop,this.rightChucker.cover]){if(c.active===false)continue;const impulse=collideRailSegment(b,c);if(impulse&&!predict){b.contactCount++;b.lastContact=c.role;}}
- this.resolvePins(b,{predict,game});
+ const previous={x:b.x,y:b.y};if(this.separateLaunchPlane&&b.launchExitCrossed&&!b.leftLaunchPlane){const e=this.launchExit,d=(b.x-e.a.x)*e.normal.x+(b.y-e.a.y)*e.normal.y;const v=this.nonReturnValve,valveClear=!v||b.nonReturnValveCrossed&&((b.x-v.a.x)*v.normal.x+(b.y-v.a.y)*v.normal.y)>=b.r+v.radius;if(d>=b.r+e.railRadius&&valveClear)b.leftLaunchPlane=true;}const motionBefore=activePhysicsTrace&&!predict?tracePoint(b):null;b.vy+=GRAVITY*dt;b.x+=b.vx*dt;b.y+=b.vy*dt;if(motionBefore)traceMotion(this,b,motionBefore,dt,game?.time??null);
+ for(const c of this.colliders){if(c.active===false||(c.playfieldOnly&&this.separateLaunchPlane&&!b.leftLaunchPlane))continue;const impulse=activePhysicsTrace&&!predict&&traceMayContact(b,c)?traceSolverContact(this,b,{kind:'wall',...c},'advance',()=>c.nonReturnValve?this.resolveValveContact(b,c,predict):c.shape==='solid-polygon'?collideSolidPolygon(b,c):collideRailSegment(b,c)):(c.nonReturnValve?this.resolveValveContact(b,c,predict):c.shape==='solid-polygon'?collideSolidPolygon(b,c):collideRailSegment(b,c));if(impulse&&!predict){b.contactCount++;b.lastContact=c.role;}}
+ for(const c of [this.gate,this.rightChucker.scoop,this.rightChucker.cover]){if(c.active===false)continue;const impulse=activePhysicsTrace&&!predict&&traceMayContact(b,c)?traceSolverContact(this,b,{kind:'wall',...c},'moving-part',()=>collideRailSegment(b,c)):collideRailSegment(b,c);if(impulse&&!predict){b.contactCount++;b.lastContact=c.role;}}
+ this.resolvePins(b,{predict,game,traceStage:'advance-pins'});
  for(const m of this.mechanisms){
   if(Math.hypot(b.x-m.x,b.y-m.y)>m.radius+b.r+2)continue;
   for(let arm=0;arm<4;arm++){
    const theta=m.angle+arm*Math.PI/2,end={x:m.x+Math.cos(theta)*m.radius,y:m.y+Math.sin(theta)*m.radius};
-   const oldVx=b.vx,oldVy=b.vy,impulse=collideSegment(b,m,end,.3,{x:-(b.y-m.y)*m.omega,y:(b.x-m.x)*m.omega},1.3);
+   const oldVx=b.vx,oldVy=b.vy,impulse=activePhysicsTrace&&!predict?traceSolverContact(this,b,{kind:'windmill-arm',index:arm,armIndex:arm,angle:theta,omega:m.omega,a:{x:m.x,y:m.y},b:end,r:1.3,restitution:.3,surfaceVelocity:{x:-(b.y-m.y)*m.omega,y:(b.x-m.x)*m.omega}},'advance',()=>collideSegment(b,m,end,.3,{x:-(b.y-m.y)*m.omega,y:(b.x-m.x)*m.omega},1.3)):collideSegment(b,m,end,.3,{x:-(b.y-m.y)*m.omega,y:(b.x-m.x)*m.omega},1.3);
    if(impulse&&!predict){this.recordRole(b,'windmill');const torque=(b.x-m.x)*(oldVy-b.vy)-(b.y-m.y)*(oldVx-b.vx);m.omega=Math.max(-7,Math.min(7,m.omega+torque*.0005));m.lastHit=game?.time;game?.emit?.('mechanism',{kind:m.kind});}
   }
  }
@@ -234,7 +235,7 @@ export class Physics {
  const maxSpeed=Math.max(this.ballRadius?600:1100,...this.balls.map(b=>Math.hypot(b.vx,b.vy)+GRAVITY*dt));
  const steps=Math.max(1,Math.ceil(dt*Math.max(600,maxSpeed/((this.ballRadius??BALL_RADIUS)*.45)))),h=dt/steps;
  integration: for(let step=0;step<steps;step++){
-  this.time+=h;this.updateGate(game);
+  this.time+=h;this.updateGate(game);if(activePhysicsTrace)traceSubstep(this,'before',h,game.time??null);
   for(const m of this.mechanisms){m.omega*=Math.exp(-h*.7);m.angle+=m.omega*h;}
   for(const b of this.balls){
    if(b.dead)continue;b.age+=h;const previous=this.advanceBall(b,h,{game});
@@ -245,22 +246,23 @@ export class Physics {
    }
    if(!b.dead&&b.y>675){const returned=Math.abs(b.x-this.returnOutlet.x)<=this.returnOutlet.w/2;if(returned){if(!b.extra){game.addStock?.(1,'returned');game.emit?.('return');}}else game.lose(b);this.recordOutcome(b,returned?'returned':'out');this.metrics[returned?'returned':'out']++;b.dead=true;}
   }
-  for(let i=0;i<this.balls.length;i++)for(let j=i+1;j<this.balls.length;j++)if(!this.balls[i].dead&&!this.balls[j].dead&&!(this.launchRailProfile==='reference-exit'&&this.separateLaunchPlane&&!!this.balls[i].leftLaunchPlane!==!!this.balls[j].leftLaunchPlane)&&pairContact(this.balls[i],this.balls[j])){this.metrics.ballContacts++;this.balls[i].prediction=null;this.balls[j].prediction=null;}
+  for(let i=0;i<this.balls.length;i++)for(let j=i+1;j<this.balls.length;j++)if(!this.balls[i].dead&&!this.balls[j].dead&&!(this.launchRailProfile==='reference-exit'&&this.separateLaunchPlane&&!!this.balls[i].leftLaunchPlane!==!!this.balls[j].leftLaunchPlane)&&(activePhysicsTrace?traceSolverContact(this,this.balls[i],{kind:'ball-pair',id:this.balls[j].id},'pair-separation',()=>pairContact(this.balls[i],this.balls[j]),this.balls[j]):pairContact(this.balls[i],this.balls[j]))){this.metrics.ballContacts++;this.balls[i].prediction=null;this.balls[j].prediction=null;}
   // Resolve static surfaces after dense-stream separation as well: otherwise
   // neighbouring balls can push one another through a thin guide into its body.
   if(this.separateLaunchPlane)for(const b of this.balls)if(!b.dead)for(let pass=0;pass<10;pass++){
-   const x=b.x,y=b.y;this.resolvePins(b,{game});
+   const x=b.x,y=b.y;this.resolvePins(b,{game,traceStage:'post-pair-pins'});
    for(const c of this.colliders){
     if(c.active===false||((c.nonReturnValve||c.playfieldOnly)&&!b.leftLaunchPlane)||(!b.leftLaunchPlane&&!c.role.startsWith('launch-')))continue;
-    if(c.nonReturnValve)this.resolveValveContact(b,c);else if(c.shape==='solid-polygon')collideSolidPolygon(b,c);else collideRailSegment(b,c);
+    if(activePhysicsTrace&&traceMayContact(b,c))traceSolverContact(this,b,{kind:'wall',...c},'post-pair-static',()=>c.nonReturnValve?this.resolveValveContact(b,c):c.shape==='solid-polygon'?collideSolidPolygon(b,c):collideRailSegment(b,c));else {if(c.nonReturnValve)this.resolveValveContact(b,c);else if(c.shape==='solid-polygon')collideSolidPolygon(b,c);else collideRailSegment(b,c);}
    }
    if(Math.hypot(b.x-x,b.y-y)<1e-9)break;
   }
   // Ball-pair separation can push a crowded barrel ball back into a wall.
   // Resolve those same physical surfaces again before the next integration step.
   for(const b of this.balls)if(!b.dead&&b.y>155&&b.x<45&&!(this.separateLaunchPlane&&b.leftLaunchPlane))for(const c of this.colliders){
-   if(c.role.startsWith('launch-')&&c.role!=='launch-kicker'&&!c.playfieldOnly){if(c.shape==='solid-polygon')collideSolidPolygon(b,c);else if(c.nonReturnValve)this.resolveValveContact(b,c);else collideRailSegment(b,c);}
+   if(c.role.startsWith('launch-')&&c.role!=='launch-kicker'&&!c.playfieldOnly){if(activePhysicsTrace&&traceMayContact(b,c))traceSolverContact(this,b,{kind:'wall',...c},'post-pair-launch',()=>c.shape==='solid-polygon'?collideSolidPolygon(b,c):c.nonReturnValve?this.resolveValveContact(b,c):collideRailSegment(b,c));else {if(c.shape==='solid-polygon')collideSolidPolygon(b,c);else if(c.nonReturnValve)this.resolveValveContact(b,c);else collideRailSegment(b,c);}}
   }
+  if(activePhysicsTrace)traceSubstep(this,'after',h,game.time??null);
   if(game.phase&&game.phase!=='playing')break;
  }
  this.balls=this.balls.filter(b=>!b.dead);this.balls.push(...this.additions);
