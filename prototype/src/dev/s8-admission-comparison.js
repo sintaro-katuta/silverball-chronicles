@@ -1,6 +1,6 @@
 import {windmillContactGeometry} from '../domain/windmill-shape.js';
 // Declared finite comparisons only; each frozen manifest identifies its settings. Pin and ball hypotheses never combined. No product adoption.
-import {inspectWindmillOffset} from '../pixi/windmill-offset.js';
+import {inspectWindmillOffset,WINDMILL_FEED_LEFT175} from '../pixi/windmill-offset.js';
 import {createBoardFlow} from '../pixi/board-flow.js';
 import {resolvePinAdjustment,preparePinAdjustment,PIN_SPACING_STRICT,ROAD_SUPPORT_PAIR23} from './pin-adjustment.js';
 import {measurePinAdjustment} from './pin-adjustment-measurement.js';
@@ -24,6 +24,7 @@ export function inspectAdmissionCase(config){
    'three-road2-right050':{profile:'photo-three-vane',moves:[{pinId:2,dx:.5,dy:0}]},
    'three-combo-right025':{profile:'photo-three-vane',moves:[{pinId:2,dx:.25,dy:0}],offset:{dx:.25,dy:0}},
    'three-combo-up025':{profile:'photo-three-vane',moves:[{pinId:2,dx:.25,dy:0}],offset:{dx:0,dy:-.25}},
+   'three-feed-wheel-left175':{profile:'photo-three-vane',moves:[],offset:{dx:-1.75,dy:0},windmillOffsetProfile:WINDMILL_FEED_LEFT175},
    'three-approach48-left050':{profile:'photo-three-vane',moves:[{pinId:48,dx:-.5,dy:0}]},
    'three-approach48-right050':{profile:'photo-three-vane',moves:[{pinId:48,dx:.5,dy:0}]},
    'three-road-tail-right025':{profile:'photo-three-vane',moves:[{pinId:23,dx:.25,dy:0},{pinId:24,dx:.25,dy:0},{pinId:25,dx:.25,dy:0},{pinId:26,dx:.25,dy:0}]},
@@ -31,10 +32,10 @@ export function inspectAdmissionCase(config){
    'ball-r20':{profile:'photo-three-vane',moves:[],ballRadius:2}
   },d=declarations[config?.id];
   if(!d||config.normalPower!==.18||config.launchRailProfile!=='legacy'||config.hesoMouthWidth!==20||config.leftAdmissionGuides!==false||config.windmillShapeProfile!==d.profile||!equal(config.moves,d.moves)||!equal(config.windmillOffset,d.offset??{dx:0,dy:0})||Object.hasOwn(config,'ballRadius')!==Object.hasOwn(d,'ballRadius')||config.ballRadius!==d.ballRadius)throw new Error('Unapproved admission case or mixed variable');
-  const resolutionOptions={pinSpacingProfile:d.pinSpacingProfile??PIN_SPACING_STRICT},resolved=resolvePinAdjustment(config,resolutionOptions),base=createBoardFlow({lcd:true}).flow.physics.pins;
+  const resolutionOptions={pinSpacingProfile:d.pinSpacingProfile??PIN_SPACING_STRICT,...(d.windmillOffsetProfile?{windmillOffsetProfile:d.windmillOffsetProfile}:{})},resolved=resolvePinAdjustment(config,resolutionOptions),base=createBoardFlow({lcd:true}).flow.physics.pins;
   if(resolved.pins.length!==101)throw new Error('Original101 required');
   for(const pin of resolved.pins){const old=base.find(p=>p.id===pin.id),{x,y,...attrs}=pin,{x:ox,y:oy,...original}=old??{};const move=d.moves.find(m=>m.pinId===pin.id);if(!old||!equal(attrs,original)||x!==ox+(move?.dx??0)||y!==oy+(move?.dy??0))throw new Error('Original pin attributes/displacement changed');}
-  return {valid:true,config,resolutionOptions,pinSpacingInspection:resolved.pinSpacingInspection??null,layout:resolved,windmillInspection:{conservativeLegacyEnvelopeGuard:inspectWindmillOffset(createBoardFlow({lcd:true,leftAdmissionGuides:false}).flow.physics,config.windmillOffset),actualSweptOuterRadius:config.windmillShapeProfile==='photo-three-vane'?Math.hypot(9.5,.35):11.3,actualContactGeometry:windmillContactGeometry(createBoardFlow({lcd:true,leftAdmissionGuides:false,windmillOffset:config.windmillOffset,windmillShapeProfile:config.windmillShapeProfile}).flow.physics.mechanisms[0])}};
+  return {valid:true,config,resolutionOptions,pinSpacingInspection:resolved.pinSpacingInspection??null,layout:resolved,windmillInspection:{conservativeLegacyEnvelopeGuard:inspectWindmillOffset(createBoardFlow({lcd:true,leftAdmissionGuides:false}).flow.physics,config.windmillOffset,d.windmillOffsetProfile?{profile:d.windmillOffsetProfile}:undefined),actualSweptOuterRadius:config.windmillShapeProfile==='photo-three-vane'?Math.hypot(9.5,.35):11.3,actualContactGeometry:windmillContactGeometry(createBoardFlow({lcd:true,leftAdmissionGuides:false,windmillOffset:config.windmillOffset,windmillShapeProfile:config.windmillShapeProfile,...(d.windmillOffsetProfile?{windmillOffsetProfile:d.windmillOffsetProfile}:{}),normalPower:.18,hesoMouthWidth:20}).flow.physics.mechanisms[0])}};
  }catch(error){return {valid:false,config,skipReason:error.message};}
 }
 export async function prepareAdmissionCase(config){const inspected=inspectAdmissionCase(config);if(!inspected.valid)throw new Error(inspected.skipReason);return preparePinAdjustment(config,inspected.resolutionOptions);}

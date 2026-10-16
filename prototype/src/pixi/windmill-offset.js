@@ -1,8 +1,11 @@
 // Trial-only swept material envelope; not a solid wheel or a ball passage guarantee.
 export const WINDMILL_ARM_CONTACT_RADIUS=1.3;
+export const WINDMILL_OFFSET_STRICT='bounded025-v1';
+export const WINDMILL_FEED_LEFT175='feed-left175-v1';
 const segmentDistance=(p,a,b)=>{const dx=b.x-a.x,dy=b.y-a.y,t=Math.max(0,Math.min(1,((p.x-a.x)*dx+(p.y-a.y)*dy)/(dx*dx+dy*dy||1)));return Math.hypot(p.x-a.x-t*dx,p.y-a.y-t*dy);};
-export function inspectWindmillOffset(physics,offset){
- if(!offset||Object.keys(offset).sort().join(',')!=='dx,dy'||!Number.isFinite(offset.dx)||!Number.isFinite(offset.dy)||Math.hypot(offset.dx,offset.dy)>.25+1e-12)throw new Error('Invalid windmill offset; maximum displacement0.25');
+export function inspectWindmillOffset(physics,offset,{profile=WINDMILL_OFFSET_STRICT}={}){
+ if(![WINDMILL_OFFSET_STRICT,WINDMILL_FEED_LEFT175].includes(profile))throw new Error('Unknown internal windmill offset profile');
+ if(!offset||Object.keys(offset).sort().join(',')!=='dx,dy'||!Number.isFinite(offset.dx)||!Number.isFinite(offset.dy)||(profile===WINDMILL_FEED_LEFT175?(offset.dx!==-1.75||offset.dy!==0):Math.hypot(offset.dx,offset.dy)>.25+1e-12))throw new Error('Invalid windmill offset; maximum displacement0.25');
  const m=physics.mechanisms[0];if(physics.mechanisms.length!==1||m.kind!=='windmill'||m.x!==64||m.y!==476.5||m.radius!==10)throw new Error('Unexpected original windmill geometry');
  const centre={x:m.x+offset.dx,y:m.y+offset.dy},radius=m.radius+WINDMILL_ARM_CONTACT_RADIUS,margins=[];
  for(const pin of physics.pins)margins.push({kind:'pin',id:pin.id,gap:Math.hypot(centre.x-pin.x,centre.y-pin.y)-radius-pin.r});
@@ -16,4 +19,4 @@ export function inspectWindmillOffset(physics,offset){
  const invalid=margins.find(v=>!Number.isFinite(v.gap)||v.gap<=0);if(invalid)throw new Error(`Windmill envelope interference: ${invalid.kind} ${invalid.id}`);
  return {centre,sweptRadius:radius,armContactRadius:WINDMILL_ARM_CONTACT_RADIUS,margins,note:'Positive material separation only. A rotating envelope is not solid; clearance below ball diameter does not establish blockage or passage.'};
 }
-export function applyWindmillOffset(physics,offset){const inspection=inspectWindmillOffset(physics,offset);Object.assign(physics.mechanisms[0],inspection.centre);return inspection;}
+export function applyWindmillOffset(physics,offset,options){const inspection=inspectWindmillOffset(physics,offset,options);Object.assign(physics.mechanisms[0],inspection.centre);return inspection;}

@@ -1,3 +1,4 @@
+import {WINDMILL_OFFSET_STRICT} from '../pixi/windmill-offset.js';
 // Local comparison uses existing factory and qa05 conditions, never modifies production.
 import {createBoardFlow} from '../pixi/board-flow.js';
 import {attachNormalSpin} from '../pixi/normal-spin-flow.js';
@@ -13,7 +14,7 @@ export function classifyLCDContact(b){
 }
 export const COMPARISON_CONDITIONS=Object.freeze({phases:[0,.175,.35,.525],kinds:['mechanical','finite-stock-fixed-loss'],seconds:300,drain:45,power:.20,launchInterval:.6,updateSeconds:1/120,mouthWidth:20,gravity:GRAVITY,guide:'current-factory-tray',initialStock:400,finiteLottery:'constant .9 fixed-loss calibration'});
 export function gapSummary(times,seconds){const inside=times.filter(t=>t>=0&&t<=seconds).sort((a,b)=>a-b);let previous=0,maxGap=0;for(const t of inside){maxGap=Math.max(maxGap,t-previous);previous=t;}return {entries:inside.length,maxGap:Math.max(maxGap,seconds-previous),first:inside[0]??null,last:inside.at(-1)??null,windowSeconds:seconds};}
-export function measurePinAdjustment(config,{phase=0,kind='mechanical',seconds=300,drain=45,replaySeconds=0,replayFPS=60,mode='normal',normalPower=config.normalPower??.20,shotLimit=undefined,recordFinalState=false,onProgress=()=>{}}={}, {pinSpacingProfile=PIN_SPACING_STRICT}={}){
+export function measurePinAdjustment(config,{phase=0,kind='mechanical',seconds=300,drain=45,replaySeconds=0,replayFPS=60,mode='normal',normalPower=config.normalPower??.20,shotLimit=undefined,recordFinalState=false,onProgress=()=>{}}={}, {pinSpacingProfile=PIN_SPACING_STRICT,windmillOffsetProfile=WINDMILL_OFFSET_STRICT}={}){
  if(typeof recordFinalState!=='boolean')throw new Error('Invalid final-state recording option');
  if(shotLimit!==undefined&&(!Number.isSafeInteger(shotLimit)||shotLimit<=0))throw new Error('Invalid actual shot limit');
  if(![30,60].includes(replayFPS))throw new Error('Unsupported replay FPS');
@@ -21,7 +22,7 @@ export function measurePinAdjustment(config,{phase=0,kind='mechanical',seconds=3
  if(!Number.isFinite(normalPower)||normalPower<0||normalPower>1)throw new Error('Invalid trial normal power');
  // Short windows are explicitly recorded for direct tests, not accepted full comparison.
  if(!['normal','rush','bonus'].includes(mode)||(kind!=='mechanical'&&mode!=='normal')||!COMPARISON_CONDITIONS.phases.includes(phase)||!COMPARISON_CONDITIONS.kinds.includes(kind)||!Number.isFinite(seconds)||seconds<=0||seconds>300||!Number.isFinite(drain)||drain<0||drain>45||Math.abs(seconds*120-Math.round(seconds*120))>1e-6||Math.abs(drain*120-Math.round(drain*120))>1e-6)throw new Error('Unsupported measurement conditions');
- const {pins,flowOptions}=resolvePinAdjustment(config,{pinSpacingProfile}),game=kind==='finite-stock-fixed-loss'?new SessionGame(()=>.9):null;
+ const {pins,flowOptions}=resolvePinAdjustment(config,{pinSpacingProfile,windmillOffsetProfile}),game=kind==='finite-stock-fixed-loss'?new SessionGame(()=>.9):null;
  const model=createBoardFlow({lcd:true,...flowOptions,normalPower,launchInterval:.6,...(game?{fire:()=>game.fire()}:{})});
  model.flow.physics.pins=structuredClone(pins);model.setMode(mode);
  const flow=model.flow,p=flow.physics,events=[],frames=[],replayFrames=[];
