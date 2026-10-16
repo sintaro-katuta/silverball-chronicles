@@ -1,0 +1,67 @@
+{
+  "success": true,
+  "scope": "Native Chrome video playback from beginning to natural end, rate1, no seeking; written labels and selected frames reviewed separately",
+  "sourceSHA": "da45088d9f0440f04d12f9d8e0eb48cd8769c5126e10d06e43e67f160aeceac1",
+  "afterSHA": "da45088d9f0440f04d12f9d8e0eb48cd8769c5126e10d06e43e67f160aeceac1",
+  "result": {
+    "ended": true,
+    "currentTime": 59.232682,
+    "duration": 59.232682,
+    "rate": 1,
+    "error": null,
+    "width": 1280,
+    "height": 1080,
+    "audit": {
+      "seeking": 0,
+      "waiting": 3,
+      "samples": [],
+      "startedAt": 1792118708318,
+      "playing": true
+    },
+    "quality": {}
+  },
+  "samples": [
+    {
+      "requested": 1,
+      "actual": 1.010681,
+      "file": "natural-1.011s.png"
+    },
+    {
+      "requested": 6,
+      "actual": 6.009782,
+      "file": "natural-6.010s.png"
+    },
+    {
+      "requested": 12,
+      "actual": 12.009219,
+      "file": "natural-12.009s.png"
+    },
+    {
+      "requested": 22,
+      "actual": 22.009361,
+      "file": "natural-22.009s.png"
+    },
+    {
+      "requested": 36,
+      "actual": 36.008614,
+      "file": "natural-36.009s.png"
+    },
+    {
+      "requested": 47,
+      "actual": 47.007712,
+      "file": "natural-47.008s.png"
+    },
+    {
+      "requested": 52,
+      "actual": 52.006886,
+      "file": "natural-52.007s.png"
+    },
+    {
+      "requested": 57,
+      "actual": 57.008467,
+      "file": "natural-57.008s.png"
+    }
+  ],
+  "errors": [],
+  "browser": "155.0.8059.80"
+}
