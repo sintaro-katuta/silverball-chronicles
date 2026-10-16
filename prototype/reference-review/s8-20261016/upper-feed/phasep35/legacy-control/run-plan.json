@@ -1,0 +1,1676 @@
+{
+  "shotLimit": 250,
+  "maxFiringSeconds": 300,
+  "drain": 45,
+  "replayFPS": 30,
+  "power": 0.18,
+  "phases": [
+    0,
+    0.175,
+    0.35,
+    0.525
+  ],
+  "target": {
+    "threeConditionsShots": 750,
+    "minimumTotalStart": 60,
+    "meanStartPer250": 20
+  },
+  "scope": "Single setting/phase; report actual shots and start after every run. Only the frozen declared pin/wheel/radius configuration with its declared rotor profile; no undeclared combination. No coefficient changes, automatic next trial or adoption.",
+  "case": {
+    "id": "legacy-control",
+    "label": "旧形状参照・皿なし",
+    "leftAdmissionGuides": false,
+    "hesoMouthWidth": 20,
+    "launchRailProfile": "legacy",
+    "normalPower": 0.18,
+    "moves": [],
+    "windmillOffset": {
+      "dx": 0,
+      "dy": 0
+    },
+    "windmillShapeProfile": "legacy-capsules"
+  },
+  "phase": 0.35,
+  "mode": "normal",
+  "configSHA": "305f4678606e689e53a676bd67a40596edfc227b2a882e33c7ae3e8af790b93d",
+  "inspection": {
+    "valid": true,
+    "skipReason": null,
+    "windmill": {
+      "conservativeLegacyEnvelopeGuard": {
+        "centre": {
+          "x": 64,
+          "y": 476.5
+        },
+        "sweptRadius": 11.3,
+        "armContactRadius": 1.3,
+        "margins": [
+          {
+            "kind": "pin",
+            "id": 1,
+            "gap": 2.80034964607509
+          },
+          {
+            "kind": "pin",
+            "id": 2,
+            "gap": 6.545082432618588
+          },
+          {
+            "kind": "pin",
+            "id": 3,
+            "gap": 10.603449956963733
+          },
+          {
+            "kind": "pin",
+            "id": 4,
+            "gap": 14.911408519804468
+          },
+          {
+            "kind": "pin",
+            "id": 5,
+            "gap": 19.266255865802066
+          },
+          {
+            "kind": "pin",
+            "id": 6,
+            "gap": 23.45175245964071
+          },
+          {
+            "kind": "pin",
+            "id": 7,
+            "gap": 27.65114940841456
+          },
+          {
+            "kind": "pin",
+            "id": 8,
+            "gap": 31.860408208410593
+          },
+          {
+            "kind": "pin",
+            "id": 9,
+            "gap": 36.42507172660255
+          },
+          {
+            "kind": "pin",
+            "id": 10,
+            "gap": 40.85276974525799
+          },
+          {
+            "kind": "pin",
+            "id": 11,
+            "gap": 51.45881590373186
+          },
+          {
+            "kind": "pin",
+            "id": 12,
+            "gap": 55.900389464750134
+          },
+          {
+            "kind": "pin",
+            "id": 13,
+            "gap": 60.34575491982808
+          },
+          {
+            "kind": "pin",
+            "id": 14,
+            "gap": 64.58301387300584
+          },
+          {
+            "kind": "pin",
+            "id": 15,
+            "gap": 68.82161913208672
+          },
+          {
+            "kind": "pin",
+            "id": 16,
+            "gap": 73.14189270095513
+          },
+          {
+            "kind": "pin",
+            "id": 17,
+            "gap": 77.72758822247748
+          },
+          {
+            "kind": "pin",
+            "id": 18,
+            "gap": 81.75670217201548
+          },
+          {
+            "kind": "pin",
+            "id": 19,
+            "gap": 86.42663069870218
+          },
+          {
+            "kind": "pin",
+            "id": 20,
+            "gap": 90.79980449639187
+          },
+          {
+            "kind": "pin",
+            "id": 21,
+            "gap": 95.38691454055544
+          },
+          {
+            "kind": "pin",
+            "id": 22,
+            "gap": 99.84546465842244
+          },
+          {
+            "kind": "pin",
+            "id": 23,
+            "gap": 109.10809467029979
+          },
+          {
+            "kind": "pin",
+            "id": 24,
+            "gap": 113.48124859353902
+          },
+          {
+            "kind": "pin",
+            "id": 25,
+            "gap": 118.28467744691588
+          },
+          {
+            "kind": "pin",
+            "id": 26,
+            "gap": 122.61981583643782
+          },
+          {
+            "kind": "pin",
+            "id": 27,
+            "gap": 215.09504076656225
+          },
+          {
+            "kind": "pin",
+            "id": 28,
+            "gap": 211.22250110844212
+          },
+          {
+            "kind": "pin",
+            "id": 29,
+            "gap": 206.81886084349193
+          },
+          {
+            "kind": "pin",
+            "id": 30,
+            "gap": 202.86680013472235
+          },
+          {
+            "kind": "pin",
+            "id": 31,
+            "gap": 192.07200814453836
+          },
+          {
+            "kind": "pin",
+            "id": 32,
+            "gap": 183.45784800822972
+          },
+          {
+            "kind": "pin",
+            "id": 33,
+            "gap": 171.09689208746136
+          },
+          {
+            "kind": "pin",
+            "id": 34,
+            "gap": 168.41699475035702
+          },
+          {
+            "kind": "pin",
+            "id": 35,
+            "gap": 166.26758000265403
+          },
+          {
+            "kind": "pin",
+            "id": 36,
+            "gap": 171.1612301502429
+          },
+          {
+            "kind": "pin",
+            "id": 37,
+            "gap": 64.02524412406754
+          },
+          {
+            "kind": "pin",
+            "id": 38,
+            "gap": 61.582573162143106
+          },
+          {
+            "kind": "pin",
+            "id": 39,
+            "gap": 54.52319668116654
+          },
+          {
+            "kind": "pin",
+            "id": 40,
+            "gap": 51.06047074631073
+          },
+          {
+            "kind": "pin",
+            "id": 41,
+            "gap": 47.5
+          },
+          {
+            "kind": "pin",
+            "id": 42,
+            "gap": 59.862192371030744
+          },
+          {
+            "kind": "pin",
+            "id": 43,
+            "gap": 55.79505925400467
+          },
+          {
+            "kind": "pin",
+            "id": 44,
+            "gap": 51.14632870328475
+          },
+          {
+            "kind": "pin",
+            "id": 45,
+            "gap": 47.32707709890063
+          },
+          {
+            "kind": "pin",
+            "id": 46,
+            "gap": 43.42836243690503
+          },
+          {
+            "kind": "pin",
+            "id": 47,
+            "gap": 46.71189740937844
+          },
+          {
+            "kind": "pin",
+            "id": 48,
+            "gap": 39.801193943221236
+          },
+          {
+            "kind": "pin",
+            "id": 49,
+            "gap": 39.67677695986724
+          },
+          {
+            "kind": "pin",
+            "id": 50,
+            "gap": 34.064514701684246
+          },
+          {
+            "kind": "pin",
+            "id": 51,
+            "gap": 29.962332302946976
+          },
+          {
+            "kind": "pin",
+            "id": 52,
+            "gap": 29.762119431749987
+          },
+          {
+            "kind": "pin",
+            "id": 53,
+            "gap": 26.4119044628465
+          },
+          {
+            "kind": "pin",
+            "id": 54,
+            "gap": 17.380140235116585
+          },
+          {
+            "kind": "pin",
+            "id": 55,
+            "gap": 12.75386567126981
+          },
+          {
+            "kind": "pin",
+            "id": 56,
+            "gap": 8.186607122610031
+          },
+          {
+            "kind": "pin",
+            "id": 57,
+            "gap": 25.467891473547695
+          },
+          {
+            "kind": "pin",
+            "id": 58,
+            "gap": 10.614757516192665
+          },
+          {
+            "kind": "pin",
+            "id": 59,
+            "gap": 20.696661317596273
+          },
+          {
+            "kind": "pin",
+            "id": 60,
+            "gap": 17.06790156801861
+          },
+          {
+            "kind": "pin",
+            "id": 61,
+            "gap": 15.128227503910207
+          },
+          {
+            "kind": "pin",
+            "id": 62,
+            "gap": 12.381216468178504
+          },
+          {
+            "kind": "pin",
+            "id": 63,
+            "gap": 7.725633929730377
+          },
+          {
+            "kind": "pin",
+            "id": 64,
+            "gap": 26.31699353465317
+          },
+          {
+            "kind": "pin",
+            "id": 65,
+            "gap": 30.1788315575185
+          },
+          {
+            "kind": "pin",
+            "id": 66,
+            "gap": 34.20010940905941
+          },
+          {
+            "kind": "pin",
+            "id": 67,
+            "gap": 37.89256016851121
+          },
+          {
+            "kind": "pin",
+            "id": 68,
+            "gap": 43.08937625582472
+          },
+          {
+            "kind": "pin",
+            "id": 69,
+            "gap": 54.27328485030985
+          },
+          {
+            "kind": "pin",
+            "id": 70,
+            "gap": 49.36973796559337
+          },
+          {
+            "kind": "pin",
+            "id": 71,
+            "gap": 47.92326985281102
+          },
+          {
+            "kind": "pin",
+            "id": 72,
+            "gap": 51.790007110127576
+          },
+          {
+            "kind": "pin",
+            "id": 73,
+            "gap": 56.032399631584255
+          },
+          {
+            "kind": "pin",
+            "id": 74,
+            "gap": 63.85001658924833
+          },
+          {
+            "kind": "pin",
+            "id": 75,
+            "gap": 67.34557692096622
+          },
+          {
+            "kind": "pin",
+            "id": 76,
+            "gap": 71.61212306276383
+          },
+          {
+            "kind": "pin",
+            "id": 77,
+            "gap": 60.15629769950441
+          },
+          {
+            "kind": "pin",
+            "id": 78,
+            "gap": 82.90140359126023
+          },
+          {
+            "kind": "pin",
+            "id": 79,
+            "gap": 77.66347346307231
+          },
+          {
+            "kind": "pin",
+            "id": 80,
+            "gap": 80.76659742290272
+          },
+          {
+            "kind": "pin",
+            "id": 81,
+            "gap": 90.56768587559922
+          },
+          {
+            "kind": "pin",
+            "id": 82,
+            "gap": 90.45740532202652
+          },
+          {
+            "kind": "pin",
+            "id": 83,
+            "gap": 94.61138016254431
+          },
+          {
+            "kind": "pin",
+            "id": 84,
+            "gap": 98.96549234942104
+          },
+          {
+            "kind": "pin",
+            "id": 85,
+            "gap": 102.94048671689578
+          },
+          {
+            "kind": "pin",
+            "id": 86,
+            "gap": 107.30919577204452
+          },
+          {
+            "kind": "pin",
+            "id": 87,
+            "gap": 116.03871961094795
+          },
+          {
+            "kind": "pin",
+            "id": 88,
+            "gap": 118.93005788544295
+          },
+          {
+            "kind": "pin",
+            "id": 89,
+            "gap": 125.37265979734596
+          },
+          {
+            "kind": "pin",
+            "id": 90,
+            "gap": 134.09575886680216
+          },
+          {
+            "kind": "pin",
+            "id": 91,
+            "gap": 143.1386917947769
+          },
+          {
+            "kind": "pin",
+            "id": 92,
+            "gap": 152.2013286445776
+          },
+          {
+            "kind": "pin",
+            "id": 93,
+            "gap": 164.5884010944503
+          },
+          {
+            "kind": "pin",
+            "id": 94,
+            "gap": 222.4682136530516
+          },
+          {
+            "kind": "pin",
+            "id": 95,
+            "gap": 232.7654805739035
+          },
+          {
+            "kind": "pin",
+            "id": 96,
+            "gap": 230.92589073776756
+          },
+          {
+            "kind": "pin",
+            "id": 97,
+            "gap": 174.82800379975092
+          },
+          {
+            "kind": "pin",
+            "id": 98,
+            "gap": 174.06030017220817
+          },
+          {
+            "kind": "pin",
+            "id": 99,
+            "gap": 176.76178581963998
+          },
+          {
+            "kind": "pin",
+            "id": 100,
+            "gap": 179.69133087041368
+          },
+          {
+            "kind": "pin",
+            "id": 101,
+            "gap": 182.82221952211228
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer",
+            "gap": 30
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner",
+            "gap": 18.756494792876772
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 88.678945167299
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 95.98996036070537
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 103.28446079881387
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 110.5545033613702
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 117.7929138944248
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 124.99309108959338
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 132.14887164003005
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 139.25443623195315
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 146.30424332111758
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 153.29298216907216
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 160.21553945243818
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 167.06697557822366
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 173.842508028616
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 180.53749985196464
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 187.14745195436535
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 193.6679982165127
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 200.09490271920535
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 206.42405854414463
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 212.65148774813943
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 218.77334220428583
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 224.78590507378672
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 230.6855927241092
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 236.46895694819867
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 242.13268736902913
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 247.6736139363772
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 253.08870944017218
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 258.37509197838915
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 263.5300273281743
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 268.5509311774227
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 273.4353711808777
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 278.1810688103984
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 282.78590097361536
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 287.24790137900925
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 291.5652616286646
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 295.7363320226966
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 299.7596220617423
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 303.63380063600573
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 307.357695891237
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 310.9302947637303
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 314.3507421780141
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 317.6183399023786
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 320.73254505879675
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 323.69296828514024
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 326.4993715489035
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 329.1516656129353
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 331.64990715494207
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 333.9942955437989
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 336.18516927695833
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 338.2230020845227
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 340.1083987068194
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 341.8420903536088
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 343.42492985435797
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 344.8578865103237
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 346.14204066052093
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 347.27857797498905
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 348.26878349011054
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 349.11403540209443
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 349.8157986360782
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 350.3756182096533
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 350.79511241094394
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 351.0759658126854
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 351.203549970936
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 351.10437074997515
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 350.8485806349855
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 350.4633138319421
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 349.95049974845494
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 349.31208264185756
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 348.55001423632086
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 347.66624641972743
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 346.6627240514736
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 345.54137791273405
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 344.3041178309187
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 342.9528260100826
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 341.489350598882
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 339.91549952731856
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 338.233034642945
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 336.44366617643533
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 334.5490475654286
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 332.55077066434325
+          },
+          {
+            "kind": "wall",
+            "id": "launch-outer-arc",
+            "gap": 330.4503613664323
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 84.93425607080296
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 90.46858892085638
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 95.98644501763971
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 101.48536131253412
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 106.96296136425457
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 112.41693795902285
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 117.84504065498271
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 123.2450668390953
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 128.61485532699453
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 133.95228182850383
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 139.25525579813444
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 144.52171832440843
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 149.74964080530722
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 154.93702422299552
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 160.08189887799097
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 165.18232447692603
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 170.23639049288883
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 175.24221673568357
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 180.19795408304657
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 185.10178533417317
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 189.95192615475966
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 194.74662608877313
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 199.48416961681912
+          },
+          {
+            "kind": "wall",
+            "id": "launch-inner-arc",
+            "gap": 204.16287724459428
+          },
+          {
+            "kind": "wall",
+            "id": "out-left",
+            "gap": 3.2347976594821413
+          },
+          {
+            "kind": "wall",
+            "id": "out-left",
+            "gap": 16.71410803072246
+          },
+          {
+            "kind": "wall",
+            "id": "out-left",
+            "gap": 72.8645980371085
+          },
+          {
+            "kind": "wall",
+            "id": "out-left",
+            "gap": 112.76878616064195
+          },
+          {
+            "kind": "wall",
+            "id": "out-right",
+            "gap": 315.5
+          },
+          {
+            "kind": "wall",
+            "id": "out-right",
+            "gap": 258.46718839814935
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-0",
+            "gap": 172.3807202502474
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-1",
+            "gap": 196.78697277368627
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-2",
+            "gap": 221.6257691266098
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-3",
+            "gap": 251.5156541839592
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-4",
+            "gap": 259.0687182247336
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-5",
+            "gap": 281.80137848553403
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-6",
+            "gap": 300.8681831059209
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-7",
+            "gap": 324.5427164566186
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-8",
+            "gap": 333.1148359604379
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-9",
+            "gap": 315.1161873096469
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-10",
+            "gap": 313.7192042235152
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-11",
+            "gap": 272.8934011169792
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-12",
+            "gap": 260.95146088636346
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-13",
+            "gap": 260.3279273229244
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-14",
+            "gap": 249.74510501631164
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-15",
+            "gap": 248.5
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-16",
+            "gap": 230.3984323381651
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-17",
+            "gap": 178.29582233985067
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-18",
+            "gap": 165.93959649274245
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-19",
+            "gap": 115.28413098261699
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-20",
+            "gap": 10.20923231451281
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-21",
+            "gap": 10.20923231451281
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-22",
+            "gap": 19.21297807002722
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-23",
+            "gap": 25.36308338453881
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-24",
+            "gap": 50.16309194369275
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-25",
+            "gap": 63.67198953377664
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-26",
+            "gap": 147.32435469820678
+          },
+          {
+            "kind": "wall",
+            "id": "lcd-boundary-27",
+            "gap": 160.66224254306442
+          },
+          {
+            "kind": "wall",
+            "id": "left-inlet-guide",
+            "gap": 143.97575180251738
+          },
+          {
+            "kind": "wall",
+            "id": "left-inlet-guide",
+            "gap": 112.71540835707277
+          },
+          {
+            "kind": "wall",
+            "id": "left-inlet-guide",
+            "gap": 66.74000254323497
+          },
+          {
+            "kind": "wall",
+            "id": "left-inlet-guide",
+            "gap": 141.28371323348966
+          },
+          {
+            "kind": "wall",
+            "id": "left-inlet-guide",
+            "gap": 111.50583454602138
+          },
+          {
+            "kind": "wall",
+            "id": "left-inlet-guide",
+            "gap": 64.39711659034043
+          },
+          {
+            "kind": "wall",
+            "id": "normal-rim",
+            "gap": 62.21520114138717
+          },
+          {
+            "kind": "wall",
+            "id": "normal-rim",
+            "gap": 67.24587275753238
+          },
+          {
+            "kind": "wall",
+            "id": "normal-rim",
+            "gap": 91.78571330062847
+          },
+          {
+            "kind": "wall",
+            "id": "normal-rim",
+            "gap": 98.51772296417289
+          },
+          {
+            "kind": "wall",
+            "id": "normal-rim",
+            "gap": 105.85335736816013
+          },
+          {
+            "kind": "wall",
+            "id": "normal-rim",
+            "gap": 112.48922921959087
+          },
+          {
+            "kind": "wall",
+            "id": "start-rim",
+            "gap": 142.93364210797856
+          },
+          {
+            "kind": "wall",
+            "id": "start-rim",
+            "gap": 160.60214615833524
+          },
+          {
+            "kind": "wall",
+            "id": "fuzu-rim",
+            "gap": 208.7651831092115
+          },
+          {
+            "kind": "wall",
+            "id": "fuzu-rim",
+            "gap": 221.53452380648687
+          },
+          {
+            "kind": "wall",
+            "id": "right-inner-lower",
+            "gap": 344.17673306001615
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-0-2",
+            "gap": 332.6316303867634
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-0-3",
+            "gap": 316.69000060856865
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-0-4",
+            "gap": 305.2573454382795
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-0-5",
+            "gap": 301.56275891102104
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-1-1",
+            "gap": 361.02437778818864
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-1-2",
+            "gap": 354.32346341224337
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-1-3",
+            "gap": 328.0886007499737
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-1-4",
+            "gap": 316.3554979740668
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-1-5",
+            "gap": 312.1244513225318
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-2-1",
+            "gap": 304.62108206530803
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-2-2",
+            "gap": 297.0536407552506
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-2-3",
+            "gap": 289.15629352439646
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-2-4",
+            "gap": 282.5775878419541
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-2-5",
+            "gap": 261.53217492187673
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-2-6",
+            "gap": 252.42284278079697
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-2-7",
+            "gap": 246.71242479339745
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-2-8",
+            "gap": 246.71242479339745
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-2-9",
+            "gap": 245.0344353263442
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-3-1",
+            "gap": 299.19707133444143
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-3-2",
+            "gap": 285.29947434772697
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-4-1",
+            "gap": 273.4444638566067
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-4-2",
+            "gap": 256.6202887513807
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-4-3",
+            "gap": 243.28371642477015
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-4-4",
+            "gap": 232.76871608031942
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-5-1",
+            "gap": 208.4689193331643
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-6-1",
+            "gap": 217.466424242296
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-6-2",
+            "gap": 213.27388737362386
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-6-3",
+            "gap": 213.27388737362386
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-6-4",
+            "gap": 203.6816380288719
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-6-5",
+            "gap": 191.79999999999998
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-6-6",
+            "gap": 189.26019506359958
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-6-7",
+            "gap": 189.26019506359958
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-6-8",
+            "gap": 192.2240054530118
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-6-9",
+            "gap": 201.6102201020851
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-7-1",
+            "gap": 225.69101077044763
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-7-2",
+            "gap": 229.51324772105588
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-7-3",
+            "gap": 234.13145031407637
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-7-4",
+            "gap": 232.0689541818422
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-7-5",
+            "gap": 228.17704970494265
+          },
+          {
+            "kind": "wall",
+            "id": "right-channel-7-6",
+            "gap": 225.69101077044763
+          },
+          {
+            "kind": "wall",
+            "id": "attacker-door",
+            "gap": 279.4796589857001
+          },
+          {
+            "kind": "wall",
+            "id": "denchu-left-wing",
+            "gap": 276.71513959694533
+          },
+          {
+            "kind": "wall",
+            "id": "denchu-right-wing",
+            "gap": 282.9182632614217
+          },
+          {
+            "kind": "pocket",
+            "id": 5,
+            "gap": 254.79443812300923
+          },
+          {
+            "kind": "pocket",
+            "id": 6,
+            "gap": 209.15521087059838
+          },
+          {
+            "kind": "pocket",
+            "id": 0,
+            "gap": 62.71520114138717
+          },
+          {
+            "kind": "pocket",
+            "id": 1,
+            "gap": 92.28571330062847
+          },
+          {
+            "kind": "pocket",
+            "id": 2,
+            "gap": 106.35335736816013
+          },
+          {
+            "kind": "pocket",
+            "id": 4,
+            "gap": 143.43364210797856
+          },
+          {
+            "kind": "pocket",
+            "id": 8,
+            "gap": 209.2651831092115
+          }
+        ],
+        "note": "Positive material separation only. A rotating envelope is not solid; clearance below ball diameter does not establish blockage or passage."
+      },
+      "actualSweptOuterRadius": 11.3,
+      "actualContactGeometry": {
+        "profile": "legacy-capsules",
+        "centre": {
+          "x": 64,
+          "y": 476.5
+        },
+        "angle": 0.28,
+        "capsules": [
+          {
+            "armIndex": 0,
+            "a": {
+              "x": 64,
+              "y": 476.5
+            },
+            "b": {
+              "x": 73.61055438310771,
+              "y": 479.2635564856411
+            },
+            "r": 1.3
+          },
+          {
+            "armIndex": 1,
+            "a": {
+              "x": 64,
+              "y": 476.5
+            },
+            "b": {
+              "x": 61.23644351435886,
+              "y": 486.1105543831077
+            },
+            "r": 1.3
+          },
+          {
+            "armIndex": 2,
+            "a": {
+              "x": 64,
+              "y": 476.5
+            },
+            "b": {
+              "x": 54.38944561689229,
+              "y": 473.7364435143589
+            },
+            "r": 1.3
+          },
+          {
+            "armIndex": 3,
+            "a": {
+              "x": 64,
+              "y": 476.5
+            },
+            "b": {
+              "x": 66.76355648564113,
+              "y": 466.8894456168923
+            },
+            "r": 1.3
+          }
+        ],
+        "components": [],
+        "boundary": []
+      }
+    },
+    "pinSpacing": null,
+    "pinSpacingProfile": "strict-centre4-v1"
+  },
+  "command": [
+    "/opt/homebrew/Cellar/node/26.11.0/bin/node",
+    "/private/tmp/silverball-s8-20261016/prototype/tools/s8-admission-comparison.mjs",
+    "--stage",
+    "run",
+    "--mode",
+    "normal",
+    "--out",
+    "/private/tmp/silverball-s8-20261016/prototype/reference-review/s8-20261016/upper-feed/phasep35/legacy-control",
+    "--plan",
+    "docs/agile/S8_UPPER_FEED_PLAN.md",
+    "--manifest",
+    "prototype/tools/s8-upper-feed-cases.json",
+    "--case",
+    "legacy-control",
+    "--phase",
+    ".35",
+    "--expected-source",
+    "9465963302b5b2941b930f71dbe2c7dd432100af6b58039e7042a8bd4bd8b125"
+  ]
+}

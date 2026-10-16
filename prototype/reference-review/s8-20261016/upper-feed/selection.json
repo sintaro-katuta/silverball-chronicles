@@ -1,0 +1,103 @@
+{
+  "sourceSHA": "9465963302b5b2941b930f71dbe2c7dd432100af6b58039e7042a8bd4bd8b125",
+  "commit": "62671c10cb592f1254def777067b68f42a77c668",
+  "screen": [
+    {
+      "id": "legacy-control",
+      "shots": 250,
+      "start": 13,
+      "normal": 3,
+      "out": 234,
+      "counts": {
+        "fuzu": 0,
+        "normal": 3,
+        "start": 13,
+        "rush": 0,
+        "bonus": 0,
+        "out": 234,
+        "returned": 0
+      },
+      "maxGap": 30.926190476122926
+    },
+    {
+      "id": "three-base",
+      "shots": 250,
+      "start": 9,
+      "normal": 4,
+      "out": 237,
+      "counts": {
+        "fuzu": 0,
+        "normal": 4,
+        "start": 9,
+        "rush": 0,
+        "bonus": 0,
+        "out": 237,
+        "returned": 0
+      },
+      "maxGap": 70.1892857142684
+    },
+    {
+      "id": "three-upper46-right050",
+      "shots": 250,
+      "start": 8,
+      "normal": 4,
+      "out": 238,
+      "counts": {
+        "fuzu": 0,
+        "normal": 4,
+        "start": 8,
+        "rush": 0,
+        "bonus": 0,
+        "out": 238,
+        "returned": 0
+      },
+      "maxGap": 52.23824404750471
+    },
+    {
+      "id": "three-upper48-up050",
+      "shots": 250,
+      "start": 16,
+      "normal": 10,
+      "out": 224,
+      "counts": {
+        "fuzu": 0,
+        "normal": 10,
+        "start": 16,
+        "rush": 0,
+        "bonus": 0,
+        "out": 224,
+        "returned": 0
+      },
+      "maxGap": 33.217857142784496
+    },
+    {
+      "id": "three-upper48-down050",
+      "shots": 250,
+      "start": 5,
+      "normal": 4,
+      "out": 241,
+      "counts": {
+        "fuzu": 0,
+        "normal": 4,
+        "start": 5,
+        "rush": 0,
+        "bonus": 0,
+        "out": 241,
+        "returned": 0
+      },
+      "maxGap": 60.160714285839106
+    }
+  ],
+  "eligible": [
+    "three-upper48-up050"
+  ],
+  "selected": "three-upper48-up050",
+  "confirmationPhases": [
+    0.175,
+    0.35,
+    0.525
+  ],
+  "target": 60,
+  "adopted": false,
+  "note": "Selection fixed before confirmation; maxGap 33.218 vs legacy30.926 remains a side-effect to judge after confirmation."
+}
