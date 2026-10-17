@@ -23,16 +23,24 @@ function validatePinSpacingProfile(config,profile){
 }
 const distanceToSegment=(x,y,a,b)=>{const dx=b.x-a.x,dy=b.y-a.y,t=Math.max(0,Math.min(1,((x-a.x)*dx+(y-a.y)*dy)/(dx*dx+dy*dy||1)));return Math.hypot(x-a.x-t*dx,y-a.y-t*dy);};
 function inside(x,y,points){let hit=false;for(let i=0,j=points.length-1;i<points.length;j=i++){const a=points[i],b=points[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])hit=!hit;}return hit;}
+export const ROAD_GROUP_VECTORS=Object.freeze({'three-road-group-left300':Object.freeze({dx:-3,dy:0}),'three-road-group-right300':Object.freeze({dx:3,dy:0}),'three-road-group-up200':Object.freeze({dx:0,dy:-2})});
+export function roadGroupMoves(id){const vector=ROAD_GROUP_VECTORS[id];if(!Object.hasOwn(ROAD_GROUP_VECTORS,id))throw new Error('Unknown road group declaration');return Array.from({length:26},(_,i)=>({pinId:i+1,...vector}));}
+function declaredDisplacementLimit(config,pinSpacingProfile,windmillOffsetProfile){
+ if(!Object.hasOwn(ROAD_GROUP_VECTORS,config.id))return 1;
+ if(pinSpacingProfile!==PIN_SPACING_STRICT||windmillOffsetProfile!==WINDMILL_OFFSET_STRICT||config.leftAdmissionGuides!==false||config.hesoMouthWidth!==20||config.launchRailProfile!=='legacy'||config.normalPower!==.18||config.windmillShapeProfile!=='photo-three-vane'||Object.hasOwn(config,'ballRadius')||JSON.stringify(config.windmillOffset)!==JSON.stringify({dx:0,dy:0})||JSON.stringify(config.moves)!==JSON.stringify(roadGroupMoves(config.id)))throw new Error('Road group requires exact26 original pins, declared vector and fixed board');
+ return 3;
+}
 export function resolvePinAdjustment(config,{pinSpacingProfile=PIN_SPACING_STRICT,windmillOffsetProfile=WINDMILL_OFFSET_STRICT}={}){
  if(!config||Object.keys(config).some(k=>!['id','label','leftAdmissionGuides','hesoMouthWidth','moves','ballRadius','launchRailProfile','normalPower','windmillOffset','windmillShapeProfile'].includes(k))||typeof config.id!=='string'||typeof config.label!=='string'||typeof config.leftAdmissionGuides!=='boolean'||!Array.isArray(config.moves))throw new Error('Invalid adjustment configuration');
  validatePinSpacingProfile(config,pinSpacingProfile);
  if(![WINDMILL_OFFSET_STRICT,WINDMILL_FEED_LEFT175].includes(windmillOffsetProfile))throw new Error('Unknown internal windmill offset profile');
  if(windmillOffsetProfile===WINDMILL_FEED_LEFT175&&(config.id!=='three-feed-wheel-left175'||pinSpacingProfile!==PIN_SPACING_STRICT||config.leftAdmissionGuides!==false||config.hesoMouthWidth!==20||config.launchRailProfile!=='legacy'||config.normalPower!==.18||config.windmillShapeProfile!=='photo-three-vane'||Object.hasOwn(config,'ballRadius')||JSON.stringify(config.windmillOffset)!==JSON.stringify({dx:-1.75,dy:0})||config.moves.length!==0))throw new Error('Feed shift profile requires its exact declared single case');
+ const maximumDisplacement=declaredDisplacementLimit(config,pinSpacingProfile,windmillOffsetProfile);
  if(config.windmillShapeProfile!==undefined&&!['legacy-capsules','photo-three-vane'].includes(config.windmillShapeProfile))throw new Error('Invalid configured windmill shape');
  if(config.normalPower!==undefined&&(!Number.isFinite(config.normalPower)||config.normalPower<0||config.normalPower>1))throw new Error('Invalid configured normal power');
  const model=createBoardFlow({lcd:true,leftAdmissionGuides:config.leftAdmissionGuides,hesoMouthWidth:config.hesoMouthWidth??20,ballRadius:config.ballRadius??null,launchRailProfile:config.launchRailProfile??'legacy',windmillOffset:config.windmillOffset??null,windmillShapeProfile:config.windmillShapeProfile??'legacy-capsules',windmillOffsetProfile,...(windmillOffsetProfile===WINDMILL_FEED_LEFT175?{normalPower:.18}:{})}),p=model.flow.physics,pins=structuredClone(p.pins),seen=new Set();
  for(const move of config.moves){
-  if(!move||Object.keys(move).sort().join(',')!=='dx,dy,pinId'||!Number.isInteger(move.pinId)||!Number.isFinite(move.dx)||!Number.isFinite(move.dy)||Math.hypot(move.dx,move.dy)>1+1e-12||seen.has(move.pinId))throw new Error('Invalid adjustment; total displacement from original is limited to 1 logical unit');
+  if(!move||Object.keys(move).sort().join(',')!=='dx,dy,pinId'||!Number.isInteger(move.pinId)||!Number.isFinite(move.dx)||!Number.isFinite(move.dy)||Math.hypot(move.dx,move.dy)>maximumDisplacement+1e-12||seen.has(move.pinId))throw new Error('Invalid adjustment; total displacement from original is limited to 1 logical unit');
   const pin=pins.find(q=>q.id===move.pinId);if(!pin)throw new Error('Unknown pin');seen.add(move.pinId);pin.x+=move.dx;pin.y+=move.dy;
  }
  const geometry=getPinLayoutModel().fixed;
