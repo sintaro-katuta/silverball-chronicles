@@ -1,0 +1,305 @@
+{
+  "conclusion": "success",
+  "headSha": "14e538fcabad48543aea058274dbe4d93ef6f87e",
+  "jobs": [
+    {
+      "completedAt": "2026-10-16T05:27:13Z",
+      "conclusion": "success",
+      "databaseId": 116820975224,
+      "name": "browser",
+      "startedAt": "2026-10-16T05:04:49Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-16T05:04:53Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-16T05:04:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:05:12Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-16T05:04:53Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:05:18Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "number": 3,
+          "startedAt": "2026-10-16T05:05:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:05:27Z",
+          "conclusion": "success",
+          "name": "Run npm --prefix prototype ci",
+          "number": 4,
+          "startedAt": "2026-10-16T05:05:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:06:23Z",
+          "conclusion": "success",
+          "name": "Run node prototype/node_modules/@playwright/test/cli.js install --with-deps chromium",
+          "number": 5,
+          "startedAt": "2026-10-16T05:05:27Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:06:23Z",
+          "conclusion": "success",
+          "name": "Run node prototype/tools/release-cd.js check-pr",
+          "number": 6,
+          "startedAt": "2026-10-16T05:06:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:17:51Z",
+          "conclusion": "success",
+          "name": "Build once and verify every browser condition",
+          "number": 7,
+          "startedAt": "2026-10-16T05:06:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:07Z",
+          "conclusion": "success",
+          "name": "Verify local pin layout tool and full comparison",
+          "number": 8,
+          "startedAt": "2026-10-16T05:17:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:10Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+          "number": 9,
+          "startedAt": "2026-10-16T05:27:07Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:10Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "number": 17,
+          "startedAt": "2026-10-16T05:27:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:10Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 18,
+          "startedAt": "2026-10-16T05:27:10Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:10Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 19,
+          "startedAt": "2026-10-16T05:27:10Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/sintaro-katuta/silverball-chronicles/actions/runs/38853902026/job/116820975224"
+    },
+    {
+      "completedAt": "2026-10-16T05:17:26Z",
+      "conclusion": "success",
+      "databaseId": 116820975451,
+      "name": "unit",
+      "startedAt": "2026-10-16T05:04:49Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-16T05:04:51Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-16T05:04:50Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:05:06Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 2,
+          "startedAt": "2026-10-16T05:04:51Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:05:12Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "number": 3,
+          "startedAt": "2026-10-16T05:05:06Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:05:22Z",
+          "conclusion": "success",
+          "name": "Run npm --prefix prototype ci",
+          "number": 4,
+          "startedAt": "2026-10-16T05:05:12Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:05:22Z",
+          "conclusion": "success",
+          "name": "Run node prototype/tools/release-cd.js check-pr",
+          "number": 5,
+          "startedAt": "2026-10-16T05:05:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:17:23Z",
+          "conclusion": "success",
+          "name": "All unit tests and immutable source evidence",
+          "number": 6,
+          "startedAt": "2026-10-16T05:05:22Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:17:24Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+          "number": 7,
+          "startedAt": "2026-10-16T05:17:23Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:17:24Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "number": 13,
+          "startedAt": "2026-10-16T05:17:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:17:24Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 14,
+          "startedAt": "2026-10-16T05:17:24Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:17:24Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 15,
+          "startedAt": "2026-10-16T05:17:24Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/sintaro-katuta/silverball-chronicles/actions/runs/38853902026/job/116820975451"
+    },
+    {
+      "completedAt": "2026-10-16T05:27:43Z",
+      "conclusion": "success",
+      "databaseId": 116827020134,
+      "name": "verify",
+      "startedAt": "2026-10-16T05:27:15Z",
+      "status": "completed",
+      "steps": [
+        {
+          "completedAt": "2026-10-16T05:27:17Z",
+          "conclusion": "success",
+          "name": "Set up job",
+          "number": 1,
+          "startedAt": "2026-10-16T05:27:16Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:18Z",
+          "conclusion": "success",
+          "name": "Reject failed, cancelled, skipped or missing required jobs",
+          "number": 2,
+          "startedAt": "2026-10-16T05:27:17Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:32Z",
+          "conclusion": "success",
+          "name": "Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 3,
+          "startedAt": "2026-10-16T05:27:18Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:34Z",
+          "conclusion": "success",
+          "name": "Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "number": 4,
+          "startedAt": "2026-10-16T05:27:32Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:36Z",
+          "conclusion": "success",
+          "name": "Run actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0",
+          "number": 5,
+          "startedAt": "2026-10-16T05:27:34Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:37Z",
+          "conclusion": "success",
+          "name": "Run actions/download-artifact@634f93cb2916e3fdff6788551b99b062d0335ce0",
+          "number": 6,
+          "startedAt": "2026-10-16T05:27:36Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:38Z",
+          "conclusion": "success",
+          "name": "Join all evidence and freeze verified candidate",
+          "number": 7,
+          "startedAt": "2026-10-16T05:27:37Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:41Z",
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+          "number": 8,
+          "startedAt": "2026-10-16T05:27:38Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:41Z",
+          "conclusion": "success",
+          "name": "Post Run actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "number": 15,
+          "startedAt": "2026-10-16T05:27:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:41Z",
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "number": 16,
+          "startedAt": "2026-10-16T05:27:41Z",
+          "status": "completed"
+        },
+        {
+          "completedAt": "2026-10-16T05:27:41Z",
+          "conclusion": "success",
+          "name": "Complete job",
+          "number": 17,
+          "startedAt": "2026-10-16T05:27:41Z",
+          "status": "completed"
+        }
+      ],
+      "url": "https://github.com/sintaro-katuta/silverball-chronicles/actions/runs/38853902026/job/116827020134"
+    }
+  ],
+  "status": "completed",
+  "url": "https://github.com/sintaro-katuta/silverball-chronicles/actions/runs/38853902026"
+}

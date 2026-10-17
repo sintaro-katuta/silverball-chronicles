@@ -1,0 +1,98 @@
+{
+  "eligible": false,
+  "rows": [
+    {
+      "key": "three-base/rush",
+      "shots": 50,
+      "rightAdmission": 50,
+      "start": 0,
+      "returned": 0,
+      "remaining": 0,
+      "stalled": 0,
+      "lcd": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "safe": true
+    },
+    {
+      "key": "three-base/bonus",
+      "shots": 50,
+      "rightAdmission": 50,
+      "start": 0,
+      "returned": 0,
+      "remaining": 0,
+      "stalled": 0,
+      "lcd": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "safe": true
+    },
+    {
+      "key": "ball-r20/rush",
+      "shots": 50,
+      "rightAdmission": 0,
+      "start": 0,
+      "returned": 0,
+      "remaining": 1,
+      "stalled": 1,
+      "lcd": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "safe": false
+    },
+    {
+      "key": "ball-r20/bonus",
+      "shots": 50,
+      "rightAdmission": 50,
+      "start": 0,
+      "returned": 0,
+      "remaining": 0,
+      "stalled": 0,
+      "lcd": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "safe": true
+    }
+  ],
+  "reasons": [
+    "rush: no actual target admission; functional diagnosis required",
+    "rush: unresolved baseline/candidate residual, stall, LCD or blocked launch"
+  ],
+  "scope": "Natural right safety only; actual shots denominator, not left admission performance. No count equality requirement or automatic adoption.",
+  "sourceSHA": "387b92da536db67361d479989680b1146b4b9351550d88619f0b4551bc85792b",
+  "commit": "67e1de9d6f20917d8b18ada62a69d6ab907bf7c9",
+  "records": [
+    {
+      "directory": "/private/tmp/silverball-s8-20261016/prototype/reference-review/s8-20261016/admission-continued/right/three-base-rush",
+      "compressedSHA": "f4af9ce9dc3accc51c62811ced8f0331a59049c90c9c1824b2f39f11ec81d788",
+      "expandedSHA": "be7b42211231a9abfac8ce9bff3b6c008c0eb5db30ad62c9478db9c606a20986"
+    },
+    {
+      "directory": "/private/tmp/silverball-s8-20261016/prototype/reference-review/s8-20261016/admission-continued/right/three-base-bonus",
+      "compressedSHA": "cfcaae5fe13a47333eb570431f8562f786a1f93e5ccc29868156fe169ff7e764",
+      "expandedSHA": "e3678841cb9e8191a3a63638f1c21abb1606f6617bdbd008a79224df567a344b"
+    },
+    {
+      "directory": "/private/tmp/silverball-s8-20261016/prototype/reference-review/s8-20261016/admission-continued/right/ball-r20-rush",
+      "compressedSHA": "f23e585e42bae98c8484a0e0b24ac7bbfc879d502a47a5c7e4f685362c6e73fc",
+      "expandedSHA": "f88d1ae85f50478990f185d9b065bc2ca36d7f3e9681b8989d379337348db794"
+    },
+    {
+      "directory": "/private/tmp/silverball-s8-20261016/prototype/reference-review/s8-20261016/admission-continued/right/ball-r20-bonus",
+      "compressedSHA": "d9ec279465f033639e83265d5d23a6c96563cc5bc7051c1fdaf6a3dd73693bb1",
+      "expandedSHA": "1191ef46837ac1da3489756426fd16ff1dee58866d7148a58d1bb8cf4ab221fc"
+    }
+  ]
+}

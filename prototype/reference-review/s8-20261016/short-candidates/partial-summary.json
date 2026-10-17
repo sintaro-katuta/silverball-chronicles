@@ -1,0 +1,134 @@
+{
+  "rows": [
+    {
+      "file": "road-pin2-phase-0.json.gz",
+      "id": "road-pin2",
+      "phase": 0,
+      "shots": 196,
+      "start": 6,
+      "normal": 7,
+      "returned": 0,
+      "out": 183,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 45.26071428561562,
+      "countsValid": true,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "firstTurnRegions": {
+        "A": 17,
+        "B": 132
+      },
+      "firstContactRegions": {
+        "A": 42,
+        "B": 0
+      },
+      "firstPinIds": {
+        "27": 42,
+        "39": 51,
+        "48": 101,
+        "50": 1,
+        "52": 1
+      },
+      "unobservedFirstTurn": 0,
+      "unobservedFirstPinContact": 0,
+      "terminalReached": 12,
+      "firstDescendingZones": {
+        "left": 140,
+        "envelope": 31,
+        "right": 25,
+        "unobserved": 0
+      },
+      "firstTurnClassifications": {
+        "A": 28,
+        "B": 143,
+        "overlap": 7,
+        "outside": 18,
+        "unobserved": 0
+      },
+      "movedPins": 1,
+      "totalDistance": 0.25,
+      "wallMilliseconds": 10607.433292000002
+    },
+    {
+      "file": "heso-pair-phase-0.json.gz",
+      "id": "heso-pair",
+      "phase": 0,
+      "shots": 196,
+      "start": 11,
+      "normal": 3,
+      "returned": 0,
+      "out": 182,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 46.379166666565595,
+      "countsValid": true,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "firstTurnRegions": {
+        "A": 17,
+        "B": 132
+      },
+      "firstContactRegions": {
+        "A": 42,
+        "B": 0
+      },
+      "firstPinIds": {
+        "27": 42,
+        "39": 51,
+        "48": 101,
+        "50": 1,
+        "52": 1
+      },
+      "unobservedFirstTurn": 0,
+      "unobservedFirstPinContact": 0,
+      "terminalReached": 12,
+      "firstDescendingZones": {
+        "left": 150,
+        "envelope": 19,
+        "right": 27,
+        "unobserved": 0
+      },
+      "firstTurnClassifications": {
+        "A": 28,
+        "B": 143,
+        "overlap": 7,
+        "outside": 18,
+        "unobserved": 0
+      },
+      "movedPins": 2,
+      "totalDistance": 0.5,
+      "wallMilliseconds": 10531.419666999998
+    }
+  ],
+  "skipped": [
+    {
+      "id": "jump-pin90",
+      "config": {
+        "leftAdmissionGuides": true,
+        "hesoMouthWidth": 20,
+        "launchRailProfile": "legacy",
+        "normalPower": 0.18,
+        "id": "jump-pin90",
+        "label": "ジャンプ相当ID90を上へ0.25",
+        "moves": [
+          {
+            "pinId": 90,
+            "dx": 0,
+            "dy": -0.25
+          }
+        ]
+      },
+      "valid": false,
+      "skipReason": "Pin 90: fixed polygon heso-tray-0"
+    }
+  ]
+}

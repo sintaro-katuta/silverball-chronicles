@@ -1,0 +1,65 @@
+{
+  "shotLimit": 250,
+  "maxFiringSeconds": 300,
+  "drain": 45,
+  "replayFPS": 30,
+  "power": 0.18,
+  "phases": [
+    0,
+    0.175,
+    0.35,
+    0.525
+  ],
+  "target": {
+    "threeConditionsShots": 750,
+    "minimumTotalStart": 60,
+    "meanStartPer250": 20
+  },
+  "scope": "Single setting/phase; report actual shots and start after every run. Only frozen declared single-pin displacement, wheel centre offset or diagram ball ratio; independent hypotheses with declared rotor profile. No coefficient changes, automatic next trial or adoption.",
+  "case": {
+    "id": "three-road2-right050",
+    "label": "道入口2だけ右0.5",
+    "leftAdmissionGuides": false,
+    "hesoMouthWidth": 20,
+    "launchRailProfile": "legacy",
+    "normalPower": 0.18,
+    "moves": [
+      {
+        "pinId": 2,
+        "dx": 0.5,
+        "dy": 0
+      }
+    ],
+    "windmillOffset": {
+      "dx": 0,
+      "dy": 0
+    },
+    "windmillShapeProfile": "photo-three-vane"
+  },
+  "phase": 0,
+  "mode": "normal",
+  "configSHA": "53d71d391c3251cc84ea9a2a0fcbb41ab15404d29aa1390f8c45b5838ad4ddef",
+  "inspection": {
+    "valid": false,
+    "skipReason": "Pins 2/3: centre clearance below 4",
+    "windmill": null
+  },
+  "command": [
+    "/opt/homebrew/Cellar/node/26.11.0/bin/node",
+    "/private/tmp/silverball-s8-20261016/prototype/tools/s8-admission-comparison.mjs",
+    "--stage",
+    "preflight",
+    "--case",
+    "three-road2-right050",
+    "--phase",
+    "0",
+    "--mode",
+    "normal",
+    "--plan",
+    "docs/agile/S8_ADMISSION_UPSTREAM_PLAN.md",
+    "--manifest",
+    "prototype/tools/s8-admission-upstream-cases.json",
+    "--out",
+    "prototype/reference-review/s8-20261016/admission-upstream-implementation/preflight-three-road2-right050"
+  ]
+}

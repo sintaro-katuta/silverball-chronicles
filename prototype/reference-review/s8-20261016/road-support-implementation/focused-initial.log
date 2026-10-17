@@ -1,0 +1,41 @@
+✖ default and all previous comparison APIs reject the old right0.5; profile cannot enter through old config or options (37.99375ms)
+✔ support23 exactcase requires original radii/roles, non-overlapping shafts and conservative head frames (2.548375ms)
+✔ exception is onlypair2/3; original101 attributes, other pair threshold, fixed inputs and standard metadata stay unchanged (8.699083ms)
+✔ real unchanged pin solver records correction and reflection separately; no hidden support wall or altered coefficient (1.91925ms)
+✔ new profile is non-acting beyond declared coordinates, and actual short output is identical with observer ON/OFF (200.62375ms)
+✔ dedicated prepare and exact250 control preserve profile identity/geometry; missing or mixed policy is rejected (303.799167ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 621.978334
+
+✖ failing tests:
+
+test at prototype/tests/road-support-profile.test.js:9:1
+✖ default and all previous comparison APIs reject the old right0.5; profile cannot enter through old config or options (37.99375ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /below 4/. Input:
+  
+  'Error: S8 only permits declared independent cases'
+  
+      at TestContext.<anonymous> (file:///private/tmp/silverball-s8-20261016/prototype/tests/road-support-profile.test.js:11:86)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: Error: S8 only permits declared independent cases
+        at declared (file:///private/tmp/silverball-s8-20261016/prototype/src/dev/s8-pin-comparison.js:19:123)
+        at measureS8 (file:///private/tmp/silverball-s8-20261016/prototype/src/dev/s8-pin-comparison.js:33:2)
+        at file:///private/tmp/silverball-s8-20261016/prototype/tests/road-support-profile.test.js:11:97
+        at getActual (node:assert:580:5)
+        at strict.throws (node:assert:728:24)
+        at TestContext.<anonymous> (file:///private/tmp/silverball-s8-20261016/prototype/tests/road-support-profile.test.js:11:86)
+        at async Test.run (node:internal/test_runner/test:1409:7)
+        at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3),
+    expected: /below 4/,
+    operator: 'throws',
+    diff: 'simple'
+  }

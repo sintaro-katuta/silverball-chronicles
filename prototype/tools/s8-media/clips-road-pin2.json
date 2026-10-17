@@ -1,0 +1,37 @@
+{
+  "selectionStatus": "ヘソ増の採用未達・新釘候補は不採用／現配置維持",
+  "labels": [
+    "対照：元101本・発射0.18",
+    "道入口ID2を下へ0.25（不採用）"
+  ],
+  "clips": [
+    {
+      "id": "road-whole",
+      "start": 10,
+      "seconds": 6,
+      "view": "whole",
+      "ballIds": [
+        15,
+        15
+      ]
+    },
+    {
+      "id": "road-local",
+      "start": 10,
+      "seconds": 6,
+      "view": "custom",
+      "crop": {
+        "x": 35,
+        "y": 300,
+        "w": 65,
+        "h": 79.95
+      },
+      "ballIds": [
+        15,
+        15
+      ]
+    }
+  ],
+  "stills": [],
+  "note": "Silent evidence clips only; actual30Hz coordinates at1x. Road two clips replay same10..16s; heso67..73s includes both actual admissions. No physics recomputation/narration/Remotion."
+}

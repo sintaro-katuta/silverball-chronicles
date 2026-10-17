@@ -1,0 +1,122 @@
+{
+  "scope": "Independent read-only audit of five fresh250 screen cases",
+  "head": "70cb5a63a7bee310f04b75484fd0148c9b87b306",
+  "sourceSHA": "3d8a84df9cbe7ebec50066f67dd21d7098af621db3efe374978643417a0e2736",
+  "inputCount": 202,
+  "allCurrentInputBytesExact": true,
+  "planSHA": "ad0d9554ed051a130112fec6d70284fc69fab718c2b20d3ba3351391a89d8b2b",
+  "caseManifestSHA": "6bedb734b2821923cecb08bcc31f519aa1e29af004fda0221969c456d3d23f52",
+  "rows": [
+    {
+      "case": "legacy-control",
+      "phase": 0,
+      "actualShots": 250,
+      "counts": {
+        "out": 234,
+        "start": 13,
+        "normal": 3
+      },
+      "maxGapSeconds": 30.926190476122926,
+      "frames": 5938,
+      "stopStep": 18350,
+      "endStep": 23750,
+      "compressedSHA": "afdf1c0eee00b1409bbe2a71023eeb3f265fa3402eb87b454f73c2e8ec75706e",
+      "compressedBytes": 1792102,
+      "expandedSHA": "9efe2a7b9277c88759eaf790566253624b6d6f9785290d260d7f256446443aaa",
+      "expandedBytes": 10143296,
+      "safetyAllZero": true
+    },
+    {
+      "case": "three-base",
+      "phase": 0,
+      "actualShots": 250,
+      "counts": {
+        "out": 237,
+        "start": 9,
+        "normal": 4
+      },
+      "maxGapSeconds": 70.1892857142684,
+      "frames": 5938,
+      "stopStep": 18350,
+      "endStep": 23750,
+      "compressedSHA": "574c9ba0dc97cd5c1315bfde83074f228eb70707251f26a467acce3c4725b90c",
+      "compressedBytes": 1743683,
+      "expandedSHA": "16e4184a12c8c78bb64d0453914cf2971d3713d166526ef625e0f5b499892fcc",
+      "expandedBytes": 10393958,
+      "safetyAllZero": true
+    },
+    {
+      "case": "three-road-group-left300",
+      "phase": 0,
+      "actualShots": 250,
+      "counts": {
+        "out": 239,
+        "normal": 4,
+        "start": 7
+      },
+      "maxGapSeconds": 94.81428571415455,
+      "frames": 5938,
+      "stopStep": 18350,
+      "endStep": 23750,
+      "compressedSHA": "af0e99db574ecb2d7231acb5e16c1caf4f080342bfc03a0b79a2ace4cb265938",
+      "compressedBytes": 1733913,
+      "expandedSHA": "e3d57aa82845707940fed04e4036e75b3dfd5d36d4e15cfd909e597dc38c6933",
+      "expandedBytes": 10341953,
+      "safetyAllZero": true
+    },
+    {
+      "case": "three-road-group-right300",
+      "phase": 0,
+      "actualShots": 250,
+      "counts": {
+        "out": 242,
+        "normal": 2,
+        "start": 6
+      },
+      "maxGapSeconds": 32.39761904754843,
+      "frames": 5938,
+      "stopStep": 18350,
+      "endStep": 23750,
+      "compressedSHA": "9e2c2e252aa4d0bc634dfe1effd491a652ae9ae058dbad9024faa0849b69d729",
+      "compressedBytes": 1750491,
+      "expandedSHA": "7e1e698557f8bc5c9c5aa0d9c9795ef0c294be26879bd5d274516a81067b6395",
+      "expandedBytes": 10405427,
+      "safetyAllZero": true
+    },
+    {
+      "case": "three-road-group-up200",
+      "phase": 0,
+      "actualShots": 250,
+      "counts": {
+        "out": 228,
+        "start": 13,
+        "normal": 9
+      },
+      "maxGapSeconds": 39.31249999991422,
+      "frames": 5938,
+      "stopStep": 18350,
+      "endStep": 23750,
+      "compressedSHA": "de823ec77194d8a046fa320812f6074bc2d56ff563088d0afb0f2d9bc1354c48",
+      "compressedBytes": 1736186,
+      "expandedSHA": "852c08cdc0b895ab07b86dba6859977211811257ef1f79bf551a520420428be0",
+      "expandedBytes": 10365900,
+      "safetyAllZero": true
+    }
+  ],
+  "original101IdsAndAttributesExact": true,
+  "allThreeCandidates325GroupPairVectorsExact": true,
+  "outside75CoordinatesExact": true,
+  "allFixedPartsExactVersusCurrentThreeVane": true,
+  "strictSpacingAndDefaultMax1ReadConfirmedBeforeTrials": true,
+  "validatorReadbackPassed": 5,
+  "selected": null,
+  "confirmationRuns": 0,
+  "performanceTargetMet": false,
+  "selectionReason": "left7/right6/up13 do not strictly exceed legacy13; up ties legacy despite exceeding current9",
+  "limits": [
+    "All safety zero is not admission improvement.",
+    "phase0 results are not confirmation750 or real-machine rate guarantees.",
+    "31 related test passes are preparation evidence, not new full regression success.",
+    "No new trial/source/Git/video changes by auditor."
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "scope": "3 fresh phase0 cases; independent read-only audit",
+  "head": "7a2f7aa753f3a7db770718a0ba748d5021b2a44d",
+  "sourceSHA": "ca42ec89b78f74ab11a6f05110357322830f32229e9568ac2322afcc28d02bfa",
+  "inputCount": 199,
+  "allCurrentInputBytesExact": true,
+  "planSHA": "3c6f57eb96a494b13235216ba1e4a6de88f0f5bf602fd74681c59bc26a475ff2",
+  "caseManifestSHA": "1fe6dcc437a1ce94e5b287478e7d2065340a4a896a19161807b18181bac9d323",
+  "rows": [
+    {
+      "case": "legacy-control",
+      "shots": 250,
+      "counts": {
+        "out": 234,
+        "start": 13,
+        "normal": 3
+      },
+      "maxGapSeconds": 30.926190476122926,
+      "frames": 5938,
+      "successfulWheelUniqueBalls": 124,
+      "successfulRoadUniqueBalls": 47,
+      "compressedSHA": "d68319f6e1d5e592f153dc447e00a0fa7954c73084abfac9cffcdc5db05fe227",
+      "expandedSHA": "04e5146a5edd274fcbf12767bf697dd3472997048c8e6e6b134e83b352e4892a",
+      "safetyAllZero": true
+    },
+    {
+      "case": "three-base",
+      "shots": 250,
+      "counts": {
+        "out": 237,
+        "start": 9,
+        "normal": 4
+      },
+      "maxGapSeconds": 70.1892857142684,
+      "frames": 5938,
+      "successfulWheelUniqueBalls": 70,
+      "successfulRoadUniqueBalls": 56,
+      "compressedSHA": "77c327175dc483dec2f3cef869509e9f7a5d80a2b2c051b994a45d1b180b7eb9",
+      "expandedSHA": "040aea65dc9af69ee0b6142e5d6f511e353a54c742cffa27219e74339e1b7352",
+      "safetyAllZero": true
+    },
+    {
+      "case": "three-feed-wheel-left175",
+      "shots": 250,
+      "counts": {
+        "out": 235,
+        "start": 10,
+        "normal": 5
+      },
+      "maxGapSeconds": 41.578571428480515,
+      "frames": 5938,
+      "successfulWheelUniqueBalls": 100,
+      "successfulRoadUniqueBalls": 63,
+      "compressedSHA": "dded036d2b93d20f7ae0d6802db91cfc64f5b1acac4ca8f1c16f0156d9ea5dd2",
+      "expandedSHA": "870cca4cbe2af0085b4de71b52fd4a5768bb938399c165f5de1d4652c0988280",
+      "safetyAllZero": true
+    }
+  ],
+  "all101PinsAndAttributesExact": true,
+  "onlyFactoryFixedDifferenceVersusThreeBase": "windmill centre x64 ->62.25",
+  "internalFlowProfile": "feed-left175-v1",
+  "allFramesEndpointsCentreExact": true,
+  "validatorReadbackPassed": 3,
+  "selected": null,
+  "selectionReason": "candidate10/250 does not strictly exceed legacy13/250",
+  "confirmationRuns": 0,
+  "performanceTargetMet": false,
+  "limits": [
+    "Successful reflection unique-ball counts are not all position-only contacts.",
+    "More wheel/road contact balls do not establish admission improvement or causation.",
+    "Old diagnostic7a6/sourcec66 remains historical;197loader rejects changed inputs by design.",
+    "No new trial/source/Git/video changes by auditor."
+  ]
+}

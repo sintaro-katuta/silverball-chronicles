@@ -1,0 +1,51 @@
+{
+  "shotLimit": 250,
+  "maxFiringSeconds": 300,
+  "drain": 45,
+  "replayFPS": 30,
+  "power": 0.18,
+  "phases": [
+    0,
+    0.175,
+    0.35,
+    0.525
+  ],
+  "target": {
+    "threeConditionsShots": 750,
+    "minimumTotalStart": 60,
+    "meanStartPer250": 20
+  },
+  "scope": "Only original baseline; no candidate or adjustment. Compare all physical/configuration fields with historical OFF run.",
+  "config": {
+    "id": "baseline",
+    "label": "変更前・風車の元位置",
+    "leftAdmissionGuides": true,
+    "hesoMouthWidth": 20,
+    "launchRailProfile": "legacy",
+    "normalPower": 0.18,
+    "moves": [],
+    "windmillOffset": {
+      "dx": 0,
+      "dy": 0
+    }
+  },
+  "phase": 0,
+  "command": [
+    "/opt/homebrew/Cellar/node/26.11.0/bin/node",
+    "/private/tmp/silverball-s8-20261016/prototype/tools/s8-flow-trace.mjs",
+    "--stage",
+    "run",
+    "--out",
+    "prototype/reference-review/s8-20261016/route-trace/baseline-phase0",
+    "--plan",
+    "docs/agile/S8_ROUTE_PLAN.md",
+    "--manifest",
+    "prototype/tools/s8-windmill-cases.json",
+    "--oracle",
+    "prototype/reference-review/s8-20261016/shot250-windmill/baseline-phase0/result.json.gz",
+    "--phase",
+    "0",
+    "--expected-source",
+    "e5e6b5d4e04b43f5f82a1cd20b56828588e332a9f5ac6a0aa96ba2a4060355e0"
+  ]
+}

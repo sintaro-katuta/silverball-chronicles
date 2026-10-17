@@ -1,0 +1,26 @@
+{
+  "commit": "db96be7e36ec049f472a9970634f7651abc668d1",
+  "sourceSHA": "b41966980f8d12cafc66ffd5c59ea4f0db388cb50f4a39a9534e6595dbc1bfa1",
+  "planSHA": "2ae43bb666e0b56ceed9c5833382aa1fc46d794dd12f90c063977d624e79f388",
+  "caseManifestSHA": "754b2218546d61fed503036488517d4c70c22ed5d25639954248182911f1f264",
+  "uniqueInputs": 192,
+  "node": "v26.11.0",
+  "preflightCases": [
+    "legacy-control",
+    "three-base",
+    "three-wheel-right025",
+    "three-wheel-up025",
+    "three-road2-right025",
+    "three-combo-right025",
+    "three-combo-up025"
+  ],
+  "preflightAllSuccess": true,
+  "measurementStarted": false,
+  "directTests": {
+    "passed": 11,
+    "log": "focused-final.log"
+  },
+  "compatibility": "compatibility-proof.json",
+  "formalTrials": 0,
+  "scope": "Only two explicit combined declarations added. Historical single-case guards/physical/measurement/render unchanged."
+}

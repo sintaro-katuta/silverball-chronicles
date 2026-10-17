@@ -1,0 +1,161 @@
+{
+  "rows": [
+    {
+      "file": "road-pin2-phase-0.json.gz",
+      "id": "road-pin2",
+      "phase": 0,
+      "shots": 196,
+      "start": 6,
+      "normal": 7,
+      "returned": 0,
+      "out": 183,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 45.26071428561562,
+      "countsValid": true,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "firstTurnRegions": {
+        "A": 17,
+        "B": 132
+      },
+      "firstContactRegions": {
+        "A": 42,
+        "B": 0
+      },
+      "firstPinIds": {
+        "27": 42,
+        "39": 51,
+        "48": 101,
+        "50": 1,
+        "52": 1
+      },
+      "unobservedFirstTurn": 0,
+      "unobservedFirstPinContact": 0,
+      "terminalReached": 12,
+      "firstDescendingZones": {
+        "left": 140,
+        "envelope": 31,
+        "right": 25,
+        "unobserved": 0
+      },
+      "firstTurnClassifications": {
+        "A": 28,
+        "B": 143,
+        "overlap": 7,
+        "outside": 18,
+        "unobserved": 0
+      },
+      "movedPins": 1,
+      "totalDistance": 0.25,
+      "wallMilliseconds": 10607.433292000002
+    },
+    {
+      "file": "heso-pair-phase-0.json.gz",
+      "id": "heso-pair",
+      "phase": 0,
+      "shots": 196,
+      "start": 11,
+      "normal": 3,
+      "returned": 0,
+      "out": 182,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 46.379166666565595,
+      "countsValid": true,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "firstTurnRegions": {
+        "A": 17,
+        "B": 132
+      },
+      "firstContactRegions": {
+        "A": 42,
+        "B": 0
+      },
+      "firstPinIds": {
+        "27": 42,
+        "39": 51,
+        "48": 101,
+        "50": 1,
+        "52": 1
+      },
+      "unobservedFirstTurn": 0,
+      "unobservedFirstPinContact": 0,
+      "terminalReached": 12,
+      "firstDescendingZones": {
+        "left": 150,
+        "envelope": 19,
+        "right": 27,
+        "unobserved": 0
+      },
+      "firstTurnClassifications": {
+        "A": 28,
+        "B": 143,
+        "overlap": 7,
+        "outside": 18,
+        "unobserved": 0
+      },
+      "movedPins": 2,
+      "totalDistance": 0.5,
+      "wallMilliseconds": 10531.419666999998
+    }
+  ],
+  "rawManifest": [
+    {
+      "file": "road-pin2-phase-0.json.gz",
+      "compressedSHA": "8f70798faacfdafb148170c5f7e2ba4d666ad0bb575f309f002dab5796ed74cd",
+      "compressedBytes": 1411641,
+      "expandedSHA": "22a6a598f22451685f49dde8bbe4c42ea850d8efa1dd59912017cd94bda7e8c7",
+      "expandedBytes": 8080382,
+      "sourceSHA": "9ecdb18e997a4b81397f3bc9f5bfffced9eb42ef986b7eec3e4db91c3ca8042c",
+      "configSHA": "79723a3a8b6e2e9808ca61178e92d71b27ea86a45c69877e2f8a76c2e54778cb",
+      "layoutSHA": "4cacf9e74961aa29f4088bd04aa287b0326481e28e57192504b744897ccfa180",
+      "replayFPS": 30,
+      "frames": 4951
+    },
+    {
+      "file": "heso-pair-phase-0.json.gz",
+      "compressedSHA": "f8aa5c60fc17d9444c26e015a92d677f2bf92a6aa85bf0a79f76cacc15165e10",
+      "compressedBytes": 1391623,
+      "expandedSHA": "c9a6025db2993f3c6228b5497eea611ce6532d6fca7b1843bf0e14ff4b7c82ca",
+      "expandedBytes": 7982995,
+      "sourceSHA": "9ecdb18e997a4b81397f3bc9f5bfffced9eb42ef986b7eec3e4db91c3ca8042c",
+      "configSHA": "876412298c7c5b764b1843b200d71a9d2ba5119256fb6f8c6573c606e61e7aff",
+      "layoutSHA": "751a25379159ac8ebdcf1083fdaca3baaae09eb49d4a11e760c62025f3de98f9",
+      "replayFPS": 30,
+      "frames": 4951
+    }
+  ],
+  "skipped": [
+    {
+      "id": "jump-pin90",
+      "config": {
+        "leftAdmissionGuides": true,
+        "hesoMouthWidth": 20,
+        "launchRailProfile": "legacy",
+        "normalPower": 0.18,
+        "id": "jump-pin90",
+        "label": "ジャンプ相当ID90を上へ0.25",
+        "moves": [
+          {
+            "pinId": 90,
+            "dx": 0,
+            "dy": -0.25
+          }
+        ]
+      },
+      "valid": false,
+      "skipReason": "Pin 90: fixed polygon heso-tray-0"
+    }
+  ],
+  "decision": "PM screen/long aim review required; no automatic progression or adoption."
+}
