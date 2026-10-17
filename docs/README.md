@@ -409,3 +409,5 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [風車の手前の釘3案と250/750発の結果](agile/S8_UPPER_FEED_RESULTS.md)（未採用）
 
 - [釘の本数と盤面構造を保つ、大きい移動の検討方針](agile/S8_LARGER_PIN_POLICY.md)
+
+- [道26本を同時に大きく動かした比較結果](agile/S8_ROAD_GROUP_RESULTS.md)（初回9→13、選別不成立）
