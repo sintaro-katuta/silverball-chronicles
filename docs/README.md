@@ -425,3 +425,5 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [ローカル試遊の盤面起動エラーと修正確認](agile/S8_LOCAL_PLAY_FONT_FIX.md)
 
 - [ヘソ周りのガイド撤去（0.3.0向け）](prototype/HESO_GUIDE_REMOVAL_2026-10-16.md) — [承認台本](prototype/heso-guide-video/script.md)・[説明動画の制作と検証](prototype/heso-guide-video/PRODUCTION.md)。
+
+- [PR36：最新の釘配置を保持した統合と検証](agile/PR36_INTEGRATION.md)
