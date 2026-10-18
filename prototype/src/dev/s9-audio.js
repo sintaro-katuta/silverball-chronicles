@@ -4,12 +4,12 @@ import {reachSchedule} from '../pixi/reach-ending.js';
 import {musicPose,presentationSilenceWindows} from '../pixi/se/music-player.js';
 import {cabinetLightPose,cabinetSwordPose} from '../pixi/cabinet-light-motion.js';
 
-const files=import.meta.glob(['/reference-review/s9-20261018/audio-v1/**/*.mp3','/reference-review/s9-20261018/audio-v2/**/*.mp3'],{query:'?url',import:'default',eager:true});
-const manifests=import.meta.glob(['/reference-review/s9-20261018/audio-v1/manifest.json','/reference-review/s9-20261018/audio-v2/manifest.json'],{import:'default',eager:true});
+const files=import.meta.glob(['/reference-review/s9-20261018/audio-v3/**/*.mp3'],{query:'?url',import:'default',eager:true});
+const manifests=import.meta.glob(['/reference-review/s9-20261018/audio-v3/manifest.json'],{import:'default',eager:true});
 const items=Object.entries(manifests).flatMap(([path,manifest])=>manifest.items.map(item=>({...item,base:path.slice(0,path.lastIndexOf('/'))})));
 const el=id=>document.getElementById(id),players=[el('baseline'),el('candidate')];
 let auditionGain={baseline:1,candidate:1};
-const music={normal:'通常 · 月夜の旋律',battle:'戦闘 · 決意の一閃',bonus:'BONUS · 報酬の高揚',rush:'RUSH · 連続する挑戦'};
+const music=Object.fromEntries(['normal','battle','bonus','rush'].map(name=>[name,({normal:'通常',battle:'戦闘',bonus:'BONUS',rush:'RUSH'})[name]+' · '+(items.find(i=>i.id==='music-'+name)?.label??name)]));
 const effects={spin:'リール回転開始（追加）',stopLeft:'リール左停止（追加）',stopRight:'リール右停止（追加）',stopCenter:'リール中央停止（追加）',admission:'ヘソ入賞（追加）',development:'リーチ発展',pushPrompt:'PUSH表示',pushPress:'PUSH押下',heroHit:'通常斬撃',decisiveHit:'決着の一撃',revival:'復活',bonusStart:'BONUS開始',rushStart:'RUSH突入'};
 const names={...music,...effects,win:'当たり確定（維持）',rushWin:'RUSH当たり確定（維持）',loss:'敗北（維持）',silence:'無音',reach:'リーチ入口',arrival:'対峙',enemy:'敵の圧力',pressure:'劣勢',attention:'上部案内',upperSword:'上部剣',moon:'月',gather:'溜め',surge:'反撃への力',rally:'決意',vow:'構え',final:'一撃の前段'};
 const cutLabels={reach:'リーチ',arrival:'月下の対峙',enemy:'敵の攻撃',pressure:'劣勢からの構え',silence:'静けさ',attention:'上部へ視線を誘導',upper:'上部の剣と月',gather:'月光を集める',surge:'力を高める',rally:'決意',vow:'一撃への構え',final:'決意の一閃',decision:'当落の表示'};
@@ -27,8 +27,9 @@ function chooseSound(){
   for(const p of players)p.volume=Number(el('volume').value)*Math.max(0,Math.min(1,auditionGain[p.id]??1));
   const a=setSource('baseline',item?.baselinePath,item?.base);
   const b=setSource('candidate',item?.path,item?.base);
-  el('baseline-description').textContent=isMusic?'旧版の背景パッド素材。旋律のあるBGMではなく、本編の音量・フィルターを通す前の素材です。':name==='admission'?'変更前はヘソ専用の入賞音がありません。比較用の無音です。':name==='bonusStart'?'旧版のCHARGE音。新しいBONUS開始音と役割が近い比較用で、以前から同じイベントに割り当てられていた音ではありません。':'変更前の同じ用途・音型1の音です。音源単体を比較します。';
-  el('candidate-description').textContent=names[name]+(isMusic?'。新作BGMの一巡分です。本編では切替・反復・効果音に合わせた音量調整を行います。':'。新作の音型1です。本編の打点と音量は時間表・通しプレイで確認します。');
+  const gainText='比較用の再生ゲイン 基準 '+Number(auditionGain.baseline??1).toFixed(3)+' / 候補 '+Number(auditionGain.candidate??1).toFixed(3)+(Number.isFinite(auditionGain.targetLUFS)?'（統合ラウドネスの比較目安 '+auditionGain.targetLUFS.toFixed(2)+' LUFS）':'')+'。保存MP3の波形は変更していません。本編ミックスの録音ではありません。';
+  el('baseline-description').textContent='変更前S9の同じ用途（02054e8）の実音・音型1です。'+gainText;
+  el('candidate-description').textContent=(item?.label??names[name])+(isMusic?'。最新BGMの一巡分。'+item.bpm+' BPM / '+item.duration+'秒。':'。最新SEの音型1。')+'本編では既存の時計・無音窓・音量設定で再生します。'+gainText;
   el('status').textContent=a&&b?'基準と候補を一つずつ再生できます。':'この用途の音源は制作中です。出力後にページを読み直してください。';
 }
 function chooseKind(){
