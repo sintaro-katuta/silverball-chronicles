@@ -2,3 +2,9 @@
 *.wav
 *.webm
 *.mp4
+# Detailed capture samples are committed as lossless .json.gz archives.
+scene-*/normal.json
+scene-*/pressure-*.json
+scene-*/bonus.json
+scene-*/rush.json
+scene-*/battle-experience.json

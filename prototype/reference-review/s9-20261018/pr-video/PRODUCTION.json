@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "composition": "S9Review",
+  "head": "40e3b59797f313d2239f717d9a5e9ea5696f4ccf",
+  "renderCommand": "tools/pr-video/node_modules/.bin/remotion render tools/pr-video/s9-index.tsx S9Review prototype/reference-review/s9-20261018/pr-video/s9-review.mp4 --public-dir=prototype/reference-review/s9-20261018/pr-video/public --browser-executable='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --concurrency=2 --codec=h264 --crf=24 --audio-bitrate=192k --log=info",
+  "inputInventory": "render-inputs-before.json",
+  "inputCount": 25,
+  "inventoryTiming": "Snapshot captured during ongoing render; post-render comparison exact. Not claimed as a pre-render snapshot.",
+  "afterInventory": "render-inputs-after.json",
+  "movieSHA": "6923755d8cc4dbb1a1ca4319998dc5fc7f7635cc245f976b1308fe208a9f78ca",
+  "bytes": 8644762,
+  "durationFrames": 3181,
+  "videoDuration": 106.03333333333333,
+  "containerDuration": 106.090667,
+  "approval": "Existing user-approved seven paragraphs, exact text/order guarded against docs/agile/s9-video/script.json",
+  "tts": "PM-produced canonical public/audio/timeline.json and WAVs; no synthesis by renderer",
+  "soundPolicy": "Narration with silent game stills; eight sequential non-narrated sample windows, actual recorded game audio except two standalone PCM waveform clips",
+  "verification": "VIDEO_VERIFICATION.json",
+  "logs": [
+    "render.log",
+    "verify.log",
+    "full-decode.log"
+  ],
+  "nativePlayback": "PM pending",
+  "sourceFiles": [
+    "tools/pr-video/s9-index.tsx",
+    "tools/pr-video/s9-data.json",
+    "tools/pr-video/s9-prepare-media.py",
+    "tools/pr-video/s9-verify-media.py"
+  ],
+  "sourceSHA": {
+    "tools/pr-video/s9-index.tsx": "f86c4cd39e0e564d6013f23fc88a4d0eb80b3d20079868d6d711523fbc62df4b",
+    "tools/pr-video/s9-data.json": "100d90fdb3160e6430fc2c51b495118aa3a265a635742352040474b014ceff22",
+    "tools/pr-video/s9-prepare-media.py": "083fccff4b1645cc76b34a03d1614a59dbd2911155248dbc17f8acd835710581",
+    "tools/pr-video/s9-verify-media.py": "2e3331568e98685e96f9681f4657e9dbc35fff94ba7960506a6991f76036e495"
+  }
+}
