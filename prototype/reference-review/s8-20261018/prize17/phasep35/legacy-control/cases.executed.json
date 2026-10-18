@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "legacy-control",
+      "label": "旧形状参照・皿なし",
+      "leftAdmissionGuides": false,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0
+      },
+      "windmillShapeProfile": "legacy-capsules"
+    },
+    {
+      "id": "three-base",
+      "label": "3枚羽根の新基準",
+      "leftAdmissionGuides": false,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0
+      },
+      "windmillShapeProfile": "photo-three-vane"
+    },
+    {
+      "id": "three-prize17-left200",
+      "label": "寄り17本47〜63を左2",
+      "leftAdmissionGuides": false,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 47,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 48,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 49,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 50,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 51,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 52,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 53,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 54,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 55,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 56,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 57,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 58,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 59,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 60,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 61,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 62,
+          "dx": -2,
+          "dy": 0
+        },
+        {
+          "pinId": 63,
+          "dx": -2,
+          "dy": 0
+        }
+      ],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0
+      },
+      "windmillShapeProfile": "photo-three-vane"
+    }
+  ]
+}

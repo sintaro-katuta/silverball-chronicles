@@ -1,0 +1,27 @@
+{
+  "sourceUnchanged": true,
+  "gitUnchanged": true,
+  "gitHEAD": "5218eb3853725aae02c0b9f50ef0e5b788624a76",
+  "srcInventorySHA": "c91c0574bc9ba615c8f55a890998102c96a8918b4965a32bc06d0e11d27b8ad5",
+  "srcFiles": 202,
+  "unit": {
+    "sessionID": 8692,
+    "command": "npm --prefix prototype test",
+    "exitCode": 1,
+    "tests": 680,
+    "passCount": 679,
+    "failCount": 1,
+    "durationMS": 262099.002541,
+    "failure": "architecture.test.js27: domain/production-board-profile.js imports pixi/source-layout.js; existing dependency-layer constraint",
+    "log": "unit.log"
+  },
+  "build": {
+    "sessionID": 97276,
+    "command": "npm --prefix prototype run build:release",
+    "exitCode": 0,
+    "log": "build.log"
+  },
+  "browserStarted": false,
+  "sourceEditsDuringRun": false,
+  "scope": "Product integration generation, not frozen comparison source4afe53. Failure kept; proposed app module relocation not applied."
+}

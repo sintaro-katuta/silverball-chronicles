@@ -1,0 +1,44 @@
+{
+  "purpose": "Source clarification; no new simulation",
+  "metric": "Stored s8ShotObservation.rows[].route.firstDescending.zone, not 30Hz replay reconstruction or wheel-contact split",
+  "rules": {
+    "sourceY": 713,
+    "eligibleX": [
+      72,
+      220
+    ],
+    "leftXLessThan": 136,
+    "envelopeX": [
+      136,
+      176
+    ],
+    "rightXGreaterThan": 176,
+    "observations": "actual advanceBall endpoint observations and post-step correction points; first retained descending side crossing; no current-vy condition"
+  },
+  "rows": [
+    {
+      "case": "legacy-control",
+      "shots": 250,
+      "classification": {
+        "left": 180,
+        "right": 40,
+        "envelope": 30
+      },
+      "compressedSHA": "ea915bbbf688c2f07e7c8326a76090301ec434d1c66fd3f237a728a5d33cde72",
+      "expandedSHA": "4d7a650ce0da433116a380af1a31115133d211b431070f13ad5d31c3000bce31",
+      "sourceSHA": "9384bcdeecdef26504f25a35ca431d645163ecc4a5f92148d109e66c5d247c42"
+    },
+    {
+      "case": "three-base",
+      "shots": 250,
+      "classification": {
+        "left": 186,
+        "right": 52,
+        "envelope": 12
+      },
+      "compressedSHA": "c4195f4c41b050085b690ab6230bfcba857575ff8ed3c273a22809261089c585",
+      "expandedSHA": "97314b1549f9e13b122a6083b87b58a9efafb67cb0802c2e0958fbf3807bb2c5",
+      "sourceSHA": "9384bcdeecdef26504f25a35ca431d645163ecc4a5f92148d109e66c5d247c42"
+    }
+  ]
+}

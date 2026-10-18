@@ -1,0 +1,79 @@
+{
+  "id": "wheel-down025",
+  "phase": 0,
+  "windmillOffset": {
+    "dx": 0,
+    "dy": 0.25
+  },
+  "initialMechanisms": [
+    {
+      "kind": "windmill",
+      "x": 64,
+      "y": 476.75,
+      "angle": 0.28,
+      "omega": 0,
+      "radius": 10,
+      "armRadius": 0.8
+    }
+  ],
+  "terminalMechanisms": [
+    {
+      "kind": "windmill",
+      "x": 64,
+      "y": 476.75,
+      "angle": -128.33349216463156,
+      "omega": -1.6898995914524324e-12,
+      "radius": 10,
+      "armRadius": 0.8,
+      "lastHit": 157.90000000002073
+    }
+  ],
+  "shots": 250,
+  "start": 11,
+  "normal": 8,
+  "returned": 0,
+  "out": 231,
+  "remaining": 0,
+  "stalled": 0,
+  "maxGap": 49.88333333322464,
+  "countsValid": true,
+  "lcd": {
+    "centre": 0,
+    "boundary": 0,
+    "frontCentre": 0,
+    "frontBoundary": 0
+  },
+  "firstTurnRegions": {
+    "A": 23,
+    "B": 168
+  },
+  "firstContactRegions": {
+    "A": 55,
+    "B": 0
+  },
+  "firstPinIds": {
+    "27": 55,
+    "39": 68,
+    "48": 125,
+    "50": 1,
+    "52": 1
+  },
+  "unobservedFirstTurn": 0,
+  "unobservedFirstPinContact": 0,
+  "terminalReached": 18,
+  "firstDescendingZones": {
+    "left": 174,
+    "envelope": 42,
+    "right": 34,
+    "unobserved": 0
+  },
+  "shotLimit": 250,
+  "actualFiringSeconds": 152.91666666666666,
+  "actualDrainSeconds": 45,
+  "atStopRemaining": 7,
+  "targetPer250": 20,
+  "targetReachedThisCondition": false,
+  "note": "Per-condition observation only; three-condition target and no-worse baseline checks require all paired results. No automatic adoption.",
+  "file": "result.json.gz",
+  "wallMilliseconds": 13588.409583999999
+}

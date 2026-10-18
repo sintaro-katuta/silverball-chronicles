@@ -1,0 +1,303 @@
+{
+  "scope": "Independent read-only audit of all5 screen and9 confirmation records",
+  "head": "62671c10cb592f1254def777067b68f42a77c668",
+  "sourceSHA": "9465963302b5b2941b930f71dbe2c7dd432100af6b58039e7042a8bd4bd8b125",
+  "inputCount": 200,
+  "allInputBytesExact": true,
+  "planSHA": "b50dadca2669b07f1e82a760ff3b186301bfb18517de6feb1f8a299b851645e9",
+  "caseManifestSHA": "cc82d2406bb1e356867d43a944aa7ecb49ec11f8a6ade8cf4e07878760ba91c0",
+  "rows": [
+    {
+      "directory": "prototype/reference-review/s8-20261016/upper-feed/phase0/legacy-control",
+      "phase": 0,
+      "case": "legacy-control",
+      "shots": 250,
+      "counts": {
+        "out": 234,
+        "start": 13,
+        "normal": 3
+      },
+      "maxGapSeconds": 30.926190476122926,
+      "frames": 5938,
+      "compressedSHA": "8ce2a6beb58dfc95094d798144d8d07a4cf30bc7f72eb04c8744cc0707c13737",
+      "expandedSHA": "c3f02e920cb4100a0e16f5b9ab83cb345e961134a594bd0e30f2c3403db290a0",
+      "safetyAllZero": true
+    },
+    {
+      "directory": "prototype/reference-review/s8-20261016/upper-feed/phase0/three-base",
+      "phase": 0,
+      "case": "three-base",
+      "shots": 250,
+      "counts": {
+        "out": 237,
+        "start": 9,
+        "normal": 4
+      },
+      "maxGapSeconds": 70.1892857142684,
+      "frames": 5938,
+      "compressedSHA": "2dc3837e7921083e0a1e085cd4d02780f5450e6a7023b6e0ff3ec958005cee7a",
+      "expandedSHA": "f01bc0a823c2022735045e1a01744811011829bc4c8ec7aa338d37ace943a65d",
+      "safetyAllZero": true
+    },
+    {
+      "directory": "prototype/reference-review/s8-20261016/upper-feed/phase0/three-upper46-right050",
+      "phase": 0,
+      "case": "three-upper46-right050",
+      "shots": 250,
+      "counts": {
+        "out": 238,
+        "start": 8,
+        "normal": 4
+      },
+      "maxGapSeconds": 52.23824404750471,
+      "frames": 5936,
+      "compressedSHA": "6c0b2219539d4d2b933b5beb52c8dde8e1dd41c819685e74b4a75c4adf9999c1",
+      "expandedSHA": "ddd7ea5ae8f2baaa491a50b44ab6e62d0f645b35172036c2ef8ec57adb76965c",
+      "safetyAllZero": true
+    },
+    {
+      "directory": "prototype/reference-review/s8-20261016/upper-feed/phase0/three-upper48-down050",
+      "phase": 0,
+      "case": "three-upper48-down050",
+      "shots": 250,
+      "counts": {
+        "out": 241,
+        "start": 5,
+        "normal": 4
+      },
+      "maxGapSeconds": 60.160714285839106,
+      "frames": 5919,
+      "compressedSHA": "3647e3355761e45b4b784f5c44c8b4df38a0ffa5bf6237fd59adea6446d74241",
+      "expandedSHA": "05e58b552a890e0d1d2688fccda2a3c3224b6de69efab6d41e998fe8650864c4",
+      "safetyAllZero": true
+    },
+    {
+      "directory": "prototype/reference-review/s8-20261016/upper-feed/phase0/three-upper48-up050",
+      "phase": 0,
+      "case": "three-upper48-up050",
+      "shots": 250,
+      "counts": {
+        "start": 16,
+        "out": 224,
+        "normal": 10
+      },
+      "maxGapSeconds": 33.217857142784496,
+      "frames": 5912,
+      "compressedSHA": "fa2c865e24ef695d6790727804e2f6ca362c01427329b5ecf7cf5827e149d9fa",
+      "expandedSHA": "3808929868e1ce8ec7de447a011d08a6a486081f8276fa0efbe02f23ae71275e",
+      "safetyAllZero": true
+    },
+    {
+      "directory": "prototype/reference-review/s8-20261016/upper-feed/phasep175/legacy-control",
+      "phase": 0.175,
+      "case": "legacy-control",
+      "shots": 250,
+      "counts": {
+        "out": 235,
+        "normal": 5,
+        "start": 10
+      },
+      "maxGapSeconds": 38.632142857134106,
+      "frames": 5948,
+      "compressedSHA": "1908471dc2d871677057805b233185388720ad3784400930d5e88a0fc16aa003",
+      "expandedSHA": "2d183b025aa8954009c027c10230747c03310b096cb50af4552261126fdbae68",
+      "safetyAllZero": true
+    },
+    {
+      "directory": "prototype/reference-review/s8-20261016/upper-feed/phasep175/three-base",
+      "phase": 0.175,
+      "case": "three-base",
+      "shots": 250,
+      "counts": {
+        "out": 235,
+        "start": 11,
+        "normal": 4
+      },
+      "maxGapSeconds": 57.50833333341272,
+      "frames": 5948,
+      "compressedSHA": "a9501ed66b3fc549d83b4e13c434d1350d78024eb31a89e23a1163a923b9bb5a",
+      "expandedSHA": "5e781e4f1dccb63d63082aa5ccc74f725378ee8716a49cdbe6523472e06c786a",
+      "safetyAllZero": true
+    },
+    {
+      "directory": "prototype/reference-review/s8-20261016/upper-feed/phasep175/three-upper48-up050",
+      "phase": 0.175,
+      "case": "three-upper48-up050",
+      "shots": 250,
+      "counts": {
+        "out": 233,
+        "start": 9,
+        "normal": 7,
+        "fuzu": 1
+      },
+      "maxGapSeconds": 38.82142857134397,
+      "frames": 5903,
+      "compressedSHA": "97ca79638ae5f4b0b02da947d9b952bf2f27dafe3ed50a8960ff7537877dcd29",
+      "expandedSHA": "1896e3d835da843a655839e3442bfe589304d3439c76c2c5b408cdafdf3db983",
+      "safetyAllZero": true
+    },
+    {
+      "directory": "prototype/reference-review/s8-20261016/upper-feed/phasep35/legacy-control",
+      "phase": 0.35,
+      "case": "legacy-control",
+      "shots": 250,
+      "counts": {
+        "out": 238,
+        "start": 10,
+        "normal": 2
+      },
+      "maxGapSeconds": 41.64166666663991,
+      "frames": 5928,
+      "compressedSHA": "70c8bddb883c6eff1df15fbc0617af221fd0bb1007af8921420e4848d9f1aa46",
+      "expandedSHA": "72f71a206203702ca9d50e2c04dd32e7cff3836b0e01fbcf244e82cf3d213926",
+      "safetyAllZero": true
+    },
+    {
+      "directory": "prototype/reference-review/s8-20261016/upper-feed/phasep35/three-base",
+      "phase": 0.35,
+      "case": "three-base",
+      "shots": 250,
+      "counts": {
+        "out": 239,
+        "start": 5,
+        "normal": 6
+      },
+      "maxGapSeconds": 92.66636904756658,
+      "frames": 5928,
+      "compressedSHA": "051f41d12d3010052157ae563766cbf9ba5e71a9dc7bddee05523d9302222ad9",
+      "expandedSHA": "6494b1687add3074acb4ca27ec2c695da394b2e3444ad463d745867291a42dfc",
+      "safetyAllZero": true
+    },
+    {
+      "directory": "prototype/reference-review/s8-20261016/upper-feed/phasep35/three-upper48-up050",
+      "phase": 0.35,
+      "case": "three-upper48-up050",
+      "shots": 250,
+      "counts": {
+        "out": 229,
+        "start": 14,
+        "normal": 7
+      },
+      "maxGapSeconds": 33.453422619066586,
+      "frames": 5915,
+      "compressedSHA": "24204c6ab3eb65999b987a436f51ce36eb2fdd5b5b83a5b78f494f9c60ee1468",
+      "expandedSHA": "61d8f67c43265a25f7cf524de272fea331910f60612eb36250d790450f69b38b",
+      "safetyAllZero": true
+    },
+    {
+      "directory": "prototype/reference-review/s8-20261016/upper-feed/phasep525/legacy-control",
+      "phase": 0.525,
+      "case": "legacy-control",
+      "shots": 250,
+      "counts": {
+        "out": 236,
+        "start": 11,
+        "normal": 3
+      },
+      "maxGapSeconds": 38.553571428539954,
+      "frames": 5922,
+      "compressedSHA": "63ad6d42590976d23e7b11402a3e4cc0706f7d388ac7514e57cf68062b8a547b",
+      "expandedSHA": "00fcfaaca6830ddb9ee479ad854821d240df6f31461641ee3419a67f6d612b02",
+      "safetyAllZero": true
+    },
+    {
+      "directory": "prototype/reference-review/s8-20261016/upper-feed/phasep525/three-base",
+      "phase": 0.525,
+      "case": "three-base",
+      "shots": 250,
+      "counts": {
+        "out": 230,
+        "start": 15,
+        "normal": 5
+      },
+      "maxGapSeconds": 48.02857142846683,
+      "frames": 5922,
+      "compressedSHA": "82a9ba2aba8f5005d583b75e60a425730a1e00ffd236618d834f2edd440e437a",
+      "expandedSHA": "25e874315f8a6fa96c0db61108c89ed1388261ad59ea7b72f6197b11e332b3f2",
+      "safetyAllZero": true
+    },
+    {
+      "directory": "prototype/reference-review/s8-20261016/upper-feed/phasep525/three-upper48-up050",
+      "phase": 0.525,
+      "case": "three-upper48-up050",
+      "shots": 250,
+      "counts": {
+        "out": 238,
+        "start": 7,
+        "normal": 5
+      },
+      "maxGapSeconds": 39.27351190473771,
+      "frames": 5921,
+      "compressedSHA": "22875551f55d06ede0064b5c461c9da743d8de04d05cab44a6b5afa76c749458",
+      "expandedSHA": "643cf7350d9606fb7d4051850027744ae79f01f4af089bad3df7c834c2a91c66",
+      "safetyAllZero": true
+    }
+  ],
+  "screenHeso": {
+    "legacy-control": 13,
+    "three-base": 9,
+    "three-upper46-right050": 8,
+    "three-upper48-down050": 5,
+    "three-upper48-up050": 16
+  },
+  "selectedAtScreen": "three-upper48-up050",
+  "confirmationTotals": {
+    "legacy-control": {
+      "out": 709,
+      "normal": 10,
+      "start": 31
+    },
+    "three-base": {
+      "out": 704,
+      "start": 31,
+      "normal": 15
+    },
+    "three-upper48-up050": {
+      "out": 700,
+      "start": 30,
+      "normal": 19,
+      "fuzu": 1
+    }
+  },
+  "nonWorseViolations": [
+    {
+      "phase": 0.175,
+      "control": "legacy-control",
+      "candidate": 9,
+      "baseline": 10
+    },
+    {
+      "phase": 0.175,
+      "control": "three-base",
+      "candidate": 9,
+      "baseline": 11
+    },
+    {
+      "phase": 0.525,
+      "control": "legacy-control",
+      "candidate": 7,
+      "baseline": 11
+    },
+    {
+      "phase": 0.525,
+      "control": "three-base",
+      "candidate": 7,
+      "baseline": 15
+    }
+  ],
+  "minimum750Heso": 60,
+  "targetDeficit": 30,
+  "performanceAdopted": false,
+  "allSafetyZero": true,
+  "strictDefaultAndOriginal101AttributesAndOnlyDeclaredMove": true,
+  "allOtherFixedExactVersusCurrentThreeVane": true,
+  "validatorReadbackPassed": 14,
+  "testEvidenceBoundary": "27 related passed. New full unit not yet run; no old full-suite result transferred.",
+  "limits": [
+    "phase0 excluded from confirmation750",
+    "Confirmation phase0.175 candidate includes fuzu1, counted separately",
+    "All cases record250 actual shots; no rate or real-machine guarantee",
+    "More contacts or general admission cannot replace heso acceptance"
+  ],
+  "newTrialsOrSourceGitVideoChangesByAuditor": false
+}

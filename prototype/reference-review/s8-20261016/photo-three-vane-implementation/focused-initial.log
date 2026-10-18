@@ -1,0 +1,41 @@
+✔ accepted photo proposal vertices/ratios and analytic round hub are the shared contact source (2.29625ms)
+✔ exposed lines/arcs exclude every overlap interior at specified poses (0.794459ms)
+✔ no solid outer plate or phantom material between vanes (0.372583ms)
+✖ rotating circular hub has tangential surface speed, radial impulse has exactly zero torque (3.532167ms)
+✔ rotating blade uses relative surface velocity; prediction retains rotation/stats (0.298375ms)
+✔ factory default old profile unchanged; explicit new profile only adds declared geometry identity, no pin/other fields (4.623208ms)
+✔ old pin-only/windmill-offset inspectors reject any shape field and new comparison fixes all pins, no tray, centre (36.682292ms)
+✔ new polygon branch is non-acting under S7 observer, and no-guide legacy retains full time mode output (1026.198208ms)
+✔ synthetic250 count control strictly validates both no-guide profiles and rejects mixed replay shapes (172.817833ms)
+✔ exterior union projection clears dense synthetic centre/edge/corner samples at every specified pose (8.036083ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1329.174958
+
+✖ failing tests:
+
+test at prototype/tests/s8-wheel-shape-comparison.test.js:25:1
+✖ rotating circular hub has tangential surface speed, radial impulse has exactly zero torque (3.532167ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(contacts.every(e=>e.part.componentKind==='hub'))
+  
+      at TestContext.<anonymous> (file:///private/tmp/silverball-s8-20261016/prototype/tests/s8-wheel-shape-comparison.test.js:26:261)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

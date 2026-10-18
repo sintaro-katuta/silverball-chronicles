@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "legacy-control",
+      "label": "旧形状参照・皿なし",
+      "leftAdmissionGuides": false,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0
+      },
+      "windmillShapeProfile": "legacy-capsules"
+    },
+    {
+      "id": "three-base",
+      "label": "3枚羽根の新基準",
+      "leftAdmissionGuides": false,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0
+      },
+      "windmillShapeProfile": "photo-three-vane"
+    },
+    {
+      "id": "three-road-tail-right025",
+      "label": "道末端23〜26を右0.25・相対間隔保持",
+      "leftAdmissionGuides": false,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 23,
+          "dx": 0.25,
+          "dy": 0
+        },
+        {
+          "pinId": 24,
+          "dx": 0.25,
+          "dy": 0
+        },
+        {
+          "pinId": 25,
+          "dx": 0.25,
+          "dy": 0
+        },
+        {
+          "pinId": 26,
+          "dx": 0.25,
+          "dy": 0
+        }
+      ],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0
+      },
+      "windmillShapeProfile": "photo-three-vane"
+    }
+  ]
+}

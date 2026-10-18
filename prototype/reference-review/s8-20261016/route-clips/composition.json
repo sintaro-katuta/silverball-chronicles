@@ -1,0 +1,175 @@
+{
+  "scope": "Silent diagnostic observation film, not approved voice-over PR explanation",
+  "order": [
+    "intro",
+    "ball-1",
+    "ball1-wheel-close",
+    "ball-34",
+    "ball-12",
+    "ball-7",
+    "ball-2",
+    "outro"
+  ],
+  "segments": [
+    {
+      "file": "captioned/intro.mp4",
+      "sha256": "4f9a9424eaef7380a7f450a74cc4476b919199445962bdcf8fc6329bd442ef31",
+      "frames": 120,
+      "scope": "Static written explanation card; no simulated motion or narration"
+    },
+    {
+      "file": "captioned/outro.mp4",
+      "sha256": "6f51cf4f40e486ebac2ab97b5f3203daf0fd6b7eb10409beb6969ee0f2cbf5b2",
+      "frames": 150,
+      "scope": "Static written explanation card; no simulated motion or narration"
+    },
+    {
+      "file": "captioned/ball-1.mp4",
+      "sha256": "4d92c4d1fa77b3ddd282ea852c71cfdb3dd07c0499a8c47f326f14e80799be49",
+      "frames": 180,
+      "input": "ball-1/ball-1.mp4",
+      "inputSHA": "93b5567496c7b7fbeb4cc8f46c83ed5117dc98cd169b81fdd8fc749c198d484f",
+      "overlay": "titles/ball-1.png",
+      "overlaySHA": "2fa66c27d4f7c8886f8350eb5a58cb9615fa54317bab0a7fd62e4aa7514b8b99",
+      "scope": "Only written top header added; movement and clock from verified source clip"
+    },
+    {
+      "file": "captioned/ball1-wheel-close.mp4",
+      "sha256": "7d998d369e84d78cb6c57e2f6266b6d82aff1fc2708eb3154a0d4e5d725a78d0",
+      "frames": 96,
+      "input": "ball1-wheel-close/ball1-wheel-close.mp4",
+      "inputSHA": "6e8f71dcd96e06e94b525a537c3bacc203e800a378dfe2a15026df887062c6bf",
+      "overlay": "titles/ball1-wheel-close.png",
+      "overlaySHA": "4f830ff961696fc86776eab7b60fb2f20b1b23e1ab478ff91d59d7f785975abd",
+      "scope": "Only written top header added; movement and clock from verified source clip"
+    },
+    {
+      "file": "captioned/ball-34.mp4",
+      "sha256": "502e2bcc8e6de7c06fdf8fafbc495e1af87a42365a8d0686b03f3813bd5d3a95",
+      "frames": 489,
+      "input": "ball-34/ball-34.mp4",
+      "inputSHA": "038eecec8caab6ce8c400ece0f2fb57452b25c1875404f4451dc92894db7ef70",
+      "overlay": "titles/ball-34.png",
+      "overlaySHA": "74fab203aa0f1cec4ed0e2ccd56ac16abe59b39768120fcc3bca6da8b6de2e1b",
+      "scope": "Only written top header added; movement and clock from verified source clip"
+    },
+    {
+      "file": "captioned/ball-12.mp4",
+      "sha256": "ceba7070c73210171b675b8832581baa7718f945715933f00ff2282cbb8d1528",
+      "frames": 429,
+      "input": "ball-12/ball-12.mp4",
+      "inputSHA": "6c5f814b4cf53353c666ae995934aff7192aff27213dbc85093e6a6274a4c1c3",
+      "overlay": "titles/ball-12.png",
+      "overlaySHA": "2eb99c3649de61443310c7d723b5c38c3ddfd90d3dbd18bcec62932af976d091",
+      "scope": "Only written top header added; movement and clock from verified source clip"
+    },
+    {
+      "file": "captioned/ball-7.mp4",
+      "sha256": "104d2b903556c9a1d06e5d839abb162fe1a2cd9fb47c32adb0c29b7346c52b20",
+      "frames": 161,
+      "input": "ball-7/ball-7.mp4",
+      "inputSHA": "637b8d140f822149312585990932ac307bf717b76563ed9929d47de75771f502",
+      "overlay": "titles/ball-7.png",
+      "overlaySHA": "91756b43bb9158d31f42cc2c5ea822148162fd0d5bcb0db35c4154fddfe47eed",
+      "scope": "Only written top header added; movement and clock from verified source clip"
+    },
+    {
+      "file": "captioned/ball-2.mp4",
+      "sha256": "28d587cede22cfd0f2ef81ec19e4af773424579ae391ac52acaefea5cf6f578f",
+      "frames": 152,
+      "input": "ball-2/ball-2.mp4",
+      "inputSHA": "588bf2a41a23e35f31af25607eab498706734ec7199e5b7ad3c70ab62910b16f",
+      "overlay": "titles/ball-2.png",
+      "overlaySHA": "4cef26121600d410df68bc5c9c83a12923c278266e664ebfee792722ecd57de6",
+      "scope": "Only written top header added; movement and clock from verified source clip"
+    }
+  ],
+  "frames": 1777,
+  "duration": "59.232682",
+  "sha256": "da45088d9f0440f04d12f9d8e0eb48cd8769c5126e10d06e43e67f160aeceac1",
+  "bytes": 2985623,
+  "probe": {
+    "streams": [
+      {
+        "index": 0,
+        "codec_name": "h264",
+        "codec_long_name": "H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10",
+        "profile": "High",
+        "codec_type": "video",
+        "codec_tag_string": "avc1",
+        "codec_tag": "0x31637661",
+        "mime_codec_string": "avc1.640028",
+        "width": 1280,
+        "height": 1080,
+        "coded_width": 1280,
+        "coded_height": 1080,
+        "has_b_frames": 2,
+        "sample_aspect_ratio": "1:1",
+        "display_aspect_ratio": "32:27",
+        "pix_fmt": "yuv420p",
+        "level": 40,
+        "chroma_location": "left",
+        "field_order": "progressive",
+        "is_avc": "true",
+        "nal_length_size": "4",
+        "id": "0x1",
+        "r_frame_rate": "30/1",
+        "avg_frame_rate": "13647360/454907",
+        "time_base": "1/15360",
+        "start_pts": 0,
+        "start_time": "0.000000",
+        "duration_ts": 909814,
+        "duration": "59.232682",
+        "bit_rate": "400532",
+        "bits_per_raw_sample": "8",
+        "nb_frames": "1777",
+        "extradata_size": 47,
+        "disposition": {
+          "default": 1,
+          "dub": 0,
+          "original": 0,
+          "comment": 0,
+          "lyrics": 0,
+          "karaoke": 0,
+          "forced": 0,
+          "hearing_impaired": 0,
+          "visual_impaired": 0,
+          "clean_effects": 0,
+          "attached_pic": 0,
+          "timed_thumbnails": 0,
+          "non_diegetic": 0,
+          "captions": 0,
+          "descriptions": 0,
+          "metadata": 0,
+          "dependent": 0,
+          "still_image": 0,
+          "multilayer": 0
+        },
+        "tags": {
+          "language": "und",
+          "handler_name": "VideoHandler",
+          "encoder": "Lavc63.1.101 libx264"
+        }
+      }
+    ],
+    "format": {
+      "filename": "/private/tmp/silverball-s8-20261016/prototype/reference-review/s8-20261016/route-clips/route-observation.mp4",
+      "nb_streams": 1,
+      "nb_programs": 0,
+      "nb_stream_groups": 0,
+      "format_name": "mov,mp4,m4a,3gp,3g2,mj2",
+      "format_long_name": "QuickTime / MOV",
+      "start_time": "0.000000",
+      "duration": "59.232682",
+      "size": "2985623",
+      "bit_rate": "403239",
+      "probe_score": 100,
+      "tags": {
+        "major_brand": "isom",
+        "minor_version": "512",
+        "compatible_brands": "isomiso2avc1mp41",
+        "encoder": "Lavf63.1.101"
+      }
+    }
+  }
+}

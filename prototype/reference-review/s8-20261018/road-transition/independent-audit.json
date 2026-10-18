@@ -1,0 +1,123 @@
+{
+  "scope": "Independent read-only audit of5 fresh phase0 records; parent26-up reference not eligible",
+  "head": "ce2062556c7dff5717f17c16db57f760e2b98af9",
+  "sourceSHA": "b5024bb01cd23d1e376c084ad63f8697815d50ea6051568b3fe7b93d2eb511b2",
+  "inputCount": 204,
+  "allCurrentInputBytesExact": true,
+  "planSHA": "b77604b7fe5be1bf5a6833f46a46a4079b9453b6346a82a85b360ba15acce45e",
+  "caseManifestSHA": "61fb6fb435f503e57031da1fc14f45df7837b07624963dc444913bc098fbb043",
+  "rows": [
+    {
+      "case": "legacy-control",
+      "phase": 0,
+      "actualShots": 250,
+      "counts": {
+        "out": 234,
+        "start": 13,
+        "normal": 3
+      },
+      "maxGapSeconds": 30.926190476122926,
+      "frames": 5938,
+      "stopStep": 18350,
+      "endStep": 23750,
+      "compressedSHA": "b8959cb8be621b42d444148ac82db2ec623fb4515c00a80f078c611b4bd57a37",
+      "compressedBytes": 1792092,
+      "expandedSHA": "6ed06d0930d010acae687de362d51365cfc6a012d7bfb4d6e052ed2dcd244566",
+      "expandedBytes": 10143296,
+      "safetyAllZero": true
+    },
+    {
+      "case": "three-base",
+      "phase": 0,
+      "actualShots": 250,
+      "counts": {
+        "out": 237,
+        "start": 9,
+        "normal": 4
+      },
+      "maxGapSeconds": 70.1892857142684,
+      "frames": 5938,
+      "stopStep": 18350,
+      "endStep": 23750,
+      "compressedSHA": "7b41ef067137946943636beec0dcc452b4344b71ddaf2a85464b7931077e9939",
+      "compressedBytes": 1743683,
+      "expandedSHA": "67eb03b37e041a339dc77a2bd0ba81b7dfe2b42af18d4c34f0c8b2ca5995f929",
+      "expandedBytes": 10393958,
+      "safetyAllZero": true
+    },
+    {
+      "case": "three-road-entry22-up200",
+      "phase": 0,
+      "actualShots": 250,
+      "counts": {
+        "out": 228,
+        "start": 12,
+        "normal": 10
+      },
+      "maxGapSeconds": 38.69107142848701,
+      "frames": 5938,
+      "stopStep": 18350,
+      "endStep": 23750,
+      "compressedSHA": "005ed1de9fbc927fa64ae624f36d884836f1efa2fa1a1ade476ce34c51d8542c",
+      "compressedBytes": 1736205,
+      "expandedSHA": "2f2e65dae3397650242a63058cbfca25349e3ce6e7ea5e63f9c522150e3d4449",
+      "expandedBytes": 10361503,
+      "safetyAllZero": true
+    },
+    {
+      "case": "three-road-group-up200",
+      "phase": 0,
+      "actualShots": 250,
+      "counts": {
+        "out": 228,
+        "start": 13,
+        "normal": 9
+      },
+      "maxGapSeconds": 39.31249999991422,
+      "frames": 5938,
+      "stopStep": 18350,
+      "endStep": 23750,
+      "compressedSHA": "1aa2bb7a5a2213bac2261bb8dd3040fa8153104722cc793ef26e17f01009b4ef",
+      "compressedBytes": 1736176,
+      "expandedSHA": "7f22afe9ed8193a9d06ee625aea204eda471f5ae8372c32844ee7881cfa6adca",
+      "expandedBytes": 10365900,
+      "safetyAllZero": true
+    },
+    {
+      "case": "three-road-taper25-up200",
+      "phase": 0,
+      "actualShots": 250,
+      "counts": {
+        "out": 239,
+        "start": 4,
+        "normal": 7
+      },
+      "maxGapSeconds": 81.25833333321219,
+      "frames": 5938,
+      "stopStep": 18350,
+      "endStep": 23750,
+      "compressedSHA": "bf45ffc2b49b57de1e1e52273d8a350b80f9ce6f0b915eabb05952d292434fb4",
+      "compressedBytes": 1729130,
+      "expandedSHA": "6409e13e6f9ba5c051a094e8d2f5a3bbe17a2beec795583e5ff016387e198ff3",
+      "expandedBytes": 10316664,
+      "safetyAllZero": true
+    }
+  ],
+  "original101IdsAndNonPositionAttributesExact": true,
+  "A22ExactMoveAndOutside79Exact": true,
+  "B25ExactTaperAndOutside76Exact": true,
+  "parent26UpReferenceExact": true,
+  "allFixedPartsBallDisplayExactVersusCurrentThreeVane": true,
+  "strictDefaultAndMax1HistoricalGroup3ReadConfirmed": true,
+  "validatorReadbackPassed": 5,
+  "selected": null,
+  "confirmationRuns": 0,
+  "performanceTargetMet": false,
+  "selectionReason": "A12 and B4 do not strictly exceed legacy13/current9; parent13 remains nonadopted reference",
+  "testBoundary": "35 related PASS and3 pre-edit short JSON compatibility are preparation evidence; no new full regression claim",
+  "limits": [
+    "Initial phase0 results not merged into confirmation750",
+    "No new trial/source/Git/video changes by auditor",
+    "Safe geometry and zero safety failures are not admission-improvement adoption"
+  ]
+}

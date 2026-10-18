@@ -1,0 +1,97 @@
+{
+  "sourceSHA": "387b92da536db67361d479989680b1146b4b9351550d88619f0b4551bc85792b",
+  "head": "67e1de9d6f20917d8b18ada62a69d6ab907bf7c9",
+  "rows": [
+    {
+      "id": "legacy-control",
+      "mode": "normal",
+      "shots": 250,
+      "start": 13,
+      "normal": 3,
+      "out": 234,
+      "returned": 0,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 30.926190476122926
+    },
+    {
+      "id": "pin90-up025",
+      "mode": "normal",
+      "shots": 250,
+      "start": 9,
+      "normal": 4,
+      "out": 237,
+      "returned": 0,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 70.1892857142684
+    },
+    {
+      "id": "three-base",
+      "mode": "normal",
+      "shots": 250,
+      "start": 9,
+      "normal": 4,
+      "out": 237,
+      "returned": 0,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 70.1892857142684
+    },
+    {
+      "id": "ball-r20",
+      "mode": "bonus",
+      "shots": 50,
+      "start": 0,
+      "normal": 0,
+      "out": 0,
+      "returned": 0,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 29.9999999999988
+    },
+    {
+      "id": "ball-r20",
+      "mode": "rush",
+      "shots": 50,
+      "start": 0,
+      "normal": 0,
+      "out": 49,
+      "returned": 0,
+      "remaining": 1,
+      "stalled": 1,
+      "maxGap": 29.9999999999988
+    },
+    {
+      "id": "three-base",
+      "mode": "bonus",
+      "shots": 50,
+      "start": 0,
+      "normal": 0,
+      "out": 0,
+      "returned": 0,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 29.999999999993587
+    },
+    {
+      "id": "three-base",
+      "mode": "rush",
+      "shots": 50,
+      "start": 0,
+      "normal": 0,
+      "out": 0,
+      "returned": 0,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 29.999999999993587
+    }
+  ],
+  "ballR20Normal": {
+    "measurementStarted": false,
+    "actualShots": 0,
+    "start": 0,
+    "reason": "RUSH stalled1/rightAdmission0; safety guard rejected before firing"
+  },
+  "decision": "No eligible improvement; no confirmation phases; keep three-vane baseline and original radius."
+}

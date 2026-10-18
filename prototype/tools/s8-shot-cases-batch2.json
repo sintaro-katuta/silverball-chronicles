@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "id": "baseline",
+      "label": "変更前・元101本",
+      "moves": []
+    },
+    {
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "id": "b2-46-left025down025",
+      "label": "釘46を左0.25・下0.25",
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": -0.25,
+          "dy": 0.25
+        }
+      ]
+    },
+    {
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "id": "b2-46-left050down025",
+      "label": "釘46を左0.50・下0.25",
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": -0.5,
+          "dy": 0.25
+        }
+      ]
+    },
+    {
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "id": "b2-46-left050down050",
+      "label": "釘46を左0.50・下0.50",
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": -0.5,
+          "dy": 0.5
+        }
+      ]
+    },
+    {
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "id": "b2-46-left075down050",
+      "label": "釘46を左0.75・下0.50",
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": -0.75,
+          "dy": 0.5
+        }
+      ]
+    },
+    {
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "id": "b2-46-left025down050",
+      "label": "釘46を左0.25・下0.50",
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": -0.25,
+          "dy": 0.5
+        }
+      ]
+    },
+    {
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "id": "b2-46-left050down075",
+      "label": "釘46を左0.50・下0.75",
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": -0.5,
+          "dy": 0.75
+        }
+      ]
+    },
+    {
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "id": "b2-46-down025",
+      "label": "釘46を下へ0.25",
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": 0,
+          "dy": 0.25
+        }
+      ]
+    }
+  ]
+}

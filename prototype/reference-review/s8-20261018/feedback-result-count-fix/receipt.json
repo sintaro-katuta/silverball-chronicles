@@ -1,0 +1,110 @@
+{
+  "timestamp": "2026-10-18T09:13:35.831429+00:00",
+  "gitHEAD": "eb368e940f231d72f211a9c65c5afe67377ed937",
+  "command": "UI_ONLY=1 REVIEW_URL=http://127.0.0.1:5437 FEEDBACK_OUTPUT=../reference-review/s8-20261018/feedback-result-count-fix/ui-run/ node tests/feedback.browser.mjs",
+  "workdir": "prototype",
+  "sessionID": 40259,
+  "exitCode": 0,
+  "browser": "existing browserLaunchOptions default Chrome, require_escalated",
+  "widths": [
+    {
+      "width": 390,
+      "height": 844,
+      "status": "passed"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "status": "passed"
+    }
+  ],
+  "source": {
+    "path": "prototype/tests/feedback.browser.mjs",
+    "sha256": "9c479056ee35ce79aa0a732384d6b9ad396aeed8cbdea3905ba1016fa136d5a8"
+  },
+  "assertion": "One paused snapshot supplies spin.draws and session.jackpots; compare both dialog values. Natural RNG/clock unchanged. Zero jackpot is not assumed.",
+  "log": "ui-run.log",
+  "evidence": [
+    {
+      "path": "ui-run/1440-board-panel.png",
+      "bytes": 534243,
+      "sha256": "82b11b6db8afb349804900c58b846f83ffd55e8ee88b1d7d82871fd8b451ba32"
+    },
+    {
+      "path": "ui-run/1440-board.png",
+      "bytes": 501586,
+      "sha256": "4d576924867752721cc332045d07ca64fa163e836c1eae7a41146faba29a1ddf"
+    },
+    {
+      "path": "ui-run/1440-lcd-panel.png",
+      "bytes": 572222,
+      "sha256": "d17420861f236efdfafb27df392280080b452f2199e3141c20acbe1ac16bd17c"
+    },
+    {
+      "path": "ui-run/1440-lcd.png",
+      "bytes": 536186,
+      "sha256": "5dfc646d5b2168a472bf5d574097e65172b2851ee8bbd2c28ece96c87dc8df0f"
+    },
+    {
+      "path": "ui-run/1440-panel.png",
+      "bytes": 572447,
+      "sha256": "9b154b4243e2bc06fa8aa298fc804feb14f36d74b3e6376c4951685cbdb7830b"
+    },
+    {
+      "path": "ui-run/1440-result.png",
+      "bytes": 221423,
+      "sha256": "aa86446f44125acb27f4c6058a274dbd2595cb96e67f8a5fb6a11b9fa4e2e629"
+    },
+    {
+      "path": "ui-run/1440-whole-panel.png",
+      "bytes": 556918,
+      "sha256": "818e14de366ba533e0fd76203cbdb663f41d15f1a32e93b3c1c0cacdbbe64a7c"
+    },
+    {
+      "path": "ui-run/1440-whole.png",
+      "bytes": 522943,
+      "sha256": "93bd42d09db7059b32931f912c6d60039e3c5cf08aff96f968a607812268d6c7"
+    },
+    {
+      "path": "ui-run/390-board-panel.png",
+      "bytes": 138126,
+      "sha256": "f11304ab942adb1b880d6fce0028989d3376b677d53385f92ecb037def640e4f"
+    },
+    {
+      "path": "ui-run/390-board.png",
+      "bytes": 212100,
+      "sha256": "b85c3bedd6e5c7507406ebb28cc6b32ee4e7dff19e64bbece136d626d6851f50"
+    },
+    {
+      "path": "ui-run/390-lcd-panel.png",
+      "bytes": 147275,
+      "sha256": "2960edfd7bd31c2305a216df13be12dcfe68a74bb79f0e5f4485250a40789d0a"
+    },
+    {
+      "path": "ui-run/390-lcd.png",
+      "bytes": 223449,
+      "sha256": "13a90df869e973c93b20c08a53ba87dcac91f90d889e5abc85aed855173846cc"
+    },
+    {
+      "path": "ui-run/390-panel.png",
+      "bytes": 147488,
+      "sha256": "bdb15c0968659f9651f7d85609911a941ae7b7c71bb9f218eb5ac87ded5d80e5"
+    },
+    {
+      "path": "ui-run/390-result.png",
+      "bytes": 49107,
+      "sha256": "12798c59d312b4c1e1407eed2c6dc13ccc479fec114efe7c1aecef65ccd3bb83"
+    },
+    {
+      "path": "ui-run/390-whole-panel.png",
+      "bytes": 125973,
+      "sha256": "415a047e046d5248bb7b8baa982bda827fccc6d424f681c1e5aa7522833c78a4"
+    },
+    {
+      "path": "ui-run/390-whole.png",
+      "bytes": 193428,
+      "sha256": "f9f9e117b97f33bbf935348fee78ede7d8d7956c33baec2577ed2517c343df4d"
+    }
+  ],
+  "scope": "UI_ONLY two-width natural UI regression. No experience scenarios, no product or RNG changes, no CI rerun/Git/cloud operations."
+}

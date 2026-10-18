@@ -1,0 +1,45 @@
+{
+  "node": "v26.11.0",
+  "oracleCommit": "8c31ba394dfb3a02d9e95844cf4152d156ae5e16",
+  "oracleSHA": "27b5304313134d87d3f24685412accc9bad1e2fda67358230d3c5a33e9255593",
+  "rows": [
+    {
+      "id": "legacy-control",
+      "resolverExact": true,
+      "factoryExact": true,
+      "fullJSONEventsReplayExact": true
+    },
+    {
+      "id": "three-base",
+      "resolverExact": true,
+      "factoryExact": true,
+      "fullJSONEventsReplayExact": true
+    },
+    {
+      "id": "three-road2-right025",
+      "resolverExact": true,
+      "factoryExact": true,
+      "fullJSONEventsReplayExact": true
+    }
+  ],
+  "historical": [
+    {
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phase0/legacy-control/result.json.gz",
+      "compressedSHA": "23876d4bd454969f8e11707238845d040bc95dba29acb477782079e54262fefa",
+      "sourceSHA": "b41966980f8d12cafc66ffd5c59ea4f0db388cb50f4a39a9534e6595dbc1bfa1",
+      "shots": 250,
+      "start": 13,
+      "validatorPass": true,
+      "note": "Old raw unchanged, not reattributed to new source."
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phase0/three-base/result.json.gz",
+      "compressedSHA": "ad5e4d11d8a54c866b6949044d7868ca51b807ecdba793e78b1803bcf991fa79",
+      "sourceSHA": "b41966980f8d12cafc66ffd5c59ea4f0db388cb50f4a39a9534e6595dbc1bfa1",
+      "shots": 250,
+      "start": 9,
+      "validatorPass": true,
+      "note": "Old raw unchanged, not reattributed to new source."
+    }
+  ]
+}

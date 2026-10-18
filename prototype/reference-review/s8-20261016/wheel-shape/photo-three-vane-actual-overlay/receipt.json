@@ -1,0 +1,26 @@
+{
+  "scope": "Static actual solver API geometry, no measurement/browser; pixel acceptance pending",
+  "module": {
+    "path": "/private/tmp/silverball-s8-20261016/prototype/src/domain/windmill-shape.js",
+    "sha256": "40c5cf6e729ddd5a8cd061bb7463979fc3724eae751bcd83c8b04bddca0f87cf"
+  },
+  "media": {
+    "path": "/private/tmp/silverball-s8-20261016/prototype/tools/s8-wheel-media/overlay.mjs",
+    "sha256": "1b0a0175d92036cf4886ef6bd27c24de64cfd2505be124fc3ae70564f0f080bc"
+  },
+  "command": [
+    "/opt/homebrew/Cellar/node/26.11.0/bin/node",
+    "/private/tmp/silverball-s8-20261016/prototype/tools/s8-wheel-media/overlay.mjs",
+    "--module",
+    "prototype/src/domain/windmill-shape.js",
+    "--out",
+    "prototype/reference-review/s8-20261016/wheel-shape/photo-three-vane-actual-overlay"
+  ],
+  "svgSHA": "77bf65e6af2b760931c5a4d9a2d2d2c97bc06c3ce488fa8ab6e46abea7f6794c",
+  "angles": [
+    0,
+    0.28,
+    0.7853981633974483,
+    1.5707963267948966
+  ]
+}

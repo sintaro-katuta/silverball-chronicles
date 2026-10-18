@@ -1,17 +1,50 @@
+import {WINDMILL_OFFSET_STRICT,WINDMILL_FEED_LEFT175} from '../pixi/windmill-offset.js';
 import {collideSolidPolygon} from '../physics/solid-polygon-contact.js';
 // Internal local trial only. No grid snapping, production adoption or automatic search.
 import {createBoardFlow,LEFT_ADMISSION_GUIDE_ROLES,LCD_LOWER_APRON_ROLES} from '../pixi/board-flow.js';
 import {getPinLayoutModel,sha256,canonicalJSON} from './pin-layout-model.js';
 export const MM_ASSUMPTION=Object.freeze({assumedBallDiameterMM:11,logicalBallDiameter:3.6,mmPerLogicalUnit:11/3.6,note:'球径を11mmと仮定した相当量。実機採寸ではない。'});
 export const TRIAL_GUIDE_ROLES=Object.freeze([...LEFT_ADMISSION_GUIDE_ROLES]);
+export const PIN_SPACING_STRICT='strict-centre4-v1';
+export const ROAD_SUPPORT_PAIR23='road-support-2-3-v1';
+// Conservative complete14px Sprite frame from pin-texture/runtime; not the shaft.
+export const LCD_PIN_HEAD_FRAME_WIDTH=14*.52/3;
+export function inspectRoadSupportPair(a,b){
+ if(!a||!b||[a.id,b.id].sort((x,y)=>x-y).join(',')!=='2,3'||a.role!=='michi'||b.role!=='michi'||![a.x,a.y,a.r,b.x,b.y,b.r].every(Number.isFinite)||a.r<=0||b.r<=0)throw new Error('Road support is limited to michi pair2/3');
+ const distance=Math.hypot(a.x-b.x,a.y-b.y),shaftGap=distance-a.r-b.r;
+ if(shaftGap<=1e-9)throw new Error('Road support pin shafts overlap');
+ const dx=Math.abs(a.x-b.x),dy=Math.abs(a.y-b.y),headFrameWidth=LCD_PIN_HEAD_FRAME_WIDTH;
+ if(dx<headFrameWidth-1e-9&&dy<headFrameWidth-1e-9)throw new Error('Road support visible head frames overlap');
+ return {profile:ROAD_SUPPORT_PAIR23,pinIds:[2,3],centreDistance:distance,shaftGap,headFrameWidth,headFramesDisjoint:true,ballDiameter:3.6,ballGapMargin:shaftGap-3.6,note:'Shaft/head non-overlap only. Negative ball-gap margin is allowed support, not a guarantee of transfer or drainage.'};
+}
+function validatePinSpacingProfile(config,profile){
+ if(![PIN_SPACING_STRICT,ROAD_SUPPORT_PAIR23].includes(profile))throw new Error('Unknown internal pin spacing profile');
+ if(profile===ROAD_SUPPORT_PAIR23&&(config.id!=='three-road2-support050'||config.leftAdmissionGuides!==false||config.hesoMouthWidth!==20||config.launchRailProfile!=='legacy'||config.normalPower!==.18||config.windmillShapeProfile!=='photo-three-vane'||Object.hasOwn(config,'ballRadius')||JSON.stringify(config.windmillOffset)!==JSON.stringify({dx:0,dy:0})||JSON.stringify(config.moves)!==JSON.stringify([{pinId:2,dx:.5,dy:0}])))throw new Error('Road support profile requires its exact declared single case');
+}
 const distanceToSegment=(x,y,a,b)=>{const dx=b.x-a.x,dy=b.y-a.y,t=Math.max(0,Math.min(1,((x-a.x)*dx+(y-a.y)*dy)/(dx*dx+dy*dy||1)));return Math.hypot(x-a.x-t*dx,y-a.y-t*dy);};
 function inside(x,y,points){let hit=false;for(let i=0,j=points.length-1;i<points.length;j=i++){const a=points[i],b=points[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])hit=!hit;}return hit;}
-export function resolvePinAdjustment(config){
- if(!config||Object.keys(config).some(k=>!['id','label','leftAdmissionGuides','hesoMouthWidth','moves','ballRadius','launchRailProfile','normalPower'].includes(k))||typeof config.id!=='string'||typeof config.label!=='string'||typeof config.leftAdmissionGuides!=='boolean'||!Array.isArray(config.moves))throw new Error('Invalid adjustment configuration');
+export const ROAD_GROUP_VECTORS=Object.freeze({'three-road-group-left300':Object.freeze({dx:-3,dy:0}),'three-road-group-right300':Object.freeze({dx:3,dy:0}),'three-road-group-up200':Object.freeze({dx:0,dy:-2})});
+export function roadGroupMoves(id){const vector=ROAD_GROUP_VECTORS[id];if(!Object.hasOwn(ROAD_GROUP_VECTORS,id))throw new Error('Unknown road group declaration');return Array.from({length:26},(_,i)=>({pinId:i+1,...vector}));}
+const ROAD_TRANSITION_COUNTS=Object.freeze({'three-road-entry22-up200':22,'three-road-taper25-up200':25});
+export function roadTransitionMoves(id){if(!Object.hasOwn(ROAD_TRANSITION_COUNTS,id))throw new Error('Unknown road transition declaration');return Array.from({length:ROAD_TRANSITION_COUNTS[id]},(_,i)=>({pinId:i+1,dx:0,dy:id==='three-road-entry22-up200'?-2:-2*(26-(i+1))/25}));}
+export function prize17Moves(){return Array.from({length:17},(_,i)=>({pinId:i+47,dx:-2,dy:0}));}
+function declaredDisplacementLimit(config,pinSpacingProfile,windmillOffsetProfile){
+ const prize=config.id==='three-prize17-left200',transition=Object.hasOwn(ROAD_TRANSITION_COUNTS,config.id);
+ if(!prize&&!transition&&!Object.hasOwn(ROAD_GROUP_VECTORS,config.id))return 1;
+ if(pinSpacingProfile!==PIN_SPACING_STRICT||windmillOffsetProfile!==WINDMILL_OFFSET_STRICT||config.leftAdmissionGuides!==false||config.hesoMouthWidth!==20||config.launchRailProfile!=='legacy'||config.normalPower!==.18||config.windmillShapeProfile!=='photo-three-vane'||Object.hasOwn(config,'ballRadius')||JSON.stringify(config.windmillOffset)!==JSON.stringify({dx:0,dy:0})||JSON.stringify(config.moves)!==JSON.stringify(prize?prize17Moves():transition?roadTransitionMoves(config.id):roadGroupMoves(config.id)))throw new Error(prize?'Prize group requires exact17 original pins, left2 and fixed board':transition?'Road transition requires exact original pins, declared heights and fixed board':'Road group requires exact26 original pins, declared vector and fixed board');
+ return prize||transition?2:3;
+}
+export function resolvePinAdjustment(config,{pinSpacingProfile=PIN_SPACING_STRICT,windmillOffsetProfile=WINDMILL_OFFSET_STRICT}={}){
+ if(!config||Object.keys(config).some(k=>!['id','label','leftAdmissionGuides','hesoMouthWidth','moves','ballRadius','launchRailProfile','normalPower','windmillOffset','windmillShapeProfile'].includes(k))||typeof config.id!=='string'||typeof config.label!=='string'||typeof config.leftAdmissionGuides!=='boolean'||!Array.isArray(config.moves))throw new Error('Invalid adjustment configuration');
+ validatePinSpacingProfile(config,pinSpacingProfile);
+ if(![WINDMILL_OFFSET_STRICT,WINDMILL_FEED_LEFT175].includes(windmillOffsetProfile))throw new Error('Unknown internal windmill offset profile');
+ if(windmillOffsetProfile===WINDMILL_FEED_LEFT175&&(config.id!=='three-feed-wheel-left175'||pinSpacingProfile!==PIN_SPACING_STRICT||config.leftAdmissionGuides!==false||config.hesoMouthWidth!==20||config.launchRailProfile!=='legacy'||config.normalPower!==.18||config.windmillShapeProfile!=='photo-three-vane'||Object.hasOwn(config,'ballRadius')||JSON.stringify(config.windmillOffset)!==JSON.stringify({dx:-1.75,dy:0})||config.moves.length!==0))throw new Error('Feed shift profile requires its exact declared single case');
+ const maximumDisplacement=declaredDisplacementLimit(config,pinSpacingProfile,windmillOffsetProfile);
+ if(config.windmillShapeProfile!==undefined&&!['legacy-capsules','photo-three-vane'].includes(config.windmillShapeProfile))throw new Error('Invalid configured windmill shape');
  if(config.normalPower!==undefined&&(!Number.isFinite(config.normalPower)||config.normalPower<0||config.normalPower>1))throw new Error('Invalid configured normal power');
- const model=createBoardFlow({lcd:true,leftAdmissionGuides:config.leftAdmissionGuides,hesoMouthWidth:config.hesoMouthWidth??20,ballRadius:config.ballRadius??null,launchRailProfile:config.launchRailProfile??'legacy'}),p=model.flow.physics,pins=structuredClone(p.pins),seen=new Set();
+ const model=createBoardFlow({lcd:true,leftAdmissionGuides:config.leftAdmissionGuides,hesoMouthWidth:config.hesoMouthWidth??20,ballRadius:config.ballRadius??null,launchRailProfile:config.launchRailProfile??'legacy',windmillOffset:config.windmillOffset??null,windmillShapeProfile:config.windmillShapeProfile??'legacy-capsules',windmillOffsetProfile,...(windmillOffsetProfile===WINDMILL_FEED_LEFT175?{normalPower:.18}:{})}),p=model.flow.physics,pins=structuredClone(p.pins),seen=new Set();
  for(const move of config.moves){
-  if(!move||Object.keys(move).sort().join(',')!=='dx,dy,pinId'||!Number.isInteger(move.pinId)||!Number.isFinite(move.dx)||!Number.isFinite(move.dy)||Math.hypot(move.dx,move.dy)>1+1e-12||seen.has(move.pinId))throw new Error('Invalid adjustment; total displacement from original is limited to 1 logical unit');
+  if(!move||Object.keys(move).sort().join(',')!=='dx,dy,pinId'||!Number.isInteger(move.pinId)||!Number.isFinite(move.dx)||!Number.isFinite(move.dy)||Math.hypot(move.dx,move.dy)>maximumDisplacement+1e-12||seen.has(move.pinId))throw new Error('Invalid adjustment; total displacement from original is limited to 1 logical unit');
   const pin=pins.find(q=>q.id===move.pinId);if(!pin)throw new Error('Unknown pin');seen.add(move.pinId);pin.x+=move.dx;pin.y+=move.dy;
  }
  const geometry=getPinLayoutModel().fixed;
@@ -24,10 +57,16 @@ export function resolvePinAdjustment(config){
   for(const q of p.pockets)if(Math.abs(pin.x-q.x)<q.w/2+2&&pin.y>q.y-4&&pin.y<q.y+9)throw new Error(`Pin ${id}: mouth interference`);
   for(const m of p.mechanisms)if(Math.hypot(pin.x-m.x,pin.y-m.y)<m.radius+2)throw new Error(`Pin ${id}: windmill interference`);
  }
- for(let i=0;i<pins.length;i++)for(let j=i+1;j<pins.length;j++)if((seen.has(pins[i].id)||seen.has(pins[j].id))&&Math.hypot(pins[i].x-pins[j].x,pins[i].y-pins[j].y)<4-1e-9)throw new Error(`Pins ${pins[i].id}/${pins[j].id}: centre clearance below 4`);
- return {config:structuredClone(config),pins,pinPositions:pins.map(({id,x,y})=>({id,x,y})),flowOptions:{...(config.normalPower!==undefined?{normalPower:config.normalPower}:{}),...(config.launchRailProfile!==undefined?{launchRailProfile:config.launchRailProfile}:{}),leftAdmissionGuides:config.leftAdmissionGuides,hesoMouthWidth:config.hesoMouthWidth??20,...(config.ballRadius!==undefined?{ballRadius:config.ballRadius}:{}),pinPositions:pins.map(({id,x,y})=>({id,x,y}))},mmAssumption:MM_ASSUMPTION};
+ let pinSpacingInspection;
+ for(let i=0;i<pins.length;i++)for(let j=i+1;j<pins.length;j++)if(seen.has(pins[i].id)||seen.has(pins[j].id)){
+  const pair=[pins[i].id,pins[j].id].sort((x,y)=>x-y).join(',');
+  if(pinSpacingProfile===ROAD_SUPPORT_PAIR23&&pair==='2,3'){pinSpacingInspection=inspectRoadSupportPair(pins[i],pins[j]);continue;}
+  if(Math.hypot(pins[i].x-pins[j].x,pins[i].y-pins[j].y)<4-1e-9)throw new Error(`Pins ${pins[i].id}/${pins[j].id}: centre clearance below 4`);
+ }
+
+ return {...(pinSpacingInspection?{pinSpacingInspection}:{}),config:structuredClone(config),pins,pinPositions:pins.map(({id,x,y})=>({id,x,y})),flowOptions:{...(windmillOffsetProfile!==WINDMILL_OFFSET_STRICT?{windmillOffsetProfile}:{}),...(config.windmillShapeProfile!==undefined?{windmillShapeProfile:config.windmillShapeProfile}:{}),...(config.windmillOffset!==undefined?{windmillOffset:structuredClone(config.windmillOffset)}:{}),...(config.normalPower!==undefined?{normalPower:config.normalPower}:{}),...(config.launchRailProfile!==undefined?{launchRailProfile:config.launchRailProfile}:{}),leftAdmissionGuides:config.leftAdmissionGuides,hesoMouthWidth:config.hesoMouthWidth??20,...(config.ballRadius!==undefined?{ballRadius:config.ballRadius}:{}),pinPositions:pins.map(({id,x,y})=>({id,x,y}))},mmAssumption:MM_ASSUMPTION};
 }
-export async function preparePinAdjustment(config){const resolved=resolvePinAdjustment(config);return {...resolved,layoutSHA:await sha256(resolved.pins),configSHA:await sha256(config)};}
+export async function preparePinAdjustment(config,resolutionOptions={}){const resolved=resolvePinAdjustment(config,resolutionOptions);return {...resolved,layoutSHA:await sha256(resolved.pins),configSHA:await sha256(config)};}
 export function samePinAttributes(a,b){return canonicalJSON(a.map(({x,y,...p})=>p))===canonicalJSON(b.map(({x,y,...p})=>p));}
 export function initialTrialCases(){
  return [{id:'current',label:'現行・口幅20・追加皿あり',leftAdmissionGuides:true,hesoMouthWidth:20,moves:[]},{id:'source-diagram',label:'元図壁・口幅12・独自追加皿なし',leftAdmissionGuides:false,hesoMouthWidth:12,moves:[]}];
