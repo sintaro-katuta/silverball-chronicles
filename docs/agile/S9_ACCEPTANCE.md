@@ -2,9 +2,36 @@
 
 ## 最新状態（2026-10-18）
 
-ユーザーの「開始してください。」で開始承認済み。対象は#37 BGM4曲、#38 SE8用途、#26代表一本の同期表です。作業場所は `/private/tmp/silverball-s9-20261018`・sprint/S09、基準はrelease/0.3.0のaebe077。現在の製品sourceは40e3b59797f313d2239f717d9a5e9ea5696f4ccfです。
+ユーザーの「開始してください。」で開始承認済み。作業場所は `/private/tmp/silverball-s9-20261018`・sprint/S09、基準はrelease/0.3.0のaebe077。PR39は未マージです。追加前HEAD feadの成功記録は保存し、新追加の検証へ流用しません。
 
-素材と旧確定音保持はPM技術合格。runtime・両幅ブラウザ・先読み・時間表・試聴ページ、前後13本の原WebM音声、全692単体テスト、本番/プレビュービルドと関連画面回帰を確認しました。完成動画は通常速度・音声ありで自然終端を確認済み。新曲/音色の聴感、最終HEAD CI、PR上の動画再生、ユーザーレビュー、releaseへのマージは別途確認します。ローカル成功を公開・CD成功へ拡張しません。
+最新の「お願いします」により、同じS9/#38でリール回転・左/右/中央停止の4用途を作り直し、ヘソ物理入賞1回ごとの専用音1用途を追加します。**BGM4曲＋元SE8用途＋追加5用途＝新SE合計13用途**。元8用途や旧音源v1・承認7文/既存動画の履歴を説明なく上書きしません。追加5用途の制作・局所接続・実ブラウザ試聴の技術QAを受領/独立照合済み。通常発射からの追加前後45秒も収録済み（実入賞各7回、専用音0→7回）。追加後の全回帰・前後動画v2・新HEAD CI・人間聴感/採否は未完了です。
+
+追加前は素材・旧確定音保持のPM技術合格、runtime/時間表/前後13WebM/全692単体テスト/関連画面回帰/完成動画の確認がありました。これらは当時の対象/版に限る成功です。新追加後の聴感・製品回帰・媒体・最新CI・ユーザーPRレビューとreleaseへの集約は別途確認します。公開/CDは未実施です。
+
+## 追加承認のAC（2026-10-18・技術確認と残件）
+
+以下を既存AC2/4/5/6/7/8の追加確認として管理します。新ナレーション文は作成せず、既存承認7文を新用途まで説明した承認とはしません。
+
+| ID | 追加条件と独立確認 | 現在判定 |
+|---|---|---|
+| ADD-1 | リール回転spinと左/右/中央停止の計4用途を新作し、実際の開始・各停止の表示時計へ接続。フレーム反復やmute解除で重複しない | 4素材/接続/28関連testsと両幅実出力の技術確認済み。自然図柄全経路/聴感は別 |
+| ADD-2 | 実ヘソ物理入賞1回につき専用音を1回。保留追加/消化開始/抽選成功の通知と混同せず、通常/右入賞・払出音へ誤接続しない | 実solver入賞fixture＋満杯保留の両幅確認済み（start1/cue1、queue/serial不変）。自然入賞率/全経路検証ではない |
+| ADD-3 | 抽選・保存当落・保留順・払出・時計・盤面を変更せず、満杯保留時等も元の物理入賞事実と抽選受付を区別する | hit処理後の通知・球object弱参照で1回性をread確認。満杯FIFO/会計関連test成功。最終全回帰待ち |
+| ADD-4 | 個別SE mute/volume、pause/再開、退出/遅着、短間隔の複数入賞/停止で重複・追い鳴らし・残音がない。上限/優先制御で当たり音を壊さない | mute/pause/exit/同球重複・利用不能時消費の直接/両幅fixture技術確認済み。OS実背景/自然連打全件へ広げない |
+| ADD-5 | win/rushWin各4のPCMを維持。元BGM4/SE8との混合・無音/公開前情報保持を再確認 | v2 preservationで旧BGM4・元SE32音型/保存90ファイル・署名8PCM保持を確認。新ミックス聴感待ち |
+| ADD-6 | 新5用途の音源SHA/数値・同条件前後試聴/音付き媒体・新HEAD CIとPRレビューを対応づける | 追加音源50ファイルSHA/配信/両幅自然1倍再生確認。動画v2/新CI/聴感は未完了 |
+
+初期readでは現cueのspin/stopLeft/stopRightは抽選/図柄時計、stopCenterは解決通知へ対応し、物理ヘソ入賞と同じイベントではありません。追加音はcue差分だけで済むと決めず、実物理入賞の1回性と抽選/保留受付の分離を確認します。現在の板/物理/抽選処理を音のために変更することは条件に含めません。receipt時HEADはfeadのまま追加source未コミットで、HEADだけでは版を識別できません。source210の始終SHAで結び、SMはtests/媒体を重複実行しません。
+
+## 追加5用途の技術QA（2026-10-18・聴感/新CIは別）
+
+`runtime/reel-admission/receipt.json`はHEAD fead始終同一、source210入力SHA `2eb53c77333c7b881e3cc8447e808fee5904332bf0e0e63e87f7bdc8d2e12f95`始終一致。source-end全210現byte、receipt列挙ログ/画像/JSONのSHA/bytesを独立照合し全一致。関連実PCM/runtime28pass・fail0（2.856秒）、release build exit0、両幅の新入賞/リールと既存S9 UI/Workerを確認。旧692件/旧CIは追加前の結果で、新全回帰/CIを代用しません。
+
+`browser/verification.json`は390/1440幅とも、満杯queue [2,3,4,5]・serial5を維持した実solverの口通過でstart0→1/cue0→1。別の実AudioContextリール時計fixtureはadmission/spin/stopLeft/stopRight/stopCenterを各1回記録し、全5区間の実出力energy>0・errors0。初期位置を口付近に置くfixtureであり、通常発射からの自然入賞率や全図柄状態の受入ではありません。
+
+`audition-qa-v2/verification.json`は両幅17用途のHTTP/SHA/WebAudio decode等、追加5＋維持pushPressの6用途で基準/候補の自然終端を確認（計24再生、rate1/seek0/error null）。ヘソ基準は旧専用音が無いため意図した無音で、旧当たり音等との置換比較ではありません。before/after入力リスト一致、generationはfead上の未コミットv2source/page/helperと明記。
+
+`audio-v2/manifest.json`の50音源SHA/bytesとsource実byteを独立一致。追加5用途の数値はnonFinite0/MP3 decode0。`preservation-proof.json`は旧4曲/元SE8×4variant、保存旧90ファイル不変、署名8PCM一致を記録し、旧90ファイルの現SHAも独立一致。旧音源v1/承認7文・既存動画を変更した証拠とはしません。人間聴感は全receiptで未検証、動画v2/追加後CIは未実施です。
 
 ## 正式計画のACと現在判定
 
@@ -13,7 +40,7 @@
 | AC | 条件 | 現在の判定・証拠 / 残件 |
 |---|---|---|
 | AC1 | BGM4曲・再生成可能な作曲データ | **PM技術合格**。4曲/score/再生成条件、音源SHAと数値receiptを確認。聴感採否はユーザー確認待ち |
-| AC2 | SE8用途・旧win/rushWin確定音保持 | **PM技術合格**。8用途×4variant、旧署名8PCM独立一致。新組合せの聴感採否はユーザー確認待ち |
+| AC2 | 元SE8＋追加リール4/ヘソ1、旧win/rushWin確定音保持 | 元8用途はPM技術合格・旧署名8PCM一致の履歴。追加5用途と新source保持確認はADD-1〜6の技術確認済み。最終全回帰/媒体は別 |
 | AC3 | 全割当と代表一本の映像/BGM/SE/光の時間表 | **技術確認済み**。全割当read、両幅3結末の光/剣/無音境界DOM QA、同定義参照とiframe制限を確認。専用編集器/全演出の映像受入へ広げない |
 | AC4 | 共通時計・意図した無音・結果公開前の情報保持 | **技術確認済み**。PUSH表示時計、共通曲、関連tests、両幅runtime、前後実収録の半開無音窓を確認。100ms sampleは全PCM完全無音の証明ではなく、聴感は別 |
 | AC5 | 個別音量/消音・停止復帰・寿命/上限 | **局所ブラウザ技術確認済み**。保存/別bus、pause/resume、退出遅着無効、先読みとcacheを確認。visibilityは合成handler分岐で、OS実背景/スマホ実機を確認したとはしない |
@@ -33,7 +60,7 @@
 | decisiveHit / revival / bonusStart / rushStart | 新4用途・本編cue接続済み | 素材/割当/再生QA。bonusStartは旧chargeと別用途 | 同上 |
 | win / rushWin | 既存signature維持 | 48k各4variant計8PCM独立一致、声数上限時の保護を関連testsで確認 | 新ミックスの聴感は未確認 |
 
-## 証拠と確認範囲
+## 追加前の証拠と確認範囲（履歴）
 
 根拠は `prototype/reference-review/s9-20261018/` 以下。新HEADへ旧成功を付け替えず、各receiptの保存source/HEADと開始終了を保持します。
 
@@ -112,3 +139,7 @@ PMはAC1〜AC6の実装・技術条件をレビュー候補として受入。AC7
 最終動画は106.033秒・8,644,762bytes。全編decode成功、7発話と8比較区間の実AAC非無音、実映像の代表場面を確認。Braveの新規動画タブで通常速度・音声あり・シークせず106.090667秒の自然終端（AAC末尾込み）を確認しました。媒体SHAと実測はpr-video/VIDEO_VERIFICATION.json、local-playback.jsonです。人の聴感/端末差、PRplayer、最新CI、ユーザーレビューとrelease/0.3.0へのマージは別の残件です。新ナレーション本文/声の変更は既存承認条件に従います。S8の個別動画免除をS9へ流用しません。
 
 固定週期間を設けず合意範囲の受入と集約でS9を終了。#27/専用編集器/#25全体/#28全体/新釘探索は対象外。S7〜S9集約後のmain/公開・CDは別の既存承認/運用手順で、現在は未実施です。
+
+## 追加分の通常発射収録
+
+`runtime/reel-recording-verification.json`と`runtime/scene-reel-{before,after}-v1/record.json.gz`。元JSONはlossless gzip、復元SHAは`runtime/reel-archives.json`に保存。fead11aの製品src210はgit blob一致、ローカル複製HTMLのscriptパスだけ相対化。追加後src210も収録始終一致。前後各45秒、同じ台・通常強度0.18、BGMだけUI消音、外れ指定・direct表示。発射/球/solverへ注入しない物理通過で各7回ヘソへ入り、専用音は0→7回。回転7回・左右中停止は各6回。軌道完全一致・自然抽選率・聴感の証明へ広げない。最初の入賞の100ms観測から0.3秒前を開始として各12秒を使い、良い結果による抜粋選別をしない。
