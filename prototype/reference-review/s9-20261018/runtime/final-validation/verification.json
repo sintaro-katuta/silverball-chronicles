@@ -1,0 +1,69 @@
+{
+  "productSourceUnchanged": true,
+  "sourceFiles": 210,
+  "sourceStartHEAD": "40e3b59797f313d2239f717d9a5e9ea5696f4ccf",
+  "sourceEndHEAD": "eafdabe3715c47127978b1bca8eeb290a82359a5",
+  "unit": {
+    "pass": 692,
+    "fail": 0,
+    "skipped": 0,
+    "durationMs": 261629.842541,
+    "log": "unit.log"
+  },
+  "buildRelease": {
+    "exitCode": 0,
+    "log": "build-release.log"
+  },
+  "buildPreviews": {
+    "exitCode": 0,
+    "log": "build-previews.log"
+  },
+  "releaseBrowser": {
+    "widths": [
+      390,
+      1440
+    ],
+    "imagesLoaded": 25,
+    "httpErrors": 0,
+    "browserErrors": 0,
+    "pauseResume": true,
+    "exitCode": 0,
+    "log": "release-browser.log"
+  },
+  "existingUI": [
+    {
+      "script": "tests/session-controls.browser.mjs",
+      "log": "session-controls-browser.log",
+      "env": {},
+      "pid": 22611,
+      "startedAt": "2026-10-18T12:19:15.148Z",
+      "finishedAt": "2026-10-18T12:19:17.785Z",
+      "exitCode": 0
+    },
+    {
+      "script": "tests/feedback.browser.mjs",
+      "log": "feedback-ui-browser.log",
+      "env": {
+        "UI_ONLY": "1",
+        "FEEDBACK_OUTPUT": "../reference-review/s9-20261018/runtime/final-validation/feedback-ui/"
+      },
+      "pid": 22634,
+      "startedAt": "2026-10-18T12:19:17.785Z",
+      "finishedAt": "2026-10-18T12:19:24.869Z",
+      "exitCode": 0
+    }
+  ],
+  "extraPreviewNavigation": {
+    "exitCode": 1,
+    "reason": "Development tools page incorrectly targeted to built preview; /tools/bake-models.html not part of preview build. No product fix or success claim.",
+    "log": "preview-navigation-browser.log"
+  },
+  "cleanup": {
+    "5451": "Owned session ended with Ctrl-C",
+    "5450": "localhost preview server PID21970 remains; normal TERM denied, escalated cleanup interrupted by user. No additional permission requested.",
+    "5449": "User audition retained",
+    "5437": "Earlier user preview retained"
+  },
+  "humanListening": "Not verified",
+  "remoteCI": "Verify final PR HEAD separately"
+}

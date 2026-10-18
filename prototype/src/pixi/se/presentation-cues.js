@@ -41,10 +41,10 @@ export function reachAudioCues(p,{pushAvailable=false}={}){
 // A scope is a presentation object or immutable admission id. Muting, pause and
 // late frames consume boundaries, preventing replay/backlogs on resume or seek.
 export function createCueTracker(emit,stop){
- let scope=null,seen=new Set(),oldDraw=null,oldHolds=new Map(),oldRush=null,oldRemaining=null,oldRound=null,oldPrelude=null,oldGuide=null,oldWin=null,oldPush=null,pendingConfirmation=false,oldResolved=null,preludeSeen=new Set();
+ let scope=null,seen=new Set(),oldDraw=null,oldHolds=new Map(),oldRush=null,oldRemaining=null,oldRound=null,oldPrelude=null,oldGuide=null,oldWin=null,oldPush=null,pendingConfirmation=false,oldResolved=null,bonusKey=null,preludeSeen=new Set();
  const once=(id,name,allowed)=>{if(seen.has(id))return;seen.add(id);if(allowed){if(name==='silence')stop();else emit(name);}};
  return {
-  reset(){scope=null;seen.clear();oldDraw=oldRush=oldRemaining=oldRound=oldPrelude=oldGuide=oldWin=oldPush=oldResolved=null;oldHolds.clear();preludeSeen.clear();pendingConfirmation=false;stop();},
+  reset(){scope=null;seen.clear();oldDraw=oldRush=oldRemaining=oldRound=oldPrelude=oldGuide=oldWin=oldPush=oldResolved=null;oldHolds.clear();bonusKey=null;preludeSeen.clear();pendingConfirmation=false;stop();},
   sync(g,{paused=false,enabled=true,rounds=null,pushAvailable=false}={}){
    if(!g)return;const allowed=enabled&&!paused;if(!allowed)stop();
    const current=g.presentation??g.spinResult?.drawId??null;
@@ -61,7 +61,7 @@ export function createCueTracker(emit,stop){
     if(tier!=='none'&&oldHolds.get(record.id)!==tier&&allowed)emit('hold'+tier[0].toUpperCase()+tier.slice(1));
    }oldHolds=nextHolds;
    const p=g.presentation;
-   if(p){const cues=reachAudioCues(p,{pushAvailable});timed(cues,p.time);if(p.win&&cues.some(c=>c.id==='decision'&&p.time>=c.at))pendingConfirmation=true;if(p.pushInput&&oldPush!==p.pushInput){if(allowed)emit('pushPress');oldPush=p.pushInput;}}
+   if(p){const cues=reachAudioCues(p,{pushAvailable});const audible=cues.filter(c=>{if(c.name==='spin'&&oldDraw===p.drawId){seen.add(c.id);return false;}return true;});timed(audible,p.time);if(p.win&&cues.some(c=>c.id==='decision'&&p.time>=c.at))pendingConfirmation=true;if(p.pushInput&&oldPush!==p.pushInput){if(allowed)emit('pushPress');oldPush=p.pushInput;}}
    // Win zoom is secondary to the reach's decision. Direct/ordinary wins still
    // receive one confirmation. Never play a second win chord at every frame.
    if(g.previewWinAt!==undefined&&g.previewWinAt!==oldWin){
@@ -81,7 +81,7 @@ export function createCueTracker(emit,stop){
    const rush=!!g.rush;if(oldRush!==null&&oldRush!==rush&&allowed){if(!rush)emit('rushEnd');else if(!g.jackpot&&!prelude)emit('rushStart');}oldRush=rush;
    if(rush&&oldRemaining!==null&&g.rush.remaining>oldRemaining&&allowed)emit('rushReset');
    oldRemaining=g.rush?.remaining??null;
-   if(rounds){const key=rounds.round+':'+rounds.phase;
+   if(rounds){if(rounds.round===1&&rounds.phase==='opening'&&bonusKey!==g.previewWinAt){bonusKey=g.previewWinAt;if(allowed)emit('bonusStart');}const key=rounds.round+':'+rounds.phase;
     if(oldRound!==key){if(allowed){const name={opening:'open',closing:'close','payout-reveal':'roundReveal',finished:'clear'}[rounds.phase];if(name)emit(name);}oldRound=key;}
     if(rounds.payout>0)once('payout:'+rounds.payout,'payout',allowed);
    }

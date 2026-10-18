@@ -1,0 +1,30 @@
+{
+  "version": "s9-effects-v1",
+  "name": "pushPress",
+  "variant": 1,
+  "duration": 0.32,
+  "level": 0.27,
+  "priority": 2,
+  "duckFor": 0.13,
+  "role": "押した瞬間の短い応答",
+  "kind": "s9-synth",
+  "style": "s9-original-periodic",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.065,
+      "hz": 694.2738074518938,
+      "endHz": 347.1369037259469,
+      "gain": 0.35,
+      "pan": 0
+    },
+    {
+      "at": 0.03,
+      "seconds": 0.22,
+      "hz": 463.36577774133093,
+      "endHz": 463.36577774133093,
+      "gain": 0.24,
+      "pan": 0
+    }
+  ]
+}

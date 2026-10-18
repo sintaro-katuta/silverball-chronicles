@@ -1,6 +1,11 @@
 import {TAU,synthWave} from './synth-wave.js';
 import {reachSchedule} from '../reach-ending.js';
 const clamp=x=>Math.max(0,Math.min(1,x));
+// Half-open display-clock windows shared by runtime music and the review table.
+export function presentationSilenceWindows(p){
+ if(!p?.longReach||p.reachEnding==='flash')return [];
+ return [{start:16.2,end:17},{start:49.65,end:50.2},...(p.reachEnding==='revival'||p.win===false?[{start:53.3,end:54}]:[])];
+}
 // Result-independent bed until the visual reveal. Its envelope uses display
 // time, so pressing PUSH, pause/resume and seeking cannot leave a stale rise.
 export function atmospherePose(game){
@@ -16,7 +21,7 @@ export function atmospherePose(game){
   if(t>=reachSchedule(p).decisionAt)return {...pose,mode:'afterglow',level:.052,pitch:220};
   const charge=clamp((t-4)/4.4);return {...pose,mode:'charge',level:.052+.04*charge,pitch:160+570*charge,charge};
  }
- if(t>=16.2&&t<17||t>=49.65&&t<50.2||t>=53.3&&t<54&&(p.reachEnding==='revival'||p.win===false))return {...pose,active:false,mode:'silence',level:0};
+ if(presentationSilenceWindows(p).some(w=>t>=w.start&&t<w.end))return {...pose,active:false,mode:'silence',level:0};
  if(t>=51.7){
   if(p.reachEnding==='revival'&&t<54)return {...pose,mode:'defeat',level:.019,pitch:100};
   if(p.reachEnding==='revival'&&t<55.7){const charge=clamp((t-54)/1.7);return {...pose,mode:'rekindle',level:.045+.045*charge,pitch:180+500*charge,charge};}

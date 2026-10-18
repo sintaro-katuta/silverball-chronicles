@@ -1,0 +1,379 @@
+{
+  "sourceUnchanged": true,
+  "sourceSHA": "6e2034bf784a8065b4bfd258e0e8b3d21e01c30e389fcd029e88da6eb277b867",
+  "head": "02054e84078d421caf087cb8dc2dda490a146b4b",
+  "uncommitted": true,
+  "ownBrowserClosed": true,
+  "capture8CasesStarted": false,
+  "checks": {
+    "realFocused30": 0,
+    "releaseBuild": 0,
+    "existingS9Browser2Widths": 0,
+    "introNatural2WidthsAndSkipPauseAnd3Experiences": 0
+  },
+  "settingsDirectory": "intro-fixed-existing-s9-browser",
+  "preFixResults": "qa-receipt-before-intro-fix.json",
+  "reelAdmission2Widths": "reel-admission/verification.json (before intro-only fix)",
+  "intro": [
+    {
+      "file": "prototype/reference-review/s9-20261018/runtime/energy-v3/intro-fixed/1440-battle.json",
+      "starts": 2,
+      "phases": {
+        "whole": {
+          "samples": 17,
+          "active": 6,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "board": {
+          "samples": 25,
+          "active": 25,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "lcd": {
+          "samples": 34,
+          "active": 34,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "return": {
+          "samples": 16,
+          "active": 16,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "complete": {
+          "samples": 108,
+          "active": 108,
+          "gainMin": 0.28999999165534973,
+          "gainMax": 0.5
+        }
+      },
+      "finalMusic": {
+        "name": "battle",
+        "position": 1.5333333333333303,
+        "fadeInSeconds": 0.006,
+        "voices": 1,
+        "activeVoices": 1,
+        "cachedTracks": [
+          "normal",
+          "battle"
+        ],
+        "pendingTracks": [],
+        "cacheBytes": 29952000,
+        "pending": 0,
+        "muted": false,
+        "volume": 0.5,
+        "loadError": null
+      }
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/runtime/energy-v3/intro-fixed/1440-bonus.json",
+      "starts": 1,
+      "phases": {
+        "whole": {
+          "samples": 17,
+          "active": 6,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "board": {
+          "samples": 25,
+          "active": 25,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "lcd": {
+          "samples": 34,
+          "active": 34,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "return": {
+          "samples": 16,
+          "active": 16,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "complete": {
+          "samples": 108,
+          "active": 108,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        }
+      },
+      "finalMusic": {
+        "name": "normal",
+        "position": 8.108333333333338,
+        "fadeInSeconds": 0.006,
+        "voices": 1,
+        "activeVoices": 1,
+        "cachedTracks": [
+          "normal",
+          "battle"
+        ],
+        "pendingTracks": [],
+        "cacheBytes": 29952000,
+        "pending": 0,
+        "muted": false,
+        "volume": 0.5,
+        "loadError": null
+      }
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/runtime/energy-v3/intro-fixed/1440-natural.json",
+      "starts": 1,
+      "phases": {
+        "whole": {
+          "samples": 17,
+          "active": 5,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "board": {
+          "samples": 25,
+          "active": 25,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "lcd": {
+          "samples": 34,
+          "active": 34,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "return": {
+          "samples": 16,
+          "active": 16,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "complete": {
+          "samples": 108,
+          "active": 108,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        }
+      },
+      "finalMusic": {
+        "name": "normal",
+        "position": 8.11666666666667,
+        "fadeInSeconds": 0.006,
+        "voices": 1,
+        "activeVoices": 1,
+        "cachedTracks": [
+          "normal",
+          "battle"
+        ],
+        "pendingTracks": [],
+        "cacheBytes": 29952000,
+        "pending": 0,
+        "muted": false,
+        "volume": 0.5,
+        "loadError": null
+      }
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/runtime/energy-v3/intro-fixed/1440-pause.json",
+      "starts": 2,
+      "phases": {
+        "whole": {
+          "samples": 17,
+          "active": 7,
+          "gainMin": 0.4427083432674408,
+          "gainMax": 0.5
+        },
+        "board": {
+          "samples": 38,
+          "active": 25,
+          "gainMin": 0,
+          "gainMax": 0.5
+        },
+        "lcd": {
+          "samples": 34,
+          "active": 34,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "return": {
+          "samples": 16,
+          "active": 16,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "complete": {
+          "samples": 13,
+          "active": 13,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        }
+      },
+      "finalMusic": {
+        "name": "normal",
+        "position": 4.300000000000001,
+        "fadeInSeconds": 0.006,
+        "voices": 1,
+        "activeVoices": 1,
+        "cachedTracks": [
+          "normal",
+          "battle"
+        ],
+        "pendingTracks": [],
+        "cacheBytes": 29952000,
+        "pending": 0,
+        "muted": false,
+        "volume": 0.5,
+        "loadError": null
+      }
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/runtime/energy-v3/intro-fixed/1440-rush.json",
+      "starts": 3,
+      "phases": {
+        "whole": {
+          "samples": 17,
+          "active": 4,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "board": {
+          "samples": 25,
+          "active": 25,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "lcd": {
+          "samples": 34,
+          "active": 34,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "return": {
+          "samples": 16,
+          "active": 16,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "complete": {
+          "samples": 108,
+          "active": 101,
+          "gainMin": 0,
+          "gainMax": 0.5
+        }
+      },
+      "finalMusic": {
+        "name": "battle",
+        "position": 3.7583333333333226,
+        "fadeInSeconds": 0.006,
+        "voices": 1,
+        "activeVoices": 1,
+        "cachedTracks": [
+          "battle",
+          "rush"
+        ],
+        "pendingTracks": [],
+        "cacheBytes": 25536000,
+        "pending": 0,
+        "muted": false,
+        "volume": 0.5,
+        "loadError": null
+      }
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/runtime/energy-v3/intro-fixed/1440-skip.json",
+      "starts": 1,
+      "phases": {
+        "whole": {
+          "samples": 18,
+          "active": 7,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "board": {
+          "samples": 3,
+          "active": 3,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "complete": {
+          "samples": 55,
+          "active": 55,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        }
+      },
+      "finalMusic": {
+        "name": "normal",
+        "position": 3.1641666666666612,
+        "fadeInSeconds": 0.006,
+        "voices": 1,
+        "activeVoices": 1,
+        "cachedTracks": [
+          "normal",
+          "battle"
+        ],
+        "pendingTracks": [],
+        "cacheBytes": 29952000,
+        "pending": 0,
+        "muted": false,
+        "volume": 0.5,
+        "loadError": null
+      }
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/runtime/energy-v3/intro-fixed/390-natural.json",
+      "starts": 1,
+      "phases": {
+        "whole": {
+          "samples": 17,
+          "active": 7,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "board": {
+          "samples": 25,
+          "active": 25,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "lcd": {
+          "samples": 34,
+          "active": 34,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "return": {
+          "samples": 16,
+          "active": 16,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        },
+        "complete": {
+          "samples": 108,
+          "active": 108,
+          "gainMin": 0.5,
+          "gainMax": 0.5
+        }
+      },
+      "finalMusic": {
+        "name": "normal",
+        "position": 8.100000000000003,
+        "fadeInSeconds": 0.006,
+        "voices": 1,
+        "activeVoices": 1,
+        "cachedTracks": [
+          "normal",
+          "battle"
+        ],
+        "pendingTracks": [],
+        "cacheBytes": 29952000,
+        "pending": 0,
+        "muted": false,
+        "volume": 0.5,
+        "loadError": null
+      }
+    }
+  ],
+  "scope": "Final fixed-source start/end guard covers related units/build/existing S9 UI run. Intro media was recorded immediately before this guard under the same owned fixed edits; its detailed clock/starts/audio records are separate. No full unit rerun or speaker-audition claim."
+}

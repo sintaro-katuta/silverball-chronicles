@@ -1,0 +1,100 @@
+{
+  "recordedAt": "2026-10-18T13:15:37.343341+00:00",
+  "sourceCount": 210,
+  "startHead": "fead11a9e9358d36ab01ae73a537c400d72cb055",
+  "endHead": "fead11a9e9358d36ab01ae73a537c400d72cb055",
+  "startSourceSHA": "2eb53c77333c7b881e3cc8447e808fee5904332bf0e0e63e87f7bdc8d2e12f95",
+  "endSourceSHA": "2eb53c77333c7b881e3cc8447e808fee5904332bf0e0e63e87f7bdc8d2e12f95",
+  "sourceUnchanged": true,
+  "checks": [
+    {
+      "name": "related real PCM and runtime units",
+      "passed": 28,
+      "failed": 0,
+      "session": 20971,
+      "exit": 0
+    },
+    {
+      "name": "physical heso/full queue/mute/pause/exit plus five real AudioContext output intervals",
+      "widths": [
+        390,
+        1440
+      ],
+      "session": 28915,
+      "exit": 0
+    },
+    {
+      "name": "release build",
+      "exit": 0
+    },
+    {
+      "name": "existing S9 UI and four Worker tracks",
+      "widths": [
+        390,
+        1440
+      ],
+      "session": 31973,
+      "exit": 0
+    },
+    {
+      "name": "git diff --check",
+      "exit": 0
+    }
+  ],
+  "scope": "Seeded mouth initial-state fixture uses unchanged actual solver; independent draw-clock fixture uses actual AudioContext. This is not natural admission rate, speaker audition or full regression. Prior 692-unit evidence is pre-addition; latest full CI remains PM-owned.",
+  "ownedBrowsersClosed": true,
+  "serversRestarted": false,
+  "changedOwnPaths": [
+    "prototype/src/pixi/board-runtime.js",
+    "prototype/src/pixi/se/presentation-sound.js",
+    "prototype/src/pixi/se/presentation-cues.js",
+    "prototype/tests/s9-audio-runtime.test.js",
+    "prototype/tests/s9-reel-admission.browser.mjs"
+  ],
+  "files": {
+    "prototype/reference-review/s9-20261018/runtime/additional-reel-admission-unit.log": {
+      "sha256": "e0aadcb5d29da6dcffdd5e5b92d3ad2ea81c915e09af29a978649fe8b65f6eea",
+      "bytes": 1939
+    },
+    "prototype/reference-review/s9-20261018/runtime/additional-reel-admission-focused-real.log": {
+      "sha256": "4fadf3d7b5376ffdf87becc01dd5ece3e7100c014032461d515464e295c87de6",
+      "bytes": 3128
+    },
+    "prototype/reference-review/s9-20261018/runtime/reel-admission/browser.log": {
+      "sha256": "42d8dbcfbc2e5c4dcca1df6cc4ff2c119ed0a49dc8f1a981912ba406657a5e61",
+      "bytes": 109
+    },
+    "prototype/reference-review/s9-20261018/runtime/reel-admission/source-end.json": {
+      "sha256": "d524b9a160f8fc5e394e2a4ab3fab0ca45b15ed07f16758d822429cc65ef5dc9",
+      "bytes": 36345
+    },
+    "prototype/reference-review/s9-20261018/runtime/reel-admission/existing-s9-browser.log": {
+      "sha256": "989aa982be07b2d7e30f7afa50f76cd15f319ed9d401396d94bafee5b03aaeb1",
+      "bytes": 47
+    },
+    "prototype/reference-review/s9-20261018/runtime/reel-admission/source-start.json": {
+      "sha256": "d524b9a160f8fc5e394e2a4ab3fab0ca45b15ed07f16758d822429cc65ef5dc9",
+      "bytes": 36345
+    },
+    "prototype/reference-review/s9-20261018/runtime/reel-admission/build-release.log": {
+      "sha256": "90d3b5e1e9d61b86d9099d1fd0f3e35ae95177d27bd5d7ff62949f637d1fd98d",
+      "bytes": 2484
+    },
+    "prototype/reference-review/s9-20261018/runtime/reel-admission/browser/verification.json": {
+      "sha256": "217fcb7e0d1f0bad38b25a9227103cbfc233c1760020a935abd0fefbae62045f",
+      "bytes": 4898
+    },
+    "prototype/reference-review/s9-20261018/runtime/reel-admission/existing-s9-browser/1440-settings.png": {
+      "sha256": "5774c8e2d6c747a15c488335d1f66e37e677bef6fa8d42e5ce3a89413a56637c",
+      "bytes": 534137
+    },
+    "prototype/reference-review/s9-20261018/runtime/reel-admission/existing-s9-browser/verification.json": {
+      "sha256": "f64f6150c71ef837587b671b11f47a61fea0fc8e45a49e824db4ed6e2b687a3c",
+      "bytes": 6191
+    },
+    "prototype/reference-review/s9-20261018/runtime/reel-admission/existing-s9-browser/390-settings.png": {
+      "sha256": "4bbe8118b87e775b8724b2793fce92de289e2c6a756374c53b02121f7027980a",
+      "bytes": 126500
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "mediaReady": true,
+  "status": "ローカル検証／本番未公開",
+  "captureNotice": "検証用の当落指定・canvasのみ収録（操作DOMは未収録）",
+  "samples": [
+    {
+      "afterParagraph": 2,
+      "id": "normal-before",
+      "file": "sample-normal-before.mp4",
+      "frames": 90,
+      "title": "通常：変更前",
+      "detail": "短い背景パッドと既存SE",
+      "clockLabel": "通常待機・録画3秒から3秒"
+    },
+    {
+      "afterParagraph": 2,
+      "id": "normal-after",
+      "file": "sample-normal-after.mp4",
+      "frames": 90,
+      "title": "通常：変更後",
+      "detail": "旋律とリズムを持つ通常BGM",
+      "clockLabel": "通常待機・録画3秒から3秒"
+    },
+    {
+      "afterParagraph": 3,
+      "id": "battle-before",
+      "file": "sample-battle-before.mp4",
+      "frames": 180,
+      "title": "決意の一閃：変更前",
+      "detail": "比較の前半／変更前の実音",
+      "clockLabel": "表示時計48.5秒付近から等速6秒・当たり指定"
+    },
+    {
+      "afterParagraph": 3,
+      "id": "battle-after",
+      "file": "sample-battle-after.mp4",
+      "frames": 180,
+      "title": "決意の一閃：変更後",
+      "detail": "比較の後半／変更後の実音",
+      "clockLabel": "表示時計48.5秒付近から等速6秒・当たり指定"
+    },
+    {
+      "afterParagraph": 4,
+      "id": "se-before",
+      "file": "sample-se-before.mp4",
+      "frames": 90,
+      "title": "一撃の効果音：基準",
+      "detail": "単体一撃音1.55秒＋比較用無音1.45秒",
+      "clockLabel": "単体SE 1.55秒＋比較用の無音1.45秒"
+    },
+    {
+      "afterParagraph": 4,
+      "id": "se-after",
+      "file": "sample-se-after.mp4",
+      "frames": 90,
+      "title": "一撃の効果音：最新",
+      "detail": "単体一撃音1.55秒＋比較用無音1.45秒",
+      "clockLabel": "単体SE 1.55秒＋比較用の無音1.45秒"
+    },
+    {
+      "afterParagraph": 5,
+      "id": "bonus-after",
+      "file": "sample-bonus-after.mp4",
+      "frames": 90,
+      "title": "BONUS：変更後",
+      "detail": "報酬を感じる曲／実録音",
+      "clockLabel": "大当り体験・録画9秒から3秒"
+    },
+    {
+      "afterParagraph": 5,
+      "id": "rush-after",
+      "file": "sample-rush-after.mp4",
+      "frames": 90,
+      "title": "RUSH：変更後",
+      "detail": "RUSHからBONUSへの実音の切替（当たり後）",
+      "clockLabel": "RUSH体験・録画12.7秒から3秒・BONUSへの切替を含む"
+    }
+  ],
+  "stills": {
+    "normal": "sample-normal-after.png",
+    "battle": "sample-battle-after.png",
+    "bonus": "sample-bonus-after.png",
+    "rush": "sample-rush-after.png"
+  }
+}

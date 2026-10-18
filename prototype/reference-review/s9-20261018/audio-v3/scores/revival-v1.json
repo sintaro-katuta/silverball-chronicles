@@ -1,0 +1,70 @@
+{
+  "version": "s9-effects-v3",
+  "name": "revival",
+  "variant": 1,
+  "duration": 1.5,
+  "level": 0.33,
+  "priority": 3,
+  "duckFor": 0.3,
+  "role": "復活開始後の再点火",
+  "kind": "s9-synth",
+  "style": "s9-v3-bright-additive",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.13,
+      "hz": 389.6434633658588,
+      "endHz": 389.6434633658588,
+      "gain": 0.3,
+      "pan": 0
+    },
+    {
+      "at": 0.16,
+      "seconds": 0.13,
+      "hz": 583.8010300544146,
+      "endHz": 583.8010300544146,
+      "gain": 0.3,
+      "pan": 0
+    },
+    {
+      "at": 0.32,
+      "seconds": 0.13,
+      "hz": 779.2869267317176,
+      "endHz": 779.2869267317176,
+      "gain": 0.3,
+      "pan": 0
+    },
+    {
+      "at": 0.48,
+      "seconds": 0.13,
+      "hz": 1040.2240697212267,
+      "endHz": 1040.2240697212267,
+      "gain": 0.3,
+      "pan": 0
+    },
+    {
+      "at": 0.7,
+      "seconds": 0.55,
+      "hz": 1388.5299038372711,
+      "endHz": 1388.5299038372711,
+      "gain": 0.3,
+      "pan": 0
+    },
+    {
+      "at": 0.7,
+      "seconds": 0.55,
+      "hz": 926.7315554826619,
+      "endHz": 926.7315554826619,
+      "gain": 0.15,
+      "pan": 0
+    }
+  ],
+  "envelope": {
+    "attack": 0.0012,
+    "release": 0.035,
+    "decay": 1,
+    "voice": "lead",
+    "echo": false
+  },
+  "intent": "Bright finite-additive synth, articulated rises and decisive attack; no drums/bass in SE, no outcome or game RNG input."
+}

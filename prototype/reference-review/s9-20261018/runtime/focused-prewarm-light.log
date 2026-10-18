@@ -1,0 +1,20 @@
+✔ music selection does not disclose stored win/revival; battle uses presentation clock and exact existing silence boundaries (2.616ms)
+✔ lazy loading, game-clock pause/resume, PUSH/seek and silence resume at actual display offset without pad source (1.864583ms)
+✔ independent music mute/volume never reallocates buffers, transition voices and decoded cache are bounded (0.520334ms)
+✔ late async generation and worker replies cannot revive disposed player/session (0.467334ms)
+✔ audio settings independently persist through session recreation; corrupt/denied storage is safe (0.229125ms)
+✔ BONUS start is a once-only first-round opening cue and mute consumes it without replay (0.202792ms)
+✔ integrated buses keep SE/music independent, mute consumes cues, and disposal is idempotent without gameplay mutations (0.985834ms)
+✔ new BONUS/RUSH stings cannot evict playing win or rushWin signatures at the six-voice limit (0.18825ms)
+✔ shared silence windows include53.3 and preserve exact half-open runtime boundaries, without exposing pre-result differences (0.097375ms)
+✔ BGM starts and seeks ramp from zero over6ms; mute/pause/silence remain immediate and do not change display position (0.743459ms)
+✔ normal playback warms only battle and enters a ready battle immediately at its first display offset (0.276625ms)
+✔ muted/paused normal music never prefetches; disposal during battle warm-up discards the late PCM (0.526709ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 70.690667

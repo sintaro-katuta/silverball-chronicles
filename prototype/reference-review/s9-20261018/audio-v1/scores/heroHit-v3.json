@@ -1,0 +1,38 @@
+{
+  "version": "s9-effects-v1",
+  "name": "heroHit",
+  "variant": 3,
+  "duration": 0.74,
+  "level": 0.32,
+  "priority": 2,
+  "duckFor": 0.16,
+  "role": "途中の攻撃の一打",
+  "kind": "s9-synth",
+  "style": "s9-original-periodic",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.09,
+      "hz": 1044.4100820742294,
+      "endHz": 391.21144510978576,
+      "gain": 0.4,
+      "pan": 0
+    },
+    {
+      "at": 0.025,
+      "seconds": 0.38,
+      "hz": 391.21144510978576,
+      "endHz": 310.5063022174784,
+      "gain": 0.33,
+      "pan": 0
+    },
+    {
+      "at": 0.06,
+      "seconds": 0.43,
+      "hz": 232.61965996380283,
+      "endHz": 232.61965996380283,
+      "gain": 0.16,
+      "pan": -0.12
+    }
+  ]
+}

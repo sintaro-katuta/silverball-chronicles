@@ -1,0 +1,29 @@
+Input #0, matroska,webm, from 'prototype/reference-review/s9-20261018/runtime/energy-v3/scene-after-v1/rush.webm':
+  Metadata:
+    encoder         : Chrome
+  Duration: 00:00:19.96, start: 0.000000, bitrate: 2268 kb/s
+  Stream #0:0(eng): Video: vp8, yuv420p(tv, bt709, progressive), 725x798, SAR 1:1 DAR 725:798, 60 tbr, 1k tbn (default)
+    Metadata:
+      alpha_mode      : 1
+  Stream #0:1(eng): Audio: opus, 48000 Hz, stereo, fltp, start 0.029000 (default)
+[Parsed_volumedetect_0 @ 0x714c246c0] n_samples: 0
+Stream mapping:
+  Stream #0:1 -> #0:0 (opus (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0(eng): Audio: pcm_s16le, 48000 Hz, stereo, s16, 1536 kb/s (default)
+    Metadata:
+      encoder         : Lavc63.1.101 pcm_s16le
+[Parsed_volumedetect_0 @ 0x714c24c00] n_samples: 1918080
+[Parsed_volumedetect_0 @ 0x714c24c00] mean_volume: -23.7 dB
+[Parsed_volumedetect_0 @ 0x714c24c00] max_volume: -3.8 dB
+[Parsed_volumedetect_0 @ 0x714c24c00] histogram_3db: 2
+[Parsed_volumedetect_0 @ 0x714c24c00] histogram_4db: 28
+[Parsed_volumedetect_0 @ 0x714c24c00] histogram_5db: 114
+[Parsed_volumedetect_0 @ 0x714c24c00] histogram_6db: 370
+[Parsed_volumedetect_0 @ 0x714c24c00] histogram_7db: 1006
+[Parsed_volumedetect_0 @ 0x714c24c00] histogram_8db: 1903
+[out#0/null @ 0x714c24480] video:0KiB audio:3746KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:20.00 bitrate=N/A speed= 770x elapsed=0:00:00.02    

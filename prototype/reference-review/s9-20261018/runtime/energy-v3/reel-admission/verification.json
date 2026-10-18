@@ -1,0 +1,207 @@
+{
+  "scope": "Seeded physical mouth crossing with unchanged solver, full queue, effects mute/pause/exit; separate real AudioContext reel-clock fixture. No natural-rate or speaker-audition claim.",
+  "records": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "ballId": 2,
+      "before": {
+        "serial": 5,
+        "queue": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "start": 0,
+        "cues": 0
+      },
+      "after": {
+        "serial": 5,
+        "queue": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "start": 1,
+        "cues": 1
+      },
+      "reel": {
+        "state": {
+          "enabled": true,
+          "state": "running",
+          "voices": 0,
+          "cacheBytes": 12015368,
+          "music": {
+            "name": "normal",
+            "position": 0,
+            "fadeInSeconds": 0.006,
+            "voices": 1,
+            "activeVoices": 1,
+            "cachedTracks": [
+              "normal"
+            ],
+            "pendingTracks": [
+              "battle"
+            ],
+            "cacheBytes": 9216000,
+            "pending": 1,
+            "muted": false,
+            "volume": 0.5,
+            "loadError": null
+          },
+          "preferences": {
+            "musicVolume": 0.5,
+            "effectsVolume": 1,
+            "musicMuted": false,
+            "effectsMuted": false
+          },
+          "cues": [
+            {
+              "name": "admission",
+              "variant": 0,
+              "time": 0.010666666666666666
+            },
+            {
+              "name": "spin",
+              "variant": 0,
+              "time": 0.31466666666666665
+            },
+            {
+              "name": "stopLeft",
+              "variant": 0,
+              "time": 0.6186666666666667
+            },
+            {
+              "name": "stopRight",
+              "variant": 0,
+              "time": 0.9226666666666666
+            },
+            {
+              "name": "stopCenter",
+              "variant": 0,
+              "time": 1.2266666666666666
+            }
+          ]
+        },
+        "peak": 0.24758970737457275,
+        "energy": 166.51586991044806,
+        "intervalEnergy": [
+          1.0131106627423825,
+          15.971563048970479,
+          11.402328494488728,
+          21.52670268595307,
+          32.55762908083082
+        ],
+        "duration": 1.5,
+        "bytes": 24132,
+        "scope": "Real AudioContext output of runtime cue lifecycle; seeded draw-clock fixture, not a natural lottery."
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "ballId": 1,
+      "before": {
+        "serial": 5,
+        "queue": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "start": 0,
+        "cues": 0
+      },
+      "after": {
+        "serial": 5,
+        "queue": [
+          2,
+          3,
+          4,
+          5
+        ],
+        "start": 1,
+        "cues": 1
+      },
+      "reel": {
+        "state": {
+          "enabled": true,
+          "state": "running",
+          "voices": 0,
+          "cacheBytes": 12015368,
+          "music": {
+            "name": "normal",
+            "position": 0,
+            "fadeInSeconds": 0.006,
+            "voices": 1,
+            "activeVoices": 1,
+            "cachedTracks": [
+              "normal"
+            ],
+            "pendingTracks": [
+              "battle"
+            ],
+            "cacheBytes": 9216000,
+            "pending": 1,
+            "muted": false,
+            "volume": 0.5,
+            "loadError": null
+          },
+          "preferences": {
+            "musicVolume": 0.5,
+            "effectsVolume": 1,
+            "musicMuted": false,
+            "effectsMuted": false
+          },
+          "cues": [
+            {
+              "name": "admission",
+              "variant": 0,
+              "time": 0
+            },
+            {
+              "name": "spin",
+              "variant": 0,
+              "time": 0.30933333333333335
+            },
+            {
+              "name": "stopLeft",
+              "variant": 0,
+              "time": 0.608
+            },
+            {
+              "name": "stopRight",
+              "variant": 0,
+              "time": 0.912
+            },
+            {
+              "name": "stopCenter",
+              "variant": 0,
+              "time": 1.216
+            }
+          ]
+        },
+        "peak": 0.24147525429725647,
+        "energy": 167.72268143376618,
+        "intervalEnergy": [
+          0.7619763393705817,
+          15.95856017994586,
+          11.789036033292335,
+          22.297125872592613,
+          32.845641305453924
+        ],
+        "duration": 1.5,
+        "bytes": 24446,
+        "scope": "Real AudioContext output of runtime cue lifecycle; seeded draw-clock fixture, not a natural lottery."
+      },
+      "errors": []
+    }
+  ]
+}

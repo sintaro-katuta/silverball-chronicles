@@ -1,0 +1,38 @@
+{
+  "version": "s9-frequent-v2",
+  "name": "stopLeft",
+  "variant": 3,
+  "duration": 0.18,
+  "level": 0.18,
+  "priority": 1,
+  "duckFor": 0,
+  "role": "左図柄停止の短い打点",
+  "kind": "s9-synth",
+  "style": "s9-original-periodic",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.11,
+      "hz": 586.1503299741506,
+      "endHz": 465.23042875839866,
+      "gain": 0.3,
+      "pan": -0.08
+    },
+    {
+      "at": 0.01,
+      "seconds": 0.12,
+      "hz": 293.0796105716788,
+      "endHz": 293.0796105716788,
+      "gain": 0.12,
+      "pan": 0
+    }
+  ],
+  "envelope": {
+    "attack": 0.003,
+    "release": 0.035,
+    "decay": 2.3,
+    "bright": 0.28,
+    "echo": false
+  },
+  "intent": "Short periodic synth; no result/odds/game-RNG input. Loop-free, no long echo."
+}

@@ -1,0 +1,102 @@
+{
+  "sources": "Actual canvas and Web Audio captures; authored outcomes, not natural odds trials",
+  "alignment": "Battle start interpolated at display time48.5 from100ms real samples; not a frame-exact synchronization guarantee",
+  "clips": [
+    {
+      "file": "sample-normal-before.mp4",
+      "source": "prototype/reference-review/s9-20261018/scene-before-v1/normal.webm",
+      "sourceSHA256": "95360549b309738d7a9a501e8c6558f07e612669120e06da48fadd0e12e1a2e2",
+      "startWallSeconds": 3,
+      "seconds": 3,
+      "clock": "通常待機・録画3秒から3秒",
+      "speed": 1,
+      "fixture": null,
+      "sha256": "c8b7a4e5263dacce4c987b917ff033c20ab954e7830ce6345715dc50b1f065da"
+    },
+    {
+      "file": "sample-battle-before.mp4",
+      "source": "prototype/reference-review/s9-20261018/scene-before-v1/pressure-win.webm",
+      "sourceSHA256": "1574a5d36615061abcfe28816ebdce6b98d2a4b3e97f9546ef619c15a101abaa",
+      "startWallSeconds": 48.526449999997666,
+      "seconds": 6,
+      "clock": "表示時計48.5秒付近から等速6秒・当たり指定",
+      "speed": 1,
+      "fixture": {
+        "win": true,
+        "ending": "standard"
+      },
+      "sha256": "c87c77cf3415c6e9e1d28076e4cb4b3dfd476c1ec9716f952dfda4131444dc05"
+    },
+    {
+      "file": "sample-normal-after.mp4",
+      "source": "prototype/reference-review/s9-20261018/scene-after-v2/normal.webm",
+      "sourceSHA256": "aa37620cdf689623d4a4db48e06de807bf1801f6b97d5d0062d39f7b2c9d1d8a",
+      "startWallSeconds": 3,
+      "seconds": 3,
+      "clock": "通常待機・録画3秒から3秒",
+      "speed": 1,
+      "fixture": null,
+      "sha256": "e71df5505471254c706e896021522d999b43f552e93f80a188c8d4863d91eaeb"
+    },
+    {
+      "file": "sample-battle-after.mp4",
+      "source": "prototype/reference-review/s9-20261018/scene-after-v2/pressure-win.webm",
+      "sourceSHA256": "b9dfafbfeebc79f4aecf4c751b0f51a7875b2fe401c825c8d66d836b06322607",
+      "startWallSeconds": 48.510791666668766,
+      "seconds": 6,
+      "clock": "表示時計48.5秒付近から等速6秒・当たり指定",
+      "speed": 1,
+      "fixture": {
+        "win": true,
+        "ending": "standard"
+      },
+      "sha256": "214bf83187e0db75da91825785a7d79eda38bd24fc77e017ca351542f5d94be0"
+    },
+    {
+      "file": "sample-bonus-after.mp4",
+      "source": "prototype/reference-review/s9-20261018/scene-after-v2/bonus.webm",
+      "sourceSHA256": "7c4558c9f149204efab336f71606770f86c8edcb27c754cbe831121c4b5ace6a",
+      "startWallSeconds": 9,
+      "seconds": 3,
+      "clock": "大当り体験・録画9秒から3秒",
+      "speed": 1,
+      "fixture": null,
+      "sha256": "86c911a2d7d95b702782233d9726541167c2a963748db68f801de0c37b3fedc7"
+    },
+    {
+      "file": "sample-rush-after.mp4",
+      "source": "prototype/reference-review/s9-20261018/scene-after-v2/rush.webm",
+      "sourceSHA256": "d8c337926d849b4f1048876c6fdd018727a42aad1284ef9cd17e528a04c056f7",
+      "startWallSeconds": 12.7,
+      "seconds": 3,
+      "clock": "RUSH体験・録画12.7秒から3秒・BONUSへの切替を含む",
+      "speed": 1,
+      "fixture": null,
+      "sha256": "7f2d0f049e35f055723591575c41a37befd52946a3fb3aa313badb1aef9318c6"
+    },
+    {
+      "file": "sample-se-before.mp4",
+      "source": "prototype/reference-review/s9-20261018/audio-v1/baseline/decisiveHit.wav",
+      "sourceSHA256": "57d14412443213fb56b9410a6e233805dbbc70cd043b7c15d1cd542d0e5f4379",
+      "seconds": 3,
+      "activeEffectSeconds": 1.55,
+      "silentGapSeconds": 1.45,
+      "auditionGain": 0.887156012037961,
+      "clock": "単体SE 1.55秒＋比較用の無音1.45秒",
+      "speed": 1,
+      "sha256": "67a4e4aff47e2c5b777d809cd14345219d786bf4798be25c7f7142182f8c7ef9"
+    },
+    {
+      "file": "sample-se-after.mp4",
+      "source": "prototype/reference-review/s9-20261018/audio-v1/se/decisiveHit-v0.wav",
+      "sourceSHA256": "547780559cf49b4f6c08369934d0653852968f9b14d9c81341f9097569030bdc",
+      "seconds": 3,
+      "activeEffectSeconds": 1.55,
+      "silentGapSeconds": 1.45,
+      "auditionGain": 1.0,
+      "clock": "単体SE 1.55秒＋比較用の無音1.45秒",
+      "speed": 1,
+      "sha256": "7830ee150ca6f285a05c3dbfac96dcb0541ee8fe8c1b1d1122a1e94e6c53ccf0"
+    }
+  ]
+}

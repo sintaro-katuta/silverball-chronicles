@@ -21,14 +21,23 @@ try{
   for(const name of ['reach','gather','decisiveHit','loss'])assert.ok(result.audio.cues.some(c=>c.name===name),name);
   assert.ok(!result.audio.cues.some(c=>c.name==='win'));runs.push({continuous:true,record,result});console.log('Continuous full normal loss, result integrity and SE passed.');
  }
+ // Natural shots launched before feeding stopped must finish; do not delete balls or alter draws.
+ const beforeDrain=await page.evaluate(()=>({snapshot:__sessionReview.board().snapshot(),accepted:__sessionReview.game().acceptedDraws,events:__sessionReview.game().w.events.slice()}));
+ await page.waitForFunction(()=>{const g=__sessionReview.game(),s=__sessionReview.board().snapshot();return s.inFlight===0&&g.acceptedDraws.length===0&&!g.spinActive&&!g.presentation;},null,{timeout:65000});
+ await page.evaluate(()=>__sessionReview.board().pause(true));
+ const afterDrain=await page.evaluate(()=>({snapshot:__sessionReview.board().snapshot(),accepted:__sessionReview.game().acceptedDraws,events:__sessionReview.game().w.events.slice()}));
+ await writeFile(out+'/natural-drain.json',JSON.stringify({beforeDrain,afterDrain,scope:'Natural residual drain, no ball removal, RNG override or clock advance. Pause before fixed audio fixtures.'},null,2));
  for(const fixture of [{variant:'pressure',win:false},{variant:'initiative',win:true},{variant:'exchange',win:false},{variant:'pressure',win:true,ending:'revival'},{variant:'pressure',win:true,ending:'flash',mode:'rush'},{route:'basic',win:false},{route:'direct',win:true},{variant:'pressure',win:true,premium:'moon',full:true}]){
   const before=await page.evaluate(f=>{const g=__sessionReview.game();g.presentation={id:100,drawId:100,time:0,basicReach:true,longReach:!f.route,displayRoute:f.route??(f.ending==='flash'?'flash':'battle'),presentationMode:f.mode??'normal',reachVariant:f.variant,reachEnding:f.ending??'standard',win:f.win,premium:f.premium,premiumAt:45.5,predictionPlan:f.full?{resultFamily:'fullrotation',chanceUps:[],precursorSeconds:0}:null};delete g.previewWinAt;g.spinActive=false;g.jackpot=null;return JSON.stringify({roll:g.wRecord?.roll,total:g.total,queue:g.acceptedDraws});},fixture);
+  await page.evaluate(()=>__sessionReview.board().pause(false));
   const boundaries=await page.evaluate(async()=>{const {reachAudioCues}=await import('/src/pixi/se/presentation-cues.js');return reachAudioCues(__sessionReview.game().presentation).map(c=>({at:c.at,name:c.name}));});
   for(const c of boundaries){await page.evaluate(t=>{__sessionReview.game().presentation.time=t+.005;},c.at);await page.waitForTimeout(80);}
-  const audio=await page.evaluate(()=>__sessionReview.board().audio());assert.equal(audio.state,'running');assert.ok(audio.cues.length>0);assert.ok(audio.voices<=6);assert.ok(audio.cacheBytes<=12*1024*1024);
+  const audio=await page.evaluate(()=>__sessionReview.board().audio());assert.equal(audio.state,'running');assert.ok(audio.cues.length>0);assert.ok(audio.voices<=6);assert.ok(audio.cacheBytes<=41*1024*1024);assert.ok(audio.music.cacheBytes<=32*1024*1024);assert.ok(audio.music.voices<=2);
+  await page.evaluate(()=>__sessionReview.board().pause(true));
   const after=await page.evaluate(()=>{const g=__sessionReview.game();return JSON.stringify({roll:g.wRecord?.roll,total:g.total,queue:g.acceptedDraws});});assert.equal(after,before);
   runs.push({fixture,boundaries,audio});await page.evaluate(()=>{__sessionReview.game().presentation=null;});await page.waitForTimeout(50);
  }
+ await page.evaluate(()=>__sessionReview.board().pause(false));
  await page.locator('#controls-toggle').click();await page.locator('#sound-enabled').uncheck();let s=await page.evaluate(()=>__sessionReview.board().audio());assert.equal(s.enabled,false);assert.equal(s.voices,0);
  const count=s.cues.length;await page.evaluate(()=>{__sessionReview.game().presentation={drawId:999,time:0,longReach:true,displayRoute:'battle',reachVariant:'pressure',win:false};});await page.waitForTimeout(100);assert.equal((await page.evaluate(()=>__sessionReview.board().audio())).cues.length,count);
  await page.locator('#sound-enabled').check();await page.waitForTimeout(100);assert.equal((await page.evaluate(()=>__sessionReview.board().audio())).cues.length,count);

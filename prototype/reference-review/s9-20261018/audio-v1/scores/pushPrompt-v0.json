@@ -1,0 +1,38 @@
+{
+  "version": "s9-effects-v1",
+  "name": "pushPrompt",
+  "variant": 0,
+  "duration": 0.82,
+  "level": 0.24,
+  "priority": 2,
+  "duckFor": 0.13,
+  "role": "押せることを知らせる二拍",
+  "kind": "s9-synth",
+  "style": "s9-original-periodic",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.19,
+      "hz": 523.2515441253655,
+      "endHz": 523.2515441253655,
+      "gain": 0.32,
+      "pan": -0.1
+    },
+    {
+      "at": 0.27,
+      "seconds": 0.4,
+      "hz": 659.2561424366696,
+      "endHz": 659.2561424366696,
+      "gain": 0.32,
+      "pan": 0.1
+    },
+    {
+      "at": 0.27,
+      "seconds": 0.4,
+      "hz": 415.3013464483006,
+      "endHz": 415.3013464483006,
+      "gain": 0.17,
+      "pan": 0
+    }
+  ]
+}

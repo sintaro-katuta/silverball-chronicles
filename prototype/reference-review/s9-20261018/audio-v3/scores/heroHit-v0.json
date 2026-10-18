@@ -1,0 +1,46 @@
+{
+  "version": "s9-effects-v3",
+  "name": "heroHit",
+  "variant": 0,
+  "duration": 0.74,
+  "level": 0.32,
+  "priority": 2,
+  "duckFor": 0.16,
+  "role": "途中の攻撃の一打",
+  "kind": "s9-synth",
+  "style": "s9-v3-bright-additive",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.065,
+      "hz": 1567.981743926997,
+      "endHz": 523.2515441253655,
+      "gain": 0.44,
+      "pan": 0
+    },
+    {
+      "at": 0.012,
+      "seconds": 0.26,
+      "hz": 523.2515441253655,
+      "endHz": 391.99543598174927,
+      "gain": 0.32,
+      "pan": 0
+    },
+    {
+      "at": 0.12,
+      "seconds": 0.31,
+      "hz": 1046.503088250731,
+      "endHz": 1046.503088250731,
+      "gain": 0.15,
+      "pan": 0.08
+    }
+  ],
+  "envelope": {
+    "attack": 0.0012,
+    "release": 0.035,
+    "decay": 1,
+    "voice": "lead",
+    "echo": false
+  },
+  "intent": "Bright finite-additive synth, articulated rises and decisive attack; no drums/bass in SE, no outcome or game RNG input."
+}

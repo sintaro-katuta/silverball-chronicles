@@ -1,0 +1,40 @@
+{
+  "master": {
+    "path": "s9-review-v3-render.mp4",
+    "sha256": "29cb0340cdac23c5a6bac6571ee2238b36f0da2d7e3745c89eaa2b405d878e19",
+    "bytes": 10575328
+  },
+  "attachment": {
+    "path": "s9-review-v3.mp4",
+    "sha256": "3299fcefaf96c70d0b0aadd2e90f10012b110d92fcb6c2f7be2b43fa0ca326ce",
+    "bytes": 8092114
+  },
+  "toolSHA256": "7f525aad45db5cfdf46c60693dbad8a56d2767436f9882faf429fd4043945f1e",
+  "command": [
+    "ffmpeg",
+    "-v",
+    "error",
+    "-nostdin",
+    "-i",
+    "/private/tmp/silverball-s9-20261018/prototype/reference-review/s9-20261018/pr-video-v3/s9-review-v3-render.mp4",
+    "-map",
+    "0:v:0",
+    "-map",
+    "0:a:0",
+    "-c:v",
+    "libx264",
+    "-preset",
+    "medium",
+    "-crf",
+    "31",
+    "-pix_fmt",
+    "yuv420p",
+    "-c:a",
+    "copy",
+    "-movflags",
+    "+faststart",
+    "/private/tmp/silverball-s9-20261018/prototype/reference-review/s9-20261018/pr-video-v3/s9-review-v3.mp4"
+  ],
+  "aacPacketsUnchanged": true,
+  "note": "Same full-length render; video-only CRF31 transcode for the PR attachment limit. Master retained."
+}

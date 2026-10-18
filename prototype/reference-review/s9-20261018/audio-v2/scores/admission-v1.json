@@ -1,0 +1,38 @@
+{
+  "version": "s9-frequent-v2",
+  "name": "admission",
+  "variant": 1,
+  "duration": 0.16,
+  "level": 0.12,
+  "priority": 1,
+  "duckFor": 0,
+  "role": "ヘソ入賞の小さな明るい応答・当落非依存",
+  "kind": "s9-synth",
+  "style": "s9-original-periodic",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.1,
+      "hz": 694.2649519186356,
+      "endHz": 583.8010300544146,
+      "gain": 0.27,
+      "pan": 0
+    },
+    {
+      "at": 0.018,
+      "seconds": 0.105,
+      "hz": 463.36577774133093,
+      "endHz": 463.36577774133093,
+      "gain": 0.1,
+      "pan": 0
+    }
+  ],
+  "envelope": {
+    "attack": 0.003,
+    "release": 0.035,
+    "decay": 2.3,
+    "bright": 0.28,
+    "echo": false
+  },
+  "intent": "Short periodic synth; no result/odds/game-RNG input. Loop-free, no long echo."
+}

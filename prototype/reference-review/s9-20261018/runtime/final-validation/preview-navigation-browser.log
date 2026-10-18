@@ -1,0 +1,16 @@
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+page.goto: net::ERR_HTTP_RESPONSE_CODE_FAILURE at http://127.0.0.1:5451/tools/bake-models.html
+Call log:
+[2m  - navigating to "http://127.0.0.1:5451/tools/bake-models.html", waiting until "load"[22m
+
+    at /private/tmp/silverball-s9-20261018/prototype/tests/preview-navigation.browser.mjs:19:14 {
+  log: [
+    '  - navigating to "http://127.0.0.1:5451/tools/bake-models.html", waiting until "load"'
+  ],
+  name: 'Error'
+}
+
+Node.js v26.11.0

@@ -1,0 +1,46 @@
+{
+  "version": "s9-effects-v3",
+  "name": "pushPress",
+  "variant": 3,
+  "duration": 0.32,
+  "level": 0.27,
+  "priority": 2,
+  "duckFor": 0.13,
+  "role": "押した瞬間の短い応答",
+  "kind": "s9-synth",
+  "style": "s9-v3-bright-additive",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.05,
+      "hz": 1394.1175493255498,
+      "endHz": 697.0587746627749,
+      "gain": 0.4,
+      "pan": 0
+    },
+    {
+      "at": 0.018,
+      "seconds": 0.18,
+      "hz": 697.0587746627749,
+      "endHz": 697.0587746627749,
+      "gain": 0.22,
+      "pan": 0
+    },
+    {
+      "at": 0.08,
+      "seconds": 0.12,
+      "hz": 1044.4100820742294,
+      "endHz": 1044.4100820742294,
+      "gain": 0.12,
+      "pan": 0
+    }
+  ],
+  "envelope": {
+    "attack": 0.0012,
+    "release": 0.035,
+    "decay": 1,
+    "voice": "lead",
+    "echo": false
+  },
+  "intent": "Bright finite-additive synth, articulated rises and decisive attack; no drums/bass in SE, no outcome or game RNG input."
+}

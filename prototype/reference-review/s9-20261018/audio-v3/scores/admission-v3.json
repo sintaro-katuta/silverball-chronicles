@@ -1,0 +1,38 @@
+{
+  "version": "s9-effects-v3",
+  "name": "admission",
+  "variant": 3,
+  "duration": 0.16,
+  "level": 0.12,
+  "priority": 1,
+  "duckFor": 0,
+  "role": "ヘソ入賞の小さな明るい応答・当落非依存",
+  "kind": "s9-synth",
+  "style": "s9-v3-bright-additive",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.065,
+      "hz": 1044.4100820742294,
+      "endHz": 930.4608575167973,
+      "gain": 0.3,
+      "pan": 0
+    },
+    {
+      "at": 0.055,
+      "seconds": 0.07,
+      "hz": 1394.1175493255498,
+      "endHz": 1394.1175493255498,
+      "gain": 0.12,
+      "pan": 0
+    }
+  ],
+  "envelope": {
+    "attack": 0.0012,
+    "release": 0.016,
+    "decay": 1.5,
+    "voice": "lead",
+    "echo": false
+  },
+  "intent": "Bright finite-additive synth, articulated rises and decisive attack; no drums/bass in SE, no outcome or game RNG input."
+}

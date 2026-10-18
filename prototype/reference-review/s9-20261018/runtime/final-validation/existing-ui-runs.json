@@ -1,0 +1,23 @@
+[
+  {
+    "script": "tests/session-controls.browser.mjs",
+    "log": "session-controls-browser.log",
+    "env": {},
+    "pid": 22611,
+    "startedAt": "2026-10-18T12:19:15.148Z",
+    "finishedAt": "2026-10-18T12:19:17.785Z",
+    "exitCode": 0
+  },
+  {
+    "script": "tests/feedback.browser.mjs",
+    "log": "feedback-ui-browser.log",
+    "env": {
+      "UI_ONLY": "1",
+      "FEEDBACK_OUTPUT": "../reference-review/s9-20261018/runtime/final-validation/feedback-ui/"
+    },
+    "pid": 22634,
+    "startedAt": "2026-10-18T12:19:17.785Z",
+    "finishedAt": "2026-10-18T12:19:24.869Z",
+    "exitCode": 0
+  }
+]

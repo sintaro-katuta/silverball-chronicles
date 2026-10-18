@@ -1,5 +1,7 @@
 # プロジェクト資料
 
+- [S9：BGM・効果音の承認済み計画](agile/S9_PLAN.md)・[受入と未確認](agile/S9_ACCEPTANCE.md)
+
 - [Sprint 7比較結果](agile/S7_RESULTS.md)：全条件、不利な結果と限定採用。
 - [Sprint 7計画](agile/S7_PLAN.md)：左打ちの発射比較と公開後確認の診断。
 - [Sprint 7の失敗診断](agile/S7_DIAGNOSTICS.md)：保存内容、検証と調査手順。

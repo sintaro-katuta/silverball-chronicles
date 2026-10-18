@@ -1,0 +1,38 @@
+{
+  "version": "s9-frequent-v2",
+  "name": "stopRight",
+  "variant": 3,
+  "duration": 0.18,
+  "level": 0.18,
+  "priority": 1,
+  "duckFor": 0,
+  "role": "右図柄停止の短い打点",
+  "kind": "s9-synth",
+  "style": "s9-original-periodic",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.11,
+      "hz": 657.9376301517963,
+      "endHz": 522.2050410371147,
+      "gain": 0.3,
+      "pan": 0.08
+    },
+    {
+      "at": 0.01,
+      "seconds": 0.12,
+      "hz": 328.96436949129463,
+      "endHz": 328.96436949129463,
+      "gain": 0.12,
+      "pan": 0
+    }
+  ],
+  "envelope": {
+    "attack": 0.003,
+    "release": 0.035,
+    "decay": 2.3,
+    "bright": 0.28,
+    "echo": false
+  },
+  "intent": "Short periodic synth; no result/odds/game-RNG input. Loop-free, no long echo."
+}
