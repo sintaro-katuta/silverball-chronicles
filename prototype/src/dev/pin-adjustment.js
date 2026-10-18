@@ -25,10 +25,13 @@ const distanceToSegment=(x,y,a,b)=>{const dx=b.x-a.x,dy=b.y-a.y,t=Math.max(0,Mat
 function inside(x,y,points){let hit=false;for(let i=0,j=points.length-1;i<points.length;j=i++){const a=points[i],b=points[j];if((a[1]>y)!==(b[1]>y)&&x<(b[0]-a[0])*(y-a[1])/(b[1]-a[1])+a[0])hit=!hit;}return hit;}
 export const ROAD_GROUP_VECTORS=Object.freeze({'three-road-group-left300':Object.freeze({dx:-3,dy:0}),'three-road-group-right300':Object.freeze({dx:3,dy:0}),'three-road-group-up200':Object.freeze({dx:0,dy:-2})});
 export function roadGroupMoves(id){const vector=ROAD_GROUP_VECTORS[id];if(!Object.hasOwn(ROAD_GROUP_VECTORS,id))throw new Error('Unknown road group declaration');return Array.from({length:26},(_,i)=>({pinId:i+1,...vector}));}
+const ROAD_TRANSITION_COUNTS=Object.freeze({'three-road-entry22-up200':22,'three-road-taper25-up200':25});
+export function roadTransitionMoves(id){if(!Object.hasOwn(ROAD_TRANSITION_COUNTS,id))throw new Error('Unknown road transition declaration');return Array.from({length:ROAD_TRANSITION_COUNTS[id]},(_,i)=>({pinId:i+1,dx:0,dy:id==='three-road-entry22-up200'?-2:-2*(26-(i+1))/25}));}
 function declaredDisplacementLimit(config,pinSpacingProfile,windmillOffsetProfile){
- if(!Object.hasOwn(ROAD_GROUP_VECTORS,config.id))return 1;
- if(pinSpacingProfile!==PIN_SPACING_STRICT||windmillOffsetProfile!==WINDMILL_OFFSET_STRICT||config.leftAdmissionGuides!==false||config.hesoMouthWidth!==20||config.launchRailProfile!=='legacy'||config.normalPower!==.18||config.windmillShapeProfile!=='photo-three-vane'||Object.hasOwn(config,'ballRadius')||JSON.stringify(config.windmillOffset)!==JSON.stringify({dx:0,dy:0})||JSON.stringify(config.moves)!==JSON.stringify(roadGroupMoves(config.id)))throw new Error('Road group requires exact26 original pins, declared vector and fixed board');
- return 3;
+ const transition=Object.hasOwn(ROAD_TRANSITION_COUNTS,config.id);
+ if(!transition&&!Object.hasOwn(ROAD_GROUP_VECTORS,config.id))return 1;
+ if(pinSpacingProfile!==PIN_SPACING_STRICT||windmillOffsetProfile!==WINDMILL_OFFSET_STRICT||config.leftAdmissionGuides!==false||config.hesoMouthWidth!==20||config.launchRailProfile!=='legacy'||config.normalPower!==.18||config.windmillShapeProfile!=='photo-three-vane'||Object.hasOwn(config,'ballRadius')||JSON.stringify(config.windmillOffset)!==JSON.stringify({dx:0,dy:0})||JSON.stringify(config.moves)!==JSON.stringify(transition?roadTransitionMoves(config.id):roadGroupMoves(config.id)))throw new Error(transition?'Road transition requires exact original pins, declared heights and fixed board':'Road group requires exact26 original pins, declared vector and fixed board');
+ return transition?2:3;
 }
 export function resolvePinAdjustment(config,{pinSpacingProfile=PIN_SPACING_STRICT,windmillOffsetProfile=WINDMILL_OFFSET_STRICT}={}){
  if(!config||Object.keys(config).some(k=>!['id','label','leftAdmissionGuides','hesoMouthWidth','moves','ballRadius','launchRailProfile','normalPower','windmillOffset','windmillShapeProfile'].includes(k))||typeof config.id!=='string'||typeof config.label!=='string'||typeof config.leftAdmissionGuides!=='boolean'||!Array.isArray(config.moves))throw new Error('Invalid adjustment configuration');

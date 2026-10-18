@@ -2,7 +2,7 @@ import {windmillContactGeometry} from '../domain/windmill-shape.js';
 // Declared finite comparisons only; each frozen manifest identifies its settings. Pin and ball hypotheses never combined. No product adoption.
 import {inspectWindmillOffset,WINDMILL_FEED_LEFT175} from '../pixi/windmill-offset.js';
 import {createBoardFlow} from '../pixi/board-flow.js';
-import {resolvePinAdjustment,preparePinAdjustment,PIN_SPACING_STRICT,ROAD_SUPPORT_PAIR23,roadGroupMoves} from './pin-adjustment.js';
+import {resolvePinAdjustment,preparePinAdjustment,PIN_SPACING_STRICT,ROAD_SUPPORT_PAIR23,roadGroupMoves,roadTransitionMoves} from './pin-adjustment.js';
 import {measurePinAdjustment} from './pin-adjustment-measurement.js';
 import {withS7Observation,summarizeS7} from './s7-launch-observation.js';
 import {REFERENCE_PLAN} from './s6-reference-pin-comparison.js';
@@ -25,6 +25,8 @@ export function inspectAdmissionCase(config){
    'three-combo-right025':{profile:'photo-three-vane',moves:[{pinId:2,dx:.25,dy:0}],offset:{dx:.25,dy:0}},
    'three-combo-up025':{profile:'photo-three-vane',moves:[{pinId:2,dx:.25,dy:0}],offset:{dx:0,dy:-.25}},
    'three-feed-wheel-left175':{profile:'photo-three-vane',moves:[],offset:{dx:-1.75,dy:0},windmillOffsetProfile:WINDMILL_FEED_LEFT175},
+   'three-road-entry22-up200':{profile:'photo-three-vane',moves:roadTransitionMoves('three-road-entry22-up200')},
+   'three-road-taper25-up200':{profile:'photo-three-vane',moves:roadTransitionMoves('three-road-taper25-up200')},
    'three-road-group-left300':{profile:'photo-three-vane',moves:roadGroupMoves('three-road-group-left300')},
    'three-road-group-right300':{profile:'photo-three-vane',moves:roadGroupMoves('three-road-group-right300')},
    'three-road-group-up200':{profile:'photo-three-vane',moves:roadGroupMoves('three-road-group-up200')},
