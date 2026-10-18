@@ -13,7 +13,7 @@ export function musicPose(game){
 }
 export function createMusicPlayer(context,destination,{load,cacheLimit=MUSIC_CACHE_LIMIT}={}){
  let disposed=false,current=null,anchor=0,lastTime=0,position=0,source=null,gain=null,volume=.5,muted=false,duckUntil=0,duckDepth=1,loadError=null,epoch=0,scope=null,startedAt=0,startPosition=0;
- const cache=new Map(),pending=new Map(),retiring=new Set();let bytes=0;
+ const cache=new Map(),pending=new Map(),failed=new Map(),retiring=new Set();let bytes=0;
  const value=(param,v)=>{param.cancelScheduledValues?.(context.currentTime);param.setValueAtTime?param.setValueAtTime(v,context.currentTime):param.value=v;};
  const release=s=>{s.onended=null;s.stop();s.disconnect();};
  function stop(fade=false){if(!fade)for(const item of retiring){release(item.s);item.g.disconnect();retiring.delete(item);}if(!source)return;const s=source,g=gain;source=gain=null;
@@ -21,7 +21,7 @@ export function createMusicPlayer(context,destination,{load,cacheLimit=MUSIC_CAC
   while(retiring.size>1){const item=retiring.values().next().value;retiring.delete(item);release(item.s);item.g.disconnect();}
  }
  function request(name){
-  if(cache.has(name)||pending.has(name)||disposed||loadError)return;
+  if(cache.has(name)||pending.has(name)||failed.has(name)||disposed||loadError)return;
   const generation=epoch;
   const promise=Promise.resolve().then(()=>load(name,context.sampleRate)).then(pcm=>{
    if(disposed||generation!==epoch)return;
@@ -31,7 +31,7 @@ export function createMusicPlayer(context,destination,{load,cacheLimit=MUSIC_CAC
    // Drop the previous cached track before allocating the new AudioBuffer.
    if(bytes+size>cacheLimit){for(const [key,b]of cache){cache.delete(key);bytes-=b.bytes;if(bytes+size<=cacheLimit)break;}}
    const buffer=context.createBuffer(2,pcm.left.length,context.sampleRate);buffer.copyToChannel(pcm.left,0);buffer.copyToChannel(pcm.right,1);cache.set(name,{buffer,bytes:size,loopStart:pcm.loopStart,loopEnd:pcm.loopEnd});bytes+=size;
-  }).catch(error=>{if(!disposed&&name===current)loadError=String(error);}).finally(()=>pending.delete(name));pending.set(name,promise);
+  }).catch(error=>{if(!disposed){failed.set(name,String(error));if(name===current)loadError=String(error);}}).finally(()=>pending.delete(name));pending.set(name,promise);
  }
  function applyGain(fresh=false){if(!gain)return;const target=muted?0:volume*(context.currentTime<duckUntil?duckDepth:1),param=gain.gain;
   if(param.linearRampToValueAtTime){value(param,fresh?0:param.value);param.linearRampToValueAtTime(target,context.currentTime+(fresh?MUSIC_FADE_IN_SECONDS:.004));}
@@ -41,7 +41,7 @@ export function createMusicPlayer(context,destination,{load,cacheLimit=MUSIC_CAC
   sync(pose,{paused=false,enabled=true}={}){
    if(disposed)return;if(!Number.isFinite(pose.time))throw new Error('Invalid music clock');
    if(pose.name!==null&&!names.has(pose.name))throw new Error('Unknown music track');
-   if(pose.name!==current||pose.scope!==scope||pose.time<lastTime){stop(pose.name!==current&&!pose.silent);current=pose.name;scope=pose.scope;anchor=pose.time;position=0;loadError=null;}
+   if(pose.name!==current||pose.scope!==scope||pose.time<lastTime){stop(pose.name!==current&&!pose.silent);current=pose.name;scope=pose.scope;anchor=pose.time;position=0;loadError=failed.get(current)??null;}
    lastTime=pose.time;position=Math.max(0,pose.absolute?pose.time:pose.time-anchor);
    if(!current){stop();return;}
    if(paused||!enabled||muted||pose.silent||context.state!=='running'){stop();return;}request(current);
@@ -50,12 +50,14 @@ export function createMusicPlayer(context,destination,{load,cacheLimit=MUSIC_CAC
    let fresh=false;
    if(!source){fresh=true;source=context.createBufferSource();gain=context.createGain();gain.gain.value=0;source.buffer=entry.buffer;source.loop=true;source.loopStart=entry.loopStart;source.loopEnd=entry.loopEnd;source.connect(gain);gain.connect(destination);const offset=entry.loopStart+position%(entry.loopEnd-entry.loopStart);source.start(0,offset);startedAt=context.currentTime;startPosition=position;}
    applyGain(fresh);
+   // Warm only the next battle while normal music actually plays, never all four tracks.
+   if(current==='normal'&&volume>0)request('battle');
   },
   configure({musicVolume=volume,musicMuted=muted}){volume=musicVolume;muted=musicMuted;if(muted)stop();applyGain();},
   duck(seconds,depth){duckDepth=context.currentTime<duckUntil?Math.min(duckDepth,depth):depth;duckUntil=Math.max(duckUntil,context.currentTime+seconds);applyGain();},
   pause(){stop();},
-  reset(){stop();for(const item of retiring){release(item.s);item.g.disconnect();}retiring.clear();current=null;scope=null;anchor=lastTime=position=0;duckUntil=0;},
-  snapshot:()=>({name:current,position,fadeInSeconds:MUSIC_FADE_IN_SECONDS,voices:(source?1:0)+retiring.size,cacheBytes:bytes,pending:pending.size,muted,volume,loadError}),
+  reset(){stop();for(const item of retiring){release(item.s);item.g.disconnect();}retiring.clear();current=null;scope=null;anchor=lastTime=position=0;duckUntil=0;failed.clear();},
+  snapshot:()=>({name:current,position,fadeInSeconds:MUSIC_FADE_IN_SECONDS,voices:(source?1:0)+retiring.size,activeVoices:source?1:0,cachedTracks:[...cache.keys()],pendingTracks:[...pending.keys()],cacheBytes:bytes,pending:pending.size,muted,volume,loadError}),
   dispose(){if(disposed)return;this.reset();disposed=true;epoch++;cache.clear();bytes=0;pending.clear();load.dispose?.();}
  };
 }
