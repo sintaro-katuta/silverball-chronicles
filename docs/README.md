@@ -413,3 +413,5 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [道26本を同時に大きく動かした比較結果](agile/S8_ROAD_GROUP_RESULTS.md)（初回9→13、選別不成立）
 
 - [道の入口と末端を分けた2案の比較](agile/S8_ROAD_TRANSITION_RESULTS.md)（A12/B4、各250発・未採用）
+
+- [寄り釘17本の移動でヘソ入賞が増えた結果](agile/S8_PRIZE17_RESULTS.md)
