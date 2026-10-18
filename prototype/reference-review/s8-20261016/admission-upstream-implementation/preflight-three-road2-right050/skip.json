@@ -1,0 +1,25 @@
+{
+  "case": {
+    "id": "three-road2-right050",
+    "label": "道入口2だけ右0.5",
+    "leftAdmissionGuides": false,
+    "hesoMouthWidth": 20,
+    "launchRailProfile": "legacy",
+    "normalPower": 0.18,
+    "moves": [
+      {
+        "pinId": 2,
+        "dx": 0.5,
+        "dy": 0
+      }
+    ],
+    "windmillOffset": {
+      "dx": 0,
+      "dy": 0
+    },
+    "windmillShapeProfile": "photo-three-vane"
+  },
+  "phase": 0,
+  "reason": "Pins 2/3: centre clearance below 4",
+  "measurementStarted": false
+}

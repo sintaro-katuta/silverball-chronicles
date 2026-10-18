@@ -1,0 +1,993 @@
+{
+  "scope": "Read-only existing five phase0 runs. Group outcome sets overlap and must not be summed. First per-pin successful impulse is not last actual collision. Windmill directions are velocities at the first successful front windmill record, not guaranteed sustained exit directions. Road entry is operationally pin1/2 successful impulse; lack of impulse is not lack of geometric arrival. Terminal is existing rectangle x355..400/y824..870 SOURCE. Same shot IDs across runs do not establish same trajectories; pair collisions and schedule can diverge. No trials or product/source edits.",
+  "cases": [
+    {
+      "id": "baseline",
+      "sourceSHA": "7962b677a37328e6e5ac297133f8becd56c309054d5fee7ee3dcb5c96357ef62",
+      "commit": "24d7edf8555c48c474870d9ca57a875ab5ad184d",
+      "compressedSHA": "935c5bde585f181d59026c39f60d8c4c78d8631c25744e75c4575328b6802fa5",
+      "expandedSHA": "2d03360ed34697bd3b4b8c4c8c004b085654ac51034a20e3fe0817a024a51e0b",
+      "shots": 250,
+      "end": {
+        "time": 197.9166666671276,
+        "remaining": 0,
+        "counts": {
+          "fuzu": 0,
+          "normal": 6,
+          "start": 15,
+          "rush": 0,
+          "bonus": 0,
+          "out": 229,
+          "returned": 0
+        },
+        "stock": null
+      },
+      "actualFiringSeconds": 152.91666666666666,
+      "maxGap": {
+        "entries": 14,
+        "maxGap": 46.33184523799426,
+        "first": 4.460416666666737,
+        "last": 150.30714285715814,
+        "windowSeconds": 152.91666666666666
+      },
+      "allLayerWindmillRole": {
+        "contacts": 57574,
+        "balls": 124,
+        "start": 10,
+        "normal": 3,
+        "bonus": 0,
+        "rush": 0,
+        "fuzu": 0,
+        "out": 111,
+        "returned": 0
+      },
+      "firstFrontWindmill": {
+        "balls": 124,
+        "outcomes": {
+          "out": 111,
+          "start": 10,
+          "normal": 3
+        },
+        "vxDirections": {
+          "left": {
+            "balls": 66,
+            "outcomes": {
+              "out": 63,
+              "start": 3
+            }
+          },
+          "right": {
+            "balls": 58,
+            "outcomes": {
+              "out": 48,
+              "start": 7,
+              "normal": 3
+            }
+          },
+          "zero": {
+            "balls": 0,
+            "outcomes": {}
+          }
+        },
+        "firstPinBeforeWindmillIds": {
+          "48": 52,
+          "39": 38,
+          "27": 34
+        }
+      },
+      "actualPin1or2Impulse": {
+        "balls": 4,
+        "outcomes": {
+          "out": 3,
+          "start": 1
+        }
+      },
+      "actualAnyRoadPinImpulse": {
+        "balls": 47,
+        "outcomes": {
+          "start": 15,
+          "normal": 6,
+          "out": 26
+        }
+      },
+      "terminalRectangle": {
+        "balls": 20,
+        "outcomes": {
+          "start": 11,
+          "normal": 3,
+          "out": 6
+        }
+      },
+      "firstDescendingZones": {
+        "left": {
+          "balls": 180,
+          "outcomes": {
+            "out": 180
+          }
+        },
+        "envelope": {
+          "balls": 30,
+          "outcomes": {
+            "out": 26,
+            "start": 3,
+            "normal": 1
+          }
+        },
+        "right": {
+          "balls": 40,
+          "outcomes": {
+            "start": 12,
+            "normal": 5,
+            "out": 23
+          }
+        },
+        "unobserved": {
+          "balls": 0,
+          "outcomes": {}
+        }
+      },
+      "windmillBeforeFirstRoadPin": {
+        "balls": 26,
+        "outcomes": {
+          "out": 14,
+          "start": 10,
+          "normal": 2
+        }
+      },
+      "windmillAfterOrSameFirstRoadPin": {
+        "balls": 4,
+        "outcomes": {
+          "out": 3,
+          "normal": 1
+        }
+      },
+      "windmillThenTerminal": {
+        "balls": 11,
+        "outcomes": {
+          "start": 6,
+          "out": 4,
+          "normal": 1
+        }
+      },
+      "routeMetrics": {
+        "roadContact": 47,
+        "nearHeso": 16,
+        "admitted": 15,
+        "nearAdmitted": 15,
+        "deflectedAtHeso": 0,
+        "nearMiss": 1,
+        "earlySpill": 31,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 1
+        },
+        "outcomes": {
+          "out": 229,
+          "start": 15,
+          "normal": 6
+        },
+        "tracked": 250,
+        "byPower": {
+          "0.18": {
+            "roadContact": 47,
+            "nearHeso": 16,
+            "admitted": 15,
+            "nearAdmitted": 15,
+            "deflectedAtHeso": 0,
+            "nearMiss": 1,
+            "earlySpill": 31,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 1
+            },
+            "outcomes": {
+              "out": 229,
+              "start": 15,
+              "normal": 6
+            },
+            "tracked": 250
+          }
+        }
+      },
+      "shotScheduleVsBaseline": {
+        "differentTimes": 0,
+        "firstDifferentBallId": null,
+        "firstDeltaSeconds": null,
+        "maximumAbsoluteDeltaSeconds": 0,
+        "sameShotIds": true
+      }
+    },
+    {
+      "id": "wheel-left025",
+      "sourceSHA": "7962b677a37328e6e5ac297133f8becd56c309054d5fee7ee3dcb5c96357ef62",
+      "commit": "24d7edf8555c48c474870d9ca57a875ab5ad184d",
+      "compressedSHA": "fcd51b4e22dc64a6c74d3591d55aebe41f114fe7ea5c2bcea549dc1b56cf7182",
+      "expandedSHA": "9a7c0482c0c4259e4c45f6d9255cf2f0624845ccfe64d968731b308e27436913",
+      "shots": 250,
+      "end": {
+        "time": 197.9166666671276,
+        "remaining": 0,
+        "counts": {
+          "fuzu": 0,
+          "normal": 7,
+          "start": 11,
+          "rush": 0,
+          "bonus": 0,
+          "out": 232,
+          "returned": 0
+        },
+        "stock": null
+      },
+      "actualFiringSeconds": 152.91666666666666,
+      "maxGap": {
+        "entries": 11,
+        "maxGap": 68.91309523794503,
+        "first": 4.460416666666737,
+        "last": 145.03571428567778,
+        "windowSeconds": 152.91666666666666
+      },
+      "allLayerWindmillRole": {
+        "contacts": 46906,
+        "balls": 140,
+        "start": 5,
+        "normal": 4,
+        "bonus": 0,
+        "rush": 0,
+        "fuzu": 0,
+        "out": 131,
+        "returned": 0
+      },
+      "firstFrontWindmill": {
+        "balls": 140,
+        "outcomes": {
+          "out": 131,
+          "start": 5,
+          "normal": 4
+        },
+        "vxDirections": {
+          "left": {
+            "balls": 80,
+            "outcomes": {
+              "out": 78,
+              "start": 2
+            }
+          },
+          "right": {
+            "balls": 60,
+            "outcomes": {
+              "out": 53,
+              "normal": 4,
+              "start": 3
+            }
+          },
+          "zero": {
+            "balls": 0,
+            "outcomes": {}
+          }
+        },
+        "firstPinBeforeWindmillIds": {
+          "48": 60,
+          "39": 43,
+          "27": 36,
+          "52": 1
+        }
+      },
+      "actualPin1or2Impulse": {
+        "balls": 7,
+        "outcomes": {
+          "start": 1,
+          "out": 6
+        }
+      },
+      "actualAnyRoadPinImpulse": {
+        "balls": 44,
+        "outcomes": {
+          "start": 11,
+          "normal": 7,
+          "out": 26
+        }
+      },
+      "terminalRectangle": {
+        "balls": 19,
+        "outcomes": {
+          "start": 8,
+          "normal": 4,
+          "out": 7
+        }
+      },
+      "firstDescendingZones": {
+        "left": {
+          "balls": 177,
+          "outcomes": {
+            "out": 177
+          }
+        },
+        "envelope": {
+          "balls": 30,
+          "outcomes": {
+            "out": 30
+          }
+        },
+        "right": {
+          "balls": 43,
+          "outcomes": {
+            "start": 11,
+            "normal": 7,
+            "out": 25
+          }
+        },
+        "unobserved": {
+          "balls": 0,
+          "outcomes": {}
+        }
+      },
+      "windmillBeforeFirstRoadPin": {
+        "balls": 24,
+        "outcomes": {
+          "out": 15,
+          "start": 5,
+          "normal": 4
+        }
+      },
+      "windmillAfterOrSameFirstRoadPin": {
+        "balls": 3,
+        "outcomes": {
+          "out": 3
+        }
+      },
+      "windmillThenTerminal": {
+        "balls": 8,
+        "outcomes": {
+          "out": 4,
+          "start": 2,
+          "normal": 2
+        }
+      },
+      "routeMetrics": {
+        "roadContact": 44,
+        "nearHeso": 12,
+        "admitted": 11,
+        "nearAdmitted": 11,
+        "deflectedAtHeso": 0,
+        "nearMiss": 1,
+        "earlySpill": 32,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 1
+        },
+        "outcomes": {
+          "out": 232,
+          "start": 11,
+          "normal": 7
+        },
+        "tracked": 250,
+        "byPower": {
+          "0.18": {
+            "roadContact": 44,
+            "nearHeso": 12,
+            "admitted": 11,
+            "nearAdmitted": 11,
+            "deflectedAtHeso": 0,
+            "nearMiss": 1,
+            "earlySpill": 32,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 1
+            },
+            "outcomes": {
+              "out": 232,
+              "start": 11,
+              "normal": 7
+            },
+            "tracked": 250
+          }
+        }
+      },
+      "shotScheduleVsBaseline": {
+        "differentTimes": 0,
+        "firstDifferentBallId": null,
+        "firstDeltaSeconds": null,
+        "maximumAbsoluteDeltaSeconds": 0,
+        "sameShotIds": true
+      }
+    },
+    {
+      "id": "wheel-right025",
+      "sourceSHA": "7962b677a37328e6e5ac297133f8becd56c309054d5fee7ee3dcb5c96357ef62",
+      "commit": "24d7edf8555c48c474870d9ca57a875ab5ad184d",
+      "compressedSHA": "99f5177b6af2af5ed9b6a6f318ab35b26d39e60b639448f2b2f251a19f4ae16d",
+      "expandedSHA": "102f0aae7f12bdad09c7f1d3ffd8943d5d077193b85172c7d1352aa007088db8",
+      "shots": 250,
+      "end": {
+        "time": 197.9166666671276,
+        "remaining": 0,
+        "counts": {
+          "fuzu": 0,
+          "normal": 9,
+          "start": 11,
+          "rush": 0,
+          "bonus": 0,
+          "out": 230,
+          "returned": 0
+        },
+        "stock": null
+      },
+      "actualFiringSeconds": 152.91666666666666,
+      "maxGap": {
+        "entries": 10,
+        "maxGap": 55.41785714273644,
+        "first": 4.460416666666737,
+        "last": 145.03571428567778,
+        "windowSeconds": 152.91666666666666
+      },
+      "allLayerWindmillRole": {
+        "contacts": 92503,
+        "balls": 118,
+        "start": 5,
+        "normal": 7,
+        "bonus": 0,
+        "rush": 0,
+        "fuzu": 0,
+        "out": 106,
+        "returned": 0
+      },
+      "firstFrontWindmill": {
+        "balls": 118,
+        "outcomes": {
+          "out": 106,
+          "normal": 7,
+          "start": 5
+        },
+        "vxDirections": {
+          "left": {
+            "balls": 49,
+            "outcomes": {
+              "normal": 3,
+              "out": 43,
+              "start": 3
+            }
+          },
+          "right": {
+            "balls": 69,
+            "outcomes": {
+              "out": 63,
+              "start": 2,
+              "normal": 4
+            }
+          },
+          "zero": {
+            "balls": 0,
+            "outcomes": {}
+          }
+        },
+        "firstPinBeforeWindmillIds": {
+          "48": 53,
+          "39": 38,
+          "27": 27
+        }
+      },
+      "actualPin1or2Impulse": {
+        "balls": 13,
+        "outcomes": {
+          "start": 1,
+          "out": 12
+        }
+      },
+      "actualAnyRoadPinImpulse": {
+        "balls": 51,
+        "outcomes": {
+          "start": 11,
+          "normal": 9,
+          "out": 31
+        }
+      },
+      "terminalRectangle": {
+        "balls": 24,
+        "outcomes": {
+          "start": 10,
+          "normal": 3,
+          "out": 11
+        }
+      },
+      "firstDescendingZones": {
+        "left": {
+          "balls": 177,
+          "outcomes": {
+            "out": 177
+          }
+        },
+        "envelope": {
+          "balls": 37,
+          "outcomes": {
+            "normal": 3,
+            "out": 31,
+            "start": 3
+          }
+        },
+        "right": {
+          "balls": 36,
+          "outcomes": {
+            "start": 8,
+            "normal": 6,
+            "out": 22
+          }
+        },
+        "unobserved": {
+          "balls": 0,
+          "outcomes": {}
+        }
+      },
+      "windmillBeforeFirstRoadPin": {
+        "balls": 30,
+        "outcomes": {
+          "out": 18,
+          "normal": 7,
+          "start": 5
+        }
+      },
+      "windmillAfterOrSameFirstRoadPin": {
+        "balls": 3,
+        "outcomes": {
+          "out": 3
+        }
+      },
+      "windmillThenTerminal": {
+        "balls": 12,
+        "outcomes": {
+          "out": 7,
+          "start": 4,
+          "normal": 1
+        }
+      },
+      "routeMetrics": {
+        "roadContact": 51,
+        "nearHeso": 12,
+        "admitted": 11,
+        "nearAdmitted": 11,
+        "deflectedAtHeso": 0,
+        "nearMiss": 1,
+        "earlySpill": 39,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 1
+        },
+        "outcomes": {
+          "out": 230,
+          "start": 11,
+          "normal": 9
+        },
+        "tracked": 250,
+        "byPower": {
+          "0.18": {
+            "roadContact": 51,
+            "nearHeso": 12,
+            "admitted": 11,
+            "nearAdmitted": 11,
+            "deflectedAtHeso": 0,
+            "nearMiss": 1,
+            "earlySpill": 39,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 1
+            },
+            "outcomes": {
+              "out": 230,
+              "start": 11,
+              "normal": 9
+            },
+            "tracked": 250
+          }
+        }
+      },
+      "shotScheduleVsBaseline": {
+        "differentTimes": 0,
+        "firstDifferentBallId": null,
+        "firstDeltaSeconds": null,
+        "maximumAbsoluteDeltaSeconds": 0,
+        "sameShotIds": true
+      }
+    },
+    {
+      "id": "wheel-up025",
+      "sourceSHA": "7962b677a37328e6e5ac297133f8becd56c309054d5fee7ee3dcb5c96357ef62",
+      "commit": "24d7edf8555c48c474870d9ca57a875ab5ad184d",
+      "compressedSHA": "abd5ed8b8c2a71e7a31bf0088f76f4d96489da7344424aed0b16c04dde95bf9c",
+      "expandedSHA": "7f3e0ae1a52ebb6a99915ef883ea26b47c937f806098af07ee65b56994699eec",
+      "shots": 250,
+      "end": {
+        "time": 197.9166666671276,
+        "remaining": 0,
+        "counts": {
+          "fuzu": 0,
+          "normal": 9,
+          "start": 9,
+          "rush": 0,
+          "bonus": 0,
+          "out": 232,
+          "returned": 0
+        },
+        "stock": null
+      },
+      "actualFiringSeconds": 152.91666666666666,
+      "maxGap": {
+        "entries": 8,
+        "maxGap": 35.33928571420877,
+        "first": 4.460416666666737,
+        "last": 145.03571428567778,
+        "windowSeconds": 152.91666666666666
+      },
+      "allLayerWindmillRole": {
+        "contacts": 47543,
+        "balls": 121,
+        "start": 4,
+        "normal": 5,
+        "bonus": 0,
+        "rush": 0,
+        "fuzu": 0,
+        "out": 112,
+        "returned": 0
+      },
+      "firstFrontWindmill": {
+        "balls": 121,
+        "outcomes": {
+          "out": 112,
+          "normal": 5,
+          "start": 4
+        },
+        "vxDirections": {
+          "left": {
+            "balls": 53,
+            "outcomes": {
+              "out": 52,
+              "normal": 1
+            }
+          },
+          "right": {
+            "balls": 68,
+            "outcomes": {
+              "out": 60,
+              "start": 4,
+              "normal": 4
+            }
+          },
+          "zero": {
+            "balls": 0,
+            "outcomes": {}
+          }
+        },
+        "firstPinBeforeWindmillIds": {
+          "48": 57,
+          "39": 37,
+          "27": 26,
+          "52": 1
+        }
+      },
+      "actualPin1or2Impulse": {
+        "balls": 15,
+        "outcomes": {
+          "out": 11,
+          "start": 2,
+          "normal": 2
+        }
+      },
+      "actualAnyRoadPinImpulse": {
+        "balls": 46,
+        "outcomes": {
+          "start": 9,
+          "normal": 8,
+          "out": 29
+        }
+      },
+      "terminalRectangle": {
+        "balls": 24,
+        "outcomes": {
+          "start": 8,
+          "normal": 6,
+          "out": 10
+        }
+      },
+      "firstDescendingZones": {
+        "left": {
+          "balls": 184,
+          "outcomes": {
+            "out": 184
+          }
+        },
+        "envelope": {
+          "balls": 21,
+          "outcomes": {
+            "normal": 1,
+            "out": 20
+          }
+        },
+        "right": {
+          "balls": 45,
+          "outcomes": {
+            "start": 9,
+            "normal": 8,
+            "out": 28
+          }
+        },
+        "unobserved": {
+          "balls": 0,
+          "outcomes": {}
+        }
+      },
+      "windmillBeforeFirstRoadPin": {
+        "balls": 24,
+        "outcomes": {
+          "out": 17,
+          "normal": 4,
+          "start": 3
+        }
+      },
+      "windmillAfterOrSameFirstRoadPin": {
+        "balls": 4,
+        "outcomes": {
+          "start": 1,
+          "out": 3
+        }
+      },
+      "windmillThenTerminal": {
+        "balls": 13,
+        "outcomes": {
+          "normal": 4,
+          "out": 6,
+          "start": 3
+        }
+      },
+      "routeMetrics": {
+        "roadContact": 46,
+        "nearHeso": 10,
+        "admitted": 9,
+        "nearAdmitted": 9,
+        "deflectedAtHeso": 0,
+        "nearMiss": 1,
+        "earlySpill": 36,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 1
+        },
+        "outcomes": {
+          "out": 232,
+          "start": 9,
+          "normal": 9
+        },
+        "tracked": 250,
+        "byPower": {
+          "0.18": {
+            "roadContact": 46,
+            "nearHeso": 10,
+            "admitted": 9,
+            "nearAdmitted": 9,
+            "deflectedAtHeso": 0,
+            "nearMiss": 1,
+            "earlySpill": 36,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 1
+            },
+            "outcomes": {
+              "out": 232,
+              "start": 9,
+              "normal": 9
+            },
+            "tracked": 250
+          }
+        }
+      },
+      "shotScheduleVsBaseline": {
+        "differentTimes": 0,
+        "firstDifferentBallId": null,
+        "firstDeltaSeconds": null,
+        "maximumAbsoluteDeltaSeconds": 0,
+        "sameShotIds": true
+      }
+    },
+    {
+      "id": "wheel-down025",
+      "sourceSHA": "7962b677a37328e6e5ac297133f8becd56c309054d5fee7ee3dcb5c96357ef62",
+      "commit": "24d7edf8555c48c474870d9ca57a875ab5ad184d",
+      "compressedSHA": "9aa7744e2e09fccf9e96e51f8e33bff0ee19f050444a3ded134641a50eb3447e",
+      "expandedSHA": "c58af50ce5b66ceff2061827440adf9d6865f3106d0800e1a4f889c6eb6a2fad",
+      "shots": 250,
+      "end": {
+        "time": 197.9166666671276,
+        "remaining": 0,
+        "counts": {
+          "fuzu": 0,
+          "normal": 8,
+          "start": 11,
+          "rush": 0,
+          "bonus": 0,
+          "out": 231,
+          "returned": 0
+        },
+        "stock": null
+      },
+      "actualFiringSeconds": 152.91666666666666,
+      "maxGap": {
+        "entries": 10,
+        "maxGap": 49.88333333322464,
+        "first": 4.460416666666737,
+        "last": 146.3523809523573,
+        "windowSeconds": 152.91666666666666
+      },
+      "allLayerWindmillRole": {
+        "contacts": 62171,
+        "balls": 112,
+        "start": 5,
+        "normal": 5,
+        "bonus": 0,
+        "rush": 0,
+        "fuzu": 0,
+        "out": 102,
+        "returned": 0
+      },
+      "firstFrontWindmill": {
+        "balls": 112,
+        "outcomes": {
+          "normal": 5,
+          "out": 102,
+          "start": 5
+        },
+        "vxDirections": {
+          "left": {
+            "balls": 72,
+            "outcomes": {
+              "out": 72
+            }
+          },
+          "right": {
+            "balls": 40,
+            "outcomes": {
+              "normal": 5,
+              "start": 5,
+              "out": 30
+            }
+          },
+          "zero": {
+            "balls": 0,
+            "outcomes": {}
+          }
+        },
+        "firstPinBeforeWindmillIds": {
+          "48": 51,
+          "39": 34,
+          "27": 27
+        }
+      },
+      "actualPin1or2Impulse": {
+        "balls": 11,
+        "outcomes": {
+          "out": 6,
+          "start": 2,
+          "normal": 3
+        }
+      },
+      "actualAnyRoadPinImpulse": {
+        "balls": 38,
+        "outcomes": {
+          "start": 11,
+          "normal": 8,
+          "out": 19
+        }
+      },
+      "terminalRectangle": {
+        "balls": 18,
+        "outcomes": {
+          "start": 9,
+          "normal": 3,
+          "out": 6
+        }
+      },
+      "firstDescendingZones": {
+        "left": {
+          "balls": 174,
+          "outcomes": {
+            "out": 174
+          }
+        },
+        "envelope": {
+          "balls": 42,
+          "outcomes": {
+            "out": 42
+          }
+        },
+        "right": {
+          "balls": 34,
+          "outcomes": {
+            "start": 11,
+            "normal": 8,
+            "out": 15
+          }
+        },
+        "unobserved": {
+          "balls": 0,
+          "outcomes": {}
+        }
+      },
+      "windmillBeforeFirstRoadPin": {
+        "balls": 16,
+        "outcomes": {
+          "normal": 4,
+          "start": 4,
+          "out": 8
+        }
+      },
+      "windmillAfterOrSameFirstRoadPin": {
+        "balls": 3,
+        "outcomes": {
+          "out": 1,
+          "start": 1,
+          "normal": 1
+        }
+      },
+      "windmillThenTerminal": {
+        "balls": 8,
+        "outcomes": {
+          "start": 4,
+          "normal": 1,
+          "out": 3
+        }
+      },
+      "routeMetrics": {
+        "roadContact": 38,
+        "nearHeso": 12,
+        "admitted": 11,
+        "nearAdmitted": 11,
+        "deflectedAtHeso": 0,
+        "nearMiss": 1,
+        "earlySpill": 26,
+        "pending": 0,
+        "nearPending": 0,
+        "nearMissOutcomes": {
+          "out": 1
+        },
+        "outcomes": {
+          "out": 231,
+          "start": 11,
+          "normal": 8
+        },
+        "tracked": 250,
+        "byPower": {
+          "0.18": {
+            "roadContact": 38,
+            "nearHeso": 12,
+            "admitted": 11,
+            "nearAdmitted": 11,
+            "deflectedAtHeso": 0,
+            "nearMiss": 1,
+            "earlySpill": 26,
+            "pending": 0,
+            "nearPending": 0,
+            "nearMissOutcomes": {
+              "out": 1
+            },
+            "outcomes": {
+              "out": 231,
+              "start": 11,
+              "normal": 8
+            },
+            "tracked": 250
+          }
+        }
+      },
+      "shotScheduleVsBaseline": {
+        "differentTimes": 0,
+        "firstDifferentBallId": null,
+        "firstDeltaSeconds": null,
+        "maximumAbsoluteDeltaSeconds": 0,
+        "sameShotIds": true
+      }
+    }
+  ]
+}

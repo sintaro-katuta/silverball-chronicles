@@ -1,0 +1,144 @@
+{
+  "success": true,
+  "sha256": "3299fcefaf96c70d0b0aadd2e90f10012b110d92fcb6c2f7be2b43fa0ca326ce",
+  "bytes": 8092114,
+  "frames": 4010,
+  "videoSeconds": 133.66666666666666,
+  "containerSeconds": 133.717333,
+  "fullDecodeExitCode": 0,
+  "inputsUnchanged": true,
+  "segments": [
+    {
+      "id": "intro-before",
+      "type": "comparison",
+      "startFrame": 180,
+      "frames": 225,
+      "encodedRmsDbFS": -27.162782842217332
+    },
+    {
+      "id": "intro-after",
+      "type": "comparison",
+      "startFrame": 405,
+      "frames": 225,
+      "encodedRmsDbFS": -31.307797808439183
+    },
+    {
+      "id": "normal-before",
+      "type": "comparison",
+      "startFrame": 630,
+      "frames": 360,
+      "encodedRmsDbFS": -28.441287105950288
+    },
+    {
+      "id": "normal-after",
+      "type": "comparison",
+      "startFrame": 990,
+      "frames": 360,
+      "encodedRmsDbFS": -29.962588890510162
+    },
+    {
+      "id": "s9-03",
+      "type": "approved speech",
+      "startFrame": 1350,
+      "frames": 297,
+      "encodedRmsDbFS": -31.16315985596553
+    },
+    {
+      "id": "battle-before",
+      "type": "comparison",
+      "startFrame": 1654,
+      "frames": 180,
+      "encodedRmsDbFS": -20.769623410341662
+    },
+    {
+      "id": "battle-after",
+      "type": "comparison",
+      "startFrame": 1834,
+      "frames": 180,
+      "encodedRmsDbFS": -21.23791838827859
+    },
+    {
+      "id": "s9-04",
+      "type": "approved speech",
+      "startFrame": 2014,
+      "frames": 407,
+      "encodedRmsDbFS": -30.425830536273327
+    },
+    {
+      "id": "se-before",
+      "type": "comparison",
+      "startFrame": 2427,
+      "frames": 60,
+      "encodedRmsDbFS": -20.418351721333643
+    },
+    {
+      "id": "se-after",
+      "type": "comparison",
+      "startFrame": 2487,
+      "frames": 60,
+      "encodedRmsDbFS": -22.94578877007108
+    },
+    {
+      "id": "s9-05",
+      "type": "approved speech",
+      "startFrame": 2547,
+      "frames": 356,
+      "encodedRmsDbFS": -29.21150248941869
+    },
+    {
+      "id": "bonus-before",
+      "type": "comparison",
+      "startFrame": 2911,
+      "frames": 120,
+      "encodedRmsDbFS": -28.753592018194464
+    },
+    {
+      "id": "bonus-after",
+      "type": "comparison",
+      "startFrame": 3031,
+      "frames": 120,
+      "encodedRmsDbFS": -28.91529216481025
+    },
+    {
+      "id": "rush-before",
+      "type": "comparison",
+      "startFrame": 3151,
+      "frames": 120,
+      "encodedRmsDbFS": -20.196166917418715
+    },
+    {
+      "id": "rush-after",
+      "type": "comparison",
+      "startFrame": 3271,
+      "frames": 120,
+      "encodedRmsDbFS": -20.736605261706632
+    },
+    {
+      "id": "s9-06",
+      "type": "approved speech",
+      "startFrame": 3391,
+      "frames": 308,
+      "encodedRmsDbFS": -27.596170351196466
+    },
+    {
+      "id": "s9-07",
+      "type": "approved speech",
+      "startFrame": 3706,
+      "frames": 296,
+      "encodedRmsDbFS": -29.258891492175554
+    }
+  ],
+  "captionOnlySilenceSeconds": [
+    0,
+    6
+  ],
+  "narration": "Only previously approved paragraphs3–7, source WAVs/text/order intact. No new speech/TTS.",
+  "naturalPlayback": {
+    "local": "local-playback.json",
+    "pr": "pr-playback.json",
+    "bothNaturalEnd": true,
+    "muted": false,
+    "rate": 1
+  },
+  "humanListening": "unverified"
+}

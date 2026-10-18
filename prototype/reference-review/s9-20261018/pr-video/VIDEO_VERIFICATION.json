@@ -1,0 +1,168 @@
+{
+  "success": true,
+  "movie": "/private/tmp/silverball-s9-20261018/prototype/reference-review/s9-20261018/pr-video/s9-review.mp4",
+  "sha256": "6923755d8cc4dbb1a1ca4319998dc5fc7f7635cc245f976b1308fe208a9f78ca",
+  "bytes": 8644762,
+  "frames": 3181,
+  "fps": 30,
+  "videoDuration": 106.03333333333333,
+  "containerDuration": 106.090667,
+  "codec": "h264",
+  "audioCodec": "aac",
+  "fullDecodeExitCode": 0,
+  "verificationSeconds": 4.163270711898804,
+  "inputsUnchanged": true,
+  "segments": [
+    {
+      "id": "s9-01",
+      "type": "narration",
+      "startFrame": 0,
+      "frames": 304,
+      "blockEndFrame": 311,
+      "audioFile": "s9-01.wav",
+      "encodedAudioRmsDbFS": -29.799523195331403
+    },
+    {
+      "id": "s9-02",
+      "type": "narration",
+      "startFrame": 311,
+      "frames": 263,
+      "blockEndFrame": 581,
+      "audioFile": "s9-02.wav",
+      "encodedAudioRmsDbFS": -28.92361418459449
+    },
+    {
+      "id": "normal-before",
+      "type": "comparison",
+      "startFrame": 581,
+      "frames": 90,
+      "file": "sample-normal-before.mp4",
+      "clockLabel": "通常待機・録画3秒から3秒",
+      "encodedAudioRmsDbFS": -54.75580942666464
+    },
+    {
+      "id": "normal-after",
+      "type": "comparison",
+      "startFrame": 671,
+      "frames": 90,
+      "file": "sample-normal-after.mp4",
+      "clockLabel": "通常待機・録画3秒から3秒",
+      "encodedAudioRmsDbFS": -29.282473556318806
+    },
+    {
+      "id": "s9-03",
+      "type": "narration",
+      "startFrame": 761,
+      "frames": 297,
+      "blockEndFrame": 1065,
+      "audioFile": "s9-03.wav",
+      "encodedAudioRmsDbFS": -31.161732982149168
+    },
+    {
+      "id": "battle-before",
+      "type": "comparison",
+      "startFrame": 1065,
+      "frames": 180,
+      "file": "sample-battle-before.mp4",
+      "clockLabel": "表示時計48.5秒付近から等速6秒・当たり指定",
+      "encodedAudioRmsDbFS": -21.70783907459729
+    },
+    {
+      "id": "battle-after",
+      "type": "comparison",
+      "startFrame": 1245,
+      "frames": 180,
+      "file": "sample-battle-after.mp4",
+      "clockLabel": "表示時計48.5秒付近から等速6秒・当たり指定",
+      "encodedAudioRmsDbFS": -20.774348238273777
+    },
+    {
+      "id": "s9-04",
+      "type": "narration",
+      "startFrame": 1425,
+      "frames": 407,
+      "blockEndFrame": 1838,
+      "audioFile": "s9-04.wav",
+      "encodedAudioRmsDbFS": -30.40591713347389
+    },
+    {
+      "id": "se-before",
+      "type": "comparison",
+      "startFrame": 1838,
+      "frames": 90,
+      "file": "sample-se-before.mp4",
+      "clockLabel": "単体SE 1.55秒＋比較用の無音1.45秒",
+      "encodedAudioRmsDbFS": -25.574746418560697
+    },
+    {
+      "id": "se-after",
+      "type": "comparison",
+      "startFrame": 1928,
+      "frames": 90,
+      "file": "sample-se-after.mp4",
+      "clockLabel": "単体SE 1.55秒＋比較用の無音1.45秒",
+      "encodedAudioRmsDbFS": -22.172364456286076
+    },
+    {
+      "id": "s9-05",
+      "type": "narration",
+      "startFrame": 2018,
+      "frames": 356,
+      "blockEndFrame": 2382,
+      "audioFile": "s9-05.wav",
+      "encodedAudioRmsDbFS": -29.20545519801514
+    },
+    {
+      "id": "bonus-after",
+      "type": "comparison",
+      "startFrame": 2382,
+      "frames": 90,
+      "file": "sample-bonus-after.mp4",
+      "clockLabel": "大当り体験・録画9秒から3秒",
+      "encodedAudioRmsDbFS": -30.487596088443546
+    },
+    {
+      "id": "rush-after",
+      "type": "comparison",
+      "startFrame": 2472,
+      "frames": 90,
+      "file": "sample-rush-after.mp4",
+      "clockLabel": "RUSH体験・録画12.7秒から3秒・BONUSへの切替を含む",
+      "encodedAudioRmsDbFS": -30.086530121999417
+    },
+    {
+      "id": "s9-06",
+      "type": "narration",
+      "startFrame": 2562,
+      "frames": 308,
+      "blockEndFrame": 2877,
+      "audioFile": "s9-06.wav",
+      "encodedAudioRmsDbFS": -27.596131110366485
+    },
+    {
+      "id": "s9-07",
+      "type": "narration",
+      "startFrame": 2877,
+      "frames": 296,
+      "blockEndFrame": 3181,
+      "audioFile": "s9-07.wav",
+      "encodedAudioRmsDbFS": -29.25837013875903
+    }
+  ],
+  "naturalPlayback": "PM pending",
+  "humanListening": "Not verified; numeric non-silence is not listening acceptance",
+  "narration": "Approved text/order unchanged; comparison blocks have no narration",
+  "inventorySnapshotTiming": "Snapshot captured during ongoing render; post-render comparison exact. Not claimed as a pre-render snapshot.",
+  "visualReview": {
+    "preview": [
+      "preview-narration.png",
+      "preview-se.png",
+      "preview-rush.png"
+    ],
+    "actualMP4": [
+      "export-battle-after.png",
+      "export-limits.png"
+    ],
+    "result": "Labels and captions readable, no clipping observed; SE standalone distinguished from actual scene recording."
+  }
+}

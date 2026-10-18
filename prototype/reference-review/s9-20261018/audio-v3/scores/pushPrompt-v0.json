@@ -1,0 +1,54 @@
+{
+  "version": "s9-effects-v3",
+  "name": "pushPrompt",
+  "variant": 0,
+  "duration": 0.82,
+  "level": 0.24,
+  "priority": 2,
+  "duckFor": 0.13,
+  "role": "押せることを知らせる二拍",
+  "kind": "s9-synth",
+  "style": "s9-v3-bright-additive",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.14,
+      "hz": 932.3255085338651,
+      "endHz": 932.3255085338651,
+      "gain": 0.3,
+      "pan": -0.08
+    },
+    {
+      "at": 0.18,
+      "seconds": 0.14,
+      "hz": 1174.6588688552188,
+      "endHz": 1174.6588688552188,
+      "gain": 0.32,
+      "pan": 0.08
+    },
+    {
+      "at": 0.36,
+      "seconds": 0.26,
+      "hz": 1396.9113720696892,
+      "endHz": 1396.9113720696892,
+      "gain": 0.29,
+      "pan": 0
+    },
+    {
+      "at": 0.36,
+      "seconds": 0.26,
+      "hz": 932.3255085338651,
+      "endHz": 932.3255085338651,
+      "gain": 0.12,
+      "pan": 0
+    }
+  ],
+  "envelope": {
+    "attack": 0.0012,
+    "release": 0.035,
+    "decay": 1,
+    "voice": "lead",
+    "echo": false
+  },
+  "intent": "Bright finite-additive synth, articulated rises and decisive attack; no drums/bass in SE, no outcome or game RNG input."
+}

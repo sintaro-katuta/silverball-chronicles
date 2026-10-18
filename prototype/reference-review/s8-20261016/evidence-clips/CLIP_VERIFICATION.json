@@ -1,0 +1,312 @@
+{
+  "scope": "silent evidence clips only, not approved narration/final Remotion video",
+  "clips": [
+    {
+      "id": "road-whole",
+      "path": "/private/tmp/silverball-s8-20261016/prototype/reference-review/s8-20261016/evidence-clips/road-pin2/road-whole.mp4",
+      "sha256": "086791372085a0bce9fd09169eaa45f80f2945ce404cba651302cc69485f3f65",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "nb_frames": "180"
+          }
+        ],
+        "format": {
+          "duration": "6.000000",
+          "size": "742109"
+        }
+      },
+      "decodeExit": 0,
+      "adjacentSourceFrames": true,
+      "first": {
+        "outputFrame": 0,
+        "requestedTime": 10,
+        "sides": [
+          {
+            "index": 300,
+            "actualTime": 10.000000000002014,
+            "frameSHA": "ed237b3faf3b3855ec9dccffd1de6556618832bf4a6284ad020ef0f8420e6a1f",
+            "spawned": 17,
+            "counts": {
+              "fuzu": 0,
+              "normal": 1,
+              "start": 1,
+              "rush": 0,
+              "bonus": 0,
+              "out": 8,
+              "returned": 0
+            },
+            "inFlight": 7
+          },
+          {
+            "index": 300,
+            "actualTime": 10.000000000002014,
+            "frameSHA": "ed237b3faf3b3855ec9dccffd1de6556618832bf4a6284ad020ef0f8420e6a1f",
+            "spawned": 17,
+            "counts": {
+              "fuzu": 0,
+              "normal": 1,
+              "start": 1,
+              "rush": 0,
+              "bonus": 0,
+              "out": 8,
+              "returned": 0
+            },
+            "inFlight": 7
+          }
+        ]
+      },
+      "last": {
+        "outputFrame": 179,
+        "requestedTime": 15.966666666666667,
+        "sides": [
+          {
+            "index": 479,
+            "actualTime": 15.966666666671518,
+            "frameSHA": "e84afbf816796b05b3d7352bd1bed4b5f51f6e305f706ebc04684ea51d47b063",
+            "spawned": 27,
+            "counts": {
+              "fuzu": 0,
+              "normal": 1,
+              "start": 2,
+              "rush": 0,
+              "bonus": 0,
+              "out": 17,
+              "returned": 0
+            },
+            "inFlight": 7
+          },
+          {
+            "index": 479,
+            "actualTime": 15.966666666671518,
+            "frameSHA": "6ddc78d7758386a9cfce4a0453ab0fdf7aa2d5c922ade9b75ad9d23232485d2d",
+            "spawned": 27,
+            "counts": {
+              "fuzu": 0,
+              "normal": 1,
+              "start": 1,
+              "rush": 0,
+              "bonus": 0,
+              "out": 18,
+              "returned": 0
+            },
+            "inFlight": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "road-local",
+      "path": "/private/tmp/silverball-s8-20261016/prototype/reference-review/s8-20261016/evidence-clips/road-pin2/road-local.mp4",
+      "sha256": "9041d38e5d0b63abbc8e36177bbba59254aeebe622c1c910e4347641fbe4586b",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "nb_frames": "180"
+          }
+        ],
+        "format": {
+          "duration": "6.000000",
+          "size": "362720"
+        }
+      },
+      "decodeExit": 0,
+      "adjacentSourceFrames": true,
+      "first": {
+        "outputFrame": 0,
+        "requestedTime": 10,
+        "sides": [
+          {
+            "index": 300,
+            "actualTime": 10.000000000002014,
+            "frameSHA": "ed237b3faf3b3855ec9dccffd1de6556618832bf4a6284ad020ef0f8420e6a1f",
+            "spawned": 17,
+            "counts": {
+              "fuzu": 0,
+              "normal": 1,
+              "start": 1,
+              "rush": 0,
+              "bonus": 0,
+              "out": 8,
+              "returned": 0
+            },
+            "inFlight": 7
+          },
+          {
+            "index": 300,
+            "actualTime": 10.000000000002014,
+            "frameSHA": "ed237b3faf3b3855ec9dccffd1de6556618832bf4a6284ad020ef0f8420e6a1f",
+            "spawned": 17,
+            "counts": {
+              "fuzu": 0,
+              "normal": 1,
+              "start": 1,
+              "rush": 0,
+              "bonus": 0,
+              "out": 8,
+              "returned": 0
+            },
+            "inFlight": 7
+          }
+        ]
+      },
+      "last": {
+        "outputFrame": 179,
+        "requestedTime": 15.966666666666667,
+        "sides": [
+          {
+            "index": 479,
+            "actualTime": 15.966666666671518,
+            "frameSHA": "e84afbf816796b05b3d7352bd1bed4b5f51f6e305f706ebc04684ea51d47b063",
+            "spawned": 27,
+            "counts": {
+              "fuzu": 0,
+              "normal": 1,
+              "start": 2,
+              "rush": 0,
+              "bonus": 0,
+              "out": 17,
+              "returned": 0
+            },
+            "inFlight": 7
+          },
+          {
+            "index": 479,
+            "actualTime": 15.966666666671518,
+            "frameSHA": "6ddc78d7758386a9cfce4a0453ab0fdf7aa2d5c922ade9b75ad9d23232485d2d",
+            "spawned": 27,
+            "counts": {
+              "fuzu": 0,
+              "normal": 1,
+              "start": 1,
+              "rush": 0,
+              "bonus": 0,
+              "out": 18,
+              "returned": 0
+            },
+            "inFlight": 7
+          }
+        ]
+      }
+    },
+    {
+      "id": "heso-admission",
+      "path": "/private/tmp/silverball-s8-20261016/prototype/reference-review/s8-20261016/evidence-clips/heso-pair/heso-admission.mp4",
+      "sha256": "35a97dc5bc0fb333bab06b253fb19fc9b8af1b0936ae40c33783809d20c7b154",
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 1280,
+            "height": 1080,
+            "r_frame_rate": "30/1",
+            "nb_frames": "180"
+          }
+        ],
+        "format": {
+          "duration": "6.000000",
+          "size": "580661"
+        }
+      },
+      "decodeExit": 0,
+      "adjacentSourceFrames": true,
+      "first": {
+        "outputFrame": 0,
+        "requestedTime": 67,
+        "sides": [
+          {
+            "index": 2010,
+            "actualTime": 66.99999999992939,
+            "frameSHA": "0b2de76145728c936de39cb1a79a06ce2c9f9d0001f02c4e819df502f0a479a6",
+            "spawned": 109,
+            "counts": {
+              "fuzu": 0,
+              "normal": 1,
+              "start": 8,
+              "rush": 0,
+              "bonus": 0,
+              "out": 90,
+              "returned": 0
+            },
+            "inFlight": 10
+          },
+          {
+            "index": 2010,
+            "actualTime": 66.99999999992939,
+            "frameSHA": "0b2de76145728c936de39cb1a79a06ce2c9f9d0001f02c4e819df502f0a479a6",
+            "spawned": 109,
+            "counts": {
+              "fuzu": 0,
+              "normal": 1,
+              "start": 8,
+              "rush": 0,
+              "bonus": 0,
+              "out": 90,
+              "returned": 0
+            },
+            "inFlight": 10
+          }
+        ]
+      },
+      "last": {
+        "outputFrame": 179,
+        "requestedTime": 72.96666666666667,
+        "sides": [
+          {
+            "index": 2189,
+            "actualTime": 72.96666666658308,
+            "frameSHA": "8572911778318f5429776ab32260893bc4fad21409543f40c42f56e049d1ca3b",
+            "spawned": 119,
+            "counts": {
+              "fuzu": 0,
+              "normal": 2,
+              "start": 9,
+              "rush": 0,
+              "bonus": 0,
+              "out": 100,
+              "returned": 0
+            },
+            "inFlight": 8
+          },
+          {
+            "index": 2189,
+            "actualTime": 72.96666666658308,
+            "frameSHA": "8572911778318f5429776ab32260893bc4fad21409543f40c42f56e049d1ca3b",
+            "spawned": 119,
+            "counts": {
+              "fuzu": 0,
+              "normal": 2,
+              "start": 9,
+              "rush": 0,
+              "bonus": 0,
+              "out": 100,
+              "returned": 0
+            },
+            "inFlight": 8
+          }
+        ]
+      }
+    }
+  ],
+  "fullDecodeAllZero": true,
+  "ChromeClosed": true,
+  "ownedViteStoppedExit": 130,
+  "nativePlayback": "not verified"
+}

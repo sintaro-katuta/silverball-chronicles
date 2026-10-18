@@ -1,0 +1,46 @@
+{
+  "version": "s9-effects-v1",
+  "name": "decisiveHit",
+  "variant": 0,
+  "duration": 1.55,
+  "level": 0.56,
+  "priority": 3,
+  "duckFor": 0.28,
+  "role": "pressure最終一撃・当落非確定",
+  "kind": "s9-synth",
+  "style": "s9-original-periodic",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.14,
+      "hz": 873.0807437775325,
+      "endHz": 261.9242231332598,
+      "gain": 0.54,
+      "pan": 0
+    },
+    {
+      "at": 0.012,
+      "seconds": 0.62,
+      "hz": 349.232297511013,
+      "endHz": 261.9242231332598,
+      "gain": 0.42,
+      "pan": 0
+    },
+    {
+      "at": 0.018,
+      "seconds": 0.58,
+      "hz": 219.9985294575754,
+      "endHz": 195.99771799087463,
+      "gain": 0.24,
+      "pan": 0
+    },
+    {
+      "at": 0.14,
+      "seconds": 1.05,
+      "hz": 523.2515441253655,
+      "endHz": 523.2515441253655,
+      "gain": 0.16,
+      "pan": 0.16
+    }
+  ]
+}

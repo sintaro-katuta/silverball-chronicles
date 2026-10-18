@@ -1,0 +1,97 @@
+{
+  "commit": "10128ba9f32890f3800918a9d6eef6e949100cde",
+  "sourceSHA": "903c3c7802a3e908047cb0c22a8025a4dc5efd84205f81e7100c23c820b9f3cb",
+  "planSHA": "e039439aee98324d09471fd37bc418a4985680de16e5f4e2be686f302b392043",
+  "caseManifestSHA": "a6c0f9fb6e37902581509d77736f1415fa8564a03e3271f3fc8bc8450e032d4c",
+  "uniqueInputs": 191,
+  "node": "v26.11.0",
+  "preflight": [
+    {
+      "id": "legacy-control",
+      "status": "preflight-only",
+      "success": true,
+      "sourceUnchanged": true,
+      "measurementStarted": false
+    },
+    {
+      "id": "three-base",
+      "status": "preflight-only",
+      "success": true,
+      "sourceUnchanged": true,
+      "measurementStarted": false
+    },
+    {
+      "id": "three-wheel-left025",
+      "status": "preflight-only",
+      "success": true,
+      "sourceUnchanged": true,
+      "measurementStarted": false
+    },
+    {
+      "id": "three-wheel-right025",
+      "status": "preflight-only",
+      "success": true,
+      "sourceUnchanged": true,
+      "measurementStarted": false
+    },
+    {
+      "id": "three-wheel-up025",
+      "status": "preflight-only",
+      "success": true,
+      "sourceUnchanged": true,
+      "measurementStarted": false
+    },
+    {
+      "id": "three-wheel-down025",
+      "status": "preflight-only",
+      "success": true,
+      "sourceUnchanged": true,
+      "measurementStarted": false
+    },
+    {
+      "id": "three-road2-right025",
+      "status": "preflight-only",
+      "success": true,
+      "sourceUnchanged": true,
+      "measurementStarted": false
+    },
+    {
+      "id": "three-road2-right050",
+      "status": "skipped-invalid",
+      "success": false,
+      "sourceUnchanged": true,
+      "measurementStarted": false
+    }
+  ],
+  "skip": {
+    "case": {
+      "id": "three-road2-right050",
+      "label": "道入口2だけ右0.5",
+      "leftAdmissionGuides": false,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 2,
+          "dx": 0.5,
+          "dy": 0
+        }
+      ],
+      "windmillOffset": {
+        "dx": 0,
+        "dy": 0
+      },
+      "windmillShapeProfile": "photo-three-vane"
+    },
+    "phase": 0,
+    "reason": "Pins 2/3: centre clearance below 4",
+    "measurementStarted": false
+  },
+  "directTests": {
+    "passed": 10,
+    "log": "focused-final.log"
+  },
+  "compatibility": "compatibility-proof.json",
+  "formalTrials": 0
+}

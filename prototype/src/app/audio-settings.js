@@ -1,0 +1,4 @@
+const KEY='tsukikage-audio-v1';
+export const DEFAULT_AUDIO_SETTINGS=Object.freeze({musicVolume:.5,effectsVolume:1,musicMuted:false,effectsMuted:false});
+export function normalizeAudioSettings(value){const result={...DEFAULT_AUDIO_SETTINGS};for(const key of ['musicVolume','effectsVolume'])if(Number.isFinite(value?.[key])&&value[key]>=0&&value[key]<=1)result[key]=value[key];for(const key of ['musicMuted','effectsMuted'])if(typeof value?.[key]==='boolean')result[key]=value[key];return result;}
+export function createAudioSettings(storage){let settings;try{storage??=globalThis.localStorage;settings=normalizeAudioSettings(JSON.parse(storage?.getItem(KEY)??'null'));}catch{settings={...DEFAULT_AUDIO_SETTINGS};}return {snapshot:()=>({...settings}),update(patch){settings=normalizeAudioSettings({...settings,...patch});try{storage?.setItem(KEY,JSON.stringify(settings));}catch{/* Storage denial does not interrupt play. */}return {...settings};}};}

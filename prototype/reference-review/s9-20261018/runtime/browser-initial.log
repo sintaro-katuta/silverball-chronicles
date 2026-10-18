@@ -1,0 +1,23 @@
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+locator.fill: Error: Malformed value
+Call log:
+[2m  - waiting for locator('#music-volume')[22m
+[2m    - locator resolved to <input min="0" max="1" step="0.05" value="0.5" type="range" id="music-volume"/>[22m
+[2m    - fill(".25")[22m
+[2m  - attempting fill action[22m
+[2m    - waiting for element to be visible, enabled and editable[22m
+
+    at /private/tmp/silverball-s9-20261018/prototype/tests/s9-audio.browser.mjs:5:100 {
+  log: [
+    "  - waiting for locator('#music-volume')",
+    '    - locator resolved to <input min="0" max="1" step="0.05" value="0.5" type="range" id="music-volume"/>',
+    '    - fill(".25")',
+    '  - attempting fill action',
+    '    - waiting for element to be visible, enabled and editable'
+  ]
+}
+
+Node.js v26.11.0

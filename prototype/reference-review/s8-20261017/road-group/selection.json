@@ -1,0 +1,163 @@
+{
+  "sourceSHA": "3d8a84df9cbe7ebec50066f67dd21d7098af621db3efe374978643417a0e2736",
+  "commit": "70cb5a63a7bee310f04b75484fd0148c9b87b306",
+  "rows": [
+    {
+      "id": "legacy-control",
+      "phase": 0,
+      "shots": 250,
+      "start": 13,
+      "normal": 3,
+      "out": 234,
+      "returned": 0,
+      "remaining": 0,
+      "stalled": 0,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "counts": {
+        "fuzu": 0,
+        "normal": 3,
+        "start": 13,
+        "rush": 0,
+        "bonus": 0,
+        "out": 234,
+        "returned": 0
+      },
+      "maxGap": 30.926190476122926,
+      "countsValid": true,
+      "windmill": 124,
+      "road": 47
+    },
+    {
+      "id": "three-base",
+      "phase": 0,
+      "shots": 250,
+      "start": 9,
+      "normal": 4,
+      "out": 237,
+      "returned": 0,
+      "remaining": 0,
+      "stalled": 0,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "counts": {
+        "fuzu": 0,
+        "normal": 4,
+        "start": 9,
+        "rush": 0,
+        "bonus": 0,
+        "out": 237,
+        "returned": 0
+      },
+      "maxGap": 70.1892857142684,
+      "countsValid": true,
+      "windmill": 70,
+      "road": 56
+    },
+    {
+      "id": "three-road-group-left300",
+      "phase": 0,
+      "shots": 250,
+      "start": 7,
+      "normal": 4,
+      "out": 239,
+      "returned": 0,
+      "remaining": 0,
+      "stalled": 0,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "counts": {
+        "fuzu": 0,
+        "normal": 4,
+        "start": 7,
+        "rush": 0,
+        "bonus": 0,
+        "out": 239,
+        "returned": 0
+      },
+      "maxGap": 94.81428571415455,
+      "countsValid": true,
+      "windmill": 78,
+      "road": 52
+    },
+    {
+      "id": "three-road-group-right300",
+      "phase": 0,
+      "shots": 250,
+      "start": 6,
+      "normal": 2,
+      "out": 242,
+      "returned": 0,
+      "remaining": 0,
+      "stalled": 0,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "counts": {
+        "fuzu": 0,
+        "normal": 2,
+        "start": 6,
+        "rush": 0,
+        "bonus": 0,
+        "out": 242,
+        "returned": 0
+      },
+      "maxGap": 32.39761904754843,
+      "countsValid": true,
+      "windmill": 76,
+      "road": 53
+    },
+    {
+      "id": "three-road-group-up200",
+      "phase": 0,
+      "shots": 250,
+      "start": 13,
+      "normal": 9,
+      "out": 228,
+      "returned": 0,
+      "remaining": 0,
+      "stalled": 0,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "counts": {
+        "fuzu": 0,
+        "normal": 9,
+        "start": 13,
+        "rush": 0,
+        "bonus": 0,
+        "out": 228,
+        "returned": 0
+      },
+      "maxGap": 39.31249999991422,
+      "countsValid": true,
+      "windmill": 69,
+      "road": 59
+    }
+  ],
+  "eligible": [],
+  "selected": null,
+  "confirmationExecuted": false,
+  "adopted": false,
+  "reason": "up13 > current9 but equals legacy13; no candidate strictly exceeds both controls",
+  "goal60Per750": "not verified; no qualifying candidate",
+  "productionChanged": false
+}

@@ -1,0 +1,2492 @@
+{
+  "success": true,
+  "before": [
+    {
+      "file": "prototype/src/dev/s9-audio.js",
+      "sha256": "d30b52e43cad6ba79edb947d319e9ccb1ecd2a8af9c8a198b63a71b8922f7e04",
+      "bytes": 9137
+    },
+    {
+      "file": "prototype/dev/s9-audio.html",
+      "sha256": "b13452d2d9830c6a28702f269e92c052e3d8c116aae572d8826deba32e59869a",
+      "bytes": 5048
+    },
+    {
+      "file": "prototype/tools/s9-audition-check.mjs",
+      "sha256": "f2dff0a55b3c803fe4c80ed4cd5c1fa7ef876afafb06c92fdb874324978e6b6a",
+      "bytes": 8175
+    },
+    {
+      "file": "prototype/src/pixi/se/s9-synth.js",
+      "sha256": "391f5be8db9e604a15a66eb2b0af9861c207bfbdbcadbc82febe5894b4730ad4",
+      "bytes": 2507
+    },
+    {
+      "file": "prototype/src/pixi/se/music-score.js",
+      "sha256": "0a327addc2b78dd92717103caf229f3843c973ff81644277ccbe5b75a1b75e03",
+      "bytes": 3620
+    },
+    {
+      "file": "prototype/src/pixi/se/s9-se.js",
+      "sha256": "4038140bde7ffe691b5feda2a0fb9f5e5ea7d8fad6bcf2d19331688eaf1f996f",
+      "bytes": 4471
+    },
+    {
+      "file": "prototype/tools/s9-render-audio.mjs",
+      "sha256": "343e68f5894192756ea959e01ae4e0711471391deeb755ef08f6a7dcd073b7d6",
+      "bytes": 7137
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v1/baseline-source/original-se.js",
+      "sha256": "dff82507535c0a195bdbebd1ddfbae4c594512e6efa87da6c79c0418c95860cf",
+      "bytes": 5726
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v1/baseline-source/signature-sound.js",
+      "sha256": "2c0dbae87ae3807fc4645f2dc0a684296ff371457a6fd1ae2e27af3323a5aec5",
+      "bytes": 2687
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v1/baseline-source/synth-wave.js",
+      "sha256": "042b18a27172f7f1c0ccb6fb4d5392ad316056e6a73e3b230ebe9b71e402dd1f",
+      "bytes": 1215
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v1/baseline-source/presentation-atmosphere.js",
+      "sha256": "ba3c74041eb34345809346f8a23fdcf4e94d1411202813f7e7057fa76bad4cfc",
+      "bytes": 5728
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v1/reach-ending.js",
+      "sha256": "971458a4387d92cd141f11eb74e9bbf5b18594c8cbc3ef5624f6af7c8e341516",
+      "bytes": 1428
+    },
+    {
+      "file": "prototype/tools/s9-audio-spectrum.mjs",
+      "sha256": "0e945716bc66c8ee38665ad10ae480cffccb904297f727f0052dd829c9ba7450",
+      "bytes": 2186
+    },
+    {
+      "file": "docs/agile/S9_SOUND_DESIGN.md",
+      "sha256": "593b75825c5f19b76411d8f63d69e5457c0b080b51681e10ead4afe57e224887",
+      "bytes": 14442
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v1/manifest.json",
+      "sha256": "c371e111ac115bf6eb117f7e61389bc6b949e7eb285ceebd07769b3fd9f25653",
+      "bytes": 38520
+    },
+    {
+      "file": "prototype/src/pixi/se/synth-wave.js",
+      "sha256": "042b18a27172f7f1c0ccb6fb4d5392ad316056e6a73e3b230ebe9b71e402dd1f",
+      "bytes": 1215
+    },
+    {
+      "file": "prototype/tools/s9-render-audio-v2.mjs",
+      "sha256": "11717d527f0f73b217c6b13b04077d406592c40b1f8e4f5ef18d539a6f4afbe9",
+      "bytes": 6484
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v2/manifest.json",
+      "sha256": "7508191d3095bd758d8a65a4027e8a3ec5b3cb1316880b54fd6b62c189ecd73f",
+      "bytes": 17736
+    }
+  ],
+  "after": [
+    {
+      "file": "prototype/src/dev/s9-audio.js",
+      "sha256": "d30b52e43cad6ba79edb947d319e9ccb1ecd2a8af9c8a198b63a71b8922f7e04",
+      "bytes": 9137
+    },
+    {
+      "file": "prototype/dev/s9-audio.html",
+      "sha256": "b13452d2d9830c6a28702f269e92c052e3d8c116aae572d8826deba32e59869a",
+      "bytes": 5048
+    },
+    {
+      "file": "prototype/tools/s9-audition-check.mjs",
+      "sha256": "f2dff0a55b3c803fe4c80ed4cd5c1fa7ef876afafb06c92fdb874324978e6b6a",
+      "bytes": 8175
+    },
+    {
+      "file": "prototype/src/pixi/se/s9-synth.js",
+      "sha256": "391f5be8db9e604a15a66eb2b0af9861c207bfbdbcadbc82febe5894b4730ad4",
+      "bytes": 2507
+    },
+    {
+      "file": "prototype/src/pixi/se/music-score.js",
+      "sha256": "0a327addc2b78dd92717103caf229f3843c973ff81644277ccbe5b75a1b75e03",
+      "bytes": 3620
+    },
+    {
+      "file": "prototype/src/pixi/se/s9-se.js",
+      "sha256": "4038140bde7ffe691b5feda2a0fb9f5e5ea7d8fad6bcf2d19331688eaf1f996f",
+      "bytes": 4471
+    },
+    {
+      "file": "prototype/tools/s9-render-audio.mjs",
+      "sha256": "343e68f5894192756ea959e01ae4e0711471391deeb755ef08f6a7dcd073b7d6",
+      "bytes": 7137
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v1/baseline-source/original-se.js",
+      "sha256": "dff82507535c0a195bdbebd1ddfbae4c594512e6efa87da6c79c0418c95860cf",
+      "bytes": 5726
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v1/baseline-source/signature-sound.js",
+      "sha256": "2c0dbae87ae3807fc4645f2dc0a684296ff371457a6fd1ae2e27af3323a5aec5",
+      "bytes": 2687
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v1/baseline-source/synth-wave.js",
+      "sha256": "042b18a27172f7f1c0ccb6fb4d5392ad316056e6a73e3b230ebe9b71e402dd1f",
+      "bytes": 1215
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v1/baseline-source/presentation-atmosphere.js",
+      "sha256": "ba3c74041eb34345809346f8a23fdcf4e94d1411202813f7e7057fa76bad4cfc",
+      "bytes": 5728
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v1/reach-ending.js",
+      "sha256": "971458a4387d92cd141f11eb74e9bbf5b18594c8cbc3ef5624f6af7c8e341516",
+      "bytes": 1428
+    },
+    {
+      "file": "prototype/tools/s9-audio-spectrum.mjs",
+      "sha256": "0e945716bc66c8ee38665ad10ae480cffccb904297f727f0052dd829c9ba7450",
+      "bytes": 2186
+    },
+    {
+      "file": "docs/agile/S9_SOUND_DESIGN.md",
+      "sha256": "593b75825c5f19b76411d8f63d69e5457c0b080b51681e10ead4afe57e224887",
+      "bytes": 14442
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v1/manifest.json",
+      "sha256": "c371e111ac115bf6eb117f7e61389bc6b949e7eb285ceebd07769b3fd9f25653",
+      "bytes": 38520
+    },
+    {
+      "file": "prototype/src/pixi/se/synth-wave.js",
+      "sha256": "042b18a27172f7f1c0ccb6fb4d5392ad316056e6a73e3b230ebe9b71e402dd1f",
+      "bytes": 1215
+    },
+    {
+      "file": "prototype/tools/s9-render-audio-v2.mjs",
+      "sha256": "11717d527f0f73b217c6b13b04077d406592c40b1f8e4f5ef18d539a6f4afbe9",
+      "bytes": 6484
+    },
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v2/manifest.json",
+      "sha256": "7508191d3095bd758d8a65a4027e8a3ec5b3cb1316880b54fd6b62c189ecd73f",
+      "bytes": 17736
+    }
+  ],
+  "runs": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "results": [
+        {
+          "id": "music-normal",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/normal.mp3",
+            "volumes": [
+              0.5098158772732754,
+              0.65
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/normal.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+              "status": 200,
+              "bytes": 97580,
+              "sha256": "5998234edaf807f80884ebd81f1b6794f8073c773da00304b9e703aca5d7660b",
+              "duration": 3,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/normal.mp3",
+              "status": 200,
+              "bytes": 769580,
+              "sha256": "81ea7227446a7ba4911108267bf9ad22bdead550f5eef0cfd3961792af10edf0",
+              "duration": 24,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "music-battle",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/battle.mp3",
+            "volumes": [
+              0.3071944439839204,
+              0.65
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/battle.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+              "status": 200,
+              "bytes": 97580,
+              "sha256": "5998234edaf807f80884ebd81f1b6794f8073c773da00304b9e703aca5d7660b",
+              "duration": 3,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/battle.mp3",
+              "status": 200,
+              "bytes": 1729580,
+              "sha256": "5504a1660973ebf93057134a13a7b9b9915458631e6cc64994dfb57b2be810c3",
+              "duration": 54,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "music-bonus",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/bonus.mp3",
+            "volumes": [
+              0.44148236120116996,
+              0.65
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/bonus.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+              "status": 200,
+              "bytes": 97580,
+              "sha256": "5998234edaf807f80884ebd81f1b6794f8073c773da00304b9e703aca5d7660b",
+              "duration": 3,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/bonus.mp3",
+              "status": 200,
+              "bytes": 513836,
+              "sha256": "317b50204d3473437bbf3d1c4dfbbf3bbc7ff517057f7aada4fa58c8fd4204e2",
+              "duration": 16,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "music-rush",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/rush.mp3",
+            "volumes": [
+              0.446594486009251,
+              0.65
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/rush.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+              "status": 200,
+              "bytes": 97580,
+              "sha256": "5998234edaf807f80884ebd81f1b6794f8073c773da00304b9e703aca5d7660b",
+              "duration": 3,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/rush.mp3",
+              "status": 200,
+              "bytes": 428588,
+              "sha256": "c39022e63f311d96dcb5c25798c2fed9321c078e1e8f043bd628140fe77e95bf",
+              "duration": 13.333333333333334,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-development",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/development.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/development-v0.mp3",
+            "volumes": [
+              0.65,
+              0.4129651057036335
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/development.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/development-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/development.mp3",
+              "status": 200,
+              "bytes": 28460,
+              "sha256": "1c64f473796a80d927414f8a61f053e912400c08947163dcc91ecfc018288ef6",
+              "duration": 0.82,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/development-v0.mp3",
+              "status": 200,
+              "bytes": 39980,
+              "sha256": "5ab56d3187ecfd397943a55eaa3b6adf8f354952c349dbfbcf7b77ed8748775e",
+              "duration": 1.2,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-pushPrompt",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pushPrompt.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/pushPrompt-v0.mp3",
+            "volumes": [
+              0.65,
+              0.45385106265016156
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pushPrompt.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/pushPrompt-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pushPrompt.mp3",
+              "status": 200,
+              "bytes": 28460,
+              "sha256": "d5bfaf0706f8f3c51578bad65e69889fa997fadd074f31fb8278f5686682f5ac",
+              "duration": 0.82,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/pushPrompt-v0.mp3",
+              "status": 200,
+              "bytes": 28460,
+              "sha256": "0131b3abadc7c2e650dca1ae60e86e94754a0fdb66c8269b7ce25cc0fad2e9da",
+              "duration": 0.82,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-pushPress",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pushPress.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/pushPress-v0.mp3",
+            "volumes": [
+              0.48351879088991856,
+              0.65
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pushPress.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/pushPress-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pushPress.mp3",
+              "status": 200,
+              "bytes": 12332,
+              "sha256": "83a9a824425ae39408cd053b4fc19f2db6e85649d48e316048e39e18cdb708fb",
+              "duration": 0.32,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/pushPress-v0.mp3",
+              "status": 200,
+              "bytes": 12332,
+              "sha256": "f3943bb3f8f856345c78bc505517028e75969d843363b9f13fed560bf235452c",
+              "duration": 0.32,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": [
+            {
+              "id": "baseline",
+              "ended": true,
+              "currentTime": 0.32,
+              "duration": 0.32,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.48351879088991856,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.3805
+            },
+            {
+              "id": "candidate",
+              "ended": true,
+              "currentTime": 0.32,
+              "duration": 0.32,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.65,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.3975
+            }
+          ]
+        },
+        {
+          "id": "se-heroHit",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/heroHit.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/heroHit-v0.mp3",
+            "volumes": [
+              0.43945393400478805,
+              0.65
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/heroHit.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/heroHit-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/heroHit.mp3",
+              "status": 200,
+              "bytes": 25388,
+              "sha256": "533df29c61c2d097467f3aaa2f8b414e7d0d86af16aa8839d20f58c50cc5bebd",
+              "duration": 0.74,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/heroHit-v0.mp3",
+              "status": 200,
+              "bytes": 25388,
+              "sha256": "6c062ed9da25b725d55cc22499aefced48684a9b3d8a47818df5dbdc2e003ff0",
+              "duration": 0.74,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-decisiveHit",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/decisiveHit.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/decisiveHit-v0.mp3",
+            "volumes": [
+              0.5766514078246747,
+              0.65
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/decisiveHit.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/decisiveHit-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/decisiveHit.mp3",
+              "status": 200,
+              "bytes": 51500,
+              "sha256": "2fb4f583e6dea516559c77a25dd964d95c7ce41096dfb3e6604f6824aea76ac1",
+              "duration": 1.55,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/decisiveHit-v0.mp3",
+              "status": 200,
+              "bytes": 51500,
+              "sha256": "26c5d0c9f39504d65f0f0b9adc0a5526d5ed1753b753bdd66382634fa37f970b",
+              "duration": 1.55,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-revival",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/revival.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/revival-v0.mp3",
+            "volumes": [
+              0.40449518535995377,
+              0.65
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/revival.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/revival-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/revival.mp3",
+              "status": 200,
+              "bytes": 49964,
+              "sha256": "0dc225bb4c6721c83607081bf40af160a8ea351671811c27e28164f01a698944",
+              "duration": 1.5,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/revival-v0.mp3",
+              "status": 200,
+              "bytes": 49964,
+              "sha256": "24a8c3a27765def2660c2d62ba5fc1015fdbf10308e3e53967d2e25b43824d2e",
+              "duration": 1.5,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-bonusStart",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/bonusStart.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/bonusStart-v0.mp3",
+            "volumes": [
+              0.5412692518904065,
+              0.65
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/bonusStart.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/bonusStart-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/bonusStart.mp3",
+              "status": 200,
+              "bytes": 40748,
+              "sha256": "8e8c0b04e8a884654618172a20d252639dada39f84ce582f1f37725efd76c4ae",
+              "duration": 1.22,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/bonusStart-v0.mp3",
+              "status": 200,
+              "bytes": 85292,
+              "sha256": "674aee226d60875449de10f7a423e0e3bd6f7b5947da218f8f6312d8b2291b8f",
+              "duration": 2.6,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-rushStart",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/rushStart.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/rushStart-v0.mp3",
+            "volumes": [
+              0.65,
+              0.3867348918933371
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/rushStart.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/rushStart-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/rushStart.mp3",
+              "status": 200,
+              "bytes": 48428,
+              "sha256": "3f36f1b03b7c079b63580ab306b71dc5e0ac2c90e707872d85cd3ac593b36842",
+              "duration": 1.45,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/rushStart-v0.mp3",
+              "status": 200,
+              "bytes": 48428,
+              "sha256": "473955998fb08618ccdcfdf0eb636304a3b5531e81f5068d699c9acc42c22ff1",
+              "duration": 1.45,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-spin",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/spin.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/spin-v0.mp3",
+            "volumes": [
+              0.5680850451838828,
+              0.65
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/spin.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/spin-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/spin.mp3",
+              "status": 200,
+              "bytes": 8492,
+              "sha256": "c3eda122a2960b9a523549e2093cec776d9bdd08d0ca047309273bf66b598c18",
+              "duration": 0.21,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/spin-v0.mp3",
+              "status": 200,
+              "bytes": 10796,
+              "sha256": "90e3e88fb14b0198b30d4746400679f579b30ff2c816b5065eec1e2f98cdeeee",
+              "duration": 0.28002083333333333,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": [
+            {
+              "id": "baseline",
+              "ended": true,
+              "currentTime": 0.21,
+              "duration": 0.21,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.5680850451838828,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.275
+            },
+            {
+              "id": "candidate",
+              "ended": true,
+              "currentTime": 0.280021,
+              "duration": 0.280021,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.65,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.34479999999701977
+            }
+          ]
+        },
+        {
+          "id": "se-stopLeft",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopLeft.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopLeft-v0.mp3",
+            "volumes": [
+              0.65,
+              0.6207451809139332
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopLeft.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopLeft-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopLeft.mp3",
+              "status": 200,
+              "bytes": 8492,
+              "sha256": "90da58f3ec652f169a41d86e0bc6df3e483e645de8dd6b7641a9e700980b4437",
+              "duration": 0.21,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopLeft-v0.mp3",
+              "status": 200,
+              "bytes": 7724,
+              "sha256": "5dd19683b1da02b3d2975944012fcad493cec6d4bb367564d95f3338fd7a378d",
+              "duration": 0.18,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": [
+            {
+              "id": "baseline",
+              "ended": true,
+              "currentTime": 0.21,
+              "duration": 0.21,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.65,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.27409999999403956
+            },
+            {
+              "id": "candidate",
+              "ended": true,
+              "currentTime": 0.18,
+              "duration": 0.18,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.6207451809139332,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.23379999999701978
+            }
+          ]
+        },
+        {
+          "id": "se-stopRight",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopRight.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopRight-v0.mp3",
+            "volumes": [
+              0.65,
+              0.5860212394438719
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopRight.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopRight-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopRight.mp3",
+              "status": 200,
+              "bytes": 8492,
+              "sha256": "b62a6372b41addb03514649a20f316dc5a799afc9e398b6a92fba67cd05291e7",
+              "duration": 0.21,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopRight-v0.mp3",
+              "status": 200,
+              "bytes": 7724,
+              "sha256": "6acfa0d0b684ab541363d244cb6e0795e3e4bcd7253109d3d8fc8199caf0e779",
+              "duration": 0.18,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": [
+            {
+              "id": "baseline",
+              "ended": true,
+              "currentTime": 0.21,
+              "duration": 0.21,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.65,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.27129999999701976
+            },
+            {
+              "id": "candidate",
+              "ended": true,
+              "currentTime": 0.18,
+              "duration": 0.18,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.5860212394438719,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.23680000001192092
+            }
+          ]
+        },
+        {
+          "id": "se-stopCenter",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopCenter.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopCenter-v0.mp3",
+            "volumes": [
+              0.65,
+              0.5469068420693769
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopCenter.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopCenter-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopCenter.mp3",
+              "status": 200,
+              "bytes": 8492,
+              "sha256": "385f2eac1d5f6cb77859311d2600b4a0b9dc827203b0ea886de3b746b404046a",
+              "duration": 0.21,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopCenter-v0.mp3",
+              "status": 200,
+              "bytes": 9260,
+              "sha256": "4603b7a7fb95e01f569373cb696589f47ff3cceb573564a8d4c9136a897051e9",
+              "duration": 0.24,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": [
+            {
+              "id": "baseline",
+              "ended": true,
+              "currentTime": 0.21,
+              "duration": 0.21,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.65,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.272
+            },
+            {
+              "id": "candidate",
+              "ended": true,
+              "currentTime": 0.24,
+              "duration": 0.24,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.5469068420693769,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.2955999999940395
+            }
+          ]
+        },
+        {
+          "id": "se-admission",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/admission.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/admission-v0.mp3",
+            "volumes": [
+              0.65,
+              0.65
+            ],
+            "size": {
+              "inner": 1440,
+              "scroll": 1440
+            },
+            "audioBounds": [
+              {
+                "x": 227,
+                "right": 693
+              },
+              {
+                "x": 747,
+                "right": 1213
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/admission.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/admission-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/admission.mp3",
+              "status": 200,
+              "bytes": 6956,
+              "sha256": "e52590f68a197784414217c24b96ffdfd41a5e16755fe578bb26ce5a6c55344e",
+              "duration": 0.16,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/admission-v0.mp3",
+              "status": 200,
+              "bytes": 6956,
+              "sha256": "4ec8ecc9b3c87311436c6ae731e002849fad4f522b282c75938248e985994e8c",
+              "duration": 0.16,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": [
+            {
+              "id": "baseline",
+              "ended": true,
+              "currentTime": 0.16,
+              "duration": 0.16,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.65,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.21209999999403953
+            },
+            {
+              "id": "candidate",
+              "ended": true,
+              "currentTime": 0.16,
+              "duration": 0.16,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.65,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.2235
+            }
+          ]
+        }
+      ],
+      "controls": {
+        "switchPausesOther": true,
+        "stopResetsBoth": true,
+        "selectionStopsBoth": true,
+        "previewNotLoaded": true
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "results": [
+        {
+          "id": "music-normal",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/normal.mp3",
+            "volumes": [
+              0.5098158772732754,
+              0.65
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/normal.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+              "status": 200,
+              "bytes": 97580,
+              "sha256": "5998234edaf807f80884ebd81f1b6794f8073c773da00304b9e703aca5d7660b",
+              "duration": 3,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/normal.mp3",
+              "status": 200,
+              "bytes": 769580,
+              "sha256": "81ea7227446a7ba4911108267bf9ad22bdead550f5eef0cfd3961792af10edf0",
+              "duration": 24,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "music-battle",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/battle.mp3",
+            "volumes": [
+              0.3071944439839204,
+              0.65
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/battle.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+              "status": 200,
+              "bytes": 97580,
+              "sha256": "5998234edaf807f80884ebd81f1b6794f8073c773da00304b9e703aca5d7660b",
+              "duration": 3,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/battle.mp3",
+              "status": 200,
+              "bytes": 1729580,
+              "sha256": "5504a1660973ebf93057134a13a7b9b9915458631e6cc64994dfb57b2be810c3",
+              "duration": 54,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "music-bonus",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/bonus.mp3",
+            "volumes": [
+              0.44148236120116996,
+              0.65
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/bonus.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+              "status": 200,
+              "bytes": 97580,
+              "sha256": "5998234edaf807f80884ebd81f1b6794f8073c773da00304b9e703aca5d7660b",
+              "duration": 3,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/bonus.mp3",
+              "status": 200,
+              "bytes": 513836,
+              "sha256": "317b50204d3473437bbf3d1c4dfbbf3bbc7ff517057f7aada4fa58c8fd4204e2",
+              "duration": 16,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "music-rush",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/rush.mp3",
+            "volumes": [
+              0.446594486009251,
+              0.65
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/rush.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pad.mp3",
+              "status": 200,
+              "bytes": 97580,
+              "sha256": "5998234edaf807f80884ebd81f1b6794f8073c773da00304b9e703aca5d7660b",
+              "duration": 3,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/music/rush.mp3",
+              "status": 200,
+              "bytes": 428588,
+              "sha256": "c39022e63f311d96dcb5c25798c2fed9321c078e1e8f043bd628140fe77e95bf",
+              "duration": 13.333333333333334,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-development",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/development.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/development-v0.mp3",
+            "volumes": [
+              0.65,
+              0.4129651057036335
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/development.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/development-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/development.mp3",
+              "status": 200,
+              "bytes": 28460,
+              "sha256": "1c64f473796a80d927414f8a61f053e912400c08947163dcc91ecfc018288ef6",
+              "duration": 0.82,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/development-v0.mp3",
+              "status": 200,
+              "bytes": 39980,
+              "sha256": "5ab56d3187ecfd397943a55eaa3b6adf8f354952c349dbfbcf7b77ed8748775e",
+              "duration": 1.2,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-pushPrompt",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pushPrompt.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/pushPrompt-v0.mp3",
+            "volumes": [
+              0.65,
+              0.45385106265016156
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pushPrompt.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/pushPrompt-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pushPrompt.mp3",
+              "status": 200,
+              "bytes": 28460,
+              "sha256": "d5bfaf0706f8f3c51578bad65e69889fa997fadd074f31fb8278f5686682f5ac",
+              "duration": 0.82,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/pushPrompt-v0.mp3",
+              "status": 200,
+              "bytes": 28460,
+              "sha256": "0131b3abadc7c2e650dca1ae60e86e94754a0fdb66c8269b7ce25cc0fad2e9da",
+              "duration": 0.82,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-pushPress",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pushPress.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/pushPress-v0.mp3",
+            "volumes": [
+              0.48351879088991856,
+              0.65
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pushPress.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/pushPress-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/pushPress.mp3",
+              "status": 200,
+              "bytes": 12332,
+              "sha256": "83a9a824425ae39408cd053b4fc19f2db6e85649d48e316048e39e18cdb708fb",
+              "duration": 0.32,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/pushPress-v0.mp3",
+              "status": 200,
+              "bytes": 12332,
+              "sha256": "f3943bb3f8f856345c78bc505517028e75969d843363b9f13fed560bf235452c",
+              "duration": 0.32,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": [
+            {
+              "id": "baseline",
+              "ended": true,
+              "currentTime": 0.32,
+              "duration": 0.32,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.48351879088991856,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.3825
+            },
+            {
+              "id": "candidate",
+              "ended": true,
+              "currentTime": 0.32,
+              "duration": 0.32,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.65,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.40130000001192095
+            }
+          ]
+        },
+        {
+          "id": "se-heroHit",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/heroHit.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/heroHit-v0.mp3",
+            "volumes": [
+              0.43945393400478805,
+              0.65
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/heroHit.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/heroHit-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/heroHit.mp3",
+              "status": 200,
+              "bytes": 25388,
+              "sha256": "533df29c61c2d097467f3aaa2f8b414e7d0d86af16aa8839d20f58c50cc5bebd",
+              "duration": 0.74,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/heroHit-v0.mp3",
+              "status": 200,
+              "bytes": 25388,
+              "sha256": "6c062ed9da25b725d55cc22499aefced48684a9b3d8a47818df5dbdc2e003ff0",
+              "duration": 0.74,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-decisiveHit",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/decisiveHit.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/decisiveHit-v0.mp3",
+            "volumes": [
+              0.5766514078246747,
+              0.65
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/decisiveHit.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/decisiveHit-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/decisiveHit.mp3",
+              "status": 200,
+              "bytes": 51500,
+              "sha256": "2fb4f583e6dea516559c77a25dd964d95c7ce41096dfb3e6604f6824aea76ac1",
+              "duration": 1.55,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/decisiveHit-v0.mp3",
+              "status": 200,
+              "bytes": 51500,
+              "sha256": "26c5d0c9f39504d65f0f0b9adc0a5526d5ed1753b753bdd66382634fa37f970b",
+              "duration": 1.55,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-revival",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/revival.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/revival-v0.mp3",
+            "volumes": [
+              0.40449518535995377,
+              0.65
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/revival.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/revival-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/revival.mp3",
+              "status": 200,
+              "bytes": 49964,
+              "sha256": "0dc225bb4c6721c83607081bf40af160a8ea351671811c27e28164f01a698944",
+              "duration": 1.5,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/revival-v0.mp3",
+              "status": 200,
+              "bytes": 49964,
+              "sha256": "24a8c3a27765def2660c2d62ba5fc1015fdbf10308e3e53967d2e25b43824d2e",
+              "duration": 1.5,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-bonusStart",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/bonusStart.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/bonusStart-v0.mp3",
+            "volumes": [
+              0.5412692518904065,
+              0.65
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/bonusStart.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/bonusStart-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/bonusStart.mp3",
+              "status": 200,
+              "bytes": 40748,
+              "sha256": "8e8c0b04e8a884654618172a20d252639dada39f84ce582f1f37725efd76c4ae",
+              "duration": 1.22,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/bonusStart-v0.mp3",
+              "status": 200,
+              "bytes": 85292,
+              "sha256": "674aee226d60875449de10f7a423e0e3bd6f7b5947da218f8f6312d8b2291b8f",
+              "duration": 2.6,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-rushStart",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/rushStart.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/rushStart-v0.mp3",
+            "volumes": [
+              0.65,
+              0.3867348918933371
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/rushStart.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/rushStart-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/baseline/rushStart.mp3",
+              "status": 200,
+              "bytes": 48428,
+              "sha256": "3f36f1b03b7c079b63580ab306b71dc5e0ac2c90e707872d85cd3ac593b36842",
+              "duration": 1.45,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v1/se/rushStart-v0.mp3",
+              "status": 200,
+              "bytes": 48428,
+              "sha256": "473955998fb08618ccdcfdf0eb636304a3b5531e81f5068d699c9acc42c22ff1",
+              "duration": 1.45,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": []
+        },
+        {
+          "id": "se-spin",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/spin.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/spin-v0.mp3",
+            "volumes": [
+              0.5680850451838828,
+              0.65
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/spin.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/spin-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/spin.mp3",
+              "status": 200,
+              "bytes": 8492,
+              "sha256": "c3eda122a2960b9a523549e2093cec776d9bdd08d0ca047309273bf66b598c18",
+              "duration": 0.21,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/spin-v0.mp3",
+              "status": 200,
+              "bytes": 10796,
+              "sha256": "90e3e88fb14b0198b30d4746400679f579b30ff2c816b5065eec1e2f98cdeeee",
+              "duration": 0.28002083333333333,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": [
+            {
+              "id": "baseline",
+              "ended": true,
+              "currentTime": 0.21,
+              "duration": 0.21,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.5680850451838828,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.26729999999701975
+            },
+            {
+              "id": "candidate",
+              "ended": true,
+              "currentTime": 0.280021,
+              "duration": 0.280021,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.65,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.33979999999701976
+            }
+          ]
+        },
+        {
+          "id": "se-stopLeft",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopLeft.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopLeft-v0.mp3",
+            "volumes": [
+              0.65,
+              0.6207451809139332
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopLeft.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopLeft-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopLeft.mp3",
+              "status": 200,
+              "bytes": 8492,
+              "sha256": "90da58f3ec652f169a41d86e0bc6df3e483e645de8dd6b7641a9e700980b4437",
+              "duration": 0.21,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopLeft-v0.mp3",
+              "status": 200,
+              "bytes": 7724,
+              "sha256": "5dd19683b1da02b3d2975944012fcad493cec6d4bb367564d95f3338fd7a378d",
+              "duration": 0.18,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": [
+            {
+              "id": "baseline",
+              "ended": true,
+              "currentTime": 0.21,
+              "duration": 0.21,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.65,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.26779999999701976
+            },
+            {
+              "id": "candidate",
+              "ended": true,
+              "currentTime": 0.18,
+              "duration": 0.18,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.6207451809139332,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.235
+            }
+          ]
+        },
+        {
+          "id": "se-stopRight",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopRight.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopRight-v0.mp3",
+            "volumes": [
+              0.65,
+              0.5860212394438719
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopRight.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopRight-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopRight.mp3",
+              "status": 200,
+              "bytes": 8492,
+              "sha256": "b62a6372b41addb03514649a20f316dc5a799afc9e398b6a92fba67cd05291e7",
+              "duration": 0.21,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopRight-v0.mp3",
+              "status": 200,
+              "bytes": 7724,
+              "sha256": "6acfa0d0b684ab541363d244cb6e0795e3e4bcd7253109d3d8fc8199caf0e779",
+              "duration": 0.18,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": [
+            {
+              "id": "baseline",
+              "ended": true,
+              "currentTime": 0.21,
+              "duration": 0.21,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.65,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.2682000000029802
+            },
+            {
+              "id": "candidate",
+              "ended": true,
+              "currentTime": 0.18,
+              "duration": 0.18,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.5860212394438719,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.236
+            }
+          ]
+        },
+        {
+          "id": "se-stopCenter",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopCenter.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopCenter-v0.mp3",
+            "volumes": [
+              0.65,
+              0.5469068420693769
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopCenter.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopCenter-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/stopCenter.mp3",
+              "status": 200,
+              "bytes": 8492,
+              "sha256": "385f2eac1d5f6cb77859311d2600b4a0b9dc827203b0ea886de3b746b404046a",
+              "duration": 0.21,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/stopCenter-v0.mp3",
+              "status": 200,
+              "bytes": 9260,
+              "sha256": "4603b7a7fb95e01f569373cb696589f47ff3cceb573564a8d4c9136a897051e9",
+              "duration": 0.24,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": [
+            {
+              "id": "baseline",
+              "ended": true,
+              "currentTime": 0.21,
+              "duration": 0.21,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.65,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.2626000000089407
+            },
+            {
+              "id": "candidate",
+              "ended": true,
+              "currentTime": 0.24,
+              "duration": 0.24,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.5469068420693769,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.31490000000596047
+            }
+          ]
+        },
+        {
+          "id": "se-admission",
+          "selected": {
+            "baseline": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/admission.mp3",
+            "candidate": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/admission-v0.mp3",
+            "volumes": [
+              0.65,
+              0.65
+            ],
+            "size": {
+              "inner": 390,
+              "scroll": 390
+            },
+            "audioBounds": [
+              {
+                "x": 33,
+                "right": 357
+              },
+              {
+                "x": 33,
+                "right": 357
+              }
+            ],
+            "downloads": [
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/admission.mp3",
+                "hidden": false
+              },
+              {
+                "href": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/admission-v0.mp3",
+                "hidden": false
+              }
+            ]
+          },
+          "decoded": [
+            {
+              "id": "baseline",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/baseline/admission.mp3",
+              "status": 200,
+              "bytes": 6956,
+              "sha256": "e52590f68a197784414217c24b96ffdfd41a5e16755fe578bb26ce5a6c55344e",
+              "duration": 0.16,
+              "rate": 48000,
+              "channels": 2
+            },
+            {
+              "id": "candidate",
+              "url": "http://127.0.0.1:5449/reference-review/s9-20261018/audio-v2/se/admission-v0.mp3",
+              "status": 200,
+              "bytes": 6956,
+              "sha256": "4ec8ecc9b3c87311436c6ae731e002849fad4f522b282c75938248e985994e8c",
+              "duration": 0.16,
+              "rate": 48000,
+              "channels": 2
+            }
+          ],
+          "playback": [
+            {
+              "id": "baseline",
+              "ended": true,
+              "currentTime": 0.16,
+              "duration": 0.16,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.65,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.23140000000596048
+            },
+            {
+              "id": "candidate",
+              "ended": true,
+              "currentTime": 0.16,
+              "duration": 0.16,
+              "rate": 1,
+              "muted": false,
+              "volume": 0.65,
+              "error": null,
+              "seeks": 0,
+              "wallSeconds": 0.23179999999701978
+            }
+          ]
+        }
+      ],
+      "controls": {
+        "switchPausesOther": true,
+        "stopResetsBoth": true,
+        "selectionStopsBoth": true,
+        "previewNotLoaded": true
+      }
+    }
+  ],
+  "errors": [],
+  "browser": "155.0.8059.80",
+  "scope": "17 purposes, only2 players/v0, viewport bounds and gains, HTTP/hash/WebAudio decode both widths; natural playback recorded per item (new focus checks all5 additions and one retained effect on both widths). Admission baseline is intentional silence. Stop/switch/reset. Existing comparison iframe not loaded. No human listening claim."
+}

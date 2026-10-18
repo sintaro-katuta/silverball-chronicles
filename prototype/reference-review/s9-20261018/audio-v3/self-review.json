@@ -1,0 +1,50 @@
+{
+  "stage": "technical and authoring self-review; human listening pending",
+  "initial": {
+    "normalLUFS": -26.87,
+    "normalRMS": 0.0369803138,
+    "crestDB": 19.2701666,
+    "finding": "Drum transients dominated normalisation; melody/bass average too low."
+  },
+  "balanced": {
+    "normalLUFS": -22.35,
+    "normalRMS": 0.0604143232,
+    "crestDB": 15.0067801,
+    "masterPeak": 0.34,
+    "mixBeforeLUFS": -23.52,
+    "mixAfterLUFS": -24.66,
+    "change": "Rebalanced layers, not higher master peak. Match integrated loudness for comparison; runtime gain is a separate review."
+  },
+  "pitchStableWindow": {
+    "from": 0.12,
+    "to": 0.35,
+    "interpretation": "Separate body voice descriptive check; mixed signal may select common subharmonic/octave. No pitch quality score.",
+    "rows": [
+      {
+        "label": "before-body",
+        "wholeCoverage": 0.458955223880597,
+        "stableAcceptedFrames": 39,
+        "stableMedianHz": 262.67808342176556
+      },
+      {
+        "label": "after-body",
+        "wholeCoverage": 0.23880597014925373,
+        "stableAcceptedFrames": 40,
+        "stableMedianHz": 348.61367608735185
+      },
+      {
+        "label": "before-mix",
+        "wholeCoverage": 0.48507462686567165,
+        "stableAcceptedFrames": 0,
+        "stableMedianHz": null
+      },
+      {
+        "label": "after-mix",
+        "wholeCoverage": 0.4626865671641791,
+        "stableAcceptedFrames": 40,
+        "stableMedianHz": 348.61367608735185
+      }
+    ]
+  },
+  "humanListening": "not verified"
+}

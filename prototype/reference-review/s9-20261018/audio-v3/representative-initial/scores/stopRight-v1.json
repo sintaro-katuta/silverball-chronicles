@@ -1,0 +1,38 @@
+{
+  "version": "s9-effects-v3",
+  "name": "stopRight",
+  "variant": 1,
+  "duration": 0.18,
+  "level": 0.18,
+  "priority": 1,
+  "duckFor": 0,
+  "role": "右図柄停止の短い打点",
+  "kind": "s9-synth",
+  "style": "s9-v3-bright-additive",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.08,
+      "hz": 1167.6109156420875,
+      "endHz": 779.2869267317176,
+      "gain": 0.35,
+      "pan": 0.06
+    },
+    {
+      "at": 0.016,
+      "seconds": 0.11,
+      "hz": 583.8010300544146,
+      "endHz": 583.8010300544146,
+      "gain": 0.17,
+      "pan": 0
+    }
+  ],
+  "envelope": {
+    "attack": 0.0012,
+    "release": 0.016,
+    "decay": 1.5,
+    "voice": "lead",
+    "echo": false
+  },
+  "intent": "Bright finite-additive synth, articulated rises and decisive attack; no drums/bass in SE, no outcome or game RNG input."
+}

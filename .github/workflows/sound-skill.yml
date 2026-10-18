@@ -1,0 +1,62 @@
+{
+  "name": "Sound skill verification",
+  "on": {
+    "pull_request": {
+      "branches": [
+        "release/**",
+        "main"
+      ],
+      "paths": [
+        ".agents/skills/pachinko-sound-design/**",
+        "prototype/audio/skill-recovery-2026-10-16/**",
+        ".github/workflows/sound-skill.yml"
+      ]
+    }
+  },
+  "permissions": {
+    "contents": "read"
+  },
+  "jobs": {
+    "sound-skill": {
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 15,
+      "env": {
+        "OPENBLAS_NUM_THREADS": "1",
+        "PYTHONDONTWRITEBYTECODE": "1"
+      },
+      "steps": [
+        {
+          "uses": "actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "with": {
+            "persist-credentials": false
+          }
+        },
+        {
+          "uses": "actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1",
+          "with": {
+            "python-version": "3.12"
+          }
+        },
+        {
+          "name": "Install audio verification dependencies",
+          "run": "sudo apt-get update\nsudo apt-get install -y ffmpeg\npython -m pip install numpy scipy librosa matplotlib"
+        },
+        {
+          "name": "Render and verify the restored skill",
+          "run": "python prototype/audio/skill-recovery-2026-10-16/verify.py --out \"$RUNNER_TEMP/sound-skill-check\""
+        },
+        {
+          "name": "Publish numerical verification reports",
+          "if": "always()",
+          "uses": "actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "with": {
+            "name": "sound-skill-verification",
+            "path": "${{ runner.temp }}/sound-skill-check/validation.json\n${{ runner.temp }}/sound-skill-check/pulse/measurements.json\n${{ runner.temp }}/sound-skill-check/generic/measurements.json",
+            "if-no-files-found": "warn",
+            "retention-days": 14
+          }
+        }
+      ]
+    }
+  }
+}

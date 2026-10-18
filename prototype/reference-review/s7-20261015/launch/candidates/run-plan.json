@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "baselinePower": 0.2,
+  "candidatePowers": [
+    0.18,
+    0.19,
+    0.22
+  ],
+  "short": {
+    "phases": [
+      0
+    ],
+    "seconds": 120,
+    "drain": 45
+  },
+  "long": {
+    "phases": [
+      0.175,
+      0.35,
+      0.525
+    ],
+    "seconds": 300,
+    "drain": 45
+  },
+  "replayFPS": 30,
+  "aimRegions": {
+    "A": {
+      "xMin": 175,
+      "xMax": 235,
+      "yMin": 245,
+      "yMax": 315
+    },
+    "B": {
+      "xMin": 220,
+      "xMax": 290,
+      "yMin": 185,
+      "yMax": 265
+    }
+  },
+  "selection": "Valid counts/fixed production inputs; residual/stall excluded; LCD centre and returned ratio no worse than baseline. Strictly improve A-only inside-or-boundary/actual shots, B-only events from a stronger observed setting must be more frequent and its event-position medians right/up versus the A candidate; overlap is separate. Tie: lower median centre distance to A, then higher start/shot, then smaller change from0.20. Long requires start/shot no worse than control. PM aim review and decision, never automatic adoption.",
+  "scope": "A/B are uncalibrated photo-location comparison regions, not all-ball pass criteria. Legacy production board, original101, default radius/render scale, mouth20 and tray. Launch power only; no product adoption.",
+  "stage": "candidates",
+  "configs": [
+    {
+      "id": "power-0-18",
+      "label": "S7 production-board launch 0.18",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": []
+    },
+    {
+      "id": "power-0-19",
+      "label": "S7 production-board launch 0.19",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.19,
+      "moves": []
+    },
+    {
+      "id": "power-0-22",
+      "label": "S7 production-board launch 0.22",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.22,
+      "moves": []
+    }
+  ],
+  "window": {
+    "phases": [
+      0
+    ],
+    "seconds": 120,
+    "drain": 45
+  },
+  "pmPlanSHA": "d844d981e389215d32649aac154f317821e9fdeaf188e7b7556940c0966414bf",
+  "aimReviewed": "baseline",
+  "command": [
+    "/opt/homebrew/Cellar/node/26.11.0/bin/node",
+    "/private/tmp/silverball-s6-20261015/prototype/tools/s7-launch-comparison.mjs",
+    "--stage",
+    "candidates",
+    "--out",
+    "prototype/reference-review/s7-20261015/launch/candidates",
+    "--plan",
+    "docs/agile/S7_PLAN.md",
+    "--expected-source",
+    "c4cf43405254dc4c5b114fa39a6df8447ef14c5f35c201680b22a3782c3b5891",
+    "--baseline-dir",
+    "prototype/reference-review/s7-20261015/launch/baseline",
+    "--aim-reviewed",
+    "baseline"
+  ],
+  "decision": "No automatic adoption or progression; PM evaluates fixed aim/ranking and safety. Mechanical admissions are not lottery/session payout performance."
+}

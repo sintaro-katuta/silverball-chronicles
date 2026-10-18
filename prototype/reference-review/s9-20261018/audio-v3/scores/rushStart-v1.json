@@ -1,0 +1,78 @@
+{
+  "version": "s9-effects-v3",
+  "name": "rushStart",
+  "variant": 1,
+  "duration": 1.45,
+  "level": 0.35,
+  "priority": 3,
+  "duckFor": 0.3,
+  "role": "RUSH突入の加速する短い返し",
+  "kind": "s9-synth",
+  "style": "s9-v3-bright-additive",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.12,
+      "hz": 520.1120348606133,
+      "endHz": 520.1120348606133,
+      "gain": 0.29,
+      "pan": 0
+    },
+    {
+      "at": 0.15,
+      "seconds": 0.12,
+      "hz": 694.2649519186356,
+      "endHz": 694.2649519186356,
+      "gain": 0.29,
+      "pan": 0
+    },
+    {
+      "at": 0.3,
+      "seconds": 0.12,
+      "hz": 926.7315554826619,
+      "endHz": 926.7315554826619,
+      "gain": 0.29,
+      "pan": 0
+    },
+    {
+      "at": 0.45,
+      "seconds": 0.12,
+      "hz": 1167.6109156420875,
+      "endHz": 1167.6109156420875,
+      "gain": 0.29,
+      "pan": 0
+    },
+    {
+      "at": 0.62,
+      "seconds": 0.12,
+      "hz": 1388.5299038372711,
+      "endHz": 1388.5299038372711,
+      "gain": 0.29,
+      "pan": 0
+    },
+    {
+      "at": 0.84,
+      "seconds": 0.4,
+      "hz": 1853.4631109653237,
+      "endHz": 1853.4631109653237,
+      "gain": 0.29,
+      "pan": 0
+    },
+    {
+      "at": 0.84,
+      "seconds": 0.4,
+      "hz": 926.7315554826619,
+      "endHz": 926.7315554826619,
+      "gain": 0.14,
+      "pan": 0
+    }
+  ],
+  "envelope": {
+    "attack": 0.0012,
+    "release": 0.035,
+    "decay": 1,
+    "voice": "lead",
+    "echo": false
+  },
+  "intent": "Bright finite-additive synth, articulated rises and decisive attack; no drums/bass in SE, no outcome or game RNG input."
+}

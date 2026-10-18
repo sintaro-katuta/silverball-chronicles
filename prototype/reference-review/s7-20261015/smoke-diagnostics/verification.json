@@ -1,0 +1,43 @@
+{
+  "scope": "S7 implemented release.browser diagnostics. Loopback synthetic pages, not deployment or actual full game regression.",
+  "node": "v26.11.0",
+  "chromium": "153.0.8010.12",
+  "unitAndRelated": {
+    "tests": 103,
+    "pass": 103,
+    "fail": 0,
+    "skip": 0
+  },
+  "browserRoutes": [
+    "controlled failure original30s timeout+HTTP/console/body/HTML/PNG",
+    "unwritable output original30s timeout preserved",
+    "normal success both widths original assertions, stderr empty/no failure artifact"
+  ],
+  "additionalDirectChecks": [
+    "closed page captures fail independently",
+    "page/browser cleanup helper preserves original error object; cleanup-only failure rejects"
+  ],
+  "sources": [
+    {
+      "path": "prototype/tests/release.browser.mjs",
+      "size": 3007,
+      "sha256": "a6db5c48b3cdecb29202c7fa367734e19e37cd2ee6eb6fb0b23f60cfd5cd5eea"
+    },
+    {
+      "path": "prototype/tools/smoke-diagnostics.js",
+      "size": 2574,
+      "sha256": "4cc0e8b8a42c2debadbb942d9d5f75c2b5386d5bd078ac3ed2ab5d4dc0f17fb0"
+    },
+    {
+      "path": "prototype/tests/smoke-diagnostics.test.js",
+      "size": 2755,
+      "sha256": "b1db92060a0177e36fb1acf34ac9d519d08fe5df428681262bdb2c072e21568b"
+    },
+    {
+      "path": "prototype/tests/smoke-diagnostics.browser.mjs",
+      "size": 4517,
+      "sha256": "7bda94b5f9051352e957cd4b114aa8c0cc71227ab61e13e93fa0e5a5fb494623"
+    }
+  ],
+  "remaining": "Linux Node24/full CI and real game smoke on final candidate are separate; original public failure cause not fixed or claimed"
+}

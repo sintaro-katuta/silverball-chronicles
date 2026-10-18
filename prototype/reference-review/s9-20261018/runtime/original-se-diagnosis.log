@@ -1,0 +1,24 @@
+Fixture diagnostic 0 {"before":"{\"total\":0,\"queue\":[]}","after":"{\"total\":0,\"queue\":[]}","inFlight":1,"normalBefore":0,"normalAfter":0,"events":[]}
+Fixture diagnostic 1 {"before":"{\"total\":0,\"queue\":[]}","after":"{\"total\":0,\"queue\":[]}","inFlight":1,"normalBefore":0,"normalAfter":0,"events":[]}
+Fixture diagnostic 2 {"before":"{\"total\":0,\"queue\":[]}","after":"{\"total\":5,\"queue\":[]}","inFlight":1,"normalBefore":0,"normalAfter":1,"events":[{"sequence":1,"type":"prize","amount":5,"kind":"ordinary","ballId":1,"total":5},{"sequence":2,"type":"admission","kind":"ordinary","ballId":1,"drawAccepted":false}]}
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '{"total":5,"queue":[]}'
+- '{"total":0,"queue":[]}'
+            ^
+
+    at file:///private/tmp/silverball-s9-20261018/prototype/.cache/s9-se-diagnose.mjs:29:779 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '{"total":5,"queue":[]}',
+  expected: '{"total":0,"queue":[]}',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.11.0

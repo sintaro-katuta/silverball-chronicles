@@ -1,0 +1,21 @@
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ '{"total":5,"queue":[]}'
+- '{"total":0,"queue":[]}'
+            ^
+
+    at file:///private/tmp/silverball-s9-20261018/prototype/tests/original-se.browser.mjs:29:163 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '{"total":5,"queue":[]}',
+  expected: '{"total":0,"queue":[]}',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v26.11.0

@@ -1,0 +1,67 @@
+{
+  "selectionStatus": "0.18は初期の位置合わせ目的で限定採用。全条件の低下・一般入賞減も結果表で開示。",
+  "labels": [
+    "本編対照0.20",
+    "位置合わせ設定0.18（成績保証なし）"
+  ],
+  "clips": [
+    {
+      "id": "short-whole",
+      "start": 3,
+      "seconds": 6,
+      "view": "whole"
+    },
+    {
+      "id": "short-upper",
+      "start": 3,
+      "seconds": 6,
+      "view": "upper-left"
+    }
+  ],
+  "stills": [
+    {
+      "id": "short-fire-stop-120",
+      "time": 120,
+      "view": "whole"
+    },
+    {
+      "id": "short-drain-end-165",
+      "time": 165,
+      "view": "whole"
+    }
+  ],
+  "note": "Actual short phase0 record,6s excerpts at1x. Endpoint stills are separate; omitted interval is not continuous playback.",
+  "editorialCorrection": {
+    "status": "required-before-final-video; not yet applied",
+    "originalSelectionStatus": "0.18は初期の位置合わせ目的で限定採用。全条件の低下・一般入賞減も結果表で開示。",
+    "reason": "全条件の低下は不正確です。ヘソ率は3条件中2条件で低下し、一般入賞は合算41から33へ減少しました。",
+    "replacementText": "ヘソ率は2条件で低下・一般41→33／本編設定0.18・公開前",
+    "canvasSize": [
+      1280,
+      1080
+    ],
+    "replaceOnlyRect": {
+      "x": 24,
+      "y": 90,
+      "width": 1232,
+      "height": 32
+    },
+    "background": "#071421",
+    "textOrigin": {
+      "x": 28,
+      "baselineY": 111
+    },
+    "font": "21px sans-serif",
+    "preserve": "原クリップとそのSHA、selectionStatusは変更しません。最終編集の説明帯訂正として記録し、時刻行(y187)・盤面(y212以降)・計数を覆いません。",
+    "originalClips": [
+      {
+        "id": "short-whole",
+        "sha256": "a865c30631d0ec7577b885a6fd3c8e1f17d0477529ade93d6fb6b308221169a5"
+      },
+      {
+        "id": "short-upper",
+        "sha256": "85cb7cba2c6375fd47e9f0d59184aa553f241b53f1f66485e0f030d169119ebd"
+      }
+    ]
+  }
+}

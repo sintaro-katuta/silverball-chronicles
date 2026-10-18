@@ -1,0 +1,181 @@
+{
+  "rows": [
+    {
+      "file": "power-0-18-phase-0.json.gz",
+      "id": "power-0-18",
+      "phase": 0,
+      "shots": 196,
+      "start": 11,
+      "normal": 3,
+      "returned": 0,
+      "out": 182,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 46.33184523799426,
+      "countsValid": true,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "firstTurnRegions": {
+        "A": 17,
+        "B": 132
+      },
+      "firstContactRegions": {
+        "A": 42,
+        "B": 0
+      },
+      "firstPinIds": {
+        "27": 42,
+        "39": 51,
+        "48": 101,
+        "50": 1,
+        "52": 1
+      },
+      "unobservedFirstTurn": 0,
+      "unobservedFirstPinContact": 0,
+      "terminalReached": 12,
+      "firstDescendingZones": {
+        "left": 150,
+        "envelope": 19,
+        "right": 27,
+        "unobserved": 0
+      },
+      "wallMilliseconds": 11129.988125
+    },
+    {
+      "file": "power-0-19-phase-0.json.gz",
+      "id": "power-0-19",
+      "phase": 0,
+      "shots": 197,
+      "start": 17,
+      "normal": 4,
+      "returned": 0,
+      "out": 176,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 16.229761904736293,
+      "countsValid": true,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "firstTurnRegions": {
+        "A": 0,
+        "B": 197
+      },
+      "firstContactRegions": {
+        "A": 2,
+        "B": 0
+      },
+      "firstPinIds": {
+        "31": 2,
+        "33": 52,
+        "39": 62,
+        "48": 81
+      },
+      "unobservedFirstTurn": 0,
+      "unobservedFirstPinContact": 0,
+      "terminalReached": 23,
+      "firstDescendingZones": {
+        "left": 122,
+        "envelope": 27,
+        "right": 48,
+        "unobserved": 0
+      },
+      "wallMilliseconds": 12806.038250000001
+    },
+    {
+      "file": "power-0-22-phase-0.json.gz",
+      "id": "power-0-22",
+      "phase": 0,
+      "shots": 200,
+      "start": 8,
+      "normal": 6,
+      "returned": 0,
+      "out": 186,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 38.257142857122986,
+      "countsValid": true,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "firstTurnRegions": {
+        "A": 0,
+        "B": 200
+      },
+      "firstContactRegions": {
+        "A": 12,
+        "B": 0
+      },
+      "firstPinIds": {
+        "29": 3,
+        "30": 6,
+        "31": 3,
+        "33": 174,
+        "35": 1,
+        "48": 5,
+        "50": 3,
+        "54": 2,
+        "57": 3
+      },
+      "unobservedFirstTurn": 0,
+      "unobservedFirstPinContact": 0,
+      "terminalReached": 11,
+      "firstDescendingZones": {
+        "left": 157,
+        "envelope": 21,
+        "right": 22,
+        "unobserved": 0
+      },
+      "wallMilliseconds": 13001.973833000004
+    }
+  ],
+  "rawManifest": [
+    {
+      "file": "power-0-18-phase-0.json.gz",
+      "compressedSHA": "c9726aff12522789d101e03b63aca344cd5885bd1d34d627e14ba14116aaea81",
+      "compressedBytes": 1391654,
+      "expandedSHA": "87f545bab9cafd43a17fac4be0bf4c11160a39619edb1619b0bd8adf6b6bc975",
+      "expandedBytes": 7983337,
+      "sourceSHA": "c4cf43405254dc4c5b114fa39a6df8447ef14c5f35c201680b22a3782c3b5891",
+      "configSHA": "91c6c95671184a33d392b14ba749bbed14addfcc49efa0a3c07183bf854b769a",
+      "layoutSHA": "ef5ec8b503bc0d46ffd35a48b87c1f9d092891ed756a4f8375cb197f24c6e994",
+      "replayFPS": 30,
+      "frames": 4951
+    },
+    {
+      "file": "power-0-19-phase-0.json.gz",
+      "compressedSHA": "83feb5246df0c8fd6369134135a0817ec7610641245cc9f90d31ce4b3a950fe1",
+      "compressedBytes": 1477206,
+      "expandedSHA": "0fb41ec17d2c2d294d829adb93887bda7b0569bebdf2452c4b63b25bd0b094fd",
+      "expandedBytes": 8349105,
+      "sourceSHA": "c4cf43405254dc4c5b114fa39a6df8447ef14c5f35c201680b22a3782c3b5891",
+      "configSHA": "8fd0b7e226c3b4047277f3b67982bc247672e554ee31104d52b573b0c74b5c87",
+      "layoutSHA": "ef5ec8b503bc0d46ffd35a48b87c1f9d092891ed756a4f8375cb197f24c6e994",
+      "replayFPS": 30,
+      "frames": 4951
+    },
+    {
+      "file": "power-0-22-phase-0.json.gz",
+      "compressedSHA": "2c890a0dbd26ea03194a8d297aab112d33516537870e98d3c651f0069d98cf94",
+      "compressedBytes": 1449821,
+      "expandedSHA": "a9128c7f0a632ffcc9cbca0484027d1a42ca93ff8abc3061ff894cdd90daf5bd",
+      "expandedBytes": 8259538,
+      "sourceSHA": "c4cf43405254dc4c5b114fa39a6df8447ef14c5f35c201680b22a3782c3b5891",
+      "configSHA": "1912c3720381d422a66fe4295e90828d3fae66bc02c1451bec3d9e5fb57dd3ef",
+      "layoutSHA": "ef5ec8b503bc0d46ffd35a48b87c1f9d092891ed756a4f8375cb197f24c6e994",
+      "replayFPS": 30,
+      "frames": 4951
+    }
+  ],
+  "decision": "No automatic adoption or progression; PM evaluates fixed aim/ranking and safety. Mechanical admissions are not lottery/session payout performance."
+}

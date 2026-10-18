@@ -1,0 +1,35 @@
+{
+  "node": "v26.11.0",
+  "oracleCommit": "aecb5cf0c48e9b0210c92cc925659967fd55878e",
+  "oracleSHA": "fca98247e3a08a400aa14cd29c02293584fb841d16c2f80a1e0d8b2e1f5bc345",
+  "rows": [
+    {
+      "id": "legacy-control",
+      "fullJSONEventsReplayExact": true
+    },
+    {
+      "id": "three-base",
+      "fullJSONEventsReplayExact": true
+    }
+  ],
+  "historical": [
+    {
+      "path": "prototype/reference-review/s8-20261016/admission-lateral/phase0/legacy-control/result.json.gz",
+      "compressedSHA": "654c5ec498b4a2890cd7f06a4d73fc93bf5d8a0606abe89c6e35828ae7fafc94",
+      "historicalSource": "3f41130b73751bd21c035a1b69b5ee5ba93bf65151b19c0ead66a17e54c40ad8",
+      "shots": 250,
+      "start": 13,
+      "validatorPass": true,
+      "scope": "Historical bytes preserved, not assigned to new source."
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/admission-lateral/phase0/three-base/result.json.gz",
+      "compressedSHA": "fb0c4c56c6d5f802d3740d21dca9c1541fbb7e1c8e36161da02085d70d511548",
+      "historicalSource": "3f41130b73751bd21c035a1b69b5ee5ba93bf65151b19c0ead66a17e54c40ad8",
+      "shots": 250,
+      "start": 9,
+      "validatorPass": true,
+      "scope": "Historical bytes preserved, not assigned to new source."
+    }
+  ]
+}

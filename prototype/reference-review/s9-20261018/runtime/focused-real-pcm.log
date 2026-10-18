@@ -1,0 +1,37 @@
+✔ every original PCM arrangement is finite, bounded, non-silent and unique (1391.3745ms)
+✔ four-variant rotation never repeats a neighbor or consumes gameplay RNG (0.267875ms)
+✔ all stories, endings, prediction families and short routes reference authored sounds (0.373667ms)
+✔ revival shares ordinary defeat before comeback and confirmation waits for reveal (0.417584ms)
+✔ single-strike story emits one blade impact and has a silent release gap (0.075958ms)
+✔ frame repetition, mute, pause and seeking do not replay consumed events (0.319875ms)
+✔ reach confirmation is not replayed when the post-win zoom starts (0.088292ms)
+✔ RUSH revival entry remains quiet until its authored awakening (0.083333ms)
+✔ audio voices and buffer memory remain bounded; pause, mute and disposal release sources (1353.729584ms)
+✔ actual RUSH replenishment has a separate cue and reset cannot replay holds (0.130875ms)
+✔ PUSH prompt and actual press are separate once-only cues with no early confirmation (0.115875ms)
+✔ small cues cannot cut a confirmation when all six effect voices are occupied (112.705792ms)
+✔ important synth sounds retain priority and stereo tails (31.512ms)
+✔ battle and gather remain audible; pitch and energy rise throughout the long single-strike hold (0.808958ms)
+✔ win, loss and revival share the bed before their reveal; ordinary defeat is preserved (1.664541ms)
+✔ the final release stays silent, while ordinary play and post-win guide have a quiet bed (0.067541ms)
+✔ atmosphere PCM has no dropouts and remains within its support-layer budget (63.749ms)
+✔ only two bed sources exist; silence mutes them and pause/dispose stops and disconnects (29.841417ms)
+✔ music selection does not disclose stored win/revival; battle uses presentation clock and exact existing silence boundaries (2.139875ms)
+✔ lazy loading, game-clock pause/resume, PUSH/seek and silence resume at actual display offset without pad source (1.498541ms)
+✔ independent music mute/volume never reallocates buffers, transition voices and decoded cache are bounded (0.895334ms)
+✔ late async generation and worker replies cannot revive disposed player/session (1.205333ms)
+✔ audio settings independently persist through session recreation; corrupt/denied storage is safe (0.338958ms)
+✔ BONUS start is a once-only first-round opening cue and mute consumes it without replay (0.238875ms)
+✔ integrated buses keep SE/music independent, mute consumes cues, and disposal is idempotent without gameplay mutations (0.986834ms)
+✔ new BONUS/RUSH stings cannot evict playing win or rushWin signatures at the six-voice limit (0.178084ms)
+✔ a shared recognition rhythm keeps distinct sound arrangements for all four variants (277.965416ms)
+✔ the signature is used by win/RUSH win only, never ordinary contacts or losing reaches (0.402416ms)
+✔ the catalog uses the dedicated signature rather than a generic victory chord (58.988792ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2964.960166

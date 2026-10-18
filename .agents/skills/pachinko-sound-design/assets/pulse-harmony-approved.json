@@ -1,0 +1,146 @@
+{
+  "id": "moon-release",
+  "title": "月光開放・低いハーモニー版",
+  "role": "BONUS確定のオリジナル初稿",
+  "duration_s": 6.0,
+  "target_lufs": -20,
+  "true_peak_ceiling_dbfs": -2,
+  "synthesis": "custom renderer create.py; not generic render.py design schema",
+  "patch": {
+    "pulse_duty": 0.35,
+    "pulse_mix": 0.7,
+    "saw_mix": 0.3,
+    "harmonics": 19,
+    "band_hz": [
+      130,
+      6000
+    ],
+    "intrinsic_vibrato_hz": 5.7,
+    "intrinsic_vibrato_fraction": 0.0014,
+    "fm": false,
+    "detune": false,
+    "noise_layers": 0,
+    "common_space": "engine.space; same taps as C"
+  },
+  "events": [
+    {
+      "at_s": 0,
+      "duration_s": 0.12,
+      "pitch_hz": 622.254,
+      "gain": 0.32,
+      "attack_s": 0.003,
+      "release_s": 0.018,
+      "harmony_hz": 369.9945
+    },
+    {
+      "at_s": 0.17,
+      "duration_s": 0.15,
+      "pitch_hz": 739.989,
+      "gain": 0.35,
+      "attack_s": 0.003,
+      "release_s": 0.022,
+      "harmony_hz": 466.164
+    },
+    {
+      "at_s": 0.4,
+      "duration_s": 0.23,
+      "pitch_hz": 698.456,
+      "gain": 0.39,
+      "attack_s": 0.003,
+      "release_s": 0.03,
+      "harmony_hz": 415.3045
+    },
+    {
+      "at_s": 0.72,
+      "duration_s": 0.13,
+      "pitch_hz": 830.609,
+      "gain": 0.32,
+      "attack_s": 0.003,
+      "release_s": 0.02,
+      "harmony_hz": 493.8835
+    },
+    {
+      "at_s": 0.9,
+      "duration_s": 0.13,
+      "pitch_hz": 739.989,
+      "gain": 0.37,
+      "attack_s": 0.003,
+      "release_s": 0.028,
+      "harmony_hz": 466.164
+    },
+    {
+      "at_s": 1.045,
+      "duration_s": 0.07,
+      "pitch_hz": 830.609,
+      "gain": 0.38,
+      "attack_s": 0.003,
+      "release_s": 0.018,
+      "harmony_hz": 493.8835
+    },
+    {
+      "at_s": 1.14,
+      "duration_s": 0.34,
+      "pitch_hz": 932.328,
+      "gain": 0.4,
+      "attack_s": 0.003,
+      "release_s": 0.045,
+      "harmony_hz": 554.3655
+    },
+    {
+      "at_s": 1.65,
+      "duration_s": 0.18,
+      "pitch_hz": 830.609,
+      "gain": 0.37,
+      "attack_s": 0.003,
+      "release_s": 0.025,
+      "harmony_hz": 493.8835
+    },
+    {
+      "at_s": 1.855,
+      "duration_s": 0.09,
+      "pitch_hz": 739.989,
+      "gain": 0.37,
+      "attack_s": 0.003,
+      "release_s": 0.018,
+      "harmony_hz": 466.164
+    },
+    {
+      "at_s": 1.98,
+      "duration_s": 0.2,
+      "pitch_hz": 622.254,
+      "gain": 0.39,
+      "attack_s": 0.003,
+      "release_s": 0.028,
+      "harmony_hz": 369.9945
+    },
+    {
+      "at_s": 2.29,
+      "duration_s": 0.28,
+      "pitch_hz": 698.456,
+      "gain": 0.4,
+      "attack_s": 0.003,
+      "release_s": 0.045,
+      "harmony_hz": 415.3045
+    },
+    {
+      "at_s": 2.75,
+      "duration_s": 2.95,
+      "pitch_hz": 739.989,
+      "gain": 0.44,
+      "attack_s": 0.005,
+      "release_s": 0.48,
+      "vibrato_hz": 7.6,
+      "vibrato_cents": 8,
+      "vibrato_fade_in_s": 0.2,
+      "harmony_hz": 466.164
+    }
+  ],
+  "provenance": "Only synthesis architecture from C; all event timing, pitch sequence and long-note modulation newly designed. No reference audio, spectral coefficients or reference pitch file loaded.",
+  "revision": "Lower only harmony by one octave from positively receivedv8; lead, voice gains, patch, timing and modulation unchanged",
+  "voices": {
+    "lead_gain": 0.82,
+    "harmony_gain": 0.64,
+    "harmony_relation": "Same diatonic-third pitch class, one octave lower thanv8 (8 or9semitones below lead)",
+    "common_patch": true
+  }
+}

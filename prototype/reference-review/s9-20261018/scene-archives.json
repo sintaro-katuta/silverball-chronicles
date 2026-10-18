@@ -1,0 +1,176 @@
+{
+  "purpose": "Lossless archives keep detailed 100ms capture samples available without obscuring product changes in the PR. Original local JSON and media remain unchanged.",
+  "records": [
+    {
+      "source": "scene-before-v1/bonus.json",
+      "bytes": 254473,
+      "sha256": "dae1f308fd775b6ec9e2ad325de683a8ee6983153382e7e51730fd6b58592ae1",
+      "archive": "scene-before-v1/bonus.json.gz",
+      "archiveBytes": 7185,
+      "archiveSHA256": "595cb0af0ddb36c8780ffd07032a5b1c79b4b113b23dcff4a5280cfca9f2a3ae",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-before-v1/normal.json",
+      "bytes": 94358,
+      "sha256": "ef4f0886d519477574e08c5ec7caa10fe20a6c634fb74822a9645a4bfbab269a",
+      "archive": "scene-before-v1/normal.json.gz",
+      "archiveBytes": 4330,
+      "archiveSHA256": "66977adf0fb516725814949235f5a3a081425978c4580e96684f595abf9885a7",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-before-v1/pressure-loss.json",
+      "bytes": 640205,
+      "sha256": "7e87848f22b20eecdac82dd2e0bc84545e96e3d8ca9bfc4b697a62ebac5e3bd0",
+      "archive": "scene-before-v1/pressure-loss.json.gz",
+      "archiveBytes": 22802,
+      "archiveSHA256": "609d7df31056e0b2c8414f11db21049fe483da558c13fd1190f04d4e464f8041",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-before-v1/pressure-revival.json",
+      "bytes": 718443,
+      "sha256": "4f9054d4f7882568d7da8fabb4ebbefad549fc5d7ffb6b5d2e69e1998d2a4212",
+      "archive": "scene-before-v1/pressure-revival.json.gz",
+      "archiveBytes": 24991,
+      "archiveSHA256": "254d9915b7fa591723bfde3deae173d2440a16f4c4becc20c992430ac94e6574",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-before-v1/pressure-win.json",
+      "bytes": 636598,
+      "sha256": "13aa3a31a7f460bf4a3e21bfb6174ddd68da8ea583020ea660afe935b1ec7aa7",
+      "archive": "scene-before-v1/pressure-win.json.gz",
+      "archiveBytes": 23148,
+      "archiveSHA256": "1c3a5da23afd9512d0144da46e2d171324f87538618977cb0c3809c12209f9b4",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-before-v1/rush.json",
+      "bytes": 309661,
+      "sha256": "8970d51352e7809986b2cd6b984508ca75f09f21fb49b53b4a6eaddb11e056be",
+      "archive": "scene-before-v1/rush.json.gz",
+      "archiveBytes": 9091,
+      "archiveSHA256": "34070f40a694558872a3e4ed09d67f44058f08ef94e2158feac6fe3989bb4634",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-after-v1/bonus.json",
+      "bytes": 308664,
+      "sha256": "f7787c9756f85275ff1411c51f2da8b947c227bbf11c0c98ca87d32072c2cff1",
+      "archive": "scene-after-v1/bonus.json.gz",
+      "archiveBytes": 8678,
+      "archiveSHA256": "cc1670b99ae12a230b7cd6c495c2ea6b94e1b4ddee8337dec62ecfa23b32dc8a",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-after-v1/normal.json",
+      "bytes": 138341,
+      "sha256": "67ee1be1b5692582e64a801adbe6ce1b45437ad476ee50dfde49e255bf0ca715",
+      "archive": "scene-after-v1/normal.json.gz",
+      "archiveBytes": 5321,
+      "archiveSHA256": "de1f5e732c28ee7608d3adf89d367034f789cc5bd3576b653932ccf228f67472",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-after-v1/pressure-loss.json",
+      "bytes": 762974,
+      "sha256": "2ea1c2a9752d55d9069a4cc4eb69192a4c35efde17a19687e1c6f97e2ec297c6",
+      "archive": "scene-after-v1/pressure-loss.json.gz",
+      "archiveBytes": 18284,
+      "archiveSHA256": "33eb431b40220d355575355b52665ac074260d457ec9e99743b3fc7e431b3434",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-after-v1/pressure-revival.json",
+      "bytes": 854463,
+      "sha256": "63d07d143dea4be2ec81751b6c035ee69488703f379123a40bd952a14fafd402",
+      "archive": "scene-after-v1/pressure-revival.json.gz",
+      "archiveBytes": 19717,
+      "archiveSHA256": "aea8dfc8ab92bcf8f37250a4920ef1a20b5ff296c244f80e7686686429735533",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-after-v1/pressure-win.json",
+      "bytes": 764536,
+      "sha256": "4c5983f4c2f5a8a76b52c09b1f16013780a9d67b0b3ba31c072c62e06a61f81b",
+      "archive": "scene-after-v1/pressure-win.json.gz",
+      "archiveBytes": 18297,
+      "archiveSHA256": "d0bb59f86b9677bec575898faba963e47ef90aa702f485390e9050ee4862712d",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-after-v1/rush.json",
+      "bytes": 363904,
+      "sha256": "de2b9786e46e8a37a73ac7a3178f6e222b20fdf94ed74c5d358af5fb94d53dfd",
+      "archive": "scene-after-v1/rush.json.gz",
+      "archiveBytes": 9477,
+      "archiveSHA256": "fb91160c5504704c99630b1517c172eb8f7b77fb944f436f3821623cd3e39dca",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-after-v2/battle-experience.json",
+      "bytes": 1611320,
+      "sha256": "295d882dc509be4167fc84ee692b7d86994a57cfa5fef7ace5c63f86d2b6fcef",
+      "archive": "scene-after-v2/battle-experience.json.gz",
+      "archiveBytes": 26028,
+      "archiveSHA256": "a6e19483ec868ec6e97a29e99171dc74bd01d98d2d919cd4b64fec6f8e745a3f",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-after-v2/bonus.json",
+      "bytes": 339161,
+      "sha256": "6767073cb6442acf3430c0558896e3fa712372a07c4e4558375f05d8122c3b82",
+      "archive": "scene-after-v2/bonus.json.gz",
+      "archiveBytes": 9025,
+      "archiveSHA256": "2bf4303197bfa89e4112751f0ac67283055901b3bdaf92e479183df23f897d84",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-after-v2/normal.json",
+      "bytes": 165366,
+      "sha256": "3ce15cf216210973dfd74a8829e05d19b6003ac7a802ceee96be2d1d4d6f5edd",
+      "archive": "scene-after-v2/normal.json.gz",
+      "archiveBytes": 5685,
+      "archiveSHA256": "ecc3da303e74ae9830bbaba643d8691d24b9c311b3e4df571fa936737d9975c1",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-after-v2/pressure-loss.json",
+      "bytes": 841586,
+      "sha256": "c2b1687454e83ec091d6940f3b194538788a06668da8f6fe399870538cbeb1d2",
+      "archive": "scene-after-v2/pressure-loss.json.gz",
+      "archiveBytes": 18804,
+      "archiveSHA256": "13a5bae7e0a58564acdef7851384cbe3c98862e7d8c97bb668435aab5e65d789",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-after-v2/pressure-revival.json",
+      "bytes": 932075,
+      "sha256": "2893ad084f02fe9754802766b77b161d0f27b0afd40c591a57fd9e9d02ce8c88",
+      "archive": "scene-after-v2/pressure-revival.json.gz",
+      "archiveBytes": 20171,
+      "archiveSHA256": "899b25b573dcbc32e49702cfa46ea2e16bdf62824aaf9cb73d2ce82805389f34",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-after-v2/pressure-win.json",
+      "bytes": 824408,
+      "sha256": "545fdd17454d3337ae12b06617e1fcc886b1e464cb3308ebff1784ecdfbdb61b",
+      "archive": "scene-after-v2/pressure-win.json.gz",
+      "archiveBytes": 18675,
+      "archiveSHA256": "e8df05e118a2ff53152e1829b8e118dd7a04c29466ad01ab55a26dcc759eebf0",
+      "decompressedExact": true
+    },
+    {
+      "source": "scene-after-v2/rush.json",
+      "bytes": 396222,
+      "sha256": "7055f6c553e17d173299cd79cea28637861bc27a2e91376b68ac1dd1596c5177",
+      "archive": "scene-after-v2/rush.json.gz",
+      "archiveBytes": 9928,
+      "archiveSHA256": "f0e266a8f4854d1e5826f487be77b769fc48dc842514320bb475a9861f25b27f",
+      "decompressedExact": true
+    }
+  ]
+}

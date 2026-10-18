@@ -1,0 +1,17 @@
+Chrome: 153.0.8010.12
+Smoke failure directory unavailable: ENOTDIR: not a directory, mkdir '/dev/null/not-a-directory'
+Smoke failure diagnostic: {"viewport":{"width":390,"height":844},"navigation":{"status":200,"url":"http://127.0.0.1:52857/"},"finalURL":"http://127.0.0.1:52857/","originalError":"locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-kind=main]').first()\u001b[22m\n","errors":["404: http://127.0.0.1:52857/missing-resource"],"consoleErrors":["controlled console diagnostic","Failed to load resource: the server responded with a status of 404 (Not Found)"],"documentState":{"title":"Controlled missing selector","body":"Controlled failure body without the requested machine selector"},"diagnosticErrors":[],"htmlTruncated":false}
+node:internal/modules/run_main:111
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-kind=main]').first()[22m
+
+    at /private/tmp/silverball-s6-20261015/prototype/tests/release.browser.mjs:31:51 {
+  log: [ "  - waiting for locator('[data-kind=main]').first()" ],
+  name: 'TimeoutError'
+}
+
+Node.js v26.11.0

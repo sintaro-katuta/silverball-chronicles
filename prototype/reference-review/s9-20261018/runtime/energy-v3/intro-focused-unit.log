@@ -1,0 +1,25 @@
+✔ music selection does not disclose stored win/revival; battle uses presentation clock and exact existing silence boundaries (6.200334ms)
+✔ lazy loading, game-clock pause/resume, PUSH/seek and silence resume at actual display offset without pad source (3.530833ms)
+✔ independent music mute/volume never reallocates buffers, transition voices and decoded cache are bounded (1.153125ms)
+✔ late async generation and worker replies cannot revive disposed player/session (0.929083ms)
+✔ audio settings independently persist through session recreation; corrupt/denied storage is safe (0.343125ms)
+✔ BONUS start is a once-only first-round opening cue and mute consumes it without replay (0.248625ms)
+✔ integrated buses keep SE/music independent, mute consumes cues, and disposal is idempotent without gameplay mutations (2.738084ms)
+✔ new BONUS/RUSH stings cannot evict playing win or rushWin signatures at the six-voice limit (0.369834ms)
+✔ shared silence windows include53.3 and preserve exact half-open runtime boundaries, without exposing pre-result differences (0.150958ms)
+✔ BGM starts and seeks ramp from zero over6ms; mute/pause/silence remain immediate and do not change display position (0.716584ms)
+✔ normal playback warms only battle and enters a ready battle immediately at its first display offset (0.925584ms)
+✔ muted/paused normal music never prefetches; disposal during battle warm-up discards the late PCM (1.027375ms)
+✔ physical heso admission sounds once per ball even with full holds; other inlets and unavailable audio never backlog (0.5045ms)
+✔ reel lifecycle emits each stop once and direct presentation cannot duplicate the same draw spin (0.106291ms)
+✔ actual physical heso crossing with a full queue notifies once without changing admission, FIFO or prize accounting (33.561542ms)
+✔ intro music follows camera elapsed without advancing gameplay; natural/skip handoff and pause never reset the opening note (0.962459ms)
+✔ all experience intros use the same normal bed; battle keeps its actual absolute clock after intro and reduced motion adds no offset (0.16925ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 237.452375

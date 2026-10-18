@@ -1,0 +1,29 @@
+{
+  "commit": "7ba3312764ea8d6ffb0a1d1c90694d5e816ce374",
+  "sourceSHA": "65e3a032afef9bd51596f9aece2071e48992b3defc02fb04baf86513892867b2",
+  "planSHA": "6cb5ebc9e0c50d29242e4911c191e854bc97d9d1a336aece1f07874d7edaeb51",
+  "caseManifestSHA": "40722f644ad7f51c8129097c5b7cc1d501b2d46b0123f4eaf267c4d9ce90a021",
+  "uniqueInputs": 195,
+  "node": "v26.11.0",
+  "preflightCases": [
+    "legacy-control",
+    "three-base",
+    "three-road2-support050"
+  ],
+  "preflightAllSuccess": true,
+  "measurementStarted": false,
+  "tests": {
+    "passed": 30,
+    "log": "related-final.log",
+    "scope": "Six new direct profile checks plus existing24 related tests. Synthetic250 validates control only, not performance."
+  },
+  "compatibility": "compatibility-proof.json",
+  "assumedMMDisplacement": {
+    "logical": 0.5,
+    "assumedBallDiameterMM": 11,
+    "logicalBallDiameter": 3.6,
+    "mmEquivalent": 1.5277777777777777,
+    "note": "仮定球径による相当量、実機採寸ではない"
+  },
+  "formalTrials": 0
+}

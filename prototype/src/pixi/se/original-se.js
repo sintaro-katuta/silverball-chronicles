@@ -1,3 +1,4 @@
+import {S9_SE_CATALOG,synthesizeS9Se} from './s9-se.js';
 import {synthesizeSignature} from './signature-sound.js';
 import {SYNTH_TUNING,TAU,synthEnvelope as envelope,synthWave,stereoEcho} from './synth-wave.js';
 // Synth-only timbres. Catalog kind denotes the on-screen event role, not
@@ -42,14 +43,16 @@ const overrides={
  breakthrough:{kind:'blade',duration:1.2,frequency:523,level:.38}
 };
 const defaults={latch:[.21,.13],crystal:[1.30,.25],seal:[.82,.26],wind:[1.05,.18],impact:[.88,.29],ignition:[1.22,.28],resolve:[1.45,.30]};
-export const SE_CATALOG=Object.freeze(Object.fromEntries(Object.entries(families).flatMap(([kind,names])=>names.map((name,index)=>{
+const LEGACY_SE_CATALOG=Object.freeze(Object.fromEntries(Object.entries(families).flatMap(([kind,names])=>names.map((name,index)=>{
  const [duration,level]=defaults[kind];
  return [name,Object.freeze({kind,style:'synth-'+kind,index,duration,level,frequency:kind==='latch'?720+index*115:310+(index*83%520),priority:kind==='latch'?1:2,duckFor:.12,...overrides[name]})];
 }))));
+export const SE_CATALOG=Object.freeze({...LEGACY_SE_CATALOG,...Object.fromEntries(Object.entries(S9_SE_CATALOG).map(([name,spec])=>[name,Object.freeze({...spec,kind:LEGACY_SE_CATALOG[name]?.kind??'ignition'})]))});
 export const SE_VARIANTS=4;
 export function createVariantPicker(){const counts=new Map();return name=>{if(!SE_CATALOG[name])throw new RangeError('Unknown SE: '+name);const n=counts.get(name)??0;counts.set(name,n+1);return [0,2,1,3][n%4];};}
 export function synthesizeSe(name,variant=0,sampleRate=44100){
  const s=SE_CATALOG[name];if(!s||!Number.isInteger(variant)||variant<0||variant>3)throw new RangeError('Invalid SE');
+ if(Object.hasOwn(S9_SE_CATALOG,name))return synthesizeS9Se(name,variant,sampleRate);
  if(s.kind==='victory')return synthesizeSignature({mode:name,variant,sampleRate,duration:s.duration,level:s.level});
  const n=Math.ceil(s.duration*sampleRate),left=new Float32Array(n),right=new Float32Array(n);
  let phase=0;const detune=[1,.994,1.006,.998][variant]*SYNTH_TUNING.effectPitch,bright=[.62,.82,.49,.72][variant];

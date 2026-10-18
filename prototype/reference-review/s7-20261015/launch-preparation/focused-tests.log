@@ -1,0 +1,16 @@
+✔ S7 baseline keeps actual production factory pins, geometry and default sprite scale; settings only change power (3.487334ms)
+✔ observer ON/OFF keeps every replay coordinate, event, count and fixed physical input identical (1068.436959ms)
+✔ exact pin observer reports the actual collision, not another geometrically nearby pin; prediction ignored (0.265958ms)
+✔ observation failure restores prototype methods and temporary pin iteration (0.340709ms)
+✔ aim classes use actual radius and keep overlap separate; missing events are explicit (0.095125ms)
+✔ staged runner refuses measurement without frozen source, fresh baseline review or explicit long selection (0.17775ms)
+✔ A-only candidate can qualify without B samples when a stronger control establishes the B relation (2.7135ms)
+✔ unsafe counts, LCD, returns or changed physical inputs cannot become a launch selection (5.036583ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1147.831042

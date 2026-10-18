@@ -1,0 +1,37 @@
+{
+  "reviewedAt": "2026-10-15T15:15:53.956161+00:00",
+  "reviewer": "PM",
+  "decision": "Adopt production initial normalPower0.18 for aim-location alignment, pending new-product regression/video/PR review; not publication",
+  "trialCommit": "d61ee3065458e6dfe023c7c2f4b4a81f48d53a18",
+  "trialSourceSHA": "c4cf43405254dc4c5b114fa39a6df8447ef14c5f35c201680b22a3782c3b5891",
+  "independentAudit": "All10 short/long raw inputs: counts, geometry, frame times, manifest and frozen source matched; all6 held-out safety zeros",
+  "heldout": {
+    "control": {
+      "shots": 1490,
+      "start": 81,
+      "normal": 41,
+      "out": 1368,
+      "worstGap": 63.13452380974864,
+      "firstTurnAOnlyWithBoundary": 0
+    },
+    "candidate": {
+      "shots": 1468,
+      "start": 82,
+      "normal": 33,
+      "out": 1353,
+      "worstGap": 51.57991071417344,
+      "firstTurnAOnlyWithBoundary": 233
+    }
+  },
+  "basis": [
+    "Predeclared aggregate start/actual-shot non-degradation, safety and spatial relation are satisfied.",
+    "Actual first-turn distribution and image/position review separately support a lower-left shift.",
+    "New production code only passes the tested0.18 option; factory/physics/shapes remain unchanged."
+  ],
+  "limitations": [
+    "Two of3 held-out phases have lower start/shot rate; normal admissions decline; aggregate start rate difference is tiny, not proof of a probability improvement.",
+    "Most candidate turns remain B; not every-ball point matching.",
+    "Photo/mm uncalibrated; mixed aim fallback and unknown individual pair influence are preserved.",
+    "No production publication; new product behavior, regression, final CI and approved video are separate acceptance requirements."
+  ]
+}

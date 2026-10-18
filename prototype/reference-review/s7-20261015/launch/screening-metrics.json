@@ -1,0 +1,5001 @@
+{
+  "rows": [
+    {
+      "id": "baseline",
+      "power": 0.2,
+      "fixedValid": true,
+      "shots": 199,
+      "start": 7,
+      "normal": 5,
+      "returned": 0,
+      "out": 187,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 38.32738095230018,
+      "countsValid": true,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "firstTurnRegions": {
+        "A": 0,
+        "B": 199
+      },
+      "firstContactRegions": {
+        "A": 16,
+        "B": 0
+      },
+      "firstPinIds": {
+        "30": 10,
+        "31": 6,
+        "32": 1,
+        "33": 104,
+        "34": 1,
+        "35": 1,
+        "39": 48,
+        "41": 1,
+        "48": 26,
+        "49": 1
+      },
+      "unobservedFirstTurn": 0,
+      "unobservedFirstPinContact": 0,
+      "terminalReached": 14,
+      "firstDescendingZones": {
+        "left": 142,
+        "envelope": 28,
+        "right": 29,
+        "unobserved": 0
+      },
+      "medianEventX": 238.7072033531176,
+      "medianEventY": 224.1819872234509,
+      "aimClassifications": [
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 26.889305866047327
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.44368629333973
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.09484718081785
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 21.16304419813887
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 22.942175412994878
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.13679042435193
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.833570260547106
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.202201990879075
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.941758104124688
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.99026825466899
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 34.25556288373469
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 29.661869311155915
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.1731784528247
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.519641292894875
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 24.01523429788431
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 294.996681554755
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.303037723722916
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.967632243717603
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 32.44516621494688
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.663018310574216
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.24302838815834
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 31.061270591729908
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 34.28009561629035
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 267.4095593672639
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.84815783907061
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 27.709814542058975
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.5318165839143
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.58580126847655
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 21.84345162679188
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 22.424117330943222
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 26.059216276486595
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 36.61510098026544
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.032205363195544
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.801101664531416
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 31.93891708382893
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.07708414669384
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.766208724748253
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 32.27963561131248
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.004352572808102
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 34.36409720354996
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 30.225689017656894
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.30211662522714
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.17561096509944
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 23.83755200392096
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 21.52236780528487
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.280665065936326
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.20015966096612
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 25.6037936218762
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 37.58610977674352
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.766242575099227
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 32.3110206728641
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.0065635072321
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 36.71518913535323
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 26.139990221080605
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.7706732184481
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.37613566565079
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 21.769646639883543
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 294.9499367117007
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.281440530283405
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.090463069619005
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 25.280534903311292
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 37.5918727859914
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.69780447090045
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.7682208543182
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 32.3202310072356
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.0049547042384
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 34.34717709363553
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 30.245769186307747
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.4015968346357
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.16680136533544
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 23.929930349367513
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 21.50652915459703
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.282206581728545
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.097247590631984
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 25.270407956585792
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 37.59762791061824
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.700463568280725
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.768826678393452
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 32.329437052505696
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.002867739124667
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.26777454515304
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.7389931787206
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.1565593980148
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.49498818512376
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 23.444653845483664
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 22.702285158632623
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.773277846994446
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.0828421065988
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 27.24330670281194
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.78042058386298
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.55316268850254
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 30.847259565028484
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.058540912559863
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 37.448748927456535
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 25.39740271412145
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.731823410501473
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.31243863501549
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.022525530807645
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 24.504483155701138
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.08581435523072
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.127446808585887
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 30.647360584512917
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 33.771607930133605
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.927173251456622
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.94391477106842
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 27.823078417968667
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 267.5738436612643
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.56674537267122
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 268.14005299135954
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 268.70032138732284
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.55606628038401
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.967680436588154
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 32.24009919891898
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 267.9671924589197
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.11719386276468
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.80582204666706
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.87609487716095
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 34.78020166567599
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.988320507897754
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.026794316888186
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 29.314068743883304
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.1412580596785
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.543527183768504
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.536901674012825
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.894112254354415
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.247162711550935
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.302309099534337
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 26.290558444708118
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.54684354313133
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.978114084743538
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.65424681168338
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 32.52190676602545
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.582788646957624
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 22.604120271649045
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.8027948268989
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.314174424531593
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 27.74618207625489
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.805184266376614
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.93412031448986
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 30.948453841815486
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.83858318621765
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 33.673080186551395
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 29.775698479239598
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.11326475078727
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.1114251019751
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 24.483396507517234
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.16759634213487
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.290922606302935
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.47162571724147
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 25.182062594832946
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 37.13077662148359
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.4679527208843
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 31.346076571875713
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 32.451394767094214
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.695079991612943
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.700087811363574
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.675730332335206
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.46839519111094
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.155421958027226
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 21.08325525919832
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 267.70067993018347
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.659183802093253
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.848270411392548
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 24.471170189717796
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.210208396653826
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.570773476818488
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 31.158486865065925
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 34.42967559065586
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.99980903643541
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.930819957745484
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.2536856272867
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.93762725965617
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.66369623455768
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 23.56797427043122
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 22.57794841728803
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.809134633169506
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.331600232119442
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 27.815420886717458
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.60318953040189
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.89807104073359
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.67509384457253
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.76692146066252
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.01586261445675
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.174532768347262
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 29.7749380696081
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 265.7907677306768
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.074043473585505
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 24.604781692275473
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 21.013169331927855
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.292813965990945
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.32097914866705
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 33.96644538590533
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 37.12011849136174
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.451855033858607
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.66620350779806
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.925926844482287
+        }
+      ],
+      "A": 3,
+      "B": 141,
+      "overlap": 0,
+      "outside": 55,
+      "unobserved": 0,
+      "medianDistanceToA": 30.026794316888186,
+      "reasons": []
+    },
+    {
+      "id": "power-0-18",
+      "power": 0.18,
+      "fixedValid": true,
+      "shots": 196,
+      "start": 11,
+      "normal": 3,
+      "returned": 0,
+      "out": 182,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 46.33184523799426,
+      "countsValid": true,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "firstTurnRegions": {
+        "A": 17,
+        "B": 132
+      },
+      "firstContactRegions": {
+        "A": 42,
+        "B": 0
+      },
+      "firstPinIds": {
+        "27": 42,
+        "39": 51,
+        "48": 101,
+        "50": 1,
+        "52": 1
+      },
+      "unobservedFirstTurn": 0,
+      "unobservedFirstPinContact": 0,
+      "terminalReached": 12,
+      "firstDescendingZones": {
+        "left": 150,
+        "envelope": 19,
+        "right": 27,
+        "unobserved": 0
+      },
+      "medianEventX": 222.90863611823727,
+      "medianEventY": 238.06188612033262,
+      "aimClassifications": [
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.912584942166234
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "boundary",
+          "distanceToA": 4.25246811246285
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.417884945108696
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 6.865240800244351
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 7.0448623540768835
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.378893940010993
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "boundary",
+          "distanceToA": 4.100022053634575
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "boundary",
+          "distanceToA": 3.9938544388776336
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 6.82568254231478
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.412406033717076
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.229863165956829
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.708822620379717
+        },
+        {
+          "category": "overlap",
+          "A": "boundary",
+          "B": "boundary",
+          "distanceToA": 2.994436079716877
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.603357801196125
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 268.5680922679411
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.53870128958215
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.2776743588105
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.343615044034852
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.531426645029285
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.35759911318272
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 12.864634942284567
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.629774076913634
+        },
+        {
+          "category": "A",
+          "A": "boundary",
+          "B": "outside",
+          "distanceToA": 2.7736208563246123
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.31070337435034
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 12.447531045345329
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "boundary",
+          "distanceToA": 4.084391699174944
+        },
+        {
+          "category": "overlap",
+          "A": "boundary",
+          "B": "boundary",
+          "distanceToA": 3.390808792981943
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.950973279402238
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.879873689052772
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.738321536352075
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 12.513745436878196
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.7961512994255
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.042960509818954
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 294.8843600792052
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.332728157937083
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.425905477778905
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 11.69653511804978
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 267.5165886592995
+        },
+        {
+          "category": "A",
+          "A": "boundary",
+          "B": "outside",
+          "distanceToA": 2.772864383112335
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 15.642885936214043
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 12.426386428855324
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.3853163474091
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.912630836264466
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.554531827378241
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.264735109350458
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.344120033853073
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.897246972428036
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.265708999324342
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 5.699867467505726
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.921866964230446
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.751739334271242
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 6.918075070441716
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 6.5582696509519565
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "boundary",
+          "distanceToA": 5.385916012047119
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.725304701088977
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 7.082635249327268
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 6.823192620518171
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.426915282839342
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "boundary",
+          "distanceToA": 5.022153570723617
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 14.786191592609214
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.01285761936305
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.544480047265779
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.361476602976104
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 5.729435676391347
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.930175914208746
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.26085259264301
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 5.409602188038605
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.840813003376809
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.5310078196478
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.2852822784674
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 267.6399925274386
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.2650949733887
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.842814301295391
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.95172246243385
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.987731228715404
+        },
+        {
+          "category": "A",
+          "A": "boundary",
+          "B": "outside",
+          "distanceToA": 2.729590637776255
+        },
+        {
+          "category": "A",
+          "A": "boundary",
+          "B": "outside",
+          "distanceToA": 2.7727245954004047
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.06197506949627
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 11.666559531443227
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "overlap",
+          "A": "boundary",
+          "B": "boundary",
+          "distanceToA": 3.331961671611566
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.866438284920775
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.121544423131468
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "boundary",
+          "distanceToA": 5.887697659461651
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.262416057952553
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.866992822692794
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.5693818183236
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.771670710916112
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 15.81876280230125
+        },
+        {
+          "category": "A",
+          "A": "boundary",
+          "B": "outside",
+          "distanceToA": 2.6715807717758935
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 267.2183340165986
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 11.165374349197805
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.91568090971479
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 7.150513306484015
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 6.507381600911742
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.90702049211656
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 268.5892108634128
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.793657308420165
+        },
+        {
+          "category": "A",
+          "A": "boundary",
+          "B": "outside",
+          "distanceToA": 2.717754445872174
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 15.98977485672458
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.738261823037874
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.722278476788393
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.524598980411099
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 5.398889988425253
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.261372105359428
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.957825289782306
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.84778830371829
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 14.644538080192717
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 15.672573510488633
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.47399105550254
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 11.002381259330832
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "boundary",
+          "distanceToA": 4.195165152081245
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.400841220878714
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 6.307616622288776
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 6.958152688893051
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.57756342904827
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.32197187159511
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "boundary",
+          "distanceToA": 4.934714715831433
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.250308583621937
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 5.729020951999587
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.191914688068323
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.3788501940947
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.3048100353326
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.259185535950028
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "overlap",
+          "A": "boundary",
+          "B": "boundary",
+          "distanceToA": 3.3622886945441337
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.909867890576304
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.559889142468705
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.264625868577475
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.649999243698403
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.36214729722167
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.515884292758187
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.986623174693193
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.079217438158935
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 14.24041010817831
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.11558262690744
+        },
+        {
+          "category": "overlap",
+          "A": "boundary",
+          "B": "boundary",
+          "distanceToA": 3.179006010261844
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.64047417021777
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.55125872206054
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.288542255782595
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.019592694832056
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.94922371970722
+        },
+        {
+          "category": "A",
+          "A": "boundary",
+          "B": "outside",
+          "distanceToA": 2.7768061874235173
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 267.42018326466246
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 268.6682269471155
+        },
+        {
+          "category": "overlap",
+          "A": "boundary",
+          "B": "boundary",
+          "distanceToA": 3.11595830305032
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.851278846563417
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.181862768715575
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 5.035233178233966
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.266579459457887
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.543702002415955
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.68094824634248
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.20758660601285
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.735283034207058
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.235809385682614
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "boundary",
+          "distanceToA": 4.79371216506928
+        }
+      ],
+      "A": 49,
+      "B": 121,
+      "overlap": 6,
+      "outside": 20,
+      "unobserved": 0,
+      "medianDistanceToA": 9.557210484923473,
+      "reasons": [],
+      "strongerBReferences": [
+        "baseline",
+        "power-0-19",
+        "power-0-22"
+      ]
+    },
+    {
+      "id": "power-0-19",
+      "power": 0.19,
+      "fixedValid": true,
+      "shots": 197,
+      "start": 17,
+      "normal": 4,
+      "returned": 0,
+      "out": 176,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 16.229761904736293,
+      "countsValid": true,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "firstTurnRegions": {
+        "A": 0,
+        "B": 197
+      },
+      "firstContactRegions": {
+        "A": 2,
+        "B": 0
+      },
+      "firstPinIds": {
+        "31": 2,
+        "33": 52,
+        "39": 62,
+        "48": 81
+      },
+      "unobservedFirstTurn": 0,
+      "unobservedFirstPinContact": 0,
+      "terminalReached": 23,
+      "firstDescendingZones": {
+        "left": 122,
+        "envelope": 27,
+        "right": 48,
+        "unobserved": 0
+      },
+      "medianEventX": 232.17041478536544,
+      "medianEventY": 229.31482806059745,
+      "aimClassifications": [
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.8677576044704
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 11.30668694749852
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.66356312084453
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.022800706811267
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 14.253801242090901
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.49669080696126
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.931321556507669
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.28489638209537
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 25.29236697858154
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.84168011125751
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.623891305205234
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.589891493963023
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 27.29800332281674
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.882890114564077
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.99134981970434
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 26.555724638951492
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.809306879492613
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 12.104933137170121
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.8757189277588
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 26.209865513008936
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.0611663595163
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 21.507577635513485
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 22.226460773119758
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.39190212411853
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 26.350258158029472
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.995552137719397
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 12.154849287603838
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 31.218837397344828
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 14.112313963576753
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 15.763064963534589
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 27.734046880698205
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.540032684357527
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 12.437373261915411
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.71633883752247
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 26.633397464073006
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 267.4316221504301
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.547494805226052
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.227683769989945
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 11.266975022346458
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.85950522958136
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 25.26262451254
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.31062297353742
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 23.078366489197247
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 21.51137664585949
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.189927955565054
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 27.81070456931587
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 15.68517193940255
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 12.128147112396107
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.85434714246543
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.328911485014032
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 15.685676089255935
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 32.793645011960734
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.19025812728404
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 21.743440247991746
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 23.07394792321688
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.310492274429805
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 25.265311921089324
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.85901769792815
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 268.1583429649882
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 32.08500098792456
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.0319478173702
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 14.144990134385353
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.741873775918776
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 11.415464769429263
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.841450098178584
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 25.338199966077276
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.22826042032574
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 24.0564329343665
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.10239291573845
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.009046281351232
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.984761159682193
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 22.484959215624638
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 23.592099987596608
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.541558727228619
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 26.443647210019115
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.585835098251437
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 11.78206486650663
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.690988337329088
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 14.39496737171686
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.276749962259032
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 12.944127009818885
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.84961055465191
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 12.836704617537691
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.657012901826647
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.670316248769154
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.813759277196105
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 12.137255113317622
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.7897422078955
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 267.5857422418409
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.62723973634206
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.0660296227412
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.49635857422184
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 15.688300368074295
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.0379246587788
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.66375270150854
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 11.307570160512228
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 18.868234754540367
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 26.02650337478609
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.377640697657796
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 22.895515329401075
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 22.238088409153914
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.1688261030558
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 32.87266539854829
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.93771637252422
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.50473071370067
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.844761678677642
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 12.907323474091868
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.725413414856632
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 22.444955736768396
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 22.229542391014533
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.00795012847891
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 26.24502540981293
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.440335578886206
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 12.134106698005496
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.24333541815122
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.04639671820064
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 267.6366755539653
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 27.407230170038616
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.40812958878814
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.92286001896906
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 23.888525159399343
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.879257646821827
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 25.441700979560714
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 267.95333019942643
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.0172806112403
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.554660227510723
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 268.0628429488468
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.89660661453729
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.942028518538045
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 11.218459545491555
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.858964928815844
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 26.190356445793565
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.348769170249568
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 22.7747878861562
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 21.793832289561447
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.25908117999478
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.738283136788596
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 15.019067336735361
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 27.441561570988107
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.317100418671941
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.74767786993778
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 24.551866986564388
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.875268218870701
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 25.788180613407278
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.321575106643163
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.08752459730266
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.528112083682377
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 15.716539620869469
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.94182872062288
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.59590796784041
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 11.381190719570498
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.64590219310914
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 33.07961352068446
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.361762186166516
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 22.979013243830995
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.929003982469013
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.3292694261982
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.91802593931152
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.591620786180943
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.9315032194527
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 8.87037936425179
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 24.485955788541492
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.049253259700677
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.368636423294163
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 27.55734287421069
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 268.07315659964496
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 13.707508762343934
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.792872729788083
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.37946065150624
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 17.518077663501856
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 268.1074753159841
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 22.208251264416404
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 9.013893237591219
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 32.36393633014052
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 16.41886110505433
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.1115453437286
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.815217393359237
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 12.972742626551792
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.95122156308736
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.77447814315292
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.048897894693766
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.94499440603752
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 24.43008304579874
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.3220199464329
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 266.95810915521895
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 19.366352223246526
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 11.030301467661559
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 28.562128634377775
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 14.608392826179113
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 27.805921377167813
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.223275954005942
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 20.57715580075876
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 23.32896074023663
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.32408622396406
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 15.778630950541356
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 27.71550764569449
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 10.516272259835944
+        }
+      ],
+      "A": 0,
+      "B": 161,
+      "overlap": 0,
+      "outside": 36,
+      "unobserved": 0,
+      "medianDistanceToA": 21.51137664585949,
+      "reasons": [
+        "A-only ratio not improved",
+        "B relation with a stronger setting not established"
+      ],
+      "strongerBReferences": []
+    },
+    {
+      "id": "power-0-22",
+      "power": 0.22,
+      "fixedValid": true,
+      "shots": 200,
+      "start": 8,
+      "normal": 6,
+      "returned": 0,
+      "out": 186,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 38.257142857122986,
+      "countsValid": true,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "firstTurnRegions": {
+        "A": 0,
+        "B": 200
+      },
+      "firstContactRegions": {
+        "A": 12,
+        "B": 0
+      },
+      "firstPinIds": {
+        "29": 3,
+        "30": 6,
+        "31": 3,
+        "33": 174,
+        "35": 1,
+        "48": 5,
+        "50": 3,
+        "54": 2,
+        "57": 3
+      },
+      "unobservedFirstTurn": 0,
+      "unobservedFirstPinContact": 0,
+      "terminalReached": 11,
+      "firstDescendingZones": {
+        "left": 157,
+        "envelope": 21,
+        "right": 22,
+        "unobserved": 0
+      },
+      "medianEventX": 256.22122630653905,
+      "medianEventY": 211.05267090003736,
+      "aimClassifications": [
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 48.379982644749795
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.27944866718584
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.673610200640375
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 41.77837384225044
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 43.34311898627171
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.433608991618335
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 37.59749337452962
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 50.09126415978443
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 295.09381582294304
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.93522623013996
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 317.038058734528
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.62669699628725
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.21904480644888
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 52.343979605767025
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.963896852478797
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.06687475010726
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 58.110794663842434
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.500012809216855
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.11200618615516
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.523655186815446
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 42.42571502207735
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 42.89420160410497
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.1696262449752
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 48.74384819156949
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.658351883510704
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.744769950867685
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 42.281119457529975
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 42.89344578931431
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.01110854768965
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 37.12372200234858
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 49.43994214033792
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 57.83748032983517
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.02601314784348
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 55.9481261689615
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.849167062707238
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 36.04746980878144
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 60.152674982374855
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.500143302225183
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 40.68790570116134
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.651748207238597
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.36532285038316
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.113013768357064
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 62.124567844925735
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.73263125734487
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.508257972198066
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.25170119397416
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 37.37084837243511
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 50.38747552365432
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.512166517353876
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 34.98341577678389
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.516567156426504
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.5105373471539
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 36.78311021570724
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 60.61449768113772
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.522982363346728
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 41.224460520563355
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.76220386339253
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.95724761234525
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 47.99412262387645
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 59.082687889840315
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.57735794727254
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 54.316069638918314
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.610683435305873
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 36.246099632427075
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 59.0251508746226
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.817840241520685
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.10238226069681
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.653909032681554
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 40.77978954527006
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 44.771330240965824
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 60.02358741369719
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.81237804334694
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 51.77026466614877
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.504015134607698
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.000250272635654
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.227596943401863
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 56.667878880824496
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 34.9835663309692
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 56.88416818395417
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 50.849554089598655
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 36.77296821258136
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 60.60679602096966
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.52340431790401
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 41.216151245397484
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 31.359655970583958
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.46810489298852
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 47.972978743092554
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 59.09538838561431
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.582201344101826
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 54.29715723535668
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.623118460465093
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 36.24029607731126
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 59.01330403719571
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 30.118244942102592
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.56323564976617
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 62.08353188279817
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 40.79716237751363
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 44.75098195510975
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.581201685777046
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 36.70274775635496
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 51.7496797357146
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.706474988508603
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 34.99913265253478
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 57.58393539380622
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 50.07239519366814
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 37.66976260203733
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.481819760600374
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 43.491739008646505
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 42.58724632763146
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.66825413215953
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.643278905145394
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 48.251380167484776
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 58.39399517518103
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.938677545562854
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 54.6663821567848
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.51145727079404
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 36.491116036438186
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 59.54729317611916
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 58.02797036609946
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.904025749215386
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 55.56230888026067
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.581351045061183
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.78404334072118
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 59.84571495165774
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.5067444487064
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.79307295844788
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 62.12402674641424
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.53018241170389
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 45.83405202140194
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 60.258317694999754
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.87733857626685
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 52.722614230223
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.519207285606626
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 36.30758734362544
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 53.571154856143345
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 54.308644847743544
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.851676357190513
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.54699471336437
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 47.976593048033145
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.019749483339126
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.76335243208234
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 41.71997141281892
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 44.18499025385191
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.27759486347026
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 37.407586359604935
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 50.31489277382163
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.50122927937184
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 34.98410842760921
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 57.10419952313351
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 50.90116739389099
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 36.74775936276385
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 60.58738692745883
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.500320434702417
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 41.17158394882318
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 31.34610415642817
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 40.019350390991555
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 45.85960923439589
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 60.26842144705758
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.885130695050556
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 52.7024969776862
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 55.66407111304491
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.27123809980337
+        },
+        {
+          "category": "A",
+          "A": "inside",
+          "B": "outside",
+          "distanceToA": 0
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.513281157939332
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.175969252925675
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.54943949645363
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 42.32904617009955
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 42.77799723166275
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.03981424866794
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.687253068132577
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.514999597604515
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.522797594091344
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.03548255932557
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 55.85164927966201
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.505035938853098
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.5055830348482
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 60.14816938010316
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.52451036619084
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 40.60322432811257
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.65115356137119
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 39.74117193130353
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 46.84992556433271
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 60.13190877680081
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 36.42190953244585
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 319.07343150707766
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.506042969950386
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 35.795546387816024
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 58.44565899578896
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 48.096609326594475
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 38.11356724967336
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.68725526510801
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 41.71228385601131
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 43.69422186821797
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 61.37255898306459
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 37.557879537345706
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 50.51714509808502
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.504840855104817
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 34.9900760771355
+        },
+        {
+          "category": "B",
+          "A": "outside",
+          "B": "inside",
+          "distanceToA": 56.23469487265179
+        },
+        {
+          "category": "outside",
+          "A": "outside",
+          "B": "outside",
+          "distanceToA": 29.51442828001393
+        }
+      ],
+      "A": 1,
+      "B": 146,
+      "overlap": 0,
+      "outside": 53,
+      "unobserved": 0,
+      "medianDistanceToA": 40.64556501463696,
+      "reasons": [
+        "A-only ratio not improved",
+        "B relation with a stronger setting not established"
+      ],
+      "strongerBReferences": []
+    }
+  ],
+  "selected": "power-0-18",
+  "decision": "Screening output only; fixed-layout/source review and PM decision required before any long stage or product change. Overlap kept separate, not counted twice.",
+  "reviewStatus": "mechanical output only; PM image/trajectory acceptance pending",
+  "caution": "aimEvent uses conservative free-apex recognition with later-pin fallback after system-wide pair changes. Not a first-flight arrival rate."
+}

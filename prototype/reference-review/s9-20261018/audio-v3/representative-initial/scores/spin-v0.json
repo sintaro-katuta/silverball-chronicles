@@ -1,0 +1,46 @@
+{
+  "version": "s9-effects-v3",
+  "name": "spin",
+  "variant": 0,
+  "duration": 0.28,
+  "level": 0.13,
+  "priority": 1,
+  "duckFor": 0,
+  "role": "図柄回転開始の小さな連続感",
+  "kind": "s9-synth",
+  "style": "s9-v3-bright-additive",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.075,
+      "hz": 466.16275426693255,
+      "endHz": 493.8807916356443,
+      "gain": 0.24,
+      "pan": 0
+    },
+    {
+      "at": 0.075,
+      "seconds": 0.075,
+      "hz": 698.4556860348446,
+      "endHz": 739.9858611264765,
+      "gain": 0.24,
+      "pan": 0
+    },
+    {
+      "at": 0.15,
+      "seconds": 0.075,
+      "hz": 932.3255085338651,
+      "endHz": 987.7615832712886,
+      "gain": 0.24,
+      "pan": 0
+    }
+  ],
+  "envelope": {
+    "attack": 0.0012,
+    "release": 0.016,
+    "decay": 1.5,
+    "voice": "lead",
+    "echo": false
+  },
+  "intent": "Bright finite-additive synth, articulated rises and decisive attack; no drums/bass in SE, no outcome or game RNG input."
+}

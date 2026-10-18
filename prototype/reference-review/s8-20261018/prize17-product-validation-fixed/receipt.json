@@ -1,0 +1,26 @@
+{
+  "sourceUnchanged": true,
+  "gitUnchanged": true,
+  "gitHEAD": "e11c1730eceeccc77bd7e6cce6b15450d8773b68",
+  "srcFiles": 202,
+  "srcInventorySHA": "5ff08809b2b3a7bfb653056d72ffb63f1ffb9dc6080920e9393397a6e401ac4d",
+  "unit": {
+    "sessionID": 27852,
+    "exitCode": 0,
+    "command": "npm --prefix prototype test",
+    "tests": 680,
+    "passCount": 680,
+    "failCount": 0,
+    "durationMS": 264593.189083,
+    "log": "unit.log"
+  },
+  "build": {
+    "sessionID": null,
+    "completedInInitialCall": true,
+    "toolChunkID": "73f101",
+    "exitCode": 0,
+    "command": "npm --prefix prototype run build:release",
+    "log": "build.log"
+  },
+  "scope": "Fixed product app-profile source; original failed validation retained separately; old750 measurement source not relabeled. No source edits/independent browser/trials/Git/cloud operations."
+}

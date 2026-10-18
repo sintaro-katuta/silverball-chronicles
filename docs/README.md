@@ -1,11 +1,20 @@
 # プロジェクト資料
 
+- [S9：BGM・効果音の承認済み計画](agile/S9_PLAN.md)・[受入と未確認](agile/S9_ACCEPTANCE.md)
+
+- [Sprint 7比較結果](agile/S7_RESULTS.md)：全条件、不利な結果と限定採用。
+- [Sprint 7計画](agile/S7_PLAN.md)：左打ちの発射比較と公開後確認の診断。
+- [Sprint 7の失敗診断](agile/S7_DIAGNOSTICS.md)：保存内容、検証と調査手順。
+- [Sprint 7受入台帳](agile/S7_ACCEPTANCE.md)：条件別の証拠・判定・残件。
+- [Sprint 7の位置図と映像設計](agile/S7_VISUAL_DESIGN.md)。
+
 - [Sprint 5のレビュー済み集約](agile/S5_REVIEWED_INTEGRATION_2026-10-14.md)
 
 仕様書、設計・移行資料、参考機種の調査、レビュー文書、動画の文字起こしをこのディレクトリにまとめています。元のプロジェクト階層を保ち、文書から実装や検証素材へリンクしています。
 
 ## 主な入口
 
+- [効果音制作スキルの復旧と設計手順](prototype/PACHINKO_SOUND_SKILL_RECOVERY_2026-10-16.md)：合成・解析・試聴の手順、回収したコード、再生成の検証結果。
 - [GitHub Issue全件整理（2026-10-19）](agile/ISSUE_AUDIT_2026-10-19.md)：完了・分割・重複の判定、移管先と作業順。
 
 - [個人開発紹介：クローン後にブラウザだけで発表](presentations/marp/README.md)：表示用HTML・画像・動画を同梱。Marpのインストール不要。
@@ -355,3 +364,71 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [釘の参照記事と現在配置の対応](agile/PIN_REFERENCE_NOTE_2026-10-15.md)：6画像の読み方、釘の部位と番号、次の比較に使う仮説。
 - [S6追加：参照記事からの3案比較](agile/S6_REFERENCE_ADJUSTMENT_PLAN.md)：同スプリント追加承認、2対照と3案・経路観測・選別と終了規則。
 - [S6追加3案の結果](agile/S6_REFERENCE_RESULTS.md)：記事由来の寄り・道末端・ジャンプ相当の実装と全5試射、新3案不採用と理由。
+
+
+- [S8：釘の微調整の実行計画](agile/S8_PLAN.md)：狙いを維持した最大3独立案と有限比較の条件。
+- [S8：比較結果と採否](agile/S8_RESULTS.md)：各196発の全結果、不実行1案、長比較なし・現配置維持。
+- [S8：受入記録](agile/S8_ACCEPTANCE.md)：条件別の証拠と未確認事項。
+- [S8：実プレイ比較の設計](agile/S8_VISUAL_DESIGN.md)：同時刻・同倍率の実軌跡と媒体の検証範囲。
+
+- [S8：実250発の目標と都度報告](agile/S8_250_PLAN.md)：3条件750発で60ヘソ以上を目指す承認済み条件。
+- [S8：実250発の独立照合](agile/S8_250_AUDIT.md)：各組の全計数・固定条件・失敗と採否。
+- 実250発の全結果：[第1組](agile/S8_250_RESULTS.md)・[第2組](agile/S8_250_BATCH2_RESULTS.md)・[第3組](agile/S8_250_BATCH3_RESULTS.md)・[第4組](agile/S8_250_BATCH4_RESULTS.md)・[第5組](agile/S8_250_BATCH5_RESULTS.md)。現時点は目標未達・本編未変更。
+
+- [盤面図の読み直し：釘・風車・道・ヘソの関係](agile/S8_BOARD_RELATION_REVIEW.md)：通常間隔と切れ目、玉径との比、追加皿との重なり、配置意図の仮説を整理。
+
+- [S8・風車4方向の実250発比較と採否](agile/S8_WINDMILL_RESULTS.md)
+- [S8・風車と道の流れの観測](agile/S8_WINDMILL_OBSERVATION.md)
+- [S8・風車比較の独立照合](agile/S8_WINDMILL_AUDIT.md)
+- [S8・風車の表示と接触位置の照合](agile/S8_WINDMILL_VISUAL.md)
+- [S8・今回の結果を説明する台本（承認待ち）](agile/s8-windmill-video/script.md)
+
+- [S8：元配置250発の観測結果と動画](agile/S8_ROUTE_RESULTS.md)：道へ届くまでの流れと、次の修正案1つ。改善は未達・提案は未実装。
+- [S8：精細観測の記録](agile/S8_ROUTE_OBSERVATION.md)・[原図と写真の照合](agile/S8_ROUTE_REFERENCE_REVIEW.md)・[数値の独立照合](agile/S8_ROUTE_AUDIT.md)。
+
+- [S8：風車の表示と接触形状を揃える計画](agile/S8_WHEEL_SHAPE_PLAN.md)：ガイドなしで基準を取り直し、共通形状1案を同条件比較。
+
+- [S8：写真の3枚羽根の試作と250発の結果](agile/S8_WHEEL_SHAPE_RESULTS.md)：ガイドなし13→9、形状試作と入賞改善の判定を区別。
+
+- [S8：3枚羽根を維持した入賞改善の継続比較](agile/S8_ADMISSION_CONTINUED_PLAN.md)
+
+- S8継続：[釘と球径の結果](agile/S8_ADMISSION_CONTINUED_RESULTS.md)・[左右方向の結果](agile/S8_ADMISSION_LATERAL_RESULTS.md)・[上流の比較計画](agile/S8_ADMISSION_UPSTREAM_PLAN.md)
+
+- S8最新：[組合せの全結果](agile/S8_ADMISSION_COMBINED_RESULTS.md)・[監査](agile/S8_ADMISSION_COMBINED_AUDIT.md)・[計画](agile/S8_ADMISSION_COMBINED_PLAN.md)
+
+- [道末端の比較計画](agile/S8_ROAD_TAIL_PLAN.md)
+- [道末端の結果](agile/S8_ROAD_TAIL_RESULTS.md)
+- [道末端の独立照合](agile/S8_ROAD_TAIL_AUDIT.md)
+- [上流の比較計画](agile/S8_APPROACH_PLAN.md)
+- [上流の結果と風車左右の分岐](agile/S8_APPROACH_RESULTS.md)
+- [上流の独立照合](agile/S8_APPROACH_AUDIT.md)
+- [風車右の3条件結果](agile/S8_WHEEL_RIGHT_PHASE_RESULTS.md)
+- [大きい球の右滞留原因](agile/S8_RIGHT_LARGER_BALL_DIAGNOSIS.md)
+
+- [風車へ当たる前の診断計画](agile/S8_FEED_DIAGNOSIS_PLAN.md)
+- [上流の詳細診断結果](agile/S8_FEED_DIAGNOSIS_RESULTS.md)
+- [風車を経路へ近づける比較計画](agile/S8_FEED_SHIFT_PLAN.md)
+
+- [風車を通過経路へ近づけた比較結果](agile/S8_FEED_SHIFT_RESULTS.md)
+
+- [風車の手前の釘3案と250/750発の結果](agile/S8_UPPER_FEED_RESULTS.md)（未採用）
+
+- [釘の本数と盤面構造を保つ、大きい移動の検討方針](agile/S8_LARGER_PIN_POLICY.md)
+
+- [道26本を同時に大きく動かした比較結果](agile/S8_ROAD_GROUP_RESULTS.md)（初回9→13、選別不成立）
+
+- [道の入口と末端を分けた2案の比較](agile/S8_ROAD_TRANSITION_RESULTS.md)（A12/B4、各250発・未採用）
+
+- [寄り釘17本の移動でヘソ入賞が増えた結果](agile/S8_PRIZE17_RESULTS.md)
+
+- [寄り釘17本の本編統合・検証計画](agile/S8_PRIZE17_INTEGRATION_PLAN.md)
+
+- [寄り釘17本の本編統合結果](agile/S8_PRIZE17_INTEGRATION_RESULTS.md)
+
+- [改善結果を伝える動画の読み上げ台本（承認待ち）](agile/s8-prize17-video/script.md)
+
+- [ローカル試遊の盤面起動エラーと修正確認](agile/S8_LOCAL_PLAY_FONT_FIX.md)
+
+- [ヘソ周りのガイド撤去（0.3.0向け）](prototype/HESO_GUIDE_REMOVAL_2026-10-16.md) — [承認台本](prototype/heso-guide-video/script.md)・[説明動画の制作と検証](prototype/heso-guide-video/PRODUCTION.md)。
+
+- [PR36：最新の釘配置を保持した統合と検証](agile/PR36_INTEGRATION.md)

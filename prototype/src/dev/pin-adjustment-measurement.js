@@ -1,10 +1,11 @@
+import {WINDMILL_OFFSET_STRICT} from '../pixi/windmill-offset.js';
 // Local comparison uses existing factory and qa05 conditions, never modifies production.
 import {createBoardFlow} from '../pixi/board-flow.js';
 import {attachNormalSpin} from '../pixi/normal-spin-flow.js';
 import {GRAVITY} from '../physics/physics.js';
 import {LCD_LAYOUT,LCD_OPENING,overlapsLcd} from '../pixi/lcd-layout.js';
 import {SessionGame} from '../domain/session-game.js';
-import {resolvePinAdjustment} from './pin-adjustment.js';
+import {resolvePinAdjustment,PIN_SPACING_STRICT} from './pin-adjustment.js';
 export const isFrontPlaneBall=(physics,ball)=>!physics.separateLaunchPlane||ball.leftLaunchPlane===true;
 export function classifyLCDContact(b){
  if(b.x<LCD_LAYOUT.x-b.r||b.x>LCD_LAYOUT.x+LCD_LAYOUT.width+b.r||b.y<LCD_LAYOUT.y-b.r||b.y>LCD_LAYOUT.y+LCD_LAYOUT.height+b.r)return 'none';
@@ -13,13 +14,15 @@ export function classifyLCDContact(b){
 }
 export const COMPARISON_CONDITIONS=Object.freeze({phases:[0,.175,.35,.525],kinds:['mechanical','finite-stock-fixed-loss'],seconds:300,drain:45,power:.20,launchInterval:.6,updateSeconds:1/120,mouthWidth:20,gravity:GRAVITY,guide:'current-factory-tray',initialStock:400,finiteLottery:'constant .9 fixed-loss calibration'});
 export function gapSummary(times,seconds){const inside=times.filter(t=>t>=0&&t<=seconds).sort((a,b)=>a-b);let previous=0,maxGap=0;for(const t of inside){maxGap=Math.max(maxGap,t-previous);previous=t;}return {entries:inside.length,maxGap:Math.max(maxGap,seconds-previous),first:inside[0]??null,last:inside.at(-1)??null,windowSeconds:seconds};}
-export function measurePinAdjustment(config,{phase=0,kind='mechanical',seconds=300,drain=45,replaySeconds=0,replayFPS=60,mode='normal',normalPower=config.normalPower??.20,onProgress=()=>{}}={}){
+export function measurePinAdjustment(config,{phase=0,kind='mechanical',seconds=300,drain=45,replaySeconds=0,replayFPS=60,mode='normal',normalPower=config.normalPower??.20,shotLimit=undefined,recordFinalState=false,onProgress=()=>{}}={}, {pinSpacingProfile=PIN_SPACING_STRICT,windmillOffsetProfile=WINDMILL_OFFSET_STRICT}={}){
+ if(typeof recordFinalState!=='boolean')throw new Error('Invalid final-state recording option');
+ if(shotLimit!==undefined&&(!Number.isSafeInteger(shotLimit)||shotLimit<=0))throw new Error('Invalid actual shot limit');
  if(![30,60].includes(replayFPS))throw new Error('Unsupported replay FPS');
  if(config.normalPower!==undefined&&normalPower!==config.normalPower)throw new Error('Normal power override disagrees with trial configuration');
  if(!Number.isFinite(normalPower)||normalPower<0||normalPower>1)throw new Error('Invalid trial normal power');
  // Short windows are explicitly recorded for direct tests, not accepted full comparison.
  if(!['normal','rush','bonus'].includes(mode)||(kind!=='mechanical'&&mode!=='normal')||!COMPARISON_CONDITIONS.phases.includes(phase)||!COMPARISON_CONDITIONS.kinds.includes(kind)||!Number.isFinite(seconds)||seconds<=0||seconds>300||!Number.isFinite(drain)||drain<0||drain>45||Math.abs(seconds*120-Math.round(seconds*120))>1e-6||Math.abs(drain*120-Math.round(drain*120))>1e-6)throw new Error('Unsupported measurement conditions');
- const {pins,flowOptions}=resolvePinAdjustment(config),game=kind==='finite-stock-fixed-loss'?new SessionGame(()=>.9):null;
+ const {pins,flowOptions}=resolvePinAdjustment(config,{pinSpacingProfile,windmillOffsetProfile}),game=kind==='finite-stock-fixed-loss'?new SessionGame(()=>.9):null;
  const model=createBoardFlow({lcd:true,...flowOptions,normalPower,launchInterval:.6,...(game?{fire:()=>game.fire()}:{})});
  model.flow.physics.pins=structuredClone(pins);model.setMode(mode);
  const flow=model.flow,p=flow.physics,events=[],frames=[],replayFrames=[];
@@ -52,19 +55,31 @@ export function measurePinAdjustment(config,{phase=0,kind='mechanical',seconds=3
  const step=()=>{if(game)game.pendingBalls=p.balls.length;flow.step(1/120);observeLCD();if(game&&flow.continuous&&(game.stock<1)!==unavailable){unavailable=game.stock<1;stockUnavailable.push({time:p.time-start,unavailable});}};
  const frame=()=>frames.push({time:p.time-start,balls:p.balls.map(b=>({id:b.id,x:b.x,y:b.y,r:b.r})),counts:{...flow.counts}});
  frame();flow.start();const total=Math.round((seconds+drain)*120);let n=0;
- for(let i=0;i<Math.round(seconds*120);i++){step();n++;if(replaySeconds>0&&n%(120/replayFPS)===0&&n<=replaySeconds*120)replayFrames.push(replayFrame());if(n%120===0){frame();onProgress({phase,kind,completedSeconds:n/120,totalSeconds:total/120,stage:'firing'});}}
- flow.stop();const atStop={time:p.time-start,remaining:p.balls.length,counts:{...flow.counts},stock:game?.stock??null};
+ for(let i=0;i<Math.round(seconds*120);i++){step();n++;if(replaySeconds>0&&n%(120/replayFPS)===0&&n<=replaySeconds*120)replayFrames.push(replayFrame());if(n%120===0){frame();onProgress({phase,kind,completedSeconds:n/120,totalSeconds:total/120,stage:'firing'});}if(shotLimit!==undefined&&p.metrics.spawned>=shotLimit)break;}
+ flow.stop();const stopStep=n,stopReplay=(shotLimit!==undefined||recordFinalState)&&replaySeconds>0?replayFrame():null;const atStop={time:p.time-start,remaining:p.balls.length,counts:{...flow.counts},stock:game?.stock??null};
  for(let i=0;i<Math.round(drain*120);i++){step();n++;if(replaySeconds>0&&n%(120/replayFPS)===0&&n<=replaySeconds*120)replayFrames.push(replayFrame());if(n%120===0){frame();onProgress({phase,kind,completedSeconds:n/120,totalSeconds:total/120,stage:'drain'});}}
  frame();const end={time:p.time-start,remaining:p.balls.length,counts:{...flow.counts},stock:game?.stock??null},shots=p.metrics.spawned,outcomes=events.filter(e=>e.type==='outcome');
  const ids=outcomes.map(e=>e.ballId),shotIds=new Set(events.filter(e=>e.type==='shot').map(e=>e.ballId));
  const physical={shots,outcomes:outcomes.length,remaining:end.remaining,reconciled:shots===outcomes.length+end.remaining,uniqueOutcomeIds:new Set(ids).size===ids.length,allOutcomesFromShots:ids.every(id=>shotIds.has(id)),countsMatchOutcomes:Object.values(end.counts).reduce((a,b)=>a+b,0)===outcomes.length};
  const ledger=game?{initial,final:game.stock,...game.accounting}:null;
  if(ledger){const expected=initial+ledger.payout+ledger.returned+ledger.supply+ledger.debugAdjustment-ledger.spent;ledger.check={expectedStock:expected,stockDelta:game.stock-expected,spentMatchesShots:ledger.spent===shots,reconciled:game.stock===expected};}
- const observed=Math.min(seconds,atStop.time),starts=events.filter(e=>e.type==='admission'&&e.kind==='start').map(e=>e.time);
+ const actualFiringSeconds=shotLimit!==undefined?stopStep/120:seconds;
+ const observed=Math.min(actualFiringSeconds,atStop.time),starts=events.filter(e=>e.type==='admission'&&e.kind==='start').map(e=>e.time);
  const observation={requestedFiringSeconds:seconds,observedPhysicsFiringSeconds:observed,firingPaddingSeconds:Math.max(0,seconds-observed),requestedDrainSeconds:drain,observedPhysicsDrainSeconds:Math.max(0,end.time-atStop.time),observedFiringGap:gapSummary(starts,observed),requestedWindowGapIncludingPadding:gapSummary(starts,seconds),stopPhase:game?.phase??'mechanical'};
  lcdIntrusion.centreBallIds=[...centreIds];lcdIntrusion.boundaryOnlyBallIds=[...boundaryIds];lcdIntrusion.frontCentreBallIds=[...frontCentreIds];lcdIntrusion.frontBoundaryOnlyBallIds=[...frontBoundaryIds];
  launchDiagnostics.exitCrossedBallIds=[...exitIds];launchDiagnostics.frontPlaneBallIds=[...frontIds];
- const result={...(p.nonReturnValve?{nonReturnValve:structuredClone(p.nonReturnValve)}:{}),railGeometry:{profile:p.launchRailProfile??'legacy',reference:p.launchRailReference??null},launchDiagnostics,display:{ballRadius:p.ballRadius,displayBallScale:p.displayBallScale,displayBallDiameter:p.displayBallDiameter??null,textureExtent:28,spriteScaleDivisor:3,spriteBoundingDiameter:28*p.displayBallScale/3},lcdIntrusion,endDiagnostics:p.diagnostics(),config:structuredClone(config),replayFrames,replayFPS,phase,kind,conditions:{phase,kind,mode,seconds,drain,power:mode==='normal'?normalPower:.85,launchInterval:.6,updateSeconds:1/120,mouthWidth:config.hesoMouthWidth??20,ballRadius:p.ballRadius,solver:'Existing radius-dependent Physics.step substeps, observed via updateGate calls minus initial call; unchanged.',gravity:GRAVITY,guide:config.leftAdmissionGuides?'current-factory-tray':'source-walls-retained-no-added-heso-tray',initialStock:initial,lottery:game?'constant .9 fixed-loss calibration':'no SessionGame/lottery/stock'},events,frames,pins,fixed,atStop,end,physical,ledger,observation,routeMetrics:model.leftMetrics.snapshot(),mechanismEndState:structuredClone(p.mechanisms),drainEntries:starts.filter(t=>t>seconds).length,session:game?{phase:game.phase,time:game.time,draws:game.draws,accepted:spin.snapshot().accepted,hold:game.holdCount,active:game.spinActive,jackpots:game.jackpots,stockUnavailable}:null};
+ const result={...(pinSpacingProfile!==PIN_SPACING_STRICT?{validationProfile:pinSpacingProfile}:{}),...(p.nonReturnValve?{nonReturnValve:structuredClone(p.nonReturnValve)}:{}),railGeometry:{profile:p.launchRailProfile??'legacy',reference:p.launchRailReference??null},launchDiagnostics,display:{ballRadius:p.ballRadius,displayBallScale:p.displayBallScale,displayBallDiameter:p.displayBallDiameter??null,textureExtent:28,spriteScaleDivisor:3,spriteBoundingDiameter:28*p.displayBallScale/3},lcdIntrusion,endDiagnostics:p.diagnostics(),config:structuredClone(config),replayFrames,replayFPS,phase,kind,conditions:{...(pinSpacingProfile!==PIN_SPACING_STRICT?{pinSpacingProfile}:{}),phase,kind,mode,seconds,drain,power:mode==='normal'?normalPower:.85,launchInterval:.6,updateSeconds:1/120,mouthWidth:config.hesoMouthWidth??20,ballRadius:p.ballRadius,solver:'Existing radius-dependent Physics.step substeps, observed via updateGate calls minus initial call; unchanged.',gravity:GRAVITY,guide:config.leftAdmissionGuides?'current-factory-tray':'source-walls-retained-no-added-heso-tray',initialStock:initial,lottery:game?'constant .9 fixed-loss calibration':'no SessionGame/lottery/stock'},events,frames,pins,fixed,atStop,end,physical,ledger,observation,routeMetrics:model.leftMetrics.snapshot(),mechanismEndState:structuredClone(p.mechanisms),drainEntries:starts.filter(t=>t>actualFiringSeconds).length,session:game?{phase:game.phase,time:game.time,draws:game.draws,accepted:spin.snapshot().accepted,hold:game.holdCount,active:game.spinActive,jackpots:game.jackpots,stockUnavailable}:null};
+ if(shotLimit!==undefined){
+  Object.assign(result.conditions,{shotLimit,requestedMaxFiringSeconds:seconds,actualFiringSeconds:stopStep/120,actualDrainSeconds:(n-stopStep)/120});
+  Object.assign(result.observation,{firingMode:'actual-shot-limit',requestedShotLimit:shotLimit,shotLimitReached:shots===shotLimit,firingPaddingSeconds:0,requestedWindowGapIncludingPadding:gapSummary(starts,observed),maxFiringSeconds:seconds});
+ }
+ if(shotLimit!==undefined||recordFinalState){
+  result.fixedAtEnd=structuredClone({gravity:GRAVITY,ballRadius:p.ballRadius,colliders:p.colliders,pockets:p.pockets,mechanisms:p.mechanisms,outlet:p.outlet,launchExit:p.launchExit,launchSpeedOffset:p.launchSpeedOffset,gate:p.gate,rightChucker:p.rightChucker,returnOutlet:p.returnOutlet,separateLaunchPlane:p.separateLaunchPlane});
+  result.pinsAtEnd=structuredClone(p.pins);
+  result.replayEndpoints={stop:stopReplay,end:replaySeconds>0?replayFrame():null};
+  result.replaySampling={fps:replayFPS,regularFrames:replayFrames.length,originSeconds:0,regularLastSeconds:replayFrames.at(-1)?.time??null,stopStep,endStep:n,stopOnGrid:stopStep%(120/replayFPS)===0,endOnGrid:n%(120/replayFPS)===0,endpointScope:'Regular replayFrames stay on the origin-aligned FPS grid. Exact stop/end snapshots are separate, not extra fabricated regular frames.'};
+ }
  if(!physical.reconciled||!physical.uniqueOutcomeIds||!physical.allOutcomesFromShots||!physical.countsMatchOutcomes||ledger&&(!ledger.check.reconciled||!ledger.check.spentMatchesShots))throw Object.assign(new Error('Measurement count/accounting mismatch'),{result});
+ if(shotLimit!==undefined&&shots!==shotLimit)throw Object.assign(new Error(`Actual shot limit not reached: ${shots}/${shotLimit} within ${seconds}s`),{result});
  return result;
 }

@@ -1,0 +1,2255 @@
+{
+  "version": 1,
+  "files": [
+    {
+      "path": "baseline/music-normal.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.3659494499801127
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.6337946737690684
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.00025587599258420653
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 2.620556168467354e-10
+        }
+      ],
+      "spectralCentroidHz": 324.3465083989181,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "music/normal.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.4945532411993872
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.4335792885837724
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.06462669868990129
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.007240771529106324
+        }
+      ],
+      "spectralCentroidHz": 693.6778434664008,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/music-battle.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.4018720201264544
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.5975536428237033
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.000574335849145892
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 1.2095581441132978e-9
+        }
+      ],
+      "spectralCentroidHz": 356.16247290718377,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "music/battle.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.5035095504756059
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.41180458652579427
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.07278095825792893
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.01190490474432006
+        }
+      ],
+      "spectralCentroidHz": 798.2101680475573,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/music-bonus.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.41871095206011416
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.5808396275392206
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.0004494192947644222
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 1.1095831176281213e-9
+        }
+      ],
+      "spectralCentroidHz": 343.23000503739223,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "music/bonus.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.46362573065671264
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.4363211223543882
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.08668342830466227
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.013369718685114778
+        }
+      ],
+      "spectralCentroidHz": 904.6015014987629,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/music-rush.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.4384946101690754
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.5609140562098276
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.0005913321693183992
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 1.4549206137842529e-9
+        }
+      ],
+      "spectralCentroidHz": 346.3472635506964,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "music/rush.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.4985736175207909
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.411586498051359
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.07798429060230765
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.011855593826087616
+        }
+      ],
+      "spectralCentroidHz": 823.9098713894375,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/se-development.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000047114462368604595
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.9982726350986136
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.0016802498840490607
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 5.552820787037915e-10
+        }
+      ],
+      "spectralCentroidHz": 514.4352579983508,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/development-v0.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00003260436772469267
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8410693617149431
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.1400900038236402
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.018808030093807177
+        }
+      ],
+      "spectralCentroidHz": 1463.5026017622083,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/development-v1.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00003370659121926149
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8410836729050906
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.14007492743858355
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.018807693065236022
+        }
+      ],
+      "spectralCentroidHz": 1454.730742305675,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/development-v2.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00003153841325406508
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8410589811180383
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.14010103211456348
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.018808448354243286
+        }
+      ],
+      "spectralCentroidHz": 1472.2734794346645,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/development-v3.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00003297180002506807
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8410749088123187
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.14008420923725975
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.01880791015052246
+        }
+      ],
+      "spectralCentroidHz": 1460.5741802303664,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/se-pushPrompt.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000007699718265781965
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.9975187179115103
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.0024735816520917837
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 7.183911511584134e-10
+        }
+      ],
+      "spectralCentroidHz": 584.9236740567279,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/pushPrompt-v0.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 2.819073061208542e-7
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7578874178283785
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.19618360466149656
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.045928695602864805
+        }
+      ],
+      "spectralCentroidHz": 2246.2653778805943,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/pushPrompt-v1.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 2.9535087257673313e-7
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7578225855743135
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.19625712273202217
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.045919996342810465
+        }
+      ],
+      "spectralCentroidHz": 2232.851292410501,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/pushPrompt-v2.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 2.7166360936926274e-7
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7579533622642646
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.19611064437775177
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.045935721694416634
+        }
+      ],
+      "spectralCentroidHz": 2259.667415343004,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/pushPrompt-v3.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 2.864606526484606e-7
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7578659538763096
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.19620771518859234
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.04592604447447938
+        }
+      ],
+      "spectralCentroidHz": 2241.794123531734,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/se-pushPress.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00017162246104266421
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.9988187405957097
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.00100963122068735
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 5.72261596352886e-9
+        }
+      ],
+      "spectralCentroidHz": 485.24162057040047,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/pushPress-v0.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00002071327065928805
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7754784455611867
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.20650404999851496
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.017996791169650906
+        }
+      ],
+      "spectralCentroidHz": 1524.9595414788844,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/pushPress-v1.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000022515926481911708
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.791298403975242
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.19072775824221325
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.017951321856090843
+        }
+      ],
+      "spectralCentroidHz": 1480.541361876945,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/pushPress-v2.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000020155868923329617
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7992314069668188
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.1831370078294129
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.01761142933486579
+        }
+      ],
+      "spectralCentroidHz": 1483.7519109787609,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/pushPress-v3.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000021994178485822144
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8060981484675975
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.17633031473826313
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.017549542615677587
+        }
+      ],
+      "spectralCentroidHz": 1480.2158112920424,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/se-heroHit.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.14864436297575023
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8507809529710613
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.0005746807400438727
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 3.3133879447493785e-9
+        }
+      ],
+      "spectralCentroidHz": 383.53093380900555,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/heroHit-v0.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000026311718489704363
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8673921184843614
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.12177394440164477
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.01080762539558179
+        }
+      ],
+      "spectralCentroidHz": 1163.0710716613394,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/heroHit-v1.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00002683679565580285
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8680867697853003
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.1211146960578119
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.010771697361301484
+        }
+      ],
+      "spectralCentroidHz": 1160.7359829266784,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/heroHit-v2.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00002539336249568452
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8748770607185223
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.11430538083911165
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.010792165079939398
+        }
+      ],
+      "spectralCentroidHz": 1158.9237026507842,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/heroHit-v3.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000026605909080343735
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8685010706152875
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.12066295864179187
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.010809364833897933
+        }
+      ],
+      "spectralCentroidHz": 1159.4445185991324,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/se-decisiveHit.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.12811543254724597
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8712566193005966
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.0006279474819938025
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 6.705151574567042e-10
+        }
+      ],
+      "spectralCentroidHz": 356.8448685044269,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/decisiveHit-v0.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000008233663946569957
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8461669147967306
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.14080780068244172
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.013017050856908716
+        }
+      ],
+      "spectralCentroidHz": 1251.078414930216,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/decisiveHit-v1.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000010572809318017698
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8424192246557513
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.1415593700606241
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.016010832474365643
+        }
+      ],
+      "spectralCentroidHz": 1274.8387282539525,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/decisiveHit-v2.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000007286960154588233
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8786482289840214
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.10891694385803463
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.01242754019786485
+        }
+      ],
+      "spectralCentroidHz": 1164.0690085142935,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/decisiveHit-v3.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000009642269601343949
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8515107896113513
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.13318700398913544
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.015292564129947697
+        }
+      ],
+      "spectralCentroidHz": 1242.4715998408249,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/se-revival.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.01891055420116666
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.9792399318911749
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.0018495132846200605
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 6.233710994039203e-10
+        }
+      ],
+      "spectralCentroidHz": 528.4473863386294,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/revival-v0.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000018807532111627213
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7888074999515372
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.1754972761845339
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.035676416331832224
+        }
+      ],
+      "spectralCentroidHz": 1992.3035976307783,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/revival-v1.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000019441492825094084
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.788752949055627
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.175559403495657
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.035668205955912954
+        }
+      ],
+      "spectralCentroidHz": 1980.4028799188382,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/revival-v2.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000018179598310511646
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7888582161891747
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.1754386787545097
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.03568492545804946
+        }
+      ],
+      "spectralCentroidHz": 2004.2094015343,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/revival-v3.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000019024019069037554
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7887892537756566
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.17551798787951942
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.03567373432578777
+        }
+      ],
+      "spectralCentroidHz": 1988.3367680195427,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/se-bonusStart.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00006230479437012132
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.9978108433323102
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.0021268511518896913
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 7.218034940337852e-10
+        }
+      ],
+      "spectralCentroidHz": 540.2375277142148,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/bonusStart-v0.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000001645146758037813
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7571920201708283
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.20291787052568427
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.03988846415678923
+        }
+      ],
+      "spectralCentroidHz": 2275.291129929667,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/bonusStart-v1.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000001736480686464301
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7571128215214102
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.20300503752007834
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.03988040447789611
+        }
+      ],
+      "spectralCentroidHz": 2261.733302289686,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/bonusStart-v2.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.0000015600885333382869
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7572683056607243
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.2028348360100802
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.03989529824070263
+        }
+      ],
+      "spectralCentroidHz": 2288.845743579657,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/bonusStart-v3.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.0000016753470408902048
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7571651200946046
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.20294719471773304
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.03988600984073049
+        }
+      ],
+      "spectralCentroidHz": 2270.7732427069523,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/se-rushStart.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.0030586330573982527
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.9939113831877812
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.003029983046657609
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 7.085284463969526e-10
+        }
+      ],
+      "spectralCentroidHz": 592.1457697379848,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/rushStart-v0.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000006514234809983743
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7725669607647039
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.17836088246998444
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.049065642530562385
+        }
+      ],
+      "spectralCentroidHz": 2463.166373647617,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/rushStart-v1.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000006801490918697115
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7726047641562649
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.1783240707857451
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.04906436356712052
+        }
+      ],
+      "spectralCentroidHz": 2448.388213668319,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/rushStart-v2.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000006233291665695374
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7725256303854691
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.17840186342344547
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.04906627289943948
+        }
+      ],
+      "spectralCentroidHz": 2477.9386628173606,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/rushStart-v3.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000006610083674444277
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7725803939713725
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.17834773385965183
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.04906526208534297
+        }
+      ],
+      "spectralCentroidHz": 2458.2397226336398,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/se-spin.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.002552813410093549
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.9973886978520519
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.00005848266386668677
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 6.0740856536293405e-9
+        }
+      ],
+      "spectralCentroidHz": 367.6065788196226,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/spin-v0.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00005806804124484235
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8338897185930232
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.14988932541514172
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.01616288795061294
+        }
+      ],
+      "spectralCentroidHz": 1414.6833500987875,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/spin-v1.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00005791404174341954
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8339902750550525
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.14986737411332096
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.016084436789924456
+        }
+      ],
+      "spectralCentroidHz": 1406.247756911572,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/spin-v2.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.0000555514707015863
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8337688274292278
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.1498881832816292
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.016287437818498864
+        }
+      ],
+      "spectralCentroidHz": 1423.1440260012855,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/spin-v3.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00005798102788093633
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8338957890263845
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.14991502844661356
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.01613120149916195
+        }
+      ],
+      "spectralCentroidHz": 1411.874775930724,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/se-stopLeft.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.0008060148418949019
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.998600798126432
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.000593186621029962
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 4.1070817292413034e-10
+        }
+      ],
+      "spectralCentroidHz": 495.45321389603487,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/stopLeft-v0.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00008374603562561725
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8435686978106866
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.1409266602341855
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.015420895919534041
+        }
+      ],
+      "spectralCentroidHz": 1399.982723765177,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/stopLeft-v1.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00008424250700392877
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8376161599679435
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.14733821853988227
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.014961378985170096
+        }
+      ],
+      "spectralCentroidHz": 1402.7238724767333,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/stopLeft-v2.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00008207239699114839
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8459496389171417
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.1383447099655383
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.015623578720339515
+        }
+      ],
+      "spectralCentroidHz": 1396.2866931608346,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/stopLeft-v3.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00008391947534673025
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8419888209911891
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.14266749684882885
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.015259762684665662
+        }
+      ],
+      "spectralCentroidHz": 1394.7760080501869,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/se-stopRight.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.0002367293053252958
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.9991631498737824
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.0006001208052135435
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 1.578061395473389e-11
+        }
+      ],
+      "spectralCentroidHz": 556.7278411596454,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/stopRight-v0.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00005420419572406444
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8276539286365798
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.1516038454375437
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.020688021730177125
+        }
+      ],
+      "spectralCentroidHz": 1574.6450128183453,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/stopRight-v1.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00005577253015753687
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8214363554825338
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.1575587442242865
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.020949127763013952
+        }
+      ],
+      "spectralCentroidHz": 1560.6432172861846,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/stopRight-v2.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000052390564339776677
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8157289658489807
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.16347451054276205
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.020744133043929906
+        }
+      ],
+      "spectralCentroidHz": 1588.4561923503122,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/stopRight-v3.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000054804247552778826
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8283653018509579
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.15146130249656659
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.02011859140494488
+        }
+      ],
+      "spectralCentroidHz": 1559.3160760451083,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/se-stopCenter.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.03534652240398503
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.9644164673776309
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.0002370097931873547
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 4.2548404307874294e-10
+        }
+      ],
+      "spectralCentroidHz": 408.161626824107,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/stopCenter-v0.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00006456884327397023
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8787857492095662
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.11242967089398892
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.008720011053209778
+        }
+      ],
+      "spectralCentroidHz": 1156.9912041599005,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/stopCenter-v1.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00006827335134803285
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8701029346560631
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.12089004792081921
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.008938744071818855
+        }
+      ],
+      "spectralCentroidHz": 1162.3688266665065,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/stopCenter-v2.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00006937193263932049
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8636985229533279
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.12658662430874898
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.00964548080532467
+        }
+      ],
+      "spectralCentroidHz": 1185.9859399599432,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/stopCenter-v3.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.00006349418262603526
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.8708627460531524
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.12056947863344665
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.008504281130815123
+        }
+      ],
+      "spectralCentroidHz": 1182.7837094148442,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "baseline/se-admission.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000020899460302464782
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.9990709209729026
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.0009081789819536636
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 5.848794389164318e-10
+        }
+      ],
+      "spectralCentroidHz": 623.4441760542338,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/admission-v0.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.0000017904198391656006
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7741566278998949
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.18810837517692117
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.03773320650334628
+        }
+      ],
+      "spectralCentroidHz": 2053.2151368953387,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/admission-v1.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.000001659911506929712
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.780488909637184
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.18220603354160358
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.037303396909698805
+        }
+      ],
+      "spectralCentroidHz": 2039.1772391956015,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/admission-v2.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.0000017518000168520414
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7689402073063697
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.19299614436507492
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.03806189652854462
+        }
+      ],
+      "spectralCentroidHz": 2065.839443497009,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "se/admission-v3.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.0000017392307483070092
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7754881558865943
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.1869196365522034
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.037590468330453236
+        }
+      ],
+      "spectralCentroidHz": 2048.9910996570484,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "mix/normal-scene-before.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.257450866919908
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.7420620451493934
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.00048708614546011007
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 1.7875979222945328e-9
+        }
+      ],
+      "spectralCentroidHz": 377.83719741700384,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    },
+    {
+      "path": "mix/normal-scene-after.wav",
+      "stft": {
+        "window": "Hann",
+        "n": 2048,
+        "hop": 512,
+        "rate": 48000,
+        "stereo": "energy sum"
+      },
+      "bands": [
+        {
+          "hz": "20-250",
+          "ratio": 0.37210332325035445
+        },
+        {
+          "hz": "250-2000",
+          "ratio": 0.5341872517710176
+        },
+        {
+          "hz": "2000-8000",
+          "ratio": 0.0841789524830177
+        },
+        {
+          "hz": "8000-20000",
+          "ratio": 0.009530472496275942
+        }
+      ],
+      "spectralCentroidHz": 859.2298193850213,
+      "interpretation": "Energy/centroid are mix descriptors, not fundamental pitch or listening-quality score. F0 not inferred for polyphonic music/two-voice SE."
+    }
+  ]
+}

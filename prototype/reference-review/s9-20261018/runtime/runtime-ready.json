@@ -1,0 +1,127 @@
+{
+  "timestamp": "2026-10-18T10:59:16.256977+00:00",
+  "gitHEAD": "aebe07735bb2039e5b9005ed1a2efa8ce9a85f84",
+  "scope": "S9 runtime implementation local technical verification; no full regression or speaker acceptance. Source edit complete for PM review, no Git operations.",
+  "ownedInputs": [
+    {
+      "path": "prototype/src/app/main.js",
+      "sha256": "cac9d3b10c920d2d4b1fbf7f91b19fc0cac8a897912febb569cb55ff7bd851d4"
+    },
+    {
+      "path": "prototype/src/app/audio-settings.js",
+      "sha256": "437c9fdbd928219d83ab02b0e0d4867c1a09af1987fd5e394b54138f2065feec"
+    },
+    {
+      "path": "prototype/src/ui/pixi-session.css",
+      "sha256": "61662b3de884381ab09a386a933bbb02f87a3a0fb90febcf7f335f399e1d60a2"
+    },
+    {
+      "path": "prototype/src/pixi/se/music-player.js",
+      "sha256": "b26c9e4568c5c26dc8a0f2b355dfcde95bc3717dc87ecb46312b89de3bf5911c"
+    },
+    {
+      "path": "prototype/src/pixi/se/music-loader.js",
+      "sha256": "84574a830ebba643e38082309f3d770fb8f72f0f45218806c6ade9bca649442c"
+    },
+    {
+      "path": "prototype/src/pixi/se/music-worker.js",
+      "sha256": "f17653177220bf400eff4c6cad99845a4a005fffad2fbfdaf88445de55f2fe72"
+    },
+    {
+      "path": "prototype/src/pixi/se/presentation-sound.js",
+      "sha256": "54f59ba1ac93807b78c6627c8463259527841a6321e2c443c48184d646457c56"
+    },
+    {
+      "path": "prototype/src/pixi/se/presentation-cues.js",
+      "sha256": "81697f91c901552029aac4f06f31c2c3879071982a8cc622ddd2fd4fa0c231f9"
+    },
+    {
+      "path": "prototype/src/pixi/se/presentation-atmosphere.js",
+      "sha256": "fe5588080b5dd042e61e0305ee2e8125cda3084fb7f7a453c3b7f346026ed97e"
+    },
+    {
+      "path": "prototype/src/pixi/se/original-se.js",
+      "sha256": "1a6a22906d29abf42725e5c96e60141e2d6627a88bbd350c2d4b4cbeefc31163"
+    },
+    {
+      "path": "prototype/tests/s9-audio-runtime.test.js",
+      "sha256": "bef00b6899eb3eb1a06c04fe86e7004ca9871fe06ac51a519ffb9993844856e9"
+    },
+    {
+      "path": "prototype/tests/s9-audio.browser.mjs",
+      "sha256": "27cc2326024a33bda9624149dad0dab9ecdbe06c5974fbf76f23c5268a41ac43"
+    },
+    {
+      "path": "prototype/tests/original-se.test.js",
+      "sha256": "f1f4ef08206f9937253ac68e983f4b2cddb7f6c8b504100a36489d6af59f25ee"
+    },
+    {
+      "path": "prototype/tests/original-se.browser.mjs",
+      "sha256": "81d414cbd1c9cf8d28387ad6d76680118bad60de308ab7699b4298e10d2391ed"
+    }
+  ],
+  "focused": {
+    "sessionID": 1299,
+    "exitCode": 0,
+    "tests": 31,
+    "passCount": 31,
+    "log": "focused-declick.log"
+  },
+  "newBrowser": {
+    "sessionID": 11982,
+    "exitCode": 0,
+    "widths": [
+      390,
+      1440
+    ],
+    "workerTracks": [
+      {
+        "name": "normal",
+        "sampleRate": 48000,
+        "cacheBytes": 9216000,
+        "voices": 1
+      },
+      {
+        "name": "battle",
+        "sampleRate": 48000,
+        "cacheBytes": 29952000,
+        "voices": 1
+      },
+      {
+        "name": "bonus",
+        "sampleRate": 48000,
+        "cacheBytes": 26880000,
+        "voices": 1
+      },
+      {
+        "name": "rush",
+        "sampleRate": 48000,
+        "cacheBytes": 32000000,
+        "voices": 1
+      }
+    ],
+    "proof": "browser-declick/verification.json",
+    "log": "browser-declick.log"
+  },
+  "oldBrowser": {
+    "sessionID": 11575,
+    "exitCode": 0,
+    "fixtures": 8,
+    "proof": "original-se-isolated/browser-check.json",
+    "naturalDrain": "original-se-isolated/natural-drain.json",
+    "audio": "original-se-isolated/actual-output.webm",
+    "scope": "Strict existing total/queue/saved-roll JSON assertions retained; saved roll absent in empty-drained fixtures, not a complete gameplay RNG-state audit."
+  },
+  "failuresRetained": [
+    "browser-initial.log: malformed .25 test input, corrected0.25",
+    "original-se-browser.log: ordinary prize from residual ball1 changed total0->5",
+    "original-se-diagnosis/diagnostic-2.json: actual ordinary ball1 prize/admission evidence"
+  ],
+  "limits": [
+    "No actual speaker/headphone listening claimed",
+    "Synthetic visibility handler test, not OS-native background certification",
+    "32MiB decoded music cache /9MiB SE cache; transient Worker/AudioBuffer copies excluded",
+    "Full speed pressure win/loss/revival recording and whole-game regression pending PM slot",
+    "Battle54s loop across revival tail beyond54s needs auditory judgement"
+  ]
+}

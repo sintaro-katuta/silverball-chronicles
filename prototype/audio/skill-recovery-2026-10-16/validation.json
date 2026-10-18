@@ -1,0 +1,31 @@
+{
+  "skill_validator": "passed separately",
+  "invalid_designs_rejected": [
+    "negative_pitch",
+    "event_overrun",
+    "duplicate_id",
+    "unknown_key",
+    "nan_gain",
+    "unsafe_id"
+  ],
+  "per_cue_rng_reproducible": true,
+  "proxy_identity_gain_shift_sanity": true,
+  "files": [
+    {
+      "file": "steel-verdict.wav",
+      "frames": 168000,
+      "sample_rate": 48000,
+      "finite_clip_safe": true
+    },
+    {
+      "file": "moon-release.wav",
+      "frames": 288000,
+      "sample_rate": 48000,
+      "finite_clip_safe": true
+    }
+  ],
+  "historical_pulse_wav_sha256_matched": "4d873b3468ce37244badef9b3dd22c6a0765ec4b163e553a5b03b3e7b352207c",
+  "relative_links_checked": 12,
+  "browser": "not run; restoration task, no new browser playback or auditory claim",
+  "subjective": "past choice only; not new auditory acceptance"
+}

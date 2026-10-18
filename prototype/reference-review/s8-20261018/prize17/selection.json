@@ -1,0 +1,28 @@
+{
+  "selected": "three-prize17-left200",
+  "frozenHead": "c669ee0905d58270a1010dfc191776b83b7ae3c8",
+  "sourceSHA": "4afe53f315aeb54ffde92515c9141dc9a59c2a01fb348a4cfdbed47906b7db61",
+  "screen": {
+    "shotsEach": 250,
+    "legacyHeso": 13,
+    "currentHeso": 9,
+    "candidateHeso": 22,
+    "safetyZero": true,
+    "countsValid": true
+  },
+  "holdoutPhases": [
+    0.175,
+    0.35,
+    0.525
+  ],
+  "cases": [
+    "legacy-control",
+    "three-base",
+    "three-prize17-left200"
+  ],
+  "targetHeso": 60,
+  "targetShots": 750,
+  "perPhaseNonworseThanBothControls": true,
+  "screenExcludedFromHoldout": true,
+  "status": "selected-for-confirmation-not-adopted"
+}

@@ -1,0 +1,22 @@
+2026-10-18T09:06:03.9232671Z Feedback failure diagnostic: {"stage":"UI 1440x900","browser":"153.0.8010.12","renderer":"ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)","visibility":"visible","paused":true,"gameTime":20.399999999999483,"reach":null,"phase":"result","clockTrace":[],"file":"prototype/.cache/release/failures/feedback/1792314363921.json"}
+2026-10-18T09:06:03.9964017Z node:internal/modules/run_main:107
+2026-10-18T09:06:03.9964734Z     triggerUncaughtException(
+2026-10-18T09:06:03.9965196Z     ^
+2026-10-18T09:06:03.9965385Z 
+2026-10-18T09:06:03.9966008Z AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+2026-10-18T09:06:03.9966638Z 
+2026-10-18T09:06:03.9967438Z '2回 / 1' !== '2回 / 0'
+2026-10-18T09:06:03.9967670Z 
+2026-10-18T09:06:03.9968241Z     at file:///home/runner/work/silverball-chronicles/silverball-chronicles/prototype/tests/feedback.browser.mjs:35:161 {
+2026-10-18T09:06:03.9969022Z   generatedMessage: true,
+2026-10-18T09:06:03.9969295Z   code: 'ERR_ASSERTION',
+2026-10-18T09:06:03.9969589Z   actual: '2回 / 1',
+2026-10-18T09:06:03.9969857Z   expected: '2回 / 0',
+2026-10-18T09:06:03.9970106Z   operator: 'strictEqual',
+2026-10-18T09:06:03.9970358Z   diff: 'simple'
+2026-10-18T09:06:03.9970572Z }
+2026-10-18T09:06:03.9970683Z 
+2026-10-18T09:06:03.9970777Z Node.js v24.21.0
+2026-10-18T09:06:04.0068927Z Release phase end: feedback.browser.mjs failure 360613.6ms
+2026-10-18T09:06:04.0184054Z /opt/hostedtoolcache/node/24.21.0/x64/bin/node prototype/tests/feedback.browser.mjs failed (1)
+2026-10-18T09:06:07.0226306Z ##[error]Process completed with exit code 1.

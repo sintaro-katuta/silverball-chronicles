@@ -1,0 +1,125 @@
+{
+  "restored_at": "2026-10-16",
+  "source": "This user session historical file writes and read outputs, 2026-10-11/12",
+  "historical_log": "rollout-2026-10-11T03-02-36-01a126fa-9411-7e00-b347-691fc29367eb_01a126fb-2a32-7000-8d6a-4d18680f9fc4.jsonl",
+  "original_broken_link_target": "/Users/sintaro.katuta/dev/silverball-chronicles/.agents/skills/pachinko-sound-design",
+  "exact_historical_hash_matches": {
+    "scripts/engine.py": "53188945e024f442044fec50c2388f0846b986a4a2b434a06e180b79d04bee77",
+    "scripts/pitch_compare.py": "5a84fdc19ffd0945a342f3cf24c183c0f47e49fe8f7420362de37d96c0f97f5f",
+    "regenerated_moon_release_wav": "4d873b3468ce37244badef9b3dd22c6a0765ec4b163e553a5b03b3e7b352207c"
+  },
+  "reconstructed": [
+    "render.py via historical edits",
+    "render_pulse.py standalone input/output wrapper",
+    "session-feedback.md and reference-experiment-feedback.json from user statements",
+    "schema documentation for recovered extra event types",
+    "agents/openai.yaml",
+    "entrypoint recovery guidance"
+  ],
+  "not_recovered": [
+    "reference-experiment.json fitted quiz parameters",
+    "full old project audio folders and comparison pages",
+    "original temporary Python environment"
+  ],
+  "validation": {
+    "skill_validator": "passed separately",
+    "invalid_designs_rejected": [
+      "negative_pitch",
+      "event_overrun",
+      "duplicate_id",
+      "unknown_key",
+      "nan_gain",
+      "unsafe_id"
+    ],
+    "per_cue_rng_reproducible": true,
+    "proxy_identity_gain_shift_sanity": true,
+    "files": [
+      {
+        "file": "steel-verdict.wav",
+        "frames": 168000,
+        "sample_rate": 48000,
+        "finite_clip_safe": true
+      },
+      {
+        "file": "moon-release.wav",
+        "frames": 288000,
+        "sample_rate": 48000,
+        "finite_clip_safe": true
+      }
+    ],
+    "historical_pulse_wav_sha256_matched": "4d873b3468ce37244badef9b3dd22c6a0765ec4b163e553a5b03b3e7b352207c",
+    "relative_links_checked": 12,
+    "browser": "not run; restoration task, no new browser playback or auditory claim",
+    "subjective": "past choice only; not new auditory acceptance"
+  },
+  "pitch_validation": {
+    "known_hz": 440,
+    "estimated_median_hz": 441.27152886549857,
+    "gap_frames": 18,
+    "gap_stays_null": true,
+    "identical_inputs_joint_delta": 0
+  },
+  "files_sha256": {
+    "SKILL.md": "89759bf5a368084f4a46e100de84fbfc94d6eefeefdc00820a54e3d5a01e7b0b",
+    "agents/openai.yaml": "72171893969ed2aed50751df81e788d10382c3c1ba06f2f70c271ffa7e7e43e9",
+    "assets/approved-presets.json": "a9ec66ede4a01bf900ba1cdca5e2b54c86886eb8b485998409a8f7bb6ce3ba9a",
+    "assets/pulse-harmony-approved.json": "280318604d0cb1f06ecac2b6b5cbcbaa6826120721a418d44232f60e6c13b2c7",
+    "assets/reference-experiment-feedback.json": "69880341ba011c2abc03d386f65906e89d702d1d2791d1694234567855dfb643",
+    "references/design-schema.md": "0f46c2035032395a146ceb3c56329c86443c62803e7c08e388d9d459959b8c6a",
+    "references/measurement-and-tuning.md": "9939704ab36814c8bf14ceca64d613fe8c4677215b0751ebb42dbeb6a1e8bdb1",
+    "references/pitch-analysis.md": "e2de8f11eda5f6896abff3e3d98df9858b48f7d90aa44f26d9070cde6e52a73b",
+    "references/pulse-harmony.md": "e54417142c4731d24e2ca3937e8710a74d22171b48596f973679affb1564eed7",
+    "references/reference-experiments.md": "9e0a01931f648bbf211d7e8bb680b22d70b59919388ca61f0a039290e7950f9c",
+    "references/session-feedback.md": "de550d53e85d7f8bd2ec4210284bf183fb34e6cdfbf371d2e33842ceb3930900",
+    "references/sound-brief.md": "b8e522d957db4b2ea465fd6f99184a2c2faaa901a4dffee9eb01aa2206fd646a",
+    "scripts/compare.py": "de335a093562f7f7a996f7526a9d10d76bb33a4d11bb124b50133895f002639d",
+    "scripts/engine.py": "53188945e024f442044fec50c2388f0846b986a4a2b434a06e180b79d04bee77",
+    "scripts/pitch_compare.py": "5a84fdc19ffd0945a342f3cf24c183c0f47e49fe8f7420362de37d96c0f97f5f",
+    "scripts/render.py": "8a60dd621d1ede28d82bf11100ab3f23c6be5543366969b9652e789ce52a98c4",
+    "scripts/render_pulse.py": "da23c153f495984f284c77988a5239b7cadb01e986b7459091193bc2d8e6b479"
+  },
+  "recovery_snapshot_files_sha256": {
+    "SKILL.md": "96e7709bf8c6d22b4812ea17fcd04ae60acc452a43cfc73824373aa31c6c0390",
+    "agents/openai.yaml": "72171893969ed2aed50751df81e788d10382c3c1ba06f2f70c271ffa7e7e43e9",
+    "assets/approved-presets.json": "a9ec66ede4a01bf900ba1cdca5e2b54c86886eb8b485998409a8f7bb6ce3ba9a",
+    "assets/pulse-harmony-approved.json": "280318604d0cb1f06ecac2b6b5cbcbaa6826120721a418d44232f60e6c13b2c7",
+    "assets/reference-experiment-feedback.json": "69880341ba011c2abc03d386f65906e89d702d1d2791d1694234567855dfb643",
+    "references/design-schema.md": "0f46c2035032395a146ceb3c56329c86443c62803e7c08e388d9d459959b8c6a",
+    "references/measurement-and-tuning.md": "9939704ab36814c8bf14ceca64d613fe8c4677215b0751ebb42dbeb6a1e8bdb1",
+    "references/pitch-analysis.md": "e2de8f11eda5f6896abff3e3d98df9858b48f7d90aa44f26d9070cde6e52a73b",
+    "references/pulse-harmony.md": "e54417142c4731d24e2ca3937e8710a74d22171b48596f973679affb1564eed7",
+    "references/reference-experiments.md": "9e0a01931f648bbf211d7e8bb680b22d70b59919388ca61f0a039290e7950f9c",
+    "references/session-feedback.md": "de550d53e85d7f8bd2ec4210284bf183fb34e6cdfbf371d2e33842ceb3930900",
+    "scripts/compare.py": "de335a093562f7f7a996f7526a9d10d76bb33a4d11bb124b50133895f002639d",
+    "scripts/engine.py": "53188945e024f442044fec50c2388f0846b986a4a2b434a06e180b79d04bee77",
+    "scripts/pitch_compare.py": "5a84fdc19ffd0945a342f3cf24c183c0f47e49fe8f7420362de37d96c0f97f5f",
+    "scripts/render.py": "8a60dd621d1ede28d82bf11100ab3f23c6be5543366969b9652e789ce52a98c4",
+    "scripts/render_pulse.py": "da23c153f495984f284c77988a5239b7cadb01e986b7459091193bc2d8e6b479"
+  },
+  "updates": [
+    {
+      "date": "2026-10-16",
+      "purpose": "User-requested learning from external sound-effects skill",
+      "source": {
+        "source_url": "https://github.com/awesome-genmedia/skills/blob/main/sound-effects/SKILL.md",
+        "revision_url": "https://github.com/awesome-genmedia/skills/blob/e4e641e21e59561fab7ab2bb7d90889e04aed84e/sound-effects/SKILL.md",
+        "commit": "e4e641e21e59561fab7ab2bb7d90889e04aed84e",
+        "sha256": "e716155b31d82db7b1d02b26d0c8204a36ea88cfa8d52de40bc1812be7d782f3",
+        "reviewed_at": "2026-10-16",
+        "mode": "ideas adapted; no third-party code or full text imported"
+      },
+      "adopted": [
+        "sound brief: target, texture, acoustic space, explicit duration",
+        "choose production method by effect role",
+        "separate functional elements when complexity obscures the primary cue"
+      ],
+      "not_imported": [
+        "external API adapter, credentials and model version defaults",
+        "provider tool permissions",
+        "third-party source text or code",
+        "batch generation as a default"
+      ],
+      "scope": "instructions only; synthesis and analysis scripts, existing presets unchanged"
+    }
+  ]
+}

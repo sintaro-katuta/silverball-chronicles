@@ -1,0 +1,78 @@
+{
+  "kind": "read-only static geometry review",
+  "date": "2026-10-16",
+  "newTrialShots": 0,
+  "productChanged": false,
+  "reviewers": [
+    "PM",
+    "lead_engineer",
+    "designer",
+    "scrum_master"
+  ],
+  "acceptedScope": "Static source geometry and visual drawing only; no new trajectory/cause/manufacturer-intent proof. No wheel trial approval inferred.",
+  "checks": [
+    "25 road pair gaps independently recomputed; 23 ordinary pairs exceed ball diameter3.6",
+    "tray centres25/26/90 inside; axis/capsule overlaps24/25/90/93",
+    "road26 to90 dx11.5dy3;90 to91 dx12dy-3.5",
+    "SVG has no embedded image; original user picture unchanged",
+    "independent review retained geometry-not-dynamics caveats"
+  ],
+  "files": [
+    {
+      "path": "prototype/reference-review/s8-20261016/board-relation-review/relations.svg",
+      "sha256": "d92935850403db9f1554f9915852cfd1db2bbaf94acd8fc2f2673b23a34e7941"
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/board-relation-review/relations.png",
+      "sha256": "c2803323a6822ae098947effcf7b9d382f0b04277106aef3a5c5128976ac6f0c"
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/board-relation-review/geometry.json",
+      "sha256": "4ac6896812c17c27ae8b9d0c779a697652cfd6a7a9725c6861f4e9370a34abab"
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/board-relation-review/diagram.executed.mjs",
+      "sha256": "dba0c32f91c2b92fd790661c42b700fab0e8d5d587a9d5d35ae13968718cadbe"
+    },
+    {
+      "path": "docs/agile/S8_BOARD_RELATION_REVIEW.md",
+      "sha256": "4d2e2a5b41eb13aafcd0019d72179b59895a625afb17ea2830d1d47f552b2bb8"
+    },
+    {
+      "path": "docs/agile/S8_BOARD_RELATION_GEOMETRY.md",
+      "sha256": "fc45eea94ba5d8cc4b431fc93fb7150221d51a842099e0f8145583029fc3ce1a"
+    },
+    {
+      "path": "docs/agile/S8_BOARD_RELATION_DESIGN.md",
+      "sha256": "654d4ade7a2024c09a117e9c79e0ee9a761da8bb8ae3a6af7c13fdaa08752307"
+    }
+  ],
+  "reference": {
+    "width": 904,
+    "height": 1280,
+    "sha256": "494c447d33e4264a98da26f844622a3c887fcf07e66e243992a720e9ae58b2e9",
+    "usedAs": "read-only visual reference; not embedded in generated diagram"
+  },
+  "staticSource": [
+    {
+      "path": "prototype/src/pixi/source-layout.js",
+      "sha256": "46b8aff73fb3a5906558cf5a7b81bf3ae88193c65836336e43734647ad792732"
+    },
+    {
+      "path": "prototype/src/pixi/lcd-layout.js",
+      "sha256": "9fce593670e014ee3d60227633261d1ca8e886ee345e95e869fc6ed9a5b88d7b"
+    },
+    {
+      "path": "prototype/src/pixi/heso-guide.js",
+      "sha256": "2e397fc0feb88d745feea1e91ace8dd2bc52942b7aa9d8fe76c867fa0e26e403"
+    },
+    {
+      "path": "prototype/src/pixi/board-runtime.js",
+      "sha256": "70238e4db7f8457c1f76bf221846381cb4b6cb4f5dde4e5ae300b6a11629f3b2"
+    },
+    {
+      "path": "prototype/src/physics/physics.js",
+      "sha256": "47c10630947065d6c992726d71d1fd693769d80b904affabf3e939d7bb8d929b"
+    }
+  ]
+}

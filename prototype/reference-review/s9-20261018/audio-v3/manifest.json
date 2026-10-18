@@ -1,0 +1,1746 @@
+{
+  "version": 3,
+  "baselineHead": "02054e84078d421caf087cb8dc2dda490a146b4b",
+  "stage": "all",
+  "items": [
+    {
+      "id": "music-normal",
+      "type": "music",
+      "label": "月下疾走",
+      "title": "月下疾走",
+      "bpm": 160,
+      "bars": 16,
+      "duration": 24,
+      "loopStart": 0,
+      "loopEnd": 24,
+      "level": 0.15,
+      "path": "music/normal.mp3",
+      "baselinePath": "baseline/music-normal.mp3",
+      "baselineLabel": "変更前S9の曲（02054e8）",
+      "measurement": {
+        "duration": 24,
+        "frames": 1152000,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.3400000035762787,
+        "rms": 0.06041432323439939,
+        "crestDB": 15.006780135210045,
+        "max400msRMS": 0.06701556531420404,
+        "monoLossDB": -0.004941333391172826,
+        "correlation": 0.9979867346637731,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "22601872d1dc27f79578c3c6e5e4cce172c9354f96035ee2e4fa3a450d4f4a30",
+        "loudness": {
+          "input_i": "-22.35",
+          "input_tp": "-9.16",
+          "input_lra": "2.20",
+          "input_thresh": "-32.35",
+          "output_i": "-18.07",
+          "output_tp": "-4.95",
+          "output_lra": "0.20",
+          "output_thresh": "-28.07",
+          "normalization_type": "dynamic",
+          "target_offset": "0.07"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 1,
+        "baseline": 0.8540828474185443,
+        "targetLUFS": -22.35
+      }
+    },
+    {
+      "id": "music-battle",
+      "type": "music",
+      "label": "一閃の鼓動",
+      "title": "一閃の鼓動",
+      "bpm": 160,
+      "bars": 36,
+      "duration": 54,
+      "loopStart": 0,
+      "loopEnd": 54,
+      "level": 0.18,
+      "path": "music/battle.mp3",
+      "baselinePath": "baseline/music-battle.mp3",
+      "baselineLabel": "変更前S9の曲（02054e8）",
+      "measurement": {
+        "duration": 54,
+        "frames": 2592000,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.3400000035762787,
+        "rms": 0.05849269690563754,
+        "crestDB": 15.287545517939732,
+        "max400msRMS": 0.06774271896294756,
+        "monoLossDB": -0.0050705610700118526,
+        "correlation": 0.9979345131726778,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "dd18b9f83a94efcd70aabad6805dea2aa5880eb2b3b8c29a5701c3f996c6615d",
+        "loudness": {
+          "input_i": "-22.41",
+          "input_tp": "-9.00",
+          "input_lra": "2.50",
+          "input_thresh": "-32.41",
+          "output_i": "-17.24",
+          "output_tp": "-3.82",
+          "output_lra": "1.60",
+          "output_thresh": "-27.24",
+          "normalization_type": "dynamic",
+          "target_offset": "-0.76"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 0.7103951700029558,
+        "baseline": 1,
+        "targetLUFS": -25.38
+      }
+    },
+    {
+      "id": "music-bonus",
+      "type": "music",
+      "label": "暁の凱歌",
+      "title": "暁の凱歌",
+      "bpm": 180,
+      "bars": 12,
+      "duration": 16,
+      "loopStart": 0,
+      "loopEnd": 16,
+      "level": 0.18,
+      "path": "music/bonus.mp3",
+      "baselinePath": "baseline/music-bonus.mp3",
+      "baselineLabel": "変更前S9の曲（02054e8）",
+      "measurement": {
+        "duration": 16,
+        "frames": 768000,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.3400000035762787,
+        "rms": 0.06261704348075596,
+        "crestDB": 14.695727268890739,
+        "max400msRMS": 0.07187988454241866,
+        "monoLossDB": -0.004788672607257809,
+        "correlation": 0.99798186164722,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "70f061ce939669a1ec98066ec894b29618b2f90311af808e110db98b3457e1a2",
+        "loudness": {
+          "input_i": "-21.65",
+          "input_tp": "-9.23",
+          "input_lra": "2.00",
+          "input_thresh": "-31.69",
+          "output_i": "-18.06",
+          "output_tp": "-5.70",
+          "output_lra": "0.20",
+          "output_thresh": "-28.08",
+          "normalization_type": "dynamic",
+          "target_offset": "0.06"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 0.9354056741475517,
+        "baseline": 1,
+        "targetLUFS": -22.23
+      }
+    },
+    {
+      "id": "music-rush",
+      "type": "music",
+      "label": "月影オーバードライブ",
+      "title": "月影オーバードライブ",
+      "bpm": 192,
+      "bars": 10,
+      "duration": 12.5,
+      "loopStart": 0,
+      "loopEnd": 12.5,
+      "level": 0.19,
+      "path": "music/rush.mp3",
+      "baselinePath": "baseline/music-rush.mp3",
+      "baselineLabel": "変更前S9の曲（02054e8）",
+      "measurement": {
+        "duration": 12.5,
+        "frames": 600000,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.3400000035762787,
+        "rms": 0.06071578538182844,
+        "crestDB": 14.96354608913026,
+        "max400msRMS": 0.06898193569249164,
+        "monoLossDB": -0.004910232493365095,
+        "correlation": 0.9979681337935794,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "c177fea73ac89b879e492ff64135976dfc5b4c5a6dfb5386381cb5bcb770b162",
+        "loudness": {
+          "input_i": "-22.20",
+          "input_tp": "-9.37",
+          "input_lra": "2.10",
+          "input_thresh": "-32.20",
+          "output_i": "-18.07",
+          "output_tp": "-5.36",
+          "output_lra": "0.60",
+          "output_thresh": "-28.07",
+          "normalization_type": "dynamic",
+          "target_offset": "0.07"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 1,
+        "baseline": 0.9919733392390814,
+        "targetLUFS": -22.2
+      }
+    },
+    {
+      "id": "se-development",
+      "type": "se",
+      "label": "発展へ移る短い上昇と保持",
+      "duration": 1.2,
+      "level": 0.26,
+      "priority": 2,
+      "duckFor": 0.22,
+      "role": "発展へ移る短い上昇と保持",
+      "kind": "s9-synth",
+      "style": "s9-v3-bright-additive",
+      "path": "se/development-v0.mp3",
+      "baselinePath": "baseline/se-development.mp3",
+      "baselineLabel": "変更前S9の音（02054e8）",
+      "variant": 0,
+      "measurement": {
+        "duration": 1.2,
+        "frames": 57600,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.25999999046325684,
+        "rms": 0.06246015295043766,
+        "crestDB": 12.38740577317966,
+        "max400msRMS": 0.08090425072935493,
+        "monoLossDB": 0,
+        "correlation": 1,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "55a09c2c0ffc4ed515241450c99714dcc52def005eab4841473fe41cb80e6dd6",
+        "loudness": {
+          "input_i": "-19.86",
+          "input_tp": "-11.45",
+          "input_lra": "0.00",
+          "input_thresh": "-30.28",
+          "output_i": "-17.99",
+          "output_tp": "-9.59",
+          "output_lra": "0.00",
+          "output_thresh": "-28.41",
+          "normalization_type": "linear",
+          "target_offset": "-0.01"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 0.9549925860214357,
+        "baseline": 1,
+        "targetLUFS": -20.26
+      }
+    },
+    {
+      "id": "se-pushPrompt",
+      "type": "se",
+      "label": "押せることを知らせる二拍",
+      "duration": 0.82,
+      "level": 0.24,
+      "priority": 2,
+      "duckFor": 0.13,
+      "role": "押せることを知らせる二拍",
+      "kind": "s9-synth",
+      "style": "s9-v3-bright-additive",
+      "path": "se/pushPrompt-v0.mp3",
+      "baselinePath": "baseline/se-pushPrompt.mp3",
+      "baselineLabel": "変更前S9の音（02054e8）",
+      "variant": 0,
+      "measurement": {
+        "duration": 0.82,
+        "frames": 39360,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.23999999463558197,
+        "rms": 0.05514336724727413,
+        "crestDB": 12.774358997633673,
+        "max400msRMS": 0.06569565520480046,
+        "monoLossDB": -0.003412435228676311,
+        "correlation": 0.9984325980157036,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "343633f9c57d949001ac64752fcf058a88ece126098e6007a0aa382152ece011",
+        "loudness": {
+          "input_i": "-20.62",
+          "input_tp": "-12.04",
+          "input_lra": "0.00",
+          "input_thresh": "-31.28",
+          "output_i": "-17.98",
+          "output_tp": "-9.42",
+          "output_lra": "0.00",
+          "output_thresh": "-28.65",
+          "normalization_type": "linear",
+          "target_offset": "-0.02"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 0.9840111057611337,
+        "baseline": 1,
+        "targetLUFS": -20.76
+      }
+    },
+    {
+      "id": "se-pushPress",
+      "type": "se",
+      "label": "押した瞬間の短い応答",
+      "duration": 0.32,
+      "level": 0.27,
+      "priority": 2,
+      "duckFor": 0.13,
+      "role": "押した瞬間の短い応答",
+      "kind": "s9-synth",
+      "style": "s9-v3-bright-additive",
+      "path": "se/pushPress-v0.mp3",
+      "baselinePath": "baseline/se-pushPress.mp3",
+      "baselineLabel": "変更前S9の音（02054e8）",
+      "variant": 0,
+      "measurement": {
+        "duration": 0.32,
+        "frames": 15360,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.27000001072883606,
+        "rms": 0.057050211166075455,
+        "crestDB": 13.502130503165379,
+        "max400msRMS": 0.057050211166075455,
+        "monoLossDB": 0,
+        "correlation": 1,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "ae69ea59bfc1d5ede9327fe6d990cd03191abfecc38d0d0bf565cceea606c150",
+        "loudness": {
+          "input_i": "-24.06",
+          "input_tp": "-11.15",
+          "input_lra": "0.00",
+          "input_thresh": "-34.06",
+          "output_i": "-17.98",
+          "output_tp": "-5.09",
+          "output_lra": "0.00",
+          "output_thresh": "-27.98",
+          "normalization_type": "linear",
+          "target_offset": "-0.02"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 1,
+        "baseline": 0.8963961859499501,
+        "targetLUFS": -24.06
+      }
+    },
+    {
+      "id": "se-heroHit",
+      "type": "se",
+      "label": "途中の攻撃の一打",
+      "duration": 0.74,
+      "level": 0.32,
+      "priority": 2,
+      "duckFor": 0.16,
+      "role": "途中の攻撃の一打",
+      "kind": "s9-synth",
+      "style": "s9-v3-bright-additive",
+      "path": "se/heroHit-v0.mp3",
+      "baselinePath": "baseline/se-heroHit.mp3",
+      "baselineLabel": "変更前S9の音（02054e8）",
+      "variant": 0,
+      "measurement": {
+        "duration": 0.74,
+        "frames": 35520,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.3199999928474426,
+        "rms": 0.04827571424461551,
+        "crestDB": 16.428425213561088,
+        "max400msRMS": 0.0656151979512058,
+        "monoLossDB": -0.0011288693874239736,
+        "correlation": 0.9995657429094261,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "a64e7af3fc09e80df613bdfa55c74b6f1af3ee9b9e6ff6513234e2aa059f10a8",
+        "loudness": {
+          "input_i": "-24.17",
+          "input_tp": "-9.61",
+          "input_lra": "0.00",
+          "input_thresh": "-35.13",
+          "output_i": "-17.97",
+          "output_tp": "-3.44",
+          "output_lra": "0.00",
+          "output_thresh": "-28.93",
+          "normalization_type": "linear",
+          "target_offset": "-0.03"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 1,
+        "baseline": 0.83656559575581,
+        "targetLUFS": -24.17
+      }
+    },
+    {
+      "id": "se-decisiveHit",
+      "type": "se",
+      "label": "pressure最終一撃・当落非確定",
+      "duration": 1.55,
+      "level": 0.56,
+      "priority": 3,
+      "duckFor": 0.28,
+      "role": "pressure最終一撃・当落非確定",
+      "kind": "s9-synth",
+      "style": "s9-v3-bright-additive",
+      "path": "se/decisiveHit-v0.mp3",
+      "baselinePath": "baseline/se-decisiveHit.mp3",
+      "baselineLabel": "変更前S9の音（02054e8）",
+      "variant": 0,
+      "measurement": {
+        "duration": 1.55,
+        "frames": 74400,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.5600000023841858,
+        "rms": 0.08679373797270505,
+        "crestDB": 16.19399272380533,
+        "max400msRMS": 0.16250316070658757,
+        "monoLossDB": -0.0035085561740299887,
+        "correlation": 0.9986730623613127,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "be65a9ce58d5211f6da639d42c1bce5be816d44d4dab6c8cb762d0d1bc8b4c41",
+        "loudness": {
+          "input_i": "-16.60",
+          "input_tp": "-5.04",
+          "input_lra": "0.00",
+          "input_thresh": "-27.67",
+          "output_i": "-18.00",
+          "output_tp": "-6.43",
+          "output_lra": "0.00",
+          "output_thresh": "-29.07",
+          "normalization_type": "linear",
+          "target_offset": "0.00"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 0.9484184633008974,
+        "baseline": 1,
+        "targetLUFS": -17.06
+      }
+    },
+    {
+      "id": "se-revival",
+      "type": "se",
+      "label": "復活開始後の再点火",
+      "duration": 1.5,
+      "level": 0.33,
+      "priority": 3,
+      "duckFor": 0.3,
+      "role": "復活開始後の再点火",
+      "kind": "s9-synth",
+      "style": "s9-v3-bright-additive",
+      "path": "se/revival-v0.mp3",
+      "baselinePath": "baseline/se-revival.mp3",
+      "baselineLabel": "変更前S9の音（02054e8）",
+      "variant": 0,
+      "measurement": {
+        "duration": 1.5,
+        "frames": 72000,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.33000001311302185,
+        "rms": 0.0738863242886352,
+        "crestDB": 12.998997908123528,
+        "max400msRMS": 0.10495080450114508,
+        "monoLossDB": 0,
+        "correlation": 1,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "3d54675af2320d57cbec295bf016a1bafab668a4bdfba06eb4d3a0f484f2b102",
+        "loudness": {
+          "input_i": "-17.91",
+          "input_tp": "-9.25",
+          "input_lra": "0.00",
+          "input_thresh": "-28.24",
+          "output_i": "-17.98",
+          "output_tp": "-9.34",
+          "output_lra": "0.00",
+          "output_thresh": "-28.32",
+          "normalization_type": "linear",
+          "target_offset": "-0.02"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 0.9594006315159332,
+        "baseline": 1,
+        "targetLUFS": -18.27
+      }
+    },
+    {
+      "id": "se-bonusStart",
+      "type": "se",
+      "label": "確定後のBONUS開始",
+      "duration": 2.6,
+      "level": 0.35,
+      "priority": 3,
+      "duckFor": 0.35,
+      "role": "確定後のBONUS開始",
+      "kind": "s9-synth",
+      "style": "s9-v3-bright-additive",
+      "path": "se/bonusStart-v0.mp3",
+      "baselinePath": "baseline/se-bonusStart.mp3",
+      "baselineLabel": "変更前S9の音（02054e8）",
+      "variant": 0,
+      "measurement": {
+        "duration": 2.6,
+        "frames": 124800,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.3499999940395355,
+        "rms": 0.07747443634287955,
+        "crestDB": 13.098192233906733,
+        "max400msRMS": 0.11700960425201083,
+        "monoLossDB": 0,
+        "correlation": 1,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "6a923ad996dfc9d42a14815e196c01690c2176d814c2f5c27a7970bc3d889f1b",
+        "loudness": {
+          "input_i": "-17.30",
+          "input_tp": "-9.12",
+          "input_lra": "1.20",
+          "input_thresh": "-27.30",
+          "output_i": "-16.93",
+          "output_tp": "-8.77",
+          "output_lra": "0.00",
+          "output_thresh": "-26.93",
+          "normalization_type": "dynamic",
+          "target_offset": "-1.07"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 1,
+        "baseline": 0.9594006315159332,
+        "targetLUFS": -17.3
+      }
+    },
+    {
+      "id": "se-rushStart",
+      "type": "se",
+      "label": "RUSH突入の加速する短い返し",
+      "duration": 1.45,
+      "level": 0.35,
+      "priority": 3,
+      "duckFor": 0.3,
+      "role": "RUSH突入の加速する短い返し",
+      "kind": "s9-synth",
+      "style": "s9-v3-bright-additive",
+      "path": "se/rushStart-v0.mp3",
+      "baselinePath": "baseline/se-rushStart.mp3",
+      "baselineLabel": "変更前S9の音（02054e8）",
+      "variant": 0,
+      "measurement": {
+        "duration": 1.45,
+        "frames": 69600,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.3499999940395355,
+        "rms": 0.07831389910885991,
+        "crestDB": 13.004583794072587,
+        "max400msRMS": 0.1113059130592719,
+        "monoLossDB": 0,
+        "correlation": 1,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "89f7c57d52d167f5df6bbe459d9a7cbfe62c95971746c52af4bb9d256c51be09",
+        "loudness": {
+          "input_i": "-16.88",
+          "input_tp": "-8.94",
+          "input_lra": "0.00",
+          "input_thresh": "-27.22",
+          "output_i": "-18.00",
+          "output_tp": "-10.07",
+          "output_lra": "0.00",
+          "output_thresh": "-28.33",
+          "normalization_type": "linear",
+          "target_offset": "-0.00"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 1,
+        "baseline": 0.9616122783836647,
+        "targetLUFS": -16.88
+      }
+    },
+    {
+      "id": "se-spin",
+      "type": "se",
+      "label": "図柄回転開始の小さな連続感",
+      "duration": 0.28,
+      "level": 0.13,
+      "priority": 1,
+      "duckFor": 0,
+      "role": "図柄回転開始の小さな連続感",
+      "kind": "s9-synth",
+      "style": "s9-v3-bright-additive",
+      "path": "se/spin-v0.mp3",
+      "baselinePath": "baseline/se-spin.mp3",
+      "baselineLabel": "変更前S9の音（02054e8）",
+      "variant": 0,
+      "measurement": {
+        "duration": 0.28002083333333333,
+        "frames": 13441,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.12999999523162842,
+        "rms": 0.0363550668839503,
+        "crestDB": 11.067567768130207,
+        "max400msRMS": 0.0363550668839503,
+        "monoLossDB": 0,
+        "correlation": 1,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "34955bbda8764edc03f7df3baae29a3e6dc24319e82459330d5520d640afffca",
+        "loudness": {
+          "input_i": "-28.16",
+          "input_tp": "-17.61",
+          "input_lra": "0.00",
+          "input_thresh": "-39.85",
+          "output_i": "-17.96",
+          "output_tp": "-7.45",
+          "output_lra": "0.00",
+          "output_thresh": "-29.65",
+          "normalization_type": "linear",
+          "target_offset": "-0.04"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 0.7798301105232587,
+        "baseline": 1,
+        "targetLUFS": -30.32
+      }
+    },
+    {
+      "id": "se-stopLeft",
+      "type": "se",
+      "label": "左図柄停止の短い打点",
+      "duration": 0.18,
+      "level": 0.18,
+      "priority": 1,
+      "duckFor": 0,
+      "role": "左図柄停止の短い打点",
+      "kind": "s9-synth",
+      "style": "s9-v3-bright-additive",
+      "path": "se/stopLeft-v0.mp3",
+      "baselinePath": "baseline/se-stopLeft.mp3",
+      "baselineLabel": "変更前S9の音（02054e8）",
+      "variant": 0,
+      "measurement": {
+        "duration": 0.18,
+        "frames": 8640,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.18000000715255737,
+        "rms": 0.03744402177536474,
+        "crestDB": 13.637800664564079,
+        "max400msRMS": 0.03744402177536474,
+        "monoLossDB": -0.0029617151977628384,
+        "correlation": 0.9996543190349866,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "61706c57d35afa80f738e18b1e000aa5e9938d4e1ea3c784c829c1bf6aa050d8",
+        "loudness": {
+          "input_i": "-28.35",
+          "input_tp": "-14.89",
+          "input_lra": "0.00",
+          "input_thresh": "-41.32",
+          "output_i": "-17.95",
+          "output_tp": "-4.54",
+          "output_lra": "0.00",
+          "output_thresh": "-30.92",
+          "normalization_type": "linear",
+          "target_offset": "-0.05"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 0.9660508789898137,
+        "baseline": 1,
+        "targetLUFS": -28.65
+      }
+    },
+    {
+      "id": "se-stopRight",
+      "type": "se",
+      "label": "右図柄停止の短い打点",
+      "duration": 0.18,
+      "level": 0.18,
+      "priority": 1,
+      "duckFor": 0,
+      "role": "右図柄停止の短い打点",
+      "kind": "s9-synth",
+      "style": "s9-v3-bright-additive",
+      "path": "se/stopRight-v0.mp3",
+      "baselinePath": "baseline/se-stopRight.mp3",
+      "baselineLabel": "変更前S9の音（02054e8）",
+      "variant": 0,
+      "measurement": {
+        "duration": 0.18,
+        "frames": 8640,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.18000000715255737,
+        "rms": 0.03862016331952446,
+        "crestDB": 13.369168326797308,
+        "max400msRMS": 0.03862016331952446,
+        "monoLossDB": -0.0029474489279142395,
+        "correlation": 0.9996574190716384,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "a7f02e52dda1c47faeb0a87aa03ce9f6ed6c6c50c810f8fd93c1ea8de14a053a",
+        "loudness": {
+          "input_i": "-27.85",
+          "input_tp": "-14.80",
+          "input_lra": "0.00",
+          "input_thresh": "-40.83",
+          "output_i": "-17.95",
+          "output_tp": "-4.95",
+          "output_lra": "0.00",
+          "output_thresh": "-30.93",
+          "normalization_type": "linear",
+          "target_offset": "-0.05"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 0.9885530946569391,
+        "baseline": 1,
+        "targetLUFS": -27.95
+      }
+    },
+    {
+      "id": "se-stopCenter",
+      "type": "se",
+      "label": "中図柄停止の少し重い短い打点・当落非依存",
+      "duration": 0.24,
+      "level": 0.2,
+      "priority": 2,
+      "duckFor": 0,
+      "role": "中図柄停止の少し重い短い打点・当落非依存",
+      "kind": "s9-synth",
+      "style": "s9-v3-bright-additive",
+      "path": "se/stopCenter-v0.mp3",
+      "baselinePath": "baseline/se-stopCenter.mp3",
+      "baselineLabel": "変更前S9の音（02054e8）",
+      "variant": 0,
+      "measurement": {
+        "duration": 0.24,
+        "frames": 11520,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.20000000298023224,
+        "rms": 0.04218777676975253,
+        "crestDB": 13.51686725589155,
+        "max400msRMS": 0.04218777676975253,
+        "monoLossDB": 0,
+        "correlation": 1,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "540702a3b78cb5308d3179581b091e707f01f473e17a51bba84d11d60a5cab68",
+        "loudness": {
+          "input_i": "-28.96",
+          "input_tp": "-13.76",
+          "input_lra": "0.00",
+          "input_thresh": "-38.96",
+          "output_i": "-18.06",
+          "output_tp": "-2.80",
+          "output_lra": "0.00",
+          "output_thresh": "-28.06",
+          "normalization_type": "linear",
+          "target_offset": "0.06"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 1,
+        "baseline": 0.8118952489356746,
+        "targetLUFS": -28.96
+      }
+    },
+    {
+      "id": "se-admission",
+      "type": "se",
+      "label": "ヘソ入賞の小さな明るい応答・当落非依存",
+      "duration": 0.16,
+      "level": 0.12,
+      "priority": 1,
+      "duckFor": 0,
+      "role": "ヘソ入賞の小さな明るい応答・当落非依存",
+      "kind": "s9-synth",
+      "style": "s9-v3-bright-additive",
+      "path": "se/admission-v0.mp3",
+      "baselinePath": "baseline/se-admission.mp3",
+      "baselineLabel": "変更前S9の音（02054e8）",
+      "variant": 0,
+      "measurement": {
+        "duration": 0.16,
+        "frames": 7680,
+        "channels": 2,
+        "rate": 48000,
+        "pcmPeak": 0.11999999731779099,
+        "rms": 0.02655661517758986,
+        "crestDB": 13.100170318439615,
+        "max400msRMS": 0.02655661517758986,
+        "monoLossDB": 0,
+        "correlation": 1,
+        "nonFinite": 0,
+        "clipped": 0,
+        "pcmSHA": "b97e32c903d78f1569b61196112b825b0a1f6615b78852ed5cb921bc1e8de97e",
+        "loudness": {
+          "input_i": "-31.35",
+          "input_tp": "-18.13",
+          "input_lra": "0.00",
+          "input_thresh": "-44.30",
+          "output_i": "-18.05",
+          "output_tp": "-4.78",
+          "output_lra": "0.00",
+          "output_thresh": "-31.00",
+          "normalization_type": "linear",
+          "target_offset": "0.05"
+        },
+        "mp3DecodeExit": 0,
+        "note": "Analysis-only 1s silence pad; no loudness processing in saved files. Crest/RMS/TP are not listening quality."
+      },
+      "auditionGain": {
+        "candidate": 1,
+        "baseline": 0.9440608762859234,
+        "targetLUFS": -31.35
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "baseline/music-normal.wav",
+      "sha256": "a52e08f7a5c2b18606e58cb013db515c3fdba848dee5076a430d5c99f8b6662a",
+      "bytes": 6912102
+    },
+    {
+      "path": "baseline/music-normal.mp3",
+      "sha256": "81ea7227446a7ba4911108267bf9ad22bdead550f5eef0cfd3961792af10edf0",
+      "bytes": 769580
+    },
+    {
+      "path": "music/normal.wav",
+      "sha256": "89b6f6e64b346a4e22c4db4b206b1ecca6ff757b52470ffd2a5ab4fb3ab5e638",
+      "bytes": 6912102
+    },
+    {
+      "path": "music/normal.mp3",
+      "sha256": "9a5f5ad26c8d1d5bf63e19f077194c2ed89a0726b19a79f2923346a6317a5d8d",
+      "bytes": 769580
+    },
+    {
+      "path": "baseline/music-battle.wav",
+      "sha256": "017a94ec764d0e6f00b7f3632b6f0edfa16bd8ea5e3a99ee6b0dc30deeb9a0d9",
+      "bytes": 15552102
+    },
+    {
+      "path": "baseline/music-battle.mp3",
+      "sha256": "5504a1660973ebf93057134a13a7b9b9915458631e6cc64994dfb57b2be810c3",
+      "bytes": 1729580
+    },
+    {
+      "path": "music/battle.wav",
+      "sha256": "b327ecc71d6e908609aa34a2ec80b0f55da689ccfb55f876e4f279da107bff34",
+      "bytes": 15552102
+    },
+    {
+      "path": "music/battle.mp3",
+      "sha256": "add3d2c77320133156461ba02684b31aa5dc9c6a328fa40ba6fe2bec1223e975",
+      "bytes": 1729580
+    },
+    {
+      "path": "baseline/music-bonus.wav",
+      "sha256": "10cc43c487b0106e477b3a24006ce08d48a5bd05c273f0d119407ebe85dda089",
+      "bytes": 4608102
+    },
+    {
+      "path": "baseline/music-bonus.mp3",
+      "sha256": "317b50204d3473437bbf3d1c4dfbbf3bbc7ff517057f7aada4fa58c8fd4204e2",
+      "bytes": 513836
+    },
+    {
+      "path": "music/bonus.wav",
+      "sha256": "4a2220d7a6000d4f25f67f271af0cc072b7e71a7117206a608f93ac61b3bb50d",
+      "bytes": 4608102
+    },
+    {
+      "path": "music/bonus.mp3",
+      "sha256": "af0e2af550d7d9f36d0aec9c958bc4713a4b9b37f4be4cb4ffd0768164d757d4",
+      "bytes": 513836
+    },
+    {
+      "path": "baseline/music-rush.wav",
+      "sha256": "87f0c6c96170444a5cd689d9cc60fe0e4dfa0ded6210599597a49261b55d2a0e",
+      "bytes": 3840102
+    },
+    {
+      "path": "baseline/music-rush.mp3",
+      "sha256": "c39022e63f311d96dcb5c25798c2fed9321c078e1e8f043bd628140fe77e95bf",
+      "bytes": 428588
+    },
+    {
+      "path": "music/rush.wav",
+      "sha256": "605ccf64dc8524b5ca145c0245da6f35772ae103ed3842374acb4b5923ca9519",
+      "bytes": 3600102
+    },
+    {
+      "path": "music/rush.mp3",
+      "sha256": "4a5829a5874b9433db3ec6e79e2bb7ba991e5acbfd79dcbdad271ffdf329ae48",
+      "bytes": 401708
+    },
+    {
+      "path": "baseline/se-development.wav",
+      "sha256": "571e71fdd84899aa13c5112e7f5cce9714640a39548e74ecc7b7bd17b0a5a5e0",
+      "bytes": 345702
+    },
+    {
+      "path": "baseline/se-development.mp3",
+      "sha256": "5ab56d3187ecfd397943a55eaa3b6adf8f354952c349dbfbcf7b77ed8748775e",
+      "bytes": 39980
+    },
+    {
+      "path": "se/development-v0.wav",
+      "sha256": "619b1745debd652ce11b60bdcfafca68a6a8ad68248dbef835652a7e1ed035c9",
+      "bytes": 345702
+    },
+    {
+      "path": "se/development-v0.mp3",
+      "sha256": "2a03f503f51721966a4adc8908b7f59a4a2aad98bc8fa41d1d36346faa339c68",
+      "bytes": 39980
+    },
+    {
+      "path": "se/development-v1.wav",
+      "sha256": "9459b390527fed273dd2ca0057c19f54c4d933304d7b2b5011484b1cf9dd8e0b",
+      "bytes": 345702
+    },
+    {
+      "path": "se/development-v1.mp3",
+      "sha256": "fb3f1854cc6f3b45c6ef79621b98309bdcf03133cb366eef6811ce75d90351ee",
+      "bytes": 39980
+    },
+    {
+      "path": "se/development-v2.wav",
+      "sha256": "a905669986add61ff9d3f01639bc626ceedf923414463bf2e27fb3ba98c2f15b",
+      "bytes": 345702
+    },
+    {
+      "path": "se/development-v2.mp3",
+      "sha256": "77a374c31a1ea9f7e20066d1962a4cbd5bf2a64f2eae757ca785ea758d80a97b",
+      "bytes": 39980
+    },
+    {
+      "path": "se/development-v3.wav",
+      "sha256": "bcc937e0e3985a3d389c4b7293a3b42cf16df679ccf56f48c45210d32628fa86",
+      "bytes": 345702
+    },
+    {
+      "path": "se/development-v3.mp3",
+      "sha256": "31dbc891877960b3438de66b0a789250f1895b8ff2b915e551e5126a6505da3c",
+      "bytes": 39980
+    },
+    {
+      "path": "baseline/se-pushPrompt.wav",
+      "sha256": "b2e35dfd4e313016d1c74d4e9b7135a3c24b34bf586e711fd21dfa51fb630368",
+      "bytes": 236262
+    },
+    {
+      "path": "baseline/se-pushPrompt.mp3",
+      "sha256": "0131b3abadc7c2e650dca1ae60e86e94754a0fdb66c8269b7ce25cc0fad2e9da",
+      "bytes": 28460
+    },
+    {
+      "path": "se/pushPrompt-v0.wav",
+      "sha256": "89ca89f9eae6e3d62f041944587fe9b52880390f36b073637bd5d09f98c2e4f9",
+      "bytes": 236262
+    },
+    {
+      "path": "se/pushPrompt-v0.mp3",
+      "sha256": "9d20ede9f0b46fbffb8ab8f3ccb914a125fffa5a8d0d861a4ce7e74428f73c68",
+      "bytes": 28460
+    },
+    {
+      "path": "se/pushPrompt-v1.wav",
+      "sha256": "bf70acccb1264251d3abb12e4569e4477213b6cd6c91447bcb16042226c35d79",
+      "bytes": 236262
+    },
+    {
+      "path": "se/pushPrompt-v1.mp3",
+      "sha256": "15c703c49eee7dce7ac143d8f562247cb1f11c1c511e35e0edcbbe1c35d0f3d7",
+      "bytes": 28460
+    },
+    {
+      "path": "se/pushPrompt-v2.wav",
+      "sha256": "59ad8e4e00dfaee795344a1790128bc6ccc1788d7efbca5073567436a8ec46cb",
+      "bytes": 236262
+    },
+    {
+      "path": "se/pushPrompt-v2.mp3",
+      "sha256": "85ef07e9f824bbeffdc8e4d52d678e63fd62a98c1a824056ceee5a50409d4eb2",
+      "bytes": 28460
+    },
+    {
+      "path": "se/pushPrompt-v3.wav",
+      "sha256": "51a8075884da36b82ad797634b07b542203cb9df62ded6c9ae56430f04400745",
+      "bytes": 236262
+    },
+    {
+      "path": "se/pushPrompt-v3.mp3",
+      "sha256": "8e47f83e9a858807463a89a94609a7bd61d0997a6b413cd5e0db2a1935fa09a1",
+      "bytes": 28460
+    },
+    {
+      "path": "baseline/se-pushPress.wav",
+      "sha256": "1cb8d3b2b13a6eaeb9377e86d7bd823b55306c1c48aa5b8e0df13594e0877bdc",
+      "bytes": 92262
+    },
+    {
+      "path": "baseline/se-pushPress.mp3",
+      "sha256": "f3943bb3f8f856345c78bc505517028e75969d843363b9f13fed560bf235452c",
+      "bytes": 12332
+    },
+    {
+      "path": "se/pushPress-v0.wav",
+      "sha256": "4d09f7b4ae381cdf83232d6d08d4fb0d6a1959985a891e34d06af2e7c11f7032",
+      "bytes": 92262
+    },
+    {
+      "path": "se/pushPress-v0.mp3",
+      "sha256": "86c1d8e2021e20b32b11405e3c3e2a7a1b7c1d55eead68ecde990a7b96a00939",
+      "bytes": 12332
+    },
+    {
+      "path": "se/pushPress-v1.wav",
+      "sha256": "51889d7f6acc968d0826e6cd3cd18859f9827508ae8376325e7cd887f3aa8bf5",
+      "bytes": 92262
+    },
+    {
+      "path": "se/pushPress-v1.mp3",
+      "sha256": "6305b05d54197e88e19f8e9ea736acac0a55359915a77a00096b519a078e5ea6",
+      "bytes": 12332
+    },
+    {
+      "path": "se/pushPress-v2.wav",
+      "sha256": "4aba810b72cadefedc17233c07d2960fe9ace9854652af783b5648c7f16a3260",
+      "bytes": 92262
+    },
+    {
+      "path": "se/pushPress-v2.mp3",
+      "sha256": "ec1e5d271d4621d7086400eca5b816648bcfb83b56c323100afe23dcbbf064b1",
+      "bytes": 12332
+    },
+    {
+      "path": "se/pushPress-v3.wav",
+      "sha256": "eb94ad021900ebe4a5d126131b41c902a0a2efcc8bc539f9a2cc3ac23f07ba3d",
+      "bytes": 92262
+    },
+    {
+      "path": "se/pushPress-v3.mp3",
+      "sha256": "cdcc4c932170b0dca26201e8294d15ab2e6657f8c798db7d1611b9572b33cb64",
+      "bytes": 12332
+    },
+    {
+      "path": "baseline/se-heroHit.wav",
+      "sha256": "a9fa789bf478e3a1248c614dd585da8e821f3d66b549ebce422ce284b96afecd",
+      "bytes": 213222
+    },
+    {
+      "path": "baseline/se-heroHit.mp3",
+      "sha256": "6c062ed9da25b725d55cc22499aefced48684a9b3d8a47818df5dbdc2e003ff0",
+      "bytes": 25388
+    },
+    {
+      "path": "se/heroHit-v0.wav",
+      "sha256": "68b7135f7cd2bd7fbca45b092bb14bf8d6155b99baf22d1c045cda3d2935fb72",
+      "bytes": 213222
+    },
+    {
+      "path": "se/heroHit-v0.mp3",
+      "sha256": "f212e0dc1b65898a7897dfd0c0b52017e22ba9a7f532756a41baece50c0cee8b",
+      "bytes": 25388
+    },
+    {
+      "path": "se/heroHit-v1.wav",
+      "sha256": "1d7d5d6ce16a94d744610c35914485589c7ac594f40724025cea3c3ccdc515a6",
+      "bytes": 213222
+    },
+    {
+      "path": "se/heroHit-v1.mp3",
+      "sha256": "db680ad40b371c6e2411040ce2c4f1ed416a5271a197d63a1b2cea1e464ddcf8",
+      "bytes": 25388
+    },
+    {
+      "path": "se/heroHit-v2.wav",
+      "sha256": "f426eafcbdfe312b7dff0b6677d2add9e8d6dedcc7898b9637883bc26a9691e9",
+      "bytes": 213222
+    },
+    {
+      "path": "se/heroHit-v2.mp3",
+      "sha256": "2f12c38e42e2c21416baea5edd715df48bfff86fc289753fa7fbd79c46f3bf9b",
+      "bytes": 25388
+    },
+    {
+      "path": "se/heroHit-v3.wav",
+      "sha256": "4c2dadb4191d014ed7a044c6919d170ecfa82a2df7c3da866ee279a81e4541cf",
+      "bytes": 213222
+    },
+    {
+      "path": "se/heroHit-v3.mp3",
+      "sha256": "67fd5da50e8844503d91b29399a3e640956351f37eb39c3b1a230fe6f7372947",
+      "bytes": 25388
+    },
+    {
+      "path": "baseline/se-decisiveHit.wav",
+      "sha256": "547780559cf49b4f6c08369934d0653852968f9b14d9c81341f9097569030bdc",
+      "bytes": 446502
+    },
+    {
+      "path": "baseline/se-decisiveHit.mp3",
+      "sha256": "26c5d0c9f39504d65f0f0b9adc0a5526d5ed1753b753bdd66382634fa37f970b",
+      "bytes": 51500
+    },
+    {
+      "path": "se/decisiveHit-v0.wav",
+      "sha256": "9f398d5b50b4606008d3b28d7914cc6935319bd7d3f2e388cc677759bbbded78",
+      "bytes": 446502
+    },
+    {
+      "path": "se/decisiveHit-v0.mp3",
+      "sha256": "9bf5e0094afb60e83fd66c39d085d3a2cbf523ab76a55f8790e82ac9489a039e",
+      "bytes": 51500
+    },
+    {
+      "path": "se/decisiveHit-v1.wav",
+      "sha256": "363e8894a59d7898248543b7114eea916a6dadef1fb53731ca28423e395daabd",
+      "bytes": 446502
+    },
+    {
+      "path": "se/decisiveHit-v1.mp3",
+      "sha256": "fe3a0aa393b9992f71b244e460ff0112a36c517fb265815747997dd1fa6cc2c7",
+      "bytes": 51500
+    },
+    {
+      "path": "se/decisiveHit-v2.wav",
+      "sha256": "e285cc13ee6ccbcbc00647d76428573d26bc293980658bf730677403b13fe545",
+      "bytes": 446502
+    },
+    {
+      "path": "se/decisiveHit-v2.mp3",
+      "sha256": "f5a412ea76420bda386c347be5afa8992eec0ef3eacc1b9a4ac6efba7032a8a6",
+      "bytes": 51500
+    },
+    {
+      "path": "se/decisiveHit-v3.wav",
+      "sha256": "fa7af885e1870ae55aa3dc5a06ad7555bb82c36e24750e287b90da69a53f6c00",
+      "bytes": 446502
+    },
+    {
+      "path": "se/decisiveHit-v3.mp3",
+      "sha256": "294e3d03ab13ce275037fd9799e3fde6d5213e04e6d17648c101ba08df717dc9",
+      "bytes": 51500
+    },
+    {
+      "path": "baseline/se-revival.wav",
+      "sha256": "ae5eb774cd717b69980b2582c9d9173a32c80f482768373491ac6c87fe62112f",
+      "bytes": 432102
+    },
+    {
+      "path": "baseline/se-revival.mp3",
+      "sha256": "24a8c3a27765def2660c2d62ba5fc1015fdbf10308e3e53967d2e25b43824d2e",
+      "bytes": 49964
+    },
+    {
+      "path": "se/revival-v0.wav",
+      "sha256": "b95f78c6eb2b3ac3d5cf6b0c50e6e0ada077ea0f43b6f88defe1cb45c61f2bd4",
+      "bytes": 432102
+    },
+    {
+      "path": "se/revival-v0.mp3",
+      "sha256": "72382cfbde3a28b16943d0e781f159a1b65cdaa761d515c76cc8cee044366dab",
+      "bytes": 49964
+    },
+    {
+      "path": "se/revival-v1.wav",
+      "sha256": "68e65110cf0135c068001626ee579eaa913fd6efd216313482135c9d867ca82c",
+      "bytes": 432102
+    },
+    {
+      "path": "se/revival-v1.mp3",
+      "sha256": "7b10737403b74729e04f06d744a9079d8c4e9beccdeae90fde17493d4eba34e2",
+      "bytes": 49964
+    },
+    {
+      "path": "se/revival-v2.wav",
+      "sha256": "4f62fe0f44a3c74bfb8f572358c4cb3242847938bfa1fed0389094e4a9f9717b",
+      "bytes": 432102
+    },
+    {
+      "path": "se/revival-v2.mp3",
+      "sha256": "3a3545574f4f0f6c1ab953a20a471fd62493880c8c3d524fddafa7b7b8542768",
+      "bytes": 49964
+    },
+    {
+      "path": "se/revival-v3.wav",
+      "sha256": "009d82f98417de4b183718a85421e386a19ae62bbcba8d67a8d864e4d2ba9065",
+      "bytes": 432102
+    },
+    {
+      "path": "se/revival-v3.mp3",
+      "sha256": "7234be13129a5c619261329ac9f1f66ece4d415a7f36939aae8a1f5a45caaffc",
+      "bytes": 49964
+    },
+    {
+      "path": "baseline/se-bonusStart.wav",
+      "sha256": "283925e09f0df43883ce64793b0c9559749509eccaebf628eaa80d416c0a1a5f",
+      "bytes": 748902
+    },
+    {
+      "path": "baseline/se-bonusStart.mp3",
+      "sha256": "674aee226d60875449de10f7a423e0e3bd6f7b5947da218f8f6312d8b2291b8f",
+      "bytes": 85292
+    },
+    {
+      "path": "se/bonusStart-v0.wav",
+      "sha256": "4c34c0f035d588efcc46ea45847a971dbf695d2b6b8faf5cc08d8b2baf9dfd50",
+      "bytes": 748902
+    },
+    {
+      "path": "se/bonusStart-v0.mp3",
+      "sha256": "4b5b6ec63f2d1ccb9b523a6800a830d561a75c24833f352bb448a5529a47800d",
+      "bytes": 85292
+    },
+    {
+      "path": "se/bonusStart-v1.wav",
+      "sha256": "4d00d9c537cfe4c416268cad3b271465c36ff0d9649fc083d3a47d91a62da28a",
+      "bytes": 748902
+    },
+    {
+      "path": "se/bonusStart-v1.mp3",
+      "sha256": "d2fa08f96f214dbc781b4eaa7b1b9fc8dfd631f58f7bf523c9edd80ff6b37e75",
+      "bytes": 85292
+    },
+    {
+      "path": "se/bonusStart-v2.wav",
+      "sha256": "9eca700dde96ffc942eb27eba34db1db31a9ab18e84af2719bbe592bf837e4eb",
+      "bytes": 748902
+    },
+    {
+      "path": "se/bonusStart-v2.mp3",
+      "sha256": "8ac308c4fc5f6aa1304345924e338082e863b9345fd6bd11e9b63e978b5b7244",
+      "bytes": 85292
+    },
+    {
+      "path": "se/bonusStart-v3.wav",
+      "sha256": "84d8895bbae132e2276e3733cc371365361faab463e2e34b8eb0ce4daac9b21c",
+      "bytes": 748902
+    },
+    {
+      "path": "se/bonusStart-v3.mp3",
+      "sha256": "13a3038574ddb21c1a11a16a5b79301f2a5ddbd957fdb4f13556f3cf75cd7a36",
+      "bytes": 85292
+    },
+    {
+      "path": "baseline/se-rushStart.wav",
+      "sha256": "5a6b59b95c285641f9775cda81767cc093a019c0431f7ab17eb2903557689a01",
+      "bytes": 417702
+    },
+    {
+      "path": "baseline/se-rushStart.mp3",
+      "sha256": "473955998fb08618ccdcfdf0eb636304a3b5531e81f5068d699c9acc42c22ff1",
+      "bytes": 48428
+    },
+    {
+      "path": "se/rushStart-v0.wav",
+      "sha256": "5b765a8903c83d6f847be257152d77fb36ac78f319a36f0f48292ecc9784b5ee",
+      "bytes": 417702
+    },
+    {
+      "path": "se/rushStart-v0.mp3",
+      "sha256": "dc453aebf5460be9b475ad4a447c6b5245d45660d826d668e679b4795bf669f1",
+      "bytes": 48428
+    },
+    {
+      "path": "se/rushStart-v1.wav",
+      "sha256": "a6d93fa24fceed99d30350d8c1c034b9229d65f370028ddbfab5babea2bfa15c",
+      "bytes": 417702
+    },
+    {
+      "path": "se/rushStart-v1.mp3",
+      "sha256": "fcc6c3a0f9321530b77e3cd56435f0ad13b0fb9e19e68b01e3df285272a1806d",
+      "bytes": 48428
+    },
+    {
+      "path": "se/rushStart-v2.wav",
+      "sha256": "16bbb396df5cf457e1d63042f049c03d6c5230d37ee2d89783eb75ce2dbc5aef",
+      "bytes": 417702
+    },
+    {
+      "path": "se/rushStart-v2.mp3",
+      "sha256": "271f65032c39644a91fdc8b3f77cc3692dce9330278e209b9b603d9ebbab8927",
+      "bytes": 48428
+    },
+    {
+      "path": "se/rushStart-v3.wav",
+      "sha256": "222b84054a7c734d3f10276b38a077344b5846d4fcc7fb366aa33397c03e5224",
+      "bytes": 417702
+    },
+    {
+      "path": "se/rushStart-v3.mp3",
+      "sha256": "3cf4287251dafa3b19ea2d27da8e5210901286fe23d352c218e901e08f558393",
+      "bytes": 48428
+    },
+    {
+      "path": "baseline/se-spin.wav",
+      "sha256": "91d254b61b1a9841728326eccf70a516f7bccffb87874db12b3fbfa04cd5dec8",
+      "bytes": 80748
+    },
+    {
+      "path": "baseline/se-spin.mp3",
+      "sha256": "90e3e88fb14b0198b30d4746400679f579b30ff2c816b5065eec1e2f98cdeeee",
+      "bytes": 10796
+    },
+    {
+      "path": "se/spin-v0.wav",
+      "sha256": "1fe179f241173e1f8b7afdb53c9beb6088bcdcbf4e5c0c251eb800a35bdf717a",
+      "bytes": 80748
+    },
+    {
+      "path": "se/spin-v0.mp3",
+      "sha256": "bf94996098f816032b47f4679aec9ae9d5cefb56549650fbc09f75292b406dd0",
+      "bytes": 10796
+    },
+    {
+      "path": "se/spin-v1.wav",
+      "sha256": "d8e7a34b4cb068eb43b9ca1c3485dd619fb221a69f9b1c0a72bf279d298525de",
+      "bytes": 80748
+    },
+    {
+      "path": "se/spin-v1.mp3",
+      "sha256": "74565abe038a00a24645aee4ad42aaef09e5b75d6ee286ff548eb71bd8f5169c",
+      "bytes": 10796
+    },
+    {
+      "path": "se/spin-v2.wav",
+      "sha256": "839866775b33913665392615f7a2991a5f6c3630ac4574431e51afdc6350f5e1",
+      "bytes": 80748
+    },
+    {
+      "path": "se/spin-v2.mp3",
+      "sha256": "588bbf9ca1a1128d59d6bbd53c358a20bed6d8067bf77d3dec38cc1c7c7442b4",
+      "bytes": 10796
+    },
+    {
+      "path": "se/spin-v3.wav",
+      "sha256": "e7caf79aa7aa28c3a08731b07d85ee93ee81c1fae181acb11ab7463e624deccc",
+      "bytes": 80748
+    },
+    {
+      "path": "se/spin-v3.mp3",
+      "sha256": "8b6e2eba329a3dbdf577962f1c2e2ea1ebd8e314236e804f1e9337f4f54da0ca",
+      "bytes": 10796
+    },
+    {
+      "path": "baseline/se-stopLeft.wav",
+      "sha256": "4a40eaf220622d42db9382e6423bbc446ea260cdbe59435408f7b1355a3d3ba2",
+      "bytes": 51942
+    },
+    {
+      "path": "baseline/se-stopLeft.mp3",
+      "sha256": "5dd19683b1da02b3d2975944012fcad493cec6d4bb367564d95f3338fd7a378d",
+      "bytes": 7724
+    },
+    {
+      "path": "se/stopLeft-v0.wav",
+      "sha256": "4087c106faf657c5adb7e8d36fe5debfd56ec6f2c80264ff05ae68de72a6e4d0",
+      "bytes": 51942
+    },
+    {
+      "path": "se/stopLeft-v0.mp3",
+      "sha256": "bc48c9cb4d7ac6d5a22815cdd882cc897c4f568dead50b603706621553bb0dda",
+      "bytes": 7724
+    },
+    {
+      "path": "se/stopLeft-v1.wav",
+      "sha256": "dffa5bdd699c79ab2a6d7fce0a81e46b50d679b69e2e97114a4c225c52ac1563",
+      "bytes": 51942
+    },
+    {
+      "path": "se/stopLeft-v1.mp3",
+      "sha256": "71283f5ffac6674ee4063b3c45099f0e4944bb2360da2efea4fdcc5b9d5579c8",
+      "bytes": 7724
+    },
+    {
+      "path": "se/stopLeft-v2.wav",
+      "sha256": "fbcd72e0ff6ba40a33373eb4931c69ad20939bc228ccde775d83549d8e6c8355",
+      "bytes": 51942
+    },
+    {
+      "path": "se/stopLeft-v2.mp3",
+      "sha256": "6073e38f7f6b3d7d2064607bdf1aeaae19a597e3b726f28f2b60c6e9ab6ca934",
+      "bytes": 7724
+    },
+    {
+      "path": "se/stopLeft-v3.wav",
+      "sha256": "c0dca44a169ddc5d82ec49b80467639b7dac2f3321981dbcf77a4442b9c635b2",
+      "bytes": 51942
+    },
+    {
+      "path": "se/stopLeft-v3.mp3",
+      "sha256": "e9f8b44a19a6dacef442e8824cbac3f8a821d2905bb5b9a677d54419951bebe3",
+      "bytes": 7724
+    },
+    {
+      "path": "baseline/se-stopRight.wav",
+      "sha256": "1080579c3f7e8dea9ba170d3ad07f28017f15b3a5ddcd586f3cfcbaccf77e23b",
+      "bytes": 51942
+    },
+    {
+      "path": "baseline/se-stopRight.mp3",
+      "sha256": "6acfa0d0b684ab541363d244cb6e0795e3e4bcd7253109d3d8fc8199caf0e779",
+      "bytes": 7724
+    },
+    {
+      "path": "se/stopRight-v0.wav",
+      "sha256": "19fcf911c3d158682b8a3909db1ad44cc34c3139a6df30f5006ec36c42dd1628",
+      "bytes": 51942
+    },
+    {
+      "path": "se/stopRight-v0.mp3",
+      "sha256": "ab73257c69076992e6367f5c02920dd3f9872dff1c4bc250b504851b74be0517",
+      "bytes": 7724
+    },
+    {
+      "path": "se/stopRight-v1.wav",
+      "sha256": "8d90979873110befb27256ce9117a93f398c60a597bf3c77d75ee7d42d563e85",
+      "bytes": 51942
+    },
+    {
+      "path": "se/stopRight-v1.mp3",
+      "sha256": "7d41ff66f5e153606566ab7fa9a7b1089af2825f933d694dc52e24c34d3459e3",
+      "bytes": 7724
+    },
+    {
+      "path": "se/stopRight-v2.wav",
+      "sha256": "b842a2ef39f2897b0af6af54ef74037f3a458a63affab29f30adc8a157227696",
+      "bytes": 51942
+    },
+    {
+      "path": "se/stopRight-v2.mp3",
+      "sha256": "78c448f6798ac59ad015cf77f332aa03a447cdaef04367d489bbb98aea7680b7",
+      "bytes": 7724
+    },
+    {
+      "path": "se/stopRight-v3.wav",
+      "sha256": "a0dcb2585c2d77ffa465f539f5fa6675f9af72c5874e0b333c8aab8e8ca13612",
+      "bytes": 51942
+    },
+    {
+      "path": "se/stopRight-v3.mp3",
+      "sha256": "3f23a5b800bf08e38b95ba8e0692a030d3d5b0c576b33449121ad394e13f71fa",
+      "bytes": 7724
+    },
+    {
+      "path": "baseline/se-stopCenter.wav",
+      "sha256": "c90585e9da441b8c41dd14a7ee0ee84b9b7e2c77ff8afa4b79a7f5e8b0227d2d",
+      "bytes": 69222
+    },
+    {
+      "path": "baseline/se-stopCenter.mp3",
+      "sha256": "4603b7a7fb95e01f569373cb696589f47ff3cceb573564a8d4c9136a897051e9",
+      "bytes": 9260
+    },
+    {
+      "path": "se/stopCenter-v0.wav",
+      "sha256": "211256eff121fde190a5ab70265a3ce8198c9e343e941c9e4b36814b08d0b18e",
+      "bytes": 69222
+    },
+    {
+      "path": "se/stopCenter-v0.mp3",
+      "sha256": "a170cf9b0cc3c2e669b479a95f8fb4579d6dffd36bbd02d3ce8a2d8af79c0710",
+      "bytes": 9260
+    },
+    {
+      "path": "se/stopCenter-v1.wav",
+      "sha256": "c2d092b41ea8d866aee0034d314bb36742083a26b7aafa930eba9480046c7c64",
+      "bytes": 69222
+    },
+    {
+      "path": "se/stopCenter-v1.mp3",
+      "sha256": "85fbc92075c219d1248dcc2ce9e97d73c15b446bb410941b49bb548075005f82",
+      "bytes": 9260
+    },
+    {
+      "path": "se/stopCenter-v2.wav",
+      "sha256": "87d3d05c13ff34a4fa60129fda834cbdd07df7d94b1749319126114d71994749",
+      "bytes": 69222
+    },
+    {
+      "path": "se/stopCenter-v2.mp3",
+      "sha256": "8f399698258563c5d4ee0d511cff327454c7a3e41e44bff5774a55ae195378ec",
+      "bytes": 9260
+    },
+    {
+      "path": "se/stopCenter-v3.wav",
+      "sha256": "a7b75778c920ebca7cba785b41c00f87a040d8a4649f8e1c9b605992ec12337a",
+      "bytes": 69222
+    },
+    {
+      "path": "se/stopCenter-v3.mp3",
+      "sha256": "6084dc2f434bd7654b63a78a902d004b63aeb29800d8a3ac62486c207ef5edcb",
+      "bytes": 9260
+    },
+    {
+      "path": "baseline/se-admission.wav",
+      "sha256": "440fa503749588580df70b6ac76df591047666a03da4de8ddbcf7091124f8662",
+      "bytes": 46182
+    },
+    {
+      "path": "baseline/se-admission.mp3",
+      "sha256": "4ec8ecc9b3c87311436c6ae731e002849fad4f522b282c75938248e985994e8c",
+      "bytes": 6956
+    },
+    {
+      "path": "se/admission-v0.wav",
+      "sha256": "ce960d6878ab790afef4592e594df14f2a9f94b6c12f75d7e431ef4dade954c0",
+      "bytes": 46182
+    },
+    {
+      "path": "se/admission-v0.mp3",
+      "sha256": "c633722114539fff04a8abb14f5200c5ba1b27fa7e989716a3ab804b17845fa1",
+      "bytes": 6956
+    },
+    {
+      "path": "se/admission-v1.wav",
+      "sha256": "206bc065fc88ad9839e9175d9f849e988b8c9ac8bbba3d7464f3f887e57699c9",
+      "bytes": 46182
+    },
+    {
+      "path": "se/admission-v1.mp3",
+      "sha256": "ac9d16d4dc4c0a5c97944f18edcf93eb7eb6c5f58bd5bf254497d471e62753c6",
+      "bytes": 6956
+    },
+    {
+      "path": "se/admission-v2.wav",
+      "sha256": "2fdbb69381e196eab7529ffbaea3c8288ba7e6912c57fcbb7011a57295142dd5",
+      "bytes": 46182
+    },
+    {
+      "path": "se/admission-v2.mp3",
+      "sha256": "14e6142da1e7d98c4117e4cde926f7df4320f9ec3f4b6311a2e95102ca1d8276",
+      "bytes": 6956
+    },
+    {
+      "path": "se/admission-v3.wav",
+      "sha256": "8b6a9696819f93227fa3eb155b96ed33168fd4068ef7d6af7b5726f8f5a6d860",
+      "bytes": 46182
+    },
+    {
+      "path": "se/admission-v3.mp3",
+      "sha256": "4a12a968a804ca2580da8f8872a460bc6ec3505e5636fc2450df10c78283be2a",
+      "bytes": 6956
+    },
+    {
+      "path": "mix/normal-scene-before.wav",
+      "sha256": "102397c9ae711c834ec76fcac94230391724161820453fd3d669be124ffeaa9e",
+      "bytes": 3456102
+    },
+    {
+      "path": "mix/normal-scene-before.mp3",
+      "sha256": "cf7050a0f643f8e168d08aed2c1b4d276bccfec32422504f1393e666cf7426eb",
+      "bytes": 385580
+    },
+    {
+      "path": "mix/normal-scene-after.wav",
+      "sha256": "80c6322ffc2e30ce35f4ecb7ad2dfa024b7584f460ba919191826752211a64b8",
+      "bytes": 3456102
+    },
+    {
+      "path": "mix/normal-scene-after.mp3",
+      "sha256": "8306cd2346cb0b1185b1f293a7430414837d73137448dbc7971810d153266549",
+      "bytes": 385580
+    }
+  ],
+  "sources": [
+    {
+      "path": "prototype/src/pixi/se/s9-synth.js",
+      "sha256": "0c2b5c0985da5912d6e65ec28450d4527493ef10154eb0430f2498875eb3a66c",
+      "bytes": 4826
+    },
+    {
+      "path": "prototype/src/pixi/se/music-score.js",
+      "sha256": "778c2de57af21e6c813b8f1c50157488f3887dc6e8f61cbf7611b6f701ad14f4",
+      "bytes": 3986
+    },
+    {
+      "path": "prototype/src/pixi/se/s9-se.js",
+      "sha256": "fabf7244577e40638d830a30e696ae196968ddaa11fc741bee4515fb33d1a773",
+      "bytes": 4477
+    },
+    {
+      "path": "prototype/src/pixi/se/synth-wave.js",
+      "sha256": "042b18a27172f7f1c0ccb6fb4d5392ad316056e6a73e3b230ebe9b71e402dd1f",
+      "bytes": 1215
+    },
+    {
+      "path": "prototype/tools/s9-render-audio-v3.mjs",
+      "sha256": "5137818a0e2037a15bac936bbd212597e1cfe13e86c824c3f58d21fb209bf2b0",
+      "bytes": 9510
+    },
+    {
+      "path": "prototype/reference-review/s9-20261018/audio-v3/baseline-manifest.json",
+      "sha256": "1cf2dbdca44a289b1b47ff45833b755061e30e587e9337ad7c71c077d849af7c",
+      "bytes": 9246
+    }
+  ],
+  "acceptance": {
+    "synthesis": "complete",
+    "numeric": "finite/PCM peak/true peak/LUFS/mono measured; decode exit0",
+    "browser": "not verified",
+    "humanListening": "not verified; user game trial feedback required",
+    "product": "pending"
+  },
+  "interpretation": "Original synthesis. Technical/score review is not human listening acceptance. Baseline is previous S9 music/SE, not original pre-S9 pad.",
+  "representativeMix": {
+    "before": "mix/normal-scene-before.mp3",
+    "after": "mix/normal-scene-after.mp3",
+    "auditionGain": {
+      "baseline": 0.8770008211436346,
+      "candidate": 1,
+      "targetLUFS": -24.66
+    },
+    "scope": "Same scripted 12s mock scene; not actual game audio. No global echo. Matched integrated loudness for listening."
+  },
+  "environment": {
+    "node": "v26.11.0",
+    "ffmpeg": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers"
+  },
+  "additionalSources": [
+    {
+      "path": "prototype/tools/s9-audio-spectrum-v3.mjs",
+      "sha256": "909ed094b1db403d13b2a5a011011ab9e594361c3d85b93eed5eac7a17c6c3b7",
+      "bytes": 2186
+    },
+    {
+      "path": "prototype/tools/s9-v3-technical.mjs",
+      "sha256": "46dda0850e5a396c2f4fa1c6f9b7d86ed287f9418cdbb880f222667a3b92f7ee",
+      "bytes": 4183
+    },
+    {
+      "path": "prototype/tools/s9-render-audio-v3.mjs",
+      "sha256": "5137818a0e2037a15bac936bbd212597e1cfe13e86c824c3f58d21fb209bf2b0",
+      "bytes": 9510
+    },
+    {
+      "path": "prototype/tools/s9-v3-pitch-stems.mjs",
+      "sha256": "47df5ffe201021a19ff46aeff6694c1f1bfa9377b25b44db15d6100db7b0b42d",
+      "bytes": 1586
+    },
+    {
+      "path": "prototype/tools/s9-v3-music-review.py",
+      "sha256": "d6424a6c69c65c350f28b84dd0e559514b797c687d70da4d8e82bdd774df17e6",
+      "bytes": 1887
+    },
+    {
+      "path": "docs/agile/S9_SOUND_DESIGN.md",
+      "sha256": "2d1c2f8a59b2e78b49eec2c63c14300f8299dd76af88793e340cd7be9e91ca9b",
+      "bytes": 22183
+    },
+    {
+      "path": "prototype/reference-review/s9-20261018/audio-v3/executed-before/s9-audio-spectrum-v2.mjs",
+      "sha256": "c7d4ba5b294ed869ba2a8f4cdf6c383e71f85cb8d45a3ff203b6d414ac33dd40",
+      "bytes": 2394
+    },
+    {
+      "path": "prototype/reference-review/s9-20261018/audio-v3/executed-before/s9-render-audio.mjs",
+      "sha256": "343e68f5894192756ea959e01ae4e0711471391deeb755ef08f6a7dcd073b7d6",
+      "bytes": 7137
+    },
+    {
+      "path": "prototype/reference-review/s9-20261018/audio-v3/executed-before/s9-render-audio-v2.mjs",
+      "sha256": "11717d527f0f73b217c6b13b04077d406592c40b1f8e4f5ef18d539a6f4afbe9",
+      "bytes": 6484
+    },
+    {
+      "path": "prototype/reference-review/s9-20261018/audio-v3/executed-before/music-score.js",
+      "sha256": "0a327addc2b78dd92717103caf229f3843c973ff81644277ccbe5b75a1b75e03",
+      "bytes": 3620
+    },
+    {
+      "path": "prototype/reference-review/s9-20261018/audio-v3/executed-before/synth-wave.js",
+      "sha256": "042b18a27172f7f1c0ccb6fb4d5392ad316056e6a73e3b230ebe9b71e402dd1f",
+      "bytes": 1215
+    },
+    {
+      "path": "prototype/reference-review/s9-20261018/audio-v3/executed-before/s9-synth.js",
+      "sha256": "391f5be8db9e604a15a66eb2b0af9861c207bfbdbcadbc82febe5894b4730ad4",
+      "bytes": 2507
+    },
+    {
+      "path": "prototype/reference-review/s9-20261018/audio-v3/executed-before/s9-se.js",
+      "sha256": "4038140bde7ffe691b5feda2a0fb9f5e5ea7d8fad6bcf2d19331688eaf1f996f",
+      "bytes": 4471
+    },
+    {
+      "path": "prototype/reference-review/s9-20261018/audio-v3/executed-before/s9-audio-spectrum.mjs",
+      "sha256": "0e945716bc66c8ee38665ad10ae480cffccb904297f727f0052dd829c9ba7450",
+      "bytes": 2186
+    },
+    {
+      "path": ".agents/skills/pachinko-sound-design/scripts/pitch_compare.py",
+      "sha256": "5a84fdc19ffd0945a342f3cf24c183c0f47e49fe8f7420362de37d96c0f97f5f",
+      "bytes": 5770
+    }
+  ],
+  "analysis": {
+    "spectral": "spectral-measurements.json",
+    "pitch": "pitch-analysis/pitch-analysis.json",
+    "musicPlot": "normal-review.png",
+    "selfReview": "self-review.json",
+    "technical": "technical-checks.json",
+    "environment": "pitch-environment.txt",
+    "sourceCopy": "executed-source/"
+  },
+  "sourceHEADAtFinalization": "02054e84078d421caf087cb8dc2dda490a146b4b"
+}

@@ -1,0 +1,276 @@
+{
+  "head": "02054e84078d421caf087cb8dc2dda490a146b4b",
+  "items": [
+    {
+      "id": "music-normal",
+      "type": "music",
+      "label": "月下の歩み",
+      "source": "audio-v1/music/normal.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/music-normal.mp3",
+      "sha256": "81ea7227446a7ba4911108267bf9ad22bdead550f5eef0cfd3961792af10edf0",
+      "bytes": 769580,
+      "duration": 24
+    },
+    {
+      "id": "music-battle",
+      "type": "music",
+      "label": "一閃への決意",
+      "source": "audio-v1/music/battle.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/music-battle.mp3",
+      "sha256": "5504a1660973ebf93057134a13a7b9b9915458631e6cc64994dfb57b2be810c3",
+      "bytes": 1729580,
+      "duration": 54
+    },
+    {
+      "id": "music-bonus",
+      "type": "music",
+      "label": "暁の祝祭",
+      "source": "audio-v1/music/bonus.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/music-bonus.mp3",
+      "sha256": "317b50204d3473437bbf3d1c4dfbbf3bbc7ff517057f7aada4fa58c8fd4204e2",
+      "bytes": 513836,
+      "duration": 16
+    },
+    {
+      "id": "music-rush",
+      "type": "music",
+      "label": "月影疾走",
+      "source": "audio-v1/music/rush.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/music-rush.mp3",
+      "sha256": "c39022e63f311d96dcb5c25798c2fed9321c078e1e8f043bd628140fe77e95bf",
+      "bytes": 428588,
+      "duration": 13.333333333333334
+    },
+    {
+      "id": "se-development",
+      "type": "se",
+      "label": "発展へ移る短い上昇と保持",
+      "source": "audio-v1/se/development-v0.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/se-development.mp3",
+      "sha256": "5ab56d3187ecfd397943a55eaa3b6adf8f354952c349dbfbcf7b77ed8748775e",
+      "bytes": 39980,
+      "duration": 1.2
+    },
+    {
+      "id": "se-pushPrompt",
+      "type": "se",
+      "label": "押せることを知らせる二拍",
+      "source": "audio-v1/se/pushPrompt-v0.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/se-pushPrompt.mp3",
+      "sha256": "0131b3abadc7c2e650dca1ae60e86e94754a0fdb66c8269b7ce25cc0fad2e9da",
+      "bytes": 28460,
+      "duration": 0.82
+    },
+    {
+      "id": "se-pushPress",
+      "type": "se",
+      "label": "押した瞬間の短い応答",
+      "source": "audio-v1/se/pushPress-v0.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/se-pushPress.mp3",
+      "sha256": "f3943bb3f8f856345c78bc505517028e75969d843363b9f13fed560bf235452c",
+      "bytes": 12332,
+      "duration": 0.32
+    },
+    {
+      "id": "se-heroHit",
+      "type": "se",
+      "label": "途中の攻撃の一打",
+      "source": "audio-v1/se/heroHit-v0.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/se-heroHit.mp3",
+      "sha256": "6c062ed9da25b725d55cc22499aefced48684a9b3d8a47818df5dbdc2e003ff0",
+      "bytes": 25388,
+      "duration": 0.74
+    },
+    {
+      "id": "se-decisiveHit",
+      "type": "se",
+      "label": "pressure最終一撃・当落非確定",
+      "source": "audio-v1/se/decisiveHit-v0.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/se-decisiveHit.mp3",
+      "sha256": "26c5d0c9f39504d65f0f0b9adc0a5526d5ed1753b753bdd66382634fa37f970b",
+      "bytes": 51500,
+      "duration": 1.55
+    },
+    {
+      "id": "se-revival",
+      "type": "se",
+      "label": "復活開始後の再点火",
+      "source": "audio-v1/se/revival-v0.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/se-revival.mp3",
+      "sha256": "24a8c3a27765def2660c2d62ba5fc1015fdbf10308e3e53967d2e25b43824d2e",
+      "bytes": 49964,
+      "duration": 1.5
+    },
+    {
+      "id": "se-bonusStart",
+      "type": "se",
+      "label": "確定後のBONUS開始",
+      "source": "audio-v1/se/bonusStart-v0.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/se-bonusStart.mp3",
+      "sha256": "674aee226d60875449de10f7a423e0e3bd6f7b5947da218f8f6312d8b2291b8f",
+      "bytes": 85292,
+      "duration": 2.6
+    },
+    {
+      "id": "se-rushStart",
+      "type": "se",
+      "label": "RUSH突入の加速する短い返し",
+      "source": "audio-v1/se/rushStart-v0.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/se-rushStart.mp3",
+      "sha256": "473955998fb08618ccdcfdf0eb636304a3b5531e81f5068d699c9acc42c22ff1",
+      "bytes": 48428,
+      "duration": 1.45
+    },
+    {
+      "id": "se-spin",
+      "type": "se",
+      "label": "図柄回転開始の小さな連続感",
+      "source": "audio-v2/se/spin-v0.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/se-spin.mp3",
+      "sha256": "90e3e88fb14b0198b30d4746400679f579b30ff2c816b5065eec1e2f98cdeeee",
+      "bytes": 10796,
+      "duration": 0.28
+    },
+    {
+      "id": "se-stopLeft",
+      "type": "se",
+      "label": "左図柄停止の短い打点",
+      "source": "audio-v2/se/stopLeft-v0.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/se-stopLeft.mp3",
+      "sha256": "5dd19683b1da02b3d2975944012fcad493cec6d4bb367564d95f3338fd7a378d",
+      "bytes": 7724,
+      "duration": 0.18
+    },
+    {
+      "id": "se-stopRight",
+      "type": "se",
+      "label": "右図柄停止の短い打点",
+      "source": "audio-v2/se/stopRight-v0.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/se-stopRight.mp3",
+      "sha256": "6acfa0d0b684ab541363d244cb6e0795e3e4bcd7253109d3d8fc8199caf0e779",
+      "bytes": 7724,
+      "duration": 0.18
+    },
+    {
+      "id": "se-stopCenter",
+      "type": "se",
+      "label": "中図柄停止の少し重い短い打点・当落非依存",
+      "source": "audio-v2/se/stopCenter-v0.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/se-stopCenter.mp3",
+      "sha256": "4603b7a7fb95e01f569373cb696589f47ff3cceb573564a8d4c9136a897051e9",
+      "bytes": 9260,
+      "duration": 0.24
+    },
+    {
+      "id": "se-admission",
+      "type": "se",
+      "label": "ヘソ入賞の小さな明るい応答・当落非依存",
+      "source": "audio-v2/se/admission-v0.mp3",
+      "sourceGeneration": "02054e84078d421caf087cb8dc2dda490a146b4b",
+      "path": "baseline/se-admission.mp3",
+      "sha256": "4ec8ecc9b3c87311436c6ae731e002849fad4f522b282c75938248e985994e8c",
+      "bytes": 6956,
+      "duration": 0.16
+    }
+  ],
+  "sourceFiles": [
+    {
+      "name": "music-score.js",
+      "sha256": "0a327addc2b78dd92717103caf229f3843c973ff81644277ccbe5b75a1b75e03",
+      "bytes": 3620
+    },
+    {
+      "name": "s9-audio-spectrum-v2.mjs",
+      "sha256": "c7d4ba5b294ed869ba2a8f4cdf6c383e71f85cb8d45a3ff203b6d414ac33dd40",
+      "bytes": 2394
+    },
+    {
+      "name": "s9-audio-spectrum.mjs",
+      "sha256": "0e945716bc66c8ee38665ad10ae480cffccb904297f727f0052dd829c9ba7450",
+      "bytes": 2186
+    },
+    {
+      "name": "s9-render-audio-v2.mjs",
+      "sha256": "11717d527f0f73b217c6b13b04077d406592c40b1f8e4f5ef18d539a6f4afbe9",
+      "bytes": 6484
+    },
+    {
+      "name": "s9-render-audio.mjs",
+      "sha256": "343e68f5894192756ea959e01ae4e0711471391deeb755ef08f6a7dcd073b7d6",
+      "bytes": 7137
+    },
+    {
+      "name": "s9-se.js",
+      "sha256": "4038140bde7ffe691b5feda2a0fb9f5e5ea7d8fad6bcf2d19331688eaf1f996f",
+      "bytes": 4471
+    },
+    {
+      "name": "s9-synth.js",
+      "sha256": "391f5be8db9e604a15a66eb2b0af9861c207bfbdbcadbc82febe5894b4730ad4",
+      "bytes": 2507
+    },
+    {
+      "name": "synth-wave.js",
+      "sha256": "042b18a27172f7f1c0ccb6fb4d5392ad316056e6a73e3b230ebe9b71e402dd1f",
+      "bytes": 1215
+    }
+  ],
+  "signaturePCM": [
+    {
+      "name": "win",
+      "variant": 0,
+      "sha256": "05ad43c548e3fde5a97c12773b099bdb982484d0b3bab18636c75d4e89cc3133"
+    },
+    {
+      "name": "win",
+      "variant": 1,
+      "sha256": "c02e23bdec842253bb2d00902a6f432b5417099d9fa5cdd5519d94bbcdb692c0"
+    },
+    {
+      "name": "win",
+      "variant": 2,
+      "sha256": "72217b703ee6624f0cd1a359d94504fea4179e1a045eb7908a7ebc4e6864fcf0"
+    },
+    {
+      "name": "win",
+      "variant": 3,
+      "sha256": "599cca8aaa7db9f05c0270019d6307934e47aa4f8ca9a1866b9abbf1d1b098b8"
+    },
+    {
+      "name": "rushWin",
+      "variant": 0,
+      "sha256": "5efdf65d35edb499b0c612b5ecd46450a2b019a62e233b9e217280319752fbee"
+    },
+    {
+      "name": "rushWin",
+      "variant": 1,
+      "sha256": "8f6260973e7f421413c68a3f93b0a3f8e7298a82da2deb85a0727fb39171d1cd"
+    },
+    {
+      "name": "rushWin",
+      "variant": 2,
+      "sha256": "348f3646cfd2a22245c8d7a05ec1042d027eb33db95515e60c7f62f5d785bb4a"
+    },
+    {
+      "name": "rushWin",
+      "variant": 3,
+      "sha256": "137dbafbaf496af3e11bb486b2633e8bda816d9e6a8620b7c96c3719f22986ca"
+    }
+  ]
+}

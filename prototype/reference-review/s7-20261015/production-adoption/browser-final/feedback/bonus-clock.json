@@ -1,0 +1,132 @@
+[
+  {
+    "waitStage": "experience bonus: dedicated payout",
+    "elapsedMs": 4,
+    "gameTime": 0.16666666666666666,
+    "round": {
+      "phase": "celebration",
+      "phaseTime": 0.16666666666666666,
+      "fromRush": false,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 0,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    "win": null,
+    "currentPhase": "celebration",
+    "bonus": null,
+    "mode": "normal",
+    "bonusAdmissions": 0,
+    "feeding": true,
+    "paused": false,
+    "phase": "playing",
+    "visibility": "visible"
+  },
+  {
+    "waitStage": "experience bonus: dedicated payout",
+    "elapsedMs": 10023,
+    "gameTime": 9.833333333333416,
+    "round": {
+      "phase": "celebration",
+      "phaseTime": 9.833333333333416,
+      "fromRush": false,
+      "round": 1,
+      "count": 0,
+      "limit": 10,
+      "payout": 0,
+      "maxPayout": 1500,
+      "remainingSeconds": 15,
+      "history": []
+    },
+    "win": {
+      "time": 3.066666666666623,
+      "fromRush": false
+    },
+    "currentPhase": "celebration",
+    "bonus": {
+      "maxPayout": 1500,
+      "rounds": 10,
+      "round": 1,
+      "count": 0,
+      "payout": 0,
+      "open": false,
+      "fromRush": false
+    },
+    "mode": "normal",
+    "bonusAdmissions": 0,
+    "feeding": true,
+    "paused": false,
+    "phase": "playing",
+    "visibility": "visible"
+  },
+  {
+    "waitStage": "experience bonus: dedicated payout",
+    "elapsedMs": 14825,
+    "gameTime": 14.633333333333143,
+    "round": {
+      "phase": "open",
+      "phaseTime": 0.19999999999998863,
+      "fromRush": false,
+      "round": 1,
+      "count": 1,
+      "limit": 10,
+      "payout": 15,
+      "maxPayout": 1500,
+      "remainingSeconds": 14.8,
+      "history": [
+        {
+          "phase": "guide",
+          "time": 12.574999999999926,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "opening",
+          "time": 13.783333333333191,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "open",
+          "time": 14.433333333333154,
+          "round": 1,
+          "count": 0,
+          "payout": 0
+        },
+        {
+          "phase": "admission",
+          "time": 14.608333333333144,
+          "round": 1,
+          "count": 1,
+          "ballId": 22,
+          "payout": 15
+        }
+      ]
+    },
+    "win": {
+      "time": 7.86666666666635,
+      "fromRush": false
+    },
+    "currentPhase": "open",
+    "bonus": {
+      "maxPayout": 1500,
+      "rounds": 10,
+      "round": 1,
+      "count": 1,
+      "payout": 15,
+      "open": true,
+      "fromRush": false
+    },
+    "mode": "bonus",
+    "bonusAdmissions": 1,
+    "feeding": true,
+    "paused": false,
+    "phase": "playing",
+    "visibility": "visible"
+  }
+]

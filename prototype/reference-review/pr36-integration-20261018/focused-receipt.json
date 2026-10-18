@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-10-18T09:42:54.544330+00:00",
+  "gitHEAD": "da121d7f2fa94e7c376d652596281bb8b7b76898",
+  "sessionID": 48795,
+  "command": "node --test prototype/tests/heso-calibration.test.js prototype/tests/production-board-profile.test.js",
+  "exitCode": 0,
+  "tests": 5,
+  "passed": 5,
+  "failed": 0,
+  "durationMS": 13324.373334,
+  "files": [
+    {
+      "path": "prototype/tests/heso-calibration.test.js",
+      "sha256": "996b1fab2799665b2736626086935df0281204530436318cf992ac635f988eb1"
+    },
+    {
+      "path": "prototype/tests/production-board-profile.test.js",
+      "sha256": "efd45550ce07b711c0dae2a00ce7f633067aa4f8de9cb6acde837602eb6debe6"
+    },
+    {
+      "path": "prototype/src/app/production-board-profile.js",
+      "sha256": "f1115d0cf8a636ac3dddbc36fdcd0cd1fcb43780ed6e39e2ad06fab836e08de6"
+    }
+  ],
+  "scope": "PR36 merge-in-progress focused verification only; calibration fixture now uses adopted production profile. All assertions retained, no product/physics changes; #23 60/750 acceptance not replaced by natural-admission assertion."
+}

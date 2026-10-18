@@ -1,0 +1,56 @@
+{
+  "status": "render-and-full-decode-complete; PM native pending",
+  "head": "2b95c95d27b52c9310bae8e4f68caa6f817ff58c",
+  "machineSourceSHA": "25f905a27cf6efb2fe3ff43732cad40e18e76e7b53e391acd3d6eccb741e980c",
+  "mediaFiles": [
+    {
+      "path": "prototype/tools/s8-wheel-media/capture.mjs",
+      "sha256": "e4a4868722ce7a272a2334198da28cf60fd30491d6095806bd87ff8d35362a79",
+      "bytes": 9599
+    },
+    {
+      "path": "prototype/tools/s8-wheel-media/compose.mjs",
+      "sha256": "b210c5e4db1289c57d8a6ec1d11396d81571a6d9cdcb3a45b2a3289c3d167740",
+      "bytes": 5846
+    },
+    {
+      "path": "prototype/tools/s8-wheel-media/overlay.mjs",
+      "sha256": "1b0a0175d92036cf4886ef6bd27c24de64cfd2505be124fc3ae70564f0f080bc",
+      "bytes": 6581
+    },
+    {
+      "path": "prototype/tools/s8-wheel-media/photo-proposal.mjs",
+      "sha256": "7880ca4dc97a3ce0667d6f935aba182ed191acb90300ee53fc85af79d18e8e6f",
+      "bytes": 4685
+    },
+    {
+      "path": "prototype/tools/s8-wheel-media/replay.html",
+      "sha256": "df708ce7fdef240468cd39c8ad5396130a44f0fe58ac6f08946da6969b79db7f",
+      "bytes": 493
+    },
+    {
+      "path": "prototype/tools/s8-wheel-media/replay.js",
+      "sha256": "75f2f4c826945014c86cb59258d5b22d816f10144a47b2b160a2ebe46e009a04",
+      "bytes": 9313
+    },
+    {
+      "path": "prototype/tools/s8-wheel-media/trial-input.mjs",
+      "sha256": "7f3876b73f0e08db36105214313ac38d13ff83f176eef6d1af6bc73d48b2df47",
+      "bytes": 8270
+    }
+  ],
+  "clipReceipts": [
+    "prototype/reference-review/s8-20261016/wheel-shape/clip-whole/verification.json",
+    "prototype/reference-review/s8-20261016/wheel-shape/clip-near/verification.json",
+    "prototype/reference-review/s8-20261016/wheel-shape/clip-ball38/verification.json"
+  ],
+  "guard": "Each clip verifies gzip compressed/expanded hash and bytes, raw/provenance/plan/cases, all machine inputs, assets and executed media before/after. Browser exact Sprite/plate/rotor geometry and per output frame actual saved time/count/angle/positions are in receipts.",
+  "sourceChange": "Product source unchanged; media only. Old failed/column-layout generations preserved.",
+  "composition": "prototype/reference-review/s8-20261016/wheel-shape/composition/receipt.json",
+  "verification": "prototype/reference-review/s8-20261016/wheel-shape/composition/VIDEO_VERIFICATION.json",
+  "reproduction": "Run capture commands in clip inputs-before.json with same frozen source and fresh out directories on local Vite5436, then node prototype/tools/s8-wheel-media/compose.mjs. No new simulation.",
+  "nativePlayback": "PM responsible; pending",
+  "ownedChrome": "All3 capture invocations finally closed",
+  "ownedVite": "Stopped after capture",
+  "audio": "None; no TTS or narration scene"
+}
