@@ -21,3 +21,19 @@ tools/pr-video/node_modules/.bin/remotion render tools/pr-video/s9-index.tsx S9R
 ```
 
 収録先や音源を上書きする再実行は、元の証拠を世代別に保全してから行う。最終媒体・再生確認はpr-videoのreceiptと[S9受入記録](../S9_ACCEPTANCE.md)へ対応づける。
+
+## リール・ヘソ入賞の追加（v2）
+
+ユーザーの追加指示により、新5用途を冒頭32秒の字幕と本編実音で説明する。承認済み7段落・7WAVは変更せず、新しい発話も合成しない。先行動画は元SHAを確認してそのまま素材に使い、「先行実装分：BGM4曲・演出SE8用途」の表示で説明範囲を明示する。現在の合計はBGM4曲・新SE13用途である。
+
+追加比較は、追加前fead11aと追加後の通常発射で物理入賞した映像を各12秒、BGMのみUIで消音して1倍再生する。外れを指定した収録用の遊技であり、入賞を注入せず、自然抽選率や軌道の完全一致は主張しない。選別規則は最初の物理ヘソ入賞の0.3秒前からとし、100ms観測での位置合わせであることを残す。旧ソースのローカル複製ではHTMLのscriptパスだけ相対化し、製品ソースのbyte一致を別に確認する。
+
+`s9-reel-record.mjs`が原WebM/記録、`s9-reel-prepare.py`が抜粋と元媒体SHA、`s9-reel-index.tsx`が4141フレームのRemotion構成、`s9-reel-verify.py`が入力始終一致・全尺decode・音声区間を確認する。出力は`pr-video-v2/`へ分け、旧媒体を上書きしない。
+
+```sh
+python3 tools/pr-video/s9-reel-prepare.py
+python3 tools/pr-video/s9-reel-verify.py --snapshot
+tools/pr-video/node_modules/.bin/remotion still tools/pr-video/s9-reel-index.tsx S9ReelReview /tmp/s9-reel-preview.png --frame=570 --public-dir=prototype/reference-review/s9-20261018/pr-video-v2/public --browser-executable='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+tools/pr-video/node_modules/.bin/remotion render tools/pr-video/s9-reel-index.tsx S9ReelReview prototype/reference-review/s9-20261018/pr-video-v2/s9-review-v2.mp4 --codec=h264 --crf=28 --audio-codec=aac --audio-bitrate=128k --concurrency=2 --public-dir=prototype/reference-review/s9-20261018/pr-video-v2/public --browser-executable='/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'
+python3 tools/pr-video/s9-reel-verify.py
+```

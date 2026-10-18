@@ -143,3 +143,7 @@ PMはAC1〜AC6の実装・技術条件をレビュー候補として受入。AC7
 ## 追加分の通常発射収録
 
 `runtime/reel-recording-verification.json`と`runtime/scene-reel-{before,after}-v1/record.json.gz`。元JSONはlossless gzip、復元SHAは`runtime/reel-archives.json`に保存。fead11aの製品src210はgit blob一致、ローカル複製HTMLのscriptパスだけ相対化。追加後src210も収録始終一致。前後各45秒、同じ台・通常強度0.18、BGMだけUI消音、外れ指定・direct表示。発射/球/solverへ注入しない物理通過で各7回ヘソへ入り、専用音は0→7回。回転7回・左右中停止は各6回。軌道完全一致・自然抽選率・聴感の証明へ広げない。最初の入賞の100ms観測から0.3秒前を開始として各12秒を使い、良い結果による抜粋選別をしない。
+
+## 追加動画v2と最終CIの参照先
+
+追加動画は138.033秒・4141frame・1920×1080/30fps、8,034,865bytes、SHA `c11e2681c00be0e5d25c888ab815a18fce9b517fa395f37c6a1384c022e21454`。Remotionで旧発話を変更せず、冒頭32秒に追加5用途の字幕/実音比較を追加。入力始終一致、全尺decode exit0、前後/旧説明の符号化済み音声非ゼロを確認し、抽出した開始・比較・先行説明の実画面をPMが確認。`pr-video-v2/VIDEO_VERIFICATION.json`はpush前の数値受領記録で、自然再生と新HEAD CIの実行後判定は[PR39本文/Checks](https://github.com/sintaro-katuta/silverball-chronicles/pull/39)を正本とする。過去feadの成功を新HEADの合格へ転記しない。聴感採否とユーザーPRレビュー/マージは別。
