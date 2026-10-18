@@ -1,0 +1,306 @@
+{
+  "clips": [
+    {
+      "id": "intro-before",
+      "source": "prototype/reference-review/s9-20261018/runtime/energy-v3/intro-baseline020/1440-natural.webm",
+      "sourceSHA256": "29747b99a49f7f9d8f70004ef97e91c651a2e43871c76cc58d9c417856837982",
+      "seconds": 7.5,
+      "speed": 1,
+      "loopSourceStartsInFullRecording": 25,
+      "sha256": "fa967ed1ae0d9549899e051f570e1385b66d41c44c1b4d26eb7ba3a73f7d1378",
+      "note": "Actual natural intro; first7.5s. Before02054e8 vs V3 with playback fix; both music composition and control differ. Separate V3-before-fix audio isolates control diagnosis."
+    },
+    {
+      "id": "intro-after",
+      "source": "prototype/reference-review/s9-20261018/runtime/energy-v3/intro-fixed/1440-natural.webm",
+      "sourceSHA256": "d22d6cb3379e10a48fb55296e5f9af6e68fc56e47e8ef784015944054332a5e2",
+      "seconds": 7.5,
+      "speed": 1,
+      "loopSourceStartsInFullRecording": 1,
+      "sha256": "6461a16e513bfcc106dac21918edf7d90a1be10932755fb98adf6d204e895d9b",
+      "note": "Actual natural intro; first7.5s. Before02054e8 vs V3 with playback fix; both music composition and control differ. Separate V3-before-fix audio isolates control diagnosis."
+    },
+    {
+      "id": "normal-before",
+      "source": "prototype/reference-review/s9-20261018/runtime/energy-v3/scene-before-v1/normal.webm",
+      "sourceSHA256": "9ea87d55070d06db35d6f720e5d5100eb8c1d1a0ff63028c44c44b76ca1263bd",
+      "startWallSeconds": 6.8055,
+      "seconds": 12,
+      "speed": 1,
+      "settings": {
+        "musicEnabled": true,
+        "musicVolume": 0.5,
+        "effectsEnabled": true,
+        "effectsVolume": 1,
+        "reducedEffects": false
+      },
+      "fixture": {
+        "wRng": 0.9,
+        "reviewPresentationRoute": "direct",
+        "normalPower": 0.18,
+        "admissions": "natural firing, no injected ball"
+      },
+      "window": {
+        "start": 6.8055,
+        "duration": 12,
+        "firstObservedAdmissionWall": 7.1055,
+        "precision": 0.1
+      },
+      "sha256": "438ae1c5875a80c69d451e944913adab046d2efef39ff0da46a12458523e0c73",
+      "note": "Real canvas and AudioContext; same settings, observed clock alignment, not exact trajectories or a natural outcome trial."
+    },
+    {
+      "id": "normal-after",
+      "source": "prototype/reference-review/s9-20261018/runtime/energy-v3/scene-after-v1/normal.webm",
+      "sourceSHA256": "d45a71faa0a73f66b2d99ec07c68ee699574e7583b7c79487a0b3c6fffbae9b1",
+      "startWallSeconds": 6.804,
+      "seconds": 12,
+      "speed": 1,
+      "settings": {
+        "musicEnabled": true,
+        "musicVolume": 0.5,
+        "effectsEnabled": true,
+        "effectsVolume": 1,
+        "reducedEffects": false
+      },
+      "fixture": {
+        "wRng": 0.9,
+        "reviewPresentationRoute": "direct",
+        "normalPower": 0.18,
+        "admissions": "natural firing, no injected ball"
+      },
+      "window": {
+        "start": 6.804,
+        "duration": 12,
+        "firstObservedAdmissionWall": 7.104,
+        "precision": 0.1
+      },
+      "sha256": "58791a8b1fb26e6f52f4f0a698bd2a477d425ae5fe0d52e5fe64d59a65c3d82d",
+      "note": "Real canvas and AudioContext; same settings, observed clock alignment, not exact trajectories or a natural outcome trial."
+    },
+    {
+      "id": "battle-before",
+      "source": "prototype/reference-review/s9-20261018/runtime/energy-v3/scene-before-v1/battle.webm",
+      "sourceSHA256": "beed9dfafeb26e10bb2b2039b7c433f5e3e0a667f9b0045a83c8726b0d012a3f",
+      "startWallSeconds": 48.6015,
+      "seconds": 6,
+      "speed": 1,
+      "settings": {
+        "musicEnabled": true,
+        "musicVolume": 0.5,
+        "effectsEnabled": true,
+        "effectsVolume": 1,
+        "reducedEffects": false
+      },
+      "fixture": {
+        "win": true,
+        "ending": "standard",
+        "variant": "pressure",
+        "initialPresentationTime": 0
+      },
+      "window": {
+        "start": 48.6015,
+        "duration": 6,
+        "firstObservedPresentationTime": 48.59166666666455,
+        "precision": 0.1
+      },
+      "sha256": "b535912c37e63c3f38d21d01d0acde082ca9c9c1c698035f83c13fb7f96c2a12",
+      "note": "Real canvas and AudioContext; same settings, observed clock alignment, not exact trajectories or a natural outcome trial."
+    },
+    {
+      "id": "battle-after",
+      "source": "prototype/reference-review/s9-20261018/runtime/energy-v3/scene-after-v1/battle.webm",
+      "sourceSHA256": "bf3b53242cb6d192369c18c5b8626e97549c3ebbdb57d7792309925fd5b9bcb2",
+      "startWallSeconds": 48.60120000000298,
+      "seconds": 6,
+      "speed": 1,
+      "settings": {
+        "musicEnabled": true,
+        "musicVolume": 0.5,
+        "effectsEnabled": true,
+        "effectsVolume": 1,
+        "reducedEffects": false
+      },
+      "fixture": {
+        "win": true,
+        "ending": "standard",
+        "variant": "pressure",
+        "initialPresentationTime": 0
+      },
+      "window": {
+        "start": 48.60120000000298,
+        "duration": 6,
+        "firstObservedPresentationTime": 48.59166666666455,
+        "precision": 0.1
+      },
+      "sha256": "fa43dc8ea95033269c619768a23613161a19ce2eed8db336d824b1308089e3a5",
+      "note": "Real canvas and AudioContext; same settings, observed clock alignment, not exact trajectories or a natural outcome trial."
+    },
+    {
+      "id": "bonus-before",
+      "source": "prototype/reference-review/s9-20261018/runtime/energy-v3/scene-before-v1/bonus.webm",
+      "sourceSHA256": "882d42242c8ef362e48c756c39d76ed17d1d062e801ffe1c2074049d51ef624d",
+      "startWallSeconds": 9,
+      "seconds": 4,
+      "speed": 1,
+      "settings": {
+        "musicEnabled": true,
+        "musicVolume": 0.5,
+        "effectsEnabled": true,
+        "effectsVolume": 1,
+        "reducedEffects": false
+      },
+      "fixture": {
+        "experienceUi": "bonus"
+      },
+      "window": {
+        "start": 9,
+        "duration": 4
+      },
+      "sha256": "b431220afa7ea4ff25d4bc24c4e92f8941c578b1cabc706232ef949c9c3758f1",
+      "note": "Real canvas and AudioContext; same settings, observed clock alignment, not exact trajectories or a natural outcome trial."
+    },
+    {
+      "id": "bonus-after",
+      "source": "prototype/reference-review/s9-20261018/runtime/energy-v3/scene-after-v1/bonus.webm",
+      "sourceSHA256": "75e9da66d8ee0db2d5fdc5cd6a69f21d562cfba8ac5ac144977b35d1114af265",
+      "startWallSeconds": 9,
+      "seconds": 4,
+      "speed": 1,
+      "settings": {
+        "musicEnabled": true,
+        "musicVolume": 0.5,
+        "effectsEnabled": true,
+        "effectsVolume": 1,
+        "reducedEffects": false
+      },
+      "fixture": {
+        "experienceUi": "bonus"
+      },
+      "window": {
+        "start": 9,
+        "duration": 4
+      },
+      "sha256": "56dcb089cac272e5b7727fbe19cfbff38bad046b354e61e1c071b419acb16afb",
+      "note": "Real canvas and AudioContext; same settings, observed clock alignment, not exact trajectories or a natural outcome trial."
+    },
+    {
+      "id": "rush-before",
+      "source": "prototype/reference-review/s9-20261018/runtime/energy-v3/scene-before-v1/rush.webm",
+      "sourceSHA256": "8f5164a387a46ef93c3d024dc983699c71a0256ce253765cd7c574f53a82ca8b",
+      "startWallSeconds": 9,
+      "seconds": 4,
+      "speed": 1,
+      "settings": {
+        "musicEnabled": true,
+        "musicVolume": 0.5,
+        "effectsEnabled": true,
+        "effectsVolume": 1,
+        "reducedEffects": false
+      },
+      "fixture": {
+        "experienceUi": "rush"
+      },
+      "window": {
+        "start": 9,
+        "duration": 4
+      },
+      "sha256": "3e543f3116ec0635d7b1d2f39d5a3fac0180368910527377f53f5086929eeb92",
+      "note": "Real canvas and AudioContext; same settings, observed clock alignment, not exact trajectories or a natural outcome trial."
+    },
+    {
+      "id": "rush-after",
+      "source": "prototype/reference-review/s9-20261018/runtime/energy-v3/scene-after-v1/rush.webm",
+      "sourceSHA256": "593274ad1beeb178018ea8498f98c14bb121dc0622912c8b41a8dd04e0113f06",
+      "startWallSeconds": 9,
+      "seconds": 4,
+      "speed": 1,
+      "settings": {
+        "musicEnabled": true,
+        "musicVolume": 0.5,
+        "effectsEnabled": true,
+        "effectsVolume": 1,
+        "reducedEffects": false
+      },
+      "fixture": {
+        "experienceUi": "rush"
+      },
+      "window": {
+        "start": 9,
+        "duration": 4
+      },
+      "sha256": "30942cb80fa8e9e0cf6039c29a3897812a044374c51d4636b0a825a755f08d0a",
+      "note": "Real canvas and AudioContext; same settings, observed clock alignment, not exact trajectories or a natural outcome trial."
+    },
+    {
+      "id": "se-before",
+      "source": "prototype/reference-review/s9-20261018/audio-v3/baseline/se-decisiveHit.wav",
+      "sourceSHA256": "547780559cf49b4f6c08369934d0653852968f9b14d9c81341f9097569030bdc",
+      "seconds": 2,
+      "speed": 1,
+      "auditionGain": 1,
+      "sha256": "1e3e1b84014093370b5de87030c49477e1eb9f2c8808aabb0bfb7f90dede2f87",
+      "note": "Synthetic source with waveform; loudness matched by attenuation only, padded to2s; not a game capture."
+    },
+    {
+      "id": "se-after",
+      "source": "prototype/reference-review/s9-20261018/audio-v3/se/decisiveHit-v0.wav",
+      "sourceSHA256": "9f398d5b50b4606008d3b28d7914cc6935319bd7d3f2e388cc677759bbbded78",
+      "seconds": 2,
+      "speed": 1,
+      "auditionGain": 0.9484184633008974,
+      "sha256": "075141c82caa378ba7db34df96f8d55f499a7576144c128b066efe7831057ab1",
+      "note": "Synthetic source with waveform; loudness matched by attenuation only, padded to2s; not a game capture."
+    }
+  ],
+  "speech": [
+    {
+      "id": "s9-03",
+      "source": "prototype/reference-review/s9-20261018/pr-video/public/audio/s9-03.wav",
+      "sha256": "632b8f7f8f12c6c92faf20fd51125bd1459fb5ddc5165b5c6b08a538b440d4d4",
+      "destinationSHA256": "632b8f7f8f12c6c92faf20fd51125bd1459fb5ddc5165b5c6b08a538b440d4d4",
+      "durationFrames": 297,
+      "originalStartFrame": 581
+    },
+    {
+      "id": "s9-04",
+      "source": "prototype/reference-review/s9-20261018/pr-video/public/audio/s9-04.wav",
+      "sha256": "6b60934ecb7b582e020e83a669ab8198e021ade54fc121134c364841084ca93f",
+      "destinationSHA256": "6b60934ecb7b582e020e83a669ab8198e021ade54fc121134c364841084ca93f",
+      "durationFrames": 407,
+      "originalStartFrame": 885
+    },
+    {
+      "id": "s9-05",
+      "source": "prototype/reference-review/s9-20261018/pr-video/public/audio/s9-05.wav",
+      "sha256": "99d2ee6913bc2a00ceb7126798968820fabe5852dbb26815a16f797cf37cc035",
+      "destinationSHA256": "99d2ee6913bc2a00ceb7126798968820fabe5852dbb26815a16f797cf37cc035",
+      "durationFrames": 356,
+      "originalStartFrame": 1298
+    },
+    {
+      "id": "s9-06",
+      "source": "prototype/reference-review/s9-20261018/pr-video/public/audio/s9-06.wav",
+      "sha256": "e0cbf38f92a2f58da2dd1d59e408506b46349ca26742b33c7bcf1dd1ed4cb99a",
+      "destinationSHA256": "e0cbf38f92a2f58da2dd1d59e408506b46349ca26742b33c7bcf1dd1ed4cb99a",
+      "durationFrames": 308,
+      "originalStartFrame": 1662
+    },
+    {
+      "id": "s9-07",
+      "source": "prototype/reference-review/s9-20261018/pr-video/public/audio/s9-07.wav",
+      "sha256": "1ffc46f4e33ecdbf052d481fd2c6932a17825085ec29df2d6853252c62babdf0",
+      "destinationSHA256": "1ffc46f4e33ecdbf052d481fd2c6932a17825085ec29df2d6853252c62babdf0",
+      "durationFrames": 296,
+      "originalStartFrame": 1977
+    }
+  ],
+  "settingsSource": {
+    "path": "prototype/reference-review/s9-20261018/runtime/energy-v3/intro-fixed-existing-s9-browser/1440-settings.png",
+    "sha256": "a2fe05098c2b7c7b453c02123883e3fe48d84d611fcd902208effedda6997d55"
+  },
+  "narration": "Existing approved paragraphs3–7, unchanged WAV/text/order and canonical block lengths. No new speech or TTS; first2 paragraphs do not describe the new baseline and are omitted.",
+  "approvalRecordSHA256": "5e15daedeef25d3883dbb680aba7fc86c1d964157f5a1d66e680c824f9504b24",
+  "fixtures": "Authored outcome/experience footage; normal admissions use actual firing/solver. No natural lottery or identical trajectory claim.",
+  "humanListening": "unverified"
+}

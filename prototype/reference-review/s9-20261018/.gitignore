@@ -17,3 +17,5 @@ runtime/energy-v3/scene-*/rush.json
 # Intermediate representative audition audio remains local, with scores/metrics retained.
 audio-v3/representative/**/*.mp3
 audio-v3/representative-initial/**/*.mp3
+# Per-frame encoder progress is local; final codec/hash receipts are retained.
+pr-video-v3/render.log

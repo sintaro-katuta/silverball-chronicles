@@ -13,7 +13,7 @@
 | 5：音量・停止復帰 | 局所技術合格 | 両幅の個別操作、導入停止/復帰、既存本編回帰を確認。スマホ実機・OS背景状態の全条件を保証しない |
 | 6：遊技条件の保持 | 局所確認済み・最終CI待ち | source照合、関連30テスト・ビルド・本編回帰で確認。最終HEADの全回帰はPR Checksで判定 |
 | 7：計測・実出力・試聴 | 技術確認済み・人の聴感待ち | 全17用途×旧新×両幅の68自然再生、実音8収録を確認。音の派手さ・好み・疲労は数値で認定しない |
-| 8：動画・CI・レビュー | 最終確認待ち | 目的別コミットと比較動画を準備。完成動画の自然再生・PRプレイヤー・最終CIの結果はPR本文とChecksへ記録。ユーザーレビュー・集約は未実施 |
+| 8：動画・CI・レビュー | 媒体技術合格・最終CI/レビュー待ち | 目的別コミットと動画v3を完成。ローカル/PRとも133.717秒の自然終端・unmuted・rate1・error null、seek操作なしを確認。最終CIはPR本文とChecksへ記録。ユーザーレビュー・集約は未実施 |
 
 検証時の原記録は`runtime/energy-v3/`、単体比較は`audition-qa-v3/`、最新媒体は`pr-video-v3/`に分けた。以降の最終判定先は[PR #39](https://github.com/sintaro-katuta/silverball-chronicles/pull/39)とそのChecksで、本文に対象HEAD・結果・残件を残す。mainへのマージ・本番公開は今回実施しない。
 
@@ -248,3 +248,7 @@ PMはAC1〜AC6の実装・技術条件をレビュー候補として受入。AC7
 ## 追加動画v2と最終CIの参照先
 
 追加動画は138.033秒・4141frame・1920×1080/30fps、8,034,865bytes、SHA `c11e2681c00be0e5d25c888ab815a18fce9b517fa395f37c6a1384c022e21454`。Remotionで旧発話を変更せず、冒頭32秒に追加5用途の字幕/実音比較を追加。入力始終一致、全尺decode exit0、前後/旧説明の符号化済み音声非ゼロを確認し、抽出した開始・比較・先行説明の実画面をPMが確認。`pr-video-v2/VIDEO_VERIFICATION.json`はpush前の数値受領記録で、自然再生と新HEAD CIの実行後判定は[PR39本文/Checks](https://github.com/sintaro-katuta/silverball-chronicles/pull/39)を正本とする。過去feadの成功を新HEADの合格へ転記しない。聴感採否とユーザーPRレビュー/マージは別。
+
+### 改修前v2の最終確認（2026-10-18・push後）
+
+PR39はHEAD `02054e84078d421caf087cb8dc2dda490a146b4b`、Draft解除・未マージ。[最終CI39132459628](https://github.com/sintaro-katuta/silverball-chronicles/actions/runs/39132459628) completed/successを実API確認。単体695/695、browser、verifyの3job成功。PR冒頭のv2動画はローカルとPRプレイヤーとも138.090667秒の自然終端・rate1・unmuted・error nullを確認し、seek/加速はしていない。音色の好み/疲れにくさ等の人間聴感、ユーザーPRレビュー/マージとrelease集約は別。Issue38本文とPR本文を結果へ更新、Issue37/26/38はopen維持。本番更新/マージは実行していない。追跡receiptは作業cloneの `prototype/.cache/s9-review/pr-playback-v2.json` と `final-ci-v2.json`。
