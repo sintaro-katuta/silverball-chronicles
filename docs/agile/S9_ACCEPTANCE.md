@@ -1,6 +1,107 @@
 # S9 音源・接続・試聴の受入台帳
 
-## 最新状態（2026-10-18）
+## PM判定：v3と導入修正の局所確認（2026-10-19）
+
+最新候補は、改修前02054e8上で制作・検証したソース210件のSHAへ対応する。計測時のHEADだけを完成版とせず、各receiptの入力一覧と現ソースの一致を確認した。以下はPMの技術判定であり、迫力・好みについてユーザーが受け入れたという判定ではない。
+
+| AC | PM判定 | 根拠と残件 |
+|---|---|---|
+| 1：4曲 | 技術合格 | v3の4曲・作曲設定・再生成元・計測・旧新ブラウザ再生を照合。聴感は試遊で確認 |
+| 2：13用途と既存確定音 | 技術合格 | 13用途の全variant、17用途の比較配信、署名8PCM保持と対象外不変を確認 |
+| 3：割当・時間表 | 局所技術合格 | 本編と共通の定義、既存の時間表、今回の本編8収録を照合 |
+| 4：同期・導入・情報保持 | 局所技術合格 | 導入の曲頭反復25回→開始1回、通常への受渡し・スキップ、絶対戦闘時計・無音窓を確認。初回の素材準備待ちは残る |
+| 5：音量・停止復帰 | 局所技術合格 | 両幅の個別操作、導入停止/復帰、既存本編回帰を確認。スマホ実機・OS背景状態の全条件を保証しない |
+| 6：遊技条件の保持 | 局所確認済み・最終CI待ち | source照合、関連30テスト・ビルド・本編回帰で確認。最終HEADの全回帰はPR Checksで判定 |
+| 7：計測・実出力・試聴 | 技術確認済み・人の聴感待ち | 全17用途×旧新×両幅の68自然再生、実音8収録を確認。音の派手さ・好み・疲労は数値で認定しない |
+| 8：動画・CI・レビュー | 最終確認待ち | 目的別コミットと比較動画を準備。完成動画の自然再生・PRプレイヤー・最終CIの結果はPR本文とChecksへ記録。ユーザーレビュー・集約は未実施 |
+
+検証時の原記録は`runtime/energy-v3/`、単体比較は`audition-qa-v3/`、最新媒体は`pr-video-v3/`に分けた。以降の最終判定先は[PR #39](https://github.com/sintaro-katuta/silverball-chronicles/pull/39)とそのChecksで、本文に対象HEAD・結果・残件を残す。mainへのマージ・本番公開は今回実施しない。
+
+## 最新追加：導入BGMの一音停止を修正中（2026-10-18）
+
+ユーザー依頼で、開始前の全体→盤面→液晶導入の音連続性を同S9/#37へ追加しました。Leadが実再現/修正し、修正後の局所QA receiptを独立read照合済み。全回帰/最終媒体/新CI/人の聴感は未確認。音源v3の制作/測定は不変で、下段の素材技術確認を維持します。修正前の局所v3 28tests/既browser/reel成功は履歴であり、現在のruntime最終合格ではありません。
+
+| 追加AC | 条件 | 判定/必要証拠 |
+|---|---|---|
+| INTRO-1 / AC4 | 導入全相でBGM連続、通常handoffで曲頭へ戻らない | 両幅natural/skipの局所技術確認済み。初回lazy待ち約.44〜.56秒後は連続、通常handoffで曲位置の後戻り0 |
+| INTRO-2 / AC6 | 導入中に遊技時計・発射/玉消費・抽選を音のために進めない | 全7ケースのintro active sampleでgameTime0。pause snapshotでstock400/消費0/発射0/抽選0を確認。音のための遊技進行なしの局所証拠 |
+| INTRO-3 / AC5 | skip/pause/hidden/退出で重複・残音・遅着再開がない | natural/skip/pause・既S9 lifecycle局所QA済み。visibility合成handlerとOS背景を区別し、全端末/聴感へ広げない |
+| INTRO-4 / AC4 | 体験battleの絶対presentation音時計・PUSH追従を保持 | 体験battle含む3体験と両幅既S9の絶対表示時計/50.2167秒位置を確認。既無音窓の局所技術確認済み |
+| INTRO-5 / AC6/8 | 新source/関連/本編回帰・最終媒体/新CIを対応づける | 修正後30関連/両幅browser/release buildをreceiptで確認。最終全回帰/新媒体/CI未確認、旧28等は履歴 |
+
+原因候補のgame.time固定とAudioContext進行のdrift再startはLead再現待ちの仮説です。SMはPLAN/本台帳のみ編集し、実装・重処理・新録画・Gitは行いません。
+
+### 導入修正後の根拠と限界（2026-10-19）
+
+`runtime/energy-v3/qa-receipt-intro-fixed.json`はHEAD02054e8上の未コミットsource、SHA `6e2034bf784a8065b4bfd258e0e8b3d21e01c30e389fcd029e88da6eb277b867`。qa-source-start/endの全210入力リストexact、現byte SHAも独立一致。修正後30関連tests・release build・既S9両幅browser・自然導入両幅/skip/pause/3体験がexit0。導入収録はそのsourceguard直前に同じ所有編集で行ったとreceiptが明記し、録画中の始終guardと偽りません。修正前reel局所証拠は別です。
+
+intro-fixedの7ケースでerrors0、全active intro sampleのgameTime0、normal曲位置の後戻り0。自然390/1440とskipはnormal source start1回で通常へhandoff。pauseは止めて再開するため2回、battleは曲切替で2回、rushは状態遷移で3回であり、start総数だけを重複不具合と数えません。pause中snapshotはintro elapsed/曲位置固定・voice0・stock400/消費0/発射0/抽選0。導入完了後の遊技進行は正常な別区間です。
+
+whole初期にはlazy生成待ち約0.44〜0.56秒、開始offset約0.53〜0.61秒が残り、その後のboard/lcd/return/normalは持続。『クリック直後から全sample有音』とは判定しません。原PCM記録に区間energyがあり、初期/意図した停止以外の連続性を示しますが人の聴感採否とは別です。
+
+`intro-fixed-existing-s9-browser/verification.json`は実Worker4曲と両幅でerrors0、個別音量0.25/0.7維持、battle初位置0.0333秒・pending0/active1（短いcrossfadeは総voice2）、50.2167秒の表示時計位置を確認。visibilityは合成handler分岐でOS実背景ではありません。その後の全17用途×旧新×両幅の自然試聴と、新8場面収録は以下の別receiptで確認済み。最終CI/新動画/人の聴感は未完了です。
+
+### v3単体試聴ページの全用途技術確認（2026-10-19）
+
+`audition-qa-v3/verification.json`と`generation.json`/logを独立照合。HEAD02054e8の未コミット凍結v3＋導入修正として保存され、10入力の始終リストexact・現byte SHAも一致。音源manifest SHAは`c900e63b3d1b7f01f4abf083455c69d136780ff9d0f6f39f58dc2dc6cf51c779`です。
+
+1440×900と390×844の各17用途×旧/新2音、計68再生を再集計し、全件ended/rate1/seek0/error null、除外なし。全68配信のHTTP200/SHA/bytesを音源manifestと独立一致、WebAudio decode・同LUFS player gain・2playerの停止/切替/resetと幅確認はsuccess/errors0。logはAUDITION_QA_PASS/OWNED_CHROME_CLOSED、session68581 exit0に対応します。
+
+これは音源単体のブラウザ自然再生です。本編8場面収録は別途開始中で、録音mix・最新全回帰/CI/PR媒体や人の聴感採否をこの成功で代用しません。旧音源は02054e8実S9の同用途で、旧padの比較ではありません。
+
+### v3本編8場面の収録・可逆保存（2026-10-19）
+
+`runtime/energy-v3/verification.json`/`media-verification.json`/`record-archives.json`を独立照合。旧02054e8と未コミットv3＋導入修正版の各normal/battle/bonus/rush、計8記録。beforeInputs/afterInputsはそれぞれ210件で、旧新版同士が同sourceという意味ではありません。各原記録のsourceStart/Endは一致・sourceUnchanged true・errors0、新側210現byte SHAも一致しました。observed HEAD02054e8だけでは新版を識別せず、実入力SHAを使います。
+
+全8原WebMのSHA/bytesを独立一致。receiptは映像/音声全尺decode各exit0、Opus48k stereo・有限非ゼロ平均/peakを示します。今回はreceipt読取と保存SHAの照合で、SMはdecode/撮影を重複実行していません。音源そのものの同LUFS試聴と、この本編固定gainの実音収録は別条件です。
+
+対となる場面のfixture/settingsは一致（BGM0.5/SE1・両有効/演出軽減false）、最終計数も同数。normalは実発射45秒・固定乱数/通常.18/直接表示経路で各ヘソ7、battleはpressure当たりfixture、BONUS/RUSHは正規体験UI。自然入賞/抽選確率・全球完全軌道の同一性は主張しません。各sampleは約100msで、入賞/演出切替の切抜き提案もprecision0.1秒です。
+
+全8JSON gzipは圧縮/展開両SHA/bytesを独立一致し、展開bytesと保持した元JSONも完全一致。圧縮は可逆・原保持。原記録/音源を上書きしていません。
+
+PM技術判定の候補：AC1/2は素材・旧保持・17用途技術再生、AC3は定義/時間表、AC4/5は導入/同期/無音と局所操作まで技術確認。AC6はsource固定のread/局所回帰までで最終全回帰待ち、AC7は技術出力を確認し人間聴感待ち、AC8は最終媒体・最新CI・PRレビュー/集約待ちです。技術候補をユーザーの音楽性採用とはしません。
+
+最終段取りは、最終動画とlocal/PR実再生を終えてから目的別commit/push→Ready、同じ最終HEADのrunを確認します。ready_for_review再起動を踏まえた既存workflow運用であり、新CI設定は変更しません。最終媒体/CIの判定先はPR39本文とChecks、生成receiptはローカル記録です。現在prepare/Remotion前後の作業中で、新最終媒体/CI/聴感/マージは未完了です。
+
+## 継続中：v3音の方向調整と素材確認（2026-10-18）
+
+試遊の「全体BGM/SEがchillすぎ、もっとアップテンポで派手に」を同S9・#37/#38の修正として受領。4BGM/13SE用途をv3へ再作曲/合成します。現在PR39は未マージ、基準02054e84078d421caf087cb8dc2dda490a146b4b。旧音源v1/v2、動画、695pass・CI39132459628全3成功は改修前の履歴として保護し、新版の合格へ付け替えません。
+
+代表normal＋リール/ヘソ＋decisiveHitを自己/技術レビュー後に全用途へ展開。新しい台本/音声は作らず既存承認発話を流用し、字幕と最新実音で説明します。工程再承認なし。改善完了・聴感採用は人の試聴待ちで、BPMやattack等の数値を改善率とはしません。
+
+| v3確認 | 対応AC | 最新判定 / 必要証拠 |
+|---|---|---|
+| 代表→全4曲13用途の再作曲/合成 | AC1/2 | stage all受領。17用途/150ファイルとsourceSHA、58数値receiptを独立照合。聴感待ち |
+| 02054e8基準とv3候補の2音・同LUFS比較 | AC7 | 基準17/gain式/両幅68単体自然再生の技術確認済み。本編8場面は同設定収録/技術確認済み、聴感は別途 |
+| 署名8PCM・時計/無音/公開前情報/FIFO/賞球/盤面固定 | AC2/4/6 | 旧v1/v2全140ファイル不変と署名8PCM保持proof確認。ゲーム回帰/新ミックス待ち |
+| 表/同期・個別音量/消音・停止/復帰/寿命 | AC3/4/5 | 新音源接続後のreceipt待ち。既同期方式の成功は履歴 |
+| 実ブラウザ/通し・人の試聴/ユーザー採否 | AC7 | 単体68再生と導入後局所QA済み。本編8場面の実音/保存技術確認済み。最終媒体と聴感は未確認 |
+| 既承認発話流用＋字幕/新実音の比較動画 | AC8 | v3媒体未完了。実再生/自然終端/PRplayerを新版で確認 |
+| 最終source/HEADとCI・PRレビュー/集約 | AC6/8 | 新CI未確認、未マージ。Draft/Readyと外部操作はPM所有 |
+
+SMの担当はPLAN/本台帳と後続receiptの独立照合のみ。実装・重いテスト・撮影・Git/PR/Issue更新は行いません。次Readyは代表の素材/技術receiptの提出後です。
+
+## v3素材の独立照合（source凍結前・2026-10-18）
+
+`audio-v3/manifest.json`はstage all、4music＋13SEの17用途。比較基準は02054e8の実S9音源17用途で、旧padではありません。manifest全150音源ファイルSHA/bytes、sources/additionalSources実byteを独立照合し全一致。基準17コピーも元audio-v1/v2と一致。HEADは02054e8のまま制作sourceが変わるため、HEADだけを生成版の根拠にせず保存executed-sourceとmodule/tool SHAへ対応づけます。UI/本編接続は編集中で、この音源確認を新runtime合格へ流用しません。
+
+新曲/新SE全variant/代表mixの58測定JSONはnonFinite0・clipped0・peak<1・input TP≤−2dBTP・MP3 decode0。LUFS範囲は−31.55〜−16.60。各17用途のgainは旧/新の小さいLUFSへ大きい側だけを減衰する式と独立一致（gain≤1）。ファイルへloudness加工せず、試聴プレイヤーで適用します。数値条件は音楽性/派手さの改善率ではありません。
+
+`technical-checks.json`/`signature-proof.json`は旧win/rushWin8PCM一致、旧v1/v2計140ファイル保持、代表7音の全展開後byte一致、異なるsample rate/不正入力の検査を記録。旧140ファイルの現SHAは独立一致しました。署名PCMは保存proofと既受入SHAの整合確認であり、SMによる全再合成はしていません。
+
+`self-review.json`では初稿normalはdrum transientが正規化を支配し、旋律/低音の平均が低かったためlayer配分を変更。master peakを上げず、LUFS−26.87→−22.35、crest19.27→15.01dBとした制作上の理由を保持。BPM160/160/180/192は設計値です。比較mixは同じ12秒のscripted mock scene（旧−23.52/新−24.66LUFS）で、実ゲーム音や人の改善採用を証明しません。
+
+pYIN最終技術完了receipt `audio-v3/pitch-completion.json`（既実行session17765 exit0）と6派生artifactのSHA/bytesも独立一致。JSON SHA `a531e4ef30e4108ffc157c852f8213a1d63b61bb02371d92d2a041ad62a1f913`、4つの実入力stem/mixのSHA、環境librosa1.0.0/numpy2.5.4をread照合。150〜3000Hz・解析22050Hz/1024窓128hop・confidence0.8、同sample-zero/正規化なし・欠測補間なしの条件です。spectrograms.png/f0.pngの存在とDesigner実見完了を受領しました（SMの画像実見は未実施）。
+
+JSONのaccepted rowsから0.12〜0.35秒body中央値を独立再集計し、旧262.678Hz（39frames）→新348.614Hz（40frames）と一致。全尺validはbody45.9→23.9%、mix48.5→46.3%。新bodyは約0.458秒で止まり、残りの無音も全1.55秒の分母に入るため、valid低下を劣化/改善と解釈しません。混合の共通倍音/オクターブ曖昧・欠測、約46ms窓の急なattack瞬時Hzの限界を保持。指定音程への対応記述であり、全曲の調性/品質点/聴感一致率ではありません。
+
+sourcefreeze完了はPM通知に対応。Leadの新unit/browserQAは開始中で、音源技術確認を本編実音/全回帰/媒体/CI/人間聴感へ拡張せず結果待ちです。
+
+v3動画は承認済発話の適用箇所を原音まま流用する予定。現案は段落3〜7を元の順序・全尺WAVで使用し、総SE8と旧pad比較の段落1/2は使いません。冒頭字幕で4BGM＋演出8/リール4/入賞1＝13と今回の方向変更を説明し、発話内の演出8用途の範囲も字幕で示します。新台本/新発話合成は0。実制作後の音声同一/構成・実再生は別途確認します。
+
+## 以下は改修前の受入履歴
+
+### リール/ヘソ追加時の状態（履歴）
 
 ユーザーの「開始してください。」で開始承認済み。作業場所は `/private/tmp/silverball-s9-20261018`・sprint/S09、基準はrelease/0.3.0のaebe077。PR39は未マージです。追加前HEAD feadの成功記録は保存し、新追加の検証へ流用しません。
 
@@ -33,7 +134,7 @@
 
 `audio-v2/manifest.json`の50音源SHA/bytesとsource実byteを独立一致。追加5用途の数値はnonFinite0/MP3 decode0。`preservation-proof.json`は旧4曲/元SE8×4variant、保存旧90ファイル不変、署名8PCM一致を記録し、旧90ファイルの現SHAも独立一致。旧音源v1/承認7文・既存動画を変更した証拠とはしません。人間聴感は全receiptで未検証、動画v2/追加後CIは未実施です。
 
-## 正式計画のACと現在判定
+## 正式計画ACの改修前判定（履歴）
 
 正本IDは[S9_PLAN](S9_PLAN.md)のAC1〜AC8。技術条件の確認、人の聴感、PM/ユーザー採否を分けます。
 
@@ -116,7 +217,7 @@ aebe比でdomain/physics/production-board-profile/board-flow/board-runtime/publi
 
 PMはAC1〜AC6の実装・技術条件をレビュー候補として受入。AC7の人の聴感、AC8のPR上の動画/最終CI/ユーザーレビュー/集約は別途確認します。ユーザーがレビューするまで音色の最終採用やSprint終了とはしません。
 
-## 担当WIP・次のReady
+## 改修前の担当WIP（履歴）
 
 |担当|現在/所有境界|次の割当|
 |---|---|---|

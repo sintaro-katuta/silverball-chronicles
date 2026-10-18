@@ -1,6 +1,6 @@
 # S9：演出と音の割り当て
 
-2026-10-18。本編へ接続した音を整理する。新作音源の制作、本編での発音、実出力の検証、人の試聴、PMの採用は別の状態とし、最新の判定は[S9_ACCEPTANCE](S9_ACCEPTANCE.md)を参照する。
+2026-10-19更新。本編へ接続したv3の音を整理する。新作音源の制作、本編での発音、実出力の検証、人の試聴、PMの採用は別の状態とし、最新の判定は[S9_ACCEPTANCE](S9_ACCEPTANCE.md)を参照する。
 
 ## 演出ごとの割り当て
 
@@ -8,11 +8,12 @@
 
 |場面|BGM|効果音|音源の扱い|
 |---|---|---|---|
-|通常待機・図柄変動|normal「月下の歩み」|spin / stopLeft / stopRight / stopCenter|曲は新作。追加承認で回転・停止4用途も新作へ更新、既存の発音時刻を維持|
+|開始前の全体→盤面→液晶|normal「月下疾走」160BPM|導入のための追加SEなし|カメラの導入時刻で音楽だけ進め、通常へ曲位置を引き継ぐ。玉・抽選は停止したまま|
+|通常待機・図柄変動|normal「月下疾走」160BPM|spin / stopLeft / stopRight / stopCenter|v3は曲と4SEを改修。既存の発音時刻を維持|
 |ヘソの実物理入賞|現在の曲を継続|admission|追加承認の新作。実際のヘソ口への通過1回につき1回。保留満杯でも発音し、当落・受付成否を知らせる音にはしない|
 |保留の変化|現在の曲を継続|holdBlue / holdRed / holdGold|既存の期待情報と音を維持|
 |通常・RUSHの前予告|通常はnormal、RUSHはrush|serial / story / step / background / route / trail / approach / alert / search / resolve / moon / awakening / crest / identity / pursuit|既存を維持|
-|リーチ入口と発展|長い戦闘への移行でbattle「一閃への決意」|reach / character / long / special / development|developmentは新作、他は維持|
+|リーチ入口と発展|長い戦闘への移行でbattle「一閃の鼓動」160BPM|reach / character / long / special / development|developmentは新作、他は維持|
 |戦闘3種の各カット|共通のbattle。結果公開前は勝敗・復活で曲を変えない|arrival / enemy / dodge / pressure / gather / counter / clash / surge / rally / vow / final|既存を維持|
 |上部剣・月・役物|現在のbattleを継続|attention / upperSword / moon|既存を維持|
 |攻撃の接触|battleを継続し、重要音で音楽を引く|heroHit / enemyHit / decisiveHit|heroHit・decisiveHitは新作、enemyHitは維持|
@@ -22,9 +23,9 @@
 |当たり・外れ|結果を見せた後、実際の状態からBONUSまたは通常へ渡す|win / rushWin / loss|既存を維持。当たり識別音のPCM不変|
 |復活|敗北までは外れと同情報。再起以降も現行の時計に従う|loss → silence → revival → winまたはrushWin|revivalは新作、敗北・確定音は維持|
 |CHARGE|実際の状態に応じる|charge|既存を維持。新BONUS開始音と同一の割当とは扱わない|
-|BONUS開始・開閉・ラウンド・払出|bonus「暁の祝祭」|bonusStart / open / close / roundReveal / payout / clear|bonusStartと曲は新作、他は維持|
+|BONUS開始・開閉・ラウンド・払出|bonus「暁の凱歌」180BPM|bonusStart / open / close / roundReveal / payout / clear|bonusStartと曲は新作、他は維持|
 |右打ち案内・RUSH突入6種|案内・演出中の実状態からRUSH曲へ渡す|rightGuide、moon / reflection / castle / slash / mechanism、castleのbreakthrough、復活突入のloss / silence / revival、rushStart|rushStart・revivalは新作。他は維持|
-|RUSH中・継続・終了|rush「月影疾走」。終了後は実状態に従い通常へ戻る|rushReset / rushEnd|曲は新作、継続・終了音は維持|
+|RUSH中・継続・終了|rush「月影オーバードライブ」192BPM。終了後は実状態に従い通常へ戻る|rushReset / rushEnd|曲は新作、継続・終了音は維持|
 |意図した間・一撃直前・敗北後の間|BGMを停止/抑制する|silenceで再生中のSEを止める|無音。空白を曲や残響で埋めない|
 
 元の新作8用途のSE・新曲4用途に、2026-10-18の追加承認でリール4用途とヘソ入賞1用途を追補する。新作SEは合計13用途。全音名を作り直す範囲ではなく、発射や釘の接触音は今回の追加対象に含めない。追加の接続・検証状態は[S9_ACCEPTANCE](S9_ACCEPTANCE.md)のADD欄で確認する。
@@ -47,7 +48,7 @@
 
 BGMとSEは別の音量・有効設定を持つ。重要SEでBGMを引き、確定音の再生途中を新SEで切らない。旧背景パッドはBGMと二重再生しない。設定・消音を戻しても好みの音量を保持し、停止中の打点をまとめて追い鳴らししない。
 
-戦闘曲は表示時計の位置を使用し、通常・BONUS・RUSHは各状態の時計から反復位置を算出する。非表示・退出では止め、退出後に音源生成が完了しても発音しない。時計・曲位置・負荷と実出力の確認結果は受入記録へ残す。
+戦闘曲は表示時計の位置を使用し、導入時刻を加えない。通常・BONUS・RUSHは各状態の時計に保持した導入経過を加えた時刻から、選曲ごとの開始位置を基準に反復する。これにより、通常曲の導入→遊技で曲頭へ戻らず、別曲への切替では従来の開始位置を保つ。非表示・退出では止め、退出後に音源生成が完了しても発音しない。時計・曲位置・負荷と実出力の確認結果は受入記録へ残す。
 
 ## 更新する人と時機
 

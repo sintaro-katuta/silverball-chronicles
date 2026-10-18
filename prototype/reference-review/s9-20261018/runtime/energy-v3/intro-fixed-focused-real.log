@@ -1,0 +1,38 @@
+✔ every original PCM arrangement is finite, bounded, non-silent and unique (1581.186125ms)
+✔ four-variant rotation never repeats a neighbor or consumes gameplay RNG (0.341209ms)
+✔ all stories, endings, prediction families and short routes reference authored sounds (0.456167ms)
+✔ revival shares ordinary defeat before comeback and confirmation waits for reveal (0.453125ms)
+✔ single-strike story emits one blade impact and has a silent release gap (0.083792ms)
+✔ frame repetition, mute, pause and seeking do not replay consumed events (0.3235ms)
+✔ reach confirmation is not replayed when the post-win zoom starts (0.084667ms)
+✔ RUSH revival entry remains quiet until its authored awakening (0.077041ms)
+✔ audio voices and buffer memory remain bounded; pause, mute and disposal release sources (1765.466ms)
+✔ actual RUSH replenishment has a separate cue and reset cannot replay holds (0.168166ms)
+✔ PUSH prompt and actual press are separate once-only cues with no early confirmation (0.119125ms)
+✔ small cues cannot cut a confirmation when all six effect voices are occupied (145.820417ms)
+✔ important synth sounds retain priority and stereo tails (41.992625ms)
+✔ music selection does not disclose stored win/revival; battle uses presentation clock and exact existing silence boundaries (3.858584ms)
+✔ lazy loading, game-clock pause/resume, PUSH/seek and silence resume at actual display offset without pad source (2.9215ms)
+✔ independent music mute/volume never reallocates buffers, transition voices and decoded cache are bounded (0.716459ms)
+✔ late async generation and worker replies cannot revive disposed player/session (0.488083ms)
+✔ audio settings independently persist through session recreation; corrupt/denied storage is safe (0.240083ms)
+✔ BONUS start is a once-only first-round opening cue and mute consumes it without replay (0.229833ms)
+✔ integrated buses keep SE/music independent, mute consumes cues, and disposal is idempotent without gameplay mutations (0.993208ms)
+✔ new BONUS/RUSH stings cannot evict playing win or rushWin signatures at the six-voice limit (0.199ms)
+✔ shared silence windows include53.3 and preserve exact half-open runtime boundaries, without exposing pre-result differences (0.114333ms)
+✔ BGM starts and seeks ramp from zero over6ms; mute/pause/silence remain immediate and do not change display position (0.645084ms)
+✔ normal playback warms only battle and enters a ready battle immediately at its first display offset (0.46525ms)
+✔ muted/paused normal music never prefetches; disposal during battle warm-up discards the late PCM (1.11425ms)
+✔ physical heso admission sounds once per ball even with full holds; other inlets and unavailable audio never backlog (1.011833ms)
+✔ reel lifecycle emits each stop once and direct presentation cannot duplicate the same draw spin (0.198958ms)
+✔ actual physical heso crossing with a full queue notifies once without changing admission, FIFO or prize accounting (26.475375ms)
+✔ intro music follows camera elapsed without advancing gameplay; natural/skip handoff and pause never reset the opening note (0.800375ms)
+✔ all experience intros use the same normal bed; battle keeps its actual absolute clock after intro and reduced motion adds no offset (0.121583ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3619.259917

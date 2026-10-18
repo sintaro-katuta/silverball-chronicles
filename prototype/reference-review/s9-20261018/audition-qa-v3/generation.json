@@ -1,0 +1,35 @@
+{
+  "headAtStart": "02054e84078d421caf087cb8dc2dda490a146b4b",
+  "headAtEnd": "02054e84078d421caf087cb8dc2dda490a146b4b",
+  "generation": "Uncommitted frozen v3 plus intro fix; exact page/audio/module hashes are verification before/after. HEAD alone does not identify this run.",
+  "command": "env S9_AUDITION_OUT=prototype/reference-review/s9-20261018/audition-qa-v3 node prototype/tools/s9-audition-check.mjs",
+  "session": 68581,
+  "exitCode": 0,
+  "ownedChromeClosed": true,
+  "manifestHashes": [
+    {
+      "file": "prototype/reference-review/s9-20261018/audio-v3/manifest.json",
+      "sha256": "c900e63b3d1b7f01f4abf083455c69d136780ff9d0f6f39f58dc2dc6cf51c779",
+      "bytes": 56309
+    }
+  ],
+  "sourceInputsUnchanged": true,
+  "screenshots": [
+    {
+      "path": "1440-audition.png",
+      "sha256": "751bde04889b8df244beb3b4eaba0a096cc733a6d4f8df973b1b80c5e026bc73",
+      "bytes": 445219,
+      "visualReview": "Two players and source/gain labels readable. Mobile stacked layout and bounded scroll table. Final selected sound is decisiveHit; 0:00 display follows final selection with preload none, not a missing file."
+    },
+    {
+      "path": "390-audition.png",
+      "sha256": "4482e43be5784e93d33bba84a768396834ab4dc4a955852619193477ef616086",
+      "bytes": 329417,
+      "visualReview": "Two players and source/gain labels readable. Mobile stacked layout and bounded scroll table. Final selected sound is decisiveHit; 0:00 display follows final selection with preload none, not a missing file."
+    }
+  ],
+  "status": "17 purposes × baseline/candidate × desktop/mobile = 68 natural playbacks; no focus exclusions. HTTP/SHA/bytes/decode all68.",
+  "humanListening": "Not verified. Ended/WebAudio decode are technical evidence, not human preference/fatigue acceptance.",
+  "productionMix": "Not verified by this audition test; standalone playback uses matching gain only. Product runtime evidence is separate.",
+  "sourceChangesByReviewer": "None; only logs/receipts/images created."
+}

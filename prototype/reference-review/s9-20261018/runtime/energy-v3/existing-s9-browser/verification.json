@@ -1,0 +1,403 @@
+{
+  "workerTracks": [
+    {
+      "name": "normal",
+      "position": 0,
+      "fadeInSeconds": 0.006,
+      "voices": 1,
+      "activeVoices": 1,
+      "cachedTracks": [
+        "normal"
+      ],
+      "pendingTracks": [
+        "battle"
+      ],
+      "cacheBytes": 9216000,
+      "pending": 1,
+      "muted": false,
+      "volume": 0.5,
+      "loadError": null,
+      "sampleRate": 48000,
+      "loadTimings": [
+        {
+          "name": "normal",
+          "sampleRate": 48000,
+          "wallSeconds": 0.435,
+          "frames": 1152000
+        }
+      ]
+    },
+    {
+      "name": "battle",
+      "position": 0,
+      "fadeInSeconds": 0.006,
+      "voices": 1,
+      "activeVoices": 1,
+      "cachedTracks": [
+        "normal",
+        "battle"
+      ],
+      "pendingTracks": [],
+      "cacheBytes": 29952000,
+      "pending": 0,
+      "muted": false,
+      "volume": 0.5,
+      "loadError": null,
+      "sampleRate": 48000,
+      "loadTimings": [
+        {
+          "name": "normal",
+          "sampleRate": 48000,
+          "wallSeconds": 0.435,
+          "frames": 1152000
+        },
+        {
+          "name": "battle",
+          "sampleRate": 48000,
+          "wallSeconds": 0.6856999999880791,
+          "frames": 2592000
+        }
+      ]
+    },
+    {
+      "name": "bonus",
+      "position": 0,
+      "fadeInSeconds": 0.006,
+      "voices": 1,
+      "activeVoices": 1,
+      "cachedTracks": [
+        "battle",
+        "bonus"
+      ],
+      "pendingTracks": [],
+      "cacheBytes": 26880000,
+      "pending": 0,
+      "muted": false,
+      "volume": 0.5,
+      "loadError": null,
+      "sampleRate": 48000,
+      "loadTimings": [
+        {
+          "name": "normal",
+          "sampleRate": 48000,
+          "wallSeconds": 0.435,
+          "frames": 1152000
+        },
+        {
+          "name": "battle",
+          "sampleRate": 48000,
+          "wallSeconds": 0.6856999999880791,
+          "frames": 2592000
+        },
+        {
+          "name": "bonus",
+          "sampleRate": 48000,
+          "wallSeconds": 0.26109999999403954,
+          "frames": 768000
+        }
+      ]
+    },
+    {
+      "name": "rush",
+      "position": 0,
+      "fadeInSeconds": 0.006,
+      "voices": 1,
+      "activeVoices": 1,
+      "cachedTracks": [
+        "battle",
+        "bonus",
+        "rush"
+      ],
+      "pendingTracks": [],
+      "cacheBytes": 31680000,
+      "pending": 0,
+      "muted": false,
+      "volume": 0.5,
+      "loadError": null,
+      "sampleRate": 48000,
+      "loadTimings": [
+        {
+          "name": "normal",
+          "sampleRate": 48000,
+          "wallSeconds": 0.435,
+          "frames": 1152000
+        },
+        {
+          "name": "battle",
+          "sampleRate": 48000,
+          "wallSeconds": 0.6856999999880791,
+          "frames": 2592000
+        },
+        {
+          "name": "bonus",
+          "sampleRate": 48000,
+          "wallSeconds": 0.26109999999403954,
+          "frames": 768000
+        },
+        {
+          "name": "rush",
+          "sampleRate": 48000,
+          "wallSeconds": 0.17729999999701976,
+          "frames": 600000
+        }
+      ]
+    }
+  ],
+  "baselineWorker": [
+    {
+      "name": "normal",
+      "sampleRate": 48000,
+      "wallSeconds": 0.34819999998807905,
+      "frames": 1152000,
+      "duration": 24
+    },
+    {
+      "name": "battle",
+      "sampleRate": 48000,
+      "wallSeconds": 0.7684000000059604,
+      "frames": 2592000,
+      "duration": 54
+    },
+    {
+      "name": "bonus",
+      "sampleRate": 48000,
+      "wallSeconds": 0.27029999999701976,
+      "frames": 768000,
+      "duration": 16
+    },
+    {
+      "name": "rush",
+      "sampleRate": 48000,
+      "wallSeconds": 0.2126000000089407,
+      "frames": 640000,
+      "duration": 13.333333333333334
+    }
+  ],
+  "scope": "Live browser lifecycle, synthetic visibility handlers, four actual Worker/AudioContext tracks and review-only display-clock fixture. Not OS-background, natural draw acceptance or speaker audition.",
+  "records": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "preparationWallSeconds": 1.104,
+      "preparedMusic": {
+        "name": "normal",
+        "position": 1.1166666666666651,
+        "fadeInSeconds": 0.006,
+        "voices": 1,
+        "activeVoices": 1,
+        "cachedTracks": [
+          "normal",
+          "battle"
+        ],
+        "pendingTracks": [],
+        "cacheBytes": 29952000,
+        "pending": 0,
+        "muted": false,
+        "volume": 0.5,
+        "loadError": null
+      },
+      "battleEntry": {
+        "name": "battle",
+        "position": 0.03333333333333333,
+        "fadeInSeconds": 0.006,
+        "voices": 1,
+        "activeVoices": 1,
+        "cachedTracks": [
+          "normal",
+          "battle"
+        ],
+        "pendingTracks": [],
+        "cacheBytes": 29952000,
+        "pending": 0,
+        "muted": false,
+        "volume": 0.25,
+        "loadError": null
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "voices": 2,
+        "cacheBytes": 32755200,
+        "music": {
+          "name": "battle",
+          "position": 50.21666666666667,
+          "fadeInSeconds": 0.006,
+          "voices": 1,
+          "activeVoices": 1,
+          "cachedTracks": [
+            "normal",
+            "battle"
+          ],
+          "pendingTracks": [],
+          "cacheBytes": 29952000,
+          "pending": 0,
+          "muted": false,
+          "volume": 0.25,
+          "loadError": null
+        },
+        "preferences": {
+          "musicVolume": 0.25,
+          "effectsVolume": 0.7,
+          "musicMuted": false,
+          "effectsMuted": false
+        },
+        "cues": [
+          {
+            "name": "reach",
+            "variant": 0,
+            "time": 2.544
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 0,
+            "time": 2.6773333333333333
+          }
+        ]
+      },
+      "resumed": {
+        "enabled": true,
+        "state": "running",
+        "voices": 0,
+        "cacheBytes": 2400000,
+        "music": {
+          "name": "normal",
+          "position": 0.05833333333333333,
+          "fadeInSeconds": 0.006,
+          "voices": 0,
+          "activeVoices": 0,
+          "cachedTracks": [],
+          "pendingTracks": [
+            "normal"
+          ],
+          "cacheBytes": 0,
+          "pending": 1,
+          "muted": false,
+          "volume": 0.25,
+          "loadError": null
+        },
+        "preferences": {
+          "musicVolume": 0.25,
+          "effectsVolume": 0.7,
+          "musicMuted": false,
+          "effectsMuted": false
+        },
+        "cues": []
+      },
+      "errors": []
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "preparationWallSeconds": 1.121,
+      "preparedMusic": {
+        "name": "normal",
+        "position": 1.1249999999999984,
+        "fadeInSeconds": 0.006,
+        "voices": 1,
+        "activeVoices": 1,
+        "cachedTracks": [
+          "normal",
+          "battle"
+        ],
+        "pendingTracks": [],
+        "cacheBytes": 29952000,
+        "pending": 0,
+        "muted": false,
+        "volume": 0.5,
+        "loadError": null
+      },
+      "battleEntry": {
+        "name": "battle",
+        "position": 0.03333333333333333,
+        "fadeInSeconds": 0.006,
+        "voices": 1,
+        "activeVoices": 1,
+        "cachedTracks": [
+          "normal",
+          "battle"
+        ],
+        "pendingTracks": [],
+        "cacheBytes": 29952000,
+        "pending": 0,
+        "muted": false,
+        "volume": 0.25,
+        "loadError": null
+      },
+      "audio": {
+        "enabled": true,
+        "state": "running",
+        "voices": 2,
+        "cacheBytes": 32755200,
+        "music": {
+          "name": "battle",
+          "position": 50.208333333333336,
+          "fadeInSeconds": 0.006,
+          "voices": 1,
+          "activeVoices": 1,
+          "cachedTracks": [
+            "normal",
+            "battle"
+          ],
+          "pendingTracks": [],
+          "cacheBytes": 29952000,
+          "pending": 0,
+          "muted": false,
+          "volume": 0.25,
+          "loadError": null
+        },
+        "preferences": {
+          "musicVolume": 0.25,
+          "effectsVolume": 0.7,
+          "musicMuted": false,
+          "effectsMuted": false
+        },
+        "cues": [
+          {
+            "name": "reach",
+            "variant": 0,
+            "time": 2.554666666666667
+          },
+          {
+            "name": "decisiveHit",
+            "variant": 0,
+            "time": 2.688
+          }
+        ]
+      },
+      "resumed": {
+        "enabled": true,
+        "state": "running",
+        "voices": 0,
+        "cacheBytes": 1612800,
+        "music": {
+          "name": "normal",
+          "position": 0,
+          "fadeInSeconds": 0.006,
+          "voices": 0,
+          "activeVoices": 0,
+          "cachedTracks": [],
+          "pendingTracks": [
+            "normal"
+          ],
+          "cacheBytes": 0,
+          "pending": 1,
+          "muted": false,
+          "volume": 0.25,
+          "loadError": null
+        },
+        "preferences": {
+          "musicVolume": 0.25,
+          "effectsVolume": 0.7,
+          "musicMuted": false,
+          "effectsMuted": false
+        },
+        "cues": []
+      },
+      "errors": []
+    }
+  ]
+}

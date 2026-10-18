@@ -1,6 +1,6 @@
 # S9 音源のローカル確認と復元
 
-2026-10-18。音源初稿・runtime接続の確認手順です。制作完了、数値検証、実ブラウザ出力、人の試聴、PM採否は別に記録します。最新状態は[S9_ACCEPTANCE](S9_ACCEPTANCE.md)、割当は[S9_SOUND_ASSIGNMENT](S9_SOUND_ASSIGNMENT.md)を参照してください。
+2026-10-19更新。現在はアップテンポへ改修したv3と、導入BGMの連続再生修正を確認します。制作完了、数値検証、実ブラウザ出力、人の試聴、PM採否は別に記録します。最新状態は[S9_ACCEPTANCE](S9_ACCEPTANCE.md)、割当は[S9_SOUND_ASSIGNMENT](S9_SOUND_ASSIGNMENT.md)を参照してください。
 
 ## ローカルで確認する
 
@@ -10,7 +10,7 @@
 npm --prefix prototype run dev -- --host 127.0.0.1 --port 5449 --strictPort
 ```
 
-試聴ページでは用途を選び、基準/候補を一つずつ再生します。旧BGM基準は3秒の背景pad単体で、新曲と役割・尺が異なります。BONUS開始の旧比較はchargeで、同一イベントの旧専用音ではありません。manifestのauditionGainは大きい側だけを減衰して比較し、原素材は変更しません。試聴ページの音量と、本編のBGM/SE個別設定は別です。
+試聴ページでは17用途から選び、基準/候補を一つずつ再生します。現在の基準は改修直前02054e8の同じ用途のS9音源で、候補はaudio-v3です。初稿時の背景padや別用途charge、入賞音なしの比較は現在のプレイヤーでは使用しません。manifestのauditionGainは大きい側だけを減衰して比較し、原素材は変更しません。試聴ページの音量と、本編のBGM/SE個別設定は別です。
 
 代表一本の時間表は本編定義を参照しますが、素材プレイヤーや既存の演出比較画面だけで本編の当落後・復帰・実ミックスを検証したとはしません。光/剣列と無音開始/解除境界は両幅3結末のDOM QA済みです。50.2秒は既存cueにも含まれ、loss53.3秒は共通無音窓から反映します。音源再生/本編通しの判定とは分けて受入票を確認してください。
 
@@ -18,16 +18,17 @@ npm --prefix prototype run dev -- --host 127.0.0.1 --port 5449 --strictPort
 
 ## 再生成と保存版
 
-同じcheckoutの作曲/合成APIを使います。Node/FFmpeg版、実行前後のsourceとscoreのSHA、対象音源、ログ、判定を保存します。新旧の試聴/収録中には実行せず、既存の `audio-v1` を世代別に保全してから再生成します。現在のtoolは同じ出力先を書き換えるため、保存済み受入証拠へ新sourceのSHAを付け替えません。
+同じcheckoutの作曲/合成APIを使います。Node/FFmpeg版、実行前後のsourceとscoreのSHA、対象音源、ログ、判定を保存します。新旧の試聴/収録中には実行しません。v3の専用toolは完成済み出力への上書きを拒否します。再生成が必要なら新しい保存先を用意するようtoolを調整し、その変更も記録します。audio-v1/v2の旧toolを現在のsourceで実行して過去素材を上書きしません。
 
 ```sh
-# checkoutルート。最初は代表音、全素材は --all。
-node prototype/tools/s9-render-audio.mjs
-node prototype/tools/s9-render-audio.mjs --all
-node prototype/tools/s9-audio-spectrum.mjs
+# checkoutルート。空の保存先で最初に代表音、その後に全素材。
+node prototype/tools/s9-render-audio-v3.mjs --representative
+node prototype/tools/s9-render-audio-v3.mjs
+node prototype/tools/s9-audio-spectrum-v3.mjs
+node prototype/tools/s9-v3-technical.mjs
 ```
 
-出力は `prototype/reference-review/s9-20261018/audio-v1/`。manifestに音源90ファイルのSHA/bytes、source、実行版renderer、loop/尺、試聴gainを対応づけます。現rendererのmetadata追記版と、実音源生成時の保存版を混同しません。`measurements/` とspectral資料の数値、MP3 decode、旧win/rushWin各4variantのPCM一致は技術証拠です。スペクトルの重心を混合音の基音/品質点として扱いません。技術検証を人間の聴感や新sourceの本編出力に流用しません。
+出力は `prototype/reference-review/s9-20261018/audio-v3/`。manifestに17用途・音源150ファイルのSHA/bytes、source、実行版renderer、loop/尺、試聴gainを対応づけます。WAVとMP3は同じ素材の形式違いです。音源生成時のsourceはexecuted-sourceへ保存しています。`measurements/` とspectral資料の数値、MP3 decode、旧win/rushWin各4variantのPCM一致は技術証拠です。スペクトルの重心やpYIN valid率を品質点として扱いません。技術検証を人間の聴感や新sourceの本編出力に流用しません。
 
 ## 個別音量の保存と設定だけの復元
 
@@ -59,4 +60,4 @@ location.reload();
 
 一時的に音を止める場合は本編のBGM/SEを個別消音し、音量値を維持します。これは以前の製品版へ戻したこととは異なります。素材差戻しでは当該素材と対応score/manifest/生成sourceを同じ保存世代へ揃え、runtime差戻しでは音関連差分をレビュー対象として最小化します。現S8採用配置・3枚羽根・ガイドなし・通常.18/右.85・抽選/保存/払出を古いruntime丸ごと復元で巻き戻しません。どちらも旧検証を新しい版の成功とせず、必要な出力/回帰を再確認します。
 
-今回は復元操作・PR集約・mainマージ・CD/公開を実施していません。新PR動画の7文ナレーション台本はユーザー承認・公式CLI承認記録済みで、7WAV/timelineを生成済みです。voice-policyは実engine APIから取得。本文や声の変更が必要な場合は既存承認条件に従います。before-v1とafter-v2の全13本は収録完了し、source始終一致・実音声stream・全尺音声decode・非ゼロ音声を技術確認済みです。最終PR媒体の完成/再生受入と、人の聴感採否は別の未完了項目です。音源単体と本編の試聴受入、動画/最終CI/PRレビューを終えてから、S9の集約と既存リリース手順へ進みます。クラウド更新/公開の許可をローカル作業から推定しません。
+今回は復元操作・PR集約・mainマージ・CD/公開を実施していません。7段落のナレーションはユーザー承認・公式CLI承認記録済みで、7WAV/timelineを保存しています。v3動画では現在にも当てはまる3〜7段落だけを文面・原音・順序を保って使い、新しい発話を合成しません。voice-policyは実engine APIから取得。本文や声の変更が必要な場合は既存承認条件に従います。旧before-v1/after-v2と動画v1/v2は過去の証拠です。最新収録はruntime/energy-v3、媒体はpr-video-v3へ分け、完成・再生・CIの状態は受入台帳とPRへ記録します。人の聴感採否は別に扱います。クラウド更新/公開の許可をローカル作業から推定しません。
