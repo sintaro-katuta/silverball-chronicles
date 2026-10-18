@@ -108,3 +108,57 @@ Gitへは試聴MP3、score、設定、測定、manifestと再生成ソースを�
 再生成は `prototype/tools/s9-render-audio-v2.mjs`、帯域計測は `s9-audio-spectrum-v2.mjs`、既存保持照合は `s9-audio-v2-preservation.mjs`。出力先はaudio-v2固定・既存manifestがある場合は上書き拒否。再生成時は現在のaudio-v2を履歴ディレクトリへ保全し、空のaudio-v2へ元の `old-eight-pcm-before.json` を戻して実行する。音源制作の実行版はaudio-v2/executed-sourceに保存し、audio-v1は書き換えない。旧v1専用rendererを追加catalog付きの現sourceへ向けて再実行しない。
 
 `preservation-proof.json` は、現合成と保存v1 WAVのPCM24（4曲＋8音×4variant、計36）を完全一致照合した。win/rushWin各4variantは保存済みfloatPCM SHAとも一致。v1全90音源ファイルのSHAも不変。生WAVはローカル保全・再生成対象、MP3/score/設定/測定/manifestをGit保持する既定方針を継続する。
+
+## S9再制作：アップテンポと明確な打点（audio-v3）
+
+ユーザーの「BGM/SEがchillすぎる、もっとアップテンポで派手に」という試遊指摘を受け、02054e8時点の4曲・13SEを基準として再制作した。旧音源の速度変更やマスター増音ではなく、曲のフレーズ・和声配置・リズムと、SEの打点・倍音・収束を変えた。**設計と技術確認が完了した段階であり、人の聴感による改善認定ではない。**
+
+|曲|旧→新BPM|新小節/尺|再作曲の役割|
+|---|---|---|---|
+|normal「月下疾走」|80→160|16小節 / 24秒|四つ打ち・裏ハット・短いベース、16分アルペジオ、2小節旋律|
+|battle「一閃の鼓動」|120→160|36小節 / 54秒|前半からリズムを明確にし、段階的に音域と密度を上げる共通曲|
+|bonus「暁の凱歌」|120→180|12小節 / 16秒|長調の旋律とオクターブ応答、短い和音で報酬感を狙う|
+|rush「月影オーバードライブ」|144→192|10小節 / 12.5秒|速いフレーズと16分の推進力。BPMだけでなく音型も別にする|
+
+全曲で長いpadと全体echoを外し、音の入りを1.5msの有限倍音加算シンセへ変えた。BGM専用のキック/スネア/ハットはローカルの固定seedによる独自合成で、ゲームRNGを消費しない。SEには音楽的ベースやドラムを追加しない。既存 `tone` / `finish` の本体は変更せず、新 `vividTone` / `rhythmHit` だけをopt-in追加した。旧win/rushWinの当たり署名は維持する。
+
+代表の初稿は、通常曲RMS .03698 / crest 19.27dB / −26.87 LUFSで、打楽器の瞬間peakが曲全体の正規化を支配し、旋律・ベースが引っ込む懸念があった。初稿・実行版を `audio-v3/representative-initial/` に保全したうえで、master peak .34を保ち、キックgain .18→.11、スネア .13→.09、裏ハット .055→.032へ下げ、lead .10→.17、bass .105→.14、stab .034→.042、arp .029→.040へ配分を変更した。bassの音長も.32→.44拍とし、全体の増音に頼らず音楽の胴を戻した。
+
+最終代表normalはRMS .06041 / crest 15.01dB / −22.35 LUFS / −9.16dBTP。同じイベント時計・同じmix gain(.65/.65)の12秒モック比較は旧−23.52→新−24.66 LUFS。これは実本編録音ではなく、通常曲に入賞・回転・3停止・一撃を置いた設計確認用の合成mixである。試聴は `representativeMix.auditionGain` でLUFSを揃え、音量差で派手さを判定しない。本編の既定gain・duck・ポーズ復帰は別途runtimeブラウザーで確認する。
+
+全13SEは従来の用途ID・尺・priority・duckForを維持し、v0〜3の全音程/開始/尺/gain/包絡を `audio-v3/scores/` に保存した。速い上昇と硬い入口を使い分け、頻回音は長い尾を付けない。一撃は高い短い下降から芯と張った保持へ、復活とBONUS/RUSH開始はそれぞれ異なる上昇/返しとした。当落・保留・乱数を合成の引数にせず、結果を確定前に知らせる音型や分岐は追加しない。
+
+|SE|尺|v0 LUFS / dBTP|
+|---|---:|---:|
+|development|1.20秒|−19.86 / −11.45|
+|pushPrompt|.82秒|−20.62 / −12.04|
+|pushPress|.32秒|−24.06 / −11.15|
+|heroHit|.74秒|−24.17 / −9.61|
+|decisiveHit|1.55秒|−16.60 / −5.04|
+|revival|1.50秒|−17.91 / −9.25|
+|bonusStart|2.60秒|−17.30 / −9.12|
+|rushStart|1.45秒|−16.88 / −8.94|
+|spin|.28秒|−28.16 / −17.61|
+|stopLeft / stopRight|各.18秒|−28.35 / −14.89、−27.85 / −14.80|
+|stopCenter|.24秒|−28.96 / −13.76|
+|admission|.16秒|−31.35 / −18.13|
+
+自己批評：短い音の識別性や高域の疲れは人の聴取が必要であり、倍音が増えたことを自動的に品質向上としない。特に頻回のヘソ・停止音は音楽より優先して認識できるか、本編同時発音と小型スピーカーで確認する。一撃は余韻を短く再配分したが、それが望ましい迫力かは試遊判断を残す。音量の比較補正と本編gainを混同しない。
+
+### 計測と音程の限定確認
+
+- 4曲＋13SE×4variant＋基準17音＋モックmix2音＝75 WAV / 75 MP3。48kHz stereo PCM24、MP3 256kbps。全ファイルのSHA/bytes、finite/clip/true peak/LUFS/crest/400ms RMS/mono/correlation、MP3 decodeを保存した。音楽4曲LUFSは−22.35/−22.41/−21.65/−22.20、mono lossはいずれも約−.005dB。
+- 加算音は各sampleのpartialを `.42×sampleRate` 未満に制限。8/48/96kHzのSE生成78条件で有限値/端点/clip/RNG非消費を確認した。変調や離散noiseの全条件で「alias皆無」と証明した扱いにはせず、帯域測定を別記録とする。
+- 02054e8の基準17 WAV/MP3と制作source8本を新baselineへコピー保全。旧v1/v2の全140音源ファイルはSHA不変。今回対象外のlegacy59用途×4variantは16kHzのPCM完全一致、win/rushWin各4variantは48kHzの保存署名SHAとも一致。代表7素材と最終全展開の同名WAVも完全一致した。
+- pYINは代表一撃のみを対象に、旧/新それぞれ第2body声の単独stemと全混合の4入力を比較した。150〜3000Hz、SR22050、1024窓/128hop、confidence .8、−60dBFS未満除外。広い探索範囲を保ち、混合の推定値を無理に単一F0へ確定しない。`pitch-analysis/` の同尺度スペクトログラムとF0図を実見した。
+- 単独bodyの安定区間.12〜.35秒は旧中央値262.68Hz / 新348.61Hzで、指定した別の音程設計に対応する。全1.55秒に対する有効率は旧body45.9% / 新body23.9%（新bodyは約.458秒までで、その後は意図した無音）。混合は48.5% / 46.3%。後半の混合では共通倍音/オクターブ候補の曖昧さがあるため、欠測を補間せず、F0の差を品質点や一致率へ変換しない。約46ms窓では急な入口の正確な瞬時Hzも保証しない。
+
+`normal-review.png` は最初8秒の同LUFS補正・同尺度STFT/RMS。長い連続成分から、刻んだ成分とリズムの周期へ変えたことを確認する図であり、聴感の代わりではない。実行Python依存版は `pitch-environment.txt` に保存した。専用一時venvでlibrosa/matplotlibを導入し、音声を外部送信しないローカル解析とした。
+
+### 再生成と受渡し
+
+`node prototype/tools/s9-render-audio-v3.mjs --representative` → `node prototype/tools/s9-render-audio-v3.mjs`。それぞれ既存manifestがあれば上書き拒否する。現在の `audio-v3/baseline/`、`baseline-manifest.json`、`executed-before/` は02054e8の再現入力であり、残したまま成果を別の履歴へ保全してから再生成する。V1/V2 rendererは実行しない。
+
+補助は `s9-v3-technical.mjs`、`s9-audio-spectrum-v3.mjs`、`s9-v3-pitch-stems.mjs`、`s9-v3-music-review.py`。pYINはskillの `scripts/pitch_compare.py`、実command/入力SHA/依存版を解析JSONに記録した。全制作実行版は `audio-v3/executed-source/` とmanifestのinput inventoryへ。基準と最新の17用途2音のみを試聴へ出し、初稿を比較プレイヤーへ混ぜない。今回は入賞基準も既実装の02054e8の音であり、v2時点の「専用音なし」基準とは異なる。
+
+演出49.65〜50.2秒等の無音窓・確定公開時刻・各当落演出尺・ゲームルールは不変。battleは勝敗前の同一54秒曲で、58秒復活でも同じloopを使う。曲自体に当落別の切替や無音を埋め込まず、既存runtimeの共有時計を正本とする。

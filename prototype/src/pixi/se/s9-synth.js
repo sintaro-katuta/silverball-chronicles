@@ -23,3 +23,38 @@ export function finish(pcm,peak=.32,{loop=false,echo=true}={}){
  }
  return pcm;
 }
+
+// V3 opt-in voices. Legacy tone/finish above are byte-for-byte unchanged.
+// Finite additive partials, each below 0.42*sampleRate: no naive discontinuous saw.
+export function vividTone(pcm,{at=0,seconds=.15,hz,endHz=hz,gain=.1,pan=0,attack=.0015,release=.025,decay=1.7,voice='lead',wrap=false}){
+ const rate=pcm.sampleRate,n=pcm.left.length,start=Math.round(at*rate),length=Math.ceil(seconds*rate),lp=Math.sqrt((1-pan)/2),rp=Math.sqrt((1+pan)/2);
+ let phase=0;
+ for(let j=0;j<length;j++){
+  const t=j/rate,u=t/seconds,idx=start+j;if(!wrap&&(idx<0||idx>=n))continue;const i=((idx%n)+n)%n;
+  const f=hz*Math.exp(Math.log(endHz/hz)*Math.min(1,t/Math.min(seconds,.075)));phase+=TAU*f/rate;
+  let value=0,weight=0;const max=Math.min(voice==='bass'?7:15,Math.floor(rate*.42/f));
+  for(let h=1;h<=max;h++){
+   const amp=voice==='bass'?(h===1?1:.43/h):voice==='pluck'?(h%2?1/h:.36/h):(h%2?1/h:.62/h);
+   value+=Math.sin(phase*h+(h%2?0:.18))*amp;weight+=amp;
+  }
+  value/=Math.max(1,weight*.65);
+  const edge=Math.max(0,Math.min(1,t/Math.max(attack,1/rate),(seconds-t)/Math.max(release,1/rate))),env=edge*Math.exp(-decay*u);
+  pcm.left[i]+=value*gain*env*lp;pcm.right[i]+=value*gain*env*rp;
+ }
+}
+// Original synthetic drum voices used only by music, never by the SE voices.
+// Seed is local to an event and does not read or consume game RNG.
+export function rhythmHit(pcm,{at=0,seconds=.12,gain=.1,pan=0,voice='hat',seed=1,wrap=false}){
+ const rate=pcm.sampleRate,n=pcm.left.length,start=Math.round(at*rate),length=Math.ceil(seconds*rate),lp=Math.sqrt((1-pan)/2),rp=Math.sqrt((1+pan)/2);
+ let random=seed>>>0,low=0,phase=0;
+ for(let j=0;j<length;j++){
+  const t=j/rate,u=t/seconds,idx=start+j;if(!wrap&&(idx<0||idx>=n))continue;const i=((idx%n)+n)%n;
+  random=(Math.imul(random,1664525)+1013904223)>>>0;const noise=random/2147483648-1;low+=.20*(noise-low);
+  let value;
+  if(voice==='kick'){const f=48+125*Math.exp(-t*65);phase+=TAU*f/rate;value=Math.sin(phase)*Math.exp(-t*23)+.16*(noise-low)*Math.exp(-t*170);}
+  else if(voice==='snare'){phase+=TAU*185/rate;value=((noise-low)*.78+Math.sin(phase)*.22)*Math.exp(-t*31);}
+  else {value=(noise-low)*Math.exp(-t*(voice==='openHat'?28:90))*.65;}
+  const edge=Math.max(0,Math.min(1,t/.0007,(seconds-t)/.007));value*=gain*edge;
+  pcm.left[i]+=value*lp;pcm.right[i]+=value*rp;
+ }
+}
