@@ -27,11 +27,12 @@ export const ROAD_GROUP_VECTORS=Object.freeze({'three-road-group-left300':Object
 export function roadGroupMoves(id){const vector=ROAD_GROUP_VECTORS[id];if(!Object.hasOwn(ROAD_GROUP_VECTORS,id))throw new Error('Unknown road group declaration');return Array.from({length:26},(_,i)=>({pinId:i+1,...vector}));}
 const ROAD_TRANSITION_COUNTS=Object.freeze({'three-road-entry22-up200':22,'three-road-taper25-up200':25});
 export function roadTransitionMoves(id){if(!Object.hasOwn(ROAD_TRANSITION_COUNTS,id))throw new Error('Unknown road transition declaration');return Array.from({length:ROAD_TRANSITION_COUNTS[id]},(_,i)=>({pinId:i+1,dx:0,dy:id==='three-road-entry22-up200'?-2:-2*(26-(i+1))/25}));}
+export function prize17Moves(){return Array.from({length:17},(_,i)=>({pinId:i+47,dx:-2,dy:0}));}
 function declaredDisplacementLimit(config,pinSpacingProfile,windmillOffsetProfile){
- const transition=Object.hasOwn(ROAD_TRANSITION_COUNTS,config.id);
- if(!transition&&!Object.hasOwn(ROAD_GROUP_VECTORS,config.id))return 1;
- if(pinSpacingProfile!==PIN_SPACING_STRICT||windmillOffsetProfile!==WINDMILL_OFFSET_STRICT||config.leftAdmissionGuides!==false||config.hesoMouthWidth!==20||config.launchRailProfile!=='legacy'||config.normalPower!==.18||config.windmillShapeProfile!=='photo-three-vane'||Object.hasOwn(config,'ballRadius')||JSON.stringify(config.windmillOffset)!==JSON.stringify({dx:0,dy:0})||JSON.stringify(config.moves)!==JSON.stringify(transition?roadTransitionMoves(config.id):roadGroupMoves(config.id)))throw new Error(transition?'Road transition requires exact original pins, declared heights and fixed board':'Road group requires exact26 original pins, declared vector and fixed board');
- return transition?2:3;
+ const prize=config.id==='three-prize17-left200',transition=Object.hasOwn(ROAD_TRANSITION_COUNTS,config.id);
+ if(!prize&&!transition&&!Object.hasOwn(ROAD_GROUP_VECTORS,config.id))return 1;
+ if(pinSpacingProfile!==PIN_SPACING_STRICT||windmillOffsetProfile!==WINDMILL_OFFSET_STRICT||config.leftAdmissionGuides!==false||config.hesoMouthWidth!==20||config.launchRailProfile!=='legacy'||config.normalPower!==.18||config.windmillShapeProfile!=='photo-three-vane'||Object.hasOwn(config,'ballRadius')||JSON.stringify(config.windmillOffset)!==JSON.stringify({dx:0,dy:0})||JSON.stringify(config.moves)!==JSON.stringify(prize?prize17Moves():transition?roadTransitionMoves(config.id):roadGroupMoves(config.id)))throw new Error(prize?'Prize group requires exact17 original pins, left2 and fixed board':transition?'Road transition requires exact original pins, declared heights and fixed board':'Road group requires exact26 original pins, declared vector and fixed board');
+ return prize||transition?2:3;
 }
 export function resolvePinAdjustment(config,{pinSpacingProfile=PIN_SPACING_STRICT,windmillOffsetProfile=WINDMILL_OFFSET_STRICT}={}){
  if(!config||Object.keys(config).some(k=>!['id','label','leftAdmissionGuides','hesoMouthWidth','moves','ballRadius','launchRailProfile','normalPower','windmillOffset','windmillShapeProfile'].includes(k))||typeof config.id!=='string'||typeof config.label!=='string'||typeof config.leftAdmissionGuides!=='boolean'||!Array.isArray(config.moves))throw new Error('Invalid adjustment configuration');
