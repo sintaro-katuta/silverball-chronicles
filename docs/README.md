@@ -421,3 +421,5 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [寄り釘17本の本編統合結果](agile/S8_PRIZE17_INTEGRATION_RESULTS.md)
 
 - [改善結果を伝える動画の読み上げ台本（承認待ち）](agile/s8-prize17-video/script.md)
+
+- [ローカル試遊の盤面起動エラーと修正確認](agile/S8_LOCAL_PLAY_FONT_FIX.md)
