@@ -415,3 +415,9 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [道の入口と末端を分けた2案の比較](agile/S8_ROAD_TRANSITION_RESULTS.md)（A12/B4、各250発・未採用）
 
 - [寄り釘17本の移動でヘソ入賞が増えた結果](agile/S8_PRIZE17_RESULTS.md)
+
+- [寄り釘17本の本編統合・検証計画](agile/S8_PRIZE17_INTEGRATION_PLAN.md)
+
+- [寄り釘17本の本編統合結果](agile/S8_PRIZE17_INTEGRATION_RESULTS.md)
+
+- [改善結果を伝える動画の読み上げ台本（承認待ち）](agile/s8-prize17-video/script.md)
