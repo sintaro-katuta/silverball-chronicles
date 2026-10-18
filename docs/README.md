@@ -6,6 +6,8 @@
 
 ## 主な入口
 
+- [GitHub Issue全件整理（2026-10-19）](agile/ISSUE_AUDIT_2026-10-19.md)：完了・分割・重複の判定、移管先と作業順。
+
 - [個人開発紹介：クローン後にブラウザだけで発表](presentations/marp/README.md)：表示用HTML・画像・動画を同梱。Marpのインストール不要。
 
 - [Sprint 5実行計画](agile/S5_PLAN.md)
