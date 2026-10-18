@@ -1,0 +1,33 @@
+{
+  "records": [
+    {
+      "version": "before",
+      "sourceEvent": {
+        "at": 0.012,
+        "seconds": 0.82,
+        "hz": 349.232297511013,
+        "endHz": 261.9242231332598,
+        "gain": 0.56,
+        "pan": 0
+      },
+      "selectedIndex": 1,
+      "role": "Authored isolated body diagnostic, not full SE or runtime recording",
+      "normalization": "isolated stem peak .4, no echo; full mixed files remain unmodified"
+    },
+    {
+      "version": "after",
+      "sourceEvent": {
+        "at": 0.008,
+        "seconds": 0.45,
+        "hz": 466.16275426693255,
+        "endHz": 349.232297511013,
+        "gain": 0.42,
+        "pan": 0
+      },
+      "selectedIndex": 1,
+      "role": "Authored isolated body diagnostic, not full SE or runtime recording",
+      "normalization": "isolated stem peak .4, no echo; full mixed files remain unmodified"
+    }
+  ],
+  "analysis": "Compare mixed signal separately; F0 missing in polyphony is not filled or scored as quality."
+}

@@ -1,0 +1,46 @@
+{
+  "version": "s9-effects-v3",
+  "name": "stopCenter",
+  "variant": 1,
+  "duration": 0.24,
+  "level": 0.2,
+  "priority": 2,
+  "duckFor": 0,
+  "role": "中図柄停止の少し重い短い打点・当落非依存",
+  "kind": "s9-synth",
+  "style": "s9-v3-bright-additive",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.075,
+      "hz": 926.7315554826619,
+      "endHz": 583.8010300544146,
+      "gain": 0.38,
+      "pan": 0
+    },
+    {
+      "at": 0.012,
+      "seconds": 0.15,
+      "hz": 463.36577774133093,
+      "endHz": 463.36577774133093,
+      "gain": 0.22,
+      "pan": 0
+    },
+    {
+      "at": 0.07,
+      "seconds": 0.1,
+      "hz": 926.7315554826619,
+      "endHz": 926.7315554826619,
+      "gain": 0.1,
+      "pan": 0
+    }
+  ],
+  "envelope": {
+    "attack": 0.0012,
+    "release": 0.016,
+    "decay": 1.5,
+    "voice": "lead",
+    "echo": false
+  },
+  "intent": "Bright finite-additive synth, articulated rises and decisive attack; no drums/bass in SE, no outcome or game RNG input."
+}

@@ -1,0 +1,62 @@
+{
+  "version": "s9-effects-v3",
+  "name": "decisiveHit",
+  "variant": 2,
+  "duration": 1.55,
+  "level": 0.56,
+  "priority": 3,
+  "duckFor": 0.28,
+  "role": "pressure最終一撃・当落非確定",
+  "kind": "s9-synth",
+  "style": "s9-v3-bright-additive",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.085,
+      "hz": 1875.8389231701365,
+      "endHz": 468.9597307925341,
+      "gain": 0.52,
+      "pan": 0
+    },
+    {
+      "at": 0.008,
+      "seconds": 0.45,
+      "hz": 468.9597307925341,
+      "endHz": 351.3276912960791,
+      "gain": 0.42,
+      "pan": 0
+    },
+    {
+      "at": 0.04,
+      "seconds": 0.4,
+      "hz": 702.6464201510537,
+      "endHz": 702.6464201510537,
+      "gain": 0.25,
+      "pan": 0
+    },
+    {
+      "at": 0.12,
+      "seconds": 0.7,
+      "hz": 1052.7821067802354,
+      "endHz": 1052.7821067802354,
+      "gain": 0.22,
+      "pan": 0.12
+    },
+    {
+      "at": 0.18,
+      "seconds": 0.5,
+      "hz": 1405.2928403021074,
+      "endHz": 1405.2928403021074,
+      "gain": 0.1,
+      "pan": -0.12
+    }
+  ],
+  "envelope": {
+    "attack": 0.0012,
+    "release": 0.035,
+    "decay": 1,
+    "voice": "lead",
+    "echo": false
+  },
+  "intent": "Bright finite-additive synth, articulated rises and decisive attack; no drums/bass in SE, no outcome or game RNG input."
+}

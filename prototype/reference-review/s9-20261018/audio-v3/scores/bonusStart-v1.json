@@ -1,0 +1,118 @@
+{
+  "version": "s9-effects-v3",
+  "name": "bonusStart",
+  "variant": 1,
+  "duration": 2.6,
+  "level": 0.35,
+  "priority": 3,
+  "duckFor": 0.35,
+  "role": "確定後のBONUS開始",
+  "kind": "s9-synth",
+  "style": "s9-v3-bright-additive",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.15,
+      "hz": 694.2649519186356,
+      "endHz": 694.2649519186356,
+      "gain": 0.3,
+      "pan": 0
+    },
+    {
+      "at": 0,
+      "seconds": 0.15,
+      "hz": 463.36631420953574,
+      "endHz": 463.36631420953574,
+      "gain": 0.15,
+      "pan": 0
+    },
+    {
+      "at": 0.2,
+      "seconds": 0.15,
+      "hz": 926.7315554826619,
+      "endHz": 926.7315554826619,
+      "gain": 0.3,
+      "pan": 0
+    },
+    {
+      "at": 0.2,
+      "seconds": 0.15,
+      "hz": 618.5191747602381,
+      "endHz": 618.5191747602381,
+      "gain": 0.15,
+      "pan": 0
+    },
+    {
+      "at": 0.4,
+      "seconds": 0.23,
+      "hz": 1167.6109156420875,
+      "endHz": 1167.6109156420875,
+      "gain": 0.3,
+      "pan": 0
+    },
+    {
+      "at": 0.4,
+      "seconds": 0.23,
+      "hz": 779.286877317842,
+      "endHz": 779.286877317842,
+      "gain": 0.15,
+      "pan": 0
+    },
+    {
+      "at": 0.75,
+      "seconds": 0.18,
+      "hz": 1040.2240697212267,
+      "endHz": 1040.2240697212267,
+      "gain": 0.3,
+      "pan": 0
+    },
+    {
+      "at": 0.75,
+      "seconds": 0.18,
+      "hz": 694.266348613341,
+      "endHz": 694.266348613341,
+      "gain": 0.15,
+      "pan": 0
+    },
+    {
+      "at": 1,
+      "seconds": 0.28,
+      "hz": 1388.5299038372711,
+      "endHz": 1388.5299038372711,
+      "gain": 0.3,
+      "pan": 0
+    },
+    {
+      "at": 1,
+      "seconds": 0.28,
+      "hz": 926.7326284190715,
+      "endHz": 926.7326284190715,
+      "gain": 0.15,
+      "pan": 0
+    },
+    {
+      "at": 1.4,
+      "seconds": 0.8,
+      "hz": 1558.5738534634352,
+      "endHz": 1558.5738534634352,
+      "gain": 0.3,
+      "pan": 0
+    },
+    {
+      "at": 1.4,
+      "seconds": 0.8,
+      "hz": 1040.223361278566,
+      "endHz": 1040.223361278566,
+      "gain": 0.15,
+      "pan": 0
+    }
+  ],
+  "envelope": {
+    "attack": 0.0012,
+    "release": 0.035,
+    "decay": 1,
+    "voice": "lead",
+    "echo": false
+  },
+  "intent": "Bright finite-additive synth, articulated rises and decisive attack; no drums/bass in SE, no outcome or game RNG input."
+}

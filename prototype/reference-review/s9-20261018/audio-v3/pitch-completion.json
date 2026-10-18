@@ -1,0 +1,63 @@
+{
+  "complete": true,
+  "observedProcessExitCode": 0,
+  "executionSession": 17765,
+  "scope": "Previously completed representative decisiveHit diagnostic only; this receipt creates no new analysis",
+  "inputs": [
+    "before-body=prototype/reference-review/s9-20261018/audio-v3/pitch-stems/before-body.wav",
+    "after-body=prototype/reference-review/s9-20261018/audio-v3/pitch-stems/after-body.wav",
+    "before-mix=prototype/reference-review/s9-20261018/audio-v3/baseline/se-decisiveHit.wav",
+    "after-mix=prototype/reference-review/s9-20261018/audio-v3/representative/se/decisiveHit-v0.wav"
+  ],
+  "coverage": [
+    {
+      "label": "before-body",
+      "validCoverage": 0.458955223880597
+    },
+    {
+      "label": "after-body",
+      "validCoverage": 0.23880597014925373
+    },
+    {
+      "label": "before-mix",
+      "validCoverage": 0.48507462686567165
+    },
+    {
+      "label": "after-mix",
+      "validCoverage": 0.4626865671641791
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "pitch-analysis/pitch-analysis.json",
+      "sha256": "a531e4ef30e4108ffc157c852f8213a1d63b61bb02371d92d2a041ad62a1f913",
+      "bytes": 208398
+    },
+    {
+      "path": "pitch-analysis/f0.png",
+      "sha256": "8a4d2875018eebadec19cef149a9aa83552c07e638928616776192c2c6a1da1b",
+      "bytes": 145704
+    },
+    {
+      "path": "pitch-analysis/spectrograms.png",
+      "sha256": "2ab482d586b2613bb051158419161c26a35eaef737e4f8d286f72cbbb7e74beb",
+      "bytes": 204018
+    },
+    {
+      "path": "pitch.log",
+      "sha256": "f16c84ded9a65f88f9caaeb48b5b0ec9ab889b7577d617436ce8d3d8645a9a46",
+      "bytes": 207
+    },
+    {
+      "path": "pitch-environment.txt",
+      "sha256": "fc31d39ee934691e5e35b0c51761cdb667434c21c593c6f066297b5344839ece",
+      "bytes": 595
+    },
+    {
+      "path": "self-review.json",
+      "sha256": "969abc9725d38483a95e031db5067f3d0a61942094cdb02516b849a58798fa78",
+      "bytes": 1531
+    }
+  ],
+  "limits": "Nulls preserved. Single authored body .12-.35s and mixed SE are distinct; mixed common-harmonic/octave ambiguity remains. F0 estimates not extended to whole-music quality. Human listening unverified."
+}

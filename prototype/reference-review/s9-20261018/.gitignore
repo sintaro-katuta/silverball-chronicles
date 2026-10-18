@@ -9,3 +9,11 @@ scene-*/bonus.json
 scene-*/rush.json
 scene-*/battle-experience.json
 runtime/scene-reel-*/record.json
+# V3 raw per-frame records are kept locally; compact lossless copies are reviewed.
+runtime/energy-v3/scene-*/normal.json
+runtime/energy-v3/scene-*/battle.json
+runtime/energy-v3/scene-*/bonus.json
+runtime/energy-v3/scene-*/rush.json
+# Intermediate representative audition audio remains local, with scores/metrics retained.
+audio-v3/representative/**/*.mp3
+audio-v3/representative-initial/**/*.mp3
