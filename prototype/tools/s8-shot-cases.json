@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "baseline",
+      "label": "変更前・元101本",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": []
+    },
+    {
+      "id": "road2-up025",
+      "label": "道入口の釘1本を上へ0.25",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 2,
+          "dx": 0,
+          "dy": -0.25
+        }
+      ]
+    },
+    {
+      "id": "yori48-right025",
+      "label": "上流の釘48を右へ0.25",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 48,
+          "dx": 0.25,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "yori48-left025",
+      "label": "上流の釘48を左へ0.25",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 48,
+          "dx": -0.25,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "yori46-right025",
+      "label": "上流の釘46を右へ0.25",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": 0.25,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "yori46-left025",
+      "label": "上流の釘46を左へ0.25",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": -0.25,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "yori54-right025",
+      "label": "上流の釘54を右へ0.25",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 54,
+          "dx": 0.25,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "yori54-left025",
+      "label": "上流の釘54を左へ0.25",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 54,
+          "dx": -0.25,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "yori48-up025",
+      "label": "上流の釘48を上へ0.25",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 48,
+          "dx": 0,
+          "dy": -0.25
+        }
+      ]
+    },
+    {
+      "id": "yori48-down025",
+      "label": "上流の釘48を下へ0.25",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 48,
+          "dx": 0,
+          "dy": 0.25
+        }
+      ]
+    },
+    {
+      "id": "yori48-right050",
+      "label": "上流の釘48を右へ0.50",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 48,
+          "dx": 0.5,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "yori48-left050",
+      "label": "上流の釘48を左へ0.50",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 48,
+          "dx": -0.5,
+          "dy": 0
+        }
+      ]
+    },
+    {
+      "id": "yori46-up025",
+      "label": "上流の釘46を上へ0.25",
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18,
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": 0,
+          "dy": -0.25
+        }
+      ]
+    }
+  ]
+}

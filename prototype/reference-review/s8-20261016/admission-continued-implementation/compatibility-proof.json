@@ -1,0 +1,63 @@
+{
+  "node": "v26.11.0",
+  "beforeCommit": "44d8022d2c213038ee1e2a6a793816fa3274cd47",
+  "beforeOracleSHA": "d14e9b07706a9a054969cfa0c5561dcc1fed7cddd8a0676466cae908f2e9aaa3",
+  "rows": [
+    {
+      "profile": "legacy-capsules",
+      "mode": "normal",
+      "factoryExact": true,
+      "fullJSONEventsReplayExact": true
+    },
+    {
+      "profile": "legacy-capsules",
+      "mode": "rush",
+      "factoryExact": true,
+      "fullJSONEventsReplayExact": true
+    },
+    {
+      "profile": "legacy-capsules",
+      "mode": "bonus",
+      "factoryExact": true,
+      "fullJSONEventsReplayExact": true
+    },
+    {
+      "profile": "photo-three-vane",
+      "mode": "normal",
+      "factoryExact": true,
+      "fullJSONEventsReplayExact": true
+    },
+    {
+      "profile": "photo-three-vane",
+      "mode": "rush",
+      "factoryExact": true,
+      "fullJSONEventsReplayExact": true
+    },
+    {
+      "profile": "photo-three-vane",
+      "mode": "bonus",
+      "factoryExact": true,
+      "fullJSONEventsReplayExact": true
+    }
+  ],
+  "historical": [
+    {
+      "path": "prototype/reference-review/s8-20261016/wheel-shape/shot250/legacy-phase0/result.json.gz",
+      "compressedSHA": "f8acf0d88da58898804da38ebc11a8d5f28b5d32fa5dfd6dee3d4de9eb65ecec",
+      "historicalSourceSHA": "25f905a27cf6efb2fe3ff43732cad40e18e76e7b53e391acd3d6eccb741e980c",
+      "shots": 250,
+      "start": 13,
+      "oldValidatorStillPasses": true,
+      "note": "Historical raw unchanged; not relabelled as new-source performance evidence."
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/wheel-shape/shot250/shared-phase0/result.json.gz",
+      "compressedSHA": "100d5d1ab1f62d064c7464a73f3d3ae15ac3b852a6cb5f5a4b215a81b98559a6",
+      "historicalSourceSHA": "25f905a27cf6efb2fe3ff43732cad40e18e76e7b53e391acd3d6eccb741e980c",
+      "shots": 250,
+      "start": 9,
+      "oldValidatorStillPasses": true,
+      "note": "Historical raw unchanged; not relabelled as new-source performance evidence."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "success": true,
+  "inputs": [
+    {
+      "file": "/private/tmp/silverball-s8-20261016/prototype/reference-review/s8-20261016/wheel-shape/clip-whole/whole.mp4",
+      "sha256": "2fec89f88ff81262b5df21819f774efcf5b904f3721776e12ccb4af3f81d33db",
+      "duration": 15,
+      "receipt": "85454d77e6e10f6087c56f8e9ab4c2cd90b79e74cfb1ad3ab5930e7ff6cf8473"
+    },
+    {
+      "file": "/private/tmp/silverball-s8-20261016/prototype/reference-review/s8-20261016/wheel-shape/clip-near/near.mp4",
+      "sha256": "67e025067dcbf8c8c2342e62210003e063814146b5cc6d44bde383b87896fb35",
+      "duration": 15,
+      "receipt": "ee6b1a0d044439e2dbcdd39b025c86c4e651d04f441fa4611c244b077630230c"
+    },
+    {
+      "file": "/private/tmp/silverball-s8-20261016/prototype/reference-review/s8-20261016/wheel-shape/clip-ball38/ball38.mp4",
+      "sha256": "504159a14ca852caff440c338df22229ee070b5fe4d338579b8523a8524e3262",
+      "duration": 5.5,
+      "receipt": "2a087fa6de07792b5e71177f8e568870f424a99cee14a9ad393a8c0a309d90a8"
+    }
+  ],
+  "output": {
+    "file": "/private/tmp/silverball-s8-20261016/prototype/reference-review/s8-20261016/wheel-shape/comparison.mp4",
+    "sha256": "69e06b495405be565a86a9e8541a12864f912c0a875704062879fe1e891810da",
+    "bytes": 2261383
+  },
+  "sourceSHA": "25f905a27cf6efb2fe3ff43732cad40e18e76e7b53e391acd3d6eccb741e980c",
+  "segments": [
+    {
+      "whole": "0..15s",
+      "speed": 1
+    },
+    {
+      "near": "0..15s replay",
+      "speed": 1
+    },
+    {
+      "ball38": "22.5..28s",
+      "speed": 1,
+      "reason": "Minimum actual outcome difference ID; not single-contact causality"
+    },
+    {
+      "results": "Full250 shots plus45s drain",
+      "duration": 10
+    }
+  ],
+  "editing": "Only annotation strip y84..124 replaced. Game/time/counters unchanged; no interpolation/recalculation.",
+  "script": {
+    "path": "prototype/tools/s8-wheel-media/compose.mjs",
+    "sha256": "b210c5e4db1289c57d8a6ec1d11396d81571a6d9cdcb3a45b2a3289c3d167740"
+  },
+  "cards": [
+    {
+      "name": "strip-whole",
+      "sha256": "710e6e6a38ba2bd550025e2ca9afbb5fec23153a62b6928f2a283527fae3a764"
+    },
+    {
+      "name": "strip-near",
+      "sha256": "b238af5f84c5374bf725729e933c0be307f006a4e7de4e1f9966a5d2a12cacde"
+    },
+    {
+      "name": "strip-ball38",
+      "sha256": "3bb7ec947a9ef19c373ea5eb9e3dbd62cb1f34c6ee00410e09e60ec84de19a5d"
+    },
+    {
+      "name": "results",
+      "sha256": "68e874c74d06f5c6accefdd07ca04f952284342a41b3b57232588bda08672dab"
+    }
+  ],
+  "nativePlayback": "PM pending"
+}

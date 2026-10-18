@@ -1,0 +1,95 @@
+{
+  "rows": [
+    {
+      "file": "baseline-phase-0.json.gz",
+      "id": "baseline",
+      "phase": 0,
+      "shots": 196,
+      "start": 11,
+      "normal": 3,
+      "returned": 0,
+      "out": 182,
+      "remaining": 0,
+      "stalled": 0,
+      "maxGap": 46.33184523799426,
+      "countsValid": true,
+      "lcd": {
+        "centre": 0,
+        "boundary": 0,
+        "frontCentre": 0,
+        "frontBoundary": 0
+      },
+      "firstTurnRegions": {
+        "A": 17,
+        "B": 132
+      },
+      "firstContactRegions": {
+        "A": 42,
+        "B": 0
+      },
+      "firstPinIds": {
+        "27": 42,
+        "39": 51,
+        "48": 101,
+        "50": 1,
+        "52": 1
+      },
+      "unobservedFirstTurn": 0,
+      "unobservedFirstPinContact": 0,
+      "terminalReached": 12,
+      "firstDescendingZones": {
+        "left": 150,
+        "envelope": 19,
+        "right": 27,
+        "unobserved": 0
+      },
+      "firstTurnClassifications": {
+        "A": 28,
+        "B": 143,
+        "overlap": 7,
+        "outside": 18,
+        "unobserved": 0
+      },
+      "movedPins": 0,
+      "totalDistance": 0,
+      "wallMilliseconds": 10596.661708
+    }
+  ],
+  "rawManifest": [
+    {
+      "file": "baseline-phase-0.json.gz",
+      "compressedSHA": "a5305068069018082e7cf7e5cd6d63662e2fbfe390d2c66d955bef22a32b2111",
+      "compressedBytes": 1391666,
+      "expandedSHA": "88500d446d30620f72d12ed2c7cf112402b589b2f7f3d5f276f986fa414f6576",
+      "expandedBytes": 7983335,
+      "sourceSHA": "9ecdb18e997a4b81397f3bc9f5bfffced9eb42ef986b7eec3e4db91c3ca8042c",
+      "configSHA": "46ad42fa5af2fa3b51d2eba04c3cdedebe78238845de2f12329f069322a3478c",
+      "layoutSHA": "ef5ec8b503bc0d46ffd35a48b87c1f9d092891ed756a4f8375cb197f24c6e994",
+      "replayFPS": 30,
+      "frames": 4951
+    }
+  ],
+  "skipped": [
+    {
+      "id": "jump-pin90",
+      "config": {
+        "leftAdmissionGuides": true,
+        "hesoMouthWidth": 20,
+        "launchRailProfile": "legacy",
+        "normalPower": 0.18,
+        "id": "jump-pin90",
+        "label": "ジャンプ相当ID90を上へ0.25",
+        "moves": [
+          {
+            "pinId": 90,
+            "dx": 0,
+            "dy": -0.25
+          }
+        ]
+      },
+      "valid": false,
+      "skipReason": "Pin 90: fixed polygon heso-tray-0"
+    }
+  ],
+  "decision": "PM screen/long aim review required; no automatic progression or adoption."
+}

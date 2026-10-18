@@ -1,0 +1,1 @@
+export default {"root": "/private/tmp/silverball-s8-20261016/prototype", "server": {"host": "127.0.0.1", "port": 5418, "strictPort": true, "fs": {"allow": ["/private/tmp/silverball-s8-20261016", "/private/tmp/silverball-s6-20261015/prototype/node_modules"]}}};

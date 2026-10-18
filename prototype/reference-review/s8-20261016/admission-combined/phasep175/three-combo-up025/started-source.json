@@ -1,0 +1,811 @@
+{
+  "stage": "run",
+  "caseId": "three-combo-up025",
+  "phase": 0.175,
+  "mode": "normal",
+  "commit": "db96be7e36ec049f472a9970634f7651abc668d1",
+  "source": {
+    "base": {
+      "base": {
+        "base": {
+          "sha256": "7412f254954960c3421870ded6bd512795f0a04cb866a5d3dcddc99047c828e7",
+          "files": [
+            {
+              "path": "prototype/src/app/main.js",
+              "sha256": "42103f7cc5e93406e36e2fea12500b9f524722adc4f622542b5e9ba681e2bcee"
+            },
+            {
+              "path": "prototype/src/domain/game.js",
+              "sha256": "4a7f83bbee7f8375b613ab735ab34c645cf2f60d2aa88a3d89fa04ae3f5b0e6f"
+            },
+            {
+              "path": "prototype/src/domain/machine-spec.js",
+              "sha256": "c356276d200f14808d6a2da4f067454d4aad8c12bca90ef59f57a515b5d9e74b"
+            },
+            {
+              "path": "prototype/src/domain/moon-state.js",
+              "sha256": "a0dc841c1b2671d95eb8c3a79e4614cda6e7901e637778f225e3f26d617887d0"
+            },
+            {
+              "path": "prototype/src/domain/payout-distribution.js",
+              "sha256": "4767ad5ead1ad931ff9e5d092452b31aed75864d732d353e694e186581de8966"
+            },
+            {
+              "path": "prototype/src/domain/reels.js",
+              "sha256": "b590fbc3430f3f8f0f3babf1effeb3895d9d89116ec8627adaa5aa612ce47e0f"
+            },
+            {
+              "path": "prototype/src/domain/session-game.js",
+              "sha256": "716edea34fd1a0f84ee6ac9b1b9a6a892cf81bf7105370bea55762b0d302fc14"
+            },
+            {
+              "path": "prototype/src/domain/tokyoghoul-w-machine.js",
+              "sha256": "3dc65bcecd09087015eae183e93ec26dd7480c4596f8f5161ead06530266a560"
+            },
+            {
+              "path": "prototype/src/domain/tokyoghoul-w-spec.js",
+              "sha256": "67d5e395a6104eb7bd395023fd756a253e6b78d840c737a46396b56c8e9f696a"
+            },
+            {
+              "path": "prototype/src/domain/w-runtime-policy.js",
+              "sha256": "193243a10f1f9e8f1c47a69c9b8db5dd9f2abce0b1c73b7d12a3760c4dd52490"
+            },
+            {
+              "path": "prototype/src/domain/windmill-shape.js",
+              "sha256": "c1f88ffa5ec96fde792c387f9cca164fee1b2879499ed6f7ba2b36d6e8eead2c"
+            },
+            {
+              "path": "prototype/src/legacy/assets.js",
+              "sha256": "3290750465175697f9628e0993fef7608631266e0644fe503ad6749c4fe90a2b"
+            },
+            {
+              "path": "prototype/src/legacy/balance-chart.js",
+              "sha256": "c735270b98091d0aae9ab040a23e5732c198f7914e649cd5c35c3a7c852b0f3a"
+            },
+            {
+              "path": "prototype/src/legacy/battle-effects.js",
+              "sha256": "6a2963ea7c11388ac53264bb5d5aca5dc4f4826cb3d66414b31f63925d205048"
+            },
+            {
+              "path": "prototype/src/legacy/battle.js",
+              "sha256": "8f79671dee30bd608cb4d296bd8f23bd7e7a26c8ef66b91073e295aa3f10ea15"
+            },
+            {
+              "path": "prototype/src/legacy/cabinet.css",
+              "sha256": "2b8099d82550301bed6e7df11f6149713589de408cf9ee5086dcda310d5aa27c"
+            },
+            {
+              "path": "prototype/src/legacy/data-counter.css",
+              "sha256": "3a115688dbea6cca1210336f51ae8ec2d29494aca34aaf5a29bd34e843f8f2e7"
+            },
+            {
+              "path": "prototype/src/legacy/data-counter.js",
+              "sha256": "0d92a3bfb98a9091a66d5c5bc987959d94194f567ce7223a3f8677bacdbaf7e4"
+            },
+            {
+              "path": "prototype/src/legacy/debug.js",
+              "sha256": "481c87c7428b13e05113ef62cd58431bc021b0cce87357e74519beb66f5283da"
+            },
+            {
+              "path": "prototype/src/legacy/denchu-control.js",
+              "sha256": "90d9607a3f8d6cfbc9d229a8af6500b5d45ae6d3a780074d78273ccea96ac335"
+            },
+            {
+              "path": "prototype/src/legacy/denchu-flow-fixture.js",
+              "sha256": "5d2168b65241708bc7a7f656e86cddf0c3726c5a8c7ca96bfbf4d0705fab3bff"
+            },
+            {
+              "path": "prototype/src/legacy/hybrid-art.css",
+              "sha256": "86691e8270697879a589a80010ee7e38a47d4998ebe4061e37f2f938b80413e7"
+            },
+            {
+              "path": "prototype/src/legacy/loading-screen.js",
+              "sha256": "2c9aaaa4fcba9d8c5f36322006294077a7773ce92b29fa2af1b00c4af0b836d3"
+            },
+            {
+              "path": "prototype/src/legacy/long-reach-three-view.js",
+              "sha256": "2a590105f3c52eb3acc55b34f9901471de498c9ecef080c0946171c759e4ac39"
+            },
+            {
+              "path": "prototype/src/legacy/machine-layout.js",
+              "sha256": "1353fa7728cf4dd51dfa4f6d777405c72922dee4908453c4f6d7985260ce4080"
+            },
+            {
+              "path": "prototype/src/legacy/main.js",
+              "sha256": "02b0e32168f252890a0a8b080b8644cf0be0e0f1b255fe01948a2df072d7abec"
+            },
+            {
+              "path": "prototype/src/legacy/moon-traces.css",
+              "sha256": "4f8c607f1783ffd95d2be0b20513f60e41b6b833ff9931c6146f784ccb604245"
+            },
+            {
+              "path": "prototype/src/legacy/moon-traces.js",
+              "sha256": "18651537053b5210004e23ab6ab861c9f33fc6be562df96d3acb86a3ce63825f"
+            },
+            {
+              "path": "prototype/src/legacy/pixel-art.css",
+              "sha256": "8fc6cb914eeb317def1f2d4d5cf1e2d7cfddb526fde2f7ca699b8de0ce393d3e"
+            },
+            {
+              "path": "prototype/src/legacy/pixel-art.js",
+              "sha256": "3454e1f8b7299ca572baae88410799b7bcd9bcfc4330e7e9b48ceba8c8f4be86"
+            },
+            {
+              "path": "prototype/src/legacy/pixel-cabinet-frame.js",
+              "sha256": "cad0a640a6bb063f92b20303dbf135f1c9991f5402638cef0da1ce67c61ed09f"
+            },
+            {
+              "path": "prototype/src/legacy/reel-display.js",
+              "sha256": "9b8a63b816533293f85c6e92c36532e0692928e41e6e131e202d1d577fc21e0a"
+            },
+            {
+              "path": "prototype/src/legacy/rush-screen.css",
+              "sha256": "3ae333dc351e8271e4ed4fba55acfa1669085507d6194012057ca619f25d16c7"
+            },
+            {
+              "path": "prototype/src/legacy/rush-screen.js",
+              "sha256": "d1f8fd1557d77f7a073efda971a9c0917f64d7d64398741a713d1e70979ecee9"
+            },
+            {
+              "path": "prototype/src/legacy/scene.js",
+              "sha256": "adf0053afceee6ef84618c5b3e79379832edbafbe883ccd89c77c176bbbd6717"
+            },
+            {
+              "path": "prototype/src/legacy/shot-control.js",
+              "sha256": "53e7ba3e63cf8c73af6625831f60133933cc30f70425ac7a4d27f98079fb45f8"
+            },
+            {
+              "path": "prototype/src/legacy/sound.js",
+              "sha256": "1ca607ca05a6fe2298a8290750d97fe51a871a8d40382ee4b2f4617039a4a932"
+            },
+            {
+              "path": "prototype/src/legacy/style.css",
+              "sha256": "e600d8f993d17aa0e434be8eb6a9e1804c8a6374fd233c0b9c10566d9fb4c920"
+            },
+            {
+              "path": "prototype/src/legacy/title-art.js",
+              "sha256": "8b21a9c7da47836c23a0a546671e96169db698d7432b5044ad62ca0603062937"
+            },
+            {
+              "path": "prototype/src/legacy/title-glyphs.json",
+              "sha256": "08dbc747c2ee0b4fdffe82a8df3414dc29b77f6c82d98fafb699022cbaf577d4"
+            },
+            {
+              "path": "prototype/src/legacy/viewport-fit.js",
+              "sha256": "3ef1ba02b9774bd59c1f7dc6c673048ba9f3079ef81e7d2956d9555692381eba"
+            },
+            {
+              "path": "prototype/src/physics/ball-flow.js",
+              "sha256": "aa264eeb61618868145ecaecccb56293133833b273b9b3e287654ee0719ffcc0"
+            },
+            {
+              "path": "prototype/src/physics/passive-trace.js",
+              "sha256": "a25a243ec60c355d5b9b6d376e8fe69669131dc7742de6d22712bfde631e635a"
+            },
+            {
+              "path": "prototype/src/physics/physics.js",
+              "sha256": "106d138921a3b23dff73f011ed2ee9177057c81f498a38236db3b97e6bbe0d70"
+            },
+            {
+              "path": "prototype/src/physics/pocket-sensor.js",
+              "sha256": "b45a93350b396e4cf25a9a1898cebae1c227215f8346d64667348d46565c7767"
+            },
+            {
+              "path": "prototype/src/physics/solid-polygon-contact.js",
+              "sha256": "87ed93fe2dd3d612d930b3294adea773a6e68cb431b35b1f188368b73022979d"
+            },
+            {
+              "path": "prototype/src/physics/windmill-shape-contact.js",
+              "sha256": "2a8d726b174b104008bc59a9b25170c084c2616c9e62586c8f34b5e1b032688e"
+            },
+            {
+              "path": "prototype/src/pixi/admission-feedback.js",
+              "sha256": "d654bdc44b597b17246462e1ce29e5eca07c1b74d384bab0a1fcf812fb946f2a"
+            },
+            {
+              "path": "prototype/src/pixi/attacker-motion.js",
+              "sha256": "2dd0675821406c4b8bb1d17cc6027637398e470ba53fd873a44d0272559c8b30"
+            },
+            {
+              "path": "prototype/src/pixi/attacker-panel.js",
+              "sha256": "228a2664327612e983e22b6fe850db828d3132e9ff76763c5fcfde8a288ecc62"
+            },
+            {
+              "path": "prototype/src/pixi/attacker-view.js",
+              "sha256": "8c2220de3b057f54c432a59f74eaf96e4932a56e45493a0b5e1b808bd5c74945"
+            },
+            {
+              "path": "prototype/src/pixi/background-transition.js",
+              "sha256": "4dd3328291bb4e014bf0a1f12cffa36ed23e6a0e51774dabdd0f3295de99d5c3"
+            },
+            {
+              "path": "prototype/src/pixi/board-asset-loader.js",
+              "sha256": "ec27f8b104cb850978808b4d6827d2580b1edde74cd22ebbe640941a232bf968"
+            },
+            {
+              "path": "prototype/src/pixi/board-assets.js",
+              "sha256": "fbcaa725ada1ae56b924db798f6204aa9ca467760903507fd720badcbb6ee9c6"
+            },
+            {
+              "path": "prototype/src/pixi/board-flow.js",
+              "sha256": "f97b403a0aa081c4db672b2307e4abd9ccdf8b39909340a79681fbc0567235ba"
+            },
+            {
+              "path": "prototype/src/pixi/board-rails.js",
+              "sha256": "eac066a9d7a914ed73cc285b4c9a8571be9a95e5435e810e951122faee856832"
+            },
+            {
+              "path": "prototype/src/pixi/board-runtime.js",
+              "sha256": "90f62f8e1ddf93f9bdbd5022f40615a9e56d80f9ffa38a823bf7bddd2715d41b"
+            },
+            {
+              "path": "prototype/src/pixi/board-silhouette.js",
+              "sha256": "8e501da400d1ef45083e19b87024158e504c0dd3bc500704ed78fd761cd74f8a"
+            },
+            {
+              "path": "prototype/src/pixi/board-trim.js",
+              "sha256": "2654e594abdabe2b6a8689a1fee14050859df8d3ba25edf20f6c514bd6acc5b8"
+            },
+            {
+              "path": "prototype/src/pixi/bonus-round-flow.js",
+              "sha256": "587c77a41344282a6cad7b4db38e7410e68967801c19cf5072dce9a56e43b45d"
+            },
+            {
+              "path": "prototype/src/pixi/bonus-round-view.js",
+              "sha256": "ef49c839d8c5eb29fa1fd6a6025381ae62d44b0b853c611dd510cff5f7c4914c"
+            },
+            {
+              "path": "prototype/src/pixi/cabinet-decor.js",
+              "sha256": "ee7202d11dc4d5749f4906f18a7495e42650c6d5cc8044b2a7f253f60e1835d1"
+            },
+            {
+              "path": "prototype/src/pixi/cabinet-foreground.js",
+              "sha256": "33bc363d54cd9e50b41c3754eb12988266295998d5704af0278ae77bd560e590"
+            },
+            {
+              "path": "prototype/src/pixi/cabinet-light-motion.js",
+              "sha256": "fe9bde6601e4e58325e41232c29e473524a026ab05b520efdb6f6b96c77701f8"
+            },
+            {
+              "path": "prototype/src/pixi/cabinet-light-view.js",
+              "sha256": "5babc88fba6a37b185d4c5dffe66b522afd6028d1af24b280110c3b623b209bf"
+            },
+            {
+              "path": "prototype/src/pixi/castle-entry-view.js",
+              "sha256": "a4cb7a7b72b0a89b9181900a23c355179f447454307742e52686280083dd00ab"
+            },
+            {
+              "path": "prototype/src/pixi/character-idle.js",
+              "sha256": "1fd0baefbf75737eda6b3a67abddd3ebe39af51fc99c065a80086a8bcad6eefd"
+            },
+            {
+              "path": "prototype/src/pixi/cloud-idle.js",
+              "sha256": "f8d40e1be1d595600607ae859dd80c375941dc5c27bed8e7577f26079c6c4484"
+            },
+            {
+              "path": "prototype/src/pixi/decision-push-overlay.js",
+              "sha256": "8155d1aa886eda90a672754f7898f240ceab35aa9931aa539a76386e24584553"
+            },
+            {
+              "path": "prototype/src/pixi/decision-push.css",
+              "sha256": "a902f081cd62b82392fdcaec00d64516b8818ececb992b9afb67426e78c4cb74"
+            },
+            {
+              "path": "prototype/src/pixi/decision-push.js",
+              "sha256": "cf9c8489c2d45dfd30912c35a3ce299a10d28e885253a7cf63b5cf845b25439f"
+            },
+            {
+              "path": "prototype/src/pixi/development-view.js",
+              "sha256": "2ac5552819df81e63cae5322b37f1947ee5cf42ff819eb55b752947d609a3efd"
+            },
+            {
+              "path": "prototype/src/pixi/direction-cutin.js",
+              "sha256": "88a15898c433b6623cbb313f76b75b6a17805ec25e1b8be3cf62e8ee8c4186b2"
+            },
+            {
+              "path": "prototype/src/pixi/eclipse-mechanism.js",
+              "sha256": "6bb19891ada600ab8eeaf8d0a894e9d36deb4643f5da68ff205ed7402c6bbc14"
+            },
+            {
+              "path": "prototype/src/pixi/entry-continuous-view.js",
+              "sha256": "8074cad9fe47f060081ffa1c35f418484eb43ffeb5ee029d8b33d1e0106c3aa0"
+            },
+            {
+              "path": "prototype/src/pixi/entry-title-schedule.js",
+              "sha256": "4315be1f325cabd27496eb71682b6cd3d89893e9b79365f69d35b6c4204dbad0"
+            },
+            {
+              "path": "prototype/src/pixi/hair-tip-idle.js",
+              "sha256": "ed86c0e0ab8cd2cd031cfae415f224e33b2fdf64ea5a9d920bf6f444c2e0daba"
+            },
+            {
+              "path": "prototype/src/pixi/heso-guide.js",
+              "sha256": "2e397fc0feb88d745feea1e91ace8dd2bc52942b7aa9d8fe76c867fa0e26e403"
+            },
+            {
+              "path": "prototype/src/pixi/heso-pocket-geometry.js",
+              "sha256": "a2846fbdefcc9718f6b2b2884b2a59e7d171a687360c550a709f293e33071828"
+            },
+            {
+              "path": "prototype/src/pixi/hold-motion.js",
+              "sha256": "4e9965487b768e0c7395b5f62751ee64473983786f033e64e355a76991c93922"
+            },
+            {
+              "path": "prototype/src/pixi/hold-prediction.js",
+              "sha256": "b77a9ddef88b2d22f7bc8cae4e9b27d59770590e1b3c96d56a0fafdaea48d246"
+            },
+            {
+              "path": "prototype/src/pixi/hold-view.js",
+              "sha256": "7eda98ce173b75cde7345de2cc308b3c28a0085351ea817e535ad9cc231dc2dc"
+            },
+            {
+              "path": "prototype/src/pixi/intro-camera.js",
+              "sha256": "6252e462869a9e2eff620ad0921e5390316e79758146434d2cb44195578a8fae"
+            },
+            {
+              "path": "prototype/src/pixi/lcd-layout.js",
+              "sha256": "9fce593670e014ee3d60227633261d1ca8e886ee345e95e869fc6ed9a5b88d7b"
+            },
+            {
+              "path": "prototype/src/pixi/lcd-safe-layout.js",
+              "sha256": "b6f26b9bdb587805a6cd5c6cb5bf141a07af816dfa22441ec26640c818535632"
+            },
+            {
+              "path": "prototype/src/pixi/lcd-view.js",
+              "sha256": "d43bf8cecdfb12e917f800382950cb2ab5d43db69fecb673058c7fe7233bf667"
+            },
+            {
+              "path": "prototype/src/pixi/left-route-metrics.js",
+              "sha256": "a08f30dbc2fa9d892fbf9c5e952e5758ac3382c2a7d6bfc3bcab9bbf5d5e2cab"
+            },
+            {
+              "path": "prototype/src/pixi/long-reach-timeline.js",
+              "sha256": "4fe613cb6fdbe289c1ec648d4513f2421a40a8c4971db50191974c72ec31d59b"
+            },
+            {
+              "path": "prototype/src/pixi/long-reach-view.js",
+              "sha256": "58281973fb6a1f515f80a0a56439e3bfad4dd6b416a87d206226ced6502027b6"
+            },
+            {
+              "path": "prototype/src/pixi/lunar-relief-art.js",
+              "sha256": "46bd0474e4c8bfba139fde5324a53bbcec8a11b4d94dd8e51113659768c31b07"
+            },
+            {
+              "path": "prototype/src/pixi/moon-cue-art.js",
+              "sha256": "a4524b5dd8f7423c5e0073bfd05180cdf7a6b58b41b176485f018acd78ca5b7f"
+            },
+            {
+              "path": "prototype/src/pixi/moon-cue.js",
+              "sha256": "2bf303f508f739fa16f74f88ee1d8aa0cd20873fdfd74b5c004a29c48e10e78a"
+            },
+            {
+              "path": "prototype/src/pixi/normal-spin-flow.js",
+              "sha256": "817e46ed47eef2c71603ae446f6abea16acfc95d2242857519a50cb46818d554"
+            },
+            {
+              "path": "prototype/src/pixi/normal-spin-view.js",
+              "sha256": "2706e4c1e4c77e1e23374abfc8542776a695b78591b46906054c9fb02f738025"
+            },
+            {
+              "path": "prototype/src/pixi/ordinary-pocket-geometry.js",
+              "sha256": "4a117527e8648d1bab2c48fe7a4839b404e8c41cbc98a43e1935cdc59a275503"
+            },
+            {
+              "path": "prototype/src/pixi/pass-gate.js",
+              "sha256": "0b7e61b2354560568d24cbfb61db871903f6cd129dde8f731b387ad8baf6e4ab"
+            },
+            {
+              "path": "prototype/src/pixi/payout-reveal.js",
+              "sha256": "ea16d7927601abed92abdfd4b9d86f20b09f934a065d1b1381e7c57a1660f574"
+            },
+            {
+              "path": "prototype/src/pixi/pin-texture.js",
+              "sha256": "28b29235f678bb2569b2a034251a1df29e3c15cb20eafdb88a1c6f89ad17b4ce"
+            },
+            {
+              "path": "prototype/src/pixi/pixel-primitives.js",
+              "sha256": "212626961107290001dc48ac027a07f968115288751355d00b2cac5e7934d3e4"
+            },
+            {
+              "path": "prototype/src/pixi/prediction-plan.js",
+              "sha256": "4c40422c81d7da55d2ad69aa2633400127f0933549b36426da47b0c9e63d62d1"
+            },
+            {
+              "path": "prototype/src/pixi/prediction-view.js",
+              "sha256": "b853398ab1f81584f38eca5004cb197ab18bdd9758bb42321ba14e3c7c0f0d2a"
+            },
+            {
+              "path": "prototype/src/pixi/presentation-clock.js",
+              "sha256": "0972f7d599e2181897a03f938531773e519dfcd051bd3040a2c7883a471929e4"
+            },
+            {
+              "path": "prototype/src/pixi/presentation-distribution.js",
+              "sha256": "d32b7ce8fb48599a238477397564ace6a62f5983b04dd8d6120641b9d13f5fe7"
+            },
+            {
+              "path": "prototype/src/pixi/presentation-quality.js",
+              "sha256": "b3d7f9291653b10b3efcb32fef660dedae8992d9fb331c08fc0a126242ad32fb"
+            },
+            {
+              "path": "prototype/src/pixi/reach-ending.js",
+              "sha256": "971458a4387d92cd141f11eb74e9bbf5b18594c8cbc3ef5624f6af7c8e341516"
+            },
+            {
+              "path": "prototype/src/pixi/reach-finale-view.js",
+              "sha256": "1422d6f77697759e5ca836d52b5b8bde79e2b47ead78c04d874f3271fc603627"
+            },
+            {
+              "path": "prototype/src/pixi/reach-variety.js",
+              "sha256": "0081f854f6ad8cd7c1d651015659c597959699f37488914dcbc644538e870c30"
+            },
+            {
+              "path": "prototype/src/pixi/reference-rail-shapes.js",
+              "sha256": "aba4b31b4b2188123f2d6f6a6bc6496b12343864afb7cacff1e9a6ab9de3f11f"
+            },
+            {
+              "path": "prototype/src/pixi/resin-guide-art.js",
+              "sha256": "98ac7e80e5c63c49951749f1afd24b3e526e6d049116a8ff0f025bc3f2da9d0b"
+            },
+            {
+              "path": "prototype/src/pixi/result-slash-view.js",
+              "sha256": "b3904faa6c3e3b1f8676ba61489c557cc80619b8c7fae0d8de332c1618744efb"
+            },
+            {
+              "path": "prototype/src/pixi/review-reel-state.js",
+              "sha256": "9abad47c57ffa2a9760108ec22871e93ad5beaac708a235aad785935eb1f2f28"
+            },
+            {
+              "path": "prototype/src/pixi/revival-entry-motion.js",
+              "sha256": "1dfb9d0ca6e961d7b6617394b657671e252b31fda1ce3627b189e3e0f4d9a3d2"
+            },
+            {
+              "path": "prototype/src/pixi/right-resin-route.js",
+              "sha256": "c25d01cacef0ce71c4f4fe546c0f8f3f04de25f5e84b55413117d7ae0f84d2f0"
+            },
+            {
+              "path": "prototype/src/pixi/right-start-motion.js",
+              "sha256": "b7ca6ae160ff4c7526c29c3a5ce3c667263866c33688073d6e0743fe76d84d94"
+            },
+            {
+              "path": "prototype/src/pixi/right-start-view.js",
+              "sha256": "235ed874b6bf025198bd9bb931734328c4e64c5e7ea85e1a042b446456f3f4b1"
+            },
+            {
+              "path": "prototype/src/pixi/rush-direction-guide.js",
+              "sha256": "42cef311e589be5597601af2141e745001820ecca0070c0eba85575830e60015"
+            },
+            {
+              "path": "prototype/src/pixi/rush-end-motion.js",
+              "sha256": "5906845a078f6ebc6601a11dc4f65e328910f839f2350cd4d8a4c4126d0835ba"
+            },
+            {
+              "path": "prototype/src/pixi/rush-end-view.js",
+              "sha256": "1f25bdc13d052d2970d43408e4f1e35b5c48f7e362f7125b2a7e093ecdbc1327"
+            },
+            {
+              "path": "prototype/src/pixi/rush-entry-motion.js",
+              "sha256": "4d2a38be5cb279465e13364f4333d89b31d60b226d9c72d2a4e6da5c58d58bb5"
+            },
+            {
+              "path": "prototype/src/pixi/rush-entry-view.js",
+              "sha256": "b8b3f693c7296e8a8d342ab580d84da9a0ba973ebf0a9fd2bcacca73bc82585b"
+            },
+            {
+              "path": "prototype/src/pixi/rush-prelude-motion.js",
+              "sha256": "17e721269dbd49c3aa7753412e6992999e1f0d9e6fe0f638d3997288ea0c6506"
+            },
+            {
+              "path": "prototype/src/pixi/rush-prelude-view.js",
+              "sha256": "649c46aa5260d7fdcfcb43bead10b0e00aa9376fed7b7a569a961da4c881c30f"
+            },
+            {
+              "path": "prototype/src/pixi/rush-win-motion.js",
+              "sha256": "bdebc02a7b8b19151aa4112eaa94582a89c735912ce063c22e2be5d9c65a3600"
+            },
+            {
+              "path": "prototype/src/pixi/se/original-se.js",
+              "sha256": "dff82507535c0a195bdbebd1ddfbae4c594512e6efa87da6c79c0418c95860cf"
+            },
+            {
+              "path": "prototype/src/pixi/se/presentation-atmosphere.js",
+              "sha256": "ba3c74041eb34345809346f8a23fdcf4e94d1411202813f7e7057fa76bad4cfc"
+            },
+            {
+              "path": "prototype/src/pixi/se/presentation-cues.js",
+              "sha256": "3f8f7e46ee58a7ab69098df7e2b7b148104889e0fba9dac725474f526f070fab"
+            },
+            {
+              "path": "prototype/src/pixi/se/presentation-sound.js",
+              "sha256": "f00c2b28dd4e77a40945c826b9433e8a5d28fd35ed01180ac1011e8575f0f509"
+            },
+            {
+              "path": "prototype/src/pixi/se/signature-sound.js",
+              "sha256": "2c0dbae87ae3807fc4645f2dc0a684296ff371457a6fd1ae2e27af3323a5aec5"
+            },
+            {
+              "path": "prototype/src/pixi/se/synth-wave.js",
+              "sha256": "042b18a27172f7f1c0ccb6fb4d5392ad316056e6a73e3b230ebe9b71e402dd1f"
+            },
+            {
+              "path": "prototype/src/pixi/se/win-zoom-sound.js",
+              "sha256": "10c44edfa3cff3d2474a0525b0bf3f09eff19083df18363103bc2e886fb1a6b9"
+            },
+            {
+              "path": "prototype/src/pixi/silver-ball.js",
+              "sha256": "d01926de5e807fa5d7c3ff45b90f423b938a6d5c1cc68ee924df26ca59096fd6"
+            },
+            {
+              "path": "prototype/src/pixi/source-layout.js",
+              "sha256": "46b8aff73fb3a5906558cf5a7b81bf3ae88193c65836336e43734647ad792732"
+            },
+            {
+              "path": "prototype/src/pixi/special-route-motion.js",
+              "sha256": "19ebe421ba33d54bac9ab4ee975788be154bbe28cd0f232eb8b356d01f738fcf"
+            },
+            {
+              "path": "prototype/src/pixi/special-route-view.js",
+              "sha256": "ee2e0a33e97c90c0104c1d1c8e935f53ec2ae9f7bedec777a03e7d812e175dde"
+            },
+            {
+              "path": "prototype/src/pixi/story-prediction-assets.js",
+              "sha256": "2f940ed1ae299201eb8593f11ebf15fede660af786ce2b2bf4de4484c4bffd12"
+            },
+            {
+              "path": "prototype/src/pixi/story-prediction-motion.js",
+              "sha256": "724f031bbd79063ceef1532bd39f1112791204a13fa36c70ef6bb44af6b650da"
+            },
+            {
+              "path": "prototype/src/pixi/story-prediction-view.js",
+              "sha256": "5ed536b67daeacb503f4557db6c2ae7faffbcef0f0b936e8c052eba499a2324a"
+            },
+            {
+              "path": "prototype/src/pixi/story-prediction-window.js",
+              "sha256": "86579de76bd622717c0b7dff4bbce352b7234b42149d6b6d73d2a7b95a3bdb36"
+            },
+            {
+              "path": "prototype/src/pixi/sword-geometry.js",
+              "sha256": "8429bd55e97ebd4a41b1341f62970245173ebaaef5395d488c1761fbeaec72ab"
+            },
+            {
+              "path": "prototype/src/pixi/water-idle.js",
+              "sha256": "d7a0f6b3787041ee2a91d9c799bb7fbf04990783069787e2dce2a8f39e1729c6"
+            },
+            {
+              "path": "prototype/src/pixi/win-sequence.js",
+              "sha256": "8392eb76ae82dfd1936d079ea90b164c112f015f492dd96c366caa443f3cc0e6"
+            },
+            {
+              "path": "prototype/src/pixi/windmill-offset.js",
+              "sha256": "6d30fb70c6957b0a2216d917a87fedc94ed9fb5146ed94899edb6ce712007633"
+            },
+            {
+              "path": "prototype/src/playcanvas/board-metadata.json",
+              "sha256": "d1d97464aaf18158778e9a3b533cf7cda02f5853feddd23c3ac4f2a21f5ead83"
+            },
+            {
+              "path": "prototype/src/playcanvas/cabinet.js",
+              "sha256": "da9cd63b17548891a2fc937e89e449d88eef8cbb0fcd84421e7697bb8ca29382"
+            },
+            {
+              "path": "prototype/src/playcanvas/moon-mechanism-state.mjs",
+              "sha256": "36ef5e692783dbcf132dccee8a545311c4d0d12660c496575d76c7503cf6b805"
+            },
+            {
+              "path": "prototype/src/playcanvas/moon-mechanism.mjs",
+              "sha256": "39a2807376aa94cc030c2b9efbdb064341c0ff013d10ac5ba7badda4157dbb06"
+            },
+            {
+              "path": "prototype/src/playcanvas/right-housing.mjs",
+              "sha256": "6ebcb4af08f2adf70f60b9e2ad7206a48adc799dfbe255ef818634eecd84c08b"
+            },
+            {
+              "path": "prototype/src/playcanvas/right-mechanism-geometry.mjs",
+              "sha256": "0d99ae7c07ad1ca0ae1eb784794a04a29130f002dc0a25fca8b80961354e9d53"
+            },
+            {
+              "path": "prototype/src/playcanvas/right-unit.mjs",
+              "sha256": "22801a562de2004ff82fb97f43f71ff1a761b8555a417840b85034e97b18a196"
+            },
+            {
+              "path": "prototype/src/playcanvas/runtime.js",
+              "sha256": "efa5811cd0605624b9ef78e456bef80f95c3667258384e2863b7d21174f262ff"
+            },
+            {
+              "path": "prototype/src/playcanvas/title-metrics.json",
+              "sha256": "9ae091d3a12835e5ea8da7afdf0cb27075e46ed494fcd4c8d16c63719aaf660b"
+            },
+            {
+              "path": "prototype/src/presentation/battle-direction.js",
+              "sha256": "24b1f5017ac042721bc8881d3221657feb2e64fe96eac569c50ba59ab1baa408"
+            },
+            {
+              "path": "prototype/src/presentation/cinematic.js",
+              "sha256": "22d828abe2f8da07909c03fa1fed7c71948bd413b8c0557d4bcddf036aefe333"
+            },
+            {
+              "path": "prototype/src/presentation/reach-scenes.js",
+              "sha256": "cec1daef5559c86c458fe274afe218d288aadef831bd01596aa6f4f26e86b29a"
+            },
+            {
+              "path": "prototype/src/presentation/reel-symbols.js",
+              "sha256": "bcff7c29bfed4143c3004de242f0fe3b6973ce90931fc4c986800e3ae1e88810"
+            },
+            {
+              "path": "prototype/src/runtime/frame-loop.js",
+              "sha256": "46337f1ae5591df09278c834bff1fcaababa38993fa480f959e6f30f77088a54"
+            },
+            {
+              "path": "prototype/src/ui/arcade-cabinet.js",
+              "sha256": "9ea56596aea5a4756200226c894b307305788a528723e97210c644a5ca3fcb37"
+            },
+            {
+              "path": "prototype/src/ui/arcade-props.js",
+              "sha256": "b849bccf7605d0d8624b7f98443462d2e226870289b43b8cc8e6889b18b16e19"
+            },
+            {
+              "path": "prototype/src/ui/arcade-room.css",
+              "sha256": "6c1996805d8fb28afad95543d36183f59693a987e1aba3beccd758304aa74c8c"
+            },
+            {
+              "path": "prototype/src/ui/floor-art.js",
+              "sha256": "42a9c05f51764d697e9768f058ed0966ea06f467c226d5c3a4fd54f8d79b14a4"
+            },
+            {
+              "path": "prototype/src/ui/floor-catalog.js",
+              "sha256": "5d8e209b8689f47e6e20d31557d788e00be91008d0e8af4a94af947dcd5d8af6"
+            },
+            {
+              "path": "prototype/src/ui/floor-paging.js",
+              "sha256": "0fd9f8e881ac16ef8666b8cedbd3995d8f8aba153e64d047ea1a1f95c799ae9e"
+            },
+            {
+              "path": "prototype/src/ui/floor.css",
+              "sha256": "22c096c81c16c22775a74acfbc3b094c361745ab0c89af389224e9132589ead9"
+            },
+            {
+              "path": "prototype/src/ui/pixi-session.css",
+              "sha256": "3c1b6b84cb47500a82572c0c5ec0a1e23664b7b18fa7edf9126e8842e9eee7c3"
+            },
+            {
+              "path": "prototype/src/ui/session-status.js",
+              "sha256": "6715515599013b3a9a6692a7cc4b07b05917f8993b0cc7a1cd2d2a7b97403feb"
+            },
+            {
+              "path": "prototype/src/ui/w-spec-display.js",
+              "sha256": "168e54d91e6df62ede23f6349c4745e120da5ee3b06f306ce5297b728703dcce"
+            },
+            {
+              "path": "prototype/src/dev/pin-layout-model.js",
+              "sha256": "186e2fd554d9d33a0443e399601e5793a22346593157a81536fe6484c881a43d"
+            },
+            {
+              "path": "prototype/src/dev/pin-layout-measurement.js",
+              "sha256": "1a0f292b320a35ce5897b3ea6270696ad0314c7f881cfc02f986f82922ef7984"
+            },
+            {
+              "path": "prototype/tools/pin-layout-compare.mjs",
+              "sha256": "411d340ada16f2f3657cdc888a2276c0b42857f00dda7541c2683d74ab7f118d"
+            },
+            {
+              "path": "prototype/tools/pin-layout-inputs.mjs",
+              "sha256": "f60d8e8023621ee15961b99ba50511e96ce4d71e83be27494aa6d93987d198a7"
+            }
+          ],
+          "scope": "all src except dev, plus model/measurement/CLI/inventory; excludes local dev UI and public image assets"
+        },
+        "extra": [
+          {
+            "path": "prototype/src/dev/pin-adjustment.js",
+            "sha256": "e8283e82925792497cdfa04af75879cac2297634a1c8891e1dfbfece82282ad7"
+          },
+          {
+            "path": "prototype/src/dev/pin-adjustment-measurement.js",
+            "sha256": "9408d6e70f88778a17e0d4a07dc3264b2251bac74f55a249f16ee1a41f566906"
+          },
+          {
+            "path": "prototype/src/dev/s6-pin-comparison.js",
+            "sha256": "08a140f80abf9c85962ce138f05d010cdcda6d6da11cf56602f38fb672c80537"
+          },
+          {
+            "path": "prototype/tools/s6-pin-comparison.mjs",
+            "sha256": "2ff4732d01c5b54e2fe75b841f70790e1e2bd1c2627f0fbf61505937b51438a0"
+          },
+          {
+            "path": "prototype/tests/s6-pin-comparison.test.js",
+            "sha256": "ecd76ee76b4f72640d372fbcb772717d63d1672d0b8c739b51cedf788f4b2359"
+          },
+          {
+            "path": "prototype/package.json",
+            "sha256": "ddaaae3709bbe9ce1193c0194955b72594cc0132f24775cf0c36300804791d48"
+          },
+          {
+            "path": "prototype/package-lock.json",
+            "sha256": "6c037e0152d71c878d48804b72b56edd8684535bfa9fab2d0050227e4007637f"
+          }
+        ],
+        "sha256": "642d399da8305ed268ac7ca8091449cba445d31dd9fa0e97f3b6f10c9602535d",
+        "scope": "All product src except dev, base simulation extras, S6 trial/observer/runner/test and locked dependencies. Media helpers and image assets excluded from mechanical-code identity; media records own source."
+      },
+      "extra": [
+        {
+          "path": "prototype/src/dev/s6-reference-pin-comparison.js",
+          "sha256": "fe5384066f781907a7a346435b7638a0e1f8bec9be8a806bcba051bd38b57415"
+        },
+        {
+          "path": "prototype/tools/s6-reference-comparison.mjs",
+          "sha256": "5a4fd1513a2000540633aae111ecb769c04c109be2b5c847018f11e9a51efdac"
+        },
+        {
+          "path": "prototype/tests/s6-reference-comparison.test.js",
+          "sha256": "ead331be61d8d9841902ab1af949488571788c4063a74f6009b0d56ca4edff5a"
+        }
+      ],
+      "sha256": "f5173c6271d4512b60ae63b6fb46f52503f81da625314f73569cb885228ec901",
+      "scope": "S6 mechanical source plus reference observer/runner/tests; media files/images excluded and separately attested."
+    },
+    "extra": [
+      {
+        "path": "prototype/tools/s8-admission-combined-cases.json",
+        "sha256": "754b2218546d61fed503036488517d4c70c22ed5d25639954248182911f1f264"
+      },
+      {
+        "path": "prototype/tools/s8-admission-upstream-cases.json",
+        "sha256": "a6c0f9fb6e37902581509d77736f1415fa8564a03e3271f3fc8bc8450e032d4c"
+      },
+      {
+        "path": "prototype/tools/s8-admission-cases.json",
+        "sha256": "890e3778ad4d3c3e017061d849c9fb361d7b558e24523cb2fce3d2700b3e2299"
+      },
+      {
+        "path": "prototype/tools/s8-admission-lateral-cases.json",
+        "sha256": "3d63daaa4d9004fe5103011cb17637a14a517d7147c8219914530e227fb71e9c"
+      },
+      {
+        "path": "prototype/src/dev/s8-wheel-shape-comparison.js",
+        "sha256": "5e92536c76e0f4e7ab6b57ad0977f28393161549cb677e584c34f1fbdcf462d8"
+      },
+      {
+        "path": "prototype/tests/fixtures/windmill-photo-three-vane.json",
+        "sha256": "5b1605c8257c9306773d9538fb2b74d9f95583478ba8443d416ac96bc12381f5"
+      },
+      {
+        "path": "prototype/src/pixi/windmill-offset.js",
+        "sha256": "6d30fb70c6957b0a2216d917a87fedc94ed9fb5146ed94899edb6ce712007633"
+      },
+      {
+        "path": "prototype/src/dev/s8-windmill-comparison.js",
+        "sha256": "debaf877816bc7d070d8b433c44ce09cb243e3dec7df7b359d83c29d9f815046"
+      },
+      {
+        "path": "prototype/src/dev/s8-shot-comparison.js",
+        "sha256": "3e433d637fedccf73b1d505630ed538e7fd552236a298fc7645aa2b2372d495f"
+      },
+      {
+        "path": "prototype/src/dev/s7-launch-observation.js",
+        "sha256": "91fe042281527b37ada04bab86b8b1c9896d1a0b98879396ec5a79d50771f826"
+      },
+      {
+        "path": "prototype/src/dev/s8-admission-comparison.js",
+        "sha256": "f7917177790b9a05d4cabf1ce196d3bdc167f573b51f2632502bd5ea809ea75a"
+      },
+      {
+        "path": "prototype/tools/s8-admission-comparison.mjs",
+        "sha256": "2f6b6944a9fe6644667a1c971248cf195eb9e53ca58a3f8327e50464b6a29376"
+      },
+      {
+        "path": "prototype/tests/s8-admission-comparison.test.js",
+        "sha256": "b41f3313482e94b111ae5a46bc46c0f2bd772c4fb56add9d9e0c3f76be61b7d1"
+      }
+    ],
+    "planSHA": "2ae43bb666e0b56ceed9c5833382aa1fc46d794dd12f90c063977d624e79f388",
+    "caseManifestSHA": "754b2218546d61fed503036488517d4c70c22ed5d25639954248182911f1f264",
+    "sha256": "b41966980f8d12cafc66ffd5c59ea4f0db388cb50f4a39a9534e6595dbc1bfa1",
+    "scope": "Product src and existing mechanical dependencies plus optional non-acting final snapshots, actual S7 observer, declared admission single-case runner/tests, locked dependencies, PM plan and exact case-manifest bytes. Media excluded."
+  },
+  "node": "v26.11.0",
+  "platform": "darwin",
+  "arch": "arm64",
+  "startedAt": "2026-10-16T04:17:06.433Z",
+  "success": false,
+  "measurementStarted": false
+}

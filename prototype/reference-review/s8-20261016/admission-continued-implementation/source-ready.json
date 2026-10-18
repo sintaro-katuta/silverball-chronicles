@@ -1,0 +1,23 @@
+{
+  "commit": "67e1de9d6f20917d8b18ada62a69d6ab907bf7c9",
+  "sourceSHA": "387b92da536db67361d479989680b1146b4b9351550d88619f0b4551bc85792b",
+  "planSHA": "8aeccab5bd6ae8199399122d6be58aabd3e5b5f59b0453cbb28d6e6d5823b0aa",
+  "caseManifestSHA": "890e3778ad4d3c3e017061d849c9fb361d7b558e24523cb2fce3d2700b3e2299",
+  "uniqueInputs": 188,
+  "preflightCases": [
+    "legacy-control",
+    "three-base",
+    "pin90-up025",
+    "ball-r20"
+  ],
+  "preflightAllSuccess": true,
+  "measurementStarted": false,
+  "node": "v26.11.0",
+  "tests": {
+    "passed": 58,
+    "log": "related-final.log",
+    "scope": "Eight direct tests plus50 related tests. Synthetic250/right fixtures are control verification, not selection/performance trials."
+  },
+  "compatibility": "compatibility-proof.json",
+  "formalTrials": 0
+}

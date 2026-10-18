@@ -1,0 +1,48 @@
+{
+  "node": "v26.11.0",
+  "oracleCommit": "6bc80271929dc882ee857b71c188aa1bae72b3d3",
+  "oracleSHA": "8afa3ccdf21bb2549fadbc83b40c0d5a96f8e4e290303a1ff6c11e459fb98b0b",
+  "rows": [
+    {
+      "id": "legacy-control",
+      "fullJSONEventsReplayExact": true
+    },
+    {
+      "id": "three-base",
+      "fullJSONEventsReplayExact": true
+    },
+    {
+      "id": "pin90-up025",
+      "fullJSONEventsReplayExact": true
+    }
+  ],
+  "historical": [
+    {
+      "path": "prototype/reference-review/s8-20261016/admission-continued/phase0/legacy-control/result.json.gz",
+      "compressedSHA": "c6fba61c06b07a124cd8a25e7cc97303223d062be989df00d496440bf681869f",
+      "sourceSHA": "387b92da536db67361d479989680b1146b4b9351550d88619f0b4551bc85792b",
+      "actualShots": 250,
+      "start": 13,
+      "validatorPass": true,
+      "scope": "Old-generation raw unchanged; not assigned to lateral source."
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/admission-continued/phase0/three-base/result.json.gz",
+      "compressedSHA": "26e9a756dbd09925517e7abfd51134b034ff1eaea7bfefb266a60455f6ed8fef",
+      "sourceSHA": "387b92da536db67361d479989680b1146b4b9351550d88619f0b4551bc85792b",
+      "actualShots": 250,
+      "start": 9,
+      "validatorPass": true,
+      "scope": "Old-generation raw unchanged; not assigned to lateral source."
+    },
+    {
+      "path": "prototype/reference-review/s8-20261016/admission-continued/phase0/pin90-up025/result.json.gz",
+      "compressedSHA": "5a93f4fb273264482bae20288bc5194917c66d440bb1fbe10eec0a038104f7af",
+      "sourceSHA": "387b92da536db67361d479989680b1146b4b9351550d88619f0b4551bc85792b",
+      "actualShots": 250,
+      "start": 9,
+      "validatorPass": true,
+      "scope": "Old-generation raw unchanged; not assigned to lateral source."
+    }
+  ]
+}

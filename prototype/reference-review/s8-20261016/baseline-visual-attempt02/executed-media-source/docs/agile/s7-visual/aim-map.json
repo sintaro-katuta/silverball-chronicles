@@ -1,0 +1,201 @@
+{
+  "status": "design proposal only; no S7 gameplay observations",
+  "base": "2ef267a4a9c6173990788bc6fa8a2bc6b8502531",
+  "coordinateTransform": {
+    "x": "SOURCE*.5-14",
+    "y": "SOURCE*.5+120"
+  },
+  "conditions": {
+    "profile": "legacy",
+    "normalPower": 0.2,
+    "mouth": 20,
+    "leftAdmissionGuides": true,
+    "pins": 101,
+    "ballRadius": "production default; do not pass trial override"
+  },
+  "regions": [
+    {
+      "id": "A",
+      "label": "赤：ブッコミ側（位置照合案）",
+      "sourceBounds": [
+        175,
+        245,
+        235,
+        315
+      ],
+      "worldBounds": [
+        73.5,
+        242.5,
+        103.5,
+        277.5
+      ],
+      "basis": "写真1の赤い矢印が緑より下・左。先頭釘27–31と液晶左上肩の間へ対応させる暫定範囲。射影校正・実球確認前。"
+    },
+    {
+      "id": "B",
+      "label": "緑：強め打ち側（位置照合案）",
+      "sourceBounds": [
+        220,
+        185,
+        290,
+        265
+      ],
+      "worldBounds": [
+        96,
+        212.5,
+        131,
+        252.5
+      ],
+      "basis": "写真1の緑い矢印が赤より上・右へ延びる。元図の液晶上左肩沿いへの暫定対応。"
+    }
+  ],
+  "classification": "S7_PLAN fixed pre-trial center/boundary(radius)/overlap/outside/unreached classifications; photographic mapping remains approximate. Bounds unchanged.",
+  "pins27to36": [
+    {
+      "id": 27,
+      "source": {
+        "x": 181,
+        "y": 260.5
+      },
+      "world": {
+        "x": 76.5,
+        "y": 250.25
+      }
+    },
+    {
+      "id": 28,
+      "source": {
+        "x": 185,
+        "y": 268.5
+      },
+      "world": {
+        "x": 78.5,
+        "y": 254.25
+      }
+    },
+    {
+      "id": 29,
+      "source": {
+        "x": 187.5,
+        "y": 277.5
+      },
+      "world": {
+        "x": 79.75,
+        "y": 258.75
+      }
+    },
+    {
+      "id": 30,
+      "source": {
+        "x": 188.5,
+        "y": 285.5
+      },
+      "world": {
+        "x": 80.25,
+        "y": 262.75
+      }
+    },
+    {
+      "id": 31,
+      "source": {
+        "x": 186.5,
+        "y": 307
+      },
+      "world": {
+        "x": 79.25,
+        "y": 273.5
+      }
+    },
+    {
+      "id": 32,
+      "source": {
+        "x": 174,
+        "y": 323.5
+      },
+      "world": {
+        "x": 73,
+        "y": 281.75
+      }
+    },
+    {
+      "id": 33,
+      "source": {
+        "x": 178.5,
+        "y": 348.5
+      },
+      "world": {
+        "x": 75.25,
+        "y": 294.25
+      }
+    },
+    {
+      "id": 34,
+      "source": {
+        "x": 171.5,
+        "y": 353.5
+      },
+      "world": {
+        "x": 71.75,
+        "y": 296.75
+      }
+    },
+    {
+      "id": 35,
+      "source": {
+        "x": 151,
+        "y": 357.5
+      },
+      "world": {
+        "x": 61.5,
+        "y": 298.75
+      }
+    },
+    {
+      "id": 36,
+      "source": {
+        "x": 131.5,
+        "y": 348.5
+      },
+      "world": {
+        "x": 51.75,
+        "y": 294.25
+      }
+    }
+  ],
+  "readSources": [
+    {
+      "path": "prototype/src/pixi/source-layout.js",
+      "sha256": "46b8aff73fb3a5906558cf5a7b81bf3ae88193c65836336e43734647ad792732"
+    },
+    {
+      "path": "prototype/src/pixi/board-rails.js",
+      "sha256": "eac066a9d7a914ed73cc285b4c9a8571be9a95e5435e810e951122faee856832"
+    },
+    {
+      "path": "prototype/src/pixi/board-flow.js",
+      "sha256": "3f118a222a3b88b495541727494b9ef5b5dfb622d7ea78723de2cb374cd36012"
+    },
+    {
+      "path": "prototype/src/pixi/board-runtime.js",
+      "sha256": "70238e4db7f8457c1f76bf221846381cb4b6cb4f5dde4e5ae300b6a11629f3b2"
+    },
+    {
+      "path": "prototype/src/app/main.js",
+      "sha256": "92ff3bb4c1e358de521b8814cd58a91a6759cfcde45e4ae43d21aab48ba7e6f5"
+    }
+  ],
+  "plan": "docs/agile/S7_PLAN.md",
+  "trialPowers": {
+    "control": 0.2,
+    "candidates": [
+      0.18,
+      0.19,
+      0.22
+    ]
+  },
+  "holdoutPhases": [
+    0.175,
+    0.35,
+    0.525
+  ]
+}

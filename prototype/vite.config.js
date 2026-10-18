@@ -1,5 +1,5 @@
-import {defineConfig} from 'vite';
-import {readdirSync} from 'node:fs';
+import {defineConfig,searchForWorkspaceRoot} from 'vite';
+import {readdirSync,realpathSync} from 'node:fs';
 import {fileURLToPath} from 'node:url';
 import {copyReleaseAssets,prepareReleaseAssets} from './tools/release-assets.js';
 
@@ -15,7 +15,12 @@ export default defineConfig(async ({mode}) => {
   closeBundle() { copyReleaseAssets(art, entry('./dist-release/'));
    console.log(`Game art: ${(art.originalBytes/1024**2).toFixed(2)} → ${(art.optimizedBytes/1024**2).toFixed(2)} MiB`); }
  }] : [],
- server: {watch: {usePolling: true, interval: 300}},
+ server: {
+  watch: {usePolling: true, interval: 300},
+  // CSS resolves shared dependencies to their real path in isolated checkouts.
+  // Keep the workspace boundary and allow only this package's font files.
+  fs: {allow: [searchForWorkspaceRoot(entry('./')),realpathSync(entry('./node_modules/@fontsource/dotgothic16/files/'))]}
+ },
  build: {
   outDir: mode === 'release' ? 'dist-release' : 'dist',
   rollupOptions: {

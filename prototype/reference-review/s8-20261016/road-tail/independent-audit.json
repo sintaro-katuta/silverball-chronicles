@@ -1,0 +1,62 @@
+{
+  "head": "e8930c9a574444a1a277bda27b9cbe8b759f9211",
+  "sourceSHA": "6275df21dfa252211ab1c78b7cc1544b7675c0fcf734182dbdf06d639f5f3a03",
+  "inputCount": 196,
+  "allCurrentInputBytesExact": true,
+  "planSHA": "b77d3404817f5be1d3b0d869b1b3362d63f9f56580b8390eb82c0486cf2087ce",
+  "caseManifestSHA": "85b446aef9fe063a8fee1cc591423eb7f387b2933145fa0e9c245ad579cf6006",
+  "rows": [
+    {
+      "case": "legacy-control",
+      "shots": 250,
+      "counts": {
+        "out": 234,
+        "start": 13,
+        "normal": 3
+      },
+      "maxGapSeconds": 30.926190476122926,
+      "frames": 5938,
+      "compressedSHA": "ab3c2b5f69009e2483ebf193faf5613328f334f1d87e4df9aadfa20404b1fd33",
+      "expandedSHA": "67e1ba13680aeb8cafd93cfc7171fd207e2759eece772cd17fddf50b7ccec3c9",
+      "safetyAllZero": true
+    },
+    {
+      "case": "three-base",
+      "shots": 250,
+      "counts": {
+        "out": 237,
+        "start": 9,
+        "normal": 4
+      },
+      "maxGapSeconds": 70.1892857142684,
+      "frames": 5938,
+      "compressedSHA": "e35bc1a7d2d5937b02accc5dcb64380cae481b3893feee7757909ace512fc8e7",
+      "expandedSHA": "44f32a97fadb29c3feec22bec17a68a43e43ff23bf947149dbebe228f24abad6",
+      "safetyAllZero": true
+    },
+    {
+      "case": "three-road-tail-right025",
+      "shots": 250,
+      "counts": {
+        "out": 233,
+        "start": 12,
+        "normal": 5
+      },
+      "maxGapSeconds": 39.35595238097916,
+      "frames": 5938,
+      "compressedSHA": "31da660108ae97e40492929adc6545220fbe251533bee801ed9ae7bf57a23da2",
+      "expandedSHA": "719b3e9bff327e1fa71fd6b49b9eeb8515e13f9fff5a599ef28b7a90c367bca8",
+      "safetyAllZero": true
+    }
+  ],
+  "pins101ExactDeclaredMoves": true,
+  "tailRelativeGeometryExact": true,
+  "strictDefaultPreserved": true,
+  "fixedOtherInputsExact": true,
+  "validatorReadbackPassed": 3,
+  "selected": null,
+  "reason": "12/250 does not strictly exceed legacy control13/250",
+  "confirmationRuns": 0,
+  "performanceTargetMet": false,
+  "newTrialsByAuditor": 0
+}

@@ -1,0 +1,401 @@
+{
+  "scope": "Independent read-only audit of all16 fresh records:7 selection plus9 confirmation. Not real-machine performance guarantee or product adoption.",
+  "head": "db96be7e36ec049f472a9970634f7651abc668d1",
+  "sourceSHA": "b41966980f8d12cafc66ffd5c59ea4f0db388cb50f4a39a9534e6595dbc1bfa1",
+  "uniqueInputs": 192,
+  "rawProofs": [
+    {
+      "phase": 0,
+      "case": "legacy-control",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phase0/legacy-control/result.json.gz",
+      "compressedSHA": "23876d4bd454969f8e11707238845d040bc95dba29acb477782079e54262fefa",
+      "expandedSHA": "ffb1bd42861a7213592ef1fc7c84774bb47dfd89bd63f92c4de789f0d3679d0f",
+      "compressedBytes": 1792093,
+      "expandedBytes": 10143296,
+      "frames": 5938,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0,
+      "case": "three-base",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phase0/three-base/result.json.gz",
+      "compressedSHA": "ad5e4d11d8a54c866b6949044d7868ca51b807ecdba793e78b1803bcf991fa79",
+      "expandedSHA": "0d0624041e0db4aa1d60363572b7380a126a83074c461c4743eb05fd82684077",
+      "compressedBytes": 1743685,
+      "expandedBytes": 10393958,
+      "frames": 5938,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0,
+      "case": "three-wheel-right025",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phase0/three-wheel-right025/result.json.gz",
+      "compressedSHA": "03ee46c6f12b850d8e491c8bb4a6fd720e0b63efc54f3b0eb2d624c24a4547c7",
+      "expandedSHA": "642f0dd4ecf9056c458881888eb45bf5c1c7481582dd04bf6b819b7e4627852c",
+      "compressedBytes": 1745654,
+      "expandedBytes": 10426554,
+      "frames": 5938,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0,
+      "case": "three-wheel-up025",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phase0/three-wheel-up025/result.json.gz",
+      "compressedSHA": "bf28a9752f68455af8d4d8f690556fa3f3716281aaffaa68edd14991b8fa1843",
+      "expandedSHA": "c38d1a42857b6a79c751474e6ac6b5804727e16f876f9832527edce6860f716d",
+      "compressedBytes": 1728781,
+      "expandedBytes": 10332625,
+      "frames": 5938,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0,
+      "case": "three-road2-right025",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phase0/three-road2-right025/result.json.gz",
+      "compressedSHA": "1963c2f7d0ef6b391bc8888d1755da8e4aa368bc694e4aa0f389dce65fa8a43d",
+      "expandedSHA": "fdfffd945814acc72649d7a897b094500bbaa9ec5607e1e1f02dfea0d3870723",
+      "compressedBytes": 1741548,
+      "expandedBytes": 10378988,
+      "frames": 5938,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0,
+      "case": "three-combo-right025",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phase0/three-combo-right025/result.json.gz",
+      "compressedSHA": "ff4160d12fe91198104314cb3febe7588b9ba5eb14c901f9d76aae7ee857ce4a",
+      "expandedSHA": "4e9a0b349803d55fdc9e781ba7b9b50c4216482d62902ac7da596f5c6ff7cefd",
+      "compressedBytes": 1766054,
+      "expandedBytes": 10515921,
+      "frames": 5938,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0,
+      "case": "three-combo-up025",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phase0/three-combo-up025/result.json.gz",
+      "compressedSHA": "cba4acd14f301a7386a5f41c65f03979c89a1273aee05029fda2cf31cd562f85",
+      "expandedSHA": "26f4251b15091275fc3b8c90a9474ef0b12a7f76022e4fe4ec79eccc1d1c125d",
+      "compressedBytes": 1721789,
+      "expandedBytes": 10294660,
+      "frames": 5938,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0.175,
+      "case": "legacy-control",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phasep175/legacy-control/result.json.gz",
+      "compressedSHA": "fab19c5e86953296fe922915584d5fd924702d1c81a0b31ef21807bc8b2303af",
+      "expandedSHA": "4acd722906364572406593e1f1048ad7ec8ac6ad01cd0b1e17df39c08adbd863",
+      "compressedBytes": 1803986,
+      "expandedBytes": 10175089,
+      "frames": 5948,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0.175,
+      "case": "three-base",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phasep175/three-base/result.json.gz",
+      "compressedSHA": "95e505097732bfd2c49ab00a2675551c77fc9be90558eb58c5cae521f117323a",
+      "expandedSHA": "0bda9cebd8d933e48602c069eca48a8d3606c476b85b3d4ef8a42e0d66bb72a3",
+      "compressedBytes": 1740054,
+      "expandedBytes": 10394868,
+      "frames": 5948,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0.175,
+      "case": "three-combo-up025",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phasep175/three-combo-up025/result.json.gz",
+      "compressedSHA": "4350ed2d0642e94d50f8e06b014b5a6b8141edb6b60477202966711b93fbe17d",
+      "expandedSHA": "1dffe492cfa284a0523396de6687befc3bdf90b4782ba1d501edd45e23e0cc9f",
+      "compressedBytes": 1763166,
+      "expandedBytes": 10496796,
+      "frames": 5948,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0.35,
+      "case": "legacy-control",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phasep35/legacy-control/result.json.gz",
+      "compressedSHA": "9fc549ee77cead2d6742baaa68f080a7bf8f629a38dcb0853eb5ae433c6c7880",
+      "expandedSHA": "0f14906a363e64757ff26119f4122cf506fa870d98af4da4ae22dafb3116fa2d",
+      "compressedBytes": 1805417,
+      "expandedBytes": 10178163,
+      "frames": 5928,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0.35,
+      "case": "three-base",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phasep35/three-base/result.json.gz",
+      "compressedSHA": "b1926f9e03575b67a76c5472589fd0b734e16f46c761acea428e2a59003d03e8",
+      "expandedSHA": "d494c0c0a196483d24bf381c3394feb7146433f4c998897609534bc27ba4b6ce",
+      "compressedBytes": 1755993,
+      "expandedBytes": 10448849,
+      "frames": 5928,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0.35,
+      "case": "three-combo-up025",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phasep35/three-combo-up025/result.json.gz",
+      "compressedSHA": "568b7c175355a12828fadf225a7f15445c1ef0484ca32e55a23fa5ff69ce7fc7",
+      "expandedSHA": "f2a6172b04636488fb63c95d90aaf541041ab83656a21273cd5c456523ac2390",
+      "compressedBytes": 1727936,
+      "expandedBytes": 10317751,
+      "frames": 5928,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0.525,
+      "case": "legacy-control",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phasep525/legacy-control/result.json.gz",
+      "compressedSHA": "f9352b7df550941197b9fa358f6f4eb87249ec4b0d073a217a431d91678a6d1c",
+      "expandedSHA": "5a25224030f1ddfac30508cdce7f283e4c03c03abeac97706daed531d2187ff5",
+      "compressedBytes": 1833017,
+      "expandedBytes": 10309964,
+      "frames": 5922,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0.525,
+      "case": "three-base",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phasep525/three-base/result.json.gz",
+      "compressedSHA": "71bd1d8a29e8f411104fff53ba470397e69bfd0bc971ca1a3f5611b6fa6c70ba",
+      "expandedSHA": "ae8685e2f2f32ce71152ee5b593b8811aaebdb3a259d614a842ab3d5c67c1443",
+      "compressedBytes": 1736462,
+      "expandedBytes": 10339920,
+      "frames": 5922,
+      "rawBothHashesAndCountsValidated": true
+    },
+    {
+      "phase": 0.525,
+      "case": "three-combo-up025",
+      "path": "prototype/reference-review/s8-20261016/admission-combined/phasep525/three-combo-up025/result.json.gz",
+      "compressedSHA": "d89dc8dc593a473e8ff886fab37fb180d426c47ec5b49402325a43292efb4704",
+      "expandedSHA": "cbdbb2cd74a734987f0c3ac31fef7a0484c4f71ae0fd5945cd5a5e3297a6f49d",
+      "compressedBytes": 1770235,
+      "expandedBytes": 10502466,
+      "frames": 5922,
+      "rawBothHashesAndCountsValidated": true
+    }
+  ],
+  "phase0": [
+    {
+      "id": "legacy-control",
+      "shots": 250,
+      "start": 13,
+      "normal": 3,
+      "out": 234,
+      "gap": 30.926190476122926,
+      "frames": 5938,
+      "phase": 0,
+      "referenceBasePrize": 28
+    },
+    {
+      "id": "three-base",
+      "shots": 250,
+      "start": 9,
+      "normal": 4,
+      "out": 237,
+      "gap": 70.1892857142684,
+      "frames": 5938,
+      "phase": 0,
+      "referenceBasePrize": 29
+    },
+    {
+      "id": "three-wheel-right025",
+      "shots": 250,
+      "start": 11,
+      "normal": 6,
+      "out": 233,
+      "gap": 26.746428571434397,
+      "frames": 5938,
+      "phase": 0,
+      "referenceBasePrize": 41
+    },
+    {
+      "id": "three-wheel-up025",
+      "shots": 250,
+      "start": 11,
+      "normal": 4,
+      "out": 235,
+      "gap": 40.851339285625144,
+      "frames": 5938,
+      "phase": 0,
+      "referenceBasePrize": 31
+    },
+    {
+      "id": "three-road2-right025",
+      "shots": 250,
+      "start": 11,
+      "normal": 3,
+      "out": 236,
+      "gap": 54.59657738083334,
+      "frames": 5938,
+      "phase": 0,
+      "referenceBasePrize": 26
+    },
+    {
+      "id": "three-combo-right025",
+      "shots": 250,
+      "start": 8,
+      "normal": 4,
+      "out": 238,
+      "gap": 45.89107142852919,
+      "frames": 5938,
+      "phase": 0,
+      "referenceBasePrize": 28
+    },
+    {
+      "id": "three-combo-up025",
+      "shots": 250,
+      "start": 14,
+      "normal": 8,
+      "out": 228,
+      "gap": 46.659374999898276,
+      "frames": 5938,
+      "phase": 0,
+      "referenceBasePrize": 54
+    }
+  ],
+  "confirmation": [
+    {
+      "id": "legacy-control",
+      "phase": 0.175,
+      "shots": 250,
+      "start": 10,
+      "normal": 5,
+      "out": 235,
+      "gap": 38.632142857134106,
+      "frames": 5948,
+      "referenceBasePrize": 35
+    },
+    {
+      "id": "three-base",
+      "phase": 0.175,
+      "shots": 250,
+      "start": 11,
+      "normal": 4,
+      "out": 235,
+      "gap": 57.50833333341272,
+      "frames": 5948,
+      "referenceBasePrize": 31
+    },
+    {
+      "id": "three-combo-up025",
+      "phase": 0.175,
+      "shots": 250,
+      "start": 7,
+      "normal": 2,
+      "out": 241,
+      "gap": 53.232738095303276,
+      "frames": 5948,
+      "referenceBasePrize": 17
+    },
+    {
+      "id": "legacy-control",
+      "phase": 0.35,
+      "shots": 250,
+      "start": 10,
+      "normal": 2,
+      "out": 238,
+      "gap": 41.64166666663991,
+      "frames": 5928,
+      "referenceBasePrize": 20
+    },
+    {
+      "id": "three-base",
+      "phase": 0.35,
+      "shots": 250,
+      "start": 5,
+      "normal": 6,
+      "out": 239,
+      "gap": 92.66636904756658,
+      "frames": 5928,
+      "referenceBasePrize": 35
+    },
+    {
+      "id": "three-combo-up025",
+      "phase": 0.35,
+      "shots": 250,
+      "start": 10,
+      "normal": 5,
+      "out": 235,
+      "gap": 42.606249999971,
+      "frames": 5928,
+      "referenceBasePrize": 35
+    },
+    {
+      "id": "legacy-control",
+      "phase": 0.525,
+      "shots": 250,
+      "start": 11,
+      "normal": 3,
+      "out": 236,
+      "gap": 38.553571428539954,
+      "frames": 5922,
+      "referenceBasePrize": 26
+    },
+    {
+      "id": "three-base",
+      "phase": 0.525,
+      "shots": 250,
+      "start": 15,
+      "normal": 5,
+      "out": 230,
+      "gap": 48.02857142846683,
+      "frames": 5922,
+      "referenceBasePrize": 40
+    },
+    {
+      "id": "three-combo-up025",
+      "phase": 0.525,
+      "shots": 250,
+      "start": 10,
+      "normal": 8,
+      "out": 232,
+      "gap": 40.02901785708901,
+      "frames": 5922,
+      "referenceBasePrize": 50
+    }
+  ],
+  "aggregate": {
+    "legacy-control": {
+      "shots": 750,
+      "start": 31,
+      "normal": 10,
+      "out": 709,
+      "referenceBasePrize": 81
+    },
+    "three-base": {
+      "shots": 750,
+      "start": 31,
+      "normal": 15,
+      "out": 704,
+      "referenceBasePrize": 106
+    },
+    "three-combo-up025": {
+      "shots": 750,
+      "start": 27,
+      "normal": 15,
+      "out": 708,
+      "referenceBasePrize": 102
+    }
+  },
+  "referencePrizeMeaning": "Mechanical ledger is null. Derived reference only: start1 + ordinary5 from current session/W specification; not actual prize ledger, held draws or game winnings.",
+  "decision": {
+    "selection": "three-combo-up025",
+    "confirmation": "not-adopted",
+    "target60Reached": false,
+    "candidateTargetDeficit": 33,
+    "phaseNonWorseBothControls": false,
+    "worsenedPhases": [
+      0.175,
+      0.525
+    ],
+    "safetyAllZero": true,
+    "productApplied": false
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "scope": "Separate pre-edit process, gzip oracle verified by both hashes/bytes; full short2+1sec saved JSON/inspection exact. Not formal250.",
+  "beforeOracleReceipt": {
+    "file": "before-oracle.json.gz",
+    "compressedSHA": "aa156b4b864883f0d627e0d4f66bce3900bb81e8f811447363e6bb2478be06ca",
+    "compressedBytes": 51831,
+    "expandedSHA": "436115035be77da53d977c1df412fb5c91bfa9e86abfcf811f92baa56bcd05cf",
+    "expandedBytes": 316391,
+    "source": [
+      {
+        "path": "prototype/src/dev/pin-adjustment.js",
+        "sha256": "28c25029381449e3f96269a8ce4e33588759f573ece7f8465485e7222c4f5ac2"
+      },
+      {
+        "path": "prototype/src/dev/s8-admission-comparison.js",
+        "sha256": "d6c17951da46a1aa85f8fb9069262a9515aeec7ca64d7f8231e8017af845dba8"
+      },
+      {
+        "path": "prototype/tools/s8-admission-comparison.mjs",
+        "sha256": "c7612daf0d14756d9b5804acdadaaff6e625a9bfcda8c1153d5fcce5e508e45b"
+      }
+    ]
+  },
+  "rows": [
+    {
+      "id": "legacy-control",
+      "allSavedJSONExact": true,
+      "inspectionExact": true,
+      "beforeSHA": "352d6ccb836946d1209c68731ee9b9b9ca0b2131f781c4cb0b999c683c9324a4",
+      "afterSHA": "352d6ccb836946d1209c68731ee9b9b9ca0b2131f781c4cb0b999c683c9324a4"
+    },
+    {
+      "id": "three-base",
+      "allSavedJSONExact": true,
+      "inspectionExact": true,
+      "beforeSHA": "5dbac98652a199c8c20c9813b7bfbeb42e1c4c65387a360f175709292b4fee3b",
+      "afterSHA": "5dbac98652a199c8c20c9813b7bfbeb42e1c4c65387a360f175709292b4fee3b"
+    }
+  ]
+}

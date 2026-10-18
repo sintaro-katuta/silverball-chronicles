@@ -1,0 +1,139 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "baseline",
+      "label": "変更前・元101本",
+      "moves": [],
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18
+    },
+    {
+      "id": "b4-control46left025",
+      "label": "対照・釘46を左0.25だけ",
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": -0.25,
+          "dy": 0
+        }
+      ],
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18
+    },
+    {
+      "id": "b4-46left025-48up0125",
+      "label": "46左0.25＋48上0.125",
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": -0.25,
+          "dy": 0
+        },
+        {
+          "pinId": 48,
+          "dx": 0,
+          "dy": -0.125
+        }
+      ],
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18
+    },
+    {
+      "id": "b4-46left025-48down0125",
+      "label": "46左0.25＋48下0.125",
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": -0.25,
+          "dy": 0
+        },
+        {
+          "pinId": 48,
+          "dx": 0,
+          "dy": 0.125
+        }
+      ],
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18
+    },
+    {
+      "id": "b4-46left025-48left0125",
+      "label": "46左0.25＋48左0.125",
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": -0.25,
+          "dy": 0
+        },
+        {
+          "pinId": 48,
+          "dx": -0.125,
+          "dy": 0
+        }
+      ],
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18
+    },
+    {
+      "id": "b4-46left025-48right0125",
+      "label": "46左0.25＋48右0.125",
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": -0.25,
+          "dy": 0
+        },
+        {
+          "pinId": 48,
+          "dx": 0.125,
+          "dy": 0
+        }
+      ],
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18
+    },
+    {
+      "id": "b4-46left0125",
+      "label": "46単独左0.125",
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": -0.125,
+          "dy": 0
+        }
+      ],
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18
+    },
+    {
+      "id": "b4-46left0375",
+      "label": "46単独左0.375",
+      "moves": [
+        {
+          "pinId": 46,
+          "dx": -0.375,
+          "dy": 0
+        }
+      ],
+      "leftAdmissionGuides": true,
+      "hesoMouthWidth": 20,
+      "launchRailProfile": "legacy",
+      "normalPower": 0.18
+    }
+  ]
+}

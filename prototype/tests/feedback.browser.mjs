@@ -32,7 +32,8 @@ try{
  await page.screenshot({path:`${out}/${viewport.width}-panel.png`});await page.locator('#controls-toggle').click();
  await page.locator('#quick-pause').click();const paused=await page.evaluate(()=>__session.snapshot());await page.waitForTimeout(350);assert.equal(await page.evaluate(()=>__session.snapshot().time),paused.time);
  await assertDraws(page);await page.locator('#resume').click();await assertDraws(page);await page.locator('#feed-toggle').click();assert.equal(await page.locator('#feed-state').innerText(),'発射中');
- await page.locator('#quick-pause').click();const resolved=await page.evaluate(()=>__session.snapshot().spin.draws);await page.locator('#leave').click();assert.equal(await page.locator('[role=dialog] dt').filter({hasText:'消化回数 / 大当り'}).locator('..').locator('dd').innerText(),`${resolved.toLocaleString('ja-JP')}回 / 0`);await page.screenshot({path:`${out}/${viewport.width}-result.png`});await page.locator('#floor').click();
+ // Natural play uses the session RNG: a real jackpot may occur, so compare both paused values.
+ await page.locator('#quick-pause').click();const resolved=await page.evaluate(()=>{const s=__session.snapshot();return {draws:s.spin.draws,jackpots:s.session.jackpots};});await page.locator('#leave').click();assert.equal(await page.locator('[role=dialog] dt').filter({hasText:'消化回数 / 大当り'}).locator('..').locator('dd').innerText(),`${resolved.draws.toLocaleString('ja-JP')}回 / ${resolved.jackpots}`);await page.screenshot({path:`${out}/${viewport.width}-result.png`});await page.locator('#floor').click();
  assert.deepEqual(errors,[]);console.log(`UI passed ${viewport.width}x${viewport.height}`);await page.close();
  }
  const page=await browser.newPage({viewport:{width:390,height:844}}),errors=[];currentPage=page;page.on('pageerror',e=>errors.push(e.message));

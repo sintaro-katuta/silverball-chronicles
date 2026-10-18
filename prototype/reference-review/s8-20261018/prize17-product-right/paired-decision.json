@@ -1,0 +1,149 @@
+{
+  "head": "e11c1730eceeccc77bd7e6cce6b15450d8773b68",
+  "sourceSHA": "40fd133ed76c55f1f53c6055810d9d6d8c09e77c6d7e43ee5ca7725e6522167b",
+  "acceptedRightSafety": true,
+  "scope": "4 natural30s firing+45s drain mechanical trials; not SessionGame lottery/payout proof",
+  "independentAudit": "234 input hashes/raw compressed-expanded SHA and byte length, source/head, complete2251 frames and stop/end,101 attrs/fixed/profile equivalence/counts/safety checked by scrum_master",
+  "rows": [
+    {
+      "caseId": "old-production-control",
+      "mode": "rush",
+      "phase": 0,
+      "actualShots": 50,
+      "start": 0,
+      "targetKind": "rush",
+      "targetAdmission": 50,
+      "general": 0,
+      "fuzu": 0,
+      "OUT": 0,
+      "returned": 0,
+      "returnRate": 0,
+      "residual": 0,
+      "stalled": 0,
+      "LCD": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      },
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 50,
+        "bonus": 0,
+        "out": 0,
+        "returned": 0
+      },
+      "countsValid": true,
+      "pairedReturnRateReview": "Compare candidate returned/actualShots to same-mode old-production-control after all four records. This single run does not establish paired acceptance.",
+      "accountingScope": "Mechanical trial only; no SessionGame payout or lottery acceptance.",
+      "validationPassed": true
+    },
+    {
+      "caseId": "old-production-control",
+      "mode": "bonus",
+      "phase": 0,
+      "actualShots": 50,
+      "start": 0,
+      "targetKind": "bonus",
+      "targetAdmission": 50,
+      "general": 0,
+      "fuzu": 0,
+      "OUT": 0,
+      "returned": 0,
+      "returnRate": 0,
+      "residual": 0,
+      "stalled": 0,
+      "LCD": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      },
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 50,
+        "out": 0,
+        "returned": 0
+      },
+      "countsValid": true,
+      "pairedReturnRateReview": "Compare candidate returned/actualShots to same-mode old-production-control after all four records. This single run does not establish paired acceptance.",
+      "accountingScope": "Mechanical trial only; no SessionGame payout or lottery acceptance.",
+      "validationPassed": true
+    },
+    {
+      "caseId": "three-prize17-left200",
+      "mode": "rush",
+      "phase": 0,
+      "actualShots": 50,
+      "start": 0,
+      "targetKind": "rush",
+      "targetAdmission": 50,
+      "general": 0,
+      "fuzu": 0,
+      "OUT": 0,
+      "returned": 0,
+      "returnRate": 0,
+      "residual": 0,
+      "stalled": 0,
+      "LCD": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      },
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 50,
+        "bonus": 0,
+        "out": 0,
+        "returned": 0
+      },
+      "countsValid": true,
+      "pairedReturnRateReview": "Compare candidate returned/actualShots to same-mode old-production-control after all four records. This single run does not establish paired acceptance.",
+      "accountingScope": "Mechanical trial only; no SessionGame payout or lottery acceptance.",
+      "validationPassed": true
+    },
+    {
+      "caseId": "three-prize17-left200",
+      "mode": "bonus",
+      "phase": 0,
+      "actualShots": 50,
+      "start": 0,
+      "targetKind": "bonus",
+      "targetAdmission": 50,
+      "general": 0,
+      "fuzu": 0,
+      "OUT": 0,
+      "returned": 0,
+      "returnRate": 0,
+      "residual": 0,
+      "stalled": 0,
+      "LCD": {
+        "centreBallIds": 0,
+        "boundaryOnlyBallIds": 0,
+        "frontCentreBallIds": 0,
+        "frontBoundaryOnlyBallIds": 0
+      },
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 50,
+        "out": 0,
+        "returned": 0
+      },
+      "countsValid": true,
+      "pairedReturnRateReview": "Compare candidate returned/actualShots to same-mode old-production-control after all four records. This single run does not establish paired acceptance.",
+      "accountingScope": "Mechanical trial only; no SessionGame payout or lottery acceptance.",
+      "validationPassed": true
+    }
+  ]
+}
