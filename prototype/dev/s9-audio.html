@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>月影機関 · 音の試聴と演出への割り当て</title>
+  <link rel="icon" href="data:,">
+  <style>
+    :root{color-scheme:dark;font-family:system-ui,sans-serif;background:#080f1c;color:#e4ecf5}*{box-sizing:border-box}body{margin:0}main{max-width:1060px;margin:auto;padding:24px 18px 60px}h1{font-size:clamp(22px,4vw,32px);margin-bottom:8px}h2{font-size:20px;margin-top:34px}p{line-height:1.8;color:#b8c8dc}a{color:#a9d5ff}nav,.controls{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin:18px 0}label{display:flex;align-items:center;gap:8px;flex-wrap:wrap}button,select{font:inherit;padding:10px 14px;min-height:44px;color:#f5e2b7;border:1px solid #827253;background:#142238;border-radius:5px}button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid #9ed9ff;outline-offset:3px}input[type=range]{min-width:140px;accent-color:#c1a96e}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:16px}.sample{padding:18px;border:1px solid #34445c;border-radius:8px;background:#101b2c}.sample h3{margin:0 0 8px;font-size:17px}.sample p{min-height:3.6em;margin:8px 0;font-size:14px}.sample audio{width:100%;margin:10px 0}.sample a{font-size:14px}#status{min-height:1.8em;color:#f5deb0}#source-note{font-size:13px}.scroll{overflow:auto;border:1px solid #34445c;border-radius:6px}table{border-collapse:collapse;width:100%;font-size:13px;min-width:670px}th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #26384e;vertical-align:top}th{background:#15243a}tr.active{background:#263a50}td button{padding:4px 9px;min-height:36px;font-size:13px}#preview{width:100%;height:690px;border:1px solid #34445c;margin-top:16px}output{font-variant-numeric:tabular-nums;color:#f3dab0}small{color:#a6b8ce}[hidden]{display:none!important}@media(max-width:620px){.comparison{grid-template-columns:1fr}.sample p{min-height:0}#preview{height:620px}main{padding-inline:14px}}
+  </style>
+</head>
+<body><main>
+  <h1>音の試聴と演出への割り当て</h1>
+  <p>BGMと効果音を、一つずつ同じ音量設定で比較します。最後に本編の音付きプレイで、映像との組み合わせを確認してください。</p>
+  <nav><a href="/">本編をプレイ</a><a href="/dev/reach-comparison.html" target="_blank" rel="noopener">既存の演出比較を開く</a></nav>
+  <div class="controls">
+    <label>種類 <select id="kind"><option value="music">BGM</option><option value="se">効果音</option></select></label>
+    <label>試聴する音 <select id="sound"></select></label>
+    <label>試聴音量 <input id="volume" type="range" min="0" max="1" step="0.05" value="0.65"></label>
+    <button id="stop" type="button">すべて停止</button>
+  </div>
+  <p id="status" role="status" aria-live="polite">試聴音源を準備しています。</p>
+  <div class="comparison">
+    <section class="sample"><h3>変更前の基準</h3><p id="baseline-description"></p><audio id="baseline" controls preload="none"></audio><a id="baseline-download" download>基準の音源を保存</a></section>
+    <section class="sample"><h3>最新の候補</h3><p id="candidate-description"></p><audio id="candidate" controls preload="none"></audio><a id="candidate-download" download>候補の音源を保存</a></section>
+  </div>
+  <p id="source-note">比較用に大きい方だけ音量を下げています。効果音は音型1だけを表示し、中間候補は並べません。ここでの音源単体と、本編で音量・区間を調整した音は区別します。</p>
+
+  <h2>「決意の一閃」の時間表</h2>
+  <p>表示・接触・音の現行定義から作る表です。時刻を選ぶと該当区間を示します。既存の演出比較は決着直前までの映像確認用で、BGM再生や本編の当落・保留・払出を再現するページではありません。</p>
+  <div class="controls">
+    <label>結末 <select id="ending"><option value="win">当たり</option><option value="loss">外れ</option><option value="revival">復活</option></select></label>
+    <label>演出時刻 <input id="time" type="range" min="0" max="54" value="0" step="0.01"><output id="time-value">0.00秒</output></label>
+    <button id="load-preview" type="button">映像比較も表示</button>
+  </div>
+  <p id="pose-status" role="status"></p>
+  <div class="scroll"><table><thead><tr><th>表示時刻</th><th>画面の区間</th><th>BGM</th><th>効果音の打点</th><th>光・役物</th><th>映像の確認</th></tr></thead><tbody id="timeline"></tbody></table></div>
+  <iframe id="preview" title="既存の長尺リーチ映像比較" hidden loading="lazy"></iframe>
+  <p><small>本編接続・数値検証・実出力・人の試聴は、それぞれ別に受け入れます。再生できることだけで音質が合格したとは扱いません。</small></p>
+</main><script type="module" src="/src/dev/s9-audio.js"></script></body>
+</html>
