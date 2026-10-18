@@ -15,6 +15,7 @@
 ## 主な入口
 
 - [効果音制作スキルの復旧と設計手順](prototype/PACHINKO_SOUND_SKILL_RECOVERY_2026-10-16.md)：合成・解析・試聴の手順、回収したコード、再生成の検証結果。
+- [個人開発紹介：クローン後にブラウザだけで発表](presentations/marp/README.md)：表示用HTML・画像・動画を同梱。Marpのインストール不要。
 
 - [Sprint 5実行計画](agile/S5_PLAN.md)
 - [Sprint 5設計・検証/受入](agile/S5_ACCEPTANCE.md)：ローカル起動・manifest生成・portable V2配置JSON保存/復元・geometry警告・比較手順と未検証の対応。

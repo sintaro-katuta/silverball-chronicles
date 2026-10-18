@@ -1,0 +1,14 @@
+flowchart LR
+  A[パチンコで<br/>玉を増やす] --> B[目標の持ち玉に到達]
+  B -->|1〜9ステージ| C[3択から<br/>スキルを選ぶ]
+  C --> D[次のステージ]
+  D --> A
+  A -->|敗北・クリア・精算| E[プレイ終了]
+  E --> F[チケットを獲得]
+  F --> G[永続強化]
+  G --> H[再挑戦]
+  H --> A
+  classDef play fill:#e8f1ff,stroke:#2455b8,color:#202731
+  classDef grow fill:#fff5d6,stroke:#ad7419,color:#202731
+  class A,B,D,E play
+  class C,F,G,H grow

@@ -1,0 +1,21 @@
+{
+  "theme": "base",
+  "themeVariables": {
+    "fontFamily": "Hiragino Sans, Noto Sans JP, sans-serif",
+    "fontSize": "24px",
+    "lineColor": "#2455b8",
+    "edgeLabelBackground": "#fafaf8",
+    "primaryTextColor": "#202731"
+  },
+  "flowchart": {
+    "htmlLabels": false,
+    "curve": "step",
+    "nodeSpacing": 70,
+    "rankSpacing": 60,
+    "padding": 18,
+    "wrappingWidth": 600
+  },
+  "themeCSS": ".node rect { filter: none !important; } .edgeLabel rect, .edgeLabel .labelBkg { fill: #fafaf8 !important; opacity: 1 !important; }",
+  "layout": "dagre",
+  "look": "classic"
+}

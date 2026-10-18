@@ -1,0 +1,13 @@
+flowchart LR
+    A["玉を打つ<br/>ヘソに入賞させる"] --> B{"大当りの抽選"}
+    B -->|ハズレ| A
+    B -->|当たり| C["出玉を獲得"]
+    C --> D{"RUSH突入条件を<br/>満たす？"}
+    D -->|いいえ| A
+    D -->|はい| E["RUSHへ<br/>大当りの連続を目指す"]
+    E -->|当たれば出玉を獲得| E
+    E -->|RUSH終了| A
+    classDef step fill:#edf2fc,stroke:#2455b8,stroke-width:2px,color:#202731
+    classDef rush fill:#fff0d6,stroke:#b97123,stroke-width:2px,color:#202731
+    class A,B,C,D step
+    class E rush
