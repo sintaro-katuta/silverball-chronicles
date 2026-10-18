@@ -93,3 +93,16 @@ test('actual physical heso crossing with a full queue notifies once without chan
  }
  const off=run(false),on=run(true);assert.deepEqual(on.state,off.state);assert.equal(on.heard.length,1);assert.deepEqual(on.heard[0],{ballId:1,kind:'start',pocketId:4,accepted:0});
 });
+
+
+test('intro music follows camera elapsed without advancing gameplay; natural/skip handoff and pause never reset the opening note',async()=>{
+ const f=fixture(),p=f.player,g={phase:'playing',time:0},original=structuredClone(g);p.sync(musicPose(g,{intro:{active:true,elapsed:0}}));await flush();p.sync(musicPose(g,{intro:{active:true,elapsed:0}}));
+ for(let i=1;i<=38;i++){f.ctx.currentTime=i/10;p.sync(musicPose(g,{intro:{active:i<38,elapsed:i/10}}));}
+ assert.deepEqual(g,original);assert.equal(f.sources.length,1);assert.equal(p.snapshot().position,3.8);g.time=.1;f.ctx.currentTime=3.9;p.sync(musicPose(g,{intro:{active:false,elapsed:3.8}}));assert.equal(f.sources.length,1);assert.ok(Math.abs(p.snapshot().position-3.9)<1e-8);
+ p.pause();f.ctx.currentTime=10;p.sync(musicPose(g,{intro:{active:false,elapsed:3.8}}),{paused:true});assert.equal(p.snapshot().voices,0);p.sync(musicPose(g,{intro:{active:false,elapsed:3.8}}));assert.equal(f.sources.length,2);assert.ok(Math.abs(f.sources.at(-1).offset-3.9)<1e-8);p.dispose();
+ const q=fixture();q.player.sync(musicPose({phase:'playing',time:0},{intro:{active:true,elapsed:0}}));await flush();q.player.sync(musicPose({phase:'playing',time:0},{intro:{active:true,elapsed:0}}));q.ctx.currentTime=.9;q.player.sync(musicPose({phase:'playing',time:0},{intro:{active:true,elapsed:.9}}));q.player.sync(musicPose({phase:'playing',time:0},{intro:{active:false,elapsed:.9}}));assert.equal(q.sources.length,1);assert.equal(q.player.snapshot().position,.9);q.player.dispose();
+});
+test('all experience intros use the same normal bed; battle keeps its actual absolute clock after intro and reduced motion adds no offset',()=>{
+ for(const g of[game(0,true),{phase:'playing',time:0,jackpot:{}},{phase:'playing',time:0,rush:{}}]){const saved=structuredClone(g);assert.deepEqual(musicPose(g,{intro:{active:true,elapsed:1}}),{name:'normal',scope:'normal',time:1,absolute:false,silent:false});assert.deepEqual(g,saved);}
+ assert.equal(musicPose(game(0,true),{intro:{active:false,elapsed:3.8}}).time,0);assert.equal(musicPose(game(49.9,true),{intro:{active:false,elapsed:3.8}}).silent,true);assert.deepEqual(musicPose({phase:'playing',time:2},{intro:{active:false,elapsed:0}}),musicPose({phase:'playing',time:2}));
+});

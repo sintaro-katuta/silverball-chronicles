@@ -4,12 +4,17 @@ export const MUSIC_FADE_IN_SECONDS=.006;
 export const MUSIC_CACHE_LIMIT=32*1024*1024;
 const names=new Set(['normal','battle','bonus','rush']);
 // Use only the visible presentation phase, never its stored future result.
-export function musicPose(game){
+export function musicPose(game,{intro=null}={}){
  if(!game||game.phase==='result')return {name:null,time:game?.time??0,scope:'result',absolute:false,silent:true};
+ // The intro camera advances while gameplay is frozen. Keep only music on
+ // that display clock, retaining elapsed on skip/completion for a continuous
+ // normal handoff. Authored battle clocks begin unchanged after the intro.
+ const introElapsed=Number.isFinite(intro?.elapsed)?Math.max(0,intro.elapsed):0;
+ if(intro?.active)return {name:'normal',time:introElapsed,scope:'normal',absolute:false,silent:false};
  const bed=atmospherePose(game);
  const battle=!!game.presentation?.longReach,name=battle?'battle':game.jackpot?'bonus':game.rush?'rush':'normal';
  // PUSH advances presentation.time, not game.time; the battle score follows that same display clock.
- return {name,time:battle?game.presentation.time:game.time??0,scope:battle?`battle:${game.presentation.drawId??game.presentation.id??'presentation'}`:name,absolute:battle,silent:!bed.active};
+ return {name,time:battle?game.presentation.time:(game.time??0)+introElapsed,scope:battle?`battle:${game.presentation.drawId??game.presentation.id??'presentation'}`:name,absolute:battle,silent:!bed.active};
 }
 export function createMusicPlayer(context,destination,{load,cacheLimit=MUSIC_CACHE_LIMIT}={}){
  let disposed=false,current=null,anchor=0,lastTime=0,position=0,source=null,gain=null,volume=.5,muted=false,duckUntil=0,duckDepth=1,loadError=null,epoch=0,scope=null,startedAt=0,startPosition=0;
