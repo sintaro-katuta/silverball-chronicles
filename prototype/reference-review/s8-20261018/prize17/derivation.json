@@ -1,0 +1,1040 @@
+{
+  "scope": "Read-only local counterfactual at OLD incoming states, not an actual candidate trial",
+  "originalRaw": "prototype/reference-review/s8-20261018/road-transition/phase0/three-base/result.json.gz",
+  "compressedSHA256": "7b41ef067137946943636beec0dcc452b4344b71ddaf2a85464b7931077e9939",
+  "expandedSHA256": "67eb03b37e041a339dc77a2bd0ba81b7dfe2b42af18d4c34f0c8b2ca5995f929",
+  "actualSourceSHA": "b5024bb01cd23d1e376c084ad63f8697815d50ea6051568b3fe7b93d2eb511b2",
+  "actualShots": 250,
+  "cohortFirstPinId": 48,
+  "cohortCount": 125,
+  "actualPostVxLeft": 124,
+  "actualPostVxRight": 1,
+  "actualOut": 121,
+  "actualHeso": 4,
+  "actualWindmill": 27,
+  "actualLeftRoad": 25,
+  "prediction": {
+    "right": 124,
+    "left": 0,
+    "noHitWithin10ms": 1,
+    "central": 0
+  },
+  "assumptions": {
+    "translatedCentreDx": -2,
+    "translatedCentreDy": 0,
+    "horizonSeconds": 0.01,
+    "constantVelocity": true,
+    "ballPlusPinRadius": 2,
+    "restitution": 0.46,
+    "formula": "v_post=v-(1+e)*(v dot n)*n"
+  },
+  "limits": [
+    "Changing17 pins does not preserve old incoming states or first contacts",
+    "Gravity/other pins/walls/ball pairs/later recontacts omitted",
+    "Rightward local reflection is not proof of windmill/road arrival or heso admission",
+    "95 old-state points already lie in the translated circle; t0 is hypothetical immediate local response, not real future first-contact timing."
+  ],
+  "rows": [
+    {
+      "ballId": 1,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -292.8483368887279,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 6.75787158663099e-05,
+      "predictedPostVx": 330.40946736197725
+    },
+    {
+      "ballId": 2,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -351.2072738215155,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 342.2389323373758
+    },
+    {
+      "ballId": 3,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -340.8044621358013,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 294.1590372299564
+    },
+    {
+      "ballId": 4,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -300.8620916062988,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 7.704102461507614e-05,
+      "predictedPostVx": 314.2434867994896
+    },
+    {
+      "ballId": 5,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -320.84893785597586,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 334.55934662542575
+    },
+    {
+      "ballId": 7,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -348.378051232727,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 337.1458385355712
+    },
+    {
+      "ballId": 8,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -321.5813876979514,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 308.3038987583082
+    },
+    {
+      "ballId": 9,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -341.9795530246439,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 343.87181934095327
+    },
+    {
+      "ballId": 10,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -117.98941484225732,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 253.9153598544108
+    },
+    {
+      "ballId": 12,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -328.87913183998774,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 346.05713519329925
+    },
+    {
+      "ballId": 13,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -278.8945461421983,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.00012923656772364535,
+      "predictedPostVx": 363.9902528873665
+    },
+    {
+      "ballId": 14,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -337.1053272747323,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 319.3923684967924
+    },
+    {
+      "ballId": 15,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -338.09360087417804,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 352.60960146424964
+    },
+    {
+      "ballId": 19,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -320.0677764435759,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 343.93605722163795
+    },
+    {
+      "ballId": 21,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -358.2632759648675,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 258.99514352330596
+    },
+    {
+      "ballId": 23,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -328.39239428810333,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 337.0335863375768
+    },
+    {
+      "ballId": 26,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -349.06712142272613,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 302.1839725406556
+    },
+    {
+      "ballId": 28,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -318.1461600381067,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 297.19755638832044
+    },
+    {
+      "ballId": 31,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -347.5692734369009,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 336.35423389090056
+    },
+    {
+      "ballId": 32,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -323.2810253278017,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 306.38557262179836
+    },
+    {
+      "ballId": 34,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -322.25654659810186,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 344.79984504951074
+    },
+    {
+      "ballId": 36,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -216.51010899667426,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.0004302608666337485,
+      "predictedPostVx": 368.70000392711756
+    },
+    {
+      "ballId": 42,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -242.7703648580939,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.0006932615468292326,
+      "predictedPostVx": 367.5500451280782
+    },
+    {
+      "ballId": 44,
+      "actualOldOutcome": "start",
+      "actualOldPostVx": -302.30240343380694,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 323.0216447538544
+    },
+    {
+      "ballId": 47,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -346.58215332944553,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 318.1664913224231
+    },
+    {
+      "ballId": 49,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -318.3405422886811,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 297.3771112850526
+    },
+    {
+      "ballId": 53,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -329.057804434712,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 311.8066031689207
+    },
+    {
+      "ballId": 54,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -271.83276915382845,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.00020294208510444916,
+      "predictedPostVx": 365.5057703015834
+    },
+    {
+      "ballId": 55,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -309.6729912866336,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 332.7949385447217
+    },
+    {
+      "ballId": 57,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -224.0412588520286,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.0007633699182080711,
+      "predictedPostVx": 371.1259141027266
+    },
+    {
+      "ballId": 59,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -302.1123759733017,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.0001078775258909389,
+      "predictedPostVx": 318.9909509488118
+    },
+    {
+      "ballId": 61,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -314.0360073126795,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 340.53057799025385
+    },
+    {
+      "ballId": 65,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -331.1601596635086,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 331.35498798290666
+    },
+    {
+      "ballId": 66,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -309.08853584711983,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 325.8842947970409
+    },
+    {
+      "ballId": 68,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -320.7468348740198,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 327.7120048983024
+    },
+    {
+      "ballId": 69,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -324.63518538388684,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 337.0713382015444
+    },
+    {
+      "ballId": 70,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -326.4276915832296,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 319.74659090408034
+    },
+    {
+      "ballId": 71,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -187.81349166181866,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.001111277319436098,
+      "predictedPostVx": 369.92207627078625
+    },
+    {
+      "ballId": 72,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -307.9112344911485,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 325.5264144325388
+    },
+    {
+      "ballId": 73,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -314.2481821514402,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 323.1287199375429
+    },
+    {
+      "ballId": 74,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -270.53416122112884,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 2.188053719139028e-05,
+      "predictedPostVx": 370.8654004102395
+    },
+    {
+      "ballId": 75,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -312.1931588689781,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 298.727999226055
+    },
+    {
+      "ballId": 76,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -294.217615540706,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.00010628884012650371,
+      "predictedPostVx": 330.217005160079
+    },
+    {
+      "ballId": 78,
+      "actualOldOutcome": "start",
+      "actualOldPostVx": -277.3080327681402,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.000272571875411427,
+      "predictedPostVx": 359.6817016947282
+    },
+    {
+      "ballId": 79,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -288.022608186387,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.000178816640514883,
+      "predictedPostVx": 328.99532895247745
+    },
+    {
+      "ballId": 81,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -339.59705553735773,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 275.04963810644784
+    },
+    {
+      "ballId": 82,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -344.16852642480364,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 344.0353072183069
+    },
+    {
+      "ballId": 83,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -333.26140475143086,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 340.0372647014791
+    },
+    {
+      "ballId": 85,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": 113.06624015283394,
+      "predictedGroup": "noHitWithin10ms",
+      "predictedContactSeconds": null,
+      "predictedPostVx": null
+    },
+    {
+      "ballId": 86,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -319.11553353583315,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 336.99192288428026
+    },
+    {
+      "ballId": 89,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -322.9797820898147,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 304.28159727692747
+    },
+    {
+      "ballId": 91,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -316.659608644037,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 324.41487224513514
+    },
+    {
+      "ballId": 92,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -318.76840891303743,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 332.17618761394806
+    },
+    {
+      "ballId": 95,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -345.1865483650736,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 321.7603623811284
+    },
+    {
+      "ballId": 96,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -318.3764107116035,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 297.4102646453323
+    },
+    {
+      "ballId": 98,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -360.659638913993,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 336.12196392680465
+    },
+    {
+      "ballId": 100,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -322.9215434797916,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 305.8308185533982
+    },
+    {
+      "ballId": 102,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -298.7635421151826,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 328.1577989539147
+    },
+    {
+      "ballId": 103,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -302.5251128404603,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.00010754774466143492,
+      "predictedPostVx": 306.96385641004196
+    },
+    {
+      "ballId": 106,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -323.8363434810618,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 341.8962721681586
+    },
+    {
+      "ballId": 109,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -333.54212297176264,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 301.57434724863606
+    },
+    {
+      "ballId": 111,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -330.3966553744716,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 310.7002730879714
+    },
+    {
+      "ballId": 113,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -326.78559118021735,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 347.4757349783174
+    },
+    {
+      "ballId": 115,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -239.48376546984997,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.0005612237439768927,
+      "predictedPostVx": 370.2763818222849
+    },
+    {
+      "ballId": 116,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -302.08481964814314,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 320.97036488498316
+    },
+    {
+      "ballId": 117,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -293.3414685553547,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.00021014310686025105,
+      "predictedPostVx": 317.12401905658385
+    },
+    {
+      "ballId": 118,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -261.8502353548708,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.00022860956924859973,
+      "predictedPostVx": 369.5181397361935
+    },
+    {
+      "ballId": 122,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -349.87676437010316,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 335.9971385719923
+    },
+    {
+      "ballId": 124,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -321.5727034061415,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 303.1292585867228
+    },
+    {
+      "ballId": 127,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -340.5362714102263,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 348.288541025684
+    },
+    {
+      "ballId": 128,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -317.2634168805619,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 321.2625137289953
+    },
+    {
+      "ballId": 131,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -292.26690268050146,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.00010417409036162311,
+      "predictedPostVx": 327.82868236521546
+    },
+    {
+      "ballId": 134,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -332.01560635321516,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 336.72597041508106
+    },
+    {
+      "ballId": 138,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -276.3557002417534,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.0003681760401101988,
+      "predictedPostVx": 331.8036549943174
+    },
+    {
+      "ballId": 139,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -317.40163071711345,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 314.3399715578469
+    },
+    {
+      "ballId": 140,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -365.24961476947135,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 325.8564275627025
+    },
+    {
+      "ballId": 141,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -302.8632957118439,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 2.2641410877890327e-05,
+      "predictedPostVx": 315.49751614091394
+    },
+    {
+      "ballId": 142,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -324.9737033756261,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 337.5215177302747
+    },
+    {
+      "ballId": 145,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -305.65959825104704,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 330.8190287151517
+    },
+    {
+      "ballId": 146,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -301.19392659367713,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.00012300877010360981,
+      "predictedPostVx": 308.28869223435186
+    },
+    {
+      "ballId": 148,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -346.90317226729405,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 345.0288314880409
+    },
+    {
+      "ballId": 151,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -323.1943665427822,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 342.4018757280727
+    },
+    {
+      "ballId": 155,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -329.44260409553146,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 312.17514472293607
+    },
+    {
+      "ballId": 156,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -278.52898584319604,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 9.455953389156385e-05,
+      "predictedPostVx": 365.3906728225539
+    },
+    {
+      "ballId": 157,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -307.6438037284198,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 331.59698343108823
+    },
+    {
+      "ballId": 161,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -312.2550147094738,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 334.46510097685746
+    },
+    {
+      "ballId": 164,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -349.72635110821443,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 342.7074868839373
+    },
+    {
+      "ballId": 165,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -307.127232180444,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 335.86290524321043
+    },
+    {
+      "ballId": 169,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -313.0033979962671,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 334.49661663018134
+    },
+    {
+      "ballId": 170,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -341.6279217155644,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 322.75564155735003
+    },
+    {
+      "ballId": 173,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -256.56895838035723,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.00014095868250175563,
+      "predictedPostVx": 371.33990672063385
+    },
+    {
+      "ballId": 175,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -339.63474516837147,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 340.30344531137155
+    },
+    {
+      "ballId": 177,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -317.5163513889383,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 296.5998602600443
+    },
+    {
+      "ballId": 180,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -329.4854564073528,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 307.7974384821931
+    },
+    {
+      "ballId": 182,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -253.6683145393931,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.0004638557716778166,
+      "predictedPostVx": 367.3495053460099
+    },
+    {
+      "ballId": 183,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -333.49484019369254,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 347.19014915783305
+    },
+    {
+      "ballId": 184,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -336.06205771827865,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 334.97086552352215
+    },
+    {
+      "ballId": 187,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -310.376577864335,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 334.6067786742992
+    },
+    {
+      "ballId": 190,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -312.16990169871946,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 316.88801841254747
+    },
+    {
+      "ballId": 192,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -243.17983139655982,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.000685346483536814,
+      "predictedPostVx": 367.5460408947581
+    },
+    {
+      "ballId": 196,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -301.0178547029111,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.00012832657014486682,
+      "predictedPostVx": 308.06086571592584
+    },
+    {
+      "ballId": 197,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -333.5456137127878,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 348.5894309519708
+    },
+    {
+      "ballId": 200,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -340.9564793508465,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 347.6065178196908
+    },
+    {
+      "ballId": 203,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -350.7433712906426,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 295.44950523442407
+    },
+    {
+      "ballId": 205,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -318.1199806705589,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 297.1733885686403
+    },
+    {
+      "ballId": 208,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -347.0026902769665,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 335.7465874932356
+    },
+    {
+      "ballId": 209,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -322.6934223793621,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 305.8446275067505
+    },
+    {
+      "ballId": 211,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -338.7672724757323,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 346.95099548059954
+    },
+    {
+      "ballId": 215,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -290.8713839852547,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0.00014778687485522067,
+      "predictedPostVx": 326.53104387917415
+    },
+    {
+      "ballId": 218,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -303.692898893298,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 4.9166704685254834e-05,
+      "predictedPostVx": 320.01151313360276
+    },
+    {
+      "ballId": 220,
+      "actualOldOutcome": "start",
+      "actualOldPostVx": -331.28246672057566,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 318.20506417818643
+    },
+    {
+      "ballId": 223,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -334.9323785552697,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 346.0985356580709
+    },
+    {
+      "ballId": 226,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -348.31277121119683,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 343.4970740869585
+    },
+    {
+      "ballId": 227,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -299.9835430299108,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 328.7858965119984
+    },
+    {
+      "ballId": 228,
+      "actualOldOutcome": "start",
+      "actualOldPostVx": -300.1251884607806,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 164.5026512616247
+    },
+    {
+      "ballId": 230,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -343.21909925913656,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 346.3108409932777
+    },
+    {
+      "ballId": 234,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -320.46303211202655,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 344.2992688485586
+    },
+    {
+      "ballId": 236,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -365.0541015998407,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 280.62621094977305
+    },
+    {
+      "ballId": 237,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -320.20153507195937,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 328.5296775851324
+    },
+    {
+      "ballId": 238,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -314.2293847889901,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 329.873739855464
+    },
+    {
+      "ballId": 239,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -267.9575832274468,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 8.686118406354703e-05,
+      "predictedPostVx": 370.4935868820357
+    },
+    {
+      "ballId": 242,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -331.50000727179486,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 343.30766795284006
+    },
+    {
+      "ballId": 245,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -360.37754875580674,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 338.62891574741536
+    },
+    {
+      "ballId": 247,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -318.9654458890956,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 296.65262554013117
+    },
+    {
+      "ballId": 249,
+      "actualOldOutcome": "out",
+      "actualOldPostVx": -346.60518735109883,
+      "predictedGroup": "right",
+      "predictedContactSeconds": 0,
+      "predictedPostVx": 293.12269801765126
+    }
+  ],
+  "predictionOldStateAlreadyInside": 95
+}
