@@ -18,4 +18,4 @@ Viteの既存workspace範囲を保持し、@fontsource/dotgothic16/filesの解�
 - PMは通常遊技のPC画面PNGを実見し、盤面・外枠・操作欄・3枚風車と発射状態を確認。初回の失敗記録は保持。
 - 関連5テスト成功、releaseビルド成功。全680unitと旧CIの成功は前の製品srcに対する記録として保持し、今回config/HTML版の全unit/新CIは未実行・確認待ち。
 
-証拠は prototype/reference-review/s8-20261018/ の user-play-load-repro（元403）、user-play-font-fixed（favicon404を残した中間）、user-play-normal-fixed（通常2幅成功）、user-play-visual-fixed（配置/操作2幅成功）。測定済み67/750を今回再試射した扱いにはしません。ローカル設定更新のみで本番公開なし。PR動画の新台本は承認待ち。
+証拠は prototype/reference-review/s8-20261018/ の user-play-load-repro（元403）、user-play-font-fixed（favicon404を残した中間）、user-play-normal-fixed（通常2幅成功）、user-play-visual-fixed（配置/操作2幅成功）。測定済み67/750を今回再試射した扱いにはしません。ローカル設定更新のみで本番公開なし。ユーザーの実試遊でレビュー済みとなり、今回のPR動画は不要と確認されました。

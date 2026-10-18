@@ -25,4 +25,4 @@
 
 修正後の全単体680件成功（264.593秒）・releaseビルド成功。全202srcのSHAとHEAD e11c173は始終一致し、新証拠は `prize17-product-validation-fixed/` に保存。本編の実画面は、ユーザーの起動失敗を受けてフォント403とfavicon404を修正し、通常URLのPC/スマホで実発射・停止/再開、別の2幅比較で101配置・3枚羽根・強さ変更・再入場と4枚PNGを確認しました。console/HTTP/pageエラー0。HEAD1c584b7、[起動修正と現在の証拠](S8_LOCAL_PLAY_FONT_FIX.md)。以前の権限中断は履歴として保持。今回のconfig/HTMLに対する新CIは確認待ちです。製品実装HEAD e11c173の[CI 39108661248](https://github.com/sintaro-katuta/silverball-chronicles/actions/runs/39108661248)はsuccess。後続4111233まで製品src/test無変更を確認。最新の資料・撮影runner更新headのCIは別途確認待ちです。旧750発の67という結果は元試射の証拠であり、今の本編で再測定した値へ付け替えません。
 
-[元750発の結果](S8_PRIZE17_RESULTS.md)・[本編統合の事前計画](S8_PRIZE17_INTEGRATION_PLAN.md)。PR動画は新台本の承認待ち。Issue23/Sprint8未完了、PR35 Draft、本番公開なし。
+[元750発の結果](S8_PRIZE17_RESULTS.md)・[本編統合の事前計画](S8_PRIZE17_INTEGRATION_PLAN.md)。2026-10-18にユーザーが実試遊で受け入れ、今回は比較動画・新台本承認をマージ条件から除外しました。音声承認の代用にはせず動画は生成しません。PR35をReadyへ変更し、残るマージ条件は最新CI成功です。Issue23/Sprint8は取り込み待ち、本番公開なし。
