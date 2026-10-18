@@ -8,7 +8,8 @@
 
 |場面|BGM|効果音|音源の扱い|
 |---|---|---|---|
-|通常待機・図柄変動|normal「月下の歩み」|spin / stopLeft / stopRight / stopCenter|曲は新作、停止音は維持|
+|通常待機・図柄変動|normal「月下の歩み」|spin / stopLeft / stopRight / stopCenter|曲は新作。追加承認で回転・停止4用途も新作へ更新、既存の発音時刻を維持|
+|ヘソの実物理入賞|現在の曲を継続|admission|追加承認の新作。実際のヘソ口への通過1回につき1回。保留満杯でも発音し、当落・受付成否を知らせる音にはしない|
 |保留の変化|現在の曲を継続|holdBlue / holdRed / holdGold|既存の期待情報と音を維持|
 |通常・RUSHの前予告|通常はnormal、RUSHはrush|serial / story / step / background / route / trail / approach / alert / search / resolve / moon / awakening / crest / identity / pursuit|既存を維持|
 |リーチ入口と発展|長い戦闘への移行でbattle「一閃への決意」|reach / character / long / special / development|developmentは新作、他は維持|
@@ -26,7 +27,7 @@
 |RUSH中・継続・終了|rush「月影疾走」。終了後は実状態に従い通常へ戻る|rushReset / rushEnd|曲は新作、継続・終了音は維持|
 |意図した間・一撃直前・敗北後の間|BGMを停止/抑制する|silenceで再生中のSEを止める|無音。空白を曲や残響で埋めない|
 
-本編へ接続しているのは新作8用途のSEと新曲4用途。その他の70音名全体を作り直したという意味ではない。発射や釘の接触ごとに新たな音を加える作業は今回の8用途に含めない。
+元の新作8用途のSE・新曲4用途に、2026-10-18の追加承認でリール4用途とヘソ入賞1用途を追補する。新作SEは合計13用途。全音名を作り直す範囲ではなく、発射や釘の接触音は今回の追加対象に含めない。追加の接続・検証状態は[S9_ACCEPTANCE](S9_ACCEPTANCE.md)のADD欄で確認する。
 
 ## 同じ定義を読む時間表
 

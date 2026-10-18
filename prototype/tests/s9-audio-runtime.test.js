@@ -57,3 +57,39 @@ test('muted/paused normal music never prefetches; disposal during battle warm-up
  const f=fixture(),p=f.player;p.configure({musicMuted:true});p.sync({name:'normal',scope:'normal',time:0});await flush();assert.deepEqual(f.loads,[]);p.configure({musicMuted:false});p.sync({name:'normal',scope:'normal',time:0},{paused:true});await flush();assert.deepEqual(f.loads,[]);p.configure({musicVolume:0});p.sync({name:'normal',scope:'normal',time:0});await flush();p.sync({name:'normal',scope:'normal',time:.01});await flush();assert.deepEqual(f.loads,['normal']);p.dispose();
  let finishBattle;const loads=[];const player=createMusicPlayer(f.ctx,{connect(){}},{load:async name=>{loads.push(name);if(name==='battle')return new Promise(resolve=>{finishBattle=resolve;});return {left:new Float32Array(1000),right:new Float32Array(1000),sampleRate:100,loopStart:0,loopEnd:10};}});player.sync({name:'normal',scope:'normal',time:0});await flush();player.sync({name:'normal',scope:'normal',time:.01});await flush();assert.deepEqual(loads,['normal','battle']);assert.deepEqual(player.snapshot().pendingTracks,['battle']);player.dispose();finishBattle({left:new Float32Array(1000),right:new Float32Array(1000),sampleRate:100,loopStart:0,loopEnd:10});await flush();assert.equal(player.snapshot().cacheBytes,0);assert.equal(player.snapshot().voices,0);
 });
+
+test('physical heso admission sounds once per ball even with full holds; other inlets and unavailable audio never backlog',async()=>{
+ const f=fixture();f.ctx.destination={};f.ctx.createDynamicsCompressor=()=>({threshold:{value:0},knee:{value:0},ratio:{value:0},connect(){},disconnect(){}});f.ctx.resume=async()=>{};f.ctx.close=async()=>{};
+ const audio=createPresentationSound({contextFactory:()=>f.ctx,synthesize:()=>({left:new Float32Array(10),right:new Float32Array(10)})});
+ const balls=new Map(),admit=(ballId,extra={})=>{if(!balls.has(ballId))balls.set(ballId,{id:ballId});audio.admission({ball:balls.get(ballId),kind:'start',pocketId:4,...extra});};
+ admit(1);await audio.unlock();admit(1);assert.equal(audio.snapshot().cues.length,0,'locked admission is consumed');
+ const g={time:0,acceptedDraws:Array.from({length:4},(_,i)=>({id:i})),holdCount:4},before=structuredClone(g);
+ admit(2);admit(2);admit(3);assert.deepEqual(audio.snapshot().cues.map(c=>c.name),['admission','admission']);assert.deepEqual(g,before);
+ for(const kind of['rush','fuzu','normal','bonus'])admit(10,{kind});admit(10,{pocketId:8});assert.equal(audio.snapshot().cues.length,2);
+ audio.setPreferences({effectsMuted:true});admit(4);audio.setPreferences({effectsMuted:false});admit(4);admit(5,{paused:true});admit(5);assert.equal(audio.snapshot().cues.length,2);
+ audio.setEnabled(false);admit(6);audio.setEnabled(true);admit(6);assert.equal(audio.snapshot().cues.length,2);
+ for(let id=20;id<35;id++)admit(id);assert.ok(audio.snapshot().voices<=6);
+ audio.reset();admit(2);const spinning={time:0,spinActive:true,spinResult:{drawId:99},drawTimer:0,drawTempo:1,reelStopGap:.2,acceptedDraws:[]};audio.sync(spinning);audio.sync(spinning);admit(2);assert.deepEqual(audio.snapshot().cues.map(c=>c.name),['admission','spin'],'same-frame admission and spin are each emitted once');audio.dispose();admit(99);assert.equal(audio.snapshot().cues.length,2);
+});
+
+test('reel lifecycle emits each stop once and direct presentation cannot duplicate the same draw spin',()=>{
+ const heard=[],t=createCueTracker(n=>heard.push(n),()=>{}),g={time:0,spinActive:true,spinResult:{drawId:12},drawTimer:0,drawTempo:1,reelStopGap:.2,acceptedDraws:[]};
+ t.sync(g);t.sync(g);g.drawTimer=1;t.sync(g);g.drawTimer=1.2;t.sync(g);t.sync(g);g.spinActive=false;g.presentation={drawId:12,displayRoute:'direct',time:0,win:false};t.sync(g);t.sync(g);g.presentation=null;g.lastResolvedDraw={drawId:12};g.lastDraw=false;t.sync(g);t.sync(g);
+ assert.deepEqual(heard,['spin','stopLeft','stopRight','stopCenter']);
+ const muted=createCueTracker(n=>heard.push(n),()=>{});g.spinActive=true;g.spinResult={drawId:13};g.drawTimer=1.2;g.lastResolvedDraw=null;muted.sync(g,{enabled:false});muted.sync(g);assert.equal(heard.length,4);
+});
+
+test('actual physical heso crossing with a full queue notifies once without changing admission, FIFO or prize accounting',async()=>{
+ const {createBoardFlow}=await import('../src/pixi/board-flow.js'),{productionBoardFlowOptions}=await import('../src/app/production-board-profile.js'),{attachNormalSpin}=await import('../src/pixi/normal-spin-flow.js'),{SessionGame}=await import('../src/domain/session-game.js');
+ function run(observe){
+  const game=new SessionGame(()=>.9),model=createBoardFlow({lcd:true,...productionBoardFlowOptions()}),flow=model.flow;attachNormalSpin(flow,{sessionGame:game,roundModel:model,lifecycle:true});
+  for(let id=1000;id<1008;id++)game.hit({id},'start',4);
+  const serial=game.drawSerial,queue=structuredClone(game.acceptedDraws),heard=[],hit=flow.game.hit.bind(flow.game);
+  if(observe)flow.game.hit=(ball,kind,id)=>{hit(ball,kind,id);heard.push({ballId:ball.id,kind,pocketId:id,accepted:game.drawSerial-serial});};
+  const p=flow.physics,mouth=p.pockets.find(q=>q.kind==='start'),ball=p.spawn({extra:true},.18);Object.assign(ball,{x:mouth.x,y:mouth.y-4,vx:0,vy:40,leftLaunchPlane:true});
+  for(let i=0;i<24;i++)p.step(1/120,flow.game);
+  assert.equal(game.drawSerial,serial,'full queue cannot accept a further draw');assert.deepEqual(game.acceptedDraws,queue);assert.equal(flow.counts.start,1);assert.equal(p.balls.length,0);
+  return {heard,state:JSON.parse(JSON.stringify({counts:flow.counts,metrics:p.metrics,events:game.events,serial:game.drawSerial,queue:game.acceptedDraws,total:game.total,stock:game.stock,accounting:game.accounting}))};
+ }
+ const off=run(false),on=run(true);assert.deepEqual(on.state,off.state);assert.equal(on.heard.length,1);assert.deepEqual(on.heard[0],{ballId:1,kind:'start',pocketId:4,accepted:0});
+});

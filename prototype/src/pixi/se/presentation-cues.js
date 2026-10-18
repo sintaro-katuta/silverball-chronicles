@@ -61,7 +61,7 @@ export function createCueTracker(emit,stop){
     if(tier!=='none'&&oldHolds.get(record.id)!==tier&&allowed)emit('hold'+tier[0].toUpperCase()+tier.slice(1));
    }oldHolds=nextHolds;
    const p=g.presentation;
-   if(p){const cues=reachAudioCues(p,{pushAvailable});timed(cues,p.time);if(p.win&&cues.some(c=>c.id==='decision'&&p.time>=c.at))pendingConfirmation=true;if(p.pushInput&&oldPush!==p.pushInput){if(allowed)emit('pushPress');oldPush=p.pushInput;}}
+   if(p){const cues=reachAudioCues(p,{pushAvailable});const audible=cues.filter(c=>{if(c.name==='spin'&&oldDraw===p.drawId){seen.add(c.id);return false;}return true;});timed(audible,p.time);if(p.win&&cues.some(c=>c.id==='decision'&&p.time>=c.at))pendingConfirmation=true;if(p.pushInput&&oldPush!==p.pushInput){if(allowed)emit('pushPress');oldPush=p.pushInput;}}
    // Win zoom is secondary to the reach's decision. Direct/ordinary wins still
    // receive one confirmation. Never play a second win chord at every frame.
    if(g.previewWinAt!==undefined&&g.previewWinAt!==oldWin){
