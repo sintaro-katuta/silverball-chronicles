@@ -1,0 +1,16 @@
+
+> tsukikage-pachinko@0.3.0 preview:release
+> vite preview --mode release --host 127.0.0.1 --port 5450 --strictPort
+
+error when starting preview server:
+Error: listen EPERM: operation not permitted 127.0.0.1:5450
+    at Server.setupListenHandle [as _listen2] (node:net:2368:21)
+    at listenInCluster (node:net:2499:12)
+    at node:net:2728:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+  code: 'EPERM',
+  errno: -1,
+  syscall: 'listen',
+  address: '127.0.0.1',
+  port: 5450
+}
