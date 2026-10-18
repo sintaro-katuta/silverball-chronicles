@@ -12,8 +12,7 @@ import {FLOOR_ONE} from "../ui/floor-catalog.js";
 import {mountFloorArt} from "../ui/floor-art.js";
 import {mountBoard} from "../pixi/board-runtime.js";
 import {SessionGame} from "../domain/session-game.js";
-// Production adoption only; mechanical factory/control defaults remain at0.20.
-const PRODUCTION_NORMAL_POWER=.18;
+import {PRODUCTION_NORMAL_POWER,productionBoardFlowOptions} from './production-board-profile.js';
 const root=document.querySelector('#app'),fmt=n=>Math.floor(n).toLocaleString('ja-JP');
 let experience=null;
 let art=null,board=null,sessionSound=null,game=null,selected=FLOOR_ONE[0],generation=0,finishing=false,feeding=true,reviewModel=null;
@@ -73,7 +72,7 @@ async function play(demoScenario=null){cleanup();experience=demoScenario;const s
  root.querySelector('#sound-enabled').onchange=e=>board?.setSound(e.target.checked);
  root.querySelector('#effects-reduced').onchange=e=>{game.reducedEffects=e.target.checked;};
  root.querySelector('#power-control').oninput=e=>{board?.power(+e.target.value);root.querySelector('#power-label').textContent=Number(e.target.value).toFixed(2);};
- try{const mounted=await mountBoard(root,{production:true,flowOptions:{normalPower:PRODUCTION_NORMAL_POWER},sound,sessionGame:game,unit:selected,intro:true,onIntroState:introState,isCancelled:()=>version!==generation,onLoadProgress:progress=>{if(version!==generation)return;const status=root.querySelector('#machine-loading [role=status]');if(status)status.textContent=`台を準備中… ${Math.round(progress*100)}%`;},reviewHook:experience?experienceSetup:review?reviewSetup:null,onUpdate:update});if(version!==generation){mounted.dispose();return;}board=mounted;board.feed(feeding);update(board.snapshot());root.querySelector('#machine-loading').remove();root.querySelector('#intro-skip').disabled=false;introState(mounted.snapshot().intro??{active:false});if(document.hidden)menu();}catch(error){sound.dispose();console.error(error);if(version===generation){root.innerHTML='<main><h1>盤面を読み込めませんでした</h1><p>再度台を選んでお試しください。</p><button id=back>台選択へ</button></main>';root.querySelector('#back').onclick=floor;}}
+ try{const mounted=await mountBoard(root,{production:true,flowOptions:productionBoardFlowOptions(),sound,sessionGame:game,unit:selected,intro:true,onIntroState:introState,isCancelled:()=>version!==generation,onLoadProgress:progress=>{if(version!==generation)return;const status=root.querySelector('#machine-loading [role=status]');if(status)status.textContent=`台を準備中… ${Math.round(progress*100)}%`;},reviewHook:experience?experienceSetup:review?reviewSetup:null,onUpdate:update});if(version!==generation){mounted.dispose();return;}board=mounted;board.feed(feeding);update(board.snapshot());root.querySelector('#machine-loading').remove();root.querySelector('#intro-skip').disabled=false;introState(mounted.snapshot().intro??{active:false});if(document.hidden)menu();}catch(error){sound.dispose();console.error(error);if(version===generation){root.innerHTML='<main><h1>盤面を読み込めませんでした</h1><p>再度台を選んでお試しください。</p><button id=back>台選択へ</button></main>';root.querySelector('#back').onclick=floor;}}
 }
 function update(s){if(!game)return;if(s.view)root.querySelectorAll('[data-view]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.view===s.view)));game.pendingBalls=s.inFlight;game.events.length=0;
  for(const [id,value]of [['stock',game.stock],['total',game.total],['draws',game.draws],['wins',game.jackpots]]){const el=root.querySelector('#'+id);if(el)el.textContent=fmt(value)+(id==='draws'?'回':'');}
