@@ -87,7 +87,9 @@ test('PUSH prompt and actual press are separate once-only cues with no early con
 test('small cues cannot cut a confirmation when all six effect voices are occupied',async()=>{
  const sources=[],node=()=>({connect(){},disconnect(){},gain:{value:0},threshold:{value:0},knee:{value:0},ratio:{value:0}});
  const ctx={state:'running',sampleRate:16000,currentTime:0,destination:node(),resume:async()=>{},close:async()=>{},createGain:node,createDynamicsCompressor:node,createBuffer:(n,length)=>({length,copyToChannel(){}}),createBufferSource:()=>{const s={...node(),start(){},stop(){s.stopped=true;}};sources.push(s);return s;}};
- const sound=createPresentationSound({contextFactory:()=>ctx});await sound.unlock();for(let i=0;i<6;i++)sound.audition('win');const count=sound.snapshot().cues.length;sound.audition('payout');assert.equal(sound.snapshot().cues.length,count);assert.ok(sources.every(s=>!s.stopped));sound.audition('decisiveHit');assert.equal(sound.snapshot().voices,6);assert.equal(sources.filter(s=>s.stopped).length,1);sound.dispose();
+ const sound=createPresentationSound({contextFactory:()=>ctx});await sound.unlock();for(let i=0;i<6;i++)sound.audition('win');const count=sound.snapshot().cues.length;sound.audition('payout');assert.equal(sound.snapshot().cues.length,count);assert.ok(sources.every(s=>!s.stopped));sound.audition('decisiveHit');assert.equal(sound.snapshot().voices,6);assert.equal(sources.filter(s=>s.stopped).length,0);
+ // New stings preserve an active confirmation; high-priority hits still replace ordinary cues.
+ sound.reset();const start=sources.length;for(let i=0;i<6;i++)sound.audition('payout');sound.audition('decisiveHit');assert.equal(sound.snapshot().voices,6);assert.equal(sources.slice(start).filter(s=>s.stopped).length,1);sound.dispose();
 });
 test('important synth sounds retain priority and stereo tails',()=>{
  assert.equal(SE_CATALOG.decisiveHit.kind,'blade');assert.equal(SE_CATALOG.win.kind,'victory');assert.ok(SE_CATALOG.decisiveHit.priority>SE_CATALOG.heroHit.priority);assert.ok(SE_CATALOG.win.duration>2);
