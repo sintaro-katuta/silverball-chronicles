@@ -1,0 +1,227 @@
+{
+  "version": 1,
+  "stage": "representative",
+  "items": [
+    {
+      "id": "music-normal",
+      "type": "music",
+      "label": "月下の歩み",
+      "path": "music/normal.mp3",
+      "baselinePath": "baseline/pad.mp3",
+      "baselineLabel": "旧支えpad単体（BGMではない・3秒）",
+      "title": "月下の歩み",
+      "bpm": 80,
+      "bars": 8,
+      "duration": 24,
+      "loopStart": 0,
+      "loopEnd": 24,
+      "level": 0.15,
+      "measurement": {
+        "duration": 24,
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 1152000,
+        "pcmPeak": 0.30000001192092896,
+        "pcmPeakDBFS": -10.457574560460515,
+        "rms": 0.07439463981458981,
+        "monoLossDB": -0.07476308267471596,
+        "correlation": 0.9668990074277152,
+        "nonFinite": 0,
+        "loudness": {
+          "input_i": "-20.98",
+          "input_tp": "-10.46",
+          "input_lra": "3.00",
+          "input_thresh": "-31.01",
+          "output_i": "-18.26",
+          "output_tp": "-7.84",
+          "output_lra": "0.90",
+          "output_thresh": "-28.27",
+          "normalization_type": "dynamic",
+          "target_offset": "0.26"
+        },
+        "mp3DecodeExit": 0,
+        "loopJoin": {
+          "left": 0,
+          "right": 0
+        },
+        "interpretation": "LUFS padded1s for analysis only; files not padded. Peak and decode are technical checks, not listening acceptance."
+      },
+      "comparison": "Different roles/durations; compare mix and music structure in representative scene, not same melody reproduction."
+    },
+    {
+      "id": "music-battle",
+      "type": "music",
+      "label": "一閃への決意",
+      "path": "music/battle.mp3",
+      "baselinePath": "baseline/pad.mp3",
+      "baselineLabel": "旧支えpad単体（BGMではない・3秒）",
+      "title": "一閃への決意",
+      "bpm": 120,
+      "bars": 27,
+      "duration": 54,
+      "loopStart": 0,
+      "loopEnd": 54,
+      "level": 0.18,
+      "measurement": {
+        "duration": 54,
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 2592000,
+        "pcmPeak": 0.30000001192092896,
+        "pcmPeakDBFS": -10.457574560460515,
+        "rms": 0.04538468466657894,
+        "monoLossDB": -0.06768396931883922,
+        "correlation": 0.9692365041964882,
+        "nonFinite": 0,
+        "loudness": {
+          "input_i": "-25.38",
+          "input_tp": "-10.46",
+          "input_lra": "4.40",
+          "input_thresh": "-35.39",
+          "output_i": "-16.94",
+          "output_tp": "-3.12",
+          "output_lra": "2.40",
+          "output_thresh": "-26.95",
+          "normalization_type": "dynamic",
+          "target_offset": "-1.06"
+        },
+        "mp3DecodeExit": 0,
+        "loopJoin": {
+          "left": 0,
+          "right": 0
+        },
+        "interpretation": "LUFS padded1s for analysis only; files not padded. Peak and decode are technical checks, not listening acceptance."
+      },
+      "comparison": "Different roles/durations; compare mix and music structure in representative scene, not same melody reproduction."
+    },
+    {
+      "id": "se-decisiveHit",
+      "type": "se",
+      "label": "pressure最終一撃・当落非確定",
+      "path": "se/decisiveHit-v0.mp3",
+      "baselinePath": "baseline/decisiveHit.mp3",
+      "baselineName": "decisiveHit",
+      "baselineLabel": "既存採用SE",
+      "variant": 0,
+      "duration": 1.55,
+      "level": 0.56,
+      "priority": 3,
+      "duckFor": 0.28,
+      "role": "pressure最終一撃・当落非確定",
+      "kind": "s9-synth",
+      "style": "s9-original-periodic"
+    }
+  ],
+  "files": [
+    {
+      "path": "baseline/pad.wav",
+      "sha256": "2ab7c81cdd97c15398338791b700646ee40e0b8e95a3f6212eab12422dbf4467",
+      "bytes": 864102
+    },
+    {
+      "path": "baseline/pad.mp3",
+      "sha256": "5998234edaf807f80884ebd81f1b6794f8073c773da00304b9e703aca5d7660b",
+      "bytes": 97580
+    },
+    {
+      "path": "music/normal.wav",
+      "sha256": "a52e08f7a5c2b18606e58cb013db515c3fdba848dee5076a430d5c99f8b6662a",
+      "bytes": 6912102
+    },
+    {
+      "path": "music/normal.mp3",
+      "sha256": "81ea7227446a7ba4911108267bf9ad22bdead550f5eef0cfd3961792af10edf0",
+      "bytes": 769580
+    },
+    {
+      "path": "music/battle.wav",
+      "sha256": "017a94ec764d0e6f00b7f3632b6f0edfa16bd8ea5e3a99ee6b0dc30deeb9a0d9",
+      "bytes": 15552102
+    },
+    {
+      "path": "music/battle.mp3",
+      "sha256": "5504a1660973ebf93057134a13a7b9b9915458631e6cc64994dfb57b2be810c3",
+      "bytes": 1729580
+    },
+    {
+      "path": "baseline/decisiveHit.wav",
+      "sha256": "57d14412443213fb56b9410a6e233805dbbc70cd043b7c15d1cd542d0e5f4379",
+      "bytes": 446502
+    },
+    {
+      "path": "baseline/decisiveHit.mp3",
+      "sha256": "2fb4f583e6dea516559c77a25dd964d95c7ce41096dfb3e6604f6824aea76ac1",
+      "bytes": 51500
+    },
+    {
+      "path": "se/decisiveHit-v0.wav",
+      "sha256": "f006507cd8e15aeef618186ba9c77b0fe05ea22834b30ef2413fddb1a55e1f30",
+      "bytes": 446502
+    },
+    {
+      "path": "se/decisiveHit-v0.mp3",
+      "sha256": "d5858190e00f4cc59eb4e1a18939a6f87ca82a04dc784a4f542dc6a0d1b48e61",
+      "bytes": 51500
+    }
+  ],
+  "sources": [
+    {
+      "path": "prototype/src/pixi/se/s9-synth.js",
+      "sha256": "391f5be8db9e604a15a66eb2b0af9861c207bfbdbcadbc82febe5894b4730ad4",
+      "bytes": 2507
+    },
+    {
+      "path": "prototype/src/pixi/se/music-score.js",
+      "sha256": "0a327addc2b78dd92717103caf229f3843c973ff81644277ccbe5b75a1b75e03",
+      "bytes": 3620
+    },
+    {
+      "path": "prototype/src/pixi/se/s9-se.js",
+      "sha256": "56e8fed8bbfc1de3aecaf852f3c1d06b9fe43d2e8ee4b1da339f565c14e61a6f",
+      "bytes": 3059
+    },
+    {
+      "path": "prototype/tools/s9-render-audio.mjs",
+      "sha256": "7ed3659aa726ac66b09b65fb02f8083364d0ca97d59a5d1c1a348ef0014f0fcc",
+      "bytes": 6439
+    },
+    {
+      "path": "prototype/reference-review/s9-20261018/audio-v1/baseline-source/original-se.js",
+      "sha256": "dff82507535c0a195bdbebd1ddfbae4c594512e6efa87da6c79c0418c95860cf",
+      "bytes": 5726
+    },
+    {
+      "path": "prototype/reference-review/s9-20261018/audio-v1/baseline-source/signature-sound.js",
+      "sha256": "2c0dbae87ae3807fc4645f2dc0a684296ff371457a6fd1ae2e27af3323a5aec5",
+      "bytes": 2687
+    },
+    {
+      "path": "prototype/reference-review/s9-20261018/audio-v1/baseline-source/synth-wave.js",
+      "sha256": "042b18a27172f7f1c0ccb6fb4d5392ad316056e6a73e3b230ebe9b71e402dd1f",
+      "bytes": 1215
+    },
+    {
+      "path": "prototype/reference-review/s9-20261018/audio-v1/baseline-source/presentation-atmosphere.js",
+      "sha256": "ba3c74041eb34345809346f8a23fdcf4e94d1411202813f7e7057fa76bad4cfc",
+      "bytes": 5728
+    },
+    {
+      "path": "prototype/reference-review/s9-20261018/audio-v1/reach-ending.js",
+      "sha256": "971458a4387d92cd141f11eb74e9bbf5b18594c8cbc3ef5624f6af7c8e341516",
+      "bytes": 1428
+    }
+  ],
+  "acceptance": {
+    "synthesis": "complete for listed files",
+    "numeric": "peak/finite/loudness measured for listed files",
+    "decode": "all listed MP3 exit0",
+    "browser": "pending",
+    "humanListening": "not verified",
+    "userAcceptance": "pending",
+    "product": "pending"
+  },
+  "environment": {
+    "node": "v26.11.0",
+    "ffmpeg": "ffmpeg version 9.0.1 Copyright (c) 2000-2026 the FFmpeg developers"
+  }
+}
