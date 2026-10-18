@@ -1,0 +1,38 @@
+{
+  "version": "s9-frequent-v2",
+  "name": "stopCenter",
+  "variant": 1,
+  "duration": 0.24,
+  "level": 0.2,
+  "priority": 2,
+  "duckFor": 0,
+  "role": "中図柄停止の少し重い短い打点・当落非依存",
+  "kind": "s9-synth",
+  "style": "s9-original-periodic",
+  "events": [
+    {
+      "at": 0,
+      "seconds": 0.13,
+      "hz": 520.1120348606133,
+      "endHz": 389.6434633658588,
+      "gain": 0.3,
+      "pan": 0
+    },
+    {
+      "at": 0.008,
+      "seconds": 0.18,
+      "hz": 260.05158966367753,
+      "endHz": 260.05158966367753,
+      "gain": 0.15,
+      "pan": 0
+    }
+  ],
+  "envelope": {
+    "attack": 0.003,
+    "release": 0.035,
+    "decay": 2.3,
+    "bright": 0.28,
+    "echo": false
+  },
+  "intent": "Short periodic synth; no result/odds/game-RNG input. Loop-free, no long echo."
+}

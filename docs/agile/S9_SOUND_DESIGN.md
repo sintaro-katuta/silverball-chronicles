@@ -82,3 +82,29 @@ node prototype/tools/s9-audio-spectrum.mjs
 Gitへは試聴MP3、score、設定、測定、manifestと再生成ソースを保持する方針です。大きな生WAVは今回コミットせず、ローカルworkspaceへ保全し、同じソースから再生成できます。manifestにはWAVのSHA/bytesも残します。WAVがGitに無いことを欠損や未生成とは扱いません。
 
 音源生成時のmanifestに記録した本設計書SHAは追記前の版です。該当版を試聴証拠内 `sound-design-before-qa-addendum.md` に保護しました。音源・score・凍結metadataそのものは今回の確認で変更していません。
+
+## S9追加：リールとヘソ入賞（audio-v2）
+
+2026-10-18 の追加承認で制作した5用途。既存4曲・先行8用途と採用済み win/rushWin は維持する。音の品質の人間聴取は未確認であり、数値・decode成功を聴感合格とは扱わない。音源は外部素材を使わない決定的な周期波合成で、ゲームRNG・当落・保留色を入力しない。
+
+|用途ID|尺|最大PCM振幅|打点・役割|v0 LUFS / true peak|
+|---|---:|---:|---|---|
+|spin|0.28秒|0.13|開始0/.08/.16秒の短い上昇。停止音より弱く、回転開始だけを知らせる|−30.32 / −17.72 dBTP|
+|stopLeft|0.18秒|0.18|下降する短い打点。左停止|−28.65 / −14.89|
+|stopRight|0.18秒|0.18|左より少し高い打点。右停止|−27.95 / −14.89|
+|stopCenter|0.24秒|0.20|低めの芯を持つ最後の停止。当たり確定音型にはしない|−27.15 / −13.98|
+|admission|0.16秒|0.12|小さく明るいヘソ入賞応答。保留満杯でも入賞を通知する|−30.85 / −18.42|
+
+共通包絡は attack .003秒、release .035秒、decay係数2.3、倍音bright .28、echoなし。finishの既存端処理をそのまま使う。既存8音の合成経路は変更せず、新5音だけ専用包絡で分岐した。spinと入賞の同時発音は2つの短い役割の重なりとして本編で別途確認する。新5音はBGM duckを行わず、stopCenterのみpriority2、他はpriority1。
+
+設計上のHz（`SYNTH_TUNING.effectPitch`適用前）は、spinが329.63→392 / 392→440 / 440→493.88、左停止659.25→523.25＋329.63、右停止739.99→587.33＋369.99、中停止587.33→440＋293.66、入賞783.99→659.25＋523.25。実際の合成Hz・各層の開始/尺/gain/panは `audio-v2/scores/*-v0.json` が正本。4variantは固定倍率1/.994/1.006/.998であり乱数を使わない。
+
+比較は用途ごとに旧基準と最新v0の2音のみ。入賞の基準は **「専用音なし（0.16秒の無音）」** で、架空の旧入賞音を作らない。リールは旧0.21秒との尺差を保ち、試聴gainは大きい方だけを減衰してLUFSを揃える。入賞の無音基準とは音量合わせをしない。短音のLUFSは解析用の1秒無音付加による補助値であり、素材自体には付加しない。
+
+自己批評：長い尾と過度な高域は数値設計上避けたが、頻回入賞時の刺激、停止3音の識別と同時spinの重なり、実スピーカーでの小音の聞き取りは人の試遊で確認が必要。過去の明るいシンセの選好を、この新5音の聴感受入に流用しない。
+
+制作物は `prototype/reference-review/s9-20261018/audio-v2/`。25 WAV（48kHz/stereo/PCM24）と25 MP3（256kbps）、設計票・LUFS/peak/mono/decode・STFT帯域/重心を保存した。無音基準のスペクトル/F0は定義しない。新5音は複数層なのでFFT重心を基音とは呼ばず、各層の指定Hzと分ける。耳での評価とブラウザー実再生は別工程。
+
+再生成は `prototype/tools/s9-render-audio-v2.mjs`、帯域計測は `s9-audio-spectrum-v2.mjs`、既存保持照合は `s9-audio-v2-preservation.mjs`。出力先はaudio-v2固定・既存manifestがある場合は上書き拒否。再生成時は現在のaudio-v2を履歴ディレクトリへ保全し、空のaudio-v2へ元の `old-eight-pcm-before.json` を戻して実行する。音源制作の実行版はaudio-v2/executed-sourceに保存し、audio-v1は書き換えない。旧v1専用rendererを追加catalog付きの現sourceへ向けて再実行しない。
+
+`preservation-proof.json` は、現合成と保存v1 WAVのPCM24（4曲＋8音×4variant、計36）を完全一致照合した。win/rushWin各4variantは保存済みfloatPCM SHAとも一致。v1全90音源ファイルのSHAも不変。生WAVはローカル保全・再生成対象、MP3/score/設定/測定/manifestをGit保持する既定方針を継続する。
