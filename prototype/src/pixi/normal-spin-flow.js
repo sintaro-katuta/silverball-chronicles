@@ -64,11 +64,11 @@ export function attachNormalSpin(flow,{reach=false,win=false,roundModel=null,lif
     const predictionPlan=selectedPrediction&&prior>=1?Object.freeze({...selectedPrediction,holdCue:'none'}):selectedPrediction;
     const reels=presentationReels(result,plan.route,{fullRotation:predictionPlan?.resultFamily==='fullrotation'});
     game.spinResult=Object.freeze({...result,reach:dispatch,reels:Object.freeze(reels),legacyReach:result.reach,presentationPlan:plan,predictionPlan,moonCue:plan.moonCue,reachVariant:plan.variant});
-    game.previewCenterPending=plan.route==='basic'||plan.route==='battle'||plan.route==='flash';return;
+    return;
    }
    const moonCue=assignMoonCue({win:result.win,reach:result.reach,drawId:result.drawId,mode:result.mode,baseWinProbability:Math.min(1,prior),lossReachRate:game.machine.presentation.lossReachRate});
    const reachVariant=result.reach?variety.choose(result.drawId,result.mode):null;
-   game.spinResult=Object.freeze({...result,moonCue,reachVariant});game.previewCenterPending=result.reach;
+   game.spinResult=Object.freeze({...result,moonCue,reachVariant});
   };
   game.beginPresentation=(win,...args)=>{
    const stored=game.spinResult,plan=stored?.presentationPlan,reachMode=stored?.mode??(game.rush?'rush':'normal'),moonCue=stored?.moonCue;

@@ -11,6 +11,7 @@ export const BOARD_ART = Object.freeze({
  rushScene: '/assets/lcd/rush-eclipse-v1.png',
  reachAtlas: '/assets/lcd/long-reach/duel-poses-longhair-v4.png',
  reachMotionAtlas: '/assets/lcd/long-reach/duel-intermediates-longhair-v7.png',
+ reachPortrait: '/assets/lcd/long-reach/hero-resolve-portrait-v1.png',
  reachLandscape: '/assets/lcd/long-reach/moon-bridge-v1.png',
  cloudSky: '/assets/lcd/cloud-sky-v1.png',
  hairAtlas: '/assets/lcd/hair-tip-detail-v1.png',
@@ -30,7 +31,7 @@ export function selectedBoardArt({lcd = true, spin = true, production = true} = 
  const entries = Object.entries(BOARD_ART).filter(([key]) =>
   ['central', 'normal', 'tulipAtlas'].includes(key)
   || (key === 'frameTexture' ? production
-   : ['rushScene', 'reachAtlas', 'reachMotionAtlas', 'reachLandscape'].includes(key) ? spin : lcd));
+   : ['rushScene', 'reachAtlas', 'reachMotionAtlas', 'reachLandscape', 'reachPortrait'].includes(key) ? spin : lcd));
  if (spin) {
   entries.push(...Object.entries(ENTRY_ART).map(([key, url]) => [`entry:${key}`, url]));
   entries.push(...Object.entries(STORY_PREDICTION_ASSETS).map(([key, url]) => [`story:${key}`, url]));

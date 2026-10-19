@@ -5,7 +5,7 @@ import {developmentPose} from './win-sequence.js';
 
 // Light and sword trails accompany the adopted live character art underneath.
 // Neither the art nor the preselected moon cue is replaced by this presentation.
-export function createDevelopmentView(atlas=null,landscape=null,motionAtlas=null){
+export function createDevelopmentView(atlas=null,landscape=null,motionAtlas=null,portraitTexture=null){
  const root=new Container(),textures=[];
  const shade=new Graphics().rect(0,0,210,140).fill({color:0x05132b,alpha:.42});root.addChild(shade);
  const beams=[];
@@ -19,7 +19,7 @@ export function createDevelopmentView(atlas=null,landscape=null,motionAtlas=null
  for(const [key,text] of Object.entries({entry:'月光が集う',gather:'剣に宿る光',slash:'月影の一閃'})){
   const texture=Texture.from(pixelSurface(210,30,c=>{c.font='19px "DotGothic16"';c.textAlign='center';c.textBaseline='middle';c.lineJoin='miter';c.lineWidth=4;c.strokeStyle='#071225';c.strokeText(text,105,15);c.fillStyle='#e7f4fa';c.fillText(text,105,15);}));texture.source.scaleMode='nearest';textures.push(texture);const s=new Sprite(texture);s.y=3;root.addChild(s);labels[key]=s;
  }
- const long=atlas&&landscape?createLongReachView(atlas,landscape,{motionAtlas}):null;if(long){root.addChild(long.root);textures.push(...long.textures);}
+ const long=atlas&&landscape?createLongReachView(atlas,landscape,{motionAtlas,portraitTexture}):null;if(long){root.addChild(long.root);textures.push(...long.textures);}
  root.visible=false;
  return {root,textures,frames:long?.frames??[],render(presentation,fromRush,options={}){
   if(presentation?.longReach&&long){root.visible=true;root.alpha=1;for(const child of root.children)child.visible=child===long.root;return long.render(presentation.time,{...options,variant:presentation.reachVariant,ending:presentation.reachEnding,win:presentation.win,upperCueActive:!presentation.displayRoute||!!presentation.moonCue});}

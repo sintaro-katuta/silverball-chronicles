@@ -28,7 +28,7 @@ export function specialRoutePose({route='basic',mode='normal',win=false,time=0,r
  const positions=[symbol,symbol,symbol],stopTimes=[0,0,0];
  if(timing){
   for(let i=0;i<3;i++){
-   const stop=route==='basic'&&i!==1?0:timing.decisionAt-(route==='direct'?(2-i)*.13:0);
+   const stop=route==='basic'&&i!==1?0:timing.decisionAt-(route==='direct'?(2-[0,2,1][i])*.13:0);
    stopTimes[i]=stop;
    if(time<stop){const remaining=stop-time;positions[i]=symbol-remaining*1.8-4.2*Math.max(0,remaining-.6);}
   }
