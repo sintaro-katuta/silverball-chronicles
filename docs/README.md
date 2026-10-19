@@ -14,6 +14,15 @@
 
 ## 主な入口
 
+- [Sprint 7：開始玉チャレンジのPR対象と検証](agile/S7_STARTING_BALL_PR.md)：今回のユーザー指定。旧Sprint 7 / PR #33と区別。
+
+- [玉径と風車上の釘間隔の調査（#70）](prototype/BALL_SCALE_REVIEW_2026-10-20.md)：現在の候補箇所は見える隙間が玉約2.27個分。参照動画・対象列の同定は未完了、球径未変更。
+- [チケット50枚で即確認](http://127.0.0.1:5459/dev/starting-ball-wager.html)：通常残高に反映しない確認用ページ。
+
+- 現在の開始玉チャレンジの試遊版：最新main `7e096f1` を基点にした `/private/tmp/silverball-starting-ball-main-20261019`、http://127.0.0.1:5459/ 。原フォルダの旧版サーバー5458は停止。[訂正・移植・再検証](agile/STARTING_BALL_WAGER_PROPOSAL.md)。
+
+- [開始玉チャレンジとチケットの仕様・実装](agile/STARTING_BALL_WAGER_PROPOSAL.md)：#69。最新mainへの移植状況と検証範囲。
+
 - [効果音制作スキルの復旧と設計手順](prototype/PACHINKO_SOUND_SKILL_RECOVERY_2026-10-16.md)：合成・解析・試聴の手順、回収したコード、再生成の検証結果。
 - [GitHub Issue全件整理（2026-10-19）](agile/ISSUE_AUDIT_2026-10-19.md)：完了・分割・重複の判定、移管先と作業順。
 

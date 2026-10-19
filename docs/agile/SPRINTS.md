@@ -1,5 +1,9 @@
 # スプリント提案と担当キュー
 
+## 2026-10-20：ユーザー指定のSprint 7（開始玉チャレンジ）
+
+今回のPRを「スプリント7」として作成する明示指示を受領。既存のSprint 7 / PR #33と区別し、`sprint/S07-starting-ball-wager → release/0.4.0` とする。対象は #69 の実装・確認ページと #70 の現状調査記録。球径の改修や未承認のS10全体は含めない。[今回の対象・検証・受入待ち](S7_STARTING_BALL_PR.md)。状態はPR提出・Reviewで、ユーザーの最終受入・マージ・公開は未実施。
+
 2026-10-07。PBI正本は[GitHub Issues](https://github.com/sintaro-katuta/silverball-chronicles/issues)。各スプリントの対象Issue・受け入れ基準をユーザーが確認した後に開始する。期間は承認日起点で暫定1週間。以前の10/7〜10/27の日付は未確定のため撤回した。
 
 | Sprint | ゴール・候補Issue | 状態 |
