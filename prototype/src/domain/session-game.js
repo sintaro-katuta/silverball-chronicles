@@ -2,10 +2,13 @@ import {Game,freshProfile} from './game.js';
 import {WMachine} from './tokyoghoul-w-machine.js';
 import {TOKYOGHOUL_W as W} from './tokyoghoul-w-spec.js';
 import {W_RUNTIME_POLICY,wPublishedNormalOutcome} from './w-runtime-policy.js';
+import {BASE_STARTING_BALLS,STARTING_BALL_AMOUNTS,payoutTickets} from './starting-ball-wager.js';
 // Existing moon/reel presentation is an adapter; WMachine owns lottery/prizes.
 export class SessionGame extends Game {
- constructor(rng=Math.random,{policy=W_RUNTIME_POLICY}={}){
+ constructor(rng=Math.random,{policy=W_RUNTIME_POLICY,startingBalls=BASE_STARTING_BALLS}={}){
+  if(!STARTING_BALL_AMOUNTS.includes(startingBalls))throw new RangeError('Invalid starting balls');
   super(freshProfile(),0,rng);this.pendingBalls=0;this.isWMachine=true;this.policy=policy;
+  this.stock=this.initial=this.stageStartStock=startingBalls;
   this.w=new WMachine({rng,fuzuHoldLimit:policy.fuzuHoldLimit,normalResolver:wPublishedNormalOutcome});this.wEventCursor=0;
   this.course.odds=W.normal.symbolOdds;this.course.scale=1;this.rules.pityLimit=Infinity;
   this.smallHitTime=0;this.electricTime=0;this.electricCount=0;this.wRecord=null;this.wBatch=null;
@@ -23,7 +26,13 @@ export class SessionGame extends Game {
  get hasPendingWBonus(){return !!(this.w?.active.tokuzu2||this.w?.queues.tokuzu2.length||this.w?.pendingV);}
  get belowBorder(){return this.stock<=0&&this.pendingBalls===0&&!this.spinActive&&!this.queue&&!this.presentation&&!this.jackpot&&!this.w?.pendingV&&!this.w?.electricOpen&&!this.w?.queues.tokuzu2.length&&this.previewWinAt===undefined;}
  checkStage(){}
- confirmTickets(){}
+ confirmTickets(){
+  if(!this.rewardEligible||this.result)return;
+  const tickets=payoutTickets(this.total);
+  if(tickets<=this.confirmedReward.tickets)return;
+  const amount=tickets-this.confirmedReward.tickets;
+  this.confirmedReward={payout:tickets,stages:0,upgrade:0,tickets};this.emit('tickets',{amount,tickets});
+ }
  // Physics allocates monotonically increasing numeric IDs. Only retire IDs
  // below every live ball, and permanently reject delayed callbacks below them.
  retireBallIds(liveBalls,nextId){
