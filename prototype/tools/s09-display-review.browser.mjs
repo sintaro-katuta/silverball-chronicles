@@ -2,7 +2,7 @@ import {chromium} from '@playwright/test';
 import {mkdir,writeFile,readFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
-const phase=process.argv[2]??'after',out=`reference-review/s09-040-20261020/${phase}`;
+const phase=process.argv[2]??'after',out=process.env.REVIEW_OUTPUT??`reference-review/s09-040-20261020/${phase}`,base=process.env.REVIEW_URL??'http://127.0.0.1:5469';
 await mkdir(out,{recursive:true});
 const sources=['src/domain/reels.js','src/pixi/review-reel-state.js','src/pixi/normal-spin-view.js','src/pixi/long-reach-view.js'];
 const hash=async()=>Object.fromEntries(await Promise.all(sources.map(async f=>[f,createHash('sha256').update(await readFile(f)).digest('hex')])));
@@ -11,7 +11,7 @@ try{
  for(const width of [1440,390]){
   const context=await browser.newContext({viewport:{width,height:width===390?844:900},deviceScaleFactor:1,recordVideo:{dir:out+'/video',size:{width,height:width===390?844:900}}});
   const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
-  await page.goto('http://127.0.0.1:5469/?review=session&scenario=predictions');
+  await page.goto(base+'/?review=session&scenario=predictions');
   await page.locator('[data-kind=main]').first().click();await page.locator('#playMachine').click();
   await page.waitForFunction(()=>!!window.__sessionReview?.board?.(),null,{timeout:60000});
   if(await page.locator('#intro-skip').isVisible())await page.locator('#intro-skip').click();

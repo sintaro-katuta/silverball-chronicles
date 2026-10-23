@@ -12,4 +12,16 @@
 <div class="refs"><figure><div class="scene"><img class="portrait" src="/assets/lcd/long-reach/hero-resolve-portrait-v1.png"></div><figcaption>胸像の構図・液晶の2倍表示（420×280）</figcaption></figure><figure><div class="scene close"><img class="portrait" src="/assets/lcd/long-reach/hero-resolve-portrait-v1.png"></div><figcaption>顔アップの構図・液晶の2倍表示</figcaption></figure><figure><div class="scene small close"><img class="portrait" src="/assets/lcd/long-reach/hero-resolve-portrait-v1.png"></div><figcaption>210×140論理サイズでの確認用。実機DPR保証ではありません。</figcaption></figure></div>
 <button data-bg="transparent">透過の縁</button><button data-bg="#000">黒背景</button><button data-bg="#d6e4f0">明背景</button><button id="native">原寸表示／縮小表示</button><div id="raw" class="checker"><img id="portrait-raw" class="full" src="/assets/lcd/long-reach/hero-resolve-portrait-v1.png"></div></section>
 <section><h2>対手・中間姿勢の基準</h2><p>角のある閉じた兜、銀縁の黒紫鎧、紫の光と剣。素顔は未定義。既存素材を参照し、今回の主人公顔アップのために敵全体を再制作しません。</p><img class="full checker" src="/assets/lcd/long-reach/duel-intermediates-longhair-v7.png"><p><small>服の動き・既存アニメーションへの展開は各Issueで個別受入。写真のような顔や粗い別画風へ置き換えません。</small></p></section>
-</main><script type="module">for(const b of document.querySelectorAll('[data-bg]'))b.onclick=()=>{const e=document.querySelector('#raw');e.style.background=b.dataset.bg==='transparent'?'':b.dataset.bg;};document.querySelector('#native').onclick=()=>document.querySelector('#portrait-raw').classList.toggle('native');</script></body></html>
+<section id="grain-probes"><h2>原画の粒度を測った領域</h2><p>髪・鎧・肌の固定領域。下の拡大だけnearest表示し、段差と陰影を観察します。本編のlinear補間は維持しています。数値は輝度帯の横方向の連続長で、一様なピクセル格子や美術の合否を示す値ではありません。</p><div id="grain-grid" class="refs"></div><p><a href="/assets/lcd/long-reach/grain-review-v1.json">座標・原画SHA・測定条件（8/16/32の輝度幅）</a></p></section>
+</main><script type="module">
+for(const b of document.querySelectorAll('[data-bg]'))b.onclick=()=>{const e=document.querySelector('#raw');e.style.background=b.dataset.bg==='transparent'?'':b.dataset.bg;};document.querySelector('#native').onclick=()=>document.querySelector('#portrait-raw').classList.toggle('native');
+const measured=await fetch('/assets/lcd/long-reach/grain-review-v1.json').then(r=>r.json());
+for(const probe of measured.probes){
+ const image=new Image();image.src=measured.inputs[probe.asset].url;await image.decode();
+ const figure=document.createElement('figure'),canvas=document.createElement('canvas');canvas.width=300;canvas.height=180;canvas.style.maxWidth='100%';const c=canvas.getContext('2d');c.fillStyle='#35465e';c.fillRect(0,0,300,180);c.imageSmoothingEnabled=false;
+ const [x,y,w,h]=probe.rect,scale=Math.min(288/w,168/h);c.drawImage(image,x,y,w,h,6,6,w*scale,h*scale);
+ const label=document.createElement('figcaption');const band=probe.levels.find(x=>x.lumaStep===16);label.textContent=`${probe.id}: 原画(${probe.rect.join(',')}) / 輝度16の中央値${band.medianSourcePx}px、90%点${band.p90SourcePx}px`;
+ figure.append(canvas,label);document.querySelector('#grain-grid').append(figure);
+}
+window.__grainReady=true;
+</script></body></html>

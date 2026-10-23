@@ -3,13 +3,16 @@ import assert from 'node:assert/strict';
 import {mkdir,readFile,writeFile} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import sharp from 'sharp';
-const out='reference-review/s09-040-20261020/context-final';await mkdir(out,{recursive:true});
-const files=['src/pixi/board-assets.js','src/pixi/board-runtime.js','src/pixi/normal-spin-flow.js','src/pixi/normal-spin-view.js','src/pixi/review-reel-state.js','src/pixi/development-view.js','src/pixi/long-reach-view.js','src/pixi/resolve-portrait.js','src/pixi/special-route-motion.js','src/pixi/se/presentation-cues.js','public/assets/lcd/long-reach/hero-resolve-portrait-v1.png','public/assets/lcd/long-reach/character-context-v1.json','dev/character-context.html'];
+const out=process.env.S09_CONTEXT_OUTPUT??'reference-review/s09-040-20261020/context-final';
+if(await readFile(out+'/verification.json').then(()=>true,()=>false))throw new Error('Existing evidence protected: choose S09_CONTEXT_OUTPUT');
+await mkdir(out,{recursive:true});
+const files=['src/pixi/board-assets.js','src/pixi/board-runtime.js','src/pixi/normal-spin-flow.js','src/pixi/normal-spin-view.js','src/pixi/review-reel-state.js','src/pixi/development-view.js','src/pixi/long-reach-view.js','src/pixi/resolve-portrait.js','src/pixi/special-route-motion.js','src/pixi/se/presentation-cues.js','public/assets/lcd/long-reach/hero-resolve-portrait-v1.png','public/assets/lcd/long-reach/character-context-v1.json','public/assets/lcd/long-reach/grain-review-v1.json','tools/s09-grain-review.mjs','dev/character-context.html'];
 const hashes=async()=>Object.fromEntries(await Promise.all(files.map(async f=>[f,createHash('sha256').update(await readFile(f)).digest('hex')])));
 const before=await hashes(),b=await chromium.launch({channel:'chrome',headless:true}),errors=[];
 try{
  const p=await b.newPage({viewport:{width:1120,height:900}});p.on('pageerror',e=>errors.push(e.message));
  await p.goto('http://127.0.0.1:5469/dev/character-context.html');await p.waitForFunction(()=>[...document.images].every(i=>i.complete&&i.naturalWidth>0));
+ await p.waitForFunction(()=>window.__grainReady===true);
  await p.screenshot({path:out+'/reference-sheet.png',fullPage:true});
  for(const [name,text] of [['black','黒背景'],['light','明背景']]){await p.getByRole('button',{name:text,exact:true}).click();await p.locator('#raw').screenshot({path:out+'/alpha-'+name+'.png'});}
  const images=await p.locator('img').evaluateAll(imgs=>imgs.map(i=>({url:new URL(i.src).pathname,width:i.naturalWidth,height:i.naturalHeight})));
