@@ -1,5 +1,16 @@
 # PM要求・要件とバックログ
 
+## 2026-10-20 玉径と釘間隔の確認
+
+ユーザー依頼で [#70](https://github.com/sintaro-katuta/silverball-chronicles/issues/70) を作成。最新mainの候補釘列・実描画・接触径を測定し、見える隙間が玉約2.27個分であることを記録。参照動画と対象列の同定は未完了。今回は調査・Issue化までで、球径・物理の改修や試射は未着手。[寸法・画像・限度](../prototype/BALL_SCALE_REVIEW_2026-10-20.md)。
+
+## 2026-10-19 開始玉チャレンジの追加
+
+ユーザーの仕様確認と実装指示により [#69](https://github.com/sintaro-katuta/silverball-chronicles/issues/69) を作成。1〜50枚の任意の賭け、払い出しからのチケット獲得・端末内保存・次回の再挑戦を対象とする。#54の最小ループと#57の採用状態記録から直接関係する部分だけを取り込み、両Issue全体の完了とはしない。旧ステージ・強化・有料フロアや別件のS10全体へ拡張しない。
+
+現状：初回の旧版実装を差し戻し、最新main `7e096f1` の専用worktreeへ移植。統合版の703単体テスト・新BGM4曲・チケットのブラウザ通し・ビルド成功。ユーザー指定のSprint 7としてPR提出。最終試遊受入・マージ・公開は未実施。[仕様・証拠・残件](STARTING_BALL_WAGER_PROPOSAL.md)。
+
+
 ## 2026-10-19 全件整理後の入口
 
 正本は[GitHub Issues](https://github.com/sintaro-katuta/silverball-chronicles/issues)。今回の全件判定・根拠・依存関係は [Issue全件整理](ISSUE_AUDIT_2026-10-19.md) を参照する。整理時点は52件、Open27／Closed25。以下の古い表は履歴であり、現在の状態へ読み替えない。

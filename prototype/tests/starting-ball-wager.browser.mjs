@@ -1,0 +1,80 @@
+import {chromium} from '@playwright/test';
+import assert from 'node:assert/strict';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {browserLaunchOptions} from './browser-launch.js';
+
+const url=process.env.REVIEW_URL??'http://127.0.0.1:5458',out=process.env.WAGER_REVIEW_OUT??'reference-review/starting-ball-wager-20261019';
+const key='CapacitorStorage.tsukikage-session-tickets-v1';
+await mkdir(out,{recursive:true});
+const browser=await chromium.launch(browserLaunchOptions()),errors=[],results={};
+const read=page=>page.evaluate(k=>JSON.parse(localStorage.getItem(k)),key);
+const details=async page=>{await page.locator('[data-kind=main]').first().click();await page.locator('#ticket-balance').waitFor();};
+const loaded=async page=>{await page.waitForFunction(()=>!!window.__session?.snapshot(),null,{timeout:60000});await page.locator('#intro-skip').waitFor({state:'visible'});};
+try{
+ const context=await browser.newContext({viewport:{width:390,height:844}}),page=await context.newPage();
+ page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(url);await details(page);
+ assert.equal(await page.locator('#ticket-balance').innerText(),'0');assert.equal(await page.locator('#wager-draw').isDisabled(),true);
+ assert.equal(await page.locator('#playMachine').innerText(),'400玉でプレイ開始');
+ await page.screenshot({path:`${out}/first-play-mobile.png`,fullPage:true});
+ assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+ await page.setViewportSize({width:1440,height:900});await page.screenshot({path:`${out}/first-play-desktop.png`,fullPage:true});
+ await page.setViewportSize({width:390,height:844});await page.locator('#playMachine').click();await loaded(page);
+ assert.equal(await page.locator('#music-enabled').count(),1);
+ assert.equal(await page.locator('#power-control').inputValue(),'0.18');
+ await page.locator('#intro-skip').click();
+ // Actual launch, contact, admission and W prize. No stock, lottery or payout injection.
+ await page.waitForFunction(()=>window.__session?.snapshot()?.session?.total>0,null,{timeout:120000});
+ await page.locator('#quick-pause').click();results.natural=await page.evaluate(()=>__session.snapshot());
+ assert.ok(results.natural.spawned>0);assert.ok(results.natural.session.accounting.spent>0);assert.ok(results.natural.session.accounting.reconciled);
+ await page.locator('#leave').click();await page.waitForFunction(()=>!document.querySelector('#floor')?.disabled);
+ results.firstResult=await read(page);assert.ok(results.firstResult.tickets>=1);assert.equal(results.firstResult.active,null);
+ assert.match(await page.locator('#ticket-result').innerText(),/獲得チケット/);
+ assert.equal(await page.locator('#ticket-retry').isHidden(),true);
+ await page.screenshot({path:`${out}/natural-result-mobile.png`,fullPage:true});
+ await page.locator('#floor').click();await details(page);await page.locator('#wager-draw').click();
+ await page.locator('#wager-result').waitFor({state:'visible'});
+ const pending=await read(page);assert.equal(pending.tickets,results.firstResult.tickets-1);assert.equal(pending.active.phase,'ready');
+ await page.screenshot({path:`${out}/wager-result-mobile.png`,fullPage:true});
+ await page.reload();await details(page);assert.deepEqual(await read(page),pending);
+ assert.match(await page.locator('#wager-result').innerText(),new RegExp(String(pending.active.balls)));
+ // Practice leaves both the paid result and the real wallet alone.
+ await page.locator('[data-experience=battle]').click();await loaded(page);await page.locator('#intro-menu').click();await page.locator('#leave').click();await page.locator('#ticket-balance').waitFor();
+ assert.deepEqual(await read(page),pending);
+ const second=await context.newPage();await second.goto(url);await second.getByRole('heading',{name:'別のタブで遊技中です'}).waitFor();assert.deepEqual(await read(page),pending);await second.close();
+ await page.locator('#playMachine').click();await loaded(page);
+ const actual=await page.evaluate(()=>__session.snapshot());assert.equal(actual.session.stock-actual.session.accounting.balance,pending.active.balls);
+ assert.equal((await read(page)).active.phase,'playing');
+ await page.locator('#intro-menu').click();await page.locator('#leave').click();await page.waitForFunction(()=>!document.querySelector('#floor')?.disabled);
+ const finished=await read(page);await page.reload();assert.equal((await read(page)).tickets,finished.tickets);results.afterReplay=finished;
+ await context.close();
+
+ const funded=await browser.newContext({viewport:{width:390,height:844}});
+ await funded.addInitScript(({key})=>{if(!sessionStorage.getItem('wager-fixture')){localStorage.setItem(key,JSON.stringify({version:1,tickets:50,serial:0,active:null,lastResult:null}));sessionStorage.setItem('wager-fixture','1');}},{key});
+ const p=await funded.newPage();p.on('pageerror',e=>errors.push(e.message));await p.goto(url);await details(p);
+ assert.equal(await p.locator('#wager-count').getAttribute('max'),'50');
+ await p.locator('#wager-count').fill('50');assert.match(await p.locator('#wager-probabilities').innerText(),/10%/);
+ await p.screenshot({path:`${out}/50-ticket-mobile.png`,fullPage:true});
+ assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+ await p.setViewportSize({width:1440,height:900});await p.screenshot({path:`${out}/50-ticket-desktop.png`,fullPage:true});
+ const before=await read(p);
+ await p.evaluate(k=>{const original=Storage.prototype.setItem;Storage.prototype.setItem=function(key,value){if(key===k)throw new Error('Fixture: storage full');return original.call(this,key,value);};window.restoreWagerStorage=()=>Storage.prototype.setItem=original;},key);
+ await p.locator('#wager-draw').click();await p.locator('#wager-error').waitFor({state:'visible'});assert.deepEqual(await read(p),before);
+ await p.evaluate(()=>window.restoreWagerStorage());await p.locator('#wager-draw').click();await p.locator('#wager-result').waitFor({state:'visible'});
+ results.fifty=await read(p);assert.equal(results.fifty.tickets,0);assert.equal(results.fifty.active.stake,50);
+ await p.reload();await details(p);assert.deepEqual(await read(p),results.fifty);
+ await funded.close();
+
+ const failed=await browser.newContext({viewport:{width:390,height:844}});
+ const prepared={version:1,tickets:9,serial:1,active:{id:1,stake:1,balls:800,phase:'ready',payout:0},lastResult:null};
+ await failed.addInitScript(({key,prepared})=>localStorage.setItem(key,JSON.stringify(prepared)),{key,prepared});
+ await failed.route('**/assets/central-start/central-start-v3.png',route=>route.fulfill({status:404,body:'Fixture: missing board asset'}));
+ const broken=await failed.newPage();broken.on('pageerror',e=>errors.push(e.message));await broken.goto(url);await details(broken);
+ await broken.locator('#playMachine').click();await broken.getByRole('heading',{name:'盤面を読み込めませんでした'}).waitFor({timeout:60000});
+ assert.deepEqual(await read(broken),prepared);
+ await broken.locator('#back').click();await details(broken);assert.match(await broken.locator('#wager-result').innerText(),/800/);
+ assert.deepEqual(await read(broken),prepared);results.loaderFailure=await read(broken);await failed.close();
+ assert.deepEqual(errors,[]);results.pageErrors=errors;
+ await writeFile(`${out}/results.json`,JSON.stringify(results,null,2));
+ console.log('PASS: natural prize → saved tickets → paid start; reload, practice isolation, cross-tab lock, 50-ticket stake, storage and board-load failure, and two viewport widths.');
+}finally{await browser.close();}

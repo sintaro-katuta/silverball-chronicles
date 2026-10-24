@@ -1,0 +1,19 @@
+#starting-wager{margin:24px 0;padding:18px;border:1px solid #7f6742;background:#101b2c}
+#starting-wager[hidden],#starting-wager [hidden]{display:none}
+.wager-heading{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.wager-heading h3,.wager-heading p{margin:0;color:#eacb8c}
+#starting-wager label{margin-top:16px}
+#starting-wager input{min-height:36px;margin-top:4px}
+.wager-probabilities{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin:12px 0}
+.wager-probabilities span{text-align:center;min-width:0;padding:8px 2px;border-bottom:1px solid #45566a}
+.wager-probabilities b,.wager-probabilities small{display:block}
+.wager-probabilities b{font-size:14px;color:#eacb8c;white-space:nowrap}
+.wager-probabilities small{margin-top:6px;font-size:12px;color:#b9c6d7}
+#wager-draw{width:100%;min-height:48px;border-color:#b69959}
+.wager-result{font-size:22px;color:#f2d18a;line-height:1.6;margin:18px 0 0}
+#wager-error{color:#ffb6a0}
+#starting-wager button:focus-visible,#starting-wager input:focus-visible{outline:2px solid #f2d18a;outline-offset:3px}
+.ticket-result{padding:12px 0;border-block:1px solid #7f6742;color:#eacb8c;line-height:1.8}
+.modal-backdrop button[hidden]{display:none}
+.modal-backdrop section{max-height:calc(100dvh - 24px);overflow-y:auto}
+@media(max-width:420px){#starting-wager{padding:12px}.wager-probabilities{gap:3px}.wager-probabilities b{font-size:12px}.wager-probabilities small{font-size:11px}}
