@@ -8,7 +8,7 @@ test('prefetch and mount start all art in parallel and share in-flight/cache req
  const load = createBoardAssetLoader(url => new Promise(resolve => {calls++;requested.set(url, resolve);}));
  const first = load(undefined, p => progress.push(p)), second = load();
  await Promise.resolve();
- assert.equal(requested.size, 25);assert.equal(calls,25);
+ assert.equal(requested.size, 26);assert.equal(calls,26);
  for (const [url, resolve] of requested) resolve({url});
  const [a, b] = await Promise.all([first, second]);
  assert.deepEqual(a, b);
@@ -17,7 +17,7 @@ test('prefetch and mount start all art in parallel and share in-flight/cache req
  assert.equal(a.cabinetPortrait.url, BOARD_ART.cabinetPortrait);
  assert.equal(progress.at(-1), 1);
  assert.ok(progress.every((p, i) => i === 0 || p > progress[i - 1]));
- await load();assert.equal(requested.size, BOARD_ART_URLS.length);assert.equal(calls,25);
+ await load();assert.equal(requested.size, BOARD_ART_URLS.length);assert.equal(calls,26);
 });
 
 test('failed requests can retry without refetching successful art', async () => {

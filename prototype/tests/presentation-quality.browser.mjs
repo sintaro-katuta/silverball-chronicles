@@ -82,4 +82,12 @@ try{
   console.log(`${f.name}: full ${duration}s passed`);
  }
  assert.deepEqual(errors,[]);
+}catch(error){
+ const pages=browser.contexts().flatMap(c=>c.pages());
+ const diagnostics=[];
+ for(const [index,page] of pages.entries()){
+  const state=await page.evaluate(()=>({url:location.href,body:document.body.innerText,gamePresent:!!window.__sessionReview?.game?.(),snapshot:window.__session?.snapshot?.()})).catch(e=>({error:String(e)}));
+  await page.screenshot({path:`${dir}/failure-${index}.png`}).catch(()=>{});diagnostics.push(state);
+ }
+ await writeFile(dir+'/failure.json',JSON.stringify({error:String(error),diagnostics,errors,completed:runs.map(r=>r.fixture.name)},null,2));throw error;
 }finally{await browser.close();}

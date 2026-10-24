@@ -1,11 +1,11 @@
 import {chromium} from '@playwright/test';
 import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
-const dir='reference-review/reel-direction-2026-10-05';await mkdir(dir,{recursive:true});
+const dir=process.env.REVIEW_OUTPUT??'reference-review/reel-direction-2026-10-05';await mkdir(dir,{recursive:true});
 const browser=await chromium.launch({channel:'chrome',headless:true}),errors=[];
 try{
  const page=await browser.newPage({viewport:{width:440,height:500}});page.on('pageerror',e=>errors.push(e.message));
- await page.goto('http://127.0.0.1:5186/dev/special-routes.html');await page.waitForFunction(()=>!!window.__specialRoutes);
+ await page.goto((process.env.REVIEW_URL??'http://127.0.0.1:5186')+'/dev/special-routes.html');await page.waitForFunction(()=>!!window.__specialRoutes);
  const results=await page.evaluate(async()=>{
   const pixiUrl=performance.getEntriesByType('resource').find(r=>/\/pixi__js\.js\?/.test(r.name))?.name;
   if(!pixiUrl)throw Error('Loaded Pixi module not found');
@@ -27,14 +27,20 @@ try{
    for(let t=0;t<game.drawTempo-.3;t+=.02){game.drawTimer=t;game.time=t;view.render(game);app.render();
     samples.push({time:t,columns:columns.map(c=>c.children[1].children.map(s=>({digit:view.textures.indexOf(s.texture)%(9)+1,y:s.y}))) });
    }
+   const stops=[];
+   for(let stop=0;stop<3;stop++){
+    game.drawTimer=game.drawTempo+stop*game.reelStopGap+.001;view.render(game);app.render();
+    stops.push(columns.map(c=>c.children[2].alpha===1));
+   }
    game.drawTimer=game.drawTempo+2;view.render(game);app.render();
    const settled=columns.map(c=>{const s=c.children[1].children.find(s=>s.y===0);return view.textures.indexOf(s.texture)%9+1;});
-   results.push({mode,nativeTempo,fixtureTempo:2.2,samples,settled});
+   results.push({mode,nativeTempo,fixtureTempo:2.2,samples,settled,stops});
   }
   window.__reelTest={app,view,columns};return results;
  });
  for(const run of results){
-  assert.deepEqual(run.settled,[2,4,6]);
+  assert.deepEqual(run.settled,[2,6,4]);
+  assert.deepEqual(run.stops,[[true,false,false],[true,false,true],[true,true,true]]);
   for(let i=0;i<3;i++){
    let changes=0,wrapped=false;
    for(let n=1;n<run.samples.length;n++){

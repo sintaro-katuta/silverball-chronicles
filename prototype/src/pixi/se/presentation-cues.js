@@ -41,20 +41,27 @@ export function reachAudioCues(p,{pushAvailable=false}={}){
 // A scope is a presentation object or immutable admission id. Muting, pause and
 // late frames consume boundaries, preventing replay/backlogs on resume or seek.
 export function createCueTracker(emit,stop){
- let scope=null,seen=new Set(),oldDraw=null,oldHolds=new Map(),oldRush=null,oldRemaining=null,oldRound=null,oldPrelude=null,oldGuide=null,oldWin=null,oldPush=null,pendingConfirmation=false,oldResolved=null,bonusKey=null,preludeSeen=new Set();
+ let scope=null,seen=new Set(),oldDraw=null,reelStops=new Set(),oldHolds=new Map(),oldRush=null,oldRemaining=null,oldRound=null,oldPrelude=null,oldGuide=null,oldWin=null,oldPush=null,pendingConfirmation=false,oldResolved=null,bonusKey=null,preludeSeen=new Set();
  const once=(id,name,allowed)=>{if(seen.has(id))return;seen.add(id);if(allowed){if(name==='silence')stop();else emit(name);}};
  return {
-  reset(){scope=null;seen.clear();oldDraw=oldRush=oldRemaining=oldRound=oldPrelude=oldGuide=oldWin=oldPush=oldResolved=null;oldHolds.clear();bonusKey=null;preludeSeen.clear();pendingConfirmation=false;stop();},
+  reset(){scope=null;seen.clear();reelStops.clear();oldDraw=oldRush=oldRemaining=oldRound=oldPrelude=oldGuide=oldWin=oldPush=oldResolved=null;oldHolds.clear();bonusKey=null;preludeSeen.clear();pendingConfirmation=false;stop();},
   sync(g,{paused=false,enabled=true,rounds=null,pushAvailable=false}={}){
    if(!g)return;const allowed=enabled&&!paused;if(!allowed)stop();
    const current=g.presentation??g.spinResult?.drawId??null;
    if(scope!==current){scope=current;seen=new Set();if(current!==null)pendingConfirmation=false;}
    const timed=(list,t)=>{for(const c of list)if(t>=c.at)once(c.id,c.name,allowed&&t-c.at<.24);};
+   const reelStop=(name,age)=>{if(age<0||reelStops.has(name))return;reelStops.add(name);if(allowed&&age<.24)emit(name);};
    if(g.spinActive&&g.spinResult){
-    const id=g.spinResult.drawId;if(id!==oldDraw){if(allowed)emit('spin');oldDraw=id;}
+    const id=g.spinResult.drawId;if(id!==oldDraw){reelStops.clear();if(allowed)emit('spin');oldDraw=id;}
     const b=g.spinResult.predictionPlan?.beforeCue;
     if(b){const steps=b.steps?.length??1;timed(Array.from({length:steps},(_,i)=>cue(b.start+(b.end-b.start)*i/steps,b.family,'before:'+i)),g.drawTimer);}
-    timed([cue(g.drawTempo,'stopLeft'),cue(g.drawTempo+g.reelStopGap,'stopRight')],g.drawTimer);
+    reelStop('stopLeft',g.drawTimer-g.drawTempo);reelStop('stopRight',g.drawTimer-g.drawTempo-g.reelStopGap);
+   }
+   // The game hands off at the second stop before the next audio sync. Keep
+   // this boundary across the new presentation scope, without replay on seek.
+   if(!g.spinActive&&g.spinResult?.drawId===oldDraw){
+    const age=g.presentation?.time??Math.max(0,(g.time??0)-(g.lastResolvedDraw?.consumedAt??g.time??0));
+    reelStop('stopRight',age);
    }
    const holds=g.acceptedDraws??[],nextHolds=new Map();
    for(const record of holds){const tier=queuedHoldPrediction(record,g);nextHolds.set(record.id,tier);
