@@ -1,0 +1,70 @@
+{
+  "complete": true,
+  "planned": [
+    "loss-continuous-p35"
+  ],
+  "results": [
+    {
+      "id": "loss-continuous-p35",
+      "policy": "continuous",
+      "phase": 0.35,
+      "random": "all-loss",
+      "startingBalls": 400,
+      "time": 316.32499999987664,
+      "lastShotAt": 303.34999999988844,
+      "stockZeroAt": 303.35833333322176,
+      "stock": 0,
+      "sessionPhase": "result",
+      "endReason": "lost",
+      "firstBonus": null,
+      "shots": 506,
+      "hesoEntries": 84,
+      "hesoRate": 0.16600790513833993,
+      "accepted": 60,
+      "rejected": 24,
+      "overflowRate": 0.2857142857142857,
+      "spinsStarted": 60,
+      "spinsResolved": 60,
+      "rawDrawCounter": 60,
+      "unresolved": 0,
+      "maxHold": 4,
+      "holdFullSeconds": 70.15833333333524,
+      "reachSeconds": 75.0083333333391,
+      "stoppedSeconds": 0,
+      "maxNoEntrySeconds": 14.166666666665865,
+      "maxQueueWaitSeconds": 69.94166666660306,
+      "meanQueueWaitSeconds": 8.545694444437482,
+      "payout": 106,
+      "accounting": {
+        "basePrize": 106,
+        "gamePrize": 0,
+        "payout": 106,
+        "spent": 506,
+        "returned": 0,
+        "supply": 0,
+        "debugAdjustment": 0,
+        "extraBalls": 0,
+        "machineNet": -400,
+        "playNet": -400,
+        "balance": -400,
+        "reconciled": true
+      },
+      "counts": {
+        "fuzu": 2,
+        "normal": 4,
+        "start": 84,
+        "rush": 0,
+        "bonus": 0,
+        "out": 416,
+        "returned": 0
+      },
+      "remaining": [],
+      "checks": {
+        "ledger": true,
+        "physical": true,
+        "entries": true,
+        "draws": true
+      }
+    }
+  ]
+}

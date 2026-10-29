@@ -1,4 +1,5 @@
 import test from 'node:test';
+import {readFileSync} from 'node:fs';
 import assert from 'node:assert/strict';
 import {readFile,mkdir,writeFile,mkdtemp,rm} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
@@ -61,4 +62,14 @@ test('checkpoint absence does not download; ambiguous artifacts, failed download
  await assert.rejects(restoreCheckpoint(async()=>({artifacts:[f.artifact,f.artifact]}),repo,f.runId,s.context,io),/Ambiguous/);
  let reads=0;await assert.rejects(restoreCheckpoint(f.api,repo,f.runId,s.context,{...io,run:async()=>{throw new Error('download failed');},read:async()=>{reads++;return '{}';}}),/download failed/);assert.equal(reads,0);
  await assert.rejects(restoreCheckpoint(f.api,repo,f.runId,s.context,{...io,read:async()=>'{'}),SyntaxError);
+});
+
+test('same-repository fix PR runs verification at the current package version without qualifying for release CD',()=>{
+ const e=event();e.action='opened';e.pull_request.head.ref='fix/s08-board-consistency';e.pull_request.body='Physical board correction';e.pull_request.merged=false;
+ assert.deepEqual(validatePR(e,{packageVersion:version}),{kind:'fix',version});
+ assert.throws(()=>validatePR(e));assert.throws(()=>validatePR(e,{packageVersion:'invalid'}));
+ const fork=structuredClone(e);fork.pull_request.head.repo.full_name='foreign/repo';assert.throws(()=>validatePR(fork,{packageVersion:version}));
+ e.action='closed';e.pull_request.merged=true;assert.throws(()=>validateCD({...inputs(),event:e}));
+ e.pull_request.head.ref='release/'+version;assert.throws(()=>validatePR(e,{packageVersion:version}),'release summary stays mandatory');
+ const workflow=JSON.parse(readFileSync(new URL('../../.github/workflows/pr-ci.yml',import.meta.url),'utf8'));for(const [name,job] of Object.entries(workflow.jobs)){assert.match(job.if,/startsWith\(github.head_ref, 'fix\/'\)/,name);}
 });

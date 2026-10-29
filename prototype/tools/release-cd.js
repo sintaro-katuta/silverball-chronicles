@@ -17,11 +17,12 @@ export function parseReleaseSummary(body,version){
  for(const key of ['improvements','fixes','knownLimitations'])if(!Array.isArray(summary[key])||!summary[key].every(s=>typeof s==='string'&&s.trim()&&s.length<=1000))throw new Error(`Invalid release summary ${key}`);
  if(!summary.improvements.length&&!summary.fixes.length)throw new Error('Release summary must describe user-facing changes');return summary;
 }
-export function validatePR(event){const pr=event.pull_request;if(!pr||pr.head?.repo?.full_name!==event.repository?.full_name)throw new Error('PR must originate in this repository');
+export function validatePR(event,{packageVersion}={}){const pr=event.pull_request;if(!pr||pr.head?.repo?.full_name!==event.repository?.full_name)throw new Error('PR must originate in this repository');
  const base=pr.base?.ref,head=pr.head?.ref;
+ if(base==='main'&&/^fix\/[A-Za-z0-9][A-Za-z0-9._/-]*$/.test(head??'')&&versionPattern.test(packageVersion??''))return {kind:'fix',version:packageVersion};
  if(head?.startsWith('sprint/')&&head.length>7&&base?.startsWith('release/')&&versionPattern.test(base.slice(8)))return {kind:'sprint',version:base.slice(8)};
  if(base==='main'&&head?.startsWith('release/')&&versionPattern.test(head.slice(8)))return {kind:'release',version:head.slice(8),summary:parseReleaseSummary(pr.body,head.slice(8))};
- throw new Error('PR must be sprint/* → release/<version> or release/<version> → main');
+ throw new Error('PR must be sprint/* → release/<version>, release/<version> → main, or a same-repository fix/* → main with a package version');
 }
 export function validateCD({enabled,event,eventName='pull_request',repository,checkoutSHA,packageVersion,mainSHA,tagSHA,release,latestRelease}){
  if(enabled!=='true')throw new Error('Production CD is disabled');
@@ -124,7 +125,7 @@ export async function restoreCheckpoint(api,repo,runId,context,{event,eventName=
 }
 function publicEnv(env){const clean={...env};for(const key of ['CLOUDFLARE_API_TOKEN','CLOUDFLARE_ACCOUNT_ID','GH_TOKEN','GITHUB_TOKEN'])delete clean[key];return clean;}
 export async function mainCLI(action,env=process.env){
- if(action==='check-pr'){const event=JSON.parse(await readFile(env.GITHUB_EVENT_PATH,'utf8')),info=validatePR(event),version=JSON.parse(await readFile(join(projectRoot,'prototype/package.json'),'utf8')).version;
+ if(action==='check-pr'){const event=JSON.parse(await readFile(env.GITHUB_EVENT_PATH,'utf8')),version=JSON.parse(await readFile(join(projectRoot,'prototype/package.json'),'utf8')).version,info=validatePR(event,{packageVersion:version});
   if(info.version!==version)throw new Error('Release PR version does not match package version');console.log(`Validated ${info.kind} PR into version ${info.version}`);return;}
  if(action!=='execute')throw new Error('Usage: release-cd.js check-pr | execute');
  if(env.ENABLE_PRODUCTION_CD!=='true')throw new Error('Production CD is disabled');

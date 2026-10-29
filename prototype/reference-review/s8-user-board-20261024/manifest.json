@@ -1,0 +1,30 @@
+{
+  "input": "s8-user-guides-20261024/user-layout.json",
+  "guideVersion": "2026-10-24-user-081552",
+  "scope": "Construct visible mechanical surfaces from authored guide paths, preserving all physics and game settings.",
+  "sources": {
+    "prototype/src/pixi/source-guide-trace.js": "b10fea62f4c5c44aa5507eec4485a253cbf945e7c4a49cfbb6d2d740d4b99b20",
+    "prototype/src/pixi/source-board-surfaces.js": "23f83e450600327188eac17f3cde0f03d32b7af8eadb8c057eeddd40bc6826d7",
+    "prototype/src/pixi/board-runtime.js": "9920eee03cf1f2dc7333538a4a036871fe4e7b65783d3cd5bfc82d883bc7bd3a",
+    "prototype/src/pixi/board-silhouette.js": "1ec9c7f21f1204a8571364fde8326330467b3a1ac5dee91dcbca8a89cb56f235",
+    "prototype/src/pixi/board-trim.js": "958e537f1afc43a0439e057f7e61ddd33f63fa24940c03d0b613bd51bbb791ad",
+    "prototype/src/pixi/cabinet-decor.js": "b8d6838ab867cade90cefce475559ad47ac55e84119b69713a9dcef69e6dcc2f",
+    "prototype/src/pixi/cabinet-foreground.js": "4bc98b38e41c0e6d9154d45a2e2a497472cf86ef27a49f18563634ad96fde9e2",
+    "prototype/src/pixi/lcd-view.js": "78faa17a79fe3317d57c7ac12f4c1b390e08d8117ec5ca851738d2954c1ca7c1",
+    "prototype/src/pixi/lunar-relief-art.js": "43e72c987801c8123a3e95b3959ee6e8fe9c3d6831c4e1c2f21fbd62188196c4"
+  },
+  "tests": {
+    "pass": 20,
+    "fail": 0
+  },
+  "build": true,
+  "previewsBuild": true,
+  "visualChecks": [
+    "direct board",
+    "whole cabinet window",
+    "pause/resume",
+    "390x844 browser",
+    "main review session"
+  ],
+  "knownIncomplete": "Existing launcher stall at two shots; not a full natural-gameplay acceptance."
+}

@@ -1,0 +1,89 @@
+{
+  "phase": 0,
+  "drainSeconds": 45,
+  "results": [
+    {
+      "mode": "normal",
+      "shots": 250,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 38,
+        "rush": 0,
+        "bonus": 0,
+        "out": 212,
+        "returned": 0
+      },
+      "remaining": []
+    },
+    {
+      "mode": "rush",
+      "shots": 50,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 40,
+        "bonus": 0,
+        "out": 5,
+        "returned": 0
+      },
+      "remaining": [
+        {
+          "id": 7,
+          "source": [
+            640.349915421695,
+            851.0332000651922
+          ],
+          "speed": 0.11423649172713057
+        },
+        {
+          "id": 9,
+          "source": [
+            644.7,
+            839.9116308132006
+          ],
+          "speed": 3.052614665019651
+        },
+        {
+          "id": 10,
+          "source": [
+            633.7953298842358,
+            834.9714974131768
+          ],
+          "speed": 2.747837854500687
+        },
+        {
+          "id": 21,
+          "source": [
+            644.1146571929411,
+            827.9273964786164
+          ],
+          "speed": 2.374843371408195
+        },
+        {
+          "id": 24,
+          "source": [
+            633.1716145218384,
+            822.9964647981733
+          ],
+          "speed": 1.8417187698585769
+        }
+      ]
+    },
+    {
+      "mode": "bonus",
+      "shots": 50,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 50,
+        "returned": 0
+      },
+      "remaining": []
+    }
+  ]
+}

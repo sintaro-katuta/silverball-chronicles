@@ -1,0 +1,40 @@
+✖ production shots without receiving guides complete W normal spins with exact accounting (33277.067459ms)
+✔ real mouth crossings capture lateral entries but do not capture outside the visible rims (14.838417ms)
+✔ open route removes the title enclosure, preserves nails, and uses the existing LCD wall as its inner rail (6.961875ms)
+✔ title lettering is omitted while the rest of the cabinet art still draws (0.553083ms)
+✔ a real falling ball can enter behind the removed title and discharge into the inlet pins (64.265125ms)
+✔ natural launches enter the former title region and the same ball IDs exit downstream (2805.491625ms)
+✔ visible title outline and side rails share contacts, keep all individual nails uncovered and no road rail (5.164625ms)
+✔ front side-rail contact keeps a ball outside the title while rear launch balls stay separate (1.248625ms)
+✔ continuous natural launches cannot enter the title and leave the side rails for the pin area (4390.136166ms)
+✔ light rotor responds strongly to a real blade impulse and coasts longer without changing geometry (6.700042ms)
+✔ soft road impact reduces upward rebound through the same normal and retains tangential motion (0.687666ms)
+✔ launch calibration belongs to normal mode and restores right speed on every transition (1.743875ms)
+✔ stepped guard faces are anchored to the actual LCD contact outline and leave physics untouched (1.207958ms)
+✔ visible metal guards support a large ball smoothly and preserve two passable spill gaps (35.385541ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 13
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33373.604
+
+✖ failing tests:
+
+test at prototype/tests/heso-calibration.test.js:10:1
+✖ production shots without receiving guides complete W normal spins with exact accounting (33277.067459ms)
+  AssertionError [ERR_ASSERTION]: only 0 natural admissions
+      at TestContext.<anonymous> (file:///private/tmp/silverball-s08-board-consistency-20261020/prototype/tests/heso-calibration.test.js:19:9)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

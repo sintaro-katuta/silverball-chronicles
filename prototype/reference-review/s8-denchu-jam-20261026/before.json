@@ -1,0 +1,455 @@
+{
+  "target": [
+    620.9,
+    823.5
+  ],
+  "balls": [
+    {
+      "gold": false,
+      "large": false,
+      "hits": 1,
+      "extra": false,
+      "after": false,
+      "id": 7,
+      "x": 306.1749577442508,
+      "y": 545.5166000033684,
+      "vx": 0.03775716905109616,
+      "vy": -0.10799154618044926,
+      "r": 3,
+      "age": 71.31666666662366,
+      "power": 0.85,
+      "angle": 0,
+      "contactCount": 86214,
+      "observedSide": "left",
+      "contactRoles": [],
+      "nonReturnValveCrossed": true,
+      "launchExitCrossed": true,
+      "lastContact": "right-channel-traced-lower",
+      "leftLaunchPlane": true,
+      "prediction": null
+    },
+    {
+      "gold": false,
+      "large": false,
+      "hits": 3,
+      "extra": false,
+      "after": false,
+      "id": 9,
+      "x": 308.35,
+      "y": 539.9558079885995,
+      "vx": -0.09696756441508558,
+      "vy": 3.0552963315956516,
+      "r": 3,
+      "age": 70.11666666662417,
+      "power": 0.85,
+      "angle": 0,
+      "contactCount": 238,
+      "observedSide": "left",
+      "contactRoles": [],
+      "nonReturnValveCrossed": true,
+      "launchExitCrossed": true,
+      "lastContact": "right-channel-traced-lower",
+      "leftLaunchPlane": true,
+      "prediction": null
+    },
+    {
+      "gold": false,
+      "large": false,
+      "hits": 3,
+      "extra": false,
+      "after": false,
+      "id": 10,
+      "x": 302.8977696599484,
+      "y": 537.4858272449613,
+      "vx": 2.229233227714821,
+      "vy": 1.6136862082552996,
+      "r": 3,
+      "age": 69.51666666662443,
+      "power": 0.85,
+      "angle": 0,
+      "contactCount": 41869,
+      "observedSide": "left",
+      "contactRoles": [],
+      "nonReturnValveCrossed": true,
+      "launchExitCrossed": true,
+      "lastContact": "right-channel-7-2",
+      "leftLaunchPlane": true,
+      "prediction": null
+    },
+    {
+      "gold": false,
+      "large": false,
+      "hits": 3,
+      "extra": false,
+      "after": false,
+      "id": 21,
+      "x": 308.0576291832087,
+      "y": 533.9636795448829,
+      "vx": 0.27278060040396823,
+      "vy": 2.350513812057099,
+      "r": 3,
+      "age": 62.916666666627044,
+      "power": 0.85,
+      "angle": 0,
+      "contactCount": 261,
+      "observedSide": "left",
+      "contactRoles": [],
+      "nonReturnValveCrossed": true,
+      "launchExitCrossed": true,
+      "lastContact": "right-channel-traced-lower",
+      "leftLaunchPlane": true,
+      "prediction": null
+    },
+    {
+      "gold": false,
+      "large": false,
+      "hits": 1578,
+      "extra": false,
+      "after": false,
+      "id": 24,
+      "x": 302.58539206304494,
+      "y": 531.4983911815266,
+      "vx": 0.042552907773898016,
+      "vy": 1.842781991403985,
+      "r": 3,
+      "age": 61.116666666627744,
+      "power": 0.85,
+      "angle": 0,
+      "contactCount": 1825,
+      "observedSide": "left",
+      "contactRoles": [],
+      "nonReturnValveCrossed": true,
+      "launchExitCrossed": true,
+      "lastContact": "denchu-guide",
+      "leftLaunchPlane": true,
+      "prediction": null
+    }
+  ],
+  "contacts": [
+    {
+      "count": 600,
+      "ball": 7,
+      "part": {
+        "kind": "wall",
+        "a": {
+          "x": 303.5,
+          "y": 548
+        },
+        "b": {
+          "x": 272.5,
+          "y": 548
+        },
+        "r": 0.65,
+        "active": true,
+        "denchuShelf": true,
+        "material": "resin",
+        "role": "right-channel-5-1",
+        "restitution": 0.04
+      },
+      "source": [
+        640.3500410942981,
+        851.0366739459826
+      ],
+      "velocityBefore": [
+        0.03770178094081611,
+        1.0421642371195274
+      ],
+      "velocityAfter": [
+        0.5570323505326665,
+        0.5603722468766756
+      ]
+    },
+    {
+      "count": 664,
+      "ball": 7,
+      "part": {
+        "kind": "wall",
+        "a": {
+          "x": 308.5,
+          "y": 548
+        },
+        "b": {
+          "x": 306.5,
+          "y": 549.75
+        },
+        "r": 0.4,
+        "material": "resin",
+        "role": "right-channel-traced-lower",
+        "restitution": 0.04,
+        "sourceGuideId": "right-lower-guide",
+        "sourceGuideSegment": 10
+      },
+      "source": [
+        640.351670984599,
+        851.035161868439
+      ],
+      "velocityBefore": [
+        0.5570323505326665,
+        0.5603722468766756
+      ],
+      "velocityAfter": [
+        0.017010684680962895,
+        -0.05679537123955314
+      ]
+    },
+    {
+      "count": 672,
+      "ball": 10,
+      "part": {
+        "kind": "wall",
+        "a": {
+          "x": 297.5,
+          "y": 538
+        },
+        "b": {
+          "x": 301.5,
+          "y": 541
+        },
+        "r": 0.65,
+        "active": true,
+        "denchuShelf": false,
+        "material": "resin",
+        "role": "right-channel-7-2",
+        "restitution": 0.04
+      },
+      "source": [
+        633.8027494304015,
+        834.9807015968433
+      ],
+      "velocityBefore": [
+        2.2258638497120007,
+        2.76125509996779
+      ],
+      "velocityAfter": [
+        2.7709189702837396,
+        2.0345149392054807
+      ]
+    },
+    {
+      "count": 300,
+      "ball": 7,
+      "part": {
+        "kind": "ball-pair",
+        "id": 9
+      },
+      "source": [
+        640.3499375017308,
+        851.033180745161
+      ],
+      "velocityBefore": [
+        0.017010684680962895,
+        -0.05679537123955314
+      ],
+      "velocityAfter": [
+        -1.1151297810351877,
+        2.8342517357779755
+      ]
+    },
+    {
+      "count": 300,
+      "ball": 9,
+      "part": {
+        "kind": "ball-pair",
+        "id": 10
+      },
+      "source": [
+        644.7126466220611,
+        839.8925158161749
+      ],
+      "velocityBefore": [
+        1.0353325450119166,
+        1.3100321314785743
+      ],
+      "velocityAfter": [
+        2.363751840479032,
+        1.908487683878839
+      ]
+    },
+    {
+      "count": 300,
+      "ball": 9,
+      "part": {
+        "kind": "ball-pair",
+        "id": 21
+      },
+      "source": [
+        644.7290723811104,
+        839.8999156535147
+      ],
+      "velocityBefore": [
+        2.363751840479032,
+        1.908487683878839
+      ],
+      "velocityAfter": [
+        2.4224411748087795,
+        3.0535069413928104
+      ]
+    },
+    {
+      "count": 300,
+      "ball": 10,
+      "part": {
+        "kind": "ball-pair",
+        "id": 24
+      },
+      "source": [
+        633.7880706428924,
+        834.9709724641166
+      ],
+      "velocityBefore": [
+        1.4424996748166243,
+        1.436059386805216
+      ],
+      "velocityAfter": [
+        1.501446539683561,
+        2.581282205653342
+      ]
+    },
+    {
+      "count": 300,
+      "ball": 7,
+      "part": {
+        "kind": "wall",
+        "a": {
+          "x": 310.5,
+          "y": 546.5
+        },
+        "b": {
+          "x": 308.5,
+          "y": 548
+        },
+        "r": 0.4,
+        "material": "resin",
+        "role": "right-channel-traced-lower",
+        "restitution": 0.04,
+        "sourceGuideId": "right-lower-guide",
+        "sourceGuideSegment": 9
+      },
+      "source": [
+        640.360425142295,
+        851.0446148188207
+      ],
+      "velocityBefore": [
+        0.9794771067452728,
+        0.8979157817122956
+      ],
+      "velocityAfter": [
+        0.0377353301088873,
+        -0.1079292337402118
+      ]
+    },
+    {
+      "count": 300,
+      "ball": 9,
+      "part": {
+        "kind": "wall",
+        "a": {
+          "x": 311.75,
+          "y": 529.75
+        },
+        "b": {
+          "x": 311.75,
+          "y": 544.5
+        },
+        "r": 0.4,
+        "material": "resin",
+        "role": "right-channel-traced-lower",
+        "restitution": 0.04,
+        "sourceGuideId": "right-lower-guide",
+        "sourceGuideSegment": 7
+      },
+      "source": [
+        644.7296716401088,
+        839.9116070979853
+      ],
+      "velocityBefore": [
+        2.4224411748087795,
+        3.0535069413928104
+      ],
+      "velocityAfter": [
+        -0.09689764699235148,
+        3.0535069413928104
+      ]
+    },
+    {
+      "count": 14,
+      "ball": 24,
+      "part": {
+        "kind": "pin",
+        "id": 96,
+        "role": "denchu-guide",
+        "x": 299.75,
+        "y": 533,
+        "r": 0.2,
+        "restitution": 0.46
+      },
+      "source": [
+        633.1555834305677,
+        823.0079470072469
+      ],
+      "velocityBefore": [
+        -0.5884604242086767,
+        3.0303416726535737
+      ],
+      "velocityAfter": [
+        1.911603841017321,
+        1.707697447052681
+      ]
+    },
+    {
+      "count": 14,
+      "ball": 21,
+      "part": {
+        "kind": "ball-pair",
+        "id": 24
+      },
+      "source": [
+        644.1030136377766,
+        827.9276084187441
+      ],
+      "velocityBefore": [
+        -0.545636450285965,
+        2.305035235223886
+      ],
+      "velocityAfter": [
+        0.7729521945553492,
+        2.899708082091655
+      ]
+    }
+  ],
+  "pins": [
+    {
+      "id": 94,
+      "role": "denchu-guide",
+      "x": 293.25,
+      "y": 523.25,
+      "r": 0.2,
+      "restitution": 0.46
+    },
+    {
+      "id": 95,
+      "role": "denchu-guide",
+      "x": 303.75,
+      "y": 523.25,
+      "r": 0.2,
+      "restitution": 0.46
+    },
+    {
+      "id": 96,
+      "role": "denchu-guide",
+      "x": 299.75,
+      "y": 533,
+      "r": 0.2,
+      "restitution": 0.46
+    }
+  ],
+  "counts": {
+    "fuzu": 0,
+    "normal": 0,
+    "start": 0,
+    "rush": 40,
+    "bonus": 0,
+    "out": 5,
+    "returned": 0
+  }
+}

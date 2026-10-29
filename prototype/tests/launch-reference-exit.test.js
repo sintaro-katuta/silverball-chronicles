@@ -28,10 +28,10 @@ const pairTrial=(profile,fronts)=>{
  const m=make(profile),p=m.flow.physics;p.advanceBall=Physics.prototype.advanceBall;p.colliders=[];p.pins=[];p.pockets=[];p.mechanisms=[];p.gate.active=false;p.rightChucker.scoop.active=false;p.rightChucker.cover.active=false;
  const a=p.spawn({extra:true},.20),b=p.spawn({extra:true},.20);Object.assign(a,{x:200,y:350,vx:10,vy:0,leftLaunchPlane:fronts[0],launchExitCrossed:false});Object.assign(b,{x:203,y:350,vx:-10,vy:0,leftLaunchPlane:fronts[1],launchExitCrossed:false});p.step(1/600,m.flow.game);return {contacts:p.metrics.ballContacts,balls:p.balls.map(({x,y,vx,vy})=>({x,y,vx,vy}))};
 };
-test('reference-exit excludes cross-plane pair only, preserves original same-plane impulse and legacy behavior',()=>{
+test('separate launch planes exclude cross-plane pairs with either rail profile, preserving same-plane impulse',()=>{
  const cross=pairTrial('reference-exit',[true,false]);assert.equal(cross.contacts,0);assert.equal(cross.balls[0].vx,10);assert.equal(cross.balls[1].vx,-10);
  for(const fronts of [[true,true],[false,false]]){const reference=pairTrial('reference-exit',fronts),legacy=pairTrial('legacy',fronts);assert.ok(reference.contacts>0);assert.deepEqual(reference,legacy);assert.ok(reference.balls[0].vx<0);assert.ok(reference.balls[1].vx>0);}
- const oldCross=pairTrial('legacy',[true,false]);assert.ok(oldCross.contacts>0);assert.deepEqual(oldCross,pairTrial('legacy',[true,true]));
+ const oldCross=pairTrial('legacy',[true,false]);assert.equal(oldCross.contacts,0);assert.deepEqual(oldCross,cross);
 });
 
 test('retained clipped rail has no invented end cap; continuous outside side and legacy cap remain',async()=>{
@@ -43,9 +43,9 @@ test('retained clipped rail has no invented end cap; continuous outside side and
  const p=make('reference-exit').flow.physics;const cuts=p.colliders.filter(c=>c.excludeCapA||c.excludeCapB);assert.ok(cuts.length>=2);for(const c of cuts)assert.ok(c.excludedSurfaceYRange);
 });
 
-test('reference launch hold ignores front playfield overlap but retains actual rear barrel obstruction and legacy rule',()=>{
+test('separate launch planes ignore front playfield overlap but retain actual rear barrel obstruction',()=>{
  for(const profile of ['reference-exit','legacy']){
-  const p=make(profile).flow.physics;p.balls=[{id:1,x:34.017,y:316.974,r:1.8,vx:-3.77,vy:8.66,dead:false,leftLaunchPlane:true}];assert.equal(p.canLaunch(),profile==='reference-exit');
+  const p=make(profile).flow.physics;p.balls=[{id:1,x:34.017,y:316.974,r:1.8,vx:-3.77,vy:8.66,dead:false,leftLaunchPlane:true}];assert.equal(p.canLaunch(),true);
   p.balls[0].leftLaunchPlane=false;assert.equal(p.canLaunch(),false);
   p.balls[0]={...p.balls[0],x:p.launcher.origin.x,y:p.launcher.origin.y,leftLaunchPlane:false,vy:-20};assert.equal(p.canLaunch(),false);
  }

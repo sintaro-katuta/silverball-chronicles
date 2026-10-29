@@ -1,0 +1,52 @@
+{
+  "configs": [
+    {
+      "id": "loss-continuous-p0",
+      "policy": "continuous",
+      "phase": 0,
+      "random": "all-loss"
+    },
+    {
+      "id": "loss-continuous-p35",
+      "policy": "continuous",
+      "phase": 0.35,
+      "random": "all-loss"
+    },
+    {
+      "id": "loss-stop-p0",
+      "policy": "visible-stop",
+      "phase": 0,
+      "random": "all-loss"
+    },
+    {
+      "id": "loss-stop-p35",
+      "policy": "visible-stop",
+      "phase": 0.35,
+      "random": "all-loss"
+    },
+    {
+      "id": "natural-101",
+      "policy": "continuous",
+      "phase": 0,
+      "random": 101
+    },
+    {
+      "id": "natural-202",
+      "policy": "continuous",
+      "phase": 0.175,
+      "random": 202
+    },
+    {
+      "id": "natural-303",
+      "policy": "continuous",
+      "phase": 0.35,
+      "random": 303
+    }
+  ],
+  "startingBalls": 400,
+  "normalPower": 0.18,
+  "launchInterval": 0.6,
+  "stopRule": "stop during visible presentation or at four held draws; resume when no presentation and holds<=2; in-flight balls still arrive",
+  "end": "actual lost result, first normal bonus, or 30 seconds of idle zero-stock blocked by stationary physical balls; 1800s cap",
+  "scope": "isolated SessionGame + actual production board + presentation bridge, no wallet/save; all-loss fixtures isolate normal play and preserve the presentation selector"
+}

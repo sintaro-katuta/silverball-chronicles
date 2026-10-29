@@ -1,0 +1,28 @@
+✔ persistent views reuse introduction poses and preserve adopted board pose (1.631458ms)
+✔ introduction visits whole, board, LCD and returns exactly to adopted play view (0.141666ms)
+✔ skip and reduced motion restore adopted camera with no residual outer frame (0.08425ms)
+✔ LCD camera contains every corner with padding and clamps long frame gaps (0.0855ms)
+✔ review close-ups contain both specified left zones without changing the board view (0.084792ms)
+✔ right-road review camera contains the annotated electric decoration and road pins (0.056125ms)
+✔ right-only review cameras contain the upper route, attacker and electric starter without changing board pose (0.092ms)
+✔ production preserves diagram centres except the five explicitly approved residual-fix centres (270.286292ms)
+✔ fresh profile and factory clones prevent cross-session mutation; reset reconstruction preserves layout and normal/right launch strengths (104.739542ms)
+✔ app uses one profile and power constant for initial mount and dock, retaining slider range and reset option forwarding (0.548917ms)
+✔ pin and guide alignment leaves all other settings at the user baseline (0.126583ms)
+✔ right trial anchors lowest pin and preserves all road pair distances, all other centres and all source guides (40.877417ms)
+✔ adopted production physics matches the reviewed in-memory overlay exactly (119.770208ms)
+✔ specified right upper nail is a visible-head contact in every playing mode (46.114666ms)
+✔ decorative connection retains authored endpoints while rounded art remains visible (42.956083ms)
+✔ the guessed entrance bridge and terminal stub no longer trap a full-size ball (34.708459ms)
+✔ upper character contact follows the rendered solid and leaves the rear launch plane clear (38.886917ms)
+✔ user-specified upper slope is solid while the lower apron contour is decoration (21.644917ms)
+✔ road contacts match the existing visible head size without moving pins or changing ball diameter (25.30425ms)
+✔ head contact preserves both authored road spill gaps for the unchanged ball diameter (19.438417ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 453.993625

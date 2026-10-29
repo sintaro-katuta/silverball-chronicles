@@ -1,0 +1,40 @@
+[
+  {
+    "mode": "normal",
+    "phase": 0,
+    "pinContactFriction": 0.5,
+    "roadRestitution": 0.12,
+    "leftPinRestitution": null,
+    "pinNormalResponse": {
+      "lowRestitution": 0.9,
+      "lowSpeed": 20,
+      "highSpeed": 50
+    },
+    "pinTangentialRestitution": 1,
+    "spawned": 100,
+    "entered": 100,
+    "counts": {
+      "fuzu": 0,
+      "normal": 3,
+      "start": 7,
+      "rush": 0,
+      "bonus": 0,
+      "out": 90,
+      "returned": 0
+    },
+    "maxRoadBacktrackSourcePx": 3.283517209954965,
+    "maxRoadRiseSourcePx": 11.334969525793667,
+    "longestLowSpeedSeconds": {
+      "road": 5.066666666666708,
+      "entry": 0.025
+    },
+    "longestStationarySeconds": {
+      "road": 2.1083333333333285,
+      "entry": 0
+    },
+    "roadRemaining": [],
+    "entryRemaining": [],
+    "remaining": [],
+    "reconciled": true
+  }
+]

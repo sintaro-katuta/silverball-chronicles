@@ -1,0 +1,49 @@
+{
+  "candidate": false,
+  "phase": 0.175,
+  "shots": 250,
+  "stage": "comparison",
+  "spawned": 250,
+  "counts": {
+    "fuzu": 0,
+    "normal": 1,
+    "start": 43,
+    "rush": 0,
+    "bonus": 0,
+    "out": 205,
+    "returned": 0
+  },
+  "remaining": [
+    {
+      "id": 249,
+      "x": 180.20506343112493,
+      "y": 342.33130818602194,
+      "speed": 0.48597235311280285,
+      "onStage": false
+    }
+  ],
+  "lcdViolations": 0,
+  "electricViolations": 0,
+  "maxRest": 42.76666666666488,
+  "stalls": [
+    22,
+    70,
+    81,
+    124,
+    134,
+    141,
+    185,
+    191,
+    206,
+    212,
+    220,
+    226,
+    249
+  ],
+  "stageMetrics": {
+    "entered": 29,
+    "exited": 26,
+    "spilled": 3
+  },
+  "reconciled": true
+}

@@ -1,13 +1,13 @@
 import {pixelSurface,painter} from './pixel-primitives.js';
-import {traceBoardSilhouette,traceReferenceSilhouette,referenceDecorMask} from './board-silhouette.js';
-export function createCabinetDecor({referenceRails=false,railShape=null}={}){return pixelSurface(1260,1680,c=>{
- const d=painter(c);
+import {traceBoardSilhouette,traceReferenceSilhouette,referenceDecorMask,traceSourceBoardSilhouette} from './board-silhouette.js';
+export function createCabinetDecor({referenceRails=false,railShape=null,sourceBoard=null}={}){return pixelSurface(1260,1680,c=>{
+ const d=painter(c),outline=path=>sourceBoard?traceSourceBoardSilhouette(path,sourceBoard,railShape):traceBoardSilhouette(path);
  c.save();c.scale(3,3);c.translate(0,-130);
- c.beginPath();traceBoardSilhouette(c);
+ c.beginPath();outline(c);
  const face=c.createLinearGradient(22,180,394,600);
  face.addColorStop(0,'#1c354b');face.addColorStop(.55,'#162b3f');face.addColorStop(1,'#102335');
  c.fillStyle=face;c.fill();c.restore();
- c.save();c.scale(3,3);c.translate(0,-130);c.beginPath();traceBoardSilhouette(c);c.clip();c.translate(0,130);c.scale(1/3,1/3);
+ c.save();c.scale(3,3);c.translate(0,-130);c.beginPath();outline(c);c.clip();c.translate(0,130);c.scale(1/3,1/3);
  for(let i=0;i<16;i++)d.line(640,1410,30+i*80,75,'#1b334c',1);
  for(const [x,y,h] of [[80,1130,170],[950,1020,220],[840,1230,100]]){d.rect(x,y,45,h,'#203a50');d.poly([[x-4,y],[x+22,y-32],[x+49,y]],'#203a50');}
  c.restore();
@@ -17,7 +17,7 @@ export function createCabinetDecor({referenceRails=false,railShape=null}={}){ret
  const drawInset=()=>{
   c.save();c.translate(208,389);c.scale(.975,.978);c.translate(-208,-389);
   for(const [width,color]of[[8,'#071321'],[6,'#829aaa'],[4.5,'#254b72'],[1,'#d6bd7b']]){
-   c.beginPath();traceBoardSilhouette(c);c.lineWidth=width;c.strokeStyle=color;c.stroke();
+   c.beginPath();outline(c);c.lineWidth=width;c.strokeStyle=color;c.stroke();
   }c.restore();
  };
  if(referenceRails&&railShape){

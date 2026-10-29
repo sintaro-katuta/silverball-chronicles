@@ -1,0 +1,16 @@
+✔ saved work round-trips edits, visibility, completion, curve mode and deletion mapping (3.450125ms)
+✔ invalid imports reject non-finite/out-of-image coordinates, duplicate IDs, wrong references and excessive data without mutating work (0.383916ms)
+✔ a gesture commits once; undo, redo and new branches preserve complete independent documents (0.151084ms)
+✔ curve handoff samples interpolate user anchors and remain within .16 source px of the displayed cubic (3.323167ms)
+✔ adding a point finds the actual curved segment and closed straight edges retain their closing edge (0.260292ms)
+✔ edge curves stay inside the reference and opening an empty work file remains valid (0.130917ms)
+✔ right editing includes the user diamond and preserves all left lines in saved work (3.12675ms)
+✔ a new empty selected line remains editable while right mode filters other empty drafts (0.100833ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 73.25125

@@ -1,0 +1,24 @@
+✔ comparison changes only one diagonal collider active flag and does not change the submitted paths or baseline (253.916625ms)
+✔ same stationary drop uses unchanged ball size and time; its path differs at the diagonal contact (66.7445ms)
+✔ reported clearance compares physical pin shafts and wall surface with the unchanged ball diameter (16.529125ms)
+FRAME_TRIAL_RESULTS [{"kind":"calibrated","phase":0,"requested":30,"spawned":30,"entered":30,"counts":{"fuzu":0,"normal":1,"start":3,"rush":0,"bonus":0,"out":26,"returned":0},"remaining":[],"seconds":42.41666666664957,"maxAge":6.341666666667232,"lcdIntrusions":[],"roadContacts":27,"config":{"label":"小径玉と元の初速で切り分け","radius":1.8,"speedOffset":55},"reconciled":true},{"kind":"calibrated","phase":0.175,"requested":30,"spawned":30,"entered":30,"counts":{"fuzu":0,"normal":0,"start":3,"rush":0,"bonus":0,"out":27,"returned":0},"remaining":[],"seconds":42.5916666666492,"maxAge":6.2083333333338535,"lcdIntrusions":[],"roadContacts":27,"config":{"label":"小径玉と元の初速で切り分け","radius":1.8,"speedOffset":55},"reconciled":true},{"kind":"calibrated","phase":0.35,"requested":30,"spawned":30,"entered":30,"counts":{"fuzu":0,"normal":2,"start":1,"rush":0,"bonus":0,"out":27,"returned":0},"remaining":[],"seconds":42.766666666648575,"maxAge":5.825000000000439,"lcdIntrusions":[],"roadContacts":29,"config":{"label":"小径玉と元の初速で切り分け","radius":1.8,"speedOffset":55},"reconciled":true}]
+✔ current comparison is production; geometry trial disables only declared frame contacts and adds the exact LCD opening (244.842125ms)
+✔ calibration control declares real size and launch changes and keeps pin centres, saved geometry, pockets and front art (55.152792ms)
+✔ calibrated dev-only control clears 30 naturally launched balls at phase 0 (5730.961333ms)
+✔ calibrated dev-only control clears 30 naturally launched balls at phase 0.175 (4874.133125ms)
+✔ calibrated dev-only control clears 30 naturally launched balls at phase 0.35 (4872.302416ms)
+✔ mechanical surfaces keep every authored contact edge and leave the complete physics model unchanged (99.248541ms)
+✔ carrier and relief contours include the user extended head and straight right discharge instead of cutting them off with a round bowl (28.84ms)
+✔ isolated legacy previews retain their rendering and no mechanical surfaces are manufactured without the source profile (0.349958ms)
+✔ unchanged guides retain earlier image observations; user edits take precedence over those estimates (54.249334ms)
+✔ original settings, pockets, mechanisms, pins and non-guide contacts are unchanged by tracing (87.474958ms)
+✔ rendered guide centrelines and contacts use the same vertices; moulding seams never become walls (19.288375ms)
+✔ all 22 guide paths and their contacts adopt the user submission verbatim, without the superseded head edges (16.747375ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15856.676959

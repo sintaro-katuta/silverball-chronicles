@@ -1,0 +1,29 @@
+✔ legacy geometry retains original arcs; reference visible bands replace estimated upper centerlines (10.08925ms)
+✔ reference geometry leaves all original101 pins and physical launch/material settings unchanged, unknown static mark has no invented force; only user-described finite valve adds contact (30.707958ms)
+✔ naturally launched single balls cross the inferred opening before front-plane transfer in all three modes (461.207792ms)
+✔ reference local rail clears all original pin shafts, including existing legacy overlap at36 (16.77975ms)
+✔ separate launch planes exclude cross-plane pairs with either rail profile, preserving same-plane impulse (47.353542ms)
+✔ retained clipped rail has no invented end cap; continuous outside side and legacy cap remain (16.243167ms)
+✔ separate launch planes ignore front playfield overlap but retain actual rear barrel obstruction (16.977083ms)
+✔ existing visible U strips and body contact front balls only, while launch back and white opening remain traversable (17.101209ms)
+✔ exit flap blocks a returning front ball without accelerating it, while the rear launch plane passes (4.522292ms)
+✔ continuous default-power launches do not return or retain balls, initial phase 0 (3293.916292ms)
+✔ continuous default-power launches do not return or retain balls, initial phase 0.175 (3373.403458ms)
+✔ continuous default-power launches do not return or retain balls, initial phase 0.35 (3260.990625ms)
+✔ insufficient launch energy still returns a rear ball to stock instead of being forced into the field (59.225375ms)
+✔ original right-road spacing clears the reference ball diameter (30.253584ms)
+✔ historical large-ball trial bypasses a closed electric shutter at the highest normal slider power (3840.670833ms)
+✔ production pins match all101 centers in the original diagram measurement overlay without offsets (258.754208ms)
+✔ fresh profile and factory clones prevent cross-session mutation; reset reconstruction preserves layout and normal/right launch strengths (124.081709ms)
+✔ app uses one profile and power constant for initial mount and dock, retaining slider range and reset option forwarding (1.071708ms)
+✔ shared visible polygons preserve measured source knots and no sampled edge exceeds .5 source pixels (15.057958ms)
+✔ shape-preserving interpolation stays between each pair of source x knots (0.133542ms)
+✔ adopted contact solids use exact visible vertices, lower uncertain components are not converted to walls (50.268292ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 21
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13944.838709

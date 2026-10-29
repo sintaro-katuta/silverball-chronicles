@@ -1,0 +1,27 @@
+<!doctype html><html lang="ja"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Sprint 8・風車の応答比較</title><style>
+body{margin:0;background:#081320;color:#e2eaf2;font:16px sans-serif}main{max-width:1180px;margin:auto;padding:20px}h1{font-size:24px}p{line-height:1.6}nav{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}button,a{padding:10px;color:inherit;background:#1b3046;border:1px solid #71849a;border-radius:4px}section{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}article{min-width:0}h2{font-size:18px}#canvas{width:100%;aspect-ratio:420/480}output{display:block;font:14px monospace;padding:8px}a{display:inline-block}@media(max-width:700px){section{grid-template-columns:1fr}}
+</style></head><body data-lcd="true"><main><a href="/">本編へ</a><h1>Sprint 8・風車の応答比較</h1><p>本編の大きい玉と装甲ガイドを使い、従来の風車応答と軽いローターを比較します。単球は位置・速度を指定する接触試験です。「自然発射」は専用の機械試射で、抽選・チケット・保存を行いません。</p><nav><button data-case="weak">羽根・弱い接触</button><button data-case="strong">羽根・強い接触</button><button data-case="reverse">反対側の接触</button><button data-case="axis">軸への接触</button><button data-case="natural">自然発射</button><button id="pause">一時停止</button></nav><p id="status" role="status">読み込み中</p><section><article id="old"><h2>従来応答</h2><div id="canvas"></div><output></output></article><article id="new"><h2>本編・軽いローター</h2><div id="canvas"></div><output></output></article></section></main><script type="module">
+import {mountBoard} from '/src/pixi/board-runtime.js';
+import {productionBoardFlowOptions} from '/src/app/production-board-profile.js';
+import {startFrameLoop} from '/src/runtime/frame-loop.js';
+let paused=false,scenario='weak',previous=performance.now(),accumulator=0;const boards=[];
+for(const [id,response] of [['old','legacy'],['new','light-rotor-v1']]){
+ const host=document.getElementById(id);let model;
+ const api=await mountBoard(host,{flowOptions:{...productionBoardFlowOptions(),windmillResponseProfile:response},trialReplay:true,reviewHook:q=>{model=q.model;}});
+ boards.push({host,api,model});
+}
+function setup(name){scenario=name;paused=false;accumulator=0;previous=performance.now();document.getElementById('pause').textContent='一時停止';
+ for(const {model} of boards){const f=model.flow,p=f.physics,m=p.mechanisms[0];f.pause(false);f.stop();p.balls=[];m.angle=name==='natural'?.28:0;m.omega=0;
+  if(name==='natural')f.start();else{const [x,y,vx,vy]=({weak:[6,2,0,-20],strong:[6,2,0,-80],reverse:[6,-2,0,80],axis:[-4.5,0,80,0]})[name];p.balls=[{id:p.nextId++,x:m.x+x,y:m.y+y,vx,vy,r:p.ballRadius,age:0,hits:0,contactCount:0,leftLaunchPlane:true,contactRoles:[]}];}
+ }
+ document.getElementById('status').textContent=name==='natural'?'自然発射・機械試射（入賞率の受入とは別）':'単球接触・配置と速度を指定（自然発射ではありません）';
+}
+for(const button of document.querySelectorAll('[data-case]'))button.onclick=()=>setup(button.dataset.case);
+document.getElementById('pause').onclick=()=>{paused=!paused;document.getElementById('pause').textContent=paused?'再開':'一時停止';for(const {model} of boards)model.flow.pause(paused);};
+setup('weak');const stop=startFrameLoop(now=>{const dt=Math.max(0,Math.min(.05,(now-previous)/1000));previous=now;if(!paused&&!document.hidden){accumulator+=dt;while(accumulator>=1/120){for(const {model} of boards)model.flow.step(1/120);accumulator-=1/120;}}
+ for(const {host,api,model} of boards){const f=model.flow,m=f.physics.mechanisms[0];api.applyTrialFrame({time:f.game.time,balls:f.physics.balls,mechanisms:f.physics.mechanisms,counts:f.counts,spawned:f.physics.metrics.spawned});host.querySelector('output').textContent=`角度 ${(m.angle*180/Math.PI).toFixed(1)}° / 角速度 ${m.omega.toFixed(2)} rad/s`;}
+});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){paused=true;for(const {model} of boards)model.flow.pause(true);document.getElementById('pause').textContent='再開';}previous=performance.now();accumulator=0;});
+window.addEventListener('pagehide',()=>{stop();for(const {api} of boards)api.dispose();},{once:true});
+window.__s8Response={snapshot:()=>({scenario,paused,boards:boards.map(({model})=>({wheel:{...model.flow.physics.mechanisms[0]},time:model.flow.game.time,counts:{...model.flow.counts}}))})};
+</script></body></html>

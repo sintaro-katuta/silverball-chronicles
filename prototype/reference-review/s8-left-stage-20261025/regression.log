@@ -1,0 +1,45 @@
+✔ persistent views reuse introduction poses and preserve adopted board pose (0.776584ms)
+✔ introduction visits whole, board, LCD and returns exactly to adopted play view (0.137792ms)
+✔ skip and reduced motion restore adopted camera with no residual outer frame (0.08275ms)
+✔ LCD camera contains every corner with padding and clamps long frame gaps (0.094959ms)
+✔ review close-ups contain both specified left zones without changing the board view (0.087875ms)
+✔ confirmed entry leads behind nails and ends at nail depth above heso without moving source pins (66.083917ms)
+✔ finite entrance captures only forward front-plane crossings, not nearby misses or launch balls (72.772416ms)
+✔ gutter uses gravity and constraint impulses without adding energy, changing radius or teleporting to outlet (21.804625ms)
+✔ recessed ball passes nail and front-wall projections, exits above heso and resumes actual pin/pocket physics (47.042209ms)
+✔ trajectory prediction does not mutate stage state, counters or the original ball (25.810875ms)
+✔ projected front and rear balls do not collide; two gutter balls retain single-file separation (17.262042ms)
+✔ production normal phase 0: 30 natural shots leave the rear launcher (4663.467542ms)
+✔ production normal phase 0.175: 30 natural shots leave the rear launcher (4717.183917ms)
+✔ production normal phase 0.35: 30 natural shots leave the rear launcher (4406.575041ms)
+✔ production rush phase 0: 30 natural shots leave the rear launcher (6033.220083ms)
+✔ production bonus phase 0: 30 natural shots leave the rear launcher (13405.14025ms)
+✔ rear contact is absent from front balls; original visible polygons and other profiles remain unchanged (58.489416ms)
+✔ the front layer is not entered while a ball overlaps a pin or visible front component (17.37925ms)
+✔ insufficient rear launch energy returns the ball instead of forcing a transfer (89.929917ms)
+✔ source-diagram route renders balls at their physical positions without the former depth offset (1.876917ms)
+✔ right route advances real balls and pause freezes their physical/display coordinates (704.717375ms)
+✔ mechanical surfaces retain authored edges plus the continuous guard without mutating physics (106.173083ms)
+✔ carrier and relief contours include the user extended head and straight right discharge instead of cutting them off with a round bowl (47.207334ms)
+✔ isolated legacy previews retain their rendering and no mechanical surfaces are manufactured without the source profile (1.672416ms)
+✔ decorative connection retains authored endpoints while rounded art remains visible (60.928083ms)
+✔ the guessed entrance bridge and terminal stub no longer trap a full-size ball (68.327084ms)
+✔ upper character contact follows the rendered solid and leaves the rear launch plane clear (29.036541ms)
+✔ user-specified upper slope is solid while the lower apron contour is decoration (24.983958ms)
+✔ road contacts match the existing visible head size without moving pins or changing ball diameter (22.126084ms)
+✔ head contact preserves both authored road spill gaps for the unchanged ball diameter (24.836584ms)
+✔ unchanged guides retain earlier image observations; user edits take precedence over those estimates (76.337583ms)
+✔ original settings, pockets, mechanisms, pins and non-guide contacts are unchanged by tracing (112.101417ms)
+✔ rendered guide centrelines and contacts use the same vertices; moulding seams never become walls (38.366542ms)
+✔ all 22 guide paths and their contacts adopt the user submission verbatim, without the superseded head edges (20.257208ms)
+✔ pin friction exchanges linear/angular energy within the Coulomb bound without adding energy (0.553958ms)
+✔ zero friction or no support impulse cannot initialize spin or propel a stopped ball (0.368708ms)
+✔ front pin contact generates spin passively while rear launch ignores pins and legacy physics remains unchanged (79.944166ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 33492.426959

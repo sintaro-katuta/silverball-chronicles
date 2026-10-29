@@ -1,0 +1,29 @@
+{
+  "productionBaseline": "7552ac4",
+  "scope": "Dev-only comparison of original image, current contacts and one disabled diagonal segment. No production change or adoption.",
+  "tests": {
+    "pass": 10,
+    "fail": 0
+  },
+  "previewsBuild": true,
+  "sources": {
+    "prototype/src/dev/apron-comparison-model.js": "7d1327fdf4545bedffaae40653e44e3c0546e75319160ad74c7c972b619ad8bc",
+    "prototype/src/dev/apron-comparison.js": "ad1d008d23b2a535b5dd6ad1ae81fce92d745272e6317c65d381d1d82dc21c70",
+    "prototype/src/dev/apron-comparison.css": "910be75f70b281a0e6941301f38a6567bbde11e93771b18588a5216268135aed",
+    "prototype/dev/apron-comparison.html": "bdf4f482677b812321e9e052e975edded8a8e08b13dfa7f30fded7853753f327",
+    "prototype/src/pixi/source-guide-trace.js": "b10fea62f4c5c44aa5507eec4485a253cbf945e7c4a49cfbb6d2d740d4b99b20",
+    "prototype/src/app/production-board-profile.js": "2eae6ce462f5726d663f205981d2288bc4433b533f1b69d694a7d003f8ef6046"
+  },
+  "visualChecks": [
+    "desktop three views",
+    "contact reach overlay",
+    "source overlay",
+    "three region views",
+    "synchronized drop",
+    "pause/resume"
+  ],
+  "notTested": [
+    "physical smartphone"
+  ],
+  "reference": "../pixi-source-layout/reference.jpg"
+}
