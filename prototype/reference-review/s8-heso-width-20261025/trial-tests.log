@@ -1,0 +1,22 @@
+✔ approved mouth trials change only aperture and its two rims, preserving source board (94.203333ms)
+✔ source reproduction keeps all diagram walls and inlet contacts, only added tray removed (2.723833ms)
+✔ source-inferred mouth12 shares sensor aperture and both rim positions, not heso pin gap (0.936375ms)
+✔ position override refuses malformed IDs, contact attribute overrides and duplicates (0.794ms)
+✔ both reproduction cases preserve all 101 original pin coordinates and attributes (45.063458ms)
+✔ invalid adjustment is rejected without changing baseline (5.250583ms)
+✔ short reproduction trial reconciles outcomes and its replay follows actual fixed physics time (151.637625ms)
+✔ LCD observer distinguishes centre entry from radius-only overlap without changing ball (0.094791ms)
+✔ launch backing-plane balls are excluded from front LCD intrusion while raw overlaps remain available (0.03725ms)
+✔ micro movement is cumulative from original centres and diagonal norm cannot exceed one (981.553958ms)
+✔ explicit trial radius1.8 matches sprite frame and keeps every original pin while product default stays unchanged (2.795291ms)
+✔ sphere diagnostic observers preserve fixed-radius mechanics and count actual solver subdivisions (254.43875ms)
+✔ normal launch power trial changes initial launch only; right power and default retained (431.129584ms)
+✔ explicit rejected-strength comparison flows to trial only without changing product default (188.536666ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2140.542291

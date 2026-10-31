@@ -1,0 +1,173 @@
+{
+  "response": {
+    "scenario": "strong",
+    "paused": false,
+    "boards": [
+      {
+        "wheel": {
+          "kind": "windmill",
+          "x": 64,
+          "y": 476.5,
+          "angle": -0.07723921110062096,
+          "omega": -0.22550468755959033,
+          "radius": 10,
+          "armRadius": 0.8,
+          "shapeProfile": "photo-three-vane",
+          "shapeVersion": "photo-three-vane-v1",
+          "lastHit": 0.05833333333333333
+        },
+        "time": 0.3583333333333336,
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        }
+      },
+      {
+        "wheel": {
+          "kind": "windmill",
+          "x": 64,
+          "y": 476.5,
+          "angle": -0.14989106246552583,
+          "omega": -0.4376162926525759,
+          "radius": 10,
+          "armRadius": 0.8,
+          "shapeProfile": "photo-three-vane",
+          "shapeVersion": "photo-three-vane-v1",
+          "responseProfile": "coupled-impulse-v1",
+          "momentOfInertia": 1000,
+          "lastHit": 0.05833333333333333
+        },
+        "time": 0.3583333333333336,
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        }
+      }
+    ]
+  },
+  "paused": {
+    "scenario": "strong",
+    "paused": true,
+    "boards": [
+      {
+        "wheel": {
+          "kind": "windmill",
+          "x": 64,
+          "y": 476.5,
+          "angle": -0.08831479479274723,
+          "omega": -0.21774854769901025,
+          "radius": 10,
+          "armRadius": 0.8,
+          "shapeProfile": "photo-three-vane",
+          "shapeVersion": "photo-three-vane-v1",
+          "lastHit": 0.05833333333333333
+        },
+        "time": 0.40833333333333377,
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        }
+      },
+      {
+        "wheel": {
+          "kind": "windmill",
+          "x": 64,
+          "y": 476.5,
+          "angle": -0.17138443329858596,
+          "omega": -0.4225646624278829,
+          "radius": 10,
+          "armRadius": 0.8,
+          "shapeProfile": "photo-three-vane",
+          "shapeVersion": "photo-three-vane-v1",
+          "responseProfile": "coupled-impulse-v1",
+          "momentOfInertia": 1000,
+          "lastHit": 0.05833333333333333
+        },
+        "time": 0.40833333333333377,
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 0,
+          "returned": 0
+        }
+      }
+    ]
+  },
+  "natural": {
+    "scenario": "natural",
+    "paused": false,
+    "boards": [
+      {
+        "wheel": {
+          "kind": "windmill",
+          "x": 64,
+          "y": 476.5,
+          "angle": 0.08045017258787875,
+          "omega": -0.009588497221388676,
+          "radius": 10,
+          "armRadius": 0.8,
+          "shapeProfile": "photo-three-vane",
+          "shapeVersion": "photo-three-vane-v1",
+          "lastHit": 5.958333333333419
+        },
+        "time": 9.708333333333423,
+        "counts": {
+          "fuzu": 0,
+          "normal": 0,
+          "start": 1,
+          "rush": 0,
+          "bonus": 0,
+          "out": 4,
+          "returned": 0
+        }
+      },
+      {
+        "wheel": {
+          "kind": "windmill",
+          "x": 64,
+          "y": 476.5,
+          "angle": 0.3944849887501524,
+          "omega": 0.008558174419469523,
+          "radius": 10,
+          "armRadius": 0.8,
+          "shapeProfile": "photo-three-vane",
+          "shapeVersion": "photo-three-vane-v1",
+          "responseProfile": "coupled-impulse-v1",
+          "momentOfInertia": 1000,
+          "lastHit": 5.958333333333419
+        },
+        "time": 9.708333333333423,
+        "counts": {
+          "fuzu": 0,
+          "normal": 1,
+          "start": 0,
+          "rush": 0,
+          "bonus": 0,
+          "out": 4,
+          "returned": 0
+        }
+      }
+    ]
+  },
+  "previewErrors": [],
+  "videoPath": "/private/tmp/silverball-s08-board-consistency-20261020/prototype/reference-review/s8-board-consistency-20261020/final-browser/page@efa3ba4e18c7587ebdc4f51dd04acb66.webm",
+  "scope": "Specified single contacts and mechanical natural launches; synthetic visibility event, not OS-background acceptance"
+}

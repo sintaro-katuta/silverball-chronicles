@@ -1,0 +1,74 @@
+{
+  "pin": {
+    "id": 102,
+    "source": [
+      705.8,
+      266.6
+    ],
+    "radius": 1.04
+  },
+  "phase": 0,
+  "drainSeconds": 45,
+  "results": [
+    {
+      "mode": "normal",
+      "shots": 250,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 38,
+        "rush": 0,
+        "bonus": 0,
+        "out": 212,
+        "returned": 0
+      },
+      "remaining": []
+    },
+    {
+      "mode": "rush",
+      "shots": 50,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 49,
+        "bonus": 0,
+        "out": 0,
+        "returned": 0
+      },
+      "remaining": [
+        {
+          "id": 1,
+          "source": [
+            775.2004522759488,
+            361.70741285690644
+          ],
+          "speed": 0.002748758444839909
+        }
+      ]
+    },
+    {
+      "mode": "bonus",
+      "shots": 50,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 49,
+        "returned": 0
+      },
+      "remaining": [
+        {
+          "id": 1,
+          "source": [
+            775.2004522759488,
+            361.70741285690644
+          ],
+          "speed": 0.002748758444839909
+        }
+      ]
+    }
+  ]
+}

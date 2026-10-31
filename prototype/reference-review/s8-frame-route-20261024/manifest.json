@@ -1,0 +1,26 @@
+{
+  "productionBaseline": "684d4f3",
+  "scope": "Dev-only contact classification and declared size/speed controls. Current-size route remains unresolved; no production adoption.",
+  "tests": {
+    "pass": 15,
+    "fail": 0
+  },
+  "previewsBuild": true,
+  "visualChecks": [
+    "30 natural shots: current 17 remain, control 0",
+    "simultaneous pause/resume",
+    "failed variant selection",
+    "same-scale static size comparison"
+  ],
+  "decisionRequired": "Whether a real and visible ball diameter at 60% is acceptable; previous preference was larger balls. If rejected, continue current size/model review, without moving pins.",
+  "sources": {
+    "prototype/src/dev/frame-route-trial-model.js": "6bb5647c5d6ce279fa7edf659b58cd90dcaf0f4794450d003b0c9b59217d0966",
+    "prototype/src/dev/frame-route-results.json": "7fd2152e1f487c825d1def2fdb80fa014ac751a4bccd7b575467e6707b1c09a9",
+    "prototype/src/dev/apron-comparison.js": "27d6c0fce050f67dc48f348671a204fbd5c30ddba7e8f11d4d3d39e743f92051",
+    "prototype/src/dev/apron-comparison.css": "b9673f8a4e05f9e456341f7cf0b6c15ea1ae7e06a1d7b8a1a153697e2a49d0f9",
+    "prototype/dev/apron-comparison.html": "80d4a416e4838ab15e2e407c45d5fdd2f3a7f1a88450e37e710b57b189430941",
+    "prototype/src/pixi/source-guide-trace.js": "b10fea62f4c5c44aa5507eec4485a253cbf945e7c4a49cfbb6d2d740d4b99b20",
+    "prototype/src/app/production-board-profile.js": "2eae6ce462f5726d663f205981d2288bc4433b533f1b69d694a7d003f8ef6046",
+    "prototype/src/physics/physics.js": "2f218c733a58d109af334a439fe536e981217ae86b49579f2d3c24b2f6686451"
+  }
+}

@@ -1,3 +1,4 @@
+import {sourceElectricPose} from './source-right-actuators.js';
 // Preview-only twin-wing tulip. The receiver sits inside the right lane.
 export function attachRightStartMotion(flow){
  const {physics,game}=flow,update=physics.updateGate.bind(physics);
@@ -9,11 +10,20 @@ export function attachRightStartMotion(flow){
  const state=()=>{const t=Math.min(1,Math.max(0,(game.time-start)/duration)),progress=from+(target-from)*t*t*(3-2*t);return {progress,target,moving:Math.abs(progress-target)>1e-8};};
  physics.updateGate=function(g){const p=state().progress;g.electricChuckerOpen=p>=1-1e-8&&target===1;update(g);
   for(const wall of this.colliders)if(wall.denchuShelf)wall.active=p>=1-1e-8&&target===1;
-  const c=this.rightChucker,angle=(-Math.asin(6.5/18)+(Math.asin(7/18)+Math.asin(6.5/18))*p),dx=18*Math.sin(angle)*(pocket.geometryScale??1),dy=18*Math.cos(angle)*(pocket.geometryScale??1);
+  const c=this.rightChucker;
+  if(this.sourceRightActuators){
+   const pose=sourceElectricPose(p);c.progress=p;c.sourcePose=pose;
+   c.scoop.a={...pose.a};c.scoop.b={...pose.b};c.scoop.active=false;c.scoop.role='source-electric-door';
+   c.cover.a={...pose.feedA};c.cover.b={...pose.feedB};c.cover.active=p>=1-1e-8;c.cover.role='source-electric-feed';
+   return;
+  }
+  const angle=(-Math.asin(6.5/18)+(Math.asin(7/18)+Math.asin(6.5/18))*p),dx=18*Math.sin(angle)*(pocket.geometryScale??1),dy=18*Math.cos(angle)*(pocket.geometryScale??1);
   const left=pocket.x-6.5*(pocket.geometryScale??1),right=pocket.x+6.5*(pocket.geometryScale??1),hingeY=pocket.y-3;
   c.progress=p;c.scoop.a={x:left,y:hingeY};c.scoop.b={x:left-dx,y:hingeY-dy};c.cover.a={x:right,y:hingeY};c.cover.b={x:right+dx,y:hingeY-dy};
   c.scoop.active=true;c.cover.active=true;c.scoop.role='denchu-left-wing';c.cover.role='denchu-right-wing';
-  if(pocket.referenceSlot){c.scoop.a={x:pocket.x-9.5,y:pocket.y+.5};c.scoop.b={x:pocket.x+13,y:pocket.y-1};c.scoop.active=p<1-1e-8;c.cover.active=false;}
+  // Preserve the closed bypass clearance when trial balls are larger than 1.8.
+  // The shutter renderer reads these same endpoints; the intake stays closed.
+  if(pocket.referenceSlot){const drop=Math.max(0,2*((this.ballRadius??1.8)-1.8));c.scoop.a={x:pocket.x-9.5,y:pocket.y+.5+drop};c.scoop.b={x:pocket.x+13,y:pocket.y-1+drop};c.scoop.active=p<1-1e-8;c.cover.active=false;}
  };
  physics.updateGate(game);
  return {state,request(open){const next=open?1:0;if(next===target)return;from=state().progress;target=next;start=game.time;duration=Math.max(1e-8,.4*Math.abs(next-from));physics.updateGate(game);}};

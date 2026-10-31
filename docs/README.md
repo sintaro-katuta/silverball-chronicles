@@ -1,5 +1,23 @@
 # プロジェクト資料
 
+- [S8 右打ち専用の確認画面](agile/S8_RIGHT_PLAY_REVIEW.md) — 電チュー/アタッカー/閉鎖の切り替えと、全体・部位別の拡大。一時停止して玉番号・座標を確認。
+
+- [S8 残球の原因・局所修正と右道釘の試作](agile/S8_RESIDUALS.md) — 許容済みの左33・右道釘4本と装飾の接触を本編へ採用。1000発残球0、400玉開始の終了を確認。
+
+- [S8 ヘソ入口だけの幅比較と採用](agile/S8_HESO_WIDTH.md) — 20/18/16、正式2750発。入口16で入賞率17.60%→15.47%、元の釘・ガイド・玉径を維持。
+
+- [S8 ヘソ入賞・保留あふれ・玉持ちの実測](agile/S8_HESO_BALANCE.md) — 盤面固定の7条件。保留ロスと残球の終了阻害を分離。
+
+- [丸い装飾と連続ガイドの分離](agile/S8_GUIDE_MECHANICS.md) — 装飾を残し、前面ガイドを接続。玉径・釘の座標を維持。
+
+- [玉径を維持した接触モデルの監査](agile/S8_BALL_SPIN_AUDIT.md) — 小径の採用依頼を撤回。回転のみの試作は不採用、現玉径の通過は未解決。
+
+- [元図を維持した通過条件と玉径の判断](agile/S8_FRAME_ROUTE_REVIEW.md) — 接触だけの案は未達、小径対照90球は残球0。本編未採用。
+
+- [斜めの道釘と外形線の比較](agile/S8_APRON_COMPARISON.md) — 元図・現在・接触1区間なしの部分試験。本編は未変更。
+
+- [S8 発射直後の滞留修正](agile/S8_LAUNCHER_STALL_FIX.md) — 保存線と玉径を維持し、奥の発射経路と前面接触を分離。
+
 - [S9：BGM・効果音の承認済み計画](agile/S9_PLAN.md)・[受入と未確認](agile/S9_ACCEPTANCE.md)
 
 - [Sprint 7比較結果](agile/S7_RESULTS.md)：全条件、不利な結果と限定採用。
@@ -13,6 +31,29 @@
 仕様書、設計・移行資料、参考機種の調査、レビュー文書、動画の文字起こしをこのディレクトリにまとめています。元のプロジェクト階層を保ち、文書から実装や検証素材へリンクしています。
 
 ## 主な入口
+
+- [ユーザー保存線から本編の盤面を組む](agile/S8_USER_BOARD_BUILD.md)：枠・流路・部品の面と表示窓へ反映。[直接プレビュー](http://127.0.0.1:5460/dev/user-board.html)。
+
+- [ユーザー保存ガイドの反映](agile/S8_USER_GUIDES.md)：保存ファイルの22本322点を採用。
+- [マウスでガイドを編集するツール](agile/S8_GUIDE_EDITOR.md)：作成・点移動・曲線・自動保存・ファイル保存と読込。
+
+- [Sprint 8 指摘6部位のガイド再採寸](agile/S8_GUIDE_RETRACE.md)：旧ガイド一致の報告を訂正。元画像を通常濃度で拡大照合し、接触と成形縁を分けて転記。
+
+- [Sprint 8 釘とガイドだけを元図へ合わせる](agile/S8_PINS_GUIDES_ONLY.md)：最新の対象限定。玉径・ヘソ幅・発射・見た目は直前の設定を維持。
+
+- [Sprint 8 元の盤面図へ配置を復帰](agile/S8_SOURCE_LAYOUT_RESTORE.md)：前段の復帰履歴。101点差分0、独自の移動/通路を撤回。物理校正の失敗は別に保持。
+
+- [Sprint 8 タイトルを撤去して奥側ルートを開放](agile/S8_OPEN_LEFT_ROUTE.md)：ルート優先時の履歴。奥への進入と釘への退出を玉IDで確認。
+
+- [Sprint 8 タイトル脇の縦レール](agile/S8_LEFT_TITLE_RAIL.md)：提供画像に合わせた位置修正。道釘を保持し、タイトル侵入と下流の滞留を分けて確認。
+
+- [Sprint 8 道釘への復帰](agile/S8_RESTORE_ROAD_PINS.md)：連続ガイドで釘の役割を置き換えた案を撤回。最新の対象・未解決はこちら。
+
+- [Sprint 8 玉戻りの修正](agile/S8_LAUNCH_RETURN_FIX.md)：前後の衝突分離、出口の逆戻り防止片、大径玉の通過余白と再検証。
+
+- [Sprint 8 試遊後の盤面調整](agile/S8_PLAY_FEEDBACK_REVIEW.md)：ドット絵の装甲ガイド、軽い風車、低反発、大きい玉。[今回の計画と失敗の切り分け](agile/S8_PLAY_FEEDBACK_PLAN.md)。
+
+- [Sprint 8：盤面の見た目と玉の動き](agile/S8_BOARD_CONSISTENCY_PLAN.md)：0.4.0向け #70/#42/#41 と調査 #44。[比較・採否と残件](agile/S8_BOARD_CONSISTENCY_REVIEW.md)。旧S8の釘改善と区別。
 
 - [S9の統合確認とPR提出範囲](agile/S9_INTEGRATION_REVIEW_2026-10-24.md)：固定S8版との724件・950発の結果、後続ガイドなし版との区別、S7依存とレビュー残件。
 - [S9人物原画の粒度実測](prototype/CHARACTER_GRAIN_REVIEW_2026-10-24.md)：全身と胸像の髪・鎧・肌、原画SHA、陰影区間の測定とレビュー判断。
@@ -447,3 +488,11 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [ヘソ周りのガイド撤去（0.3.0向け）](prototype/HESO_GUIDE_REMOVAL_2026-10-16.md) — [承認台本](prototype/heso-guide-video/script.md)・[説明動画の制作と検証](prototype/heso-guide-video/PRODUCTION.md)。
 
 - [PR36：最新の釘配置を保持した統合と検証](agile/PR36_INTEGRATION.md)
+
+- [S8 右上ガイドの訂正と検証](agile/S8_RIGHT_UPPER_GUIDE.md)
+- [S8 右打ちに絞ったガイド編集](agile/S8_RIGHT_GUIDE_EDITOR.md)
+- [S8 ユーザーの右打ち線の反映](agile/S8_RIGHT_USER_LAYOUT.md)
+- [S8 電チューとアタッカーの役割・開放調査](agile/S8_ELECTRIC_MECHANISM_RESEARCH.md)
+- [S8 右打ち可動部の実装試作・計測とレビュー](agile/S8_ACTUATOR_IMPLEMENTATION.md)
+- [S8 右の可動部を左右の振り分けへ訂正](agile/S8_RIGHT_DIVERTER_CORRECTION.md)
+- [S8 盤面修正のmain取り込みと検証](agile/S8_MERGE_2026-10-30.md)

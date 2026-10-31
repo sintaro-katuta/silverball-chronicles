@@ -1,0 +1,31 @@
+{
+  "before": {
+    "physics/physics.js": "cc091abe0449a1332c57ad5c1eef93680629376c2c76a99fc5cb09e69a59ef9b",
+    "physics/sphere-friction.js": "70d455699914616b9a1079328751a42476992566760e3fcd4d688d775f320987",
+    "domain/pin-dimensions.js": "5a39d81a5de5ca0711749aa3e1c334d6b6469763fbdfa7b5841c9682425b4031",
+    "pixi/source-guide-mechanics.js": "83491299aff60552648261612e91e5748cf2dbbc80ad3dfc1b1b73944c95bef4",
+    "pixi/source-layout.js": "46b8aff73fb3a5906558cf5a7b81bf3ae88193c65836336e43734647ad792732",
+    "pixi/source-guide-trace.js": "b10fea62f4c5c44aa5507eec4485a253cbf945e7c4a49cfbb6d2d740d4b99b20",
+    "pixi/pin-texture.js": "615661d309f1ac724cf169a892fd0e4e673a36216686bf4b23c0b547cf95d95d",
+    "pixi/board-runtime.js": "1d45aca59dd49e38a5a600493855a25e51e1b32a57233e332c33eea92e5f900e",
+    "app/production-board-profile.js": "499a04cb309d6bddecb0966fa92b803aeafbabb16dc55921c1e4dd865dca9280"
+  },
+  "after": {
+    "physics/physics.js": "cc091abe0449a1332c57ad5c1eef93680629376c2c76a99fc5cb09e69a59ef9b",
+    "physics/sphere-friction.js": "70d455699914616b9a1079328751a42476992566760e3fcd4d688d775f320987",
+    "domain/pin-dimensions.js": "5a39d81a5de5ca0711749aa3e1c334d6b6469763fbdfa7b5841c9682425b4031",
+    "pixi/source-guide-mechanics.js": "83491299aff60552648261612e91e5748cf2dbbc80ad3dfc1b1b73944c95bef4",
+    "pixi/source-layout.js": "46b8aff73fb3a5906558cf5a7b81bf3ae88193c65836336e43734647ad792732",
+    "pixi/source-guide-trace.js": "b10fea62f4c5c44aa5507eec4485a253cbf945e7c4a49cfbb6d2d740d4b99b20",
+    "pixi/pin-texture.js": "615661d309f1ac724cf169a892fd0e4e673a36216686bf4b23c0b547cf95d95d",
+    "pixi/board-runtime.js": "1d45aca59dd49e38a5a600493855a25e51e1b32a57233e332c33eea92e5f900e",
+    "app/production-board-profile.js": "499a04cb309d6bddecb0966fa92b803aeafbabb16dc55921c1e4dd865dca9280"
+  },
+  "unchanged": true,
+  "baseline": false,
+  "roadRegion": "within 10 source px of authored road-pin segments",
+  "entryRegion": "source x148..190,y600..685",
+  "lowSpeed": "speed < 8 world units/s, continuous per ball in region",
+  "stationary": "speed < 1 world unit/s, continuous per ball in region",
+  "scope": "real launches in mechanical fixture; lottery and wallet excluded"
+}

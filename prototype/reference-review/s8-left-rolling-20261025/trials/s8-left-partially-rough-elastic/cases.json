@@ -1,0 +1,91 @@
+[
+  {
+    "mode": "normal",
+    "phase": 0,
+    "pinContactFriction": 1,
+    "roadRestitution": 0.12,
+    "leftPinRestitution": null,
+    "pinNormalResponse": {
+      "lowRestitution": 1,
+      "lowSpeed": 20,
+      "highSpeed": 50
+    },
+    "pinTangentialRestitution": 1,
+    "pinRoughnessRatio": 1,
+    "spawned": 100,
+    "entered": 100,
+    "counts": {
+      "fuzu": 0,
+      "normal": 1,
+      "start": 4,
+      "rush": 0,
+      "bonus": 0,
+      "out": 90,
+      "returned": 0
+    },
+    "maxRoadBacktrackSourcePx": 5.755749506573462,
+    "maxRoadRiseSourcePx": 7.096591899239229,
+    "longestLowSpeedSeconds": {
+      "road": 20.699999999999466,
+      "entry": 0.025
+    },
+    "longestStationarySeconds": {
+      "road": 4.166666666666663,
+      "entry": 0
+    },
+    "roadRemaining": [
+      {
+        "id": 99,
+        "x": 186.50903889270597,
+        "y": 737.276091663871,
+        "speed": 1.0001826203977255,
+        "omega": 32.75976439247414,
+        "lastContact": "michi"
+      }
+    ],
+    "entryRemaining": [],
+    "remaining": [
+      {
+        "id": 41,
+        "x": 552.2,
+        "y": 868.2,
+        "speed": 0.06245756014552489,
+        "omega": 126.67767001987366,
+        "lastContact": "right-channel-traced-electric"
+      },
+      {
+        "id": 66,
+        "x": 250.54749261339018,
+        "y": 801.405107473857,
+        "speed": 0.3655620842228716,
+        "omega": 7.478912814825814,
+        "lastContact": "prize"
+      },
+      {
+        "id": 69,
+        "x": 543.0310825945919,
+        "y": 860.4901479993148,
+        "speed": 1.739226845681108,
+        "omega": 105.11674500542333,
+        "lastContact": "right-channel-traced-electric"
+      },
+      {
+        "id": 93,
+        "x": 565.9534234073947,
+        "y": 822.2612238855475,
+        "speed": 0.28043274053350037,
+        "omega": 110.05910266419292,
+        "lastContact": "right-channel-traced-electric"
+      },
+      {
+        "id": 99,
+        "x": 186.50903889270597,
+        "y": 737.276091663871,
+        "speed": 1.0001826203977255,
+        "omega": 32.75976439247414,
+        "lastContact": "michi"
+      }
+    ],
+    "reconciled": true
+  }
+]

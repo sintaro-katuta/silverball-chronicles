@@ -11,7 +11,7 @@ export function inspectWindmillOffset(physics,offset,{profile=WINDMILL_OFFSET_ST
  for(const pin of physics.pins)margins.push({kind:'pin',id:pin.id,gap:Math.hypot(centre.x-pin.x,centre.y-pin.y)-radius-pin.r});
  for(const c of [...physics.colliders,physics.gate,physics.rightChucker?.scoop,physics.rightChucker?.cover].filter(Boolean)){
   if(c.shape==='solid-polygon'){
-   let inside=false;const points=c.points;for(let i=0,j=points.length-1;i<points.length;j=i++){const a=points[i],b=points[j];if((a.y>centre.y)!==(b.y>centre.y)&&centre.x<(b.x-a.x)*(centre.y-a.y)/(b.y-a.y)+a.x)inside=!inside;}
+   let inside=false;const points=c.solid?.points??c.points;for(let i=0,j=points.length-1;i<points.length;j=i++){const a=points[i],b=points[j];if((a.y>centre.y)!==(b.y>centre.y)&&centre.x<(b.x-a.x)*(centre.y-a.y)/(b.y-a.y)+a.x)inside=!inside;}
    const gap=Math.min(...points.map((a,i)=>segmentDistance(centre,a,points[(i+1)%points.length])))-radius;margins.push({kind:'wall',id:c.role,gap:inside?-radius:gap});
   }else margins.push({kind:'wall',id:c.role,gap:segmentDistance(centre,c.a,c.b)-radius-(c.r??0)});
  }

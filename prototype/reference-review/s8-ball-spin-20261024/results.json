@@ -1,0 +1,59 @@
+{
+  "scope": "Temporary source copy only; fixed ball and launch; spin friction at stationary contacts, windmill and ball-pair friction unchanged",
+  "temp": "/var/folders/46/zl_sl65j7dq3k9242mfwvywr0000gn/T/s8-spin-Anidh2",
+  "hashes": {
+    "physics/physics.js": "994effc739f45548a770204bd48f696eb64bdd5922d7ad3f8c8929e19dc6d102",
+    "physics/solid-polygon-contact.js": "ff35452b777b3d98dba8803894fb0289b4b17ff3bdefaeec16ec34c5d47453d7",
+    "dev/spin-contact-audit.js": "b222a91646a4d33ce960835b8d7bc0e42f6366f035d31460bca8a6513f455948"
+  },
+  "results": [
+    {
+      "mu": 0.08,
+      "radius": 3,
+      "speedOffset": 125,
+      "shots": 20,
+      "entered": 0,
+      "peakY": 268.0997538311411,
+      "valvePasses": 0,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 0,
+        "returned": 20
+      },
+      "remaining": [],
+      "audit": {
+        "contacts": 2744,
+        "maxEnergyIncrease": 0,
+        "maxOmega": 19.585827252737808
+      }
+    },
+    {
+      "mu": 0.2,
+      "radius": 3,
+      "speedOffset": 125,
+      "shots": 20,
+      "entered": 0,
+      "peakY": 313.0531948197189,
+      "valvePasses": 0,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 0,
+        "returned": 20
+      },
+      "remaining": [],
+      "audit": {
+        "contacts": 2320,
+        "maxEnergyIncrease": 0,
+        "maxOmega": 48.946837657284576
+      }
+    }
+  ]
+}

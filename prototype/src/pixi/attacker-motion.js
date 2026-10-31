@@ -1,3 +1,4 @@
+import {sourceAttackerPose} from './source-right-actuators.js';
 import {panelPose} from './attacker-panel.js';
 // Preview-only receiving panel with a fixed lower hinge. The production Physics defaults are unchanged.
 export function attachAttackerMotion(flow){
@@ -19,6 +20,12 @@ export function attachAttackerMotion(flow){
  physics.updateGate=function(g){
   const p=value();g.jackpot=p>=1-1e-8&&target===1?{gap:0,count:0,displayRounds:4}:null;
   update(g);
+  if(this.sourceRightActuators){
+   const pose=sourceAttackerPose(p);this.gate.panel=pose;this.gate.role='source-upper-diverter';
+   this.gate.a={...pose.tip};this.gate.b={...pose.hinge};
+   // Closed plate is behind the ball plane; only the fully open lip projects into the ball plane.
+   this.gate.active=p>=1-1e-8&&target===1;return;
+  }
   this.gate.panel=panelPose(pocket,p);
   this.gate.a={...this.gate.panel.freeA};this.gate.b={...this.gate.panel.freeB};
   this.gate.active=p>=1-1e-8&&target===1;

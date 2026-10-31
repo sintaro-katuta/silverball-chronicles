@@ -1,9 +1,11 @@
+import {OPEN_LEFT_LCD_OUTLINE_SOURCE} from './left-inlet-route.js';
+import {sourcePath} from './source-layout.js';
 import {createWaterIdle} from './water-idle.js';
 import {Container,Sprite,Texture,Graphics} from 'pixi.js';
 import {pixelSurface,painter} from './pixel-primitives.js';
 import {LCD_LAYOUT,LCD_TOP,LCD_OPENING,LCD_OUTLINE} from './lcd-layout.js';
 export {LCD_LAYOUT} from './lcd-layout.js';
-export function createLcdView(sceneTexture,cloudSky=null,hairAtlas=null,hairUnderlay=null,rushScene=null){
+export function createLcdView(sceneTexture,cloudSky=null,hairAtlas=null,hairUnderlay=null,rushScene=null,{leftInletRoute='legacy'}={}){
  const root=new Container();root.position.set(LCD_LAYOUT.x,LCD_LAYOUT.y);
  const viewport=new Container(),mask=new Graphics().poly(LCD_OPENING.flatMap(([x,y])=>[x-LCD_LAYOUT.x,y-LCD_LAYOUT.y])).fill(0xffffff);root.addChild(viewport,mask);viewport.mask=mask;
  const idle=createWaterIdle(sceneTexture,cloudSky,hairAtlas,hairUnderlay),art=idle?.sprite??new Sprite(sceneTexture);
@@ -14,9 +16,10 @@ export function createLcdView(sceneTexture,cloudSky=null,hairAtlas=null,hairUnde
  const content=new Container(),scale=LCD_LAYOUT.width/210;content.scale.set(scale);content.x=(LCD_LAYOUT.width-210*scale)/2;content.y=(LCD_LAYOUT.height-140*scale)/2;viewport.addChild(content);
  const W=LCD_LAYOUT.width,H=LCD_LAYOUT.height;
  const texture=Texture.from(pixelSurface((W+20)*3,(H+34)*3,c=>{
+  if(leftInletRoute==='diagram')return;
   const d=painter(c),r=(x,y,w,h,col)=>d.rect(x*3,y*3,w*3,h*3,col);
   const local=points=>points.map(([x,y])=>[(x-(LCD_LAYOUT.x-8))*3,(y-(LCD_LAYOUT.y-18))*3]);
-  const outer=local(LCD_OUTLINE),inner=local(LCD_OPENING);
+  const outer=local(['open-title','diagram'].includes(leftInletRoute)?sourcePath(OPEN_LEFT_LCD_OUTLINE_SOURCE):LCD_OUTLINE),inner=local(LCD_OPENING);
   d.poly(outer.map(([x,y])=>[x+4,y+5]),'#07111f');d.poly(outer,'#7c704f');
   for(let i=0;i<outer.length;i++){const a=outer[i],b=outer[(i+1)%outer.length];d.line(...a,...b,i<24?'#e4cf97':'#a5bcc5',6);}
   c.globalCompositeOperation='destination-out';d.poly(inner,'#000');c.globalCompositeOperation='source-over';

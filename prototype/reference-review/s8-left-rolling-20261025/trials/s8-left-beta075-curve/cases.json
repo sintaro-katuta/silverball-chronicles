@@ -1,0 +1,82 @@
+[
+  {
+    "mode": "normal",
+    "phase": 0,
+    "pinContactFriction": 0.5,
+    "roadRestitution": 0.12,
+    "leftPinRestitution": null,
+    "pinNormalResponse": {
+      "lowRestitution": 0.9,
+      "lowSpeed": 20,
+      "highSpeed": 50
+    },
+    "pinTangentialRestitution": 0.75,
+    "spawned": 100,
+    "entered": 100,
+    "counts": {
+      "fuzu": 0,
+      "normal": 4,
+      "start": 9,
+      "rush": 0,
+      "bonus": 0,
+      "out": 83,
+      "returned": 0
+    },
+    "maxRoadBacktrackSourcePx": 3.507450419753468,
+    "maxRoadRiseSourcePx": 7.839673848194934,
+    "longestLowSpeedSeconds": {
+      "road": 19.958333333332842,
+      "entry": 0.041666666666666664
+    },
+    "longestStationarySeconds": {
+      "road": 19.558333333332865,
+      "entry": 0
+    },
+    "roadRemaining": [
+      {
+        "id": 91,
+        "x": 377.2259602523436,
+        "y": 839.0176306344326,
+        "speed": 0.439914033583235,
+        "omega": 0.03563563711740293,
+        "lastContact": "michi"
+      }
+    ],
+    "entryRemaining": [],
+    "remaining": [
+      {
+        "id": 72,
+        "x": 565.9523605011506,
+        "y": 822.2603029303475,
+        "speed": 0.4986897490717295,
+        "omega": 20.52784459194879,
+        "lastContact": "right-channel-traced-electric"
+      },
+      {
+        "id": 83,
+        "x": 577.3231290024032,
+        "y": 818.4297630738733,
+        "speed": 0.2507566412178513,
+        "omega": 52.361251208946015,
+        "lastContact": "right-channel-traced-electric"
+      },
+      {
+        "id": 91,
+        "x": 377.2259602523436,
+        "y": 839.0176306344326,
+        "speed": 0.439914033583235,
+        "omega": 0.03563563711740293,
+        "lastContact": "michi"
+      },
+      {
+        "id": 95,
+        "x": 613.3529488063423,
+        "y": 800.2036301285191,
+        "speed": 0.333582391395408,
+        "omega": 11.980896694868804,
+        "lastContact": "denchu-guide"
+      }
+    ],
+    "reconciled": true
+  }
+]

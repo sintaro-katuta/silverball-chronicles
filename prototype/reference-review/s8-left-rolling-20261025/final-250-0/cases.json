@@ -1,0 +1,61 @@
+[
+  {
+    "variant": "visible-head-rolling",
+    "mode": "normal",
+    "phase": 0,
+    "pinContactFriction": 0.5,
+    "roadRestitution": 0.12,
+    "roadPinRadius": 1.04,
+    "ballRadius": 3,
+    "spawned": 250,
+    "entered": 250,
+    "counts": {
+      "fuzu": 0,
+      "normal": 3,
+      "start": 37,
+      "rush": 0,
+      "bonus": 0,
+      "out": 207,
+      "returned": 0
+    },
+    "maxRoadBacktrackSourcePx": 5.191680615181113,
+    "maxRoadRiseSourcePx": 5.964450684199619,
+    "longestLowSpeedSeconds": {
+      "road": 0.13333333333333333,
+      "entry": 0.10833333333333332
+    },
+    "longestStationarySeconds": {
+      "road": 0.016666666666666666,
+      "entry": 0
+    },
+    "roadRemaining": [],
+    "entryRemaining": [],
+    "remaining": [
+      {
+        "id": 94,
+        "x": 565.9534234073947,
+        "y": 822.2612238855475,
+        "speed": 0.2804327405335004,
+        "omega": 92.39639318578735,
+        "lastContact": "right-channel-traced-electric"
+      },
+      {
+        "id": 211,
+        "x": 548.9367774049535,
+        "y": 868.2,
+        "speed": 0.061072863293180034,
+        "omega": 28.634028430096134,
+        "lastContact": "right-channel-traced-electric"
+      },
+      {
+        "id": 247,
+        "x": 180.20506343112493,
+        "y": 342.33130818602194,
+        "speed": 0.4859723531128012,
+        "omega": -0.02851129665647961,
+        "lastContact": "prize"
+      }
+    ],
+    "reconciled": true
+  }
+]

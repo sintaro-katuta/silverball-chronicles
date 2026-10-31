@@ -1,0 +1,62 @@
+{
+  "scope": "Reproduce baseline by disabling only the new depth contacts and transfer clearance",
+  "seconds": 6.0000000000001235,
+  "shots": 2,
+  "counts": {
+    "fuzu": 0,
+    "normal": 0,
+    "start": 0,
+    "rush": 0,
+    "bonus": 0,
+    "out": 0,
+    "returned": 0
+  },
+  "balls": [
+    {
+      "gold": false,
+      "large": false,
+      "hits": 0,
+      "extra": false,
+      "after": false,
+      "id": 1,
+      "x": 30.4282351769013,
+      "y": 323.96448580403245,
+      "vx": -64.20663421202947,
+      "vy": 214.02498584562042,
+      "r": 3,
+      "age": 6.0000000000001235,
+      "power": 0.18,
+      "angle": 0,
+      "contactCount": 3719,
+      "observedSide": null,
+      "contactRoles": [],
+      "nonReturnValveCrossed": false,
+      "launchExitCrossed": false,
+      "lastContact": "launch-inner-visible-band",
+      "prediction": null
+    },
+    {
+      "gold": false,
+      "large": false,
+      "hits": 0,
+      "extra": false,
+      "after": false,
+      "id": 2,
+      "x": 28.93335566463663,
+      "y": 328.9485079423007,
+      "vx": -64.0110255761142,
+      "vy": 212.73732830810758,
+      "r": 3,
+      "age": 5.4000000000000306,
+      "power": 0.18,
+      "angle": 0,
+      "contactCount": 5813,
+      "observedSide": null,
+      "contactRoles": [],
+      "nonReturnValveCrossed": false,
+      "launchExitCrossed": false,
+      "lastContact": "launch-inner-visible-band",
+      "prediction": null
+    }
+  ]
+}

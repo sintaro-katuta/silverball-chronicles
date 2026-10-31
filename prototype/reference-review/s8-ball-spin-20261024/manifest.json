@@ -1,0 +1,19 @@
+{
+  "scope": "Question clarification and fixed-size contact audit; small-size adoption request withdrawn. No passing fixed-size route yet.",
+  "productionPhysicsUnchanged": true,
+  "productionSources": {
+    "src/physics/physics.js": "2f218c733a58d109af334a439fe536e981217ae86b49579f2d3c24b2f6686451",
+    "src/pixi/source-guide-trace.js": "b10fea62f4c5c44aa5507eec4485a253cbf945e7c4a49cfbb6d2d740d4b99b20",
+    "src/app/production-board-profile.js": "2eae6ce462f5726d663f205981d2288bc4433b533f1b69d694a7d003f8ef6046",
+    "src/pixi/source-layout.js": "46b8aff73fb3a5906558cf5a7b81bf3ae88193c65836336e43734647ad792732"
+  },
+  "unitTests": {
+    "pass": 3,
+    "fail": 0
+  },
+  "previewsBuild": true,
+  "trialResults": "results.json",
+  "result": "Both friction/spin trials returned all20 balls. Reject both. No claim of impossibility.",
+  "visualCheck": "Comparison header requires current size; small option removed; both static balls same current size.",
+  "nextUnresolved": "Coupled launch/contact and multi-contact calibration, while retaining ball size and source pin centres."
+}

@@ -1,0 +1,248 @@
+{
+  "complete": true,
+  "acceptance": false,
+  "results": [
+    {
+      "candidate": false,
+      "phase": 0,
+      "shots": 250,
+      "stage": "comparison",
+      "spawned": 250,
+      "counts": {
+        "fuzu": 0,
+        "normal": 2,
+        "start": 39,
+        "rush": 0,
+        "bonus": 0,
+        "out": 207,
+        "returned": 0
+      },
+      "remaining": [
+        {
+          "id": 163,
+          "x": 565.9534234073947,
+          "y": 822.2612238855475,
+          "speed": 0.2804327405335004,
+          "onStage": false
+        },
+        {
+          "id": 247,
+          "x": 180.20506343112493,
+          "y": 342.33130818602194,
+          "speed": 0.4859723531128012,
+          "onStage": false
+        }
+      ],
+      "lcdViolations": 0,
+      "electricViolations": 0,
+      "maxRest": 54.12499999999757,
+      "stalls": [
+        130,
+        141,
+        163,
+        173,
+        186,
+        200,
+        213,
+        219,
+        226,
+        247
+      ],
+      "stageMetrics": {
+        "entered": 22,
+        "exited": 20,
+        "spilled": 2
+      },
+      "reconciled": true
+    },
+    {
+      "candidate": false,
+      "phase": 0.175,
+      "shots": 250,
+      "stage": "comparison",
+      "spawned": 250,
+      "counts": {
+        "fuzu": 0,
+        "normal": 1,
+        "start": 43,
+        "rush": 0,
+        "bonus": 0,
+        "out": 205,
+        "returned": 0
+      },
+      "remaining": [
+        {
+          "id": 249,
+          "x": 180.20506343112493,
+          "y": 342.33130818602194,
+          "speed": 0.48597235311280285,
+          "onStage": false
+        }
+      ],
+      "lcdViolations": 0,
+      "electricViolations": 0,
+      "maxRest": 42.76666666666488,
+      "stalls": [
+        22,
+        70,
+        81,
+        124,
+        134,
+        141,
+        185,
+        191,
+        206,
+        212,
+        220,
+        226,
+        249
+      ],
+      "stageMetrics": {
+        "entered": 29,
+        "exited": 26,
+        "spilled": 3
+      },
+      "reconciled": true
+    },
+    {
+      "candidate": false,
+      "phase": 0.35,
+      "shots": 250,
+      "stage": "comparison",
+      "spawned": 250,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 34,
+        "rush": 0,
+        "bonus": 0,
+        "out": 216,
+        "returned": 0
+      },
+      "remaining": [],
+      "lcdViolations": 0,
+      "electricViolations": 0,
+      "maxRest": 3.224999999999991,
+      "stalls": [
+        27,
+        31,
+        61,
+        88,
+        134,
+        138,
+        162,
+        176,
+        173,
+        180,
+        185,
+        213
+      ],
+      "stageMetrics": {
+        "entered": 22,
+        "exited": 20,
+        "spilled": 2
+      },
+      "reconciled": true
+    },
+    {
+      "candidate": true,
+      "phase": 0,
+      "shots": 250,
+      "stage": "comparison",
+      "spawned": 250,
+      "counts": {
+        "fuzu": 0,
+        "normal": 4,
+        "start": 44,
+        "rush": 0,
+        "bonus": 0,
+        "out": 202,
+        "returned": 0
+      },
+      "remaining": [],
+      "lcdViolations": 0,
+      "electricViolations": 0,
+      "maxRest": 4.133333333333328,
+      "stalls": [
+        173,
+        222
+      ],
+      "stageMetrics": {
+        "entered": 30,
+        "exited": 28,
+        "spilled": 2
+      },
+      "reconciled": true
+    },
+    {
+      "candidate": true,
+      "phase": 0.175,
+      "shots": 250,
+      "stage": "comparison",
+      "spawned": 250,
+      "counts": {
+        "fuzu": 0,
+        "normal": 1,
+        "start": 38,
+        "rush": 0,
+        "bonus": 0,
+        "out": 211,
+        "returned": 0
+      },
+      "remaining": [],
+      "lcdViolations": 0,
+      "electricViolations": 0,
+      "maxRest": 41.07499999999831,
+      "stalls": [
+        34,
+        99,
+        185
+      ],
+      "stageMetrics": {
+        "entered": 22,
+        "exited": 19,
+        "spilled": 3
+      },
+      "reconciled": true
+    },
+    {
+      "candidate": true,
+      "phase": 0.35,
+      "shots": 250,
+      "stage": "comparison",
+      "spawned": 250,
+      "counts": {
+        "fuzu": 0,
+        "normal": 1,
+        "start": 37,
+        "rush": 0,
+        "bonus": 0,
+        "out": 211,
+        "returned": 0
+      },
+      "remaining": [
+        {
+          "id": 82,
+          "x": 525.2030055876514,
+          "y": 828.4506408240327,
+          "speed": 0.37228825391432135,
+          "onStage": false
+        }
+      ],
+      "lcdViolations": 0,
+      "electricViolations": 0,
+      "maxRest": 140.95833333336947,
+      "stalls": [
+        48,
+        82,
+        134
+      ],
+      "stageMetrics": {
+        "entered": 18,
+        "exited": 16,
+        "spilled": 2
+      },
+      "reconciled": true
+    }
+  ]
+}

@@ -1,0 +1,328 @@
+{
+  "createdAt": "2026-10-24T11:15:44.210Z",
+  "scope": "Dev-only diagnostic comparison. Small ball and original launch speed require a new user decision; production remains unchanged.",
+  "baselines": [
+    {
+      "kind": "current",
+      "phase": 0,
+      "requested": 20,
+      "spawned": 20,
+      "entered": 20,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 6,
+        "returned": 0
+      },
+      "remaining": [
+        {
+          "id": 1,
+          "x": 74.51046531622298,
+          "y": 485.51041873137166,
+          "speed": 0.000002113957026494348,
+          "front": true,
+          "lastContact": "michi"
+        },
+        {
+          "id": 4,
+          "x": 74.56571344356841,
+          "y": 479.5804530629615,
+          "speed": 4.68944097256846,
+          "front": true,
+          "lastContact": "lcd-boundary-20"
+        },
+        {
+          "id": 6,
+          "x": 84.00543277603568,
+          "y": 460.29471946338475,
+          "speed": 19.332425161010416,
+          "front": true,
+          "lastContact": "lcd-boundary-21"
+        },
+        {
+          "id": 8,
+          "x": 88.57262678773542,
+          "y": 457.16294304445137,
+          "speed": 8.950786851837844,
+          "front": true,
+          "lastContact": "lcd-boundary-21"
+        },
+        {
+          "id": 9,
+          "x": 83.71206655262598,
+          "y": 454.4227768991704,
+          "speed": 19.271159831749948,
+          "front": true,
+          "lastContact": "lcd-boundary-21"
+        },
+        {
+          "id": 11,
+          "x": 88.58871877494235,
+          "y": 451.1215082884791,
+          "speed": 9.297918542952921,
+          "front": true,
+          "lastContact": "lcd-boundary-21"
+        },
+        {
+          "id": 12,
+          "x": 81.35161435241184,
+          "y": 448.84392750761094,
+          "speed": 15.893884212773845,
+          "front": true,
+          "lastContact": "lcd-boundary-21"
+        },
+        {
+          "id": 13,
+          "x": 70.3369682726833,
+          "y": 475.35541987569775,
+          "speed": 3.711187247521128,
+          "front": true,
+          "lastContact": "lcd-boundary-20"
+        },
+        {
+          "id": 14,
+          "x": 74.64349484926599,
+          "y": 471.23191551808856,
+          "speed": 4.616364501836973,
+          "front": true,
+          "lastContact": "lcd-boundary-20"
+        },
+        {
+          "id": 16,
+          "x": 52.342175878177585,
+          "y": 478.7983823327234,
+          "speed": 2.634969861051607,
+          "front": true,
+          "lastContact": "out-left"
+        },
+        {
+          "id": 17,
+          "x": 74.69939106932424,
+          "y": 465.2215704539633,
+          "speed": 3.4012799630135904,
+          "front": true,
+          "lastContact": "lcd-boundary-20"
+        },
+        {
+          "id": 18,
+          "x": 68.97110130803749,
+          "y": 469.4902790901811,
+          "speed": 6.20291272343194,
+          "front": true,
+          "lastContact": "prize"
+        },
+        {
+          "id": 19,
+          "x": 49.80142480141715,
+          "y": 473.3602403750591,
+          "speed": 1.6131057987124064,
+          "front": true,
+          "lastContact": "out-left"
+        },
+        {
+          "id": 20,
+          "x": 56.732006021281315,
+          "y": 474.7466941052398,
+          "speed": 4.408543116720009,
+          "front": true,
+          "lastContact": "prize"
+        }
+      ],
+      "seconds": 36.41666666664959,
+      "maxAge": 36.41666666664959,
+      "lcdIntrusions": [],
+      "roadContacts": 1,
+      "config": {
+        "label": "現在",
+        "radius": 3,
+        "speedOffset": 125
+      },
+      "reconciled": true
+    },
+    {
+      "kind": "lcd-only",
+      "phase": 0,
+      "requested": 20,
+      "spawned": 20,
+      "entered": 20,
+      "counts": {
+        "fuzu": 0,
+        "normal": 2,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 10,
+        "returned": 0
+      },
+      "remaining": [
+        {
+          "id": 2,
+          "x": 111.27374630669509,
+          "y": 520.7025537369285,
+          "speed": 0.3655620842228715,
+          "front": true,
+          "lastContact": "prize"
+        },
+        {
+          "id": 3,
+          "x": 274.66145108269023,
+          "y": 529.2149197678956,
+          "speed": 0.04783018603206751,
+          "front": true,
+          "lastContact": "right-channel-traced-electric"
+        },
+        {
+          "id": 12,
+          "x": 78.31634738458942,
+          "y": 293.3474239614344,
+          "speed": 1.6874969353731686,
+          "front": true,
+          "lastContact": "prize"
+        },
+        {
+          "id": 14,
+          "x": 268.976067125963,
+          "y": 531.1300534731815,
+          "speed": 0.06774502364127681,
+          "front": true,
+          "lastContact": "right-channel-traced-electric"
+        },
+        {
+          "id": 17,
+          "x": 134.93791471587005,
+          "y": 517.9813952147996,
+          "speed": 0.15538655855788305,
+          "front": true,
+          "lastContact": "michi"
+        },
+        {
+          "id": 18,
+          "x": 174.61298012616575,
+          "y": 539.5088153172186,
+          "speed": 0.1076894291322885,
+          "front": true,
+          "lastContact": "michi"
+        },
+        {
+          "id": 19,
+          "x": 81.01724264543957,
+          "y": 287.99617846026615,
+          "speed": 1.9639166500540357,
+          "front": true,
+          "lastContact": "lcd-boundary-0"
+        },
+        {
+          "id": 20,
+          "x": 87.02375450803012,
+          "y": 492.70255110963143,
+          "speed": 0.1309705294720031,
+          "front": true,
+          "lastContact": "michi"
+        }
+      ],
+      "seconds": 36.41666666664959,
+      "maxAge": 35.81666666665018,
+      "lcdIntrusions": [],
+      "roadContacts": 15,
+      "config": {
+        "label": "枠の接触だけ見直す",
+        "radius": 3,
+        "speedOffset": 125
+      },
+      "reconciled": true
+    }
+  ],
+  "calibrated": [
+    {
+      "kind": "calibrated",
+      "phase": 0,
+      "requested": 30,
+      "spawned": 30,
+      "entered": 30,
+      "counts": {
+        "fuzu": 0,
+        "normal": 1,
+        "start": 3,
+        "rush": 0,
+        "bonus": 0,
+        "out": 26,
+        "returned": 0
+      },
+      "remaining": [],
+      "seconds": 42.41666666664957,
+      "maxAge": 6.341666666667232,
+      "lcdIntrusions": [],
+      "roadContacts": 27,
+      "config": {
+        "label": "小径玉と元の初速で切り分け",
+        "radius": 1.8,
+        "speedOffset": 55
+      },
+      "reconciled": true
+    },
+    {
+      "kind": "calibrated",
+      "phase": 0.175,
+      "requested": 30,
+      "spawned": 30,
+      "entered": 30,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 3,
+        "rush": 0,
+        "bonus": 0,
+        "out": 27,
+        "returned": 0
+      },
+      "remaining": [],
+      "seconds": 42.5916666666492,
+      "maxAge": 6.2083333333338535,
+      "lcdIntrusions": [],
+      "roadContacts": 27,
+      "config": {
+        "label": "小径玉と元の初速で切り分け",
+        "radius": 1.8,
+        "speedOffset": 55
+      },
+      "reconciled": true
+    },
+    {
+      "kind": "calibrated",
+      "phase": 0.35,
+      "requested": 30,
+      "spawned": 30,
+      "entered": 30,
+      "counts": {
+        "fuzu": 0,
+        "normal": 2,
+        "start": 1,
+        "rush": 0,
+        "bonus": 0,
+        "out": 27,
+        "returned": 0
+      },
+      "remaining": [],
+      "seconds": 42.766666666648575,
+      "maxAge": 5.825000000000439,
+      "lcdIntrusions": [],
+      "roadContacts": 29,
+      "config": {
+        "label": "小径玉と元の初速で切り分け",
+        "radius": 1.8,
+        "speedOffset": 55
+      },
+      "reconciled": true
+    }
+  ],
+  "sources": {
+    "src/dev/frame-route-trial-model.js": "6bb5647c5d6ce279fa7edf659b58cd90dcaf0f4794450d003b0c9b59217d0966",
+    "src/pixi/source-guide-trace.js": "b10fea62f4c5c44aa5507eec4485a253cbf945e7c4a49cfbb6d2d740d4b99b20",
+    "src/app/production-board-profile.js": "2eae6ce462f5726d663f205981d2288bc4433b533f1b69d694a7d003f8ef6046",
+    "src/physics/physics.js": "2f218c733a58d109af334a439fe536e981217ae86b49579f2d3c24b2f6686451",
+    "src/pixi/source-layout.js": "46b8aff73fb3a5906558cf5a7b81bf3ae88193c65836336e43734647ad792732"
+  }
+}

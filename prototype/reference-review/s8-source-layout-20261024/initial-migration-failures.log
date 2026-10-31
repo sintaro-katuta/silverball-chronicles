@@ -1,0 +1,73 @@
+✔ legacy geometry retains original arcs; reference visible bands replace estimated upper centerlines (6.937667ms)
+✔ reference geometry leaves all original101 pins and physical launch/material settings unchanged, unknown static mark has no invented force; only user-described finite valve adds contact (39.705833ms)
+✔ naturally launched single balls cross the inferred opening before front-plane transfer in all three modes (441.440792ms)
+✔ reference local rail clears all original pin shafts, including existing legacy overlap at36 (16.891ms)
+✔ separate launch planes exclude cross-plane pairs with either rail profile, preserving same-plane impulse (45.777667ms)
+✔ retained clipped rail has no invented end cap; continuous outside side and legacy cap remain (16.94475ms)
+✔ separate launch planes ignore front playfield overlap but retain actual rear barrel obstruction (15.036792ms)
+✔ existing visible U strips and body contact front balls only, while launch back and white opening remain traversable (15.779333ms)
+✔ exit flap blocks a returning front ball without accelerating it, while the rear launch plane passes (8.926875ms)
+✔ continuous default-power launches do not return or retain balls, initial phase 0 (3153.11725ms)
+✔ continuous default-power launches do not return or retain balls, initial phase 0.175 (3180.842584ms)
+✔ continuous default-power launches do not return or retain balls, initial phase 0.35 (3085.836958ms)
+✖ insufficient launch energy still returns a rear ball to stock instead of being forced into the field (2552.057584ms)
+✔ original right-road spacing clears the reference ball diameter (15.376833ms)
+✖ reference balls bypass a closed electric shutter at the highest normal slider power (5417.737917ms)
+✔ production pins match all101 centers in the original diagram measurement overlay without offsets (221.3745ms)
+✔ fresh profile and factory clones prevent cross-session mutation; reset reconstruction preserves layout and normal/right launch strengths (124.610125ms)
+✔ app uses one profile and power constant for initial mount and dock, retaining slider range and reset option forwarding (1.991292ms)
+✔ shared visible polygons preserve measured source knots and no sampled edge exceeds .5 source pixels (11.97675ms)
+✔ shape-preserving interpolation stays between each pair of source x knots (0.147792ms)
+✔ adopted contact solids use exact visible vertices, lower uncertain components are not converted to walls (45.432667ms)
+ℹ tests 21
+ℹ suites 0
+ℹ pass 19
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17501.04175
+
+✖ failing tests:
+
+test at prototype/tests/launch-return-regression.test.js:18:1
+✖ insufficient launch energy still returns a rear ball to stock instead of being forced into the field (2552.057584ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  0 !== 1
+
+      at TestContext.<anonymous> (file:///private/tmp/silverball-s08-board-consistency-20261020/prototype/tests/launch-return-regression.test.js:19:224)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 0,
+    expected: 1,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at prototype/tests/launch-return-regression.test.js:27:1
+✖ reference balls bypass a closed electric shutter at the highest normal slider power (5417.737917ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  3 !== 0
+
+      at TestContext.<anonymous> (file:///private/tmp/silverball-s08-board-consistency-20261020/prototype/tests/launch-return-regression.test.js:30:44)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 3,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

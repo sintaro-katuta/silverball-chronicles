@@ -1,0 +1,13 @@
+import {runFrameRouteTrial} from '../src/dev/frame-route-trial-model.js';
+import {readFileSync,writeFileSync} from 'node:fs';import{createHash}from'node:crypto';
+const paths=['src/dev/frame-route-trial-model.js','src/pixi/source-guide-trace.js','src/app/production-board-profile.js','src/physics/physics.js','src/pixi/source-layout.js'];
+const hashes=()=>Object.fromEntries(paths.map(p=>[p,createHash('sha256').update(readFileSync(new URL('../'+p,import.meta.url))).digest('hex')]));
+const before=hashes(),baselines=['current','lcd-only'].map(kind=>runFrameRouteTrial(kind,{shots:20}));
+const log=readFileSync('/private/tmp/s8-frame-route-tests.log','utf8'),line=log.split('\n').find(s=>s.startsWith('FRAME_TRIAL_RESULTS '));if(!line)throw Error('Wait for completed verification log');
+const calibrated=JSON.parse(line.slice('FRAME_TRIAL_RESULTS '.length));
+if(calibrated.length!==3||calibrated.some(r=>r.spawned!==30||r.remaining.length||r.counts.returned||r.lcdIntrusions.length||!r.reconciled))throw Error('Control did not meet verification criteria');
+const after=hashes();if(JSON.stringify(before)!==JSON.stringify(after))throw Error('Sources changed while measuring');
+const review={createdAt:new Date().toISOString(),scope:'Dev-only diagnostic comparison. Small ball and original launch speed require a new user decision; production remains unchanged.',baselines,calibrated,sources:after};
+writeFileSync(new URL('../src/dev/frame-route-results.json',import.meta.url),JSON.stringify(review,null,2)+'\n');
+writeFileSync(new URL('../reference-review/s8-frame-route-20261024/results.json',import.meta.url),JSON.stringify(review,null,2)+'\n');
+console.log(JSON.stringify({baselines:baselines.map(r=>({kind:r.kind,shots:r.spawned,residual:r.remaining.length})),control:calibrated.map(r=>({phase:r.phase,shots:r.spawned,residual:r.remaining.length,lcd:r.lcdIntrusions.length,road:r.roadContacts}))}));

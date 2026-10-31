@@ -1,0 +1,42 @@
+✔ a naturally launched ball leaves through the actual rail mouth before changing plane (127.751084ms)
+✔ natural 0.2/0.6 stream cannot cross launch rails and drains (3583.375875ms)
+✔ natural 0.24/0.05 stream cannot cross launch rails and drains (36404.969083ms)
+✔ legacy geometry retains original arcs; reference visible bands replace estimated upper centerlines (20.532ms)
+✔ reference geometry leaves all original101 pins and physical launch/material settings unchanged, unknown static mark has no invented force; only user-described finite valve adds contact (104.540292ms)
+✔ naturally launched single balls cross the inferred opening before front-plane transfer in all three modes (1092.796583ms)
+✔ reference local rail clears all original pin shafts, including existing legacy overlap at36 (56.074542ms)
+✔ separate launch planes exclude cross-plane pairs with either rail profile, preserving same-plane impulse (141.154042ms)
+✔ retained clipped rail has no invented end cap; continuous outside side and legacy cap remain (35.658291ms)
+✔ separate launch planes ignore front playfield overlap but retain actual rear barrel obstruction (25.269792ms)
+✔ existing visible U strips and body contact front balls only, while launch back and white opening remain traversable (38.045791ms)
+✔ launcher holds new shots for an occupied muzzle or a returning ball (12.620042ms)
+✔ single-file launcher drains after sustained maximum-rate and weak-shot firing (18469.5955ms)
+✔ stage 6 normal firing keeps its full cadence without an upper-exit pileup (29858.417958ms)
+✔ production pins match all101 centers in the original diagram measurement overlay without offsets (520.782334ms)
+✔ fresh profile and factory clones prevent cross-session mutation; reset reconstruction preserves layout and normal/right launch strengths (194.7235ms)
+✔ app uses one profile and power constant for initial mount and dock, retaining slider range and reset option forwarding (1.077209ms)
+✔ pin and guide alignment leaves all other settings at the user baseline (0.412625ms)
+LAUNCH_DEPTH_RESULTS [{"mode":"normal","phase":0,"shots":30,"entered":30,"rearRemaining":0,"upperRemaining":0,"counts":{"fuzu":0,"normal":0,"start":0,"rush":0,"bonus":0,"out":11,"returned":0},"fieldRemaining":19},{"mode":"normal","phase":0.175,"shots":30,"entered":30,"rearRemaining":0,"upperRemaining":0,"counts":{"fuzu":0,"normal":0,"start":0,"rush":0,"bonus":0,"out":10,"returned":0},"fieldRemaining":20},{"mode":"normal","phase":0.35,"shots":30,"entered":30,"rearRemaining":0,"upperRemaining":0,"counts":{"fuzu":0,"normal":0,"start":0,"rush":0,"bonus":0,"out":15,"returned":0},"fieldRemaining":15},{"mode":"rush","phase":0,"shots":30,"entered":30,"rearRemaining":0,"upperRemaining":0,"counts":{"fuzu":0,"normal":0,"start":0,"rush":29,"bonus":0,"out":0,"returned":0},"fieldRemaining":1},{"mode":"bonus","phase":0,"shots":30,"entered":30,"rearRemaining":0,"upperRemaining":0,"counts":{"fuzu":0,"normal":0,"start":0,"rush":0,"bonus":0,"out":15,"returned":0},"fieldRemaining":15}]
+✔ production normal phase 0: 30 natural shots leave the rear launcher (17369.912167ms)
+✔ production normal phase 0.175: 30 natural shots leave the rear launcher (17274.929667ms)
+✔ production normal phase 0.35: 30 natural shots leave the rear launcher (13740.823334ms)
+✔ production rush phase 0: 30 natural shots leave the rear launcher (6340.597416ms)
+✔ production bonus phase 0: 30 natural shots leave the rear launcher (15195.07625ms)
+✔ rear contact is absent from front balls; original visible polygons and other profiles remain unchanged (59.988167ms)
+✔ the front layer is not entered while a ball overlaps a pin or visible front component (17.350084ms)
+✔ insufficient rear launch energy returns the ball instead of forcing a transfer (102.856625ms)
+✔ mechanical surfaces keep every authored contact edge and leave the complete physics model unchanged (203.787292ms)
+✔ carrier and relief contours include the user extended head and straight right discharge instead of cutting them off with a round bowl (92.31625ms)
+✔ isolated legacy previews retain their rendering and no mechanical surfaces are manufactured without the source profile (4.736833ms)
+✔ unchanged guides retain earlier image observations; user edits take precedence over those estimates (70.124041ms)
+✔ original settings, pockets, mechanisms, pins and non-guide contacts are unchanged by tracing (200.316084ms)
+✔ rendered guide centrelines and contacts use the same vertices; moulding seams never become walls (62.919334ms)
+✔ all 22 guide paths and their contacts adopt the user submission verbatim, without the superseded head edges (22.114667ms)
+ℹ tests 33
+ℹ suites 0
+ℹ pass 33
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 70210.220584

@@ -1,0 +1,48 @@
+✔ persistent views reuse introduction poses and preserve adopted board pose (1.474625ms)
+✔ introduction visits whole, board, LCD and returns exactly to adopted play view (0.327833ms)
+✔ skip and reduced motion restore adopted camera with no residual outer frame (0.194334ms)
+✔ LCD camera contains every corner with padding and clamps long frame gaps (0.191791ms)
+✔ review close-ups contain both specified left zones without changing the board view (0.20125ms)
+✔ production normal phase 0: 30 natural shots leave the rear launcher (4770.279875ms)
+✔ production normal phase 0.175: 30 natural shots leave the rear launcher (4817.622584ms)
+✔ production normal phase 0.35: 30 natural shots leave the rear launcher (4433.122584ms)
+✔ production rush phase 0: 30 natural shots leave the rear launcher (6319.707042ms)
+✔ production bonus phase 0: 30 natural shots leave the rear launcher (14491.098583ms)
+✔ rear contact is absent from front balls; original visible polygons and other profiles remain unchanged (55.927584ms)
+✔ the front layer is not entered while a ball overlaps a pin or visible front component (16.367709ms)
+✔ insufficient rear launch energy returns the ball instead of forcing a transfer (90.102208ms)
+✔ source-diagram route renders balls at their physical positions without the former depth offset (0.886958ms)
+✔ right route advances real balls and pause freezes their physical/display coordinates (792.07675ms)
+✔ mechanical surfaces retain authored edges plus the continuous guard without mutating physics (100.379041ms)
+✔ carrier and relief contours include the user extended head and straight right discharge instead of cutting them off with a round bowl (45.981459ms)
+✔ isolated legacy previews retain their rendering and no mechanical surfaces are manufactured without the source profile (0.391917ms)
+✔ decorative connection retains authored endpoints while rounded art remains visible (73.601083ms)
+✔ the guessed entrance bridge and terminal stub no longer trap a full-size ball (63.213125ms)
+✔ upper character contact follows the rendered solid and leaves the rear launch plane clear (34.620958ms)
+✔ user-specified upper slope is solid while the lower apron contour is decoration (38.463459ms)
+✔ road contacts match the existing visible head size without moving pins or changing ball diameter (26.004583ms)
+✔ head contact preserves both authored road spill gaps for the unchanged ball diameter (22.274166ms)
+✔ unchanged guides retain earlier image observations; user edits take precedence over those estimates (65.315708ms)
+✔ original settings, pockets, mechanisms, pins and non-guide contacts are unchanged by tracing (102.784958ms)
+✔ rendered guide centrelines and contacts use the same vertices; moulding seams never become walls (38.608916ms)
+✔ all 22 guide paths and their contacts adopt the user submission verbatim, without the superseded head edges (27.812834ms)
+✔ stage uses the marked existing inverse-V without moving any authored source point, pin, or ball diameter (126.740667ms)
+✔ front and rear balls both stay out of the LCD solid, while rear launch remains separate (38.709333ms)
+✔ recessed guide catches a ball above the actual marked slope and leaves the front nail plane unobstructed (48.685792ms)
+✔ the central original trough returns a ball through the depth slope, then ordinary pin and pocket physics resumes (55.6775ms)
+✔ stage prediction does not change original sphere state or entry/exit counters (76.719875ms)
+✔ a sphere that cannot clear the original receiving corner spills to the front without a shove or relocation (16.672625ms)
+✔ depth ramp side contacts dissipate kinetic energy without attracting a stationary sphere to the centre (18.480041ms)
+✔ the neighbouring low part of the original trough drains through the depth ramp instead of remaining in a 2D pit (121.994042ms)
+✔ the shared floor closes the sampled right joint using existing vertices and does not form a capsule-end trap (98.285417ms)
+✔ pin friction exchanges linear/angular energy within the Coulomb bound without adding energy (1.184416ms)
+✔ zero friction or no support impulse cannot initialize spin or propel a stopped ball (0.7485ms)
+✔ front pin contact generates spin passively while rear launch ignores pins and legacy physics remains unchanged (75.1245ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 35094.869125
