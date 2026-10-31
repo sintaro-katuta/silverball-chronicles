@@ -7,12 +7,12 @@ import {circlePolygonContact} from '../src/physics/solid-polygon-contact.js';
 import {sourceBoardSurfaces} from '../src/pixi/source-board-surfaces.js';
 const board=()=>createBoardFlow({lcd:true,...productionBoardFlowOptions()});
 const ball=(source,vx=0,vy=0)=>{const[x,y]=sourcePoint(source);return{id:1,x,y,vx,vy,r:3,age:0,leftLaunchPlane:true,contactCount:0,contactRoles:[]};};
-test('stage preserves marked inverse-V, ball diameter and pin centres except approved upper/right pins',()=>{
+test('stage preserves marked inverse-V, ball diameter and pin centres except prior upper/right pins and proposed pin 79',()=>{
  const p=board().flow.physics,s=p.sourceStage,paths=JSON.parse(readFileSync(new URL('../reference-review/s8-right-user-layout-20261026/user-layout.json',import.meta.url))).lines;
  for(const q of paths)assert.deepEqual(p.sourceGuidePaths.find(v=>v.id===q.id).points,q.points);
  assert.deepEqual(s.points,sourcePath(paths.find(q=>q.id==='apron-moulding').points).map(([x,y])=>({x,y})));
  for(const g of s.guides){const q=sourceGuidePaths().find(v=>v.id===g.sourceGuideId);assert.deepEqual(g.a,q.worldPoints[g.sourceGuideSegment]);assert.deepEqual(g.b,q.worldPoints[g.sourceGuideSegment+1]);}
- assert.deepEqual(p.pins.map(p=>[p.x,p.y]),sourcePath([...ROAD_SOURCE,...LEFT_PINS_SOURCE,...RIGHT_ROAD_SOURCE]).map(([x,y],i)=>{const q=JSON.parse(readFileSync(new URL('./fixtures/s8-approved-right-road.json',import.meta.url))).pins.find(p=>p.id===i+1);return q?[q.x,q.y]:[x-(i===32?3:0),y];}));assert.equal(p.ballRadius,3);
+ assert.deepEqual(p.pins.map(p=>[p.x,p.y]),sourcePath([...ROAD_SOURCE,...LEFT_PINS_SOURCE,...RIGHT_ROAD_SOURCE]).map(([x,y],i)=>{const q=JSON.parse(readFileSync(new URL('./fixtures/s8-approved-right-road.json',import.meta.url))).pins.find(p=>p.id===i+1);return q?[q.x,q.y]:[x-(i===32?3:0),y+(i===78?1:0)];}));assert.equal(p.ballRadius,3);
  assert.ok(sourceBoardSurfaces(p).details.find(q=>q.id==='apron-moulding').recessedGuide);assert.equal(p.sourceGuidePaths.find(q=>q.id==='apron-bevel-left').contactRole,undefined);
 });
 test('front and rear balls both stay out of the LCD solid, while rear launch remains separate',()=>{

@@ -2,12 +2,12 @@ import test from 'node:test';import assert from 'node:assert/strict';import{read
 import{PRODUCTION_NORMAL_POWER,productionBoardFlowOptions}from'../src/app/production-board-profile.js';
 import{createBoardFlow}from'../src/pixi/board-flow.js';
 const plain=x=>JSON.parse(JSON.stringify(x));
-test('production preserves diagram centres except the five explicitly approved residual-fix centres',()=>{
+test('production preserves diagram centres except the prior five and the proposed local pin 79',()=>{
  const overlay=readFileSync(new URL('../reference-review/tokyoghoul-w-handoff/designer-pin-comparison.html',import.meta.url),'utf8'),centers=[...overlay.matchAll(/<circle cx="([\d.]+)" cy="([\d.]+)"/g)].map(m=>[Number(m[1]),Number(m[2])]);assert.equal(centers.length,101);
  const options=productionBoardFlowOptions();assert.equal(options.ballRadius,3);assert.equal(options.hesoMouthWidth,16);assert.equal(options.launchRailProfile,'reference-exit');assert.equal(options.leftInletRoute,'diagram');assert.equal(options.normalLaunchSpeedOffset,125);
  for(const pegSeed of [0,1,17,991]){
   const actual=createBoardFlow({lcd:true,pegSeed,...options}).flow.physics;assert.equal(actual.pins.length,101);
-  for(let i=0;i<101;i++){assert.equal(actual.pins[i].id,i+1);const approved=JSON.parse(readFileSync(new URL('./fixtures/s8-approved-right-road.json',import.meta.url))).pins.find(p=>p.id===i+1);assert.equal(actual.pins[i].x,approved?.x??(centers[i][0]*.5-14-(i===32?3:0)));assert.equal(actual.pins[i].y,approved?.y??(centers[i][1]*.5+120));}
+  for(let i=0;i<101;i++){assert.equal(actual.pins[i].id,i+1);const approved=JSON.parse(readFileSync(new URL('./fixtures/s8-approved-right-road.json',import.meta.url))).pins.find(p=>p.id===i+1);assert.equal(actual.pins[i].x,approved?.x??(centers[i][0]*.5-14-(i===32?3:0)));assert.equal(actual.pins[i].y,approved?.y??(centers[i][1]*.5+120+(i===78?1:0)));}
   const baseline=createBoardFlow({lcd:true,pegSeed,launchRailProfile:'reference-exit',leftAdmissionGuides:false,hesoMouthWidth:16,ballRadius:3,leftInletRoute:'diagram',guideMechanicsProfile:'continuous-source-v1'}).flow.physics;
   assert.deepEqual(actual.colliders,baseline.colliders);assert.deepEqual(actual.pockets,baseline.pockets);
   assert.equal(actual.mechanisms[0].x,64);assert.equal(actual.mechanisms[0].y,476.5);assert.equal(actual.mechanisms[0].radius,10);assert.equal(actual.mechanisms[0].responseProfile,'light-rotor-v1');
