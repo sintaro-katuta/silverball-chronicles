@@ -259,12 +259,13 @@ export class Physics {
    if(b.dead)continue;b.age+=h;const previous=this.advanceBall(b,h,{game});
    if(!b.observedSide&&b.vy>0&&previous.y<210&&b.y>=210&&b.x>40&&b.x<379){b.observedSide=b.x>=344?'right':'left';this.metrics[b.observedSide]++;this.flow.push({side:b.observedSide,time:game.time??this.time,ballId:b.id,power:b.power});if(this.flow.length>100)this.flow.shift();}
    for(const p of this.pockets){
-    if(b.onSourceStage)continue;
+    if(b.onSourceStage||b.bonusDraining)continue;
     if((p.kind==='bonus'&&!attackerOpen(game))||(p.kind==='rush'&&!rightStartOpen(game)))continue;
-    if(pocketCrossing(previous,b,p)){game.hit(b,p.kind,p.id);this.recordOutcome(b,p.kind);this.metrics[p.kind]++;b.dead=true;if(game.phase&&game.phase!=='playing')break integration;break;}
+    if(pocketCrossing(previous,b,p)){game.hit(b,p.kind,p.id);this.recordOutcome(b,p.kind);this.metrics[p.kind]++;if(p.kind==='bonus'&&this.bonusDrainExit)b.bonusDraining=true;else b.dead=true;if(game.phase&&game.phase!=='playing')break integration;break;}
    }
-   if(!b.dead&&!b.onSourceStage&&b.leftLaunchPlane&&(this.exitSensors??[]).some(exit=>pocketCrossing(previous,b,exit))){game.lose(b);this.recordOutcome(b,'out');this.metrics.out++;b.dead=true;}
-   if(!b.dead&&b.y>675){const returned=Math.abs(b.x-this.returnOutlet.x)<=this.returnOutlet.w/2;if(returned){if(!b.extra){game.addStock?.(1,'returned');game.emit?.('return');}}else game.lose(b);this.recordOutcome(b,returned?'returned':'out');this.metrics[returned?'returned':'out']++;b.dead=true;}
+   if(!b.dead&&b.bonusDraining&&this.bonusDrainExit&&b.y>=this.bonusDrainExit.y&&b.x>=this.bonusDrainExit.left&&b.x<=this.bonusDrainExit.right)b.dead=true;
+   if(!b.dead&&!b.bonusDraining&&!b.onSourceStage&&b.leftLaunchPlane&&(this.exitSensors??[]).some(exit=>pocketCrossing(previous,b,exit))){game.lose(b);this.recordOutcome(b,'out');this.metrics.out++;b.dead=true;}
+   if(!b.dead&&!b.bonusDraining&&b.y>675){const returned=Math.abs(b.x-this.returnOutlet.x)<=this.returnOutlet.w/2;if(returned){if(!b.extra){game.addStock?.(1,'returned');game.emit?.('return');}}else game.lose(b);this.recordOutcome(b,returned?'returned':'out');this.metrics[returned?'returned':'out']++;b.dead=true;}
   }
   for(let i=0;i<this.balls.length;i++)for(let j=i+1;j<this.balls.length;j++)if(!this.balls[i].dead&&!this.balls[j].dead&&!!this.balls[i].onSourceStage===!!this.balls[j].onSourceStage&&Math.abs((this.balls[i].stageDepth??0)-(this.balls[j].stageDepth??0))<.5&&!(this.separateLaunchPlane&&!!this.balls[i].leftLaunchPlane!==!!this.balls[j].leftLaunchPlane)&&(activePhysicsTrace?traceSolverContact(this,this.balls[i],{kind:'ball-pair',id:this.balls[j].id},'pair-separation',()=>pairContact(this.balls[i],this.balls[j]),this.balls[j]):pairContact(this.balls[i],this.balls[j]))){this.metrics.ballContacts++;this.balls[i].prediction=null;this.balls[j].prediction=null;}
   // Resolve static surfaces after dense-stream separation as well: otherwise

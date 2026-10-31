@@ -46,20 +46,9 @@ export function paintLunarReliefs({c,poly,line,plate,at,portrait=null,background
   for(const [i,ch]of [...'月影機関'].entries()){const [tx,ty]=at(titlePoint([151,430+i*82/1.5]));c.fillStyle='#071321';c.fillText(ch,tx+3,ty+4);c.fillStyle=bright;c.fillText(ch,tx,ty);}
  });
  }
- // Right: pommel, wrapped grip, crescent guard, scabbard and metal chape.
+ // Keep the right mounting plate; the sword relief was removed at the user's request.
  const right=sourceBoard?.rightRelief??[[708,370],[748,378],[771,480],[781,541],[765,582],[770,612],[714,629]];
  plate(right,dark);
- clipped(right,()=>{
-  ring(735,395,17,gold);ring(735,395,11,bright);ring(740,390,10,dark);
-  plate([[724,410],[746,410],[751,452],[728,452]],'#315879');
-  for(let i=0;i<5;i++)line([728,414+i*7],[748,420+i*7],gold,3);
-  poly([[710,451],[727,454],[739,463],[753,452],[767,447],[764,462],[740,480],[719,471]],gold);
-  poly([[730,479],[750,479],[768,574],[750,618],[733,593]],shade);
-  poly([[734,481],[742,482],[756,574],[748,607],[741,588]],steel);
-  line([747,487],[760,574],gold,3);
-  for(let i=0;i<3;i++){const y=505+i*26;line([736+i*3,y],[753+i*3,y+4],gold,5);}
-  poly([[739,586],[761,580],[750,619]],gold);poly([[743,590],[754,587],[750,608]],bright);
- });
  if(sourceBoard?.sourceActuators)return;
  // Lower right: an engraved seal clasp; it shares the sword's crescent vocabulary.
  if(sourceBoard){c.save();c.beginPath();sourceBoard.claspClip.map(at).forEach(([x,y],i)=>i?c.lineTo(x,y):c.moveTo(x,y));c.closePath();c.clip();}

@@ -24,6 +24,7 @@ export function installSourceRightActuators(physics){
  const [ax,ay]=sourcePoint([739.6,807]);Object.assign(attacker,{x:ax,y:ay,w:(749.1-726.4)*.5});
  delete attacker.captureTray;delete attacker.captureRegion;
  attacker.sourceFixedRightReceiver=true;
+ physics.bonusDrainExit={left:sourcePoint([628,909])[0],right:sourcePoint([659,909])[0],y:sourcePoint([628,909])[1]};
  const [ex,ey]=sourcePoint([581,852]);Object.assign(electric,{x:ex,y:ey,w:23});delete electric.captureTray;
  delete electric.captureRegion;electric.sourceRearIntake=true;
  // Dotted lines in the source join the bypass to the lower ordinary starter.

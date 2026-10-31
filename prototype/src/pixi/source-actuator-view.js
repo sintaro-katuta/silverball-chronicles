@@ -23,7 +23,6 @@ export class SourceActuatorView{
    const receiver=this.physics.pockets.find(p=>p.kind==='bonus'),R=pt(receiver),half=Math.round(receiver.w);
    d.rect(R[0]-half,R[1]-2,half*2,5,'#020711');
    d.line(R[0]-half,R[1]+3,R[0]+half,R[1]+3,'#a9c2d3',1);
-   c.fillStyle='#dfc879';c.font='bold 10px monospace';c.textAlign='center';c.fillText('15',R[0],R[1]+14);
    const pose=sourceAttackerPose(progress),a=pose.tip,b=pose.hinge,dx=b.x-a.x,dy=b.y-a.y,l=Math.hypot(dx,dy),n={x:dy/l*8,y:-dx/l*8};
    const quad=[a,{x:a.x+n.x,y:a.y+n.y},{x:b.x+n.x*.65,y:b.y+n.y*.65},b];
    d.poly(quad.map(pt),'#7893a3');
