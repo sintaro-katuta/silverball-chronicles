@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "method": "Horizontal runs of equal quantized Rec709 luminance, per opaque ROI row; thresholds8/16/32; alpha<250 excluded. Runs are shade-band statistics, not a native pixel grid or an automatic art-quality score.",
+  "inputs": {
+    "body": {
+      "path": "public/assets/lcd/long-reach/duel-poses-longhair-v4.png",
+      "url": "/assets/lcd/long-reach/duel-poses-longhair-v4.png",
+      "width": 1536,
+      "height": 1024,
+      "sha256": "804c6dc3a8d900703c701436213c3020c66f90a3385d1813cff31e2aae703a9e"
+    },
+    "portrait": {
+      "path": "public/assets/lcd/long-reach/hero-resolve-portrait-v1.png",
+      "url": "/assets/lcd/long-reach/hero-resolve-portrait-v1.png",
+      "width": 1254,
+      "height": 1254,
+      "sha256": "a385031fca2a2b91c33b8f66eec57dbdacda8a69d9092b0d9854b91b65175b1f"
+    }
+  },
+  "probes": [
+    {
+      "id": "body-hair",
+      "asset": "body",
+      "material": "hair",
+      "rect": [
+        630,
+        240,
+        60,
+        35
+      ],
+      "levels": [
+        {
+          "lumaStep": 8,
+          "opaqueSamples": 2100,
+          "excludedAlphaSamples": 0,
+          "runCount": 596,
+          "medianSourcePx": 2,
+          "p90SourcePx": 8,
+          "singlePixelShare": 0.47315436241610737
+        },
+        {
+          "lumaStep": 16,
+          "opaqueSamples": 2100,
+          "excludedAlphaSamples": 0,
+          "runCount": 391,
+          "medianSourcePx": 3,
+          "p90SourcePx": 12,
+          "singlePixelShare": 0.35294117647058826
+        },
+        {
+          "lumaStep": 32,
+          "opaqueSamples": 2100,
+          "excludedAlphaSamples": 0,
+          "runCount": 196,
+          "medianSourcePx": 6,
+          "p90SourcePx": 28,
+          "singlePixelShare": 0.1989795918367347
+        }
+      ]
+    },
+    {
+      "id": "body-armor",
+      "asset": "body",
+      "material": "armor",
+      "rect": [
+        704,
+        130,
+        45,
+        36
+      ],
+      "levels": [
+        {
+          "lumaStep": 8,
+          "opaqueSamples": 1092,
+          "excludedAlphaSamples": 528,
+          "runCount": 637,
+          "medianSourcePx": 1,
+          "p90SourcePx": 3,
+          "singlePixelShare": 0.6514913657770801
+        },
+        {
+          "lumaStep": 16,
+          "opaqueSamples": 1092,
+          "excludedAlphaSamples": 528,
+          "runCount": 434,
+          "medianSourcePx": 1,
+          "p90SourcePx": 5,
+          "singlePixelShare": 0.5184331797235023
+        },
+        {
+          "lumaStep": 32,
+          "opaqueSamples": 1092,
+          "excludedAlphaSamples": 528,
+          "runCount": 293,
+          "medianSourcePx": 2,
+          "p90SourcePx": 9,
+          "singlePixelShare": 0.41638225255972694
+        }
+      ]
+    },
+    {
+      "id": "body-skin",
+      "asset": "body",
+      "material": "skin",
+      "rect": [
+        803,
+        220,
+        12,
+        10
+      ],
+      "levels": [
+        {
+          "lumaStep": 8,
+          "opaqueSamples": 120,
+          "excludedAlphaSamples": 0,
+          "runCount": 44,
+          "medianSourcePx": 1,
+          "p90SourcePx": 8,
+          "singlePixelShare": 0.6363636363636364
+        },
+        {
+          "lumaStep": 16,
+          "opaqueSamples": 120,
+          "excludedAlphaSamples": 0,
+          "runCount": 38,
+          "medianSourcePx": 1,
+          "p90SourcePx": 8,
+          "singlePixelShare": 0.5
+        },
+        {
+          "lumaStep": 32,
+          "opaqueSamples": 120,
+          "excludedAlphaSamples": 0,
+          "runCount": 33,
+          "medianSourcePx": 2,
+          "p90SourcePx": 8,
+          "singlePixelShare": 0.42424242424242425
+        }
+      ]
+    },
+    {
+      "id": "portrait-hair",
+      "asset": "portrait",
+      "material": "hair",
+      "rect": [
+        760,
+        425,
+        100,
+        70
+      ],
+      "levels": [
+        {
+          "lumaStep": 8,
+          "opaqueSamples": 7000,
+          "excludedAlphaSamples": 0,
+          "runCount": 2498,
+          "medianSourcePx": 1,
+          "p90SourcePx": 6,
+          "singlePixelShare": 0.5592473979183347
+        },
+        {
+          "lumaStep": 16,
+          "opaqueSamples": 7000,
+          "excludedAlphaSamples": 0,
+          "runCount": 1689,
+          "medianSourcePx": 2,
+          "p90SourcePx": 9,
+          "singlePixelShare": 0.4404973357015986
+        },
+        {
+          "lumaStep": 32,
+          "opaqueSamples": 7000,
+          "excludedAlphaSamples": 0,
+          "runCount": 980,
+          "medianSourcePx": 4,
+          "p90SourcePx": 17,
+          "singlePixelShare": 0.3112244897959184
+        }
+      ]
+    },
+    {
+      "id": "portrait-armor",
+      "asset": "portrait",
+      "material": "armor",
+      "rect": [
+        430,
+        398,
+        95,
+        90
+      ],
+      "levels": [
+        {
+          "lumaStep": 8,
+          "opaqueSamples": 8352,
+          "excludedAlphaSamples": 198,
+          "runCount": 2604,
+          "medianSourcePx": 1,
+          "p90SourcePx": 7,
+          "singlePixelShare": 0.5794930875576036
+        },
+        {
+          "lumaStep": 16,
+          "opaqueSamples": 8352,
+          "excludedAlphaSamples": 198,
+          "runCount": 1811,
+          "medianSourcePx": 2,
+          "p90SourcePx": 14,
+          "singlePixelShare": 0.4798453892876864
+        },
+        {
+          "lumaStep": 32,
+          "opaqueSamples": 8352,
+          "excludedAlphaSamples": 198,
+          "runCount": 1164,
+          "medianSourcePx": 3,
+          "p90SourcePx": 22,
+          "singlePixelShare": 0.3634020618556701
+        }
+      ]
+    },
+    {
+      "id": "portrait-skin",
+      "asset": "portrait",
+      "material": "skin",
+      "rect": [
+        812,
+        700,
+        70,
+        58
+      ],
+      "levels": [
+        {
+          "lumaStep": 8,
+          "opaqueSamples": 4060,
+          "excludedAlphaSamples": 0,
+          "runCount": 175,
+          "medianSourcePx": 3,
+          "p90SourcePx": 70,
+          "singlePixelShare": 0.3485714285714286
+        },
+        {
+          "lumaStep": 16,
+          "opaqueSamples": 4060,
+          "excludedAlphaSamples": 0,
+          "runCount": 110,
+          "medianSourcePx": 50,
+          "p90SourcePx": 70,
+          "singlePixelShare": 0.18181818181818182
+        },
+        {
+          "lumaStep": 32,
+          "opaqueSamples": 4060,
+          "excludedAlphaSamples": 0,
+          "runCount": 93,
+          "medianSourcePx": 70,
+          "p90SourcePx": 70,
+          "singlePixelShare": 0.12903225806451613
+        }
+      ]
+    }
+  ],
+  "renderScale": {
+    "lcdUnitsPerSourcePxBodyAt38_9": 0.20039062500000002,
+    "lcdUnitsPerSourcePxPortraitAt41": 0.24162679425837322,
+    "lcdUnitsPerSourcePxPortraitAt44_5": 0.3054226475279107
+  },
+  "decision": "Review stepped outlines, palette and identity in the source ROIs and actual adjacent shots. No assertion of a uniform512 grid; eye/nose features use a separate detail budget."
+}

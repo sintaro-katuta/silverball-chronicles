@@ -1,0 +1,18 @@
+✔ real launches debit stock and ordinary admissions pay once and queue once (668.196875ms)
+✔ session uses supplied production draw RNG, not review loss RNG (0.540042ms)
+✔ pause freezes both clocks and stop-fire drains existing balls (208.103042ms)
+✔ payout earns tickets without restoring stage progression and in-flight last balls are preserved (0.2415ms)
+✔ production SessionGame uses W control and actual prizes, no stage/gold multipliers (2.471292ms)
+✔ RUSH hit needs actual electric and V admissions before 1500 x 2 (0.781333ms)
+✔ charge is distinct from aligned symbols, fourth branch does not enter RUSH (1.049167ms)
+✔ 6000 plus alpha uses further fuzu and captured electric/V balls; no grant at reset (0.967542ms)
+✔ electric followup result is fixed at admission, not rolled after payout (0.643875ms)
+✔ production RUSH expires only after 130 resolved fuzu misses (10.931958ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 955.932833

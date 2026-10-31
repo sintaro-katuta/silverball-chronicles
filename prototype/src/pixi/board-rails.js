@@ -14,8 +14,8 @@ export const LAUNCH_EXIT=Object.freeze({a:innerExit,b:outerExit,normal:{x:-dy/le
 export const PLAYFIELD_APERTURE=[...OUTER_ARC.map(p=>[p.x,p.y]),...sourcePath([[814,615],[814,924],[610,940],[444,940],[280,927],[215,872],[147,769],[94,645],[72,530]])];
 // Opt-in local structural trial. Legacy default and saved tool geometry are unchanged.
 export function boardRailGeometry(profile='legacy'){
- if(!['legacy','reference-exit'].includes(profile))throw new Error('Unknown launch rail profile');
- if(profile==='legacy')return {profile,inner:INNER_ARC,outer:OUTER_ARC,exit:LAUNCH_EXIT};
+ if(!['legacy','guarded-exit','reference-exit'].includes(profile))throw new Error('Unknown launch rail profile');
+ if(profile!=='reference-exit')return {profile,inner:INNER_ARC,outer:OUTER_ARC,exit:LAUNCH_EXIT};
  const visibleShape=getReferenceRailShape(),outerVisible=visibleShape.components.find(c=>c.id==='outer-thin-band'),a={};
  // SOURCE conversion is a uniform picture transform, not an internal measurement.
  const [ax,ay]=sourcePoint(LAUNCH_VALVE_CONTACT_SOURCE[0]);a.x=ax;a.y=ay;
@@ -28,7 +28,7 @@ export function installBoardRails(physics,{profile='legacy'}={}){
  physics.colliders=physics.colliders.filter(c=>!c.role.startsWith('launch-')&&!['upper-reflector','board-top','out-left','out-right'].includes(c.role));
  const add=(a,b,role)=>physics.colliders.push({a,b,r:role.startsWith('launch-')?LAUNCH_RAIL_RADIUS:.7,material:'rail',role,restitution:.05});
  add({x:22,y:680},OUTER_ARC[0],'launch-outer');add({x:36,y:680},INNER_ARC[0],'launch-inner');
- if(profile==='legacy'){for(const [ps,role] of [[geometry.outer,'launch-outer-arc'],[geometry.inner,'launch-inner-arc']])for(let i=1;i<ps.length;i++)add(ps[i-1],ps[i],role);}
+ if(profile!=='reference-exit'){for(const [ps,role] of [[geometry.outer,'launch-outer-arc'],[geometry.inner,'launch-inner-arc']])for(let i=1;i<ps.length;i++)add(ps[i-1],ps[i],role);}
  else{
   const min=sourcePoint([0,245])[1],max=sourcePoint([0,430])[1];
   // Preserve model-only launcher contacts outside the adopted picture interval.
@@ -48,6 +48,12 @@ export function installBoardRails(physics,{profile='legacy'}={}){
 
  }
 
+ if(profile==='guarded-exit'){
+  const {a,b,normal}=geometry.exit;
+  physics.colliders.push({a:{...a},b:{...b},normal:{...normal},r:LAUNCH_RAIL_RADIUS,material:'rail',role:'launch-non-return-valve',restitution:.05,playfieldOnly:true,nonReturnValve:true});
+  physics.nonReturnValve={a:{...a},b:{...b},normal:{...normal},observationPlane:geometry.exit,radius:LAUNCH_RAIL_RADIUS,restitution:.05,model:'Finite one-way flap at the existing rail exit; authored trial geometry',forwardPasses:0,reverseContacts:0,lastForward:null,lastReverse:null};
+ }
+
  if(profile==='reference-exit'){
   const [a,b]=sourcePath(LAUNCH_VALVE_CONTACT_SOURCE).map(([x,y])=>({x,y})),dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy),normal={x:-dy/len,y:dx/len};
   physics.colliders.push({a,b,normal,r:LAUNCH_RAIL_RADIUS,material:'rail',role:'launch-non-return-valve',restitution:.05,playfieldOnly:true,nonReturnValve:true});
@@ -58,4 +64,23 @@ export function installBoardRails(physics,{profile='legacy'}={}){
  for(let i=1;i<drain.length;i++)add({x:drain[i-1][0],y:drain[i-1][1]},{x:drain[i][0],y:drain[i][1]},'out-left');
  const right=sourcePath([[811,615],[811,924],[647,940]]);
  for(let i=1;i<right.length;i++)add({x:right[i-1][0],y:right[i-1][1]},{x:right[i][0],y:right[i][1]},'out-right');
+}
+
+// Treat the picture's narrow gray face as the front layer in this model.
+// The larger production ball launches behind it along the existing inner rail.
+// This is an authored depth model, not a measurement of the source machine.
+export function installReferenceLaunchDepth(physics){
+ if(physics.launchRailProfile!=='reference-exit'||!physics.separateLaunchPlane||physics.ballRadius<=1.8)return;
+ physics.colliders.find(c=>c.role==='launch-inner-visible-band').playfieldOnly=true;
+ const min=sourcePoint([0,245])[1],max=sourcePoint([0,430])[1];
+ for(let i=1;i<INNER_ARC.length;i++){
+  const a=INNER_ARC[i-1],b=INNER_ARC[i],dx=b.x-a.x,dy=b.y-a.y,ts=[0,1];
+  if(dy)for(const y of [min,max]){const t=(y-a.y)/dy;if(t>0&&t<1)ts.push(t);}
+  ts.sort((a,b)=>a-b);
+  for(let j=1;j<ts.length;j++){
+   const lo=ts[j-1],hi=ts[j],y=a.y+(lo+hi)/2*dy;if(y<min||y>max)continue;
+   physics.colliders.push({a:{x:a.x+lo*dx,y:a.y+lo*dy},b:{x:a.x+hi*dx,y:a.y+hi*dy},r:LAUNCH_RAIL_RADIUS,material:'rail',role:'launch-rear-inner-arc',restitution:.05,rearOnly:true,modelClassification:'existing model inner rail behind unchanged front gray face'});
+  }
+ }
+ physics.launchFrontClearance=true;
 }

@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-20",
+  "branch": "sprint/S08-board-consistency",
+  "base": "16084d9",
+  "scope": "Local guarded2 play prototype; no publication or final acceptance",
+  "unit": {
+    "passed": 713,
+    "failed": 0,
+    "log": "unit-tests.log"
+  },
+  "build": [
+    "build.log",
+    "preview-build.log"
+  ],
+  "browser": "browser-rendered/verification.json",
+  "existingBrowserRegressions": {
+    "starting-ball-preview.browser.mjs": "PASS: two widths, repeat/reset, real wallet isolation",
+    "session-controls.browser.mjs": "PASS: default hidden, pause, focus, feeding, retirement",
+    "s9-audio.browser.mjs": "PASS: 390 and 1440, audio UI only; audio-browser.log"
+  },
+  "physics": "physics-source-final/current-check.json",
+  "limits": [
+    "High returns: 354 of 750 normal launches",
+    "Temporary sustained slow motion up to 21.9083 seconds",
+    "No reference-calibrated mm, smartphone hardware, human sound or play acceptance"
+  ]
+}

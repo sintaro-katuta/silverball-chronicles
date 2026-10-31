@@ -1,0 +1,239 @@
+
+> tsukikage-pachinko@0.4.0 build:previews
+> vite build --mode previews --outDir dist-previews
+
+vite v8.3.0 building client environment for previews...
+transforming...
+[plugin rolldown:vite-resolve] Module "node:worker_threads" has been externalized for browser compatibility, imported by "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/node_modules/playcanvas/build/playcanvas/src/framework/parsers/draco-worker.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:worker_threads" has been externalized for browser compatibility, imported by "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/node_modules/playcanvas/build/playcanvas/src/scene/gsplat/gsplat-sort-worker.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+[plugin rolldown:vite-resolve] Module "node:worker_threads" has been externalized for browser compatibility, imported by "/Users/sintaro.katuta/dev/silverball-chronicles/prototype/node_modules/playcanvas/build/playcanvas/src/scene/gsplat-unified/gsplat-unified-sort-worker.js". See https://vite.dev/guide/troubleshooting.html#module-externalized-for-browser-compatibility for more details.
+✓ 2263 modules transformed.
+rendering chunks...
+computing gzip size...
+dist-previews/dev/starting-ball-wager.html                               1.06 kB │ gzip:   0.48 kB
+dist-previews/dev/original-se.html                                       1.14 kB │ gzip:   0.75 kB
+dist-previews/dev/s8-guide-audit.html                                    2.71 kB │ gzip:   1.27 kB
+dist-previews/dev/parts.html                                             2.88 kB │ gzip:   1.48 kB
+dist-previews/dev/resin-pixi.html                                        2.93 kB │ gzip:   1.29 kB
+dist-previews/dev/s8-source-layout.html                                  3.06 kB │ gzip:   1.52 kB
+dist-previews/dev/story-predictions.html                                 3.08 kB │ gzip:   1.32 kB
+dist-previews/dev/source-discussion.html                                 3.11 kB │ gzip:   1.69 kB
+dist-previews/dev/launcher-pixi.html                                     3.15 kB │ gzip:   1.28 kB
+dist-previews/dev/live-measurement.html                                  3.31 kB │ gzip:   1.70 kB
+dist-previews/dev/windmill-pixi.html                                     3.34 kB │ gzip:   1.40 kB
+dist-previews/dev/normal-pocket-pixi.html                                3.41 kB │ gzip:   1.41 kB
+dist-previews/dev/outlet-pixi.html                                       3.42 kB │ gzip:   1.48 kB
+dist-previews/dev/w-control-review.html                                  3.42 kB │ gzip:   1.72 kB
+dist-previews/dev/central-start-pixi.html                                3.43 kB │ gzip:   1.43 kB
+dist-previews/dev/pins-pixi.html                                         3.47 kB │ gzip:   1.46 kB
+dist-previews/dev/attacker-pixi.html                                     3.61 kB │ gzip:   1.53 kB
+dist-previews/dev/special-routes.html                                    3.63 kB │ gzip:   1.46 kB
+dist-previews/dev/right-start-pixi.html                                  4.01 kB │ gzip:   1.59 kB
+dist-previews/dev/reach-comparison.html                                  4.12 kB │ gzip:   1.86 kB
+dist-previews/assets/music-worker-Dvxc37qI.js                            5.53 kB
+dist-previews/dev/s9-audio.html                                          5.80 kB │ gzip:   2.73 kB
+dist-previews/dev/apron-comparison.html                                  6.19 kB │ gzip:   2.67 kB
+dist-previews/dev/s8-board-response.html                                 6.22 kB │ gzip:   2.08 kB
+dist-previews/dev/board-pixi.html                                        6.37 kB │ gzip:   1.99 kB
+dist-previews/dev/user-board.html                                        6.39 kB │ gzip:   2.05 kB
+dist-previews/dev/guide-editor.html                                      6.72 kB │ gzip:   2.82 kB
+dist-previews/assets/admission-v0-Ca44hwA8.mp3                           6.95 kB
+dist-previews/assets/admission-v1-I9v4BG8R.mp3                           6.95 kB
+dist-previews/assets/admission-v2-D2Raa16D.mp3                           6.95 kB
+dist-previews/assets/admission-v3-BkFuIhjJ.mp3                           6.95 kB
+dist-previews/assets/se-admission-xX4sZ4Gu.mp3                           6.95 kB
+dist-previews/dev/lcd-pixi.html                                          7.58 kB │ gzip:   2.55 kB
+dist-previews/assets/se-stopLeft-Cs6nMhHE.mp3                            7.72 kB
+dist-previews/assets/se-stopRight-COITVbcr.mp3                           7.72 kB
+dist-previews/assets/stopLeft-v0-BCFLu9kf.mp3                            7.72 kB
+dist-previews/assets/stopLeft-v1-C-EE8CI1.mp3                            7.72 kB
+dist-previews/assets/stopLeft-v2-DaRvphth.mp3                            7.72 kB
+dist-previews/assets/stopLeft-v3-u8K9f3dh.mp3                            7.72 kB
+dist-previews/assets/stopRight-v0-DHmEW9Ng.mp3                           7.72 kB
+dist-previews/assets/stopRight-v1-DIaKmHHl.mp3                           7.72 kB
+dist-previews/assets/stopRight-v2-sBRGEa_w.mp3                           7.72 kB
+dist-previews/assets/stopRight-v3-BMTlfbMA.mp3                           7.72 kB
+dist-previews/dev/lcd-play.html                                          7.73 kB │ gzip:   2.63 kB
+dist-previews/dev/lcd-reach.html                                         7.77 kB │ gzip:   2.66 kB
+dist-previews/dev/lcd-win.html                                           7.80 kB │ gzip:   2.68 kB
+dist-previews/dev/lcd-bonus.html                                         7.94 kB │ gzip:   2.72 kB
+dist-previews/dev/lcd-rush.html                                          8.10 kB │ gzip:   2.84 kB
+dist-previews/dev/rush-end.html                                          8.14 kB │ gzip:   2.85 kB
+dist-previews/dev/lcd-rush-win.html                                      8.16 kB │ gzip:   2.86 kB
+dist-previews/dev/payout-reveal.html                                     8.17 kB │ gzip:   2.85 kB
+dist-previews/dev/rush-entry-patterns.html                               8.17 kB │ gzip:   2.86 kB
+dist-previews/dev/pin-layout.html                                        8.19 kB │ gzip:   3.21 kB
+dist-previews/assets/se-stopCenter-CVZy3DIw.mp3                          9.26 kB
+dist-previews/assets/stopCenter-v0-8zAnErNv.mp3                          9.26 kB
+dist-previews/assets/stopCenter-v1-BSrJtFSE.mp3                          9.26 kB
+dist-previews/assets/stopCenter-v2-DPK5i1JD.mp3                          9.26 kB
+dist-previews/assets/stopCenter-v3-FPt2w0om.mp3                          9.26 kB
+dist-previews/assets/dotgothic16-latin-400-normal-BYJEY5oh.woff2        10.50 kB
+dist-previews/assets/se-spin-UPOXh40j.mp3                               10.79 kB
+dist-previews/assets/spin-v0-BsrvTuzM.mp3                               10.79 kB
+dist-previews/assets/spin-v1-TZThMkVa.mp3                               10.79 kB
+dist-previews/assets/spin-v2-CssSz_ym.mp3                               10.79 kB
+dist-previews/assets/spin-v3-DOpmxf85.mp3                               10.79 kB
+dist-previews/assets/pushPress-v0-BTeXPZE_.mp3                          12.33 kB
+dist-previews/assets/pushPress-v1-CoKW-Ph1.mp3                          12.33 kB
+dist-previews/assets/pushPress-v2-BE1kgbkA.mp3                          12.33 kB
+dist-previews/assets/pushPress-v3-CWZDbabq.mp3                          12.33 kB
+dist-previews/assets/se-pushPress-BSPYDBpb.mp3                          12.33 kB
+dist-previews/assets/dotgothic16-latin-400-normal-cp5t3xa_.woff         15.54 kB
+dist-previews/assets/heroHit-v0-eeKr2Gx_.mp3                            25.38 kB
+dist-previews/assets/heroHit-v1-BZUOCrLe.mp3                            25.38 kB
+dist-previews/assets/heroHit-v2-C5h1Z7ON.mp3                            25.38 kB
+dist-previews/assets/heroHit-v3-DVr1sNyv.mp3                            25.38 kB
+dist-previews/assets/se-heroHit-C8zFSRJk.mp3                            25.38 kB
+dist-previews/assets/pushPrompt-v0-BJQMM0ua.mp3                         28.46 kB
+dist-previews/assets/pushPrompt-v1-DIub4qbd.mp3                         28.46 kB
+dist-previews/assets/pushPrompt-v2-BYNZkKVM.mp3                         28.46 kB
+dist-previews/assets/pushPrompt-v3-CUHef7nr.mp3                         28.46 kB
+dist-previews/assets/se-pushPrompt-VXG5X5cz.mp3                         28.46 kB
+dist-previews/assets/development-v0-RXEF_NNN.mp3                        39.98 kB
+dist-previews/assets/development-v1-BOkhex8P.mp3                        39.98 kB
+dist-previews/assets/development-v2-D5hR7vkE.mp3                        39.98 kB
+dist-previews/assets/development-v3-B4tL4aIL.mp3                        39.98 kB
+dist-previews/assets/se-development-DtwPK97y.mp3                        39.98 kB
+dist-previews/assets/rushStart-v0-BDJNEhqR.mp3                          48.42 kB
+dist-previews/assets/rushStart-v1-YuFTGe8j.mp3                          48.42 kB
+dist-previews/assets/rushStart-v2-DrQb5h8a.mp3                          48.42 kB
+dist-previews/assets/rushStart-v3-BVEv21Su.mp3                          48.42 kB
+dist-previews/assets/se-rushStart-BSeijUxn.mp3                          48.42 kB
+dist-previews/assets/revival-v0-D_Uzo8Yo.mp3                            49.96 kB
+dist-previews/assets/revival-v1-Dkd7df3A.mp3                            49.96 kB
+dist-previews/assets/revival-v2-Ba5a1yz9.mp3                            49.96 kB
+dist-previews/assets/revival-v3-SZhk-EgH.mp3                            49.96 kB
+dist-previews/assets/se-revival-CRjdWcWa.mp3                            49.96 kB
+dist-previews/assets/decisiveHit-v0-Dh6tsNrv.mp3                        51.50 kB
+dist-previews/assets/decisiveHit-v1-NLZHhs26.mp3                        51.50 kB
+dist-previews/assets/decisiveHit-v2-DKtM8GXD.mp3                        51.50 kB
+dist-previews/assets/decisiveHit-v3-DmCgyOPg.mp3                        51.50 kB
+dist-previews/assets/se-decisiveHit-Cy1gcm8H.mp3                        51.50 kB
+dist-previews/assets/bonusStart-v0-CuWMO74e.mp3                         85.29 kB
+dist-previews/assets/bonusStart-v1-DEalXZSU.mp3                         85.29 kB
+dist-previews/assets/bonusStart-v2-7MN7S1Ou.mp3                         85.29 kB
+dist-previews/assets/bonusStart-v3-lvf0fQYf.mp3                         85.29 kB
+dist-previews/assets/se-bonusStart-Br6kgGWR.mp3                         85.29 kB
+dist-previews/assets/reference-jUA6TP8e.jpg                            200.79 kB
+dist-previews/assets/normal-scene-after-DeqtSa_l.mp3                   385.58 kB
+dist-previews/assets/normal-scene-before-D32E6fJy.mp3                  385.58 kB
+dist-previews/assets/dotgothic16-japanese-400-normal-DqORjlTR.woff2    396.31 kB
+dist-previews/assets/rush-DNmywnGH.mp3                                 401.70 kB
+dist-previews/assets/music-rush-C_bfDKZd.mp3                           428.58 kB
+dist-previews/assets/bonus-DyQN2zKd.mp3                                513.83 kB
+dist-previews/assets/music-bonus-CEsNN5B6.mp3                          513.83 kB
+dist-previews/assets/dotgothic16-japanese-400-normal-f9lPNYbv.woff     593.12 kB
+dist-previews/assets/music-normal-8w8zwidy.mp3                         769.58 kB
+dist-previews/assets/normal-D4ptJrmj.mp3                               769.58 kB
+dist-previews/assets/pin-layout-ui-worker-Dc8GI4Pu.js                1,429.48 kB
+dist-previews/assets/battle-C_JyziyM.mp3                             1,729.58 kB
+dist-previews/assets/music-battle-DVgc9-Gd.mp3                       1,729.58 kB
+dist-previews/assets/latin-400-ChMfPc7_.css                              0.23 kB │ gzip:   0.16 kB
+dist-previews/assets/japanese-400-6RtyzngC.css                           0.24 kB │ gzip:   0.17 kB
+dist-previews/assets/board-runtime-HmG2UvoK.css                          1.12 kB │ gzip:   0.55 kB
+dist-previews/assets/attacker-preview-cR3Iz5BR.css                       1.34 kB │ gzip:   0.68 kB
+dist-previews/assets/pin-layout-C6JkbMTo.css                             3.77 kB │ gzip:   1.45 kB
+dist-previews/assets/apron-comparison-BdnGbszP.css                       3.84 kB │ gzip:   1.40 kB
+dist-previews/assets/guide-editor-CCQ7Ga-7.css                           9.03 kB │ gzip:   2.69 kB
+dist-previews/assets/starting-ball-wager-C4j252ge.css                   11.81 kB │ gzip:   2.90 kB
+dist-previews/assets/webworkerAll-CzxxjEjF.js                            0.05 kB │ gzip:   0.06 kB
+dist-previews/assets/BitmapFont-Dcn8H1f9.js                              0.06 kB │ gzip:   0.07 kB
+dist-previews/assets/board-runtime-BvfXw1Qq.js                           0.07 kB │ gzip:   0.08 kB
+dist-previews/assets/WebGLRenderer-DC64xlGz.js                           0.07 kB │ gzip:   0.07 kB
+dist-previews/assets/CanvasRenderer-BiUlsNiT.js                          0.07 kB │ gzip:   0.08 kB
+dist-previews/assets/WebGPURenderer-BjnnOI7d.js                          0.07 kB │ gzip:   0.08 kB
+dist-previews/assets/normal-spin-view-Bv_aIiLp.js                        0.08 kB │ gzip:   0.09 kB
+dist-previews/assets/production-board-profile-BUWtDanR.js                0.13 kB │ gzip:   0.13 kB
+dist-previews/assets/story-prediction-assets-B608pMDT.js                 0.15 kB │ gzip:   0.14 kB
+dist-previews/assets/board-preview-BhLe2EP7.js                           0.19 kB │ gzip:   0.16 kB
+dist-previews/assets/frame-loop-B5VK9DLb.js                              0.24 kB │ gzip:   0.17 kB
+dist-previews/assets/getTextureBatchBindGroup-CNIJIKYk.js                0.34 kB │ gzip:   0.27 kB
+dist-previews/assets/w-runtime-policy-FCsf3Dv-.js                        0.40 kB │ gzip:   0.29 kB
+dist-previews/assets/silver-ball-BobKrNIH.js                             0.42 kB │ gzip:   0.29 kB
+dist-previews/assets/pin-texture-CTEVxSZx.js                             0.46 kB │ gzip:   0.30 kB
+dist-previews/assets/production-board-profile-CA2awhlI.js                0.57 kB │ gzip:   0.40 kB
+dist-previews/assets/modulepreload-polyfill-P2Xu9kJm.js                  0.67 kB │ gzip:   0.38 kB
+dist-previews/assets/guide-overlay-kbmEKGwB.js                           0.68 kB │ gzip:   0.45 kB
+dist-previews/assets/synth-wave-B52qrC9i.js                              0.69 kB │ gzip:   0.42 kB
+dist-previews/assets/rolldown-runtime-hePW80VL.js                        0.71 kB │ gzip:   0.42 kB
+dist-previews/assets/lib-BpifQCS_.js                                     0.89 kB │ gzip:   0.47 kB
+dist-previews/assets/pixel-primitives-CL8TueB3.js                        1.03 kB │ gzip:   0.54 kB
+dist-previews/assets/Cache-BnZuwjCK.js                                   1.10 kB │ gzip:   0.55 kB
+dist-previews/assets/user-board-CK2K_rgr.js                              1.18 kB │ gzip:   0.67 kB
+dist-previews/assets/preload-helper-BZ1Pz5am.js                          1.21 kB │ gzip:   0.69 kB
+dist-previews/assets/original-se-DCz6l-IK.js                             1.22 kB │ gzip:   0.65 kB
+dist-previews/assets/resin-guide-art-CKYiJDeu.js                         1.23 kB │ gzip:   0.62 kB
+dist-previews/assets/tokyoghoul-w-spec-C5fsbc28.js                       1.40 kB │ gzip:   0.66 kB
+dist-previews/assets/right-start-motion-4-9Ds34O.js                      1.45 kB │ gzip:   0.76 kB
+dist-previews/assets/s8-source-layout-XvvhL8c4.js                        1.51 kB │ gzip:   0.95 kB
+dist-previews/assets/attacker-motion-Buqvf9O0.js                         1.54 kB │ gzip:   0.85 kB
+dist-previews/assets/w-control-review-C1qDR5ur.js                        1.54 kB │ gzip:   0.92 kB
+dist-previews/assets/story-predictions-BNBbI4J8.js                       2.27 kB │ gzip:   1.24 kB
+dist-previews/assets/resin-pixi-B81dNjiw.js                              2.37 kB │ gzip:   1.32 kB
+dist-previews/assets/s8-board-response-D6a9FuQo.js                       2.37 kB │ gzip:   1.33 kB
+dist-previews/assets/source-discussion-CixEgGBG.js                       2.46 kB │ gzip:   1.34 kB
+dist-previews/assets/special-route-motion-BlrhE8KN.js                    2.54 kB │ gzip:   1.31 kB
+dist-previews/assets/pins-pixi-xNtUT3O0.js                               2.94 kB │ gzip:   1.59 kB
+dist-previews/assets/solid-polygon-contact-DA65j0eE.js                   3.19 kB │ gzip:   1.42 kB
+dist-previews/assets/launcher-pixi-DGTfv36C.js                           3.19 kB │ gzip:   1.65 kB
+dist-previews/assets/attacker-pixi-CvEu5zVe.js                           3.23 kB │ gzip:   1.69 kB
+dist-previews/assets/windmill-pixi-rpOkvF4l.js                           3.58 kB │ gzip:   1.93 kB
+dist-previews/assets/s8-guide-audit-DCaP4SvM.js                          3.60 kB │ gzip:   2.14 kB
+dist-previews/assets/central-start-pixi-ZtK_5W8e.js                      3.69 kB │ gzip:   1.89 kB
+dist-previews/assets/normal-pocket-pixi-ksJ6u8o_.js                      3.72 kB │ gzip:   1.91 kB
+dist-previews/assets/source-layout-Dpx_nEcH.js                           3.87 kB │ gzip:   1.78 kB
+dist-previews/assets/outlet-pixi-DQounSI8.js                             4.05 kB │ gzip:   2.06 kB
+dist-previews/assets/special-routes-BeGwvOdK.js                          4.59 kB │ gzip:   2.24 kB
+dist-previews/assets/story-prediction-view-Banaq1-T.js                   4.71 kB │ gzip:   2.32 kB
+dist-previews/assets/live-measurement-CUjHrOq5.js                        4.86 kB │ gzip:   2.39 kB
+dist-previews/assets/Application-B5ge0btZ.js                             5.05 kB │ gzip:   1.94 kB
+dist-previews/assets/cinematic-D4N2GnHJ.js                               5.17 kB │ gzip:   2.42 kB
+dist-previews/assets/right-start-view-Bpr2iq5M.js                        5.50 kB │ gzip:   2.16 kB
+dist-previews/assets/canvasUtils-abpS0dNQ.js                             6.05 kB │ gzip:   2.04 kB
+dist-previews/assets/special-route-view-BRRWod7_.js                      6.16 kB │ gzip:   2.84 kB
+dist-previews/assets/source-guide-trace-CjfzHLbk.js                      6.25 kB │ gzip:   2.55 kB
+dist-previews/assets/right-start-pixi-BD8jH0LL.js                        6.34 kB │ gzip:   3.12 kB
+dist-previews/assets/cabinet-foreground-T0FkiNBR.js                      6.84 kB │ gzip:   3.35 kB
+dist-previews/assets/tokyoghoul-w-machine-G9nuEB8E.js                    7.36 kB │ gzip:   2.59 kB
+dist-previews/assets/long-reach-view-D3TDNiEt.js                         7.38 kB │ gzip:   3.20 kB
+dist-previews/assets/Mesh-B94avg8P.js                                    7.70 kB │ gzip:   2.67 kB
+dist-previews/assets/attacker-view-DNr9LPUU.js                           8.16 kB │ gzip:   3.36 kB
+dist-previews/assets/BufferResource-BLMK2-2T.js                         11.06 kB │ gzip:   2.84 kB
+dist-previews/assets/original-se-CZj-zSVM.js                            11.65 kB │ gzip:   4.86 kB
+dist-previews/assets/cabinet-light-motion-CZR1U0xB.js                   11.75 kB │ gzip:   4.94 kB
+dist-previews/assets/apron-comparison-CVUo19LY.js                       14.45 kB │ gzip:   6.44 kB
+dist-previews/assets/decision-push-B3fcbrbb.js                          14.79 kB │ gzip:   6.35 kB
+dist-previews/assets/long-reach-timeline-CvC5L7Xj.js                    15.55 kB │ gzip:   6.27 kB
+dist-previews/assets/init-CKF9qzaL.js                                   15.75 kB │ gzip:   4.92 kB
+dist-previews/assets/starting-ball-wager-CuvsGqxL.js                    15.92 kB │ gzip:   6.20 kB
+dist-previews/assets/board-flow-oe3o1rrN.js                             18.14 kB │ gzip:   7.14 kB
+dist-previews/assets/lcd-layout-CckjryH3.js                             18.82 kB │ gzip:   7.48 kB
+dist-previews/assets/GCManagedHash-DV8Gq3CD.js                          19.35 kB │ gzip:   6.29 kB
+dist-previews/assets/guide-editor-Dc1_pIk2.js                           20.88 kB │ gzip:   8.33 kB
+dist-previews/assets/ball-flow-DibAVelF.js                              21.36 kB │ gzip:   8.83 kB
+dist-previews/assets/game-DlBWt7zJ.js                                   23.73 kB │ gzip:   8.63 kB
+dist-previews/assets/init-B77239ks.js                                   23.78 kB │ gzip:   8.22 kB
+dist-previews/assets/Assets-BsjijIca.js                                 26.25 kB │ gzip:   9.15 kB
+dist-previews/assets/CanvasRenderer-BW_4y900.js                         27.11 kB │ gzip:   7.92 kB
+dist-previews/assets/pin-layout-CRekU0_l.js                             29.33 kB │ gzip:  11.75 kB
+dist-previews/assets/BitmapFont-BEdQPj0x.js                             33.36 kB │ gzip:  11.13 kB
+dist-previews/assets/normal-spin-view-QHKA_qlX.js                       33.63 kB │ gzip:  12.79 kB
+dist-previews/assets/Filter-DUzL5Yr4.js                                 42.00 kB │ gzip:  12.03 kB
+dist-previews/assets/browserAll-BcXFUBVw.js                             42.67 kB │ gzip:  11.16 kB
+dist-previews/assets/WebGPURenderer-BaSg6kjA.js                         47.96 kB │ gzip:  13.79 kB
+dist-previews/assets/s9-audio-F4OyXZMB.js                               54.20 kB │ gzip:  18.22 kB
+dist-previews/assets/RenderTargetSystem-C2Gnkq-y.js                     58.77 kB │ gzip:  16.44 kB
+dist-previews/assets/GraphicsContext-BfX3hTAQ.js                        61.70 kB │ gzip:  20.60 kB
+dist-previews/assets/CanvasPool-B4Lq94db.js                             67.80 kB │ gzip:  22.13 kB
+dist-previews/assets/WebGLRenderer-0ZnReZ0R.js                          71.73 kB │ gzip:  19.51 kB
+dist-previews/assets/board-runtime-CD1ZTLCL.js                          78.91 kB │ gzip:  30.63 kB
+dist-previews/assets/reach-comparison-CGhtj96q.js                      534.44 kB │ gzip: 134.52 kB
+dist-previews/assets/parts-Y6yhlgwT.js                               1,977.77 kB │ gzip: 507.94 kB
+
+✓ built in 902ms
+[plugin builtin:vite-reporter] 
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rolldownOptions.output.codeSplitting to improve chunking: https://rolldown.rs/reference/OutputOptions.codeSplitting
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.

@@ -20,11 +20,22 @@ export function resolveVisibleWindmill(physics,ball,m,{predict=false,game=null}=
  for(let pass=0;pass<10;pass++){
   const contact=windmillUnionContact(ball,m);if(!contact)break;
   const {point,normal,kind}=contact,oldVx=ball.vx,oldVy=ball.vy,surface={x:-(point.y-m.y)*m.omega,y:(point.x-m.x)*m.omega};
-  const solve=()=>{ball.x=point.x+normal.x*ball.r;ball.y=point.y+normal.y*ball.r;const v=(ball.vx-surface.x)*normal.x+(ball.vy-surface.y)*normal.y;if(v>=0)return 0;ball.vx-=(1+.3)*v*normal.x;ball.vy-=(1+.3)*v*normal.y;return -v;};
+  const coupled=m.responseProfile==='coupled-impulse-v1'||m.responseProfile==='light-rotor-v1';
+  const arm=(point.x-m.x)*normal.y-(point.y-m.y)*normal.x;
+  const solve=()=>{
+   ball.x=point.x+normal.x*ball.r;ball.y=point.y+normal.y*ball.r;
+   const v=(ball.vx-surface.x)*normal.x+(ball.vy-surface.y)*normal.y;if(v>=0)return 0;
+   // A free rotor participates in the same normal impulse as the ball. Its
+   // finite effective mass prevents rotation from adding energy to the pair.
+   const impulse=-(1+.3)*v/(coupled?1+arm*arm/m.momentOfInertia:1);
+   ball.vx+=impulse*normal.x;ball.vy+=impulse*normal.y;
+   if(coupled&&!predict)m.omega=Math.max(-7,Math.min(7,m.omega-arm*impulse/m.momentOfInertia));
+   return -v;
+  };
   const part={kind:'windmill-photo-three-vane',componentId:contact.ownerId,componentKind:kind,shapeVersion:WINDMILL_VISIBLE_SHAPE_VERSION,a:{x:contact.a.x+m.x,y:contact.a.y+m.y},b:{x:contact.b.x+m.x,y:contact.b.y+m.y},surfaceVelocity:surface,restitution:.3};
   const impulse=activePhysicsTrace&&!predict?traceSolverContact(physics,ball,part,'advance-visible-windmill',solve):solve();contacts++;
   // A circular hub normal passes through the axis: its normal impulse has zero moment.
-  if(impulse&&!predict){physics.recordRole(ball,'windmill');{const radial=kind==='hub'&&Math.abs((point.x-m.x)*normal.y-(point.y-m.y)*normal.x)<1e-10;const torque=radial?0:(ball.x-m.x)*(oldVy-ball.vy)-(ball.y-m.y)*(oldVx-ball.vx);m.omega=Math.max(-7,Math.min(7,m.omega+torque*.0005));}m.lastHit=game?.time;game?.emit?.('mechanism',{kind:m.kind});}
+  if(impulse&&!predict){physics.recordRole(ball,'windmill');if(!coupled){const radial=kind==='hub'&&Math.abs((point.x-m.x)*normal.y-(point.y-m.y)*normal.x)<1e-10;const torque=radial?0:(ball.x-m.x)*(oldVy-ball.vy)-(ball.y-m.y)*(oldVx-ball.vx);m.omega=Math.max(-7,Math.min(7,m.omega+torque*.0005));}m.lastHit=game?.time;game?.emit?.('mechanism',{kind:m.kind});}
  }
  return contacts;
 }

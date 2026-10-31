@@ -1,0 +1,110 @@
+{
+  "baseline": "c0e3b71",
+  "scope": "Rear launcher and clearance at front transfer only; all submitted paths, pins, ball size, speed and front art unchanged",
+  "trials": [
+    {
+      "mode": "normal",
+      "phase": 0,
+      "shots": 30,
+      "entered": 30,
+      "rearRemaining": 0,
+      "upperRemaining": 0,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 11,
+        "returned": 0
+      },
+      "fieldRemaining": 19
+    },
+    {
+      "mode": "normal",
+      "phase": 0.175,
+      "shots": 30,
+      "entered": 30,
+      "rearRemaining": 0,
+      "upperRemaining": 0,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 10,
+        "returned": 0
+      },
+      "fieldRemaining": 20
+    },
+    {
+      "mode": "normal",
+      "phase": 0.35,
+      "shots": 30,
+      "entered": 30,
+      "rearRemaining": 0,
+      "upperRemaining": 0,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 15,
+        "returned": 0
+      },
+      "fieldRemaining": 15
+    },
+    {
+      "mode": "rush",
+      "phase": 0,
+      "shots": 30,
+      "entered": 30,
+      "rearRemaining": 0,
+      "upperRemaining": 0,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 29,
+        "bonus": 0,
+        "out": 0,
+        "returned": 0
+      },
+      "fieldRemaining": 1
+    },
+    {
+      "mode": "bonus",
+      "phase": 0,
+      "shots": 30,
+      "entered": 30,
+      "rearRemaining": 0,
+      "upperRemaining": 0,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 0,
+        "out": 15,
+        "returned": 0
+      },
+      "fieldRemaining": 15
+    }
+  ],
+  "tests": {
+    "pass": 33,
+    "fail": 0
+  },
+  "build": true,
+  "previewsBuild": true,
+  "sources": {
+    "prototype/src/physics/physics.js": "2f218c733a58d109af334a439fe536e981217ae86b49579f2d3c24b2f6686451",
+    "prototype/src/pixi/board-rails.js": "7360c59c8fd4f9d832412239af399903918ede22c6c314ea4dcede3014e91977",
+    "prototype/src/pixi/board-flow.js": "ac61997ed2e1a906f05b24e5084768610a53e570d3b32d02b67b5b1655843e0d",
+    "prototype/src/pixi/source-guide-trace.js": "b10fea62f4c5c44aa5507eec4485a253cbf945e7c4a49cfbb6d2d740d4b99b20",
+    "prototype/src/app/production-board-profile.js": "2eae6ce462f5726d663f205981d2288bc4433b533f1b69d694a7d003f8ef6046"
+  },
+  "remainingIssue": "Front field accumulations at the curved left guide and road pins remain. No complete-play/admission claim."
+}

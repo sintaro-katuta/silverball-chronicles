@@ -1,0 +1,127 @@
+{
+  "version": "s09-character-v1",
+  "standard": "docs/prototype/CHARACTER_PIXEL_STANDARD.md",
+  "status": "local candidate; user art acceptance pending",
+  "characters": [
+    {
+      "id": "hero",
+      "identity": "long silver hair, blue eyes, gold flower ornament, navy-black armor with gold trim, blue cape, gold sword guard",
+      "references": [
+        {
+          "url": "/assets/lcd/character-still-v1.png",
+          "role": "adopted identity and side view",
+          "sourcePixels": [
+            384,
+            256
+          ]
+        },
+        {
+          "url": "/assets/lcd/long-reach/duel-poses-longhair-v4.png",
+          "role": "adopted full-body guard, raised sword and slash; top row",
+          "sourcePixels": [
+            1536,
+            1024
+          ],
+          "grid": [
+            3,
+            2
+          ],
+          "cell": [
+            512,
+            512
+          ]
+        },
+        {
+          "url": "/assets/lcd/long-reach/duel-intermediates-longhair-v7.png",
+          "role": "adopted intermediate poses; cells 0,1,4,5",
+          "sourcePixels": [
+            1536,
+            1024
+          ],
+          "grid": [
+            3,
+            2
+          ],
+          "cell": [
+            512,
+            512
+          ]
+        },
+        {
+          "url": "/assets/lcd/long-reach/hero-resolve-portrait-v1.png",
+          "role": "new three-quarter raised-sword chest/face candidate",
+          "sourcePixels": [
+            1254,
+            1254
+          ],
+          "logicalPixels": [
+            512,
+            512
+          ],
+          "sourcePerLogicalPixel": 2.44921875,
+          "prompt": "hero-resolve-portrait-v1.prompt.txt",
+          "generator": "built-in image_gen",
+          "generatedFile": "exec-703b8be5-0beb-4995-8a68-aab3a27b9634.png",
+          "inputs": [
+            "duel-poses-longhair-v4.png",
+            "../character-still-v1.png"
+          ],
+          "status": "local candidate"
+        }
+      ],
+      "palette": {
+        "hair": "#c4cae4",
+        "eyes": "#2796da",
+        "armor": "#17243d",
+        "gold": "#e4ac38",
+        "cape": "#164aab"
+      },
+      "paletteNote": "visual guide sampled/estimated from adopted art, not a mandatory indexed palette",
+      "use": "pressure rally 39–43s and vow 43–46s only; no flash or alternate battle replacement"
+    },
+    {
+      "id": "antagonist",
+      "identity": "closed horned dark helmet, violet core, dark armor with silver edges, violet sword and trailing cloth",
+      "references": [
+        {
+          "url": "/assets/lcd/long-reach/duel-poses-longhair-v4.png",
+          "role": "adopted guard, attack, recoil; bottom row",
+          "sourcePixels": [
+            1536,
+            1024
+          ],
+          "grid": [
+            3,
+            2
+          ],
+          "cell": [
+            512,
+            512
+          ]
+        },
+        {
+          "url": "/assets/lcd/long-reach/duel-intermediates-longhair-v7.png",
+          "role": "adopted intermediate attack; cells 2,3",
+          "sourcePixels": [
+            1536,
+            1024
+          ],
+          "grid": [
+            3,
+            2
+          ],
+          "cell": [
+            512,
+            512
+          ]
+        }
+      ],
+      "status": "existing reference retained; no new enemy portrait required for the representative hero cut"
+    }
+  ],
+  "scope": "Required existing three-quarter and side views; a new front view and all animation poses are outside this representative cut. Supporting prediction figures retain their own sheets; no invented identity.",
+  "review": {
+    "url": "/dev/character-context.html",
+    "display": "210x140 logical LCD, PC1440x900 and phone390x844, linear texture sampling; source dimensions are not device DPR"
+  }
+}

@@ -7,7 +7,7 @@ const xs=LCD_OPENING.map(p=>p[0]),ys=LCD_OPENING.map(p=>p[1]);
 export const LCD_LAYOUT=Object.freeze({x:Math.min(...xs),y:Math.min(...ys),width:Math.max(...xs)-Math.min(...xs),height:Math.max(...ys)-Math.min(...ys)});
 export const LCD_TOP=LCD_OUTLINE.slice(0,3),LCD_APRON=LCD_OUTLINE.slice(7,15),LCD_BEVEL_Y=sourcePoint([214,676])[1],LEFT_LANE_SLOPE=3.9/7.45;
 export function installLcdBoundary(physics,{hesoMouthWidth=HESO_MOUTH_WIDTH,launchRailProfile='legacy'}={}){
- if(![HESO_MOUTH_WIDTH,HESO_SOURCE_WIDTH].includes(hesoMouthWidth))throw new Error('Only current or source-diagram mouth width supported in this local trial');
+ if(![HESO_MOUTH_WIDTH,HESO_SOURCE_WIDTH,18,16].includes(hesoMouthWidth))throw new Error('Only current, source-diagram, or approved 18/16 mouth widths supported');
  // Estimated 2D contact scale; diagram pin centers stay unchanged.
  // Ball radius + pin shaft radius (2.0) stays below half the 4.20 road pitch.
  installBoardRails(physics,{profile:launchRailProfile});physics.ballRadius=1.8;physics.separateLaunchPlane=true;physics.launchSpeedOffset=55;physics.displayBallScale=1.8/4.6;

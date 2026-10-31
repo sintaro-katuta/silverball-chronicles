@@ -1,0 +1,22 @@
+✔ saved work round-trips edits, visibility, completion, curve mode and deletion mapping (20.282875ms)
+✔ invalid imports reject non-finite/out-of-image coordinates, duplicate IDs, wrong references and excessive data without mutating work (9.574ms)
+✔ a gesture commits once; undo, redo and new branches preserve complete independent documents (0.548333ms)
+✔ curve handoff samples interpolate user anchors and remain within .16 source px of the displayed cubic (20.604833ms)
+✔ adding a point finds the actual curved segment and closed straight edges retain their closing edge (1.431833ms)
+✔ edge curves stay inside the reference and opening an empty work file remains valid (0.386958ms)
+✔ production pins match all101 centers in the original diagram measurement overlay without offsets (291.736834ms)
+✔ fresh profile and factory clones prevent cross-session mutation; reset reconstruction preserves layout and normal/right launch strengths (110.435459ms)
+✔ app uses one profile and power constant for initial mount and dock, retaining slider range and reset option forwarding (2.0195ms)
+✔ pin and guide alignment leaves all other settings at the user baseline (0.325ms)
+✔ unchanged guides retain earlier image observations; user edits take precedence over those estimates (93.725292ms)
+✔ original settings, pockets, mechanisms, pins and non-guide contacts are unchanged by tracing (88.630583ms)
+✔ rendered guide centrelines and contacts use the same vertices; moulding seams never become walls (21.66975ms)
+✔ all 22 guide paths and their contacts adopt the user submission verbatim, without the superseded head edges (19.276542ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 562.373375

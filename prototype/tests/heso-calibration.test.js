@@ -19,8 +19,14 @@ test('production shots without receiving guides complete W normal spins with exa
  assert.ok(m.flow.counts.start>0,`only ${m.flow.counts.start} natural admissions`);
  assert.equal(m.flow.physics.balls.length,0);
  assert.equal(Object.values(m.flow.counts).reduce((a,b)=>a+b,0),m.flow.physics.metrics.spawned);
- assert.equal(spin.snapshot().accepted,m.flow.counts.start);
- assert.equal(game.draws,m.flow.counts.start);
+ // Physical start entries pay even when the hold queue is full; accepted
+ // entries alone become draws. Successful launches now exercise that rule.
+ const snapshot=spin.snapshot();assert.equal(snapshot.entries,m.flow.counts.start);
+ assert.ok(snapshot.accepted>0&&snapshot.accepted<=snapshot.entries);
+ assert.equal(game.draws,snapshot.accepted);
+ assert.equal(snapshot.events.length,snapshot.entries);
+ assert.equal(snapshot.events.reduce((n,e)=>n+e.accepted,0),snapshot.accepted);
+ assert.ok(snapshot.events.every(e=>e.accepted===0||e.accepted===1));
  assert.equal(game.holdCount,0);assert.equal(game.spinActive,false);
  assert.equal(game.jackpots,0);assert.equal(game.accounting.reconciled,true);
  assert.equal(game.accounting.spent,m.flow.physics.metrics.spawned);

@@ -1,0 +1,53 @@
+[
+  {
+    "mode": "normal",
+    "phase": 0,
+    "pinContactFriction": 0.5,
+    "roadRestitution": 0.12,
+    "roadPinRadius": 1.04,
+    "leftPinRestitution": null,
+    "pinTangentialRestitution": 0.5,
+    "spawned": 100,
+    "entered": 100,
+    "counts": {
+      "fuzu": 0,
+      "normal": 1,
+      "start": 15,
+      "rush": 0,
+      "bonus": 0,
+      "out": 82,
+      "returned": 0
+    },
+    "maxRoadBacktrackSourcePx": 5.201027802145646,
+    "maxRoadRiseSourcePx": 5.041240538929742,
+    "longestLowSpeedSeconds": {
+      "road": 0.13333333333333333,
+      "entry": 0.049999999999999996
+    },
+    "longestStationarySeconds": {
+      "road": 0.016666666666666666,
+      "entry": 0.008333333333333333
+    },
+    "roadRemaining": [],
+    "entryRemaining": [],
+    "remaining": [
+      {
+        "id": 72,
+        "x": 548.6315087677411,
+        "y": 868.2,
+        "speed": 0.06958026043684445,
+        "omega": 56.53516467746224,
+        "lastContact": "right-channel-traced-electric"
+      },
+      {
+        "id": 78,
+        "x": 565.9534234073947,
+        "y": 822.2612238855475,
+        "speed": 0.2804327405335004,
+        "omega": 106.70729198878615,
+        "lastContact": "right-channel-traced-electric"
+      }
+    ],
+    "reconciled": true
+  }
+]

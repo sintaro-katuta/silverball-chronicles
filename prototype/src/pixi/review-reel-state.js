@@ -1,6 +1,13 @@
 import {reelState} from '../domain/reels.js';
-// The review presentation waits for the centre: preserve the stored result, swap its display columns.
-export function reviewReelState(game){const s=reelState(game);if(!game.previewCenterPending)return s;return {...s,numbers:[s.numbers[0],s.numbers[2],s.numbers[1]],stopped:[s.stopped[0],s.stopped[2],s.stopped[1]]};}
+// Physical display columns always stop left, right, centre. Legacy stored
+// results hold the first two stops in slots 0/1. All routes use the same
+// presentation mapping; the stored outcome and its symbol distribution stay intact.
+export const DISPLAY_STOP_RANKS=Object.freeze([0,2,1]);
+export function displayResultIndex(column){return DISPLAY_STOP_RANKS[column];}
+export function reviewReelState(game){
+ const s=reelState(game);
+ return {...s,numbers:DISPLAY_STOP_RANKS.map(i=>s.numbers[i]),stopped:DISPLAY_STOP_RANKS.map(i=>s.stopped[i])};
+}
 export const WIN_ZOOM = {start:.18, holdStart:.26, holdEnd:1.26, end:1.51};
 export function linkedWinScale(t){
  const {start,holdStart,holdEnd,end}=WIN_ZOOM;

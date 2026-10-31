@@ -6,7 +6,7 @@ import {rushWinPose} from './rush-win-motion.js';
 import {createRushEndView} from './rush-end-view.js';
 import {Container,Graphics,Sprite,Texture} from 'pixi.js';
 import {pixelSurface,painter} from './pixel-primitives.js';
-import {reviewReelState,linkedWinScale} from './review-reel-state.js';
+import {reviewReelState,linkedWinScale,DISPLAY_STOP_RANKS,displayResultIndex} from './review-reel-state.js';
 import {createRushEntryView} from './rush-entry-view.js';
 import {createHoldView} from './hold-view.js';
 import {LCD_REEL_LAYOUT} from './lcd-safe-layout.js';
@@ -49,7 +49,7 @@ function rushShineTexture(frame,n=7){
   });c.globalCompositeOperation='source-in';c.drawImage(light,0,0);
  }));t.source.scaleMode='nearest';return t;
 }
-export function createNormalSpinView(rushScene=null,reachAtlas=null,reachLandscape=null,motionAtlas=null,character=null,storySheets=null){
+export function createNormalSpinView(rushScene=null,reachAtlas=null,reachLandscape=null,motionAtlas=null,character=null,storySheets=null,portraitTexture=null){
  const root=new Container(),textures=Array.from({length:9},(_,i)=>digitTexture(i+1));
  const lcdMask=new Graphics().rect(0,0,210,140).fill(0xffffff);root.addChild(lcdMask);root.mask=lcdMask;
  const shade=new Graphics().rect(24,LCD_REEL_LAYOUT.normalTop-3,162,57).fill({color:0x061024,alpha:.6});root.addChild(shade);
@@ -90,7 +90,7 @@ export function createNormalSpinView(rushScene=null,reachAtlas=null,reachLandsca
  const shards=[];for(let i=0;i<28;i++){const g=new Graphics().poly([0,-3,3,0,0,4,-2,1]).fill(i%3===0?0xffffff:i%2?0xffd36b:0xd88b36);celebration.addChild(g);shards.push(g);}
  const rushGlints=[];for(let i=0;i<12;i++){const g=new Graphics().rect(-4,-1,8,2).rect(-1,-4,2,8).fill(i%2?0xffdfa1:0xffffff);celebration.addChild(g);rushGlints.push(g);}
  celebration.visible=false;
- const development=createDevelopmentView(reachAtlas,reachLandscape,motionAtlas);root.addChild(development.root);textures.push(...development.textures);
+ const development=createDevelopmentView(reachAtlas,reachLandscape,motionAtlas,portraitTexture);root.addChild(development.root);textures.push(...development.textures);
  const special=createSpecialRouteView({background:reachLandscape});root.addChild(special.root);
  const prediction=createPredictionView({character,landscape:reachLandscape,storySheets});root.addChild(prediction.root);textures.push(...prediction.textures);
  const fullRotation=new Container();fullRotation.label='fullrotation';root.addChild(fullRotation);
@@ -149,7 +149,7 @@ export function createNormalSpinView(rushScene=null,reachAtlas=null,reachLandsca
   if(reach){const t=reach.time;const scale=t<.1?1.24-.24*(1-(1-t/.1)**3):t<.23?1-.045*Math.sin((t-.1)/.13*Math.PI):1;banner.scale.set(scale);banner.position.set(105+(t<.2?Math.round(Math.sin(t*125)*2*(1-t/.2)):0),70);const fade=Math.min(.2,reachDuration*.25);banner.alpha=Math.min(1,Math.max(0,(reachDuration-t)/fade));}
 
   for(let i=0;i<3;i++){
-   const index=game.previewCenterPending?[0,2,1][i]:i,remaining=game.drawTempo+index*game.reelStopGap-game.drawTimer,speed=8+index*.6,target=game.spinResult?.reels[index]??state.numbers[i];
+   const index=displayResultIndex(i),rank=DISPLAY_STOP_RANKS[i],remaining=game.drawTempo+rank*game.reelStopGap-game.drawTimer,speed=8+rank*.6,target=game.spinResult?.reels[index]??state.numbers[i];
    const offset=state.stopped[i]?0:remaining>.28?speed*(remaining-.14):speed*Math.max(0,remaining)**2/.56;
    let position=-(target-1)+offset;
    if(reach&&i===1){const target=-(game.reelOutcome[2]-1),end=target-9*Math.ceil((target-reachStart+18)/9),progress=Math.min(1,reach.time/reachSeconds(reach,isRush));position=end+(reachStart-end)*(1-progress)**1.6;}

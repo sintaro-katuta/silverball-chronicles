@@ -9,7 +9,7 @@ const blend=(a,b,t)=>{const q=t*t*(3-2*t);return {x:a.x+(b.x-a.x)*q,y:a.y+(b.y-a
 export function createViewCameras(lcd){
  const f=FRAME_PLACEMENT,whole=containCamera({x:f.x,y:f.y,width:1086*f.scale,height:1448*f.scale});
  const close=containCamera(lcd,396,436,14);
- return {whole:{...whole,frameAlpha:1},board:{...PLAY_CAMERA,frameAlpha:0},lcd:{...close,frameAlpha:0}};
+ return {right:{...containCamera({x:205,y:180,width:202,height:450}),frameAlpha:0},rightUpper:{...containCamera({x:325,y:210,width:75,height:220}),frameAlpha:0},rightAttacker:{...containCamera({x:310,y:425,width:85,height:115}),frameAlpha:0},rightRoad:{...containCamera({x:220,y:500,width:100,height:85}),frameAlpha:0},upper:{...containCamera({x:35,y:230,width:100,height:95}),frameAlpha:0},stage:{...containCamera({x:64,y:420,width:170,height:145}),frameAlpha:0},whole:{...whole,frameAlpha:1},board:{...PLAY_CAMERA,frameAlpha:0},lcd:{...close,frameAlpha:0},left:{...containCamera({x:26,y:395,width:185,height:175}),frameAlpha:0},road:{...containCamera({x:61,y:475,width:155,height:92.5}),frameAlpha:0},entry:{...containCamera({x:46,y:400,width:55,height:80}),frameAlpha:0}};
 }
 export function createIntroCamera({lcd,reducedMotion=false,onState=()=>{}}){
  const {whole,lcd:close}=createViewCameras(lcd);

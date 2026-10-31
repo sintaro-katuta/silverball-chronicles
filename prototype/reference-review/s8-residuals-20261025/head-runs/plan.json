@@ -1,0 +1,39 @@
+{
+  "configs": [
+    {
+      "candidate": true,
+      "phase": 0,
+      "shots": 250,
+      "stage": "comparison"
+    },
+    {
+      "candidate": true,
+      "phase": 0.175,
+      "shots": 250,
+      "stage": "comparison"
+    },
+    {
+      "candidate": true,
+      "phase": 0.35,
+      "shots": 250,
+      "stage": "comparison"
+    }
+  ],
+  "heldout": [
+    {
+      "candidate": false,
+      "phase": 0.525,
+      "shots": 250
+    },
+    {
+      "candidate": true,
+      "phase": 0.525,
+      "shots": 250
+    }
+  ],
+  "candidate": "pin33 source x178.5 ->173.1 (5.4px within authorized6), y348.5 unchanged; right five head contacts match existing visible1.04 and sphere friction.5; same electric painted body; every other centre/source path/heso16/ball3 unchanged",
+  "drain": 45,
+  "acceptance": "candidate residuals0; LCD/stage/electric body penetration0; global >=1s stalls0; exact counts; aggregate heso within10% of baseline and>=8%; no extra geometry candidates",
+  "stage": "phase .525 not used for selection",
+  "baselineSource": "../runs base cases; factory effective inputs identical to d78adea (new per-pin friction override absent in baseline)"
+}

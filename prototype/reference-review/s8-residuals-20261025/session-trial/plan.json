@@ -1,0 +1,16 @@
+{
+  "configs": [
+    {
+      "id": "loss-continuous-p35",
+      "policy": "continuous",
+      "phase": 0.35,
+      "random": "all-loss"
+    }
+  ],
+  "startingBalls": 400,
+  "normalPower": 0.18,
+  "launchInterval": 0.6,
+  "stopRule": "stop during visible presentation or at four held draws; resume when no presentation and holds<=2; in-flight balls still arrive",
+  "end": "actual lost result, first normal bonus, or 30 seconds of idle zero-stock blocked by stationary physical balls; 1800s cap",
+  "scope": "isolated SessionGame + actual production board + presentation bridge, no wallet/save; all-loss fixtures isolate normal play and preserve the presentation selector"
+}

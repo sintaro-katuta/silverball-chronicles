@@ -1,0 +1,58 @@
+{
+  "approvedBy": "User OK after completed review of17b6e31",
+  "version": 16,
+  "approvedRightPins": [
+    {
+      "id": 97,
+      "x": 235.75,
+      "y": 548.75
+    },
+    {
+      "id": 98,
+      "x": 236.11398911442126,
+      "y": 544.1546205897029
+    },
+    {
+      "id": 99,
+      "x": 239.514354895042,
+      "y": 541.404618306434
+    },
+    {
+      "id": 100,
+      "x": 242.9843072261428,
+      "y": 539.149750057536
+    },
+    {
+      "id": 101,
+      "x": 246.66703329918894,
+      "y": 536.6125215162126
+    }
+  ],
+  "leftPin33": {
+    "id": 33,
+    "role": "prize",
+    "x": 72.25,
+    "y": 294.25,
+    "r": 0.2,
+    "restitution": 0.8
+  },
+  "ballRadius": 3,
+  "hesoWidth": 16,
+  "sourcePathsUnchanged": true,
+  "reviewStateEquivalence": "42 passing tests include exact production/reviewed overlay state equivalence",
+  "browser": {
+    "shots": 100,
+    "heso": 13,
+    "out": 87,
+    "remaining": 0
+  },
+  "knownRightPlayIssue": "upper-right residual775.2,361.7 and bonus route remain separate",
+  "sourceHashes": {
+    "src/app/production-board-profile.js": "30d8d386442de1a6f0a2dee7c912be36de1226ea074d1987ff676fa75f4fba5b",
+    "src/pixi/source-guide-mechanics.js": "395c101f2839fcd650d1ce5a1b13fa06fd365acdc15225a2163e91af13092410",
+    "src/pixi/right-road-contacts.js": "122e83ee6819f61012dea202efb3d2c72526ec0b6ea8871c861d3dc131b86b72",
+    "src/pixi/source-left-residual.js": "9b12fd35c118dc4400499203ac097d69e1e766fe0447aebf3fa569dc25e04bf7",
+    "src/pixi/rear-electric-decoration.js": "04bd3f901b208ec458ba34cae64eb39d852b1b0aec918d45d004f8b12244f9f6",
+    "src/physics/physics.js": "085f1e94a81e3b1f2680c40e091843d95301de42eceb351e946f1e187c122ef2"
+  }
+}

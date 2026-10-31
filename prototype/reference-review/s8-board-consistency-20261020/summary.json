@@ -1,0 +1,1248 @@
+{
+  "scope": "Sprint8 0.4.0 bounded comparison; fixtures, no real lottery acceptance",
+  "decision": "Keep production legacy response. I500 rejected after2 trials, I1000 rejected after phase0. White-line removal is independent. #70 needs reference, #42 unresolved, #44 diagnosis only.",
+  "trials": [
+    {
+      "stage": "baseline",
+      "phase": 0,
+      "mode": "normal",
+      "head": "e2e759ca6ff520cb66c6cc2c63cfda2b1ec84e76",
+      "createdAt": "2026-10-19T16:16:43.472Z",
+      "scope": "Mechanical fixture with real launches; no lottery, stock, reward, or forced admissions",
+      "shots": 250,
+      "counts": {
+        "fuzu": 0,
+        "normal": 12,
+        "start": 22,
+        "rush": 0,
+        "bonus": 0,
+        "out": 216,
+        "returned": 0
+      },
+      "remaining": 0,
+      "reconciled": true,
+      "seconds": 195.116666667101,
+      "maxOmega": 1.3076796460159008,
+      "totalRotationDegrees": 1859.2569276750564,
+      "wheelContacts": 2301,
+      "reverseCount": 433,
+      "frontIntrusions": [],
+      "sourceBefore": null,
+      "sourceAfter": null,
+      "sourceUnchanged": null,
+      "raw": "baseline-normal-0/result.json",
+      "rawSHA256": "cd5f2e94f0c800f26c475172843d0aaca3d3aaf94f04f7a6e11ac4966d0f7bdf",
+      "probes": [
+        {
+          "name": "tip-up",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 19.286733238230944,
+            "vy": 20.291012838801777,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.28158630527817435,
+          "freeDecayAngleDegrees": -23.04815265874538
+        },
+        {
+          "name": "tip-down",
+          "initial": {
+            "x": 6,
+            "y": -2,
+            "vx": 0,
+            "vy": 80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.250053696587343,
+            "y": -3.300279222254181,
+            "vx": 19.286733238231122,
+            "vy": -20.29101283880172,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 0.2815863052781741,
+          "freeDecayAngleDegrees": 23.04815265874536
+        },
+        {
+          "name": "weak",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -20
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 4.821683309557736,
+            "vy": 5.072753209700444,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.07039657631954359,
+          "freeDecayAngleDegrees": -5.762038164686345
+        },
+        {
+          "name": "strong",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -160
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 38.57346647646189,
+            "vy": 40.58202567760355,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.5631726105563487,
+          "freeDecayAngleDegrees": -46.09630531749076
+        },
+        {
+          "name": "axis",
+          "initial": {
+            "x": -4.5,
+            "y": 0,
+            "vx": 80,
+            "vy": 0
+          },
+          "ball": {
+            "id": 1,
+            "x": -5.3,
+            "y": -3.4290110376125893e-16,
+            "vx": -24,
+            "vy": -4.457714348896366e-14,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 0,
+          "freeDecayAngleDegrees": 0
+        }
+      ]
+    },
+    {
+      "stage": "baseline",
+      "phase": 0.175,
+      "mode": "normal",
+      "head": "e2e759ca6ff520cb66c6cc2c63cfda2b1ec84e76",
+      "createdAt": "2026-10-19T16:18:05.685Z",
+      "scope": "Mechanical fixture with real launches; no lottery, stock, reward, or forced admissions",
+      "shots": 250,
+      "counts": {
+        "fuzu": 0,
+        "normal": 10,
+        "start": 19,
+        "rush": 0,
+        "bonus": 0,
+        "out": 221,
+        "returned": 0
+      },
+      "remaining": 0,
+      "reconciled": true,
+      "seconds": 194.91666666710083,
+      "maxOmega": 2.758854328837551,
+      "totalRotationDegrees": 2012.0071140195723,
+      "wheelContacts": 3109,
+      "reverseCount": 411,
+      "frontIntrusions": [],
+      "sourceBefore": null,
+      "sourceAfter": null,
+      "sourceUnchanged": null,
+      "raw": "baseline-normal-0.175/result.json",
+      "rawSHA256": "fc45bd400c3dd4e3fa649bcbd2bb6a16e7603c218ac3dded674d1b5950655f78",
+      "probes": [
+        {
+          "name": "tip-up",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 19.286733238230944,
+            "vy": 20.291012838801777,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.28158630527817435,
+          "freeDecayAngleDegrees": -23.04815265874538
+        },
+        {
+          "name": "tip-down",
+          "initial": {
+            "x": 6,
+            "y": -2,
+            "vx": 0,
+            "vy": 80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.250053696587343,
+            "y": -3.300279222254181,
+            "vx": 19.286733238231122,
+            "vy": -20.29101283880172,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 0.2815863052781741,
+          "freeDecayAngleDegrees": 23.04815265874536
+        },
+        {
+          "name": "weak",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -20
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 4.821683309557736,
+            "vy": 5.072753209700444,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.07039657631954359,
+          "freeDecayAngleDegrees": -5.762038164686345
+        },
+        {
+          "name": "strong",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -160
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 38.57346647646189,
+            "vy": 40.58202567760355,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.5631726105563487,
+          "freeDecayAngleDegrees": -46.09630531749076
+        },
+        {
+          "name": "axis",
+          "initial": {
+            "x": -4.5,
+            "y": 0,
+            "vx": 80,
+            "vy": 0
+          },
+          "ball": {
+            "id": 1,
+            "x": -5.3,
+            "y": -3.4290110376125893e-16,
+            "vx": -24,
+            "vy": -4.457714348896366e-14,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 0,
+          "freeDecayAngleDegrees": 0
+        }
+      ]
+    },
+    {
+      "stage": "baseline",
+      "phase": 0.35,
+      "mode": "normal",
+      "head": "e2e759ca6ff520cb66c6cc2c63cfda2b1ec84e76",
+      "createdAt": "2026-10-19T16:18:57.279Z",
+      "scope": "Mechanical fixture with real launches; no lottery, stock, reward, or forced admissions",
+      "shots": 250,
+      "counts": {
+        "fuzu": 1,
+        "normal": 16,
+        "start": 25,
+        "rush": 0,
+        "bonus": 0,
+        "out": 208,
+        "returned": 0
+      },
+      "remaining": 0,
+      "reconciled": true,
+      "seconds": 195.27500000043997,
+      "maxOmega": 1.9153765913532173,
+      "totalRotationDegrees": 2101.352948412323,
+      "wheelContacts": 10627,
+      "reverseCount": 418,
+      "frontIntrusions": [],
+      "sourceBefore": null,
+      "sourceAfter": null,
+      "sourceUnchanged": null,
+      "raw": "baseline-normal-0.35/result.json",
+      "rawSHA256": "481eba8309818624a0b620c789e0622053ff8ec4fedbd31eaa8112971edf7e1a",
+      "probes": [
+        {
+          "name": "tip-up",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 19.286733238230944,
+            "vy": 20.291012838801777,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.28158630527817435,
+          "freeDecayAngleDegrees": -23.04815265874538
+        },
+        {
+          "name": "tip-down",
+          "initial": {
+            "x": 6,
+            "y": -2,
+            "vx": 0,
+            "vy": 80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.250053696587343,
+            "y": -3.300279222254181,
+            "vx": 19.286733238231122,
+            "vy": -20.29101283880172,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 0.2815863052781741,
+          "freeDecayAngleDegrees": 23.04815265874536
+        },
+        {
+          "name": "weak",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -20
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 4.821683309557736,
+            "vy": 5.072753209700444,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.07039657631954359,
+          "freeDecayAngleDegrees": -5.762038164686345
+        },
+        {
+          "name": "strong",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -160
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 38.57346647646189,
+            "vy": 40.58202567760355,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.5631726105563487,
+          "freeDecayAngleDegrees": -46.09630531749076
+        },
+        {
+          "name": "axis",
+          "initial": {
+            "x": -4.5,
+            "y": 0,
+            "vx": 80,
+            "vy": 0
+          },
+          "ball": {
+            "id": 1,
+            "x": -5.3,
+            "y": -3.4290110376125893e-16,
+            "vx": -24,
+            "vy": -4.457714348896366e-14,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 0,
+          "freeDecayAngleDegrees": 0
+        }
+      ]
+    },
+    {
+      "stage": "candidate",
+      "phase": 0,
+      "mode": "normal",
+      "head": "e2e759ca6ff520cb66c6cc2c63cfda2b1ec84e76",
+      "createdAt": "2026-10-19T16:20:36.419Z",
+      "scope": "Mechanical fixture with real launches; no lottery, stock, reward, or forced admissions",
+      "shots": 250,
+      "counts": {
+        "fuzu": 0,
+        "normal": 12,
+        "start": 15,
+        "rush": 0,
+        "bonus": 0,
+        "out": 223,
+        "returned": 0
+      },
+      "remaining": 0,
+      "reconciled": true,
+      "seconds": 195.116666667101,
+      "maxOmega": 6.9708940129157675,
+      "totalRotationDegrees": 6828.016065890855,
+      "wheelContacts": 1946,
+      "reverseCount": 434,
+      "frontIntrusions": [],
+      "sourceBefore": "63532e8fbaac1f9fe9f52b3b838bfa4029583c2b9ae087f068e71682f018a0d7",
+      "sourceAfter": "63532e8fbaac1f9fe9f52b3b838bfa4029583c2b9ae087f068e71682f018a0d7",
+      "sourceUnchanged": true,
+      "raw": "candidate-normal-0/result.json",
+      "rawSHA256": "7d7f2ee3447287e9b3dbd8ba7adc62a2d9ceaa63fe9f0711fb83d5159c8a7fe4",
+      "probes": [
+        {
+          "name": "tip-up",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 18.18103578113891,
+            "vy": 14.541386061923149,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -1.061772489618522,
+          "freeDecayAngleDegrees": -86.90726065462763
+        },
+        {
+          "name": "tip-down",
+          "initial": {
+            "x": 6,
+            "y": -2,
+            "vx": 0,
+            "vy": 80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.250053696587343,
+            "y": -3.300279222254181,
+            "vx": 18.181035781139084,
+            "vy": -14.54138606192312,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 1.061772489618521,
+          "freeDecayAngleDegrees": 86.90726065462754
+        },
+        {
+          "name": "weak",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -20
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 4.545258945284727,
+            "vy": 3.635346515480787,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.2654431224046305,
+          "freeDecayAngleDegrees": -21.72681516365691
+        },
+        {
+          "name": "strong",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -160
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 36.36207156227782,
+            "vy": 29.082772123846297,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -2.123544979237044,
+          "freeDecayAngleDegrees": -173.81452130925527
+        },
+        {
+          "name": "axis",
+          "initial": {
+            "x": -4.5,
+            "y": 0,
+            "vx": 80,
+            "vy": 0
+          },
+          "ball": {
+            "id": 1,
+            "x": -5.3,
+            "y": -3.4290110376125893e-16,
+            "vx": -24,
+            "vy": -4.457714348896366e-14,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -4.0119429140067286e-16,
+          "freeDecayAngleDegrees": -3.283819951714322e-14
+        }
+      ]
+    },
+    {
+      "stage": "candidate",
+      "phase": 0.175,
+      "mode": "normal",
+      "head": "e2e759ca6ff520cb66c6cc2c63cfda2b1ec84e76",
+      "createdAt": "2026-10-19T16:21:51.747Z",
+      "scope": "Mechanical fixture with real launches; no lottery, stock, reward, or forced admissions",
+      "shots": 250,
+      "counts": {
+        "fuzu": 0,
+        "normal": 8,
+        "start": 15,
+        "rush": 0,
+        "bonus": 0,
+        "out": 227,
+        "returned": 0
+      },
+      "remaining": 0,
+      "reconciled": true,
+      "seconds": 194.91666666710083,
+      "maxOmega": 4.089554964722158,
+      "totalRotationDegrees": 6451.890417181901,
+      "wheelContacts": 2692,
+      "reverseCount": 390,
+      "frontIntrusions": [],
+      "sourceBefore": "63532e8fbaac1f9fe9f52b3b838bfa4029583c2b9ae087f068e71682f018a0d7",
+      "sourceAfter": "63532e8fbaac1f9fe9f52b3b838bfa4029583c2b9ae087f068e71682f018a0d7",
+      "sourceUnchanged": true,
+      "raw": "candidate-normal-0.175/result.json",
+      "rawSHA256": "fde7ab4cb9b24a14897378fdd3528408bcb77fbefd93d2a307bf2227e659a073",
+      "probes": [
+        {
+          "name": "tip-up",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 18.18103578113891,
+            "vy": 14.541386061923149,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -1.061772489618522,
+          "freeDecayAngleDegrees": -86.90726065462763
+        },
+        {
+          "name": "tip-down",
+          "initial": {
+            "x": 6,
+            "y": -2,
+            "vx": 0,
+            "vy": 80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.250053696587343,
+            "y": -3.300279222254181,
+            "vx": 18.181035781139084,
+            "vy": -14.54138606192312,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 1.061772489618521,
+          "freeDecayAngleDegrees": 86.90726065462754
+        },
+        {
+          "name": "weak",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -20
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 4.545258945284727,
+            "vy": 3.635346515480787,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.2654431224046305,
+          "freeDecayAngleDegrees": -21.72681516365691
+        },
+        {
+          "name": "strong",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -160
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 36.36207156227782,
+            "vy": 29.082772123846297,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -2.123544979237044,
+          "freeDecayAngleDegrees": -173.81452130925527
+        },
+        {
+          "name": "axis",
+          "initial": {
+            "x": -4.5,
+            "y": 0,
+            "vx": 80,
+            "vy": 0
+          },
+          "ball": {
+            "id": 1,
+            "x": -5.3,
+            "y": -3.4290110376125893e-16,
+            "vx": -24,
+            "vy": -4.457714348896366e-14,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -4.0119429140067286e-16,
+          "freeDecayAngleDegrees": -3.283819951714322e-14
+        }
+      ]
+    },
+    {
+      "stage": "candidate2",
+      "phase": 0,
+      "mode": "normal",
+      "head": "e2e759ca6ff520cb66c6cc2c63cfda2b1ec84e76",
+      "createdAt": "2026-10-19T16:22:41.959Z",
+      "scope": "Mechanical fixture with real launches; no lottery, stock, reward, or forced admissions",
+      "shots": 250,
+      "counts": {
+        "fuzu": 0,
+        "normal": 13,
+        "start": 20,
+        "rush": 0,
+        "bonus": 0,
+        "out": 217,
+        "returned": 0
+      },
+      "remaining": 0,
+      "reconciled": true,
+      "seconds": 195.116666667101,
+      "maxOmega": 2.2795260311903256,
+      "totalRotationDegrees": 3587.5006206091966,
+      "wheelContacts": 3408,
+      "reverseCount": 481,
+      "frontIntrusions": [],
+      "sourceBefore": "dc5555c421b2236b193293bd1666a0cb750b4beca1dae1f72052971b23437f59",
+      "sourceAfter": "dc5555c421b2236b193293bd1666a0cb750b4beca1dae1f72052971b23437f59",
+      "sourceUnchanged": true,
+      "raw": "candidate2-normal-0/result.json",
+      "rawSHA256": "2b6de2f76e0b300be3baf1f70a7e25a989bc3f20ebf5518f82fd32c1fa8698cb",
+      "probes": [
+        {
+          "name": "tip-up",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 18.71756959557851,
+            "vy": 17.331361897009103,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.5465530321908975,
+          "freeDecayAngleDegrees": -44.73597432088035
+        },
+        {
+          "name": "tip-down",
+          "initial": {
+            "x": 6,
+            "y": -2,
+            "vx": 0,
+            "vy": 80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.250053696587343,
+            "y": -3.300279222254181,
+            "vx": 18.71756959557869,
+            "vy": -17.331361897009074,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 0.546553032190897,
+          "freeDecayAngleDegrees": 44.73597432088032
+        },
+        {
+          "name": "weak",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -20
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 4.6793923988946275,
+            "vy": 4.332840474252276,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.13663825804772436,
+          "freeDecayAngleDegrees": -11.183993580220088
+        },
+        {
+          "name": "strong",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -160
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 37.43513919115702,
+            "vy": 34.662723794018206,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -1.093106064381795,
+          "freeDecayAngleDegrees": -89.4719486417607
+        },
+        {
+          "name": "axis",
+          "initial": {
+            "x": -4.5,
+            "y": 0,
+            "vx": 80,
+            "vy": 0
+          },
+          "ball": {
+            "id": 1,
+            "x": -5.3,
+            "y": -3.4290110376125893e-16,
+            "vx": -24,
+            "vy": -4.457714348896366e-14,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -2.0059714570033643e-16,
+          "freeDecayAngleDegrees": -1.641909975857161e-14
+        }
+      ]
+    },
+    {
+      "stage": "final",
+      "phase": 0,
+      "mode": "bonus",
+      "head": "e2e759ca6ff520cb66c6cc2c63cfda2b1ec84e76",
+      "createdAt": "2026-10-19T16:25:56.614Z",
+      "scope": "Mechanical fixture with real launches; no lottery, stock, reward, or forced admissions",
+      "shots": 50,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 0,
+        "bonus": 50,
+        "out": 0,
+        "returned": 0
+      },
+      "remaining": 0,
+      "reconciled": true,
+      "seconds": 74.41666666654974,
+      "maxOmega": 0,
+      "totalRotationDegrees": 0,
+      "wheelContacts": 0,
+      "reverseCount": 0,
+      "frontIntrusions": [],
+      "sourceBefore": "443093689643ed565f468fc90a633d8f5c984c4d1119eb3a0c991946d93baf07",
+      "sourceAfter": "443093689643ed565f468fc90a633d8f5c984c4d1119eb3a0c991946d93baf07",
+      "sourceUnchanged": true,
+      "raw": "final-bonus-0/result.json",
+      "rawSHA256": "1755e8715e8597e26b3612e20065c3e0e4605404ad20e30dde5e251c993863f7",
+      "probes": [
+        {
+          "name": "tip-up",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 19.286733238230944,
+            "vy": 20.291012838801777,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.28158630527817435,
+          "freeDecayAngleDegrees": -23.04815265874538
+        },
+        {
+          "name": "tip-down",
+          "initial": {
+            "x": 6,
+            "y": -2,
+            "vx": 0,
+            "vy": 80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.250053696587343,
+            "y": -3.300279222254181,
+            "vx": 19.286733238231122,
+            "vy": -20.29101283880172,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 0.2815863052781741,
+          "freeDecayAngleDegrees": 23.04815265874536
+        },
+        {
+          "name": "weak",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -20
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 4.821683309557736,
+            "vy": 5.072753209700444,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.07039657631954359,
+          "freeDecayAngleDegrees": -5.762038164686345
+        },
+        {
+          "name": "strong",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -160
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 38.57346647646189,
+            "vy": 40.58202567760355,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.5631726105563487,
+          "freeDecayAngleDegrees": -46.09630531749076
+        },
+        {
+          "name": "axis",
+          "initial": {
+            "x": -4.5,
+            "y": 0,
+            "vx": 80,
+            "vy": 0
+          },
+          "ball": {
+            "id": 1,
+            "x": -5.3,
+            "y": -3.4290110376125893e-16,
+            "vx": -24,
+            "vy": -4.457714348896366e-14,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 0,
+          "freeDecayAngleDegrees": 0
+        }
+      ]
+    },
+    {
+      "stage": "final",
+      "phase": 0,
+      "mode": "normal",
+      "head": "e2e759ca6ff520cb66c6cc2c63cfda2b1ec84e76",
+      "createdAt": "2026-10-19T16:25:12.974Z",
+      "scope": "Mechanical fixture with real launches; no lottery, stock, reward, or forced admissions",
+      "shots": 250,
+      "counts": {
+        "fuzu": 0,
+        "normal": 12,
+        "start": 22,
+        "rush": 0,
+        "bonus": 0,
+        "out": 216,
+        "returned": 0
+      },
+      "remaining": 0,
+      "reconciled": true,
+      "seconds": 195.116666667101,
+      "maxOmega": 1.3076796460159008,
+      "totalRotationDegrees": 1859.2569276750564,
+      "wheelContacts": 2301,
+      "reverseCount": 433,
+      "frontIntrusions": [],
+      "sourceBefore": "443093689643ed565f468fc90a633d8f5c984c4d1119eb3a0c991946d93baf07",
+      "sourceAfter": "443093689643ed565f468fc90a633d8f5c984c4d1119eb3a0c991946d93baf07",
+      "sourceUnchanged": true,
+      "raw": "final-normal-0/result.json",
+      "rawSHA256": "aebd630e1bd3326193d987a95114ead05f91f2f5e455c9dfadc34088e4d84be3",
+      "probes": [
+        {
+          "name": "tip-up",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 19.286733238230944,
+            "vy": 20.291012838801777,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.28158630527817435,
+          "freeDecayAngleDegrees": -23.04815265874538
+        },
+        {
+          "name": "tip-down",
+          "initial": {
+            "x": 6,
+            "y": -2,
+            "vx": 0,
+            "vy": 80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.250053696587343,
+            "y": -3.300279222254181,
+            "vx": 19.286733238231122,
+            "vy": -20.29101283880172,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 0.2815863052781741,
+          "freeDecayAngleDegrees": 23.04815265874536
+        },
+        {
+          "name": "weak",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -20
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 4.821683309557736,
+            "vy": 5.072753209700444,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.07039657631954359,
+          "freeDecayAngleDegrees": -5.762038164686345
+        },
+        {
+          "name": "strong",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -160
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 38.57346647646189,
+            "vy": 40.58202567760355,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.5631726105563487,
+          "freeDecayAngleDegrees": -46.09630531749076
+        },
+        {
+          "name": "axis",
+          "initial": {
+            "x": -4.5,
+            "y": 0,
+            "vx": 80,
+            "vy": 0
+          },
+          "ball": {
+            "id": 1,
+            "x": -5.3,
+            "y": -3.4290110376125893e-16,
+            "vx": -24,
+            "vy": -4.457714348896366e-14,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 0,
+          "freeDecayAngleDegrees": 0
+        }
+      ]
+    },
+    {
+      "stage": "final",
+      "phase": 0,
+      "mode": "rush",
+      "head": "e2e759ca6ff520cb66c6cc2c63cfda2b1ec84e76",
+      "createdAt": "2026-10-19T16:25:52.833Z",
+      "scope": "Mechanical fixture with real launches; no lottery, stock, reward, or forced admissions",
+      "shots": 50,
+      "counts": {
+        "fuzu": 0,
+        "normal": 0,
+        "start": 0,
+        "rush": 50,
+        "bonus": 0,
+        "out": 0,
+        "returned": 0
+      },
+      "remaining": 0,
+      "reconciled": true,
+      "seconds": 74.41666666654974,
+      "maxOmega": 0,
+      "totalRotationDegrees": 0,
+      "wheelContacts": 0,
+      "reverseCount": 0,
+      "frontIntrusions": [],
+      "sourceBefore": "443093689643ed565f468fc90a633d8f5c984c4d1119eb3a0c991946d93baf07",
+      "sourceAfter": "443093689643ed565f468fc90a633d8f5c984c4d1119eb3a0c991946d93baf07",
+      "sourceUnchanged": true,
+      "raw": "final-rush-0/result.json",
+      "rawSHA256": "2a5a51186d9759ec0ddf05cbb38963e31c36e2c41901701dae421934162ed09f",
+      "probes": [
+        {
+          "name": "tip-up",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 19.286733238230944,
+            "vy": 20.291012838801777,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.28158630527817435,
+          "freeDecayAngleDegrees": -23.04815265874538
+        },
+        {
+          "name": "tip-down",
+          "initial": {
+            "x": 6,
+            "y": -2,
+            "vx": 0,
+            "vy": 80
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.250053696587343,
+            "y": -3.300279222254181,
+            "vx": 19.286733238231122,
+            "vy": -20.29101283880172,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 0.2815863052781741,
+          "freeDecayAngleDegrees": 23.04815265874536
+        },
+        {
+          "name": "weak",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -20
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 4.821683309557736,
+            "vy": 5.072753209700444,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.07039657631954359,
+          "freeDecayAngleDegrees": -5.762038164686345
+        },
+        {
+          "name": "strong",
+          "initial": {
+            "x": 6,
+            "y": 2,
+            "vx": 0,
+            "vy": -160
+          },
+          "ball": {
+            "id": 1,
+            "x": 6.25005369658734,
+            "y": 3.300279222254181,
+            "vx": 38.57346647646189,
+            "vy": 40.58202567760355,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": -0.5631726105563487,
+          "freeDecayAngleDegrees": -46.09630531749076
+        },
+        {
+          "name": "axis",
+          "initial": {
+            "x": -4.5,
+            "y": 0,
+            "vx": 80,
+            "vy": 0
+          },
+          "ball": {
+            "id": 1,
+            "x": -5.3,
+            "y": -3.4290110376125893e-16,
+            "vx": -24,
+            "vy": -4.457714348896366e-14,
+            "r": 1.8,
+            "hits": 0,
+            "contactCount": 0
+          },
+          "omega": 0,
+          "freeDecayAngleDegrees": 0
+        }
+      ]
+    }
+  ]
+}

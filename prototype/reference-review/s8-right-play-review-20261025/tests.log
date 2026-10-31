@@ -1,0 +1,23 @@
+✔ persistent views reuse introduction poses and preserve adopted board pose (1.492708ms)
+✔ introduction visits whole, board, LCD and returns exactly to adopted play view (0.126417ms)
+✔ skip and reduced motion restore adopted camera with no residual outer frame (0.076625ms)
+✔ LCD camera contains every corner with padding and clamps long frame gaps (0.088125ms)
+✔ review close-ups contain both specified left zones without changing the board view (0.082833ms)
+✔ right-road review camera contains the annotated electric decoration and road pins (0.057ms)
+✔ right-only review cameras contain the upper route, attacker and electric starter without changing board pose (0.157959ms)
+✔ production preserves diagram centres except the five explicitly approved residual-fix centres (308.509417ms)
+✔ fresh profile and factory clones prevent cross-session mutation; reset reconstruction preserves layout and normal/right launch strengths (201.794916ms)
+✔ app uses one profile and power constant for initial mount and dock, retaining slider range and reset option forwarding (1.01325ms)
+✔ pin and guide alignment leaves all other settings at the user baseline (0.810417ms)
+✔ real launches debit stock and ordinary admissions pay once and queue once (882.66975ms)
+✔ session uses supplied production draw RNG, not review loss RNG (0.54525ms)
+✔ pause freezes both clocks and stop-fire drains existing balls (211.982209ms)
+✔ payout earns tickets without restoring stage progression and in-flight last balls are preserved (0.250333ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1192.081416

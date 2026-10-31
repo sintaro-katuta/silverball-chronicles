@@ -18,5 +18,5 @@ test('retirement is idempotent and rejects late capture and subsequent ticks',()
 test('new play starts independently, including physical IDs and old profile upgrades',()=>{
  const first=new SessionGame(()=>.9);first.hit({id:1},'normal');first.profile.upgrades.stock=99;first.profile.upgrades.bonus=99;first.startRush();first.finish('retired');
  const next=new SessionGame(()=>.9);assert.equal(next.stock,400);assert.equal(next.total,0);assert.equal(next.rush,null);assert.equal(next.w.seen.size,0);assert.equal(next.profile.upgrades.stock??0,0);
- next.hit({id:1},'normal');assert.equal(next.stock,405);assert.equal(next.total,5);assert.equal(next.ticketEstimate,0);
+ next.hit({id:1},'normal');assert.equal(next.stock,405);assert.equal(next.total,5);assert.equal(next.ticketEstimate,1);
 });
