@@ -13,5 +13,5 @@ export function createBoardTrim(physics){return pixelSurface(1260,1680,c=>{
  poly([[718,626],[785,618],[780,713],[760,730],[742,784],[704,807],[672,831],[650,863],[644,901],[625,925],[580,927],[578,880],[533,879],[530,839],[581,818],[638,799],[682,773],[692,721],[701,667]],'#263e54');
  poly([[728,650],[768,644],[755,708],[736,721],[720,774],[695,787],[705,712]],'#183953');
  }
- for(const p of physics.pockets.filter(p=>p.kind==='normal'||p.kind==='start')){const [x,y]=at([p.x,p.y]);d.rect(x-18,y-6,36,36,'#1c3349');d.line(x-18,y+30,x+18,y+30,'#8296a7',2);}
+ // Pocket sprites supply their own rims; do not paint the old rectangular backing.
 });}
