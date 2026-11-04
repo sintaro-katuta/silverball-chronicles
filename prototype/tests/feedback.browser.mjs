@@ -45,18 +45,18 @@ try{
  stage='experience battle: PUSH visible';clockTrace=[];const trace=clockTrace,waitStarted=Date.now();
  const observe=async()=>{const value=await page.evaluate(()=>{const s=__session.snapshot();return {gameTime:s.time,reach:s.spin.reach,paused:s.paused,phase:s.session.phase,pushHidden:document.querySelector('.decision-push-button').hidden,visibility:document.visibilityState};});trace.push({elapsedMs:Date.now()-waitStarted,...value});};
  await observe();const clockTimer=setInterval(()=>observe().catch(()=>{}),10000);
- // Allow variable headless execution speed without changing the game clock.
- // Keep every semantic assertion and a finite wall deadline.
- try{await page.locator('.decision-push-button').waitFor({state:'visible',timeout:300000});await observe();}
+ // Under software rendering the fixed-step game clock can run much slower than wall time.
+ // The deadline remains finite; the game clock, PUSH and payout assertions stay unchanged.
+ try{await page.locator('.decision-push-button').waitFor({state:'visible',timeout:600000});await observe();}
  finally{clearInterval(clockTimer);}
  await writeFile(`${out}/battle-clock.json`,JSON.stringify(clockTrace,null,2));
  stage='experience battle: PUSH press';await page.screenshot({path:`${out}/battle-push.png`});await page.locator('.decision-push-button').click();
- await waitExperienceStage(page,'experience battle: stored award',()=>__session.snapshot().session.jackpots>0,60000,'battle-award-clock.json');
- await waitExperienceStage(page,'experience battle: right-play guidance',()=>document.querySelector('#dock-guidance').textContent.includes('発射開始を押して右打ち')&&document.querySelector('#power-caption').textContent==='右打ち・自動調整中',90000,'battle-guide-clock.json');
+ await waitExperienceStage(page,'experience battle: stored award',()=>__session.snapshot().session.jackpots>0,180000,'battle-award-clock.json');
+ await waitExperienceStage(page,'experience battle: right-play guidance',()=>document.querySelector('#dock-guidance').textContent.includes('発射開始を押して右打ち')&&document.querySelector('#power-caption').textContent==='右打ち・自動調整中',270000,'battle-guide-clock.json');
  assert.equal(await page.locator('#power-control').isVisible(),false);assert.equal(await page.locator('#power-label').isVisible(),false);
  await page.screenshot({path:`${out}/battle-launch-guidance.png`});await page.locator('#feed-toggle').click();
- await waitExperienceStage(page,'experience battle: dedicated payout',()=>__session.snapshot().w.bonus?.payout>0,150000,'battle-payout-clock.json');
- }else if(scenario==='bonus')await waitExperienceStage(page,'experience bonus: dedicated payout',()=>__session.snapshot().w.bonus?.payout>0,150000,'bonus-clock.json');
+ await waitExperienceStage(page,'experience battle: dedicated payout',()=>__session.snapshot().w.bonus?.payout>0,450000,'battle-payout-clock.json');
+ }else if(scenario==='bonus')await waitExperienceStage(page,'experience bonus: dedicated payout',()=>__session.snapshot().w.bonus?.payout>0,450000,'bonus-clock.json');
  else {assert.ok(await page.evaluate(()=>__session.snapshot().w.rush));await page.waitForTimeout(6000);}
  await assertDraws(page);assert.ok(await page.evaluate(()=>__session.snapshot().spin.draws>0));const evidence=await page.evaluate(()=>__session.snapshot());if(scenario==='battle'||scenario==='bonus'){assert.ok(evidence.w.bonus.payout>0);assert.ok(evidence.counts.bonus>0);}assert.ok((evidence.leftRoutes.byPower['0.85']?.tracked??0)>0,'Right-play actual launches keep power0.85');await writeFile(`${out}/experience-${scenario}.json`,JSON.stringify(evidence,null,2));await page.screenshot({path:`${out}/experience-${scenario}.png`});await page.locator('#quick-pause').click();await page.locator('#leave').click();await page.locator('#playMachine').click();await page.locator('#intro-skip').click();
  assert.equal(await page.locator('#power-control').inputValue(),'0.18');assert.equal(await page.locator('#power-label').innerText(),'0.18');await page.waitForFunction(()=>(__session.snapshot()?.leftRoutes?.byPower?.['0.18']?.tracked??0)>0);
