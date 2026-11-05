@@ -5,10 +5,10 @@ import {Container,Sprite,Texture,Graphics} from 'pixi.js';
 import {pixelSurface,painter} from './pixel-primitives.js';
 import {LCD_LAYOUT,LCD_TOP,LCD_OPENING,LCD_OUTLINE} from './lcd-layout.js';
 export {LCD_LAYOUT} from './lcd-layout.js';
-export function createLcdView(sceneTexture,cloudSky=null,hairAtlas=null,hairUnderlay=null,rushScene=null,{leftInletRoute='legacy'}={}){
+export function createLcdView(sceneTexture,cloudSky=null,hairAtlas=null,hairUnderlay=null,rushScene=null,{leftInletRoute='legacy',foreground=null,background=null}={}){
  const root=new Container();root.position.set(LCD_LAYOUT.x,LCD_LAYOUT.y);
  const viewport=new Container(),mask=new Graphics().poly(LCD_OPENING.flatMap(([x,y])=>[x-LCD_LAYOUT.x,y-LCD_LAYOUT.y])).fill(0xffffff);root.addChild(viewport,mask);viewport.mask=mask;
- const idle=createWaterIdle(sceneTexture,cloudSky,hairAtlas,hairUnderlay),art=idle?.sprite??new Sprite(sceneTexture);
+ const idle=createWaterIdle(sceneTexture,cloudSky,hairAtlas,hairUnderlay,foreground,background),art=idle?.sprite??new Sprite(sceneTexture);
  const fit=LCD_LAYOUT.height/140;art.width=210*fit;art.height=LCD_LAYOUT.height;art.x=(LCD_LAYOUT.width-art.width)/2;viewport.addChild(art);const artBox={x:art.x,width:art.width,height:art.height};
  const rush=rushScene?new Sprite(rushScene):null;if(rush){rush.width=210*fit;rush.height=LCD_LAYOUT.height;rush.x=art.x;rush.visible=false;viewport.addChild(rush);}
  // Preserve the original art/text aspect ratio. The screen expands around the central show area.

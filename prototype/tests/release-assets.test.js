@@ -6,6 +6,8 @@ import {join} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import sharp from 'sharp';
 import {prepareReleaseAssets, copyReleaseAssets, RELEASE_ASSETS, LOSSLESS_ART, assertAssetSize} from '../tools/release-assets.js';
+import {BOARD_ART, ENTRY_ART} from '../src/pixi/board-assets.js';
+import {STORY_PREDICTION_ASSETS} from '../src/pixi/story-prediction-assets.js';
 
 test('release optimizes only gameplay art, preserves dimensions/alpha/originals and lossless pixel art', async () => {
  const publicDir = fileURLToPath(new URL('../public/', import.meta.url));
@@ -45,4 +47,9 @@ test('release optimizes only gameplay art, preserves dimensions/alpha/originals 
 test('Cloudflare size guard accepts the exact limit and rejects oversized assets', () => {
  assert.doesNotThrow(() => assertAssetSize(25 * 1024 * 1024, 'boundary.webp'));
  assert.throws(() => assertAssetSize(25 * 1024 * 1024 + 1, 'too-big.webp'), /exceeds 25 MiB/);
+});
+
+// The cell colors must survive release conversion exactly.
+test('release preserves grid scenes losslessly',()=>{
+ for(const url of [BOARD_ART.normalForeground,BOARD_ART.normalBackground,BOARD_ART.cabinetPortrait,BOARD_ART.reachAtlas,BOARD_ART.reachMotionAtlas,BOARD_ART.reachLandscape,ENTRY_ART.revival,...Object.values(STORY_PREDICTION_ASSETS)])assert.ok(LOSSLESS_ART.has(url),url);
 });

@@ -19,7 +19,9 @@ export function createDevelopmentView(atlas=null,landscape=null,motionAtlas=null
  for(const [key,text] of Object.entries({entry:'月光が集う',gather:'剣に宿る光',slash:'月影の一閃'})){
   const texture=Texture.from(pixelSurface(210,30,c=>{c.font='19px "DotGothic16"';c.textAlign='center';c.textBaseline='middle';c.lineJoin='miter';c.lineWidth=4;c.strokeStyle='#071225';c.strokeText(text,105,15);c.fillStyle='#e7f4fa';c.fillText(text,105,15);}));texture.source.scaleMode='nearest';textures.push(texture);const s=new Sprite(texture);s.y=3;root.addChild(s);labels[key]=s;
  }
- const long=atlas&&landscape?createLongReachView(atlas,landscape,{motionAtlas,portraitTexture}):null;if(long){root.addChild(long.root);textures.push(...long.textures);}
+ // Preserve the authored pixel grid after shared texture initialization.
+ for(const t of [atlas,landscape,motionAtlas])if(t)t.source.scaleMode='nearest';
+ const long=atlas&&landscape?createLongReachView(atlas,landscape,{motionAtlas,portraitTexture,backdropOffsetY:-7}):null;if(long){root.addChild(long.root);textures.push(...long.textures);}
  root.visible=false;
  return {root,textures,frames:long?.frames??[],render(presentation,fromRush,options={}){
   if(presentation?.longReach&&long){root.visible=true;root.alpha=1;for(const child of root.children)child.visible=child===long.root;return long.render(presentation.time,{...options,variant:presentation.reachVariant,ending:presentation.reachEnding,win:presentation.win,upperCueActive:!presentation.displayRoute||!!presentation.moonCue});}

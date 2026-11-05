@@ -2,10 +2,16 @@ import {copyFileSync, mkdirSync, readFileSync, statSync, existsSync, writeFileSy
 import {dirname, resolve} from 'node:path';
 import {createHash} from 'node:crypto';
 import sharp from 'sharp';
-import {BOARD_ART, BOARD_ART_URLS} from '../src/pixi/board-assets.js';
+import {BOARD_ART, BOARD_ART_URLS, ENTRY_ART} from '../src/pixi/board-assets.js';
+import {STORY_PREDICTION_ASSETS} from '../src/pixi/story-prediction-assets.js';
 
 export const RELEASE_ASSETS = Object.freeze(BOARD_ART_URLS.map(url => url.slice(1)));
-export const LOSSLESS_ART = new Set([BOARD_ART.central, BOARD_ART.normal, BOARD_ART.tulipAtlas, BOARD_ART.frameTexture]);
+// Grid artwork must retain exact colors and edges in release builds too.
+export const LOSSLESS_ART = new Set([
+ BOARD_ART.central, BOARD_ART.normal, BOARD_ART.tulipAtlas, BOARD_ART.frameTexture,
+ BOARD_ART.normalForeground, BOARD_ART.normalBackground, BOARD_ART.cabinetPortrait, BOARD_ART.reachAtlas, BOARD_ART.reachMotionAtlas,
+ BOARD_ART.reachLandscape, ENTRY_ART.revival, ...Object.values(STORY_PREDICTION_ASSETS)
+]);
 export function assertAssetSize(bytes, name) {
  if (bytes > 25 * 1024 * 1024) throw new Error(`Cloudflare asset exceeds 25 MiB: ${name}`);
 }
