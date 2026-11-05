@@ -18,3 +18,14 @@ for(const family of ['step','memory','episode','pursuit','rescue','revival']){
   }
  });
 }
+
+test('resolve portrait PNG preserves its editable RGBA grid',async()=>{
+ const json=JSON.parse(await readFile(new URL('../reference-review/s10-pixel-grid/resolve-portrait-grid-v1.json',import.meta.url),'utf8'));
+ const {data,info}=await sharp(fileURLToPath(new URL('../public/assets/lcd/long-reach/hero-resolve-portrait-grid-v1.png',import.meta.url))).ensureAlpha().raw().toBuffer({resolveWithObject:true});
+ assert.deepEqual([info.width,info.height],[256,256]);assert.equal(json.pixels.length,256*256);
+ for(let i=0;i<json.pixels.length;i++){
+  const color=json.palette[json.pixels[i]];assert.ok(color);
+  for(let k=0;k<4;k++)assert.equal(data[i*4+k],parseInt(color.slice(1+2*k,3+2*k),16),`cell ${i}, channel ${k}`);
+  assert.ok(data[i*4+3]===0||data[i*4+3]===255,`cell ${i} alpha`);
+ }
+});

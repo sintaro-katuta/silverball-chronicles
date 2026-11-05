@@ -51,5 +51,5 @@ test('Cloudflare size guard accepts the exact limit and rejects oversized assets
 
 // The cell colors must survive release conversion exactly.
 test('release preserves grid scenes losslessly',()=>{
- for(const url of [BOARD_ART.normalForeground,BOARD_ART.normalBackground,BOARD_ART.cabinetPortrait,BOARD_ART.reachAtlas,BOARD_ART.reachMotionAtlas,BOARD_ART.reachLandscape,ENTRY_ART.revival,...Object.values(STORY_PREDICTION_ASSETS)])assert.ok(LOSSLESS_ART.has(url),url);
+ for(const url of [BOARD_ART.normalForeground,BOARD_ART.normalBackground,BOARD_ART.cabinetPortrait,BOARD_ART.reachAtlas,BOARD_ART.reachMotionAtlas,BOARD_ART.reachLandscape,BOARD_ART.reachPortrait,ENTRY_ART.revival,...Object.values(STORY_PREDICTION_ASSETS)])assert.ok(LOSSLESS_ART.has(url),url);
 });

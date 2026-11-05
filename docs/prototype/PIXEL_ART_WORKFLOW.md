@@ -29,3 +29,5 @@
 
 
 通常画面の分離例：`prototype/public/assets/lcd/normal-hero-layer-v1.png` は元絵のRGBと二値マスク、`normal-background-layer-v1.png` は背後の補修を含む。人物の周囲に元の背景色が残る箇所があり、別の構図へそのまま転用できるとは限らない。格子化と元絵との合成差分、動作時の境界は別々に確認する。
+
+戦闘の顔アップ：0.4.0の既存ポーズを維持して256×256の格子へ標本化した `hero-resolve-portrait-grid-v1.png` と全65536セルのJSONを保存。生成手順は `prototype/tools/pixel-workbench/build-resolve-grid.mjs`。顔の読みやすさと、人物・背景の表示粒度を本編で再確認する。

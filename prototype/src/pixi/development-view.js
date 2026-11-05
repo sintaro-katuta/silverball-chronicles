@@ -20,7 +20,7 @@ export function createDevelopmentView(atlas=null,landscape=null,motionAtlas=null
   const texture=Texture.from(pixelSurface(210,30,c=>{c.font='19px "DotGothic16"';c.textAlign='center';c.textBaseline='middle';c.lineJoin='miter';c.lineWidth=4;c.strokeStyle='#071225';c.strokeText(text,105,15);c.fillStyle='#e7f4fa';c.fillText(text,105,15);}));texture.source.scaleMode='nearest';textures.push(texture);const s=new Sprite(texture);s.y=3;root.addChild(s);labels[key]=s;
  }
  // Preserve the authored pixel grid after shared texture initialization.
- for(const t of [atlas,landscape,motionAtlas])if(t)t.source.scaleMode='nearest';
+ for(const t of [atlas,landscape,motionAtlas,portraitTexture])if(t)t.source.scaleMode='nearest';
  const long=atlas&&landscape?createLongReachView(atlas,landscape,{motionAtlas,portraitTexture,backdropOffsetY:-7}):null;if(long){root.addChild(long.root);textures.push(...long.textures);}
  root.visible=false;
  return {root,textures,frames:long?.frames??[],render(presentation,fromRush,options={}){

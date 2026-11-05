@@ -13,7 +13,7 @@ export const BOARD_ART = Object.freeze({
  rushScene: '/assets/lcd/rush-eclipse-v1.png',
  reachAtlas: '/assets/lcd/long-reach/duel-poses-full-grid-v1.png',
  reachMotionAtlas: '/assets/lcd/long-reach/duel-intermediates-full-grid-v1.png',
- reachPortrait: '/assets/lcd/long-reach/hero-resolve-portrait-v1.png',
+ reachPortrait: '/assets/lcd/long-reach/hero-resolve-portrait-grid-v1.png',
  reachLandscape: '/assets/lcd/long-reach/moon-bridge-grid-v3.png',
  cloudSky: '/assets/lcd/cloud-sky-v1.png',
  hairAtlas: '/assets/lcd/hair-tip-detail-v1.png',
