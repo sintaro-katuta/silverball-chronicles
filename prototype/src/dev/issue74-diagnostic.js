@@ -3,7 +3,7 @@ import {buildHairTipFrames} from '../pixi/hair-tip-idle.js';
 import {buildSmoothCloudLayer} from '../pixi/cloud-idle.js';
 import {createWaterIdle} from '../pixi/water-idle.js';
 export async function inspect(){
- const a=await Promise.all(['moon-castle-v1.png','cloud-sky-v1.png','hair-tip-detail-v1.png','character-static-v1.png','normal-hero-layer-v1.png','normal-background-layer-v1.png'].map(x=>Assets.load('/assets/lcd/'+x)));
+ const a=await Promise.all(['moon-castle-v1.png','cloud-sky-v1.png','hair-tip-detail-v1.png','character-static-v1.png','normal-hero-layer-v2.png','normal-background-layer-v1.png'].map(x=>Assets.load('/assets/lcd/'+x)));
  const [scene,sky,atlas,underlay,hero,bg]=a;
  const old=buildHairTipFrames(scene,atlas,underlay),next=buildHairTipFrames(scene,atlas,underlay,{transparent:true});
  const water=createWaterIdle(...a),cloud=buildSmoothCloudLayer(sky,3,scene,{separated:true});

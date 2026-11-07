@@ -2,7 +2,7 @@ import {Assets} from 'pixi.js';
 import {createWaterIdle} from '../pixi/water-idle.js';
 const paths=['moon-castle-v1.png','cloud-sky-v1.png','hair-tip-detail-v1.png','character-static-v1.png'].map(n=>'/assets/lcd/'+n);
 const [scene,sky,hair,underlay]=await Promise.all(paths.map(p=>Assets.load(p)));
-const [hero,bg]=await Promise.all(['normal-hero-layer-v1.png','normal-background-layer-v1.png'].map(n=>Assets.load('/assets/lcd/'+n)));
+const [hero,bg]=await Promise.all(['normal-hero-layer-v2.png','normal-background-layer-v1.png'].map(n=>Assets.load('/assets/lcd/'+n)));
 const clouds=createWaterIdle(scene,sky),full=createWaterIdle(scene,sky,hair,underlay),layered=createWaterIdle(scene,sky,hair,underlay,hero,bg);
 const el=id=>document.querySelector('#'+id),base=el('base').getContext('2d');base.imageSmoothingEnabled=true;base.imageSmoothingQuality='high';base.drawImage(scene.source.resource,0,0,630,420);
 let time=0,playing=false,last=performance.now();
