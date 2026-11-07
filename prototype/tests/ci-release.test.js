@@ -52,7 +52,7 @@ test('unit stage preserves failed timing but never issues a success receipt',asy
 });
 
 async function joinFixture(t){const root=await sourceFixture(t);await mkdir(join(root,'prototype/dist-release'));await writeFile(join(root,'prototype/dist-release/index.html'),'frozen verified bytes');
- await writeFile(join(root,'prototype/wrangler.jsonc'),JSON.stringify({name:targetName,workers_dev:true,routes:[{pattern:'silverball-chronicles.sintaro-katuta.com',custom_domain:true},{pattern:'tsukikage.sintaro-katuta.com',custom_domain:true}],assets:{directory:'./dist-release'}}));
+ await writeFile(join(root,'prototype/wrangler.jsonc'),JSON.stringify({name:targetName,workers_dev:true,routes:[{pattern:'silverball-chronicles.sintaro-katuta.com',custom_domain:true}],assets:{directory:'./dist-release'}}));
  const run=async(command,args)=>command==='git'?(args[0]==='rev-parse'?commit:''):command===process.execPath?'# tests 2\n# pass 2\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0':'';
  await runUnit(root,{run});const candidate=await prepareRelease(root,{run,preview:async()=>({url:'http://127.0.0.1:1',close:async()=>{}}),checksMode:'browser'});return {root,run,candidate};
 }
