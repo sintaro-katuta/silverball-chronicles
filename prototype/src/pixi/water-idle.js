@@ -57,6 +57,7 @@ export function createWaterIdle(scene,cloudSky=null,hairAtlas=null,hairUnderlay=
   c.globalCompositeOperation='source-over';
  }):null;
  const hairLayer=hair?pixelSurface(WIDTH,HEIGHT,()=>{}):null;
+ const foregroundFrame=foregroundLayer?pixelSurface(w,h,()=>{}):null;
  const sprite=new Sprite(texture);let lastTime=-1;
  function render(time){
   if(time===lastTime)return;lastTime=time;ctx.drawImage(base,0,0);
@@ -68,14 +69,19 @@ export function createWaterIdle(scene,cloudSky=null,hairAtlas=null,hairUnderlay=
    if(width>0)ctx.drawImage(base,start+dx,y,width,1,start,y,width,1);
   }
   if(clouds)ctx.drawImage(clouds.render(time),0,0);
-  if(foreground)ctx.drawImage(foregroundLayer??foreground.source.resource,0,0,w,h);
+  if(foreground&&!foregroundFrame)ctx.drawImage(foreground.source.resource,0,0,w,h);
   if(hair){
    const phase=Math.max(0,time)*4,n=Math.floor(phase)%hair.frames.length,next=(n+1)%hair.frames.length,u=phase%1;
    const c=hairLayer.getContext('2d');c.clearRect(0,0,WIDTH,HEIGHT);c.globalCompositeOperation='source-over';c.globalAlpha=1-u;c.drawImage(hair.frames[n],0,0);
    // Interpolate only edited tip pixels. The original face and roots are untouched.
    c.globalCompositeOperation='lighter';c.globalAlpha=u;c.drawImage(hair.frames[next],0,0);c.globalAlpha=1;c.globalCompositeOperation='source-over';
-   ctx.drawImage(hairLayer,0,0,w,h);
-  }
+   if(foregroundFrame){
+    // Add premultiplied layers before compositing so the crossfade does not
+    // make overlapping fixed and moving hair artificially translucent.
+    const f=foregroundFrame.getContext('2d');f.clearRect(0,0,w,h);f.globalCompositeOperation='source-over';f.drawImage(foregroundLayer,0,0);
+    f.globalCompositeOperation='lighter';f.imageSmoothingEnabled=true;f.drawImage(hairLayer,0,0,w,h);f.globalCompositeOperation='source-over';ctx.drawImage(foregroundFrame,0,0);
+   }else ctx.drawImage(hairLayer,0,0,w,h);
+  }else if(foregroundFrame)ctx.drawImage(foregroundFrame,0,0);
   texture.source.update();
  }
  render(0);return {sprite,texture,render};
