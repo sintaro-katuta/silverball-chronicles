@@ -40,9 +40,24 @@ export function createWaterIdle(scene,cloudSky=null,hairAtlas=null,hairUnderlay=
  const base=presentationSurface(WIDTH,HEIGHT,c=>c.drawImage((background??scene).source.resource,0,0,WIDTH,HEIGHT));
  const canvas=pixelSurface(w,h,()=>{}),ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
  const texture=smoothTexture(Texture.from(canvas));
- const clouds=cloudSky?buildSmoothCloudLayer(cloudSky,resolution,scene):null;
- const hair=hairAtlas?buildHairTipFrames(scene,hairAtlas,hairUnderlay):null;
+ const separated=Boolean(foreground&&background);
+ const clouds=cloudSky?buildSmoothCloudLayer(cloudSky,resolution,scene,{separated}):null;
+ const hair=hairAtlas&&hairUnderlay?buildHairTipFrames(scene,hairAtlas,hairUnderlay,{transparent:separated}):null;
+ // Fade the union of animated tip pixels out of the fixed foreground once.
+ // Each transparent animation frame then reveals the current cloud layer.
+ const foregroundLayer=foreground&&hair&&separated?presentationSurface(WIDTH,HEIGHT,c=>{
+  c.drawImage(foreground.source.resource,0,0,WIDTH,HEIGHT);
+  c.globalCompositeOperation='destination-out';
+  const mask=pixelSurface(WIDTH,HEIGHT,m=>{
+   const data=m.createImageData(WIDTH,HEIGHT);
+   for(let p=0;p<hair.editable.length;p++)if(hair.editable[p])data.data[p*4+3]=hair.editable[p];
+   m.putImageData(data,0,0);
+  });
+  c.imageSmoothingEnabled=false;c.drawImage(mask,0,0,WIDTH,HEIGHT);
+  c.globalCompositeOperation='source-over';
+ }):null;
  const hairLayer=hair?pixelSurface(WIDTH,HEIGHT,()=>{}):null;
+ const foregroundFrame=foregroundLayer?pixelSurface(w,h,()=>{}):null;
  const sprite=new Sprite(texture);let lastTime=-1;
  function render(time){
   if(time===lastTime)return;lastTime=time;ctx.drawImage(base,0,0);
@@ -54,14 +69,19 @@ export function createWaterIdle(scene,cloudSky=null,hairAtlas=null,hairUnderlay=
    if(width>0)ctx.drawImage(base,start+dx,y,width,1,start,y,width,1);
   }
   if(clouds)ctx.drawImage(clouds.render(time),0,0);
-  if(foreground)ctx.drawImage(foreground.source.resource,0,0,w,h);
+  if(foreground&&!foregroundFrame)ctx.drawImage(foreground.source.resource,0,0,w,h);
   if(hair){
    const phase=Math.max(0,time)*4,n=Math.floor(phase)%hair.frames.length,next=(n+1)%hair.frames.length,u=phase%1;
    const c=hairLayer.getContext('2d');c.clearRect(0,0,WIDTH,HEIGHT);c.globalCompositeOperation='source-over';c.globalAlpha=1-u;c.drawImage(hair.frames[n],0,0);
    // Interpolate only edited tip pixels. The original face and roots are untouched.
    c.globalCompositeOperation='lighter';c.globalAlpha=u;c.drawImage(hair.frames[next],0,0);c.globalAlpha=1;c.globalCompositeOperation='source-over';
-   ctx.drawImage(hairLayer,0,0,w,h);
-  }
+   if(foregroundFrame){
+    // Add premultiplied layers before compositing so the crossfade does not
+    // make overlapping fixed and moving hair artificially translucent.
+    const f=foregroundFrame.getContext('2d');f.clearRect(0,0,w,h);f.globalCompositeOperation='source-over';f.drawImage(foregroundLayer,0,0);
+    f.globalCompositeOperation='lighter';f.imageSmoothingEnabled=true;f.drawImage(hairLayer,0,0,w,h);f.globalCompositeOperation='source-over';ctx.drawImage(foregroundFrame,0,0);
+   }else ctx.drawImage(hairLayer,0,0,w,h);
+  }else if(foregroundFrame)ctx.drawImage(foregroundFrame,0,0);
   texture.source.update();
  }
  render(0);return {sprite,texture,render};

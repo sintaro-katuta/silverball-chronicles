@@ -8,7 +8,7 @@ export const BOARD_ART = Object.freeze({
  tulipAtlas: '/assets/denchu/tulip-atlas-v2.png',
  frameTexture: '/machines/moonlit-pachinko-frame.png',
  lcdTexture: '/assets/lcd/moon-castle-v1.png',
- normalForeground: '/assets/lcd/normal-hero-layer-v1.png',
+ normalForeground: '/assets/lcd/normal-hero-layer-v2.png',
  normalBackground: '/assets/lcd/normal-background-layer-v1.png',
  rushScene: '/assets/lcd/rush-eclipse-v1.png',
  reachAtlas: '/assets/lcd/long-reach/duel-poses-full-grid-v1.png',
