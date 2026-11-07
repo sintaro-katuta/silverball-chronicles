@@ -18,6 +18,11 @@ function insideMoon(x,y){
  }
  return inside;
 }
+// Preserve the authored moon highlights that extend beyond the coarse outline.
+// Some highlights sit inside the crescent's concave edge, where clouds may move.
+export function protectsMoonHighlight(x,y,r,g,b){
+ return x>=168&&x<=191&&y>=3&&y<=50&&r>160&&g>160&&b>180;
+}
 export function buildCloudLayer(scene,plate){
  const source=pixelSurface(W,H,c=>c.drawImage(plate.source.resource,0,0,W,H)).getContext('2d').getImageData(0,0,W,H);
  const sky=new Uint8Array(W*H);
@@ -40,11 +45,15 @@ export function buildCloudLayer(scene,plate){
 
 // Display path: retain the authored plate's detail and move at fractional pixels.
 // The fixed silhouette and moon mask never move with the sky.
-export function buildSmoothCloudLayer(plate,resolution=3){
+export function buildSmoothCloudLayer(plate,resolution=3,scene=null){
  const w=W*resolution,h=H*resolution;
+ const foreground=scene?pixelSurface(w,h,c=>{c.imageSmoothingEnabled=true;c.imageSmoothingQuality='high';c.drawImage(scene.source.resource,0,0,w,h)}).getContext('2d').getImageData(0,0,w,h).data:null;
  const mask=pixelSurface(w,h,c=>{
   c.fillStyle='#fff';for(let y=0;y<83*resolution;y++)for(let x=0;x<w;x++)
-   if(y/resolution<skyCeiling(x/resolution)&&!insideMoon(x/resolution,y/resolution))c.fillRect(x,y,1,1);
+   if(y/resolution<skyCeiling(x/resolution)&&!insideMoon(x/resolution,y/resolution)){
+    const i=(y*w+x)*4;
+    if(!foreground||!protectsMoonHighlight(x/resolution,y/resolution,foreground[i],foreground[i+1],foreground[i+2]))c.fillRect(x,y,1,1);
+   }
  });
  const strip=pixelSurface(w*2,h,c=>{c.imageSmoothingEnabled=true;c.imageSmoothingQuality='high';c.drawImage(plate.source.resource,0,0,w,h);c.save();c.translate(w*2,0);c.scale(-1,1);c.drawImage(plate.source.resource,0,0,w,h);c.restore();});
  const canvas=pixelSurface(w,h,()=>{}),ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=true;

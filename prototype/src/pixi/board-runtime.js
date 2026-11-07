@@ -50,7 +50,7 @@ const [art]=await Promise.all([
  document.fonts.load('24px DotGothic16')
 ]);
 if(isCancelled())return {dispose(){sound?.dispose();}};
-const {central,normal,tulipAtlas,frameTexture=null,lcdTexture=null,entrySheets,storySheets,rushScene=null,reachAtlas=null,reachMotionAtlas=null,reachPortrait=null,reachLandscape=null,cloudSky=null,hairAtlas=null,hairUnderlay=null}=art;
+const {central,normal,tulipAtlas,frameTexture=null,lcdTexture=null,entrySheets,storySheets,rushScene=null,reachAtlas=null,reachMotionAtlas=null,reachPortrait=null,reachLandscape=null,cloudSky=null,hairAtlas=null,hairUnderlay=null,normalForeground=null,normalBackground=null}=art;
 const cabinetPortrait=art.cabinetPortrait?.source.resource??null,cabinetBackground=art.cabinetBackground?.source.resource??null;
 for(const t of [central,normal,tulipAtlas,frameTexture])if(t)t.source.scaleMode='nearest';
 for(const t of [lcdTexture,rushScene,reachAtlas,reachMotionAtlas,reachPortrait,reachLandscape,cloudSky,hairAtlas,hairUnderlay,...Object.values(storySheets??{})])if(t)smoothTexture(t);
@@ -117,7 +117,7 @@ function reset(){presentationSound?.reset();spinView?.dispose();if(scene){if(fra
 
  ballTexture=createSilverBallTexture();pinTexture=createPinTexture({highlight:lcdEnabled});textures.push(ballTexture,pinTexture);
  let lcdRoot;
- if(lcdTexture){const lcd=createLcdView(lcdTexture,cloudSky,hairAtlas,hairUnderlay,rushScene,{lowerApron:flow.physics.colliders.some(c=>c.role==='lcd-boundary-20'),leftInletRoute:flow.physics.leftInletRoute??'legacy'});lcdAnimation=lcd;lcdRoot=lcd.content;content.addChild(lcd.root);textures.push(lcd.texture);if(lcd.idleTexture)textures.push(lcd.idleTexture);if(spinEnabled){spinView=createNormalSpinView(rushScene,reachAtlas,reachLandscape,reachMotionAtlas,hairUnderlay,storySheets,reachPortrait);lcd.content.addChild(spinView.root);textures.push(...spinView.textures);frames.push(...spinView.frames);if(spinModel.rounds){bonusView=createBonusRoundView();lcd.content.addChild(bonusView.root);textures.push(bonusView.texture);preludeView=createRushPreludeView(entrySheets,rushScene);lcd.content.addChild(preludeView.root);textures.push(...preludeView.textures);}}}
+ if(lcdTexture){const lcd=createLcdView(lcdTexture,cloudSky,hairAtlas,hairUnderlay,rushScene,{lowerApron:flow.physics.colliders.some(c=>c.role==='lcd-boundary-20'),leftInletRoute:flow.physics.leftInletRoute??'legacy',foreground:normalForeground,background:normalBackground});lcdAnimation=lcd;lcdRoot=lcd.content;content.addChild(lcd.root);textures.push(lcd.texture);if(lcd.idleTexture)textures.push(lcd.idleTexture);if(spinEnabled){spinView=createNormalSpinView(rushScene,reachAtlas,reachLandscape,reachMotionAtlas,hairUnderlay,storySheets,reachPortrait);lcd.content.addChild(spinView.root);textures.push(...spinView.textures);frames.push(...spinView.frames);if(spinModel.rounds){bonusView=createBonusRoundView();lcd.content.addChild(bonusView.root);textures.push(bonusView.texture);preludeView=createRushPreludeView(entrySheets,rushScene);lcd.content.addChild(preludeView.root);textures.push(...preludeView.textures);}}}
  if(lcdEnabled){const trim=new Sprite(owned(createBoardTrim(flow.physics)));trim.scale.set(1/3);trim.y=130;content.addChild(trim);}
  if(lcdEnabled){directionView=createDirectionCutin();lcdRoot.addChild(directionView.root);textures.push(...directionView.textures);}
  const launchRailBack=new Graphics(),launchRailFront=new Graphics(),launchBallsLayer=new Container(),rearLayer=new Container(),insideLayer=new Container(),frontLayer=new Container(),mechanisms=new Container(),ballsLayer=new Container();content.addChild(launchRailBack,launchBallsLayer,launchRailFront,rearLayer,insideLayer,frontLayer,mechanisms,ballsLayer);content.launchBallsLayer=launchBallsLayer;content.ballsLayer=ballsLayer;content.insideLayer=insideLayer;
@@ -128,7 +128,15 @@ function reset(){presentationSound?.reset();spinView?.dispose();if(scene){if(fra
  }
 
  const windmillPlateLayer=flow.physics.mechanisms.some(m=>m.shapeProfile==='photo-three-vane')?new Container():null;if(windmillPlateLayer)content.addChild(windmillPlateLayer);
- for(const p of flow.physics.pockets.filter(p=>p.kind==='normal'||p.kind==='start')){const t=p.kind==='start'?central:normal,size=lcdEnabled?(p.kind==='start'?15:ORDINARY_POCKET_SIZE):32,width=lcdEnabled&&p.kind==='start'?p.w*1.25:size,s=new Sprite(t);s.position.set(p.x-width/2,p.y-size*POCKET_ANCHOR_Y);s.width=width;s.height=size;if(p.kind==='normal')s.tint=0x8297ac;rearLayer.addChild(s);const cut=Math.round(t.height*POCKET_FRONT_CUT),f=new Texture({source:t.source,frame:new Rectangle(0,cut,t.width,t.height-cut)});frames.push(f);const fg=new Sprite(f);fg.position.set(p.x-width/2,p.y-size*POCKET_ANCHOR_Y+size*cut/t.height);fg.width=width;fg.height=size*(t.height-cut)/t.height;if(p.kind==='normal')fg.tint=0x8297ac;frontLayer.addChild(fg);}
+ for(const p of flow.physics.pockets.filter(p=>p.kind==='normal'||p.kind==='start')){
+  const isStart=p.kind==='start',t=isStart?central:normal,size=lcdEnabled?(isStart?15:ORDINARY_POCKET_SIZE):32;
+  // Shift the approved round face up without changing the calibrated sensor or contact rims.
+  const y=p.y-(lcdEnabled&&isStart?2.5:0),anchorY=lcdEnabled&&isStart?2.8125/size:POCKET_ANCHOR_Y;
+  const cut=Math.round(lcdEnabled&&isStart?t.width*.294:t.height*POCKET_FRONT_CUT);
+  const s=new Sprite(t);s.position.set(p.x-size/2,y-size*anchorY);s.width=size;s.height=size;rearLayer.addChild(s);
+  const f=new Texture({source:t.source,frame:new Rectangle(0,cut,t.width,t.height-cut)});frames.push(f);
+  const fg=new Sprite(f);fg.position.set(p.x-size/2,y-size*anchorY+size*cut/t.height);fg.width=size;fg.height=size*(t.height-cut)/t.height;frontLayer.addChild(fg);
+ }
 
  const out=flow.physics.outlet,ox=(out.x-out.w/2)*3,oy=(out.y-130)*3,ow=out.w*3;
  const back=owned(pixelSurface(1260,1680,c=>{const d=painter(c);d.rect(ox-8,oy-7,ow+16,55,'#152134');d.rect(ox-5,oy-4,ow+10,49,'#52687b');d.rect(ox,oy,ow,35,'#02050c');d.rect(ox+5,oy+5,ow-10,27,'#080e19');d.rect(ox+9,oy+10,ow-18,20,'#02050c');}));const bs=new Sprite(back);bs.scale.set(1/3);bs.y=130;rearLayer.addChild(bs);
@@ -166,11 +174,8 @@ function reset(){presentationSound?.reset();spinView?.dispose();if(scene){if(fra
   shape.circle(x,y,2.05).fill(0x526b80).circle(x,y,1.65).fill(0xdde6ec);
   rearLayer.addChild(shape);
  }
- if(lcdEnabled){const p=flow.physics.pockets.find(p=>p.kind==='start');
-  // The calibrated opening width is shared with the sensor and rim, not a measured W dimension.
-  const mouth=new Graphics().rect(p.x-p.w/2,p.y-3,p.w,3).fill(0x020711).rect(p.x-p.w/2+1,p.y-2,p.w-2,1).fill(0x102437);rearLayer.addChild(mouth);
-  const lip=new Graphics().rect(p.x-p.w/2,p.y+1,p.w,1).fill(0xf1cf79).rect(p.x-p.w/2+1,p.y+2,p.w-2,1).fill(0x78562e);frontLayer.addChild(lip);
- }
+ // The circular face replaces the old rectangular start-mouth overlay.
+
  for(const p of flow.physics.pins){if(lcdEnabled&&p.role==='heso'){const backing=new Graphics().rect(p.x-3,p.y-3,6,6).fill(0x101b29);rearLayer.addChild(backing);}const s=new Sprite(pinTexture);s.anchor.set(.5);s.scale.set((lcdEnabled?LCD_PIN_TEXTURE_SCALE:1)/3);s.position.set(p.x,p.y);rearLayer.addChild(s);}
  if(lcdEnabled&&railVisual){
   const colors={'outer-thin-band':0x56616a,'inner-gray-band':0x8b9298,'parallel-thin-line':0x5e6a76,'upper-rim-left':0x98a0a8,'upper-rim-right':0x98a0a8,'black-valve-stem':0x101b29,'black-valve-body':0x101b29};

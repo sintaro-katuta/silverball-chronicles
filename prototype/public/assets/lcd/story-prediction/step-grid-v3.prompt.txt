@@ -1,0 +1,2 @@
+格子素材：315×140、3列×2段、各コマ105×70、共通96色。顔の5コマ目はユーザー確認済みの step-face-grid-study-v3.json と同一。その他5コマは step-v2.png の演出用の切り抜きを最近傍標本化し、顔と同じパレットに変換した初期候補で、個別の手描き修正は未実施。元の画像生成指示は step-v2.prompt.txt。
+再生成：sample-step-frames.swift step-v2.png /path/to/temp、続けて build-step-grid.mjs /path/to/temp。編集可能な全画素・パレットは prototype/reference-review/s10-pixel-grid/step-grid-atlas-v1.json。画素の均一格子は制作上の事実であり、全コマの美術採用を意味しない。

@@ -29,11 +29,12 @@ test('unit output cannot report successful skipped, failed, cancelled or absent 
 });
 test('required verify always runs and refuses non-success dependencies before joining',async()=>{
  const workflow=JSON.parse(await readFile(new URL('../../.github/workflows/pr-ci.yml',import.meta.url),'utf8'));
- const job=workflow.jobs.verify;assert.deepEqual(job.needs,['unit','browser']);assert.ok(job.if.startsWith('always()'));const guard=job.steps[0];
- for(const UNIT_RESULT of ['success','failure','cancelled','skipped',''])for(const BROWSER_RESULT of ['success','failure','cancelled','skipped','']){
+ const job=workflow.jobs.verify;assert.deepEqual(job.needs,['unit','browser','pin-layout']);assert.ok(job.if.startsWith('always()'));const guard=job.steps[0];
+ for(const UNIT_RESULT of ['success','failure','cancelled','skipped',''])for(const BROWSER_RESULT of ['success','failure','cancelled','skipped',''])for(const PIN_LAYOUT_RESULT of ['success','failure','cancelled','skipped','']){
  const match=guard.run.match(/node -e "(.*)"/);let exit=null;
- Function('process',match[1])({env:{UNIT_RESULT,BROWSER_RESULT},exit:n=>{exit=n;}});assert.equal(exit,UNIT_RESULT==='success'&&BROWSER_RESULT==='success'?null:1);
+ Function('process',match[1])({env:{UNIT_RESULT,BROWSER_RESULT,PIN_LAYOUT_RESULT},exit:n=>{exit=n;}});assert.equal(exit,UNIT_RESULT==='success'&&BROWSER_RESULT==='success'&&PIN_LAYOUT_RESULT==='success'?null:1);
  }
+ assert.ok(workflow.jobs['pin-layout'].steps.some(s=>s.run==='node prototype/tests/pin-layout.browser.mjs'));assert.ok(!workflow.jobs.browser.steps.some(s=>s.run==='node prototype/tests/pin-layout.browser.mjs'));
  assert.ok(job.steps.some(s=>s.run==='node prototype/tools/ci-release.js aggregate'));assert.equal(workflow.permissions.contents,'read');
 });
 
