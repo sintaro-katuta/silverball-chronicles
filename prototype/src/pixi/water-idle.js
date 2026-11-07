@@ -43,14 +43,14 @@ export function createWaterIdle(scene,cloudSky=null,hairAtlas=null,hairUnderlay=
  const separated=Boolean(foreground&&background);
  const clouds=cloudSky?buildSmoothCloudLayer(cloudSky,resolution,scene,{separated}):null;
  const hair=hairAtlas&&hairUnderlay?buildHairTipFrames(scene,hairAtlas,hairUnderlay,{transparent:separated}):null;
- // Remove the union of animated tip pixels from the fixed foreground once.
+ // Fade the union of animated tip pixels out of the fixed foreground once.
  // Each transparent animation frame then reveals the current cloud layer.
  const foregroundLayer=foreground&&hair&&separated?presentationSurface(WIDTH,HEIGHT,c=>{
   c.drawImage(foreground.source.resource,0,0,WIDTH,HEIGHT);
   c.globalCompositeOperation='destination-out';
   const mask=pixelSurface(WIDTH,HEIGHT,m=>{
    const data=m.createImageData(WIDTH,HEIGHT);
-   for(let p=0;p<hair.editable.length;p++)if(hair.editable[p])data.data[p*4+3]=255;
+   for(let p=0;p<hair.editable.length;p++)if(hair.editable[p])data.data[p*4+3]=hair.editable[p];
    m.putImageData(data,0,0);
   });
   c.imageSmoothingEnabled=false;c.drawImage(mask,0,0,WIDTH,HEIGHT);

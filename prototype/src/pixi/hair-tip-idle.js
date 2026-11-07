@@ -1,6 +1,7 @@
 import {pixelSurface} from './pixel-primitives.js';
 const W=210,H=140;
 export const HAIR_TIP_FPS=4,HAIR_TIP_COUNT=8;
+export const hairTipBlendAt=x=>Math.round(255*Math.max(0,Math.min(1,(28-x)/10)));
 export const hairTipFrameAt=time=>Math.floor(Math.max(0,time)*HAIR_TIP_FPS)%HAIR_TIP_COUNT;
 const silver=(d,i)=>d[i]>=68&&Math.abs(d[i]-d[i+1])<38&&d[i+2]-d[i]<90&&d[i+2]>=d[i];
 const pixels=canvas=>canvas.getContext('2d').getImageData(0,0,W,H).data;
@@ -15,7 +16,9 @@ export function buildHairTipFrames(scene,atlas,underlay,{transparent=false}={}){
   for(let y=24;y<94;y++)for(let x=0;x<28;x++){
    const p=y*W+x,i=p*4,oldHair=silver(source,i),newHair=silver(drawn,i);
    if(!oldHair&&!newHair)continue;
-   editable[p]=1;
+   // Fade the moving tips into the fixed hair rather than ending at x=28.
+   const mix=transparent?hairTipBlendAt(x):255;
+   editable[p]=Math.max(editable[p],mix);
    // In the separated composition, exposed gaps must reveal the live sky.
    if(transparent&&!newHair)continue;
    // Keep the approved shading wherever a strand still covers the same pixel.
@@ -33,6 +36,7 @@ export function buildHairTipFrames(scene,atlas,underlay,{transparent=false}={}){
     }
    }
    out.data.set(data.subarray(from,from+4),i);
+   if(transparent)out.data[i+3]=Math.round(out.data[i+3]*mix/255);
   }
   c.putImageData(out,0,0);
  }));
