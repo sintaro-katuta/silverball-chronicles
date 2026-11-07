@@ -25,7 +25,7 @@
     "unit": {
       "runs-on": "ubuntu-24.04",
       "timeout-minutes": 30,
-      "if": "(startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main') || (startsWith(github.head_ref, 'fix/') && github.base_ref == 'main')",
+      "if": "(startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main') || (startsWith(github.head_ref, 'fix/') && (github.base_ref == 'main' || startsWith(github.base_ref, 'release/')))",
       "steps": [
         {
           "uses": "actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
@@ -66,7 +66,7 @@
     "browser": {
       "runs-on": "ubuntu-24.04",
       "timeout-minutes": 60,
-      "if": "(startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main') || (startsWith(github.head_ref, 'fix/') && github.base_ref == 'main')",
+      "if": "(startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main') || (startsWith(github.head_ref, 'fix/') && (github.base_ref == 'main' || startsWith(github.base_ref, 'release/')))",
       "env": {
         "PLAYWRIGHT_BROWSER": "chromium"
       },
@@ -118,7 +118,7 @@
         "browser",
         "pin-layout"
       ],
-      "if": "always() && ((startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main') || (startsWith(github.head_ref, 'fix/') && github.base_ref == 'main'))",
+      "if": "always() && ((startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main') || (startsWith(github.head_ref, 'fix/') && (github.base_ref == 'main' || startsWith(github.base_ref, 'release/'))))",
       "steps": [
         {
           "name": "Reject failed, cancelled, skipped or missing required jobs",
@@ -176,7 +176,7 @@
     "pin-layout": {
       "runs-on": "ubuntu-24.04",
       "timeout-minutes": 30,
-      "if": "(startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main') || (startsWith(github.head_ref, 'fix/') && github.base_ref == 'main')",
+      "if": "(startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main') || (startsWith(github.head_ref, 'fix/') && (github.base_ref == 'main' || startsWith(github.base_ref, 'release/')))",
       "env": {
         "PLAYWRIGHT_BROWSER": "chromium"
       },

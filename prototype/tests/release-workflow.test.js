@@ -8,7 +8,7 @@ async function fixture(t){const root=await mkdtemp(join(tmpdir(),'silverball-rel
  await mkdir(join(root,'.github/workflows'),{recursive:true});await writeFile(join(root,'.github/workflows/ci.yml'),'{}');
  for(const dir of ['src','public','tests','tools','dist-release'])await mkdir(join(root,'prototype',dir),{recursive:true});
  for(const path of ['package.json','prototype/package.json','prototype/package-lock.json','prototype/vite.config.js','prototype/wrangler.jsonc','prototype/src/game.js','prototype/public/art.png','prototype/tests/game.test.js','prototype/tools/build.js','prototype/dist-release/index.html'])await writeFile(join(root,path),path);
- await writeFile(join(root,'prototype/wrangler.jsonc'),JSON.stringify({name:targetName,workers_dev:true,routes:[{pattern:'silverball-chronicles.sintaro-katuta.com',custom_domain:true},{pattern:'tsukikage.sintaro-katuta.com',custom_domain:true}],assets:{directory:'./dist-release'}}));
+ await writeFile(join(root,'prototype/wrangler.jsonc'),JSON.stringify({name:targetName,workers_dev:true,routes:[{pattern:'silverball-chronicles.sintaro-katuta.com',custom_domain:true}],assets:{directory:'./dist-release'}}));
  const calls=[];let closes=0;
  const run=async(command,args)=>{calls.push({command,args});return command==='git'?(args[0]==='rev-parse'?'abc123\n':' M prototype/src/game.js\n'):'';};
  const preview=async()=>({url:'http://127.0.0.1:54321',close:async()=>{closes++;}});
@@ -18,6 +18,7 @@ test('prepare runs checks, cleans its own preview and issues only a non-public v
  const f=await fixture(t),m=await prepareRelease(f.root,{run:f.run,preview:f.preview,now:()=> '2026-10-07T00:00:00Z'});
  assert.deepEqual(f.calls.slice(0,4).map(c=>c.args),[['run','test'],['run','build:release'],['--prefix','prototype','run','test:release'],['run','test:browser']]);
  assert.equal(f.closes,1);assert.equal(m.git.dirty,true);assert.equal(m.git.commit,'abc123');assert.equal(m.assets.length,1);assert.equal(m.assets[0].path,'index.html');assert.ok(m.source.files.some(f=>f.path==='prototype/public/art.png'));
+ assert.deepEqual(m.targetConfiguration.routes,[{pattern:'silverball-chronicles.sintaro-katuta.com',custom_domain:true}]);assert.equal(m.targetConfiguration.workersDev,true);
  assert.equal((await verifyCandidate(f.root)).createdAt,m.createdAt);assert.ok(!candidatePath(f.root).includes('dist-release'));
  const before=f.calls.length;await publishRelease(f.root,{confirmTarget:targetName,run:f.run});assert.equal(f.calls.length,before+1);assert.equal(f.calls.at(-1).args[1],'deploy');assert.equal(f.calls.at(-1).args.at(-1),candidateAssets(f.root,m.candidateId));assert.ok(!f.calls.at(-1).args.includes('build:release'));
 });
@@ -60,6 +61,13 @@ test('frozen candidate survives later dist builds; source and config still guard
 });
 test('prepare rejects an unexpected actual Worker before running checks',async t=>{
  const f=await fixture(t);await writeFile(join(f.root,'prototype/wrangler.jsonc'),JSON.stringify({name:'wrong-worker'}));await assert.rejects(prepareRelease(f.root,{run:f.run,preview:f.preview}),/Unexpected Worker/);assert.equal(f.calls.length,0);
+});
+test('prepare rejects a restored legacy domain or disabled workers.dev before running checks',async t=>{
+ for(const change of ['legacy','workers-dev']){
+  const f=await fixture(t),path=join(f.root,'prototype/wrangler.jsonc'),config=JSON.parse(await readFile(path,'utf8'));
+  if(change==='legacy')config.routes.push({pattern:'tsukikage.sintaro-katuta.com',custom_domain:true});else config.workers_dev=false;
+  await writeFile(path,JSON.stringify(config));await assert.rejects(prepareRelease(f.root,{run:f.run,preview:f.preview}),/Unexpected Worker/);assert.equal(f.calls.length,0);
+ }
 });
 test('publish command failure is propagated without a success result',async t=>{
  const f=await fixture(t);await prepareRelease(f.root,{run:f.run,preview:f.preview});let success=false;await assert.rejects(publishRelease(f.root,{confirmTarget:targetName,run:async()=>{throw new Error('deploy rejected');}}).then(()=>{success=true;}),/deploy rejected/);assert.equal(success,false);
