@@ -4,7 +4,7 @@ export const HAIR_TIP_FPS=4,HAIR_TIP_COUNT=8;
 export const hairTipFrameAt=time=>Math.floor(Math.max(0,time)*HAIR_TIP_FPS)%HAIR_TIP_COUNT;
 const silver=(d,i)=>d[i]>=68&&Math.abs(d[i]-d[i+1])<38&&d[i+2]-d[i]<90&&d[i+2]>=d[i];
 const pixels=canvas=>canvas.getContext('2d').getImageData(0,0,W,H).data;
-export function buildHairTipFrames(scene,atlas,underlay){
+export function buildHairTipFrames(scene,atlas,underlay,{transparent=false}={}){
  const source=pixels(pixelSurface(W,H,c=>c.drawImage(scene.source.resource,0,0,W,H)));
  const behind=pixels(pixelSurface(W,H,c=>c.drawImage(underlay.source.resource,0,0,W,H)));
  const cw=atlas.width/4,ch=atlas.height/2,editable=new Uint8Array(W*H);
@@ -16,6 +16,8 @@ export function buildHairTipFrames(scene,atlas,underlay){
    const p=y*W+x,i=p*4,oldHair=silver(source,i),newHair=silver(drawn,i);
    if(!oldHair&&!newHair)continue;
    editable[p]=1;
+   // In the separated composition, exposed gaps must reveal the live sky.
+   if(transparent&&!newHair)continue;
    // Keep the approved shading wherever a strand still covers the same pixel.
    // Newly exposed edge pixels inherit the nearest original silver colour.
    let from=i,data=behind;
