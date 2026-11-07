@@ -65,7 +65,7 @@
     },
     "browser": {
       "runs-on": "ubuntu-24.04",
-      "timeout-minutes": 30,
+      "timeout-minutes": 60,
       "if": "(startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main') || (startsWith(github.head_ref, 'fix/') && github.base_ref == 'main')",
       "env": {
         "PLAYWRIGHT_BROWSER": "chromium"
@@ -99,10 +99,6 @@
           "run": "node prototype/tools/ci-release.js browser"
         },
         {
-          "name": "Verify local pin layout tool and full comparison",
-          "run": "node prototype/tests/pin-layout.browser.mjs"
-        },
-        {
           "uses": "actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
           "if": "always()",
           "with": {
@@ -119,7 +115,8 @@
       "timeout-minutes": 5,
       "needs": [
         "unit",
-        "browser"
+        "browser",
+        "pin-layout"
       ],
       "if": "always() && ((startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main') || (startsWith(github.head_ref, 'fix/') && github.base_ref == 'main'))",
       "steps": [
@@ -127,9 +124,10 @@
           "name": "Reject failed, cancelled, skipped or missing required jobs",
           "env": {
             "UNIT_RESULT": "${{ needs.unit.result }}",
-            "BROWSER_RESULT": "${{ needs.browser.result }}"
+            "BROWSER_RESULT": "${{ needs.browser.result }}",
+            "PIN_LAYOUT_RESULT": "${{ needs.pin-layout.result }}"
           },
-          "run": "node -e \"if(process.env.UNIT_RESULT!=='success'||process.env.BROWSER_RESULT!=='success')process.exit(1)\""
+          "run": "node -e \"if(process.env.UNIT_RESULT!=='success'||process.env.BROWSER_RESULT!=='success'||process.env.PIN_LAYOUT_RESULT!=='success')process.exit(1)\""
         },
         {
           "uses": "actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
@@ -169,6 +167,53 @@
           "with": {
             "name": "pr-local-release-${{ github.run_id }}",
             "path": "prototype/.cache/release/",
+            "include-hidden-files": true,
+            "retention-days": 14
+          }
+        }
+      ]
+    },
+    "pin-layout": {
+      "runs-on": "ubuntu-24.04",
+      "timeout-minutes": 30,
+      "if": "(startsWith(github.head_ref, 'sprint/') && startsWith(github.base_ref, 'release/')) || (startsWith(github.head_ref, 'release/') && github.base_ref == 'main') || (startsWith(github.head_ref, 'fix/') && github.base_ref == 'main')",
+      "env": {
+        "PLAYWRIGHT_BROWSER": "chromium"
+      },
+      "steps": [
+        {
+          "uses": "actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803",
+          "with": {
+            "persist-credentials": false
+          }
+        },
+        {
+          "uses": "actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38",
+          "with": {
+            "node-version": "24.21.0",
+            "cache": "npm",
+            "cache-dependency-path": "prototype/package-lock.json"
+          }
+        },
+        {
+          "run": "npm --prefix prototype ci"
+        },
+        {
+          "run": "node prototype/node_modules/@playwright/test/cli.js install --with-deps chromium"
+        },
+        {
+          "run": "node prototype/tools/release-cd.js check-pr"
+        },
+        {
+          "name": "Verify local pin layout tool and full comparison",
+          "run": "node prototype/tests/pin-layout.browser.mjs"
+        },
+        {
+          "uses": "actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f",
+          "if": "always()",
+          "with": {
+            "name": "pr-pin-layout-${{ github.run_id }}",
+            "path": "prototype/.cache/release/pin-layout-tool/",
             "include-hidden-files": true,
             "retention-days": 14
           }

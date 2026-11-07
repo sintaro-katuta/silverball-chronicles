@@ -4,7 +4,8 @@ const smooth=t=>{t=clamp(t);return t*t*(3-2*t);};
 function frames(texture){
  const s=texture.source.resource,w=s.width/2,h=s.height/3;
  return Array.from({length:6},(_,i)=>pixelSurface(210,140,c=>{
-  let sw=w-10,sh=h-10;if(sw/sh>1.5)sw=sh*1.5;else sh=sw/1.5;
+  // Grid sheets already contain the display crop; legacy sheets retain their inset.
+  const inset=w===105&&h===70?0:10;let sw=w-inset,sh=h-inset;if(sw/sh>1.5)sw=sh*1.5;else sh=sw/1.5;
   c.drawImage(s,(i%2)*w+(w-sw)/2,Math.floor(i/2)*h+(h-sh)/2,sw,sh,0,0,210,140);
  }));
 }

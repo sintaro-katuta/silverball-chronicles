@@ -9,6 +9,8 @@ export function createStoryPredictionView({sheets={}}={}){
  const frames={},owned=[];
  for(const [kind,sheet]of Object.entries(sheets)){
   if(!Object.hasOwn(STORY_PRESENTATIONS,kind))continue;
+  // These sheets use a shared pixel grid; preserve their cells.
+  sheet.source.scaleMode='nearest';
   const cw=sheet.width/3,ch=sheet.height/2;
   frames[kind]=Array.from({length:6},(_,i)=>{const t=new Texture({source:sheet.source,frame:new Rectangle(i%3*cw,Math.floor(i/3)*ch,cw,ch)});owned.push(t);return t;});
  }
