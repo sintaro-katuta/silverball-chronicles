@@ -18,3 +18,7 @@ After creating or updating the PR, verify its actual head, base and CI; monitor 
 ## Parallel work
 
 When this stage has independent work that can safely proceed in parallel and delegation is permitted and available, start subagents for those tasks. Assign non-overlapping file ownership or read-only scope; identify the candidate version and expected evidence. Integrate and check their actual outputs under the delegation rules in `issue-delivery`. Continue sequentially where dependencies require it or delegation is unavailable. Avoid duplicate tasks and recursive delegation with no independent work.
+
+## Issue closure
+
+Once the user has accepted the work, applicable acceptance criteria and checks are satisfied, and any required target PR has been merged, check the actual issue state and close it as completed when authorized. Issues that do not need a PR need no merge. For non-default release branches, do not assume a merged PR closed the issue. Verify the resulting state and report any missing completion condition or blocked closure without misstating the actual state. Closure does not authorize main merge or publication.

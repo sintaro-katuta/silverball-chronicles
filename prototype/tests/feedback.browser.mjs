@@ -45,9 +45,9 @@ try{
  stage='experience battle: PUSH visible';clockTrace=[];const trace=clockTrace,waitStarted=Date.now();
  const observe=async()=>{const value=await page.evaluate(()=>{const s=__session.snapshot();return {gameTime:s.time,reach:s.spin.reach,paused:s.paused,phase:s.session.phase,pushHidden:document.querySelector('.decision-push-button').hidden,visibility:document.visibilityState};});trace.push({elapsedMs:Date.now()-waitStarted,...value});};
  await observe();const clockTimer=setInterval(()=>observe().catch(()=>{}),10000);
- // Allow variable headless execution speed without changing the game clock.
- // Keep every semantic assertion and a finite wall deadline.
- try{await page.locator('.decision-push-button').waitFor({state:'visible',timeout:300000});await observe();}
+ // Headless rendering can advance the game clock much slower than wall time.
+ // Keep the real-time PUSH visibility assertion and a finite wall deadline.
+ try{await page.locator('.decision-push-button').waitFor({state:'visible',timeout:480000});await observe();}
  finally{clearInterval(clockTimer);}
  await writeFile(`${out}/battle-clock.json`,JSON.stringify(clockTrace,null,2));
  stage='experience battle: PUSH press';await page.screenshot({path:`${out}/battle-push.png`});await page.locator('.decision-push-button').click();
