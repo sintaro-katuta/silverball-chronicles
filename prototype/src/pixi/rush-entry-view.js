@@ -2,7 +2,7 @@ import {Container,Sprite,Texture,Graphics} from 'pixi.js';
 import {pixelSurface,painter} from './pixel-primitives.js';
 import {createRushEntryMotion} from './rush-entry-motion.js';
 const LETTERS=['11110/10001/10001/11110/10100/10010/10001','10001/10001/10001/10001/10001/10001/01110','01111/10000/10000/01110/00001/00001/11110','10001/10001/10001/11111/10001/10001/10001'];
-export function createRushEntryView(){
+export function createRushEntryView({compactLayout=false}={}){
  const root=new Container(),motion=createRushEntryMotion(),textures=[];
  const texture=paint=>{const t=Texture.from(pixelSurface(210,116,paint));t.source.scaleMode='nearest';textures.push(t);return t;};
  const letters=[],letterMask=new Graphics();
@@ -40,10 +40,10 @@ export function createRushEntryView(){
  }
  shineLayer.addChild(sheen);
  letterMask.fill(0xffffff);root.addChild(letterMask);shineLayer.mask=letterMask;
- root.position.set(2,18);root.visible=false;
+ root.position.set(compactLayout?47.25:2,compactLayout?31:18);root.scale.set(compactLayout?.55:1);root.visible=false;
  return {root,textures,render(time,playingRush,initialAge=0){const p=motion.update(time,playingRush,initialAge);root.visible=p.visible;if(!p.visible)return;
   root.alpha=p.alpha;
-  letters.forEach(({group,flame,flames,burst},i)=>{const pose=p.letters[i];group.visible=pose.visible;group.position.set(40+i*42,74+pose.y);group.scale.set(pose.scaleX,pose.scaleY);
+  letters.forEach(({group,flame,flames,burst},i)=>{const pose=p.letters[i];group.visible=pose.visible;group.position.set(40+i*42,74+(compactLayout?Math.max(-15,pose.y):pose.y));group.scale.set(pose.scaleX,pose.scaleY);
    flame.visible=pose.landed;flame.texture=flames[Math.max(0,Math.floor(pose.impact*12))%8];burst.visible=pose.burst>0;burst.alpha=pose.burst;
   });
   shineLayer.visible=p.age>=.8&&p.age<2.05;
