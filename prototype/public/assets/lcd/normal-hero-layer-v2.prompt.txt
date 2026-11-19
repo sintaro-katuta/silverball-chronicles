@@ -1,0 +1,1 @@
+normal-hero-layer-v2.png は既存 normal-hero-layer-v1.png を原寸・位置・RGBそのまま使用し、剣の外側の暗い旧背景を透過した版。画像生成は行っていない。再現スクリプトは prototype/tools/repair-normal-foreground.mjs（prototype ディレクトリで実行）。論理210×140の剣領域で刃の明部を基準に除去候補を絞り、明るい画素は保持する。元画像は変更しない。透過状態は白・緑背景とゲーム内の前後で確認した。人間が見た境界の全画素保証や、任意の背景・移動への完全対応ではない。

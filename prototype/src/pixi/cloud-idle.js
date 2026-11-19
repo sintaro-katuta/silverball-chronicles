@@ -3,12 +3,14 @@ import {pixelSurface} from './pixel-primitives.js';
 const W=210,H=140;
 // Upper silhouette of foreground: clouds stay behind the original artwork.
 const skyline=[[0,23],[10,23],[20,26],[32,29],[40,27],[49,19],[57,15],[70,15],[80,17],[87,22],[90,30],[91,53],[94,62],[99,77],[107,74],[111,66],[114,54],[117,64],[122,61],[126,48],[129,41],[133,48],[136,45],[139,31],[143,41],[148,39],[151,27],[153,24],[157,39],[160,37],[164,13],[168,34],[171,34],[175,46],[179,61],[185,65],[191,65],[199,63],[204,54],[207,51],[210,60]];
-function skyCeiling(x){
- for(let i=1;i<skyline.length;i++)if(x<skyline[i][0]){
-  const a=skyline[i-1],b=skyline[i];return a[1]+(b[1]-a[1])*(x-a[0])/(b[0]-a[0])-1;
+const separatedSkyline=[[0,48],[10,49],[20,50],[32,51],[40,51],[49,52],[57,52],[70,52],[80,52],[90,52],[99,54],[107,54],[111,54],[114,54],[117,64],[122,61],[126,48],[129,41],[133,48],[136,45],[139,31],[143,41],[148,39],[151,27],[153,24],[157,39],[160,37],[164,13],[168,34],[171,34],[175,46],[179,61],[185,65],[191,65],[199,63],[204,54],[207,51],[210,60]];
+function skyCeiling(x,points=skyline){
+ for(let i=1;i<points.length;i++)if(x<points[i][0]){
+  const a=points[i-1],b=points[i];return a[1]+(b[1]-a[1])*(x-a[0])/(b[0]-a[0])-1;
  }
  return 0;
 }
+export const isCloudSkyPixel=(x,y,separated=false)=>y>=0&&y<83&&x>=0&&x<W&&y<skyCeiling(x,separated?separatedSkyline:skyline)&&!insideMoon(x,y);
 export const cloudOffsetAt=time=>Math.floor(Math.max(0,time)/1.5)%(W*2);
 function insideMoon(x,y){
  const points=[[158,3],[170,4],[181,11],[188,22],[190,33],[185,43],[175,50],[168,49],[172,42],[178,33],[178,22],[174,14],[166,8],[158,7]];
@@ -45,12 +47,12 @@ export function buildCloudLayer(scene,plate){
 
 // Display path: retain the authored plate's detail and move at fractional pixels.
 // The fixed silhouette and moon mask never move with the sky.
-export function buildSmoothCloudLayer(plate,resolution=3,scene=null){
+export function buildSmoothCloudLayer(plate,resolution=3,scene=null,{separated=false}={}){
  const w=W*resolution,h=H*resolution;
  const foreground=scene?pixelSurface(w,h,c=>{c.imageSmoothingEnabled=true;c.imageSmoothingQuality='high';c.drawImage(scene.source.resource,0,0,w,h)}).getContext('2d').getImageData(0,0,w,h).data:null;
  const mask=pixelSurface(w,h,c=>{
   c.fillStyle='#fff';for(let y=0;y<83*resolution;y++)for(let x=0;x<w;x++)
-   if(y/resolution<skyCeiling(x/resolution)&&!insideMoon(x/resolution,y/resolution)){
+   if(isCloudSkyPixel(x/resolution,y/resolution,separated)){
     const i=(y*w+x)*4;
     if(!foreground||!protectsMoonHighlight(x/resolution,y/resolution,foreground[i],foreground[i+1],foreground[i+2]))c.fillRect(x,y,1,1);
    }
