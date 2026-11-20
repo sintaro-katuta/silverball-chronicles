@@ -1,0 +1,1 @@
+既存の hero-resolve-portrait-v1.png を参照し、nearestで256×256へ標本化、アルファを二値化、インデックス色化。全セルをJSONで保持。再生成・手描きではない。生成: prototype/tools/pixel-workbench/build-resolve-grid.mjs。

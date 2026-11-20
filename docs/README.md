@@ -68,7 +68,7 @@
 - [玉径と風車上の釘間隔の調査（#70）](prototype/BALL_SCALE_REVIEW_2026-10-20.md)：現在の候補箇所は見える隙間が玉約2.27個分。参照動画・対象列の同定は未完了、球径未変更。
 - [チケット50枚で即確認](http://127.0.0.1:5459/dev/starting-ball-wager.html)：通常残高に反映しない確認用ページ。
 
-- 現在の開始玉チャレンジの試遊版：最新main `7e096f1` を基点にした `/private/tmp/silverball-starting-ball-main-20261019`、http://127.0.0.1:5459/ 。原フォルダの旧版サーバー5458は停止。[訂正・移植・再検証](agile/STARTING_BALL_WAGER_PROPOSAL.md)。
+- 2026-10-19時点の開始玉チャレンジ試遊版：当時のmain `7e096f1` を基点にした `/private/tmp/silverball-starting-ball-main-20261019`、http://127.0.0.1:5459/ 。原フォルダの旧版サーバー5458は当時停止。[訂正・移植・再検証](agile/STARTING_BALL_WAGER_PROPOSAL.md)。現在の版は[採用状態の一覧](agile/GAME_RULES_INVENTORY_2026-11-14.md)を参照。
 
 - [開始玉チャレンジとチケットの仕様・実装](agile/STARTING_BALL_WAGER_PROPOSAL.md)：#69。最新mainへの移植状況と検証範囲。
 
@@ -156,6 +156,8 @@ PRには必要source/設定/文書だけを含め、privateな `prototype/refere
 - [agile/S1_RELEASE_SUMMARY.md](agile/S1_RELEASE_SUMMARY.md)：S1の説明、R01ノートへの受入事実の引継ぎ。
 
 ### ゲーム仕様
+
+- [遊技ルール・保存の採用状態（#57）](agile/GAME_RULES_INVENTORY_2026-11-14.md)：公開版とローカル、W抽選・賞球・保存・旧仕様の区別。
 
 - [pachinko.md](pachinko.md)
 

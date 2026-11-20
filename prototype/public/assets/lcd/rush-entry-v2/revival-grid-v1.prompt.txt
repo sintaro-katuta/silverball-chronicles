@@ -1,0 +1,4 @@
+元画像: rush-entry-v2/revival.png、画風参照: reference-review/s10-pixel-grid/step-face-grid-study-v3.png
+画像生成で2列3段の6カット、復活時の閉眼から開眼、主人公の装備・構図を保つよう指示。生成画像 revival-redraw-source-v1.png を各105×70へ最近傍標本化し、6カットで128色を共用。最後2カットの鼻の白い線を既存の肌色にマス単位で変更。
+制作: sample-entry-frames.swift / build-memory-grid.mjs / refine-revival.mjs
+画像全体を手描きしたものではない。ローカルで接続し、同一時刻のPixi描画比較を行った。通し再生・実機・音光同期は未検証。
