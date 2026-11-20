@@ -66,9 +66,15 @@ export function createSerenaSceneVideo(){
    if(video.readyState<2||!Number.isFinite(video.duration)||video.duration<=0){root.visible=true;return null;}
    sprite.width=210;sprite.height=118.125;
    const age=Math.max(0,plan.age),target=plan.loop?age%video.duration:Math.min(age,Math.max(0,video.duration-.08));
-   if(Math.abs(video.currentTime-target)>.3&&!video.seeking)video.currentTime=target;
-   const wanted=!paused&&!document.hidden;s.wanted=wanted;
-   if(!wanted){video.pause();root.visible=true;sprite.visible=s.started;return s.started?plan.clip:null;}
+   const finished=!plan.loop&&age>=Math.max(0,video.duration-.08);
+   if(!video.seeking&&(Math.abs(video.currentTime-target)>(finished?.04:.3)||video.ended))video.currentTime=target;
+   const wanted=!paused&&!document.hidden&&!finished;s.wanted=wanted;
+   if(!wanted){
+    video.pause();
+    // A late-entered clip may reach its held frame without ever calling play().
+    if(finished&&!video.seeking&&Math.abs(video.currentTime-target)<.1)s.started=true;
+    root.visible=true;sprite.visible=s.started;return s.started?plan.clip:null;
+   }
    if(video.paused&&!s.pending){s.pending=true;video.play().then(()=>{s.pending=false;if(!s.disposed&&current===s&&s.wanted&&!document.hidden)s.started=true;else video.pause();}).catch(()=>{s.pending=false;if(!s.disposed&&s.wanted){failed.add(s.clip);root.visible=false;}});}
    root.visible=true;sprite.visible=s.started&&!video.paused;return sprite.visible?plan.clip:null;
   },
