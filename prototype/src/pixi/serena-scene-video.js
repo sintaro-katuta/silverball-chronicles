@@ -42,19 +42,20 @@ export function createSerenaSceneVideo(){
   if(clip==='idle'){prepare('warning');prepare('charge');prepare('bonus');}
   if(clip==='rush-loop'){prepare('warning');prepare('rush-end');}
   if(clip==='bonus'||clip==='charge')prepare('rush-entry');
-  const prepared=staged.has(clip),video=staged.get(clip)??document.createElement('video');staged.delete(clip);
+  const video=staged.get(clip)??document.createElement('video');staged.delete(clip);
   delete video.dataset.serenaScenePreload;video.dataset.serenaSceneVideo=clip;
-  video.hidden=true;video.muted=true;video.playsInline=true;if(!video.isConnected)video.preload='none';
-  if(!video.getAttribute('src'))video.src=urls[clip];if(!video.isConnected)document.body.appendChild(video);
+  video.hidden=true;video.muted=true;video.playsInline=true;video.preload='auto';
   const source=new VideoSource({resource:video,autoLoad:false,autoPlay:false});
   const texture=new Texture({source}),sprite=new Sprite(texture);sprite.y=(140-118.125)/2;sprite.visible=false;root.addChild(sprite);
   const state={clip,video,source,texture,sprite,pending:false,started:false,disposed:false,wanted:false};current=state;
   state.onError=()=>{if(!state.disposed){failed.add(clip);root.visible=false;}};
   state.beginLoad=()=>{if(!state.disposed)source.load().catch(state.onError);};
   video.addEventListener('error',state.onError);
-  // Do not restart a staged request that is still fetching its metadata.
-  if(prepared&&video.readyState===0&&!video.error)video.addEventListener('loadedmetadata',state.beginLoad,{once:true});
+  // Connect Pixi only after metadata exists, so VideoSource.load() will not
+  // restart a media request that the browser has already begun.
+  if(video.readyState===0&&!video.error)video.addEventListener('loadedmetadata',state.beginLoad,{once:true});
   else state.beginLoad();
+  if(!video.getAttribute('src'))video.src=urls[clip];if(!video.isConnected)document.body.appendChild(video);
  }
  const onVisibility=()=>{if(document.hidden)current?.video.pause();};
  document.addEventListener('visibilitychange',onVisibility);

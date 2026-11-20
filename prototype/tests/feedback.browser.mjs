@@ -21,7 +21,7 @@ try{
  for(const viewport of (process.env.DEMO_ONLY?[]:[{width:390,height:844},{width:1440,height:900}])){
  const page=await browser.newPage({viewport}),errors=[];currentPage=page;stage=`UI ${viewport.width}x${viewport.height}`;page.on('pageerror',e=>errors.push(e.message));
  await page.goto(process.env.REVIEW_URL??'http://127.0.0.1:5173');await page.locator('[data-kind=main]').first().click();
- assert.equal(await page.locator('[data-experience]').count(),3);await page.locator('#playMachine').click();await page.locator('#intro-skip').click();
+ assert.equal(await page.getByText('演出を体験する').count(),0);assert.equal(await page.locator('[data-experience]:visible').count(),0);await page.locator('#playMachine').click();await page.locator('#intro-skip').click();
  for(const view of ['whole','board','lcd']){await page.locator(`[data-view=${view}]`).click();await page.waitForTimeout(300);
  const frame=await page.locator('#canvas').boundingBox(),canvas=await page.locator('#canvas canvas').boundingBox();assert.ok(Math.abs(frame.width-canvas.width)<1);assert.ok(Math.abs(frame.height-canvas.height)<1);if(viewport.width===1440)assert.ok(frame.height>780,'PC board should use recovered vertical space');
  for(const selector of ['#dock-stock','#feed-toggle','#power-control','#quick-pause']){assert.ok(await page.locator(selector).isVisible());const box=await page.locator(selector).boundingBox();assert.ok(box.y>=0&&box.y+box.height<=viewport.height,`${selector} outside viewport`);}
@@ -39,7 +39,7 @@ try{
  const page=await browser.newPage({viewport:{width:390,height:844}}),errors=[];currentPage=page;page.on('pageerror',e=>errors.push(e.message));
  for(const scenario of (process.env.UI_ONLY?[]:['battle','bonus','rush'])){
  stage=`experience ${scenario}`;clockTrace=[];
- await page.goto(process.env.REVIEW_URL??'http://127.0.0.1:5173');await page.locator('[data-kind=main]').first().click();await page.locator(`[data-experience=${scenario}]`).click();await page.locator('#intro-skip').click();
+ await page.goto(process.env.REVIEW_URL??'http://127.0.0.1:5173');await page.locator('[data-kind=main]').first().click();await page.locator(`[data-experience=${scenario}]`).evaluate(button=>button.click());await page.locator('#intro-skip').click();
  await page.waitForFunction(()=>document.querySelector('#dock-guidance').textContent.includes('演出体験中'));await assertDraws(page);
  if(scenario==='battle'){
  stage='experience battle: PUSH visible';clockTrace=[];const trace=clockTrace,waitStarted=Date.now();

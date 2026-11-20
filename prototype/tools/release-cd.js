@@ -13,8 +13,8 @@ export const checkpointPath=root=>join(root,'prototype/.cache/release/cd-state.j
 export function parseReleaseSummary(body,version){
  const blocks=[...(body??'').matchAll(/```json\s*([\s\S]*?)```/g)];let summary;
  for(const block of blocks){try{const value=JSON.parse(block[1]);if(value.silverballReleaseSummary){if(summary)throw new Error('Duplicate release summary');summary=value.silverballReleaseSummary;}}catch(error){if(error.message==='Duplicate release summary')throw error;}}
- const recovery050=version==='0.5.0'&&summary?.releaseScopeException==='0.5.0-branch-recovery'&&Array.isArray(summary.sprints)&&summary.sprints.length===0;
- if(!summary||summary.version!==version||!Array.isArray(summary.sprints)||(!recovery050&&summary.sprints.length!==3)||new Set(summary.sprints).size!==summary.sprints.length||!summary.sprints.every(n=>Number.isSafeInteger(n)&&n>0)||!Array.isArray(summary.issues)||!summary.issues.length||new Set(summary.issues).size!==summary.issues.length||!summary.issues.every(n=>Number.isSafeInteger(n)&&n>0))throw new Error('Release PR requires a matching summary with accepted scope and Issues');
+ const recovery051=version==='0.5.1'&&summary?.releaseScopeException==='0.5.1-branch-recovery'&&Array.isArray(summary.sprints)&&summary.sprints.length===0;
+ if(!summary||summary.version!==version||!Array.isArray(summary.sprints)||(!recovery051&&summary.sprints.length!==3)||new Set(summary.sprints).size!==summary.sprints.length||!summary.sprints.every(n=>Number.isSafeInteger(n)&&n>0)||!Array.isArray(summary.issues)||!summary.issues.length||new Set(summary.issues).size!==summary.issues.length||!summary.issues.every(n=>Number.isSafeInteger(n)&&n>0))throw new Error('Release PR requires a matching summary with accepted scope and Issues');
  for(const key of ['improvements','fixes','knownLimitations'])if(!Array.isArray(summary[key])||!summary[key].every(s=>typeof s==='string'&&s.trim()&&s.length<=1000))throw new Error(`Invalid release summary ${key}`);
  if(!summary.improvements.length&&!summary.fixes.length)throw new Error('Release summary must describe user-facing changes');return summary;
 }

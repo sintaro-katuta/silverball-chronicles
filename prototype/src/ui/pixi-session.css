@@ -53,7 +53,6 @@
 .focus-view .session-panel .effect-control{display:flex;align-items:center;gap:10px;min-height:44px}.effect-control input{width:20px;height:20px;margin:0}
 
 /* Primary controls stay in reach with the information panel closed. */
-.experience-entry{margin-top:28px;padding-top:16px;border-top:1px solid #7f6742}.experience-entry button{margin:4px;min-height:44px}
 .focus-view{--dock-height:156px}
 .focus-view .play-dock{position:fixed;z-index:12;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,650px);padding:8px 14px max(10px,env(safe-area-inset-bottom));background:#101b2cf5;border-top:1px solid #b79955}
 .focus-view .play-dock[hidden]{display:none}
