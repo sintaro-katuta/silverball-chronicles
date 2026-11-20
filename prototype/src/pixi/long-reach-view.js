@@ -24,7 +24,7 @@ export function updateCaptionBackdrop(layer,camera,alpha=0){
  layer.scale.set(1/camera.scale);layer.alpha=Math.max(0,Math.min(1,alpha));
  layer.visible=layer.alpha>0;
 }
-export function createLongReachView(atlas,landscape,{motionAtlas=null,portraitTexture=null}={}){
+export function createLongReachView(atlas,landscape,{motionAtlas=null,portraitTexture=null,backdropOffsetY=0}={}){
  const root=new Container(),world=new Container(),textures=[],frames=[];root.addChild(world);
  const back=new Sprite(landscape);back.anchor.set(.5);back.width=238;back.height=159;world.addChild(back);
  const captionBackdrop=createCaptionBackdrop(world);
@@ -67,7 +67,7 @@ export function createLongReachView(atlas,landscape,{motionAtlas=null,portraitTe
   const p=longReachPose(t,{...options,motionFrames:!!motionAtlas});root.visible=p.visible;if(!p.visible)return p;
   world.pivot.set(p.camera.x,p.camera.y);world.position.set(105,70);world.scale.set(p.camera.scale);
   updateCaptionBackdrop(captionBackdrop,p.camera,p.captionBackdropAlpha);
-  back.position.set(105+p.backdrop.x*.3,70+p.backdrop.y*.2);back.scale.set(238/landscape.width*p.backdrop.scale,159/landscape.height*p.backdrop.scale);
+  back.position.set(105+p.backdrop.x*.3,70+p.backdrop.y*.2+backdropOffsetY);back.scale.set(238/landscape.width*p.backdrop.scale,159/landscape.height*p.backdrop.scale);
   updateActor(hero,p.hero,t,p.wind);updateActor(enemy,p.enemy,t,0);
   const face=resolvePortraitPose(t,options);
   const faceAlpha=portrait&&face.visible?face.alpha:0;

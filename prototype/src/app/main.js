@@ -1,3 +1,5 @@
+import {Preferences} from '@capacitor/preferences';
+import {readSlump,writeSlump,slumpMarkup} from '../ui/floor-slump.js';
 import {createPresentationSound} from '../pixi/se/presentation-sound.js';
 import {createAudioSettings} from './audio-settings.js';
 const audioSettings=createAudioSettings();
@@ -12,6 +14,7 @@ import "../ui/pixi-session.css";
 import "../ui/arcade-room.css";
 import {FLOOR_ONE} from "../ui/floor-catalog.js";
 import {mountFloorArt} from "../ui/floor-art.js";
+import {DESKTOP_PLAYABLE_BANK} from '../ui/hall-drawing.js';
 import {mountBoard} from "../pixi/board-runtime.js";
 import {SessionGame} from "../domain/session-game.js";
 import {mountStartingWager} from "../ui/starting-wager.js";
@@ -20,33 +23,58 @@ import {PRODUCTION_NORMAL_POWER,productionBoardFlowOptions} from './production-b
 const root=document.querySelector('#app'),fmt=n=>Math.floor(n).toLocaleString('ja-JP');
 let experience=null;
 let wallet=null,activeTicketSession=null,lastRecordedTickets=0;
-let art=null,board=null,sessionSound=null,game=null,selected=FLOOR_ONE[0],generation=0,finishing=false,feeding=true,reviewModel=null;
+let art=null,board=null,sessionSound=null,game=null,selected=FLOOR_ONE[0],generation=0,detailGeneration=0,finishing=false,feeding=true,reviewModel=null;
 const review=import.meta.env.DEV&&new URLSearchParams(location.search).get('review')==='session';
 const reviewLabel=()=>{if(!review)return '';const scenario=new URLSearchParams(location.search).get('scenario'),labels={'predictions':'予告確認用：当落・経路を指定','development-loss':'確認用：発展外れ（演出指定）','development-win':'確認用：発展当たり（当選指定）','reach-loss':'確認用：リーチ止まり・外れ（演出指定）'};return `<div class="review-label">${labels[scenario]??'接続確認用・当選を指定'}</div>`;};
-function cleanup(){generation++;art?.destroy();art=null;board?.dispose();board=null;sessionSound?.dispose();sessionSound=null;game=null;reviewModel=null;activeTicketSession=null;lastRecordedTickets=0;finishing=false;}
+function cleanup(){generation++;detailGeneration++;art?.destroy();art=null;board?.dispose();board=null;sessionSound?.dispose();sessionSound=null;game=null;reviewModel=null;activeTicketSession=null;lastRecordedTickets=0;finishing=false;}
 const mobileFloor=matchMedia('(max-width:700px)');let floorState={page:0,level:1};
 mobileFloor.addEventListener('change',()=>{if(root.querySelector('.arcade-room'))floor();});
-async function floor(){cleanup();const version=generation,mobile=mobileFloor.matches,level=mobile?floorState.level:1;
- const items=level===1?(mobile?FLOOR_ONE.slice(floorState.page*4,floorState.page*4+4):FLOOR_ONE):[];
- root.innerHTML=`<main class="floor-shell arcade-room ${mobile?'paged-floor':''}" aria-label="台選択"><section class="arcade-floor"><div class="floor-grid-wrap"><div class="floor-art-host" id="floorArt"></div><div class="floor-grid">${items.map(u=>`<button class="floor-machine" data-unit="${FLOOR_ONE.indexOf(u)}" data-kind="${u.kind}" aria-label="${u.unit}番台・${u.kind==='main'?'稼働中、選択できます':'調整中'}" ${u.kind==='dummy'?'disabled':''}><span class="floor-machine-art"></span><span class="machine-number">${String(u.unit).padStart(2,'0')}</span></button>`).join('')}</div>${level===2?'<div class="floor-coming"><strong>2F</strong><span>準備中</span><small>下へスワイプで1Fへ</small></div>':''}${mobile?`<nav class="room-paging" aria-label="フロア移動"><button data-move="previous" aria-label="前のページ" ${level!==1||floorState.page===0?'disabled':''}>‹</button><span aria-live="polite">${level}F · ${level===1?`${floorState.page+1} / 5`:'準備中'}</span><button data-move="next" aria-label="次のページ" ${level!==1||floorState.page===4?'disabled':''}>›</button><button data-move="${level===1?'up':'down'}" aria-label="${level===1?'2階へ':'1階へ'}">${level===1?'↑':'↓'}</button></nav>`:''}</div></section></main>`;
+async function floor(){cleanup();const version=generation,mobile=mobileFloor.matches,level=floorState.level;
+ const items=level===1?(mobile?FLOOR_ONE.slice(0,5):FLOOR_ONE):[];
+ root.innerHTML=`<main class="floor-shell arcade-room ${mobile?'paged-floor':''}" aria-label="台選択"><section class="arcade-floor"><div class="floor-grid-wrap"><div class="floor-art-host" id="floorArt"></div><div class="floor-grid">${items.map(u=>`<button class="floor-machine" data-unit="${FLOOR_ONE.indexOf(u)}" data-kind="${u.kind}" aria-label="${u.unit}番台・${u.kind==='main'?'稼働中、選択できます':'調整中'}" ${u.kind==='dummy'?'disabled':''}><span class="floor-machine-art"></span></button>`).join('')}</div>${level===2?'<div class="floor-coming"><strong>2F</strong><span>準備中</span><small>下へスワイプで1Fへ</small></div>':''}${mobile&&level===1?`<div class="mobile-unit-selector" aria-label="選択できる台">${items.filter(u=>u.kind==='main').map(u=>`<button data-mobile-unit="${FLOOR_ONE.indexOf(u)}" aria-label="左から${u.unit}台目を選択"><svg viewBox="0 0 24 28" width="20" height="24" aria-hidden="true"><path d="M3 1h18v26H3z M5 4h14v5H5z M5 11h14v12H5z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="17" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>`).join('')||'<span>このページに遊べる台はありません</span>'}</div>`:''}${mobile?`<nav class="room-paging" aria-label="フロア移動"><button data-move="previous" aria-label="前のページ" ${level!==1||floorState.page===0?'disabled':''}>‹</button><span aria-live="polite">${level}F · ${level===1?`${floorState.page+1} / 5`:'準備中'}</span><button data-move="next" aria-label="次のページ" ${level!==1||floorState.page===4?'disabled':''}>›</button><button data-move="${level===1?'up':'down'}" aria-label="${level===1?'2階へ':'1階へ'}">${level===1?'↑':'↓'}</button></nav>`:''}</div></section></main>`;
+ if(mobile){root.querySelector('.room-paging')?.remove();root.querySelectorAll('.floor-machine').forEach((button,i)=>{button.style.left=`${(130+i*59.2)/940*100}%`;button.style.top=`${(305-i*34.4-5)/1672*100}%`;});}
+ else if(level===1){
+  const {x,y,width,step,frontLeft,frontWidth,frontTop,frontHeight}=DESKTOP_PLAYABLE_BANK;
+  root.querySelectorAll('.floor-machine:not([disabled])').forEach((button,i)=>{
+   button.style.left=`${(x+i*width+frontLeft)/1010*100}%`;button.style.top=`${(y+i*step+frontTop)/828*100}%`;
+   button.style.width=`${frontWidth/1010*100}%`;button.style.height=`${frontHeight/828*100}%`;
+   button.insertAdjacentHTML('beforeend','<svg class="floor-machine-outline" viewBox="0 0 36.25 108.25" preserveAspectRatio="none" aria-hidden="true"><polygon points="0.8,20.6 35.45,0.8 35.45,87.7 0.8,107.45"/></svg>');
+  });
+ }
+ const levelBadge=document.createElement('nav');levelBadge.className='floor-level-badge';levelBadge.setAttribute('aria-label','階の移動');levelBadge.innerHTML=`<button type="button" data-floor-change="down" aria-label="1階へ" ${level===1?'disabled':''}>▼</button><span class="floor-level-current" aria-label="現在 ${level}階"><small>FLOOR</small><strong>${level}F</strong></span><button type="button" data-floor-change="up" aria-label="2階へ" ${level===2?'disabled':''}>▲</button>`;root.querySelector('.floor-grid-wrap').append(levelBadge);
+ root.querySelector('.room-paging [data-move="up"], .room-paging [data-move="down"]')?.remove();
  const change=direction=>{const next=pageAfter(floorState,direction);if(next.page!==floorState.page||next.level!==floorState.level){floorState=next;floor();}};
+ levelBadge.querySelectorAll('[data-floor-change]').forEach(button=>button.onclick=()=>change(button.dataset.floorChange));
  root.querySelectorAll('[data-kind="main"]').forEach(b=>b.onclick=()=>{selected=FLOOR_ONE[Number(b.dataset.unit)];details();});
+ root.querySelectorAll('[data-mobile-unit]').forEach(b=>b.onclick=()=>{selected=FLOOR_ONE[Number(b.dataset.mobileUnit)];details();});
  root.querySelectorAll('[data-move]').forEach(b=>b.onclick=()=>change(b.dataset.move));
  if(mobile){const area=root.querySelector('.floor-grid-wrap');let start=null,suppressUntil=0;
  area.addEventListener('pointerdown',e=>{if(e.isPrimary)start={x:e.clientX,y:e.clientY};});
  area.addEventListener('pointercancel',()=>{start=null;});
- area.addEventListener('pointerup',e=>{if(!start)return;const direction=swipeDirection(e.clientX-start.x,e.clientY-start.y);start=null;if(direction){e.preventDefault();suppressUntil=performance.now()+400;change(direction);}});
+ area.addEventListener('pointerup',e=>{if(!start)return;const direction=swipeDirection(e.clientX-start.x,e.clientY-start.y);start=null;if(direction==='up'||direction==='down'){e.preventDefault();suppressUntil=performance.now()+400;change(direction);}});
  area.addEventListener('click',e=>{if(performance.now()<suppressUntil){e.preventDefault();e.stopImmediatePropagation();}},true);
  }
- const mounted=await mountFloorArt(root.querySelector('#floorArt'));if(version!==generation){mounted.destroy();return;}art=mounted;
+ const mounted=await mountFloorArt(root.querySelector('#floorArt'),{mobile});if(version!==generation){mounted.destroy();return;}art=mounted;
+ if(level===1){art.setFloorPrice(0);const label=document.createElement('span');label.className='floor-price-accessible';label.textContent='1階の台は1プレイにつきチケット0枚';root.querySelector('.floor-grid-wrap').append(label);}
 }
-async function details(){cleanup();const version=generation;void prefetchBoardAssets();
- root.innerHTML=`<main class="detail-page"><button id="back">← 台選択</button><header class="session-header"><h1>${selected.name}</h1><span>${selected.unit}番台</span></header><section class="detail-specs"><h2>蒼月の起動</h2><dl>${wSpecRows().map(([name,value])=>`<div><dt>${name}</dt><dd>${value}</dd></div>`).join('')}</dl><p class="hint">台の全体と液晶は、プレイ開始後にご覧いただけます。</p><p class="hint" id="shared-pin-layout">${selected.note}</p><section id="starting-wager" aria-label="開始玉チャレンジ" ${review?'hidden':''}></section><button id="playMachine" class="primary">400玉でプレイ開始</button><div class="experience-entry"><h3>演出を体験する</h3><p class="hint">本遊技の持ち玉を使わず、指定した演出を再生します。本遊技の抽選・結果とは別です。</p><button data-experience="battle">戦闘・PUSH</button><button data-experience="bonus">大当り・払い出し</button><button data-experience="rush">RUSH</button></div></section>${reviewLabel()}</main>`;
- root.querySelector('#back').onclick=floor;root.querySelector('#playMachine').disabled=!review;root.querySelector('#playMachine').onclick=review?()=>play():null;root.querySelectorAll('[data-experience]').forEach(b=>b.onclick=()=>play(b.dataset.experience));
- if(!review)try{await mountStartingWager(root,{wallet,onPlay:active=>play(null,active),isCancelled:()=>version!==generation});}catch(error){
-  console.error(error);if(version!==generation)return;root.querySelector('#playMachine').disabled=true;
-  root.querySelector('#starting-wager').innerHTML='<p role="alert">チケットを読み込めませんでした。</p><button id="ticket-reload">再試行</button>';
-  root.querySelector('#ticket-reload').onclick=details;
+async function details(){
+ if(!root.querySelector('.arcade-room'))await floor();
+ const floorRoot=root.querySelector('.arcade-room');if(!floorRoot)return;
+ void prefetchBoardAssets();
+ root.querySelector('.floor-detail-dialog')?.remove();
+ const version=generation,detailVersion=++detailGeneration,trigger=document.activeElement;
+ const panel=document.createElement('dialog');panel.className='floor-detail-dialog';panel.setAttribute('role','dialog');panel.setAttribute('aria-modal','true');panel.setAttribute('aria-labelledby','floor-detail-title');
+ panel.innerHTML=`<div class="floor-detail-content"><header class="session-header"><h1 id="floor-detail-title">${selected.name}</h1><button id="back" type="button" aria-label="台情報を閉じる">×</button></header><section class="floor-slump" aria-labelledby="slump-title"><h2 id="slump-title">スランプグラフ</h2><div id="slump-content"><div class="slump-empty">データを読み込み中…</div></div></section><section class="detail-specs"><h2>基本スペック</h2><dl>${wSpecRows().map(([name,value])=>`<div><dt>${name}</dt><dd>${value}</dd></div>`).join('')}</dl><p class="hint">台の全体と液晶は、プレイ開始後にご覧いただけます。</p><button id="playMachine" class="primary">400玉でプレイ開始</button><section id="starting-wager" aria-label="開始玉チャレンジ" ${review?'hidden':''}></section><div class="experience-entry"><h3>演出を体験する</h3><p class="hint">本遊技の持ち玉を使わず、指定した演出を再生します。本遊技の抽選・結果とは別です。</p><button data-experience="battle">戦闘・PUSH</button><button data-experience="bonus">大当り・払い出し</button><button data-experience="rush">RUSH</button></div></section>${reviewLabel()}</div>`;
+ floorRoot.append(panel);panel.showModal();
+ const cancelled=()=>version!==generation||detailVersion!==detailGeneration||!panel.isConnected;
+ void readSlump(Preferences,selected.id).then(record=>{if(!cancelled())panel.querySelector('#slump-content').innerHTML=slumpMarkup(record);});
+ panel.addEventListener('close',()=>{if(detailGeneration===detailVersion)detailGeneration++;panel.remove();if(trigger?.isConnected)trigger.focus();},{once:true});
+ panel.addEventListener('click',event=>{if(event.target===panel)panel.close();});
+ panel.querySelector('#back').onclick=()=>panel.close();panel.querySelector('#playMachine').disabled=!review;panel.querySelector('#playMachine').onclick=review?()=>play():null;panel.querySelectorAll('[data-experience]').forEach(b=>b.onclick=()=>play(b.dataset.experience));
+ if(!review)try{await mountStartingWager(panel,{wallet,onPlay:active=>play(null,active),isCancelled:cancelled});}catch(error){
+  console.error(error);if(cancelled())return;panel.querySelector('#playMachine').disabled=true;
+  panel.querySelector('#starting-wager').innerHTML='<p role="alert">チケットを読み込めませんでした。</p><button id="ticket-reload">再試行</button>';
+  panel.querySelector('#ticket-reload').onclick=details;
  }
 }
 function reviewSetup({game:g,model}){
@@ -109,7 +137,8 @@ function menu(){if(!board||finishing)return;const trigger=document.activeElement
 function result(){
  board?.pause(true);dialogBackground(true);const a=game.accounting,current=game,session=activeTicketSession,version=generation;
  root.querySelector('#dialog-host').innerHTML=`<div class="modal-backdrop"><section role="dialog" aria-modal="true" aria-label="遊技結果"><h2>RESULT</h2><div class="result-total">${fmt(game.total)}<small>累計獲得玉数</small></div><dl><div><dt>最終持ち玉</dt><dd>${fmt(game.stock)}</dd></div><div><dt>発射数</dt><dd>${fmt(a.spent)}</dd></div><div><dt>消化回数 / 大当り</dt><dd>${fmt(game.draws)}回 / ${game.jackpots}</dd></div></dl><div id="ticket-result" class="ticket-result" role="status">${session?'チケットを保存中…':'体験・確認用の遊技ではチケットを獲得しません。'}</div><button id="ticket-retry" hidden>保存を再試行</button><p class="hint">チケットは累計払い出しで換算します。発射した玉数は差し引きません。獲得したチケットは、次回の開始玉チャレンジに使えます。</p><p class="hint">累計獲得玉数は発射消費を差し引く前の玉数です。通常とRUSHで消化した抽選の合計には演出中の分を含みます。</p><button id="floor" class="primary" ${session?'disabled':''}>台選択へ</button></section></div>`;
- const floorButton=root.querySelector('#floor'),retry=root.querySelector('#ticket-retry'),ticketResult=root.querySelector('#ticket-result');floorButton.onclick=floor;
+ const slumpSaved=session&&!current.practice?writeSlump(Preferences,selected.id,current).catch(error=>{console.error('差玉履歴の保存に失敗しました',error);}):Promise.resolve();
+ const floorButton=root.querySelector('#floor'),retry=root.querySelector('#ticket-retry'),ticketResult=root.querySelector('#ticket-result');floorButton.onclick=async()=>{floorButton.disabled=true;await slumpSaved;floor();};
  const save=async()=>{
   retry.hidden=true;retry.disabled=true;ticketResult.textContent='チケットを保存中…';
   try{const reward=await wallet.finish(session.id,current.total);if(version!==generation)return;ticketResult.textContent=`獲得チケット ${fmt(reward.earned)}枚 · 所持 ${fmt(reward.balance)}枚`;floorButton.disabled=false;floorButton.focus();}

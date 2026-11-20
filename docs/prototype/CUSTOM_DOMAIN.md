@@ -1,12 +1,14 @@
 # 独自ドメイン接続
 
-2026-10-06 命名訂正：正式なプロジェクト／サービス名はpackage.jsonの `silverball-chronicles`。「月影機関」は台の名前。ユーザーの訂正を受け、主URLを [silverball-chronicles.sintaro-katuta.com](https://silverball-chronicles.sintaro-katuta.com) へ合わせた。従来のtsukikageサブドメインは互換用の別名として保持し、Wranglerにも両方を記録している。
+現行案内：正式 URL は [silverball-chronicles.sintaro-katuta.com](https://silverball-chronicles.sintaro-katuta.com)、予備は [workers.dev](https://tsukikage-pachinko.sintaro-katuta.workers.dev)。旧 `tsukikage.sintaro-katuta.com` の Worker 接続はユーザーが削除済み。再接続防止の設定差分と検証状況は [Issue #78 の記録](DOMAIN_RETIREMENT_78.md)を参照。
+
+以下は2026-10-06の接続時点の履歴。正式なプロジェクト／サービス名は `silverball-chronicles`、「月影機関」は台の名前。当時は従来のtsukikageサブドメインを互換用の別名として保持し、Wranglerにも両方を記録した。
 
 追加Domain IDは `97422be4e6f10d6566d0ba908128311d8af588e0`、enabled true。Cloudflare権威DNSと1.1.1.1／8.8.8.8でAレコードを確認。公開DNSが返すIPを用いた証明書検証付きcurlでHTTPS 200、同IPで一時的に名前解決したChromeで390×844／1440×900の全25画像、停止・再開、HTTP／ブラウザエラー0件を確認。検証環境の通常リゾルバーには追加直後の否定キャッシュが残っていたため、通常の名前解決で開けるまでの時間は利用環境に依存する。コンピューターのDNS設定は変更していない。
 
 2026-10-06。ユーザーが所有する `sintaro-katuta.com` を使い、月影機関を `https://tsukikage.sintaro-katuta.com` で公開する。ユーザーの「はい、進めて」に基づく作業。ドメイン契約・更新はお名前.com、DNSはCloudflare Free、配信は既存のWorkers Static Assets。ドメイン移管・有料プラン・既存のworkers.dev URL削除は行わない。
 
-接続完了：[silverball-chronicles](https://silverball-chronicles.sintaro-katuta.com)。旧別名：[月影機関](https://tsukikage.sintaro-katuta.com)。Cloudflareゾーンactive、Custom Domain enabled、HTTPS正常、スマホ・PCの本編操作確認済み。
+当時の接続完了記録：[silverball-chronicles](https://silverball-chronicles.sintaro-katuta.com)。旧別名：`tsukikage.sintaro-katuta.com`。Cloudflareゾーンactive、Custom Domain enabled、HTTPS正常、スマホ・PCの本編操作確認済み。
 
 ## 接続結果と検証
 

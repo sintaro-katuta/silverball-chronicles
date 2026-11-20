@@ -39,7 +39,7 @@ export function createPredictionView({character=null,landscape=null,storySheets=
  // list at construction. Dynamically cached labels are released by dispose.
  for(const text of PREDICTION_LABELS)label(text);
  const initialTextures=[...textures];
- return {root,textures:initialTextures,render(game){
+ return {root,textures:initialTextures,render(game,{videoBackground=false,compactLabels=false}={}){
   const reach=game.presentation?.basicReach?game.presentation:null;
   const prediction=reach?.predictionPlan??(game.spinActive?game.spinResult?.predictionPlan:null);
   const phase=reach?'reach':'spin',age=reach?.time??game.drawTimer;
@@ -47,11 +47,12 @@ export function createPredictionView({character=null,landscape=null,storySheets=
   root.visible=p.visible&&!game.jackpot&&game.previewWinAt===undefined;
   if(!root.visible)return p;
   const reduced=!!game.reducedEffects,color=colors[p.tier]??colors.blue;
+  symbols.visible=lines.visible=edge.visible=!videoBackground;
   const precursor=p.stage==='precursor'||p.stage==='development',chance=p.stage==='chanceUp';
   const family=p.family??'';
   const storyWindow=story?storyPredictionWindow(prediction,age,{phase,available:Object.keys(storySheets)}):null;
-  if(story){story.root.visible=!!storyWindow;if(storyWindow)story.update({...storyWindow,reducedEffects:reduced});}
-  scene.visible=precursor&&!storyWindow;
+  if(story){story.root.visible=!!storyWindow&&!videoBackground;if(storyWindow&&!videoBackground)story.update({...storyWindow,reducedEffects:reduced});}
+  scene.visible=precursor&&!storyWindow&&!videoBackground;
   if(portrait){portrait.visible=precursor;portrait.width=210+(reduced?0:5*out(p.progress));portrait.height=140+(reduced?0:3*out(p.progress));portrait.x=precursor&&family==='long'?-4*out(p.progress):0;portrait.alpha=family==='long'?.7:1;}
   const alpha=Math.max(0,Math.min(1,p.progress*8,(1-p.progress)*9));
   // The title has its own entrance/exit; it must not fade the story halfway
@@ -60,7 +61,7 @@ export function createPredictionView({character=null,landscape=null,storySheets=
   symbols.alpha=lines.alpha=edge.alpha=storyWindow?alpha:1;
   for(const s of labels.values())s.visible=false;
   const text=label(p.text);text.visible=true;text.tint=color;
-  caption.position.set(0,chance?-8:0);captionShade.alpha=chance?.65:.9;
+  caption.scale.set(compactLabels?.5:1);caption.position.set(compactLabels?52.5:0,compactLabels?29+(chance?-2:0):chance?-8:0);captionShade.alpha=chance?.65:.9;
   text.x=15+(reduced?0:Math.round(5*(1-out(p.progress*6))));
   symbols.clear();lines.clear();edge.clear();
   symbols.y=phase==='spin'&&prediction.mode==='rush'?18:0;lines.y=symbols.y;

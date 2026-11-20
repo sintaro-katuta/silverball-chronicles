@@ -1,0 +1,3 @@
+戦闘主人公：duel-poses-longhair-v4.png と通常主人公を参照し画像生成した battle-poses-aligned-v1.png、動作は duel-intermediates-longhair-v7.png を参照した battle-motion-generated-v1.png。元画像の3列2段と512×512セルを維持する指示。主人公セルを4×4画素の格子に最近傍標本化し、alpha 192以上を不透明、他を透明とした。敵セルは元画像から同様に標本化。素材全体を一マスずつ手描きしたものではない。build-battle-candidate.swift を使用。
+背景：moon-bridge-v1.png と歩み格子版を参照して再生成した battle-background-redraw-source-v1.png。城・月・橋・床を維持し小さな石のノイズを減らすよう指示。238×159に最近傍標本化。合成時は背景だけを上へ7論理画素ずらす。
+局所的なカットで顔・剣・着地・背景を目視した。動作の全区間・実機・音光同期については検証記録を参照。

@@ -11,7 +11,7 @@ export const targetName='tsukikage-pachinko';
 export const candidatePath=root=>join(root,'prototype/.cache/release/candidate.json');
 const outputPath=root=>join(root,'prototype/dist-release');
 export const candidateAssets=(root,id)=>join(root,'prototype/.cache/release/candidates',id,'assets');
-const expectedRoutes=['silverball-chronicles.sintaro-katuta.com','tsukikage.sintaro-katuta.com'];
+const expectedRoutes=['silverball-chronicles.sintaro-katuta.com'];
 async function readTarget(root){const bytes=await readFile(join(root,'prototype/wrangler.jsonc'));let config;try{config=JSON.parse(bytes);}catch{throw new Error('Target configuration must use the supported strict JSON subset of JSONC');}
  const routes=config.routes?.map(r=>({pattern:r.pattern,custom_domain:r.custom_domain}));
  if(config.name!==targetName||config.assets?.directory!=='./dist-release'||config.workers_dev!==true||!Array.isArray(routes)||routes.length!==expectedRoutes.length||routes.some((r,i)=>r.pattern!==expectedRoutes[i]||r.custom_domain!==true))throw new Error('Unexpected Worker name, routes or assets configuration');

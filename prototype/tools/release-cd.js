@@ -20,9 +20,10 @@ export function parseReleaseSummary(body,version){
 export function validatePR(event,{packageVersion}={}){const pr=event.pull_request;if(!pr||pr.head?.repo?.full_name!==event.repository?.full_name)throw new Error('PR must originate in this repository');
  const base=pr.base?.ref,head=pr.head?.ref;
  if(base==='main'&&/^fix\/[A-Za-z0-9][A-Za-z0-9._/-]*$/.test(head??'')&&versionPattern.test(packageVersion??''))return {kind:'fix',version:packageVersion};
+ if(/^fix\/[A-Za-z0-9][A-Za-z0-9._/-]*$/.test(head??'')&&base?.startsWith('release/')&&versionPattern.test(base.slice(8)))return {kind:'fix',version:base.slice(8)};
  if(head?.startsWith('sprint/')&&head.length>7&&base?.startsWith('release/')&&versionPattern.test(base.slice(8)))return {kind:'sprint',version:base.slice(8)};
  if(base==='main'&&head?.startsWith('release/')&&versionPattern.test(head.slice(8)))return {kind:'release',version:head.slice(8),summary:parseReleaseSummary(pr.body,head.slice(8))};
- throw new Error('PR must be sprint/* → release/<version>, release/<version> → main, or a same-repository fix/* → main with a package version');
+ throw new Error('PR must be sprint/* → release/<version>, release/<version> → main, or a same-repository fix/* → main or release/<version>');
 }
 export function validateCD({enabled,event,eventName='pull_request',repository,checkoutSHA,packageVersion,mainSHA,tagSHA,release,latestRelease}){
  if(enabled!=='true')throw new Error('Production CD is disabled');

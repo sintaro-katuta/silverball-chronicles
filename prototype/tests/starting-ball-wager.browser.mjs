@@ -68,7 +68,7 @@ try{
  const failed=await browser.newContext({viewport:{width:390,height:844}});
  const prepared={version:1,tickets:9,serial:1,active:{id:1,stake:1,balls:800,phase:'ready',payout:0},lastResult:null};
  await failed.addInitScript(({key,prepared})=>localStorage.setItem(key,JSON.stringify(prepared)),{key,prepared});
- await failed.route('**/assets/central-start/central-start-v3.png',route=>route.fulfill({status:404,body:'Fixture: missing board asset'}));
+ await failed.route('**/assets/central-start/front-circle-v1.png',route=>route.fulfill({status:404,body:'Fixture: missing board asset'}));
  const broken=await failed.newPage();broken.on('pageerror',e=>errors.push(e.message));await broken.goto(url);await details(broken);
  await broken.locator('#playMachine').click();await broken.getByRole('heading',{name:'盤面を読み込めませんでした'}).waitFor({timeout:60000});
  assert.deepEqual(await read(broken),prepared);
