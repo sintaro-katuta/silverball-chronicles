@@ -6,6 +6,7 @@ import {rushWinPose} from './rush-win-motion.js';
 import {createRushEndView} from './rush-end-view.js';
 import {Container,Graphics,Sprite,Texture} from 'pixi.js';
 import {pixelSurface,painter} from './pixel-primitives.js';
+import {presentationSurface,smoothTexture} from './presentation-quality.js';
 import {reviewReelState,linkedWinScale,DISPLAY_STOP_RANKS,displayResultIndex} from './review-reel-state.js';
 import {createRushEntryView} from './rush-entry-view.js';
 import {createHoldView} from './hold-view.js';
@@ -15,6 +16,9 @@ import {createDevelopmentView} from './development-view.js';
 import {wAcquisitionLabel} from '../ui/session-status.js';
 import {createPredictionView} from './prediction-view.js';
 import {createReachFinaleView} from './reach-finale-view.js';
+import {createSerenaVictoryVideo} from './serena-victory-video.js';
+import {createSerenaSceneVideo} from './serena-scene-video.js';
+import {VIDEO_HOLD,LEGACY_HOLD,VIDEO_VICTORY_REEL_CENTER_Y,VIDEO_RUSH_REELS,VIDEO_FULL_REELS} from './video-screen-layout.js';
 const GLYPHS=['00100/01100/00100/00100/00100/00100/01110','11110/00001/00001/01110/10000/10000/11111','11110/00001/00001/01110/00001/00001/11110','10010/10010/10010/11111/00010/00010/00010','11111/10000/10000/11110/00001/00001/11110','01110/10000/10000/11110/10001/10001/01110','11111/00001/00010/00100/01000/01000/01000','01110/10001/10001/01110/10001/10001/01110','01110/10001/10001/01111/00001/00001/01110'];
 const mod=n=>((n%9)+9)%9;
 const RAINBOW=['#ff6282','#ffc75b','#f7ff91','#65f1b4','#75d8ff','#bc9aff'];
@@ -49,13 +53,14 @@ function rushShineTexture(frame,n=7){
   });c.globalCompositeOperation='source-in';c.drawImage(light,0,0);
  }));t.source.scaleMode='nearest';return t;
 }
-export function createNormalSpinView(rushScene=null,reachAtlas=null,reachLandscape=null,motionAtlas=null,character=null,storySheets=null,portraitTexture=null){
+export function createNormalSpinView(rushScene=null,reachAtlas=null,reachLandscape=null,motionAtlas=null,character=null,storySheets=null,portraitTexture=null,{widescreen=false}={}){
  const root=new Container(),textures=Array.from({length:9},(_,i)=>digitTexture(i+1));
  const lcdMask=new Graphics().rect(0,0,210,140).fill(0xffffff);root.addChild(lcdMask);root.mask=lcdMask;
  const shade=new Graphics().rect(24,LCD_REEL_LAYOUT.normalTop-3,162,57).fill({color:0x061024,alpha:.6});root.addChild(shade);
  const rushBackdrop=new Container();root.addChild(rushBackdrop);
  if(rushScene){const sprite=new Sprite(rushScene);sprite.width=210;sprite.height=140;rushBackdrop.addChild(sprite);}
  else rushBackdrop.addChild(new Graphics().rect(0,0,210,140).fill(0x160c29));
+ const sceneVideo=createSerenaSceneVideo();root.addChild(sceneVideo.root);
  const backgroundTransition=createBackgroundTransition(.8);
  const sparks=[];for(let i=0;i<16;i++){const g=new Graphics().rect(0,0,i%3===0?8:3,1).fill(i%3===0?0xc89555:0x795987);rushBackdrop.addChild(g);sparks.push(g);}
  const rushDigits=Array.from({length:9},(_,i)=>rushDigitTexture(i+1));textures.push(...rushDigits);
@@ -69,6 +74,7 @@ export function createNormalSpinView(rushScene=null,reachAtlas=null,reachLandsca
  }
  const celebration=new Container();root.addChild(celebration);
  const impactShade=new Graphics().rect(0,0,210,140).fill(0x04020c);celebration.addChild(impactShade);
+ const victoryVideo=createSerenaVictoryVideo();celebration.addChild(victoryVideo.root);
  const fan=new Container();fan.position.set(105,70);celebration.addChild(fan);
  for(let i=0;i<16;i++){const a=i*Math.PI/8,b=a+.075;fan.addChild(new Graphics().poly([0,0,Math.cos(a)*190,Math.sin(a)*190,Math.cos(b)*190,Math.sin(b)*190]).fill({color:RAINBOW[i%6],alpha:.3}));}
  let rainbowTextures=Array.from({length:6},(_,i)=>digitTexture(7,i));
@@ -91,15 +97,15 @@ export function createNormalSpinView(rushScene=null,reachAtlas=null,reachLandsca
  const rushGlints=[];for(let i=0;i<12;i++){const g=new Graphics().rect(-4,-1,8,2).rect(-1,-4,2,8).fill(i%2?0xffdfa1:0xffffff);celebration.addChild(g);rushGlints.push(g);}
  celebration.visible=false;
  const development=createDevelopmentView(reachAtlas,reachLandscape,motionAtlas,portraitTexture);root.addChild(development.root);textures.push(...development.textures);
- const special=createSpecialRouteView({background:reachLandscape});root.addChild(special.root);
+ const special=createSpecialRouteView({background:reachLandscape,compactLayout:widescreen});root.addChild(special.root);
  const prediction=createPredictionView({character,landscape:reachLandscape,storySheets});root.addChild(prediction.root);textures.push(...prediction.textures);
  const fullRotation=new Container();fullRotation.label='fullrotation';root.addChild(fullRotation);
- fullRotation.addChild(new Graphics().rect(0,0,210,140).fill({color:0x030d24,alpha:.94}));
+ const fullBackground=new Graphics().rect(0,0,210,140).fill({color:0x030d24,alpha:.94});fullRotation.addChild(fullBackground);
  const fullMoon=new Graphics().circle(105,44,23).stroke({color:0xffdf91,width:1.5}).circle(105,44,28).stroke({color:0xc7eaff,width:.7});fullRotation.addChild(fullMoon);
  const fullColumns=Array.from({length:3},(_,i)=>{
   const c=new Container();c.position.set(32+i*53,57);fullRotation.addChild(c);
   const m=new Graphics().rect(0,0,40,50).fill(0xffffff),strip=new Container();c.addChild(m,strip);strip.mask=m;
-  return Array.from({length:3},()=>{const s=new Sprite(textures[0]);s.scale.set(1/3);strip.addChild(s);return s;});
+  return {column:c,sprites:Array.from({length:3},()=>{const s=new Sprite(textures[0]);s.scale.set(1/3);strip.addChild(s);return s;})};
  });
  fullRotation.visible=false;
  const holdView=createHoldView();root.addChild(holdView.root);
@@ -109,8 +115,10 @@ export function createNormalSpinView(rushScene=null,reachAtlas=null,reachLandsca
  const titleTexture=Texture.from(pixelSurface(184,58,c=>{c.font='48px "DotGothic16"';c.textAlign='center';c.textBaseline='middle';c.lineJoin='miter';c.lineWidth=5;c.strokeStyle='#16375c';c.strokeText('リーチ',92,29);c.fillStyle='#e2f4ff';c.fillText('リーチ',92,29);}));titleTexture.source.scaleMode='nearest';textures.push(titleTexture);const title=new Sprite(titleTexture);title.anchor.set(.5);banner.addChild(title);banner.visible=false;
  const rays=new Graphics();for(let i=0;i<10;i++){const a=i*Math.PI/5;rays.rect(Math.round(105+Math.cos(a)*83),Math.round(70+Math.sin(a)*53),3,3).fill(0xffe6a5);}root.addChild(rays);rays.visible=false;
  const rushCanvas=pixelSurface(210,28,()=>{}),rushTexture=Texture.from(rushCanvas);rushTexture.source.scaleMode='nearest';textures.push(rushTexture);const rushStatus=new Sprite(rushTexture);root.addChild(rushStatus);let rushKey='';
- const rushEntry=createRushEntryView();root.addChild(rushEntry.root);textures.push(...rushEntry.textures);
+ const rushEntry=createRushEntryView({compactLayout:widescreen});root.addChild(rushEntry.root);textures.push(...rushEntry.textures);
  const rushEnd=createRushEndView();root.addChild(rushEnd.root);textures.push(rushEnd.texture);
+ const entryCanvas=presentationSurface(210,140,()=>{},4),entryTexture=smoothTexture(Texture.from(entryCanvas));textures.push(entryTexture);
+ const entryResult=new Sprite(entryTexture);entryResult.width=210;entryResult.height=140;root.addChild(entryResult);let entryResultKey='';
  const chargeTexture=Texture.from(pixelSurface(210,90,c=>{
   c.fillStyle='rgba(4,14,31,.94)';c.fillRect(12,7,186,76);
   c.fillStyle='#8edff1';c.fillRect(12,7,186,2);c.fillRect(12,81,186,2);
@@ -125,19 +133,24 @@ export function createNormalSpinView(rushScene=null,reachAtlas=null,reachLandsca
  }
  acquisition.visible=false;
  const finale=createReachFinaleView();root.addChild(finale.root);textures.push(...finale.textures);
- let previousPosition=0,reachStart=null;
- return {root,textures,frames:development.frames,dispose(){special.destroy();prediction.dispose();for(const t of [...rainbowTextures,...rushWinners,...shineTextures])t.destroy(true);},render(game,payout=false){const ending=rushEndPose(game.time,game.lastRush?.endedAt,!!game.rush||!!game.jackpot);const isRush=!game.entryPrelude&&((!!game.rush&&!game.jackpot)||ending.visible);const state=revivalReels(game,reviewReelState(game)),winTime=game.entryPrelude||game.previewWinAt===undefined?-1:game.time-game.previewWinAt,reach=game.presentation?.basicReach?game.presentation:null,short=isShortRoute(reach);
+ let previousPosition=0,reachStart=null,sceneClip=null;
+ return {root,textures,frames:development.frames,getVideoClip(){return sceneClip;},hasVideoBackground(){return sceneVideo.isCovering()||victoryVideo.isCovering();},pauseVideos(){sceneVideo.pause();victoryVideo.pause();},dispose(){sceneVideo.dispose();victoryVideo.dispose();special.destroy();prediction.dispose();for(const t of [...rainbowTextures,...rushWinners,...shineTextures])t.destroy(true);},render(game,payout=false,paused=false){const ending=rushEndPose(game.time,game.lastRush?.endedAt,!!game.rush||!!game.jackpot);const isRush=!game.entryPrelude&&((!!game.rush&&!game.jackpot)||ending.visible);const state=revivalReels(game,reviewReelState(game)),winTime=game.entryPrelude||game.previewWinAt===undefined?-1:game.time-game.previewWinAt,reach=game.presentation?.basicReach?game.presentation:null,short=isShortRoute(reach);
+  sceneClip=sceneVideo.render(game,paused,payout);
+  victoryVideo.render(game,paused,payout);
+  const videoBackground=sceneVideo.isCovering()||victoryVideo.isCovering();
   const transitionMix=backgroundTransition.update(game.time,(isRush&&game.previewWinAt===undefined&&(!ending.visible||ending.age<.25))||(!!game.previewRushWin&&winTime>=0));const mix=game.entryBackdropReady&&game.time-game.entryGuideAt<1.5?1:transitionMix;rushBackdrop.visible=mix>0;rushBackdrop.alpha=mix;shade.visible=mix<1;shade.alpha=1-mix;
   for(let i=0;i<sparks.length;i++){sparks[i].position.set(i%2===0?3+(i*3)%14:192+(i*3)%12,28+Math.floor(((i*19-game.time*7)%105+105)%105));sparks[i].alpha=.25+.15*Math.sin(game.time*.8+i);}
-  for(let i=0;i<3;i++){const c=columns[i];c.column.position.set(isRush?10+i*65:32+i*53,isRush?LCD_REEL_LAYOUT.rushTop:LCD_REEL_LAYOUT.normalTop);c.column.scale.set(isRush?1.5:1);c.rim.visible=!isRush;}
-  for(let i=0;i<3;i++){const c=columns[i];if(isRush&&state.stopped[i]&&!c.wasStopped)c.landedAt=game.time;c.wasStopped=state.stopped[i];const age=game.time-(c.landedAt??-100);if(isRush&&age>=0&&age<.18)c.column.scale.y=1.5+.12*Math.sin(age/.18*Math.PI);}
+  for(let i=0;i<3;i++){const c=columns[i],compactVideo=widescreen;c.column.position.set(compactVideo?VIDEO_RUSH_REELS.left+i*VIDEO_RUSH_REELS.step:isRush?10+i*65:32+i*53,compactVideo?VIDEO_RUSH_REELS.top:isRush?LCD_REEL_LAYOUT.rushTop:LCD_REEL_LAYOUT.normalTop);c.column.scale.set(compactVideo?VIDEO_RUSH_REELS.scale:isRush?1.5:1);c.rim.visible=!isRush;}
+  for(let i=0;i<3;i++){const c=columns[i];if(isRush&&state.stopped[i]&&!c.wasStopped)c.landedAt=game.time;c.wasStopped=state.stopped[i];const age=game.time-(c.landedAt??-100);if(isRush&&age>=0&&age<.18)c.column.scale.y=(widescreen?VIDEO_RUSH_REELS.scale:1.5)*(1+.08*Math.sin(age/.18*Math.PI));}
   rushStatus.visible=!game.entryPrelude&&!!game.rush&&!game.hasPendingWBonus&&!game.jackpot&&!reach;
-  if(rushStatus.visible){const key=game.rush.remaining;if(key!==rushKey){rushKey=key;const c=rushCanvas.getContext('2d');c.clearRect(0,0,210,28);c.fillStyle='#160c29';c.fillRect(0,0,210,28);c.font='17px "DotGothic16"';c.textAlign='center';c.fillStyle='#ffe2a1';c.fillText(`RUSH  残り ${key} 回`,105,20);rushTexture.source.update();}}
-  rays.visible=winTime>=0&&winTime<5.8&&!game.previewRushWin;
+  rushStatus.scale.set(videoBackground?.50:1);rushStatus.position.set(videoBackground?52.5:0,videoBackground?29:0);
+  if(rushStatus.visible){const key=game.rush.remaining;if(key!==rushKey){rushKey=key;const c=rushCanvas.getContext('2d');c.clearRect(0,0,210,28);c.fillStyle='#160c29';c.fillRect(0,0,210,28);c.font='17px "DotGothic16"';c.textAlign='center';c.fillStyle='#ffe2a1';c.fillText(`RUSH  残り ${key} 回`,105,20,200);rushTexture.source.update();}}
+  rays.visible=!videoBackground&&winTime>=0&&winTime<5.8&&!game.previewRushWin;
   celebration.visible=winTime>=0;for(const c of columns)c.column.visible=winTime<0;
   if(winTime>=0){prepareWinner(game.stoppedReels[0]);const rushWin=!!game.previewRushWin,centerY=rushWin?LCD_REEL_LAYOUT.rushCenterY:LCD_REEL_LAYOUT.normalCenterY;reelGroup.pivot.set(105,centerY);reelGroup.position.set(105,centerY);reelGroup.scale.set(rushWin?1:linkedWinScale(winTime));fan.visible=!rushWin;const pose=rushWinPose(winTime);impactShade.visible=rushWin;impactShade.alpha=pose.darkAlpha;
    reelGroup.position.set(105+(rushWin?pose.shake:0),centerY+(rushWin?Math.round(pose.shake/2):0));
    shards.forEach((g,i)=>{g.visible=rushWin&&pose.sparkAlpha>0;const a=i*2.39996,r=15+(45+i%5*13)*(1-(1-pose.burst)**2);g.position.set(Math.round(105+Math.cos(a)*r),Math.round(72+Math.sin(a)*r*.7+pose.burst*pose.burst*18));g.alpha=pose.sparkAlpha;g.scale.set(i%4===0?1.5:1);});rushImpact.visible=rushWin&&pose.slashAlpha>0;rushImpact.alpha=pose.slashAlpha;rushGlints.forEach((g,i)=>{g.visible=rushWin&&pose.sparkAlpha>0;const a=i*Math.PI/6,r=30+Math.min(1,winTime/.85)*65;g.position.set(Math.round(105+Math.cos(a)*r),Math.round(70+Math.sin(a)*r*.6));g.alpha=pose.sparkAlpha;});fan.rotation=winTime*.18;fan.alpha=winTime<5.8?.8:.25;
+   if(victoryVideo.isCovering()){fan.alpha=0;reelGroup.scale.set(.5);reelGroup.position.set(105,VIDEO_VICTORY_REEL_CENTER_Y);}
    winners.forEach(({c,front,back,shine},i)=>{c.position.set(105+(i-1)*(rushWin?65+pose.offset:53),centerY);c.scale.set(rushWin?.5*pose.scale:1/3);c.skew.set(0,0);c.rotation=0;const n=game.stoppedReels[i]-1;back.texture=rushWin?rushDigits[n]:textures[n];front.texture=(rushWin?rushWinners:rainbowTextures)[Math.floor(winTime*(rushWin?3:9))%6];shine.visible=rushWin&&pose.shineAlpha>0;shine.texture=shineTextures[Math.min(15,Math.floor(pose.shine*16))];shine.alpha=pose.shineAlpha;});
   }
 
@@ -146,7 +159,7 @@ export function createNormalSpinView(rushScene=null,reachAtlas=null,reachLandsca
   if(reach&&reachStart===null)reachStart=previousPosition;if(!reach)reachStart=null;
   const reachDuration=reach?.longReach?2:(reach?.win||reach?.developed)? .45:reachSeconds(reach,isRush);
   banner.visible=!!reach&&!short&&reach.time<reachDuration;
-  if(reach){const t=reach.time;const scale=t<.1?1.24-.24*(1-(1-t/.1)**3):t<.23?1-.045*Math.sin((t-.1)/.13*Math.PI):1;banner.scale.set(scale);banner.position.set(105+(t<.2?Math.round(Math.sin(t*125)*2*(1-t/.2)):0),70);const fade=Math.min(.2,reachDuration*.25);banner.alpha=Math.min(1,Math.max(0,(reachDuration-t)/fade));}
+  if(reach){const t=reach.time;const scale=t<.1?1.24-.24*(1-(1-t/.1)**3):t<.23?1-.045*Math.sin((t-.1)/.13*Math.PI):1;banner.scale.set(scale*(widescreen?.55:1));banner.position.set(105+(t<.2?Math.round(Math.sin(t*125)*2*(1-t/.2)):0),70);const fade=Math.min(.2,reachDuration*.25);banner.alpha=Math.min(1,Math.max(0,(reachDuration-t)/fade));}
 
   for(let i=0;i<3;i++){
    const index=displayResultIndex(i),rank=DISPLAY_STOP_RANKS[i],remaining=game.drawTempo+rank*game.reelStopGap-game.drawTimer,speed=8+rank*.6,target=game.spinResult?.reels[index]??state.numbers[i];
@@ -160,6 +173,7 @@ export function createNormalSpinView(rushScene=null,reachAtlas=null,reachLandsca
   }
   for(const c of columns)c.column.alpha=ending.visible?1-ending.dim:1;
   const developmentPose=development.render(short?null:reach,isRush,{reducedEffects:!!game.reducedEffects});
+  if(videoBackground&&reach?.longReach)development.root.visible=false;
   if(developmentPose.visible){
    shade.alpha=.2;
    for(let i=0;i<3;i++){const c=columns[i];c.column.visible=!reach?.longReach;c.column.scale.set(.42);c.column.position.set(74+i*23,104);c.column.alpha=.78;c.rim.visible=false;}
@@ -167,25 +181,37 @@ export function createNormalSpinView(rushScene=null,reachAtlas=null,reachLandsca
   const full=reach?.win&&reach.predictionPlan?.resultFamily==='fullrotation';
   special.render({symbol:game.reelOutcome[0],route:short?reach.displayRoute:'battle',mode:reach?.presentationMode??(isRush?'rush':'normal'),win:!!reach?.win,time:reach?.time??-1,premium:full?null:reach?.premium??null,premiumAt:reach?.premiumAt??45.5,reducedEffects:!!game.reducedEffects,battlePose:developmentPose});
   if(short){shade.visible=false;for(const c of columns)c.column.visible=false;}
-  prediction.render(game);
+  prediction.render(game,{videoBackground,compactLabels:widescreen});
   fullRotation.visible=!!full&&reach.time>=45.5&&reach.time<51.7;
+  fullBackground.visible=fullMoon.visible=!videoBackground;
   if(fullRotation.visible){
    const age=reach.time-45.5,position=age<5?-6+18*(1-age/5)**2:-6;
    const base=Math.floor(position),fraction=position-base;
    fullMoon.alpha=.6+.3*Math.sin(age*1.5)**2;
-   for(const col of fullColumns)col.forEach((s,j)=>{s.texture=(isRush?rushDigits:textures)[mod(-(base+j-1))];s.y=(j-1-fraction)*50;});
+   for(const [i,col] of fullColumns.entries()){col.column.position.set(videoBackground?VIDEO_FULL_REELS.left+i*VIDEO_FULL_REELS.step:32+i*53,videoBackground?VIDEO_FULL_REELS.top:57);col.column.scale.set(videoBackground?VIDEO_FULL_REELS.scale:1);col.sprites.forEach((s,j)=>{s.texture=(isRush?rushDigits:textures)[mod(-(base+j-1))];s.y=(j-1-fraction)*50;});}
   }
   holdView.render(game);
+  if(widescreen){const h=videoBackground?VIDEO_HOLD:LEGACY_HOLD;holdView.root.position.set(h.x,h.y);holdView.root.scale.set(h.scale);}
   rushEntry.render(game.time,!game.entryPrelude&&!!game.rush&&!game.hasPendingWBonus&&!game.jackpot&&game.previewWinAt===undefined,game.time-game.entryGuideAt<.2?(game.entryTitleOffset||0):0);
-  rushEnd.render(game);
+  if(videoBackground||reach||game.spinActive)rushEntry.root.visible=false;
+  rushEnd.render(game,widescreen&&!!ending.visible);
+  const entryAge=game.entryPrelude?game.time-game.entryPrelude.startedAt:-1;
+  entryResult.y=videoBackground?6:0;
+  entryResult.visible=videoBackground&&entryAge>=0&&entryAge<2.2;
+  if(entryResult.visible){
+   const payout=Math.max(0,Math.floor(game.entryPrelude.payout??0)),key=String(payout);
+   if(entryResultKey!==key){entryResultKey=key;const c=entryCanvas.getContext('2d');c.clearRect(0,0,210,140);c.fillStyle='rgba(4,10,24,.85)';c.fillRect(52,15,49,23);c.fillStyle='#e4c47b';c.fillRect(52,15,49,1);c.textAlign='center';c.textBaseline='middle';c.font='600 7px -apple-system, "Hiragino Kaku Gothic ProN", sans-serif';c.fillText('獲得玉数',76.5,21,45);c.font='600 10px -apple-system, "Hiragino Kaku Gothic ProN", sans-serif';c.fillStyle='#a1e6ff';c.fillText(`${payout} 玉`,76.5,31,45);entryTexture.source.update();}
+  }
+  if(videoBackground&&game.entryPrelude)for(const c of columns)c.column.visible=false;
   const charge=!!game.jackpot?.charge;
   chargeBanner.visible=charge&&!payout;
-  const acquisitionLabel=wAcquisitionLabel(game);acquisition.visible=!!acquisitionLabel&&!payout;
+  chargeBanner.scale.set(videoBackground ? .27 : 1);chargeBanner.position.set(videoBackground?100:0,videoBackground?14:25);
+  const acquisitionLabel=wAcquisitionLabel(game);acquisition.visible=!!acquisitionLabel&&!payout;acquisition.scale.set(videoBackground?.50:1);acquisition.position.set(videoBackground?52.5:0,videoBackground?15:0);
   for(const [text,s]of Object.entries(acquisitionTitles))s.visible=text===acquisitionLabel;
   if(charge){celebration.visible=false;rays.visible=false;banner.visible=false;for(const c of columns)c.column.visible=false;}
   if(rushEntry.root.visible||rushEnd.root.visible)for(const c of columns)c.column.visible=false;
-  finale.render(game);
+  finale.render(game,{videoBackground});
   // Reuse the live reel backdrop during payout without drawing reels or win overlays.
-  for(const child of root.children)if(child!==lcdMask)child.renderable=!payout||child===rushBackdrop;
+  for(const child of root.children)if(child!==lcdMask)child.renderable=!payout||child===rushBackdrop||child===sceneVideo.root||child===holdView.root;
  }};
 }
