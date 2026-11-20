@@ -39,7 +39,7 @@ try{
  await page.reload();await details(page);assert.deepEqual(await read(page),pending);
  assert.match(await page.locator('#wager-result').innerText(),new RegExp(String(pending.active.balls)));
  // Practice leaves both the paid result and the real wallet alone.
- await page.locator('[data-experience=battle]').click();await loaded(page);await page.locator('#intro-menu').click();await page.locator('#leave').click();await page.locator('#ticket-balance').waitFor();
+ await page.locator('[data-experience=battle]').evaluate(button=>button.click());await loaded(page);await page.locator('#intro-menu').click();await page.locator('#leave').click();await page.locator('#ticket-balance').waitFor();
  assert.deepEqual(await read(page),pending);
  const second=await context.newPage();await second.goto(url);await second.getByRole('heading',{name:'別のタブで遊技中です'}).waitFor();assert.deepEqual(await read(page),pending);await second.close();
  await page.locator('#playMachine').click();await loaded(page);

@@ -97,8 +97,6 @@ body:has(.arcade-room){background:#061b4b}
 .floor-detail-dialog .hint{color:#b4c7d9;font-size:12px;line-height:1.7}
 .floor-detail-dialog #starting-wager{margin:18px 0;padding:14px;background:#07162ccf;border-color:#8e7749}
 .floor-detail-dialog .primary{width:100%;min-height:48px;font-size:14px;background:#e3b84f;color:#15213a;border:2px solid #ffdf83;box-shadow:inset 0 -3px #b47c21}
-.floor-detail-dialog .experience-entry{margin-top:24px;padding-top:14px;border-top:1px solid #526780}.floor-detail-dialog .experience-entry h3{color:#d5eafa;font-size:15px}
-.floor-detail-dialog .experience-entry button{width:100%;min-height:44px;margin-top:8px;border-color:#607f99;background:#163454;color:#eff9ff}
 .floor-detail-dialog button:focus-visible,.floor-detail-dialog input:focus-visible{outline:3px solid #8deaff;outline-offset:2px}
 @media(max-width:700px){.floor-detail-dialog{width:min(390px,88vw)}.floor-detail-content{padding:16px 18px 28px}.arcade-room .floor-detail-dialog .session-header h1{font-size:22px}}
 .floor-slump{margin:0 0 24px;padding:14px;background:#06182fcf;border:1px solid #486983}

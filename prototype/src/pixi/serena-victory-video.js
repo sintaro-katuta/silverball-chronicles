@@ -8,12 +8,15 @@ export function createSerenaVictoryVideo(){
  const background=new Graphics().rect(0,0,210,140).fill(0x030714);root.addChild(background);
  const video=document.createElement('video');
  video.dataset.serenaVictoryVideo='';video.hidden=true;video.muted=true;video.playsInline=true;
- video.preload='auto';video.src=videoUrl;document.body.appendChild(video);
+ video.preload='auto';
  const source=new VideoSource({resource:video,autoLoad:false,autoPlay:false});
  const texture=new Texture({source});const sprite=new Sprite(texture);sprite.visible=false;
  sprite.y=(140-118.125)/2;root.addChild(sprite);
  let failed=false,pending=false,disposed=false,started=false,wanted=false;
- source.load().catch(()=>{failed=true;root.visible=false;});
+ const onError=()=>{if(!disposed){failed=true;root.visible=false;}};
+ const beginLoad=()=>{if(!disposed)source.load().catch(onError);};
+ video.addEventListener('error',onError);video.addEventListener('loadedmetadata',beginLoad,{once:true});
+ video.src=videoUrl;document.body.appendChild(video);
  const onVisibility=()=>{if(document.hidden)video.pause();};
  document.addEventListener('visibilitychange',onVisibility);
  function stop(){wanted=false;video.pause();started=false;root.visible=false;}
@@ -22,7 +25,7 @@ export function createSerenaVictoryVideo(){
   const active=game?.lastReachWasLong===true&&!game?.previewRushWin&&!game?.jackpot?.charge&&!game?.entryPrelude&&!payout&&age>=0&&age<5.05;
   if(!active||failed||disposed){stop();return false;}
   wanted=!paused&&!document.hidden;
-  if(video.readyState<2){root.visible=true;return false;}
+  if(!source.isReady||video.readyState<2){root.visible=true;return false;}
   // The texture starts without metadata; sizing before the video dimensions
   // arrive magnifies the eventual frame far beyond the LCD.
   sprite.width=210;sprite.height=118.125;
@@ -30,5 +33,5 @@ export function createSerenaVictoryVideo(){
   if(!wanted){video.pause();root.visible=true;sprite.visible=started;return started;}
   if(video.paused&&!pending){pending=true;video.play().then(()=>{pending=false;if(!disposed&&wanted)started=true;else video.pause();}).catch(()=>{pending=false;if(wanted&&!disposed){failed=true;root.visible=false;}});}
   root.visible=true;sprite.visible=started&&!video.paused;return sprite.visible;
- },isCovering(){return root.visible;},pause(){wanted=false;video.pause();},dispose(){disposed=true;stop();document.removeEventListener('visibilitychange',onVisibility);video.remove();texture.destroy(true);}};
+ },isCovering(){return root.visible;},pause(){wanted=false;video.pause();},dispose(){disposed=true;stop();document.removeEventListener('visibilitychange',onVisibility);video.removeEventListener('error',onError);video.removeEventListener('loadedmetadata',beginLoad);video.remove();texture.destroy(true);}};
 }
