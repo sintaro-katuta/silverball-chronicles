@@ -25,11 +25,11 @@ export function createSerenaSceneVideo(){
   if(staged.has(clip)||failed.has(clip)||disposed)return;
   const video=document.createElement('video');video.dataset.serenaScenePreload=clip;
   video.hidden=true;video.muted=true;video.playsInline=true;video.preload='auto';video.src=urls[clip];
-  document.body.appendChild(video);video.load();staged.set(clip,video);
+  document.body.appendChild(video);staged.set(clip,video);
  }
  function disposeCurrent(){
   if(!current)return;
-  const old=current;current=null;old.disposed=true;old.video.pause();
+  const old=current;current=null;old.disposed=true;old.video.removeEventListener('loadedmetadata',old.beginLoad);old.video.removeEventListener('error',old.onError);old.video.pause();
   root.removeChild(old.sprite);old.video.remove();old.texture.destroy(true);
  }
  function switchTo(clip){
@@ -42,14 +42,19 @@ export function createSerenaSceneVideo(){
   if(clip==='idle'){prepare('warning');prepare('charge');prepare('bonus');}
   if(clip==='rush-loop'){prepare('warning');prepare('rush-end');}
   if(clip==='bonus'||clip==='charge')prepare('rush-entry');
-  const video=staged.get(clip)??document.createElement('video');staged.delete(clip);
+  const prepared=staged.has(clip),video=staged.get(clip)??document.createElement('video');staged.delete(clip);
   delete video.dataset.serenaScenePreload;video.dataset.serenaSceneVideo=clip;
-  video.hidden=true;video.muted=true;video.playsInline=true;video.preload='auto';
+  video.hidden=true;video.muted=true;video.playsInline=true;if(!video.isConnected)video.preload='none';
   if(!video.getAttribute('src'))video.src=urls[clip];if(!video.isConnected)document.body.appendChild(video);
   const source=new VideoSource({resource:video,autoLoad:false,autoPlay:false});
   const texture=new Texture({source}),sprite=new Sprite(texture);sprite.y=(140-118.125)/2;sprite.visible=false;root.addChild(sprite);
   const state={clip,video,source,texture,sprite,pending:false,started:false,disposed:false,wanted:false};current=state;
-  source.load().catch(()=>{if(!state.disposed){failed.add(clip);root.visible=false;}});
+  state.onError=()=>{if(!state.disposed){failed.add(clip);root.visible=false;}};
+  state.beginLoad=()=>{if(!state.disposed)source.load().catch(state.onError);};
+  video.addEventListener('error',state.onError);
+  // Do not restart a staged request that is still fetching its metadata.
+  if(prepared&&video.readyState===0&&!video.error)video.addEventListener('loadedmetadata',state.beginLoad,{once:true});
+  else state.beginLoad();
  }
  const onVisibility=()=>{if(document.hidden)current?.video.pause();};
  document.addEventListener('visibilitychange',onVisibility);
@@ -63,7 +68,7 @@ export function createSerenaSceneVideo(){
    const {video,sprite}=s;
    // A neutral backing prevents the previous pixel-art scene flashing through
    // while a new movie is loading. Failed loads still fall back normally.
-   if(video.readyState<2||!Number.isFinite(video.duration)||video.duration<=0){root.visible=true;return null;}
+   if(!s.source.isReady||video.readyState<2||!Number.isFinite(video.duration)||video.duration<=0){root.visible=true;return null;}
    sprite.width=210;sprite.height=118.125;
    const age=Math.max(0,plan.age),target=plan.loop?age%video.duration:Math.min(age,Math.max(0,video.duration-.08));
    const finished=!plan.loop&&age>=Math.max(0,video.duration-.08);

@@ -8,7 +8,7 @@ export function createSerenaVictoryVideo(){
  const background=new Graphics().rect(0,0,210,140).fill(0x030714);root.addChild(background);
  const video=document.createElement('video');
  video.dataset.serenaVictoryVideo='';video.hidden=true;video.muted=true;video.playsInline=true;
- video.preload='auto';video.src=videoUrl;document.body.appendChild(video);
+ video.preload='none';video.src=videoUrl;document.body.appendChild(video);
  const source=new VideoSource({resource:video,autoLoad:false,autoPlay:false});
  const texture=new Texture({source});const sprite=new Sprite(texture);sprite.visible=false;
  sprite.y=(140-118.125)/2;root.addChild(sprite);
@@ -22,7 +22,7 @@ export function createSerenaVictoryVideo(){
   const active=game?.lastReachWasLong===true&&!game?.previewRushWin&&!game?.jackpot?.charge&&!game?.entryPrelude&&!payout&&age>=0&&age<5.05;
   if(!active||failed||disposed){stop();return false;}
   wanted=!paused&&!document.hidden;
-  if(video.readyState<2){root.visible=true;return false;}
+  if(!source.isReady||video.readyState<2){root.visible=true;return false;}
   // The texture starts without metadata; sizing before the video dimensions
   // arrive magnifies the eventual frame far beyond the LCD.
   sprite.width=210;sprite.height=118.125;
