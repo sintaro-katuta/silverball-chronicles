@@ -2,6 +2,7 @@ import {Container,Graphics,Sprite,Texture} from 'pixi.js';
 import {pixelSurface,painter} from './pixel-primitives.js';
 import {specialRoutePose,specialReelStrip} from './special-route-motion.js';
 import {LCD_REEL_LAYOUT} from './lcd-safe-layout.js';
+import {VIDEO_RUSH_REELS} from './video-screen-layout.js';
 import {weaponPose} from './long-reach-timeline.js';
 const GLYPHS=['00100/01100/00100/00100/00100/00100/01110','11110/00001/00001/01110/10000/10000/11111','11110/00001/00001/01110/00001/00001/11110','10010/10010/10010/11111/00010/00010/00010','11111/10000/10000/11110/00001/00001/11110','01110/10000/10000/11110/10001/10001/01110','11111/00001/00010/00100/01000/01000/01000','01110/10001/10001/01110/10001/10001/01110','01110/10001/10001/01111/00001/00001/01110'];
 const spectrum=[0xff7eaa,0xffd171,0xecffa5,0x79edbf,0x87dbff,0xc3a0ff];
@@ -31,7 +32,7 @@ function rushDigit(n){
 }
 // root uses the existing LCD's 210 x 140 coordinates. Optional background is
 // borrowed; every internally generated texture belongs to this view.
-export function createSpecialRouteView({background=null}={}){
+export function createSpecialRouteView({background=null,compactLayout=false}={}){
  const root=new Container(),textures=Array.from({length:9},(_,i)=>digit(i+1));
  const rushTextures=Array.from({length:9},(_,i)=>rushDigit(i+1));textures.push(...rushTextures);
  const mask=new Graphics().rect(0,0,210,140).fill(0xffffff);root.addChild(mask);root.mask=mask;
@@ -56,10 +57,10 @@ export function createSpecialRouteView({background=null}={}){
  function render(input){
   if(destroyed)throw new Error('Special-route view is destroyed');
   const p=specialRoutePose(input);root.visible=p.visible;base.visible=p.route!=='battle';
-  root.position.set(p.shake,0);title.visible=p.banner;title.alpha=p.bannerAlpha;title.scale.set(p.bannerScale);
+  root.position.set(p.shake,0);title.visible=p.banner;title.alpha=p.bannerAlpha;title.position.set(105,compactLayout?36:70);title.scale.set(compactLayout?.36:p.bannerScale);
   columns.forEach(({column,sprites},i)=>{
-   const rush=p.mode==='rush',scale=rush?1.5:1;
-   column.position.set(rush?10+i*65:32+i*53,rush?LCD_REEL_LAYOUT.rushTop:LCD_REEL_LAYOUT.normalTop);
+   const rush=p.mode==='rush',scale=compactLayout?VIDEO_RUSH_REELS.scale:rush?1.5:1;
+   column.position.set(compactLayout?VIDEO_RUSH_REELS.left+i*VIDEO_RUSH_REELS.step:rush?10+i*65:32+i*53,compactLayout?VIDEO_RUSH_REELS.top:rush?LCD_REEL_LAYOUT.rushTop:LCD_REEL_LAYOUT.normalTop);
    column.scale.set(scale,scale*(1+p.landing));const strip=specialReelStrip(p.positions[i]);
    sprites.forEach((s,j)=>{s.texture=(rush?rushTextures:textures)[strip[j].digit-1];s.y=strip[j].y;});
   });
