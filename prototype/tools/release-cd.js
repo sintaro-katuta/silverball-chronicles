@@ -13,7 +13,8 @@ export const checkpointPath=root=>join(root,'prototype/.cache/release/cd-state.j
 export function parseReleaseSummary(body,version){
  const blocks=[...(body??'').matchAll(/```json\s*([\s\S]*?)```/g)];let summary;
  for(const block of blocks){try{const value=JSON.parse(block[1]);if(value.silverballReleaseSummary){if(summary)throw new Error('Duplicate release summary');summary=value.silverballReleaseSummary;}}catch(error){if(error.message==='Duplicate release summary')throw error;}}
- if(!summary||summary.version!==version||!Array.isArray(summary.sprints)||summary.sprints.length!==3||new Set(summary.sprints).size!==3||!summary.sprints.every(n=>Number.isSafeInteger(n)&&n>0)||!Array.isArray(summary.issues)||!summary.issues.length||new Set(summary.issues).size!==summary.issues.length||!summary.issues.every(n=>Number.isSafeInteger(n)&&n>0))throw new Error('Release PR requires one matching summary for three distinct Sprints and accepted Issues');
+ const recovery050=version==='0.5.0'&&summary?.releaseScopeException==='0.5.0-branch-recovery'&&Array.isArray(summary.sprints)&&summary.sprints.length===0;
+ if(!summary||summary.version!==version||!Array.isArray(summary.sprints)||(!recovery050&&summary.sprints.length!==3)||new Set(summary.sprints).size!==summary.sprints.length||!summary.sprints.every(n=>Number.isSafeInteger(n)&&n>0)||!Array.isArray(summary.issues)||!summary.issues.length||new Set(summary.issues).size!==summary.issues.length||!summary.issues.every(n=>Number.isSafeInteger(n)&&n>0))throw new Error('Release PR requires a matching summary with accepted scope and Issues');
  for(const key of ['improvements','fixes','knownLimitations'])if(!Array.isArray(summary[key])||!summary[key].every(s=>typeof s==='string'&&s.trim()&&s.length<=1000))throw new Error(`Invalid release summary ${key}`);
  if(!summary.improvements.length&&!summary.fixes.length)throw new Error('Release summary must describe user-facing changes');return summary;
 }
@@ -44,7 +45,7 @@ export function releaseNotes(context,generated,record){
  if(record&&(record.status!=='smoke-verified'||record.version!==context.version||record.sha!==context.sha||record.worker!==targetName||!uuidPattern.test(record.cloudflareVersionId??'')||!record.smokeVerifiedAt))throw new Error('Success notes require a matching smoke-verified deployment');
  const s=context.summary,lines=[`# ${context.version}`];if(!record)lines.push('公開候補：まだ公開成功を確認していません。');
  for(const [key,title] of [['improvements','改善'],['fixes','修正'],['knownLimitations','既知の制限']])if(s[key].length)lines.push(`\n## ${title}`, ...s[key].map(text=>`- ${text.replaceAll('<!-- silverball-release:','&lt;!-- silverball-release:')}`));
- lines.push(`\n対象Sprint：${s.sprints.join(', ')}。対象Issue：${s.issues.map(n=>`[#${n}](https://github.com/${context.repository}/issues/${n})`).join(', ')}。`,`版の対応：${context.version} / [${context.sha.slice(0,8)}](https://github.com/${context.repository}/commit/${context.sha})。`);
+ lines.push(`\n${s.sprints.length?`対象Sprint：${s.sprints.join(', ')}。`:""}対象Issue：${s.issues.map(n=>`[#${n}](https://github.com/${context.repository}/issues/${n})`).join(', ')}。`,`版の対応：${context.version} / [${context.sha.slice(0,8)}](https://github.com/${context.repository}/commit/${context.sha})。`);
  if(record)lines.push(`公開日：${record.smokeVerifiedAt}。\n公開版：[遊ぶ](${productionURL})。`,`\n## 自動生成された変更履歴\n${generated.replaceAll('<!-- silverball-release:','&lt;!-- silverball-release:')}`,`\n<!-- silverball-release:${JSON.stringify(record)} -->`);
  return lines.join('\n')+'\n';
 }
