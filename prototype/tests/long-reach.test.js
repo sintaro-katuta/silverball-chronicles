@@ -110,7 +110,7 @@ test('long reach preserves accepted outcomes, FIFO, pause and physical mechanics
   for(let n=0;n<1200&&!g.presentation;n++)m.flow.step(1/120);
   assert.ok(g.presentation.longReach);assert.equal(g.presentation.win,win);
   const bank=g.w.queues[mode==='rush'?'fuzu':'tokuzu1'],next=bank[0],rolls=calls,serial=g.w.serial,total=g.total;
-  for(let n=0;n<21*120;n++)m.flow.step(1/120);
+  for(let n=0;n<21*120&&g.presentation.time<21;n++)m.flow.step(1/120);
   assert.ok(g.presentation);assert.equal(s.snapshot().reach.stage,'upper');assert.equal(bank[0],next);assert.equal(g.total,total);assert.equal(calls,rolls);assert.equal(g.w.serial,serial);
   m.flow.pause(true);const before=s.snapshot();m.flow.step(1);assert.deepEqual(s.snapshot(),before);m.flow.pause(false);
   for(let n=0;n<60*120&&g.presentation;n++)m.flow.step(1/120);

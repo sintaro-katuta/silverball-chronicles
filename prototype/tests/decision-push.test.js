@@ -43,6 +43,18 @@ test('timeout advances normally, rainbow starts only at confirmation and revival
  assert.equal(reachFinalePose({time:20,previewWinAt:19,jackpot:{charge:true}}).confirmed,false);
 });
 
+test('battle middle is shortened while the opening and decision retain their timing',()=>{
+ for(const ending of ['standard','revival']){
+  const p={longReach:true,fastBattle:true,reachEnding:ending,time:0};
+  advanceDecisionPresentation(p,5);assert.equal(p.time,5);
+  advanceDecisionPresentation(p,19);assert.equal(p.time,43);
+  advanceDecisionPresentation(p,11);assert.equal(p.time,54);
+  if(ending==='revival'){advanceDecisionPresentation(p,4);assert.equal(p.time,58);}
+ }
+ const flash={longReach:true,fastBattle:true,reachEnding:'flash',time:0};
+ advanceDecisionPresentation(flash,12);assert.equal(flash.time,12);
+});
+
 test('live flow press/timeout preserve admitted outcomes, FIFO, RNG, pause and physical clock',()=>{
  for(const mode of ['normal','rush'])for(const win of [false,true])for(const press of [false,true]){
   let rolls=0;const g=new SessionGame(()=>{rolls++;return win?0:.9;}),m=createBoardFlow({lcd:true,fire:()=>null});
@@ -51,7 +63,7 @@ test('live flow press/timeout preserve admitted outcomes, FIFO, RNG, pause and p
   const kind=mode==='rush'?'fuzu':'start';g.hit({id:'active'},kind);g.hit({id:'queued'},kind);
   for(let n=0;n<1200&&!g.presentation;n++)m.flow.step(1/120);
   assert.ok(g.presentation);const calls=rolls,queued=g.w.queues[mode==='rush'?'fuzu':'tokuzu1'][0];
-  for(let n=0;n<47*120;n++)m.flow.step(1/120);
+  for(let n=0;n<47*120&&g.presentation.time<47;n++)m.flow.step(1/120);
   m.flow.pause(true);assert.equal(s.pressDecision(),false);const old=s.snapshot();m.flow.step(1);assert.deepEqual(s.snapshot(),old);m.flow.pause(false);
   const time=g.time,physics=m.flow.physics.time,p=g.presentation.time;
   if(press){assert.equal(s.pressDecision(),true);assert.equal(s.pressDecision(),false);assert.equal(g.time,time);assert.equal(m.flow.physics.time,physics);}

@@ -10,6 +10,7 @@ import rushEntry from '../assets/video/serena-rush-entry.mp4';
 import rushLoop from '../assets/video/serena-rush-loop.mp4';
 import rushEnd from '../assets/video/serena-rush-end.mp4';
 import {serenaScenePlan} from './serena-scene-plan.js';
+import {battlePlaybackRate} from './decision-push.js';
 
 const urls={idle,warning,battle,defeat,revival,bonus,charge,'rush-entry':rushEntry,'rush-loop':rushLoop,'rush-end':rushEnd};
 
@@ -67,6 +68,7 @@ export function createSerenaSceneVideo(){
    const s=current;
    if(!plan||!s||failed.has(plan.clip)||disposed){root.visible=false;return null;}
    const {video,sprite}=s;
+   video.playbackRate=plan.clip==='battle'?battlePlaybackRate(game.presentation):1;
    // A neutral backing prevents the previous pixel-art scene flashing through
    // while a new movie is loading. Failed loads still fall back normally.
    if(!s.source.isReady||video.readyState<2||!Number.isFinite(video.duration)||video.duration<=0){root.visible=true;return null;}

@@ -1,8 +1,11 @@
 import {reachSchedule} from './reach-ending.js';
 
 // Display input only. Neither admission rolls nor physical deadlines are read
-// or modified. Unattended play keeps the original 54/58 second presentation.
+// or modified. The presentation clock may run faster during the battle middle.
 export const DECISION_PUSH=Object.freeze({start:46.5,end:49.9,releaseAt:49.92,settleAt:50.85,revealAt:51.7});
+export function battlePlaybackRate(p){
+ return p?.fastBattle&&p.longReach&&p.reachEnding!=='flash'&&p.time>=5&&p.time<43?2:1;
+}
 export function supportsDecisionPush(p){
  return !!p?.longReach&&(!p.displayRoute||p.displayRoute==='battle')&&p.reachEnding!=='flash'&&!p.premium&&p.predictionPlan?.resultFamily!=='fullrotation';
 }
@@ -17,7 +20,14 @@ export function pressDecisionPush(game,options={}){
  p.time=DECISION_PUSH.releaseAt;return true;
 }
 export function advanceDecisionPresentation(p,dt){
- p.time+=dt;
+ // Split at speed boundaries so frame size does not change the running time.
+ let remaining=dt;
+ while(remaining>0){
+  const rate=battlePlaybackRate(p);
+  const boundary=p.fastBattle&&p.longReach&&p.reachEnding!=='flash'?(p.time<5?5:p.time<43?43:Infinity):Infinity;
+  const step=Math.min(remaining,(boundary-p.time)/rate);
+  p.time+=step*rate;remaining-=step;
+ }
  if(p.pushInput&&!p.pushInput.settled&&p.time>=DECISION_PUSH.settleAt){
   p.time=DECISION_PUSH.revealAt+(p.time-DECISION_PUSH.settleAt);p.pushInput.settled=true;
  }
