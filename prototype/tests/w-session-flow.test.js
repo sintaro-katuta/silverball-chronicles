@@ -7,7 +7,9 @@ test('production W bridge accepts physical fuzu/electric/V/attacker crossings an
  const g=new SessionGame(()=>.9),m=createBoardFlow({lcd:true}),s=attachNormalSpin(m.flow,{sessionGame:g,roundModel:m,lifecycle:true});
  const advance=sec=>{for(let n=0;n<sec*120;n++)m.flow.step(1/120);};
  const drop=kind=>{const p=m.flow.physics.pockets.find(p=>p.kind===kind),t=p.captureTray,b=m.flow.physics.spawn({extra:true},.24);Object.assign(b,{x:t?(t.left+t.right)/2:p.x,y:t?t.y-t.radius-b.r-1:p.y-2,vx:0,vy:80,leftLaunchPlane:true});advance(.1);};
- g.startRush();g.w.rng=()=>0;drop('fuzu');advance(LONG_REACH.seconds+1.5);assert.equal(g.w.electricOpen,true);assert.equal(m.tulip.state().progress,1);
+ g.startRush();g.w.rng=()=>0;drop('fuzu');
+ for(let n=0;n<(LONG_REACH.seconds+1.5)*120&&!g.w.electricOpen;n++)m.flow.step(1/120);
+ advance(.6);assert.equal(g.w.electricOpen,true);assert.equal(m.tulip.state().progress,1);
  drop('rush');drop('rush');advance(1);assert.ok(g.w.pendingV);assert.equal(g.jackpot,null);assert.equal(m.attacker.state().progress,1);
  for(let n=0;n<3000&&(g.wBatch?.payout??0)<3000;n++){
   if(g.w.pendingV&&m.attacker.state().progress===1)drop('bonus');

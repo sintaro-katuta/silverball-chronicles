@@ -80,7 +80,7 @@ export function attachNormalSpin(flow,{reach=false,win=false,roundModel=null,lif
    let result;try{result=begin(win,...args);}finally{game.rng=previousRng;}
    if(result&&plan?.route==='ordinary'){game.presentation=null;game.resolveDraw(win,stored.reels);return result;}
    if(result){
-    game.presentation.basicReach=true;game.presentation.longReach=!!sessionGame&&(!plan||plan.route==='battle'||plan.route==='flash');game.lastReachWasLong=false;
+    game.presentation.basicReach=true;game.presentation.longReach=!!sessionGame&&(!plan||plan.route==='battle'||plan.route==='flash');game.presentation.fastBattle=game.presentation.longReach;game.lastReachWasLong=false;
     game.presentation.moonCue=moonCue??null;game.presentation.reachVariant=reachVariant;game.presentation.presentationMode=reachMode;game.presentation.predictionPlan=stored?.predictionPlan??null;
     if(plan){game.presentation.displayRoute=plan.route;game.presentation.premium=plan.premium;game.presentation.premiumAt=45.5;game.presentation.reachEnding=plan.ending;game.presentation.developed=false;}
     else {const requested=game.reviewReachEnding,allowed=requested===(reachMode==='rush'?'flash':'revival');game.presentation.reachEnding=win?(allowed?requested:endings.choose(game.presentation.drawId,reachMode,win)):'standard';game.presentation.developed=developsReach(game.presentation,!!game.rush,game.reviewDevelopment);}
